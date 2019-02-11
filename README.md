@@ -1,2 +1,2 @@
-# Lunatic-Model
+# Lunatic Model
 Data model for Lunatic
