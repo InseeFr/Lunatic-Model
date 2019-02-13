@@ -69,8 +69,7 @@
       <xs:element name="response" type="ResponseContainer"/>
       <xs:element name="conditionFilter" type="xs:string" minOccurs="1"/>
     </xs:sequence>
-    <xs:attribute name="id" type="xs:ID" use="required"/>
-    <!--<xs:attribute name="toValidate" type="xs:boolean"/>  -->      
+    <xs:attribute name="id" type="xs:ID" use="required"/>  
     <xs:attribute name="page" type="xs:integer"/>
     
   </xs:complexType>
