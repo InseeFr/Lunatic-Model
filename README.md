@@ -1,4 +1,6 @@
 # Lunatic Model
+[![Build Status](https://travis-ci.org/laurentC35/Lunatic-Model.svg?branch=master)](https://travis-ci.org/laurentC35/Lunatic-Model)
+
 
 Classes and converters for the Lunatic questionnaire model.
 
