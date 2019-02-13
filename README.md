@@ -1,21 +1,65 @@
 # Lunatic Model
 
-## Structure du questionnaire au format json
+Classes and converters for the Lunatic questionnaire model.
+
+## Introduction
+
+The Lunatic questionnaire model is specified as an XML Schema in the `Questionnaire.xsd` file.
+
+The schema is transformed into Java classes with the JAXB compiler. The JAXB classes are then packaged with other components to produce a REST web service and an XQuery module ready to be installed in eXist.
+
+The JAXB compilation and the packaging tasks are executed by Maven.
+
+The "Lunatic model" project contains the schema, the support classes for creating the web service and the XQuery module, and other useful classes like conversion tools and classes for generating mock questionnaires.
+
+## Changing the model (short story)
+
+Changing the model is done in two steps, that can also be realized in an IDE like Eclipse:
+* modification of the schema
+  * edit `src/main/resources/xsd/Questionnaire.xsd` to make the desired changes,
+  * save the file.
+* production of the output artifacts
+  * open a command line at the project root and run `mvn package -DskipTests`
+  * the rest service war file and XQuery module jar file should be produced in the `target` folder.
+
+## Changing the model (longer story)
+
+Most of the times, the simple procedure described above will result in a Maven build failure at the compilation step. This is because the changes on the model have to be reflected in the tools that use the generated JAXB classes corresponding to the model. For example, the mock classes use the setters of the JAXB objects, and the names of those setter methods are generated from the names of the elements and attributes in the schema.
+
+Under Eclipse or equivalent, running the `generate-sources` Maven goal will show the compilation errors that are then easy to correct. If you just have the command line, you will have to run `mvn compile` and correct the errors reported one by one.
+
+So the slightly longer story for changing the model is:
+
+* modification of the schema
+  * edit `src/main/resources/xsd/Questionnaire.xsd` to make the desired changes,
+  * change the impacted Java classes accordingly
+  * save the files.
+* production of the output artifacts
+  * open a command line at the project root and run `mvn package -DskipTests`
+  * the rest service war file and XQuery module jar file should be produced in the `target` folder.
+
+## Structure of the questionnaire in json format
+List of attributes :
+* id : id of the questionnaire,
+* label : label (title) of the questionnaire
+* components : list of components
+* codeLists : list of codeLists
+* variables : list of variables
 ```json
     {
-      "id" : "id_du_questionnaire",
-      "label" : "label(=titre) du questionnaire"
-      "components": [...], /*liste_des_composants*/
-      "codeLists" : [...], /*liste_des_codeLists*/
-      "variables" : [...]  /*liste_des_variables_collectes/externes/calculées*/
+      "id" : "id_of_questionnaire",
+      "label" : "label of questionnaire"
+      "components": [...], 
+      "codeLists" : [...], 
+      "variables" : [...]  
    }
 ```
 
 
-### Les codeLists
+### The codeLists
 ```json
   {
-      "id" : "j334iumu",
+      "id" : "id",
       "label" : "TOWN",
       "code" : [ {
          "parent" : "",
@@ -32,41 +76,53 @@
       } ]
    }
 ```
-### Les variables
-Il y a plusieurs types de variables : externes, calculées ou collectées
+### The variables
+There are several types of variables: external, calculated or collected.
+* external variable : there is a 'label' attribute
+* calculated variable : there is a 'responseRef' attribute, refer to 'name' attribute in 'response' object in a component
+* collected variable : there is a 'value' attribute
 ```json
   {
-      "name" : "LAST_BROADCAST",
-      "label" : "LAST_BROADCAST label" /*label=variable_externe*/
+      "name" : "EXTERNAL_VAR",
+      "label" : "EXTERNAL_VAR label"
    }, 
    {
-      "name" : "COMMENT",
-      "responseRef" : "COMMENT" /*responseRef=variable_collectées, 
-                                  ref_au_'name'_de_l'objet_'reponse'_dans_un_component*/
+      "name" : "COLLECTED_VAR",
+      "responseRef" : "COLLECTED_VAR"
    },
    {
-      "name" : "SUM_EXPENSES",
+      "name" : "CALCULATED_VAR",
       "value" : "$PERCENTAGE_EXPENSES11$ + $PERCENTAGE_EXPENSES21$ + $PERCENTAGE_EXPENSES31$ + $PERCENTAGE_EXPENSES41$ + $PERCENTAGE_EXPENSES51$ + $PERCENTAGE_EXPENSES61$ + $PERCENTAGE_EXPENSES71$ + $PERCENTAGE_EXPENSES81$ + $PERCENTAGE_EXPENSES91$ + $PERCENTAGE_EXPENSES101$"
-   } /*value=variable_calculées,_on_peut_changer/supprimer_le_symbole_'$'*/
-```
-
-## Listes des Component
-
-* Component ("interface"):
-Tous les composant ont au moins ces attributs
-```json
-    {
-      "id" : "id_du_composant",
-      "page" : 1, /*numero_de_la_page_où_afficher_le_composant*/
-      "type" : "type_du_composant",
-      "label" : "label du composant",
-      "response" : {...}, /*pour_les_composants_de_type_question_(pas_module_et_sous-module)*/
-      "declaration" : [...]
-      "conditionFilter" : "une_lambda_expression_au_format_string, ex :(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
    }
 ```
 
-* response : 
+## List of Components
+
+* Component ("interface"):
+All components have at least these attributes :
+    * id : id of the component
+    * page : number of the page where to display the component
+    * type : component type
+    * label : label
+    * response : for question-type components only (not Sequence and Subsequence)
+    * declaration
+    * conditionFilter : an lambda expression in string format executable in JavaScript, ex : `(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'`
+    
+```json
+    {
+      "id" : "id_of_component",
+      "page" : 1,
+      "type" : "type_du_composant",
+      "label" : "label",
+      "response" : {...},
+      "declaration" : [...],
+      "conditionFilter" : "expression"
+   }
+```
+
+* response :
+It contains all the name of the collected response and refer to the name of variable in list of variables.
+It has has several possible state : PREVIOUS, COLLECTED, FORCED or EDITED.
 ```json       
       "response" : {
          "name" : "READY",
@@ -89,16 +145,17 @@ Tous les composant ont au moins ces attributs
       }
 ```
 * declaration :
+    * it's a table with declartion elements with an id, a position (compare to the label of the question) and its label.
 ``` json
     "declaration" : [ 
         {
           "id" : "id_declaration_1",
-          "position" : "AFTER_QUESTION_TEXT", /*ou "BEFORE_QUESTION_TEXT"*/
+          "position" : "AFTER_QUESTION_TEXT",
           "label" : "label_de_la_declaration_1"
         },
         {
           "id" : "id_declaration_2",
-          "position" : "AFTER_QUESTION_TEXT", /*ou "BEFORE_QUESTION_TEXT"*/
+          "position" : "AFTER_QUESTION_TEXT",
           "label" : "label_de_la_declaration_2"
         } 
       ]
@@ -107,37 +164,39 @@ Tous les composant ont au moins ces attributs
 * CheckboxBoolean 
  ```json 
     {
-      "id" : "idCheckboxBoolean",
+      "id" : "id",
       "page" : 1,
       "type" : "CheckboxBoolean",
-      "label" : "label de la question",
+      "label" : "question label",
       "response" : {...},
       "declaration" : [...],
       "conditionFilter" : "..."
    }
 ```
 * Dropdown / CheckboxOne / Radio :
+    * codeListReference : reference to the code list (codeLists)
 ``` json
     {
-      "id" : "id_du_composant",
+      "id" : "id",
       "page" : 2,
       "type" : "Dropdown / CheckboxOne /Radio",
-      "label" : "label de la question",
+      "label" : "question label",
       "response" : {...},
       "declaration" : [...],
       "conditionFilter" : "...",
-      "codeListReference" : "reference_a_la_liste_de_code_(codeLists)"
+      "codeListReference" : "idCodeLists"
    }
 ```
 
-* Input :
+* Input/Textarea :
+    * maxLength : maximum number of characters allowed
 ``` json
     {
-      "id" : "id_du_composant",
+      "id" : "id",
       "page" : 2,
-      "maxLength" : 30 /*longueur_max_du_champ_input*/
-      "type" : "Input",
-      "label" : "label de la question",
+      "maxLength" : 30,
+      "type" : "Input / Textarea",
+      "label" : "question label",
       "response" : {...},
       "declaration" : [...],
       "conditionFilter" : "..."
@@ -145,19 +204,23 @@ Tous les composant ont au moins ces attributs
 ```
 
 * InputNumber :
+    * min : minimum allowed
+    * max : maximum allowed
+    * decimals : number of decimals for the number
+    * unit : the unit of the number
 ``` json
     {
-      "id" : "j6q9h8tj",
+      "id" : "id",
       "page" : 1,
-      "min" : 0.0, /*minimum_autorise*/
-      "max" : 99.0, /*maximume_autorise*/
-      "decimals" : 0, /*nombre de decimales*/
+      "min" : 0.0,
+      "max" : 99.0,
+      "decimals" : 1,
       "type" : "InputNumber",
-      "label" : "label de la question",
+      "label" : "question label",
       "response" : {...},
       "declaration" : [...],
       "conditionFilter" : "...",
-      "unit" : "unite_du_nombre" /*vaut_""_si_nombre sans_d'unité*/
+      "unit" : "cm"
    }
 ```
 
@@ -165,7 +228,7 @@ Tous les composant ont au moins ces attributs
 * Sequence / Subsequence :
 ``` json
   {
-      "id" : "id_sequence",
+      "id" : "id",
       "page" : 2,
       "type" : "Sequence / Subseqeunce",
       "label" : "label de la sequence",
@@ -174,29 +237,17 @@ Tous les composant ont au moins ces attributs
    }
 ```
 
-* Textarea
-``` json
-  {
-      "id" : "id_textarea",
-      "page" : 6,
-      "maxLength" : 255,
-      "type" : "Textarea",
-      "label" : "label de la question",
-      "response" : {...},
-      "declaration" : [...],
-      "conditionFilter" : "..."
-   }
-```
 * Datepicker
+    * dateFormat : the format of the date to be collected
 ``` json
   {
-      "id" : "id_Datepicker",
+      "id" : "id",
       "page" : 1,
       "type" : "Datepicker",
-      "label" : "label de la question",
+      "label" : "question label",
       "response" : {...},
       "declaration" : [...],
       "conditionFilter" : "...",
-      "dateFormat" : "jj/mm/aaaa" /*format_de_la_date_a_collecter*/
+      "dateFormat" : "jj/mm/aaaa"
    }
   ```
