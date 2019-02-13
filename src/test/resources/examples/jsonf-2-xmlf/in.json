@@ -1,0 +1,488 @@
+{
+   "id" : "i6vwid",
+   "label" : "Questionnaire SIMPSONS",
+   "components" : [ {
+      "id" : "j6p0ti5h",
+      "page" : 1,
+      "type" : "Sequence",
+      "label" : "I - Introduction",
+      "declaration" : [ {
+         "id" : "j6p0ti5h-d1",
+         "declarationType" : "comment",
+         "position" : "AFTER_QUESTION_TEXT",
+         "label" : "We're going to test your knowledge about the simpsons series.Welcome in the simspons world!"
+      } ],
+      "conditionFilter" : "() => true ? 'normal' : ''"
+   }, {
+      "id" : "j6p3dkx6",
+      "page" : 1,
+      "maxLength" : 500,
+      "type" : "Textarea",
+      "label" : "➡ 1. Before starting, do you have any comments about the Simpsons family?",
+      "response" : {
+         "name" : "COMMENT",
+         "valueState" : [ {
+            "type" : "PREVIOUS",
+            "value" : ""
+         }, {
+            "type" : "COLLECTED",
+            "value" : ""
+         }, {
+            "type" : "FORCED",
+            "value" : ""
+         }, {
+            "type" : "EDITED",
+            "value" : ""
+         }, {
+            "type" : "INPUTED",
+            "value" : ""
+         } ]
+      },
+      "conditionFilter" : "() => true ? 'normal' : ''"
+   }, {
+      "id" : "j6p0np9q",
+      "page" : 1,
+      "type" : "CheckboxBoolean",
+      "label" : "➡ 2. Are you ready?",
+      "response" : {
+         "name" : "READY",
+         "valueState" : [ {
+            "type" : "PREVIOUS",
+            "value" : ""
+         }, {
+            "type" : "COLLECTED",
+            "value" : ""
+         }, {
+            "type" : "FORCED",
+            "value" : ""
+         }, {
+            "type" : "EDITED",
+            "value" : ""
+         }, {
+            "type" : "INPUTED",
+            "value" : ""
+         } ]
+      },
+      "conditionFilter" : "() => true ? 'normal' : ''"
+   }, {
+      "id" : "j6p0s7o5",
+      "page" : 1,
+      "type" : "Subsequence",
+      "label" : "General knowledge of the series",
+      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+   }, {
+      "id" : "j3343qhx",
+      "page" : 1,
+      "maxLength" : "30",
+      "type" : "Input",
+      "label" : "➡ 3. Who is the producer?",
+      "response" : {
+         "name" : "PRODUCER",
+         "valueState" : [ {
+            "type" : "PREVIOUS",
+            "value" : ""
+         }, {
+            "type" : "COLLECTED",
+            "value" : ""
+         }, {
+            "type" : "FORCED",
+            "value" : ""
+         }, {
+            "type" : "EDITED",
+            "value" : ""
+         }, {
+            "type" : "INPUTED",
+            "value" : ""
+         } ]
+      },
+      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+   }, {
+      "id" : "j6q9h8tj",
+      "page" : 1,
+      "min" : 0.0,
+      "max" : 99.0,
+      "decimals" : 0,
+      "type" : "InputNumber",
+      "label" : "➡ 4. What is the current season number?",
+      "response" : {
+         "name" : "SEASON_NUMBER",
+         "valueState" : [ {
+            "type" : "PREVIOUS",
+            "value" : ""
+         }, {
+            "type" : "COLLECTED",
+            "value" : ""
+         }, {
+            "type" : "FORCED",
+            "value" : ""
+         }, {
+            "type" : "EDITED",
+            "value" : ""
+         }, {
+            "type" : "INPUTED",
+            "value" : ""
+         } ]
+      },
+      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+   }, {
+      "id" : "j334cyqb",
+      "page" : 1,
+      "type" : "Datepicker",
+      "label" : "➡ 5. When was the first episode of the Simpsons?",
+      "declaration" : [ {
+         "id" : "j334cyqb-d11",
+         "declarationType" : "comment",
+         "position" : "AFTER_QUESTION_TEXT",
+         "label" : "For your information, the date of the last broadcast was on øLAST_BROADCASTø"
+      } ],
+      "response" : {
+         "name" : "DATEFIRST",
+         "valueState" : [ {
+            "type" : "PREVIOUS",
+            "value" : ""
+         }, {
+            "type" : "COLLECTED",
+            "value" : ""
+         }, {
+            "type" : "FORCED",
+            "value" : ""
+         }, {
+            "type" : "EDITED",
+            "value" : ""
+         }, {
+            "type" : "INPUTED",
+            "value" : ""
+         } ]
+      },
+      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'",
+      "dateFormat" : "jj/mm/aaaa"
+   }, {
+      "id" : "j6z06z1e",
+      "page" : 1,
+      "min" : 0.0,
+      "max" : 99.0,
+      "decimals" : 1,
+      "type" : "InputNumber",
+      "label" : "➡ 6. In your opinion, how much is the part of audience share in US for the 2016 season?",
+      "response" : {
+         "name" : "AUDIENCE_SHARE",
+         "valueState" : [ {
+            "type" : "PREVIOUS",
+            "value" : ""
+         }, {
+            "type" : "COLLECTED",
+            "value" : ""
+         }, {
+            "type" : "FORCED",
+            "value" : ""
+         }, {
+            "type" : "EDITED",
+            "value" : ""
+         }, {
+            "type" : "INPUTED",
+            "value" : ""
+         } ]
+      },
+      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+   }, {
+      "id" : "j3341528",
+      "page" : 2,
+      "type" : "Sequence",
+      "label" : "II - Simpsons' city",
+      "declaration" : [ {
+         "id" : "j3341528-d2",
+         "declarationType" : "comment",
+         "position" : "AFTER_QUESTION_TEXT",
+         "label" : "This module asks about your general knowledge of the Simpsons city"
+      } ],
+      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+   }, {
+      "id" : "j3343clt",
+      "page" : 2,
+      "type" : "Radio",
+      "label" : "➡ 1. In which city do the Simpsons reside?",
+      "declaration" : [ {
+         "id" : "j3343clt-d3",
+         "declarationType" : "instruction",
+         "position" : "AFTER_QUESTION_TEXT",
+         "label" : "One possible answer"
+      } ],
+      "response" : {
+         "name" : "CITY",
+         "valueState" : [ {
+            "type" : "PREVIOUS",
+            "value" : ""
+         }, {
+            "type" : "COLLECTED",
+            "value" : ""
+         }, {
+            "type" : "FORCED",
+            "value" : ""
+         }, {
+            "type" : "EDITED",
+            "value" : ""
+         }, {
+            "type" : "INPUTED",
+            "value" : ""
+         } ]
+      },
+      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'",
+      "codeListReference" : "j334iumu"
+   }, {
+      "id" : "j6qdfhvw",
+      "page" : 2,
+      "type" : "CheckboxOne",
+      "label" : "➡ 2. Who is the Simpsons city mayor?",
+      "declaration" : [ {
+         "id" : "j6qdfhvw-d4",
+         "declarationType" : "instruction",
+         "position" : "AFTER_QUESTION_TEXT",
+         "label" : "Only one possible answer"
+      } ],
+      "response" : {
+         "name" : "MAYOR",
+         "valueState" : [ {
+            "type" : "PREVIOUS",
+            "value" : ""
+         }, {
+            "type" : "COLLECTED",
+            "value" : ""
+         }, {
+            "type" : "FORCED",
+            "value" : ""
+         }, {
+            "type" : "EDITED",
+            "value" : ""
+         }, {
+            "type" : "INPUTED",
+            "value" : ""
+         } ]
+      },
+      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'",
+      "codeListReference" : "j6qdqoen"
+   }, {
+      "id" : "j4nw5cqz",
+      "page" : 2,
+      "type" : "Dropdown",
+      "label" : "➡ 3. In which state do The Simpsons reside?",
+      "response" : {
+         "name" : "STATE",
+         "valueState" : [ {
+            "type" : "PREVIOUS",
+            "value" : ""
+         }, {
+            "type" : "COLLECTED",
+            "value" : ""
+         }, {
+            "type" : "FORCED",
+            "value" : ""
+         }, {
+            "type" : "EDITED",
+            "value" : ""
+         }, {
+            "type" : "INPUTED",
+            "value" : ""
+         } ]
+      },
+      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'",
+      "codeListReference" : "j4nwo00f"
+   }, {
+      "id" : "j6qe0h9q",
+      "page" : 3,
+      "type" : "Sequence",
+      "label" : "III - Characters",
+      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+   }, {
+      "id" : "j4nw88h2",
+      "page" : 4,
+      "type" : "Sequence",
+      "label" : "IV - General questions",
+      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+   }, {
+      "id" : "j6qe237q",
+      "page" : 4,
+      "type" : "Subsequence",
+      "label" : "Kwik-E-Mart",
+      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+   }, {
+      "id" : "j6qejudb",
+      "page" : 4,
+      "type" : "Subsequence",
+      "label" : "Clowning",
+      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+   }, {
+      "id" : "j6qeh91y",
+      "page" : 4,
+      "type" : "Subsequence",
+      "label" : "Transport",
+      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+   }, {
+      "id" : "j6qfx9qe",
+      "page" : 5,
+      "type" : "Sequence",
+      "label" : "V - Favourite characters",
+      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+   }, {
+      "id" : "j6z12s2d",
+      "page" : 6,
+      "type" : "Sequence",
+      "label" : "VI - Comment",
+      "conditionFilter" : "() => true ? 'normal' : ''"
+   }, {
+      "id" : "j6z0z3us",
+      "page" : 6,
+      "maxLength" : 255,
+      "type" : "Textarea",
+      "label" : "➡ 1. Do you have any comment about the survey?",
+      "response" : {
+         "name" : "SURVEY_COMMENT",
+         "valueState" : [ {
+            "type" : "PREVIOUS",
+            "value" : ""
+         }, {
+            "type" : "COLLECTED",
+            "value" : ""
+         }, {
+            "type" : "FORCED",
+            "value" : ""
+         }, {
+            "type" : "EDITED",
+            "value" : ""
+         }, {
+            "type" : "INPUTED",
+            "value" : ""
+         } ]
+      },
+      "conditionFilter" : "() => true ? 'normal' : ''"
+   } ],
+   "codeLists" : [ {
+      "id" : "j334iumu",
+      "label" : "TOWN",
+      "code" : [ {
+         "parent" : "",
+         "value" : "00001",
+         "label" : "Springfield"
+      }, {
+         "parent" : "",
+         "value" : "00002",
+         "label" : "Shelbyville"
+      }, {
+         "parent" : "",
+         "value" : "00003",
+         "label" : "Seinfeld"
+      } ]
+   }, {
+      "id" : "j6qdqoen",
+      "label" : "MAYOR",
+      "code" : [ {
+         "parent" : "",
+         "value" : "1",
+         "label" : "Constance Harm"
+      }, {
+         "parent" : "",
+         "value" : "2",
+         "label" : "Timothy Lovejoy"
+      }, {
+         "parent" : "",
+         "value" : "3",
+         "label" : "Joe Quimby"
+      }, {
+         "parent" : "",
+         "value" : "4",
+         "label" : "Poochie"
+      } ]
+   }, {
+      "id" : "j4nwo00f",
+      "label" : "State",
+      "code" : [ {
+         "parent" : "",
+         "value" : "1",
+         "label" : "Washington"
+      }, {
+         "parent" : "",
+         "value" : "2",
+         "label" : "Kentucky"
+      }, {
+         "parent" : "",
+         "value" : "3",
+         "label" : "Ohio"
+      }, {
+         "parent" : "",
+         "value" : "4",
+         "label" : "Maine"
+      }, {
+         "parent" : "",
+         "value" : "5",
+         "label" : "North Dakota"
+      }, {
+         "parent" : "",
+         "value" : "6",
+         "label" : "Florida"
+      }, {
+         "parent" : "",
+         "value" : "7",
+         "label" : "North Takoma"
+      }, {
+         "parent" : "",
+         "value" : "8",
+         "label" : "California"
+      }, {
+         "parent" : "",
+         "value" : "9",
+         "label" : "Texas"
+      }, {
+         "parent" : "",
+         "value" : "10",
+         "label" : "Massachusetts"
+      }, {
+         "parent" : "",
+         "value" : "11",
+         "label" : "Nevada"
+      }, {
+         "parent" : "",
+         "value" : "12",
+         "label" : "Illinois"
+      }, {
+         "parent" : "",
+         "value" : "13",
+         "label" : "Not in any state, you fool!"
+      } ]
+   } ],
+   "variables" : [ {
+      "name" : "LAST_BROADCAST",
+      "label" : "LAST_BROADCAST label"
+   }, {
+      "name" : "COMMENT",
+      "responseRef" : "COMMENT"
+   }, {
+      "name" : "READY",
+      "responseRef" : "READY"
+   }, {
+      "name" : "PRODUCER",
+      "responseRef" : "PRODUCER"
+   }, {
+      "name" : "SEASON_NUMBER",
+      "responseRef" : "SEASON_NUMBER"
+   }, {
+      "name" : "DATEFIRST",
+      "responseRef" : "DATEFIRST"
+   }, {
+      "name" : "AUDIENCE_SHARE",
+      "responseRef" : "AUDIENCE_SHARE"
+   }, {
+      "name" : "CITY",
+      "responseRef" : "CITY"
+   }, {
+      "name" : "MAYOR",
+      "responseRef" : "MAYOR"
+   }, {
+      "name" : "STATE",
+      "responseRef" : "STATE"
+   }, {
+      "name" : "SURVEY_COMMENT",
+      "responseRef" : "SURVEY_COMMENT"
+   }, {
+      "name" : "SUM_EXPENSES",
+      "value" : "$PERCENTAGE_EXPENSES11$ + $PERCENTAGE_EXPENSES21$ + $PERCENTAGE_EXPENSES31$ + $PERCENTAGE_EXPENSES41$ + $PERCENTAGE_EXPENSES51$ + $PERCENTAGE_EXPENSES61$ + $PERCENTAGE_EXPENSES71$ + $PERCENTAGE_EXPENSES81$ + $PERCENTAGE_EXPENSES91$ + $PERCENTAGE_EXPENSES101$"
+   } ]
+}

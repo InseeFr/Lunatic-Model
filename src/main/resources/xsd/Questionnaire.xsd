@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.insee.fr/schema/applis/lunatic" targetNamespace="http://xml.insee.fr/schema/applis/lunatic" elementFormDefault="qualified"
+  attributeFormDefault="unqualified">
+
+  <xs:element name="Questionnaire">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="SequenceType">
+          <xs:attribute name="final" type="xs:boolean"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  
+  <xs:complexType name="CodeLists">
+    <xs:sequence>
+      <xs:element name="label" type="xs:string"/>
+      <xs:element name="code" type="Code" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+  </xs:complexType>
+  
+  <xs:complexType name="Code">
+    <xs:sequence>
+      <xs:element name="parent" type="xs:string"/>
+      <xs:element name="value" type="xs:string"/>
+      <xs:element name="label" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="VariableType">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+      <xs:element name="responseRef" type="xs:string" minOccurs="0"/>
+      <xs:element name="label" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="SequenceType">
+    <xs:complexContent>
+      <xs:extension base="ComponentType">
+        <xs:sequence>
+          <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="codeLists" type="CodeLists" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="variables" type="VariableType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="Sequence">
+    <xs:complexContent>
+      <xs:extension base="ComponentType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="Subsequence">
+    <xs:complexContent>
+      <xs:extension base="ComponentType"/>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="ComponentType" abstract="true" >
+    <xs:sequence>
+      <xs:element name="label" type="xs:string"/>
+      <xs:element name="declaration" type="DeclarationType" minOccurs="0" maxOccurs="unbounded"/>
+      <!-- Warning : To validate the name -->
+      <xs:element name="response" type="ResponseContainer"/>
+      <xs:element name="conditionFilter" type="xs:string" minOccurs="1"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <!--<xs:attribute name="toValidate" type="xs:boolean"/>  -->      
+    <xs:attribute name="page" type="xs:integer"/>
+    
+  </xs:complexType>
+  
+  <xs:complexType name="ResponseContainer">
+    <xs:sequence>
+      <xs:element name="valueState" type="ResponseType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+  
+  <xs:complexType name="ResponseType">
+    <xs:sequence>
+      <xs:element name="value" type="xs:string"/>
+      <xs:element name="responseComment" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="ResponseTypeEnum"/>
+  </xs:complexType>
+  
+  <xs:simpleType name="ResponseTypeEnum">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="PREVIOUS"/>
+      <xs:enumeration value="COLLECTED"/>
+      <!-- FORCED: automatic correction -->
+      <xs:enumeration value="FORCED"/>
+      <!-- EDITED: value edited by an expert -->
+      <xs:enumeration value="EDITED"/>
+      <xs:enumeration value="INPUTED"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="Question" type="QuestionType"/>
+  <xs:complexType name="QuestionType">
+    <xs:complexContent>
+      <xs:extension base="ComponentType">
+        <xs:sequence>
+          <!--<xs:element name="Response" type="ResponseType" maxOccurs="unbounded"/>-->
+          <xs:element name="ClarificationQuestion" type="QuestionType" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attribute name="questionType" type="QuestionTypeEnum"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="Textarea">
+    <xs:complexContent>
+      <xs:extension base="ComponentType">
+        <xs:attribute name="maxLength" type="xs:integer"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="Input">
+    <xs:complexContent>
+      <xs:extension base="ComponentType">
+        <xs:attribute name="maxLength"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="InputNumber">
+    <xs:complexContent>
+      <xs:extension base="ComponentType">
+        <xs:sequence>
+          <xs:element name="unit" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="min" type="xs:double"/>
+        <xs:attribute name="max" type="xs:double"/>
+        <xs:attribute name="decimals" type="xs:integer"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+    
+  <xs:complexType name="Datepicker">
+    <xs:complexContent>
+      <xs:extension base="ComponentType">
+        <xs:sequence>
+          <xs:element name="dateFormat" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="CheckboxBoolean">
+    <xs:complexContent>
+      <xs:extension base="ComponentType"/>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="CheckboxOne">
+    <xs:complexContent>
+      <xs:extension base="ComponentType">
+        <xs:sequence>
+          <xs:element name="codeListReference" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="Radio">
+    <xs:complexContent>
+      <xs:extension base="ComponentType">
+        <xs:sequence>
+          <xs:element name="codeListReference" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="Dropdown">
+    <xs:complexContent>
+      <xs:extension base="ComponentType">
+        <xs:sequence>
+          <xs:element name="codeListReference" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="DeclarationType">
+    <xs:sequence>
+      <xs:element name="label" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <xs:attribute name="declarationType" type="DeclarationTypeEnum"/>
+    <xs:attribute name="position" type="DeclarationPositionEnum"/>
+  </xs:complexType>
+
+  <xs:simpleType name="DeclarationTypeEnum">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="instruction"/>
+      <xs:enumeration value="comment"/>
+      <xs:enumeration value="help"/>
+      <xs:enumeration value="warning"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="DeclarationPositionEnum">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="AFTER_QUESTION_TEXT"/>
+      <xs:enumeration value="AFTER_RESPONSE"/>
+      <xs:enumeration value="BEFORE_QUESTION_TEXT"/>
+      <xs:enumeration value="DETACHABLE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="ControlType">
+    <xs:sequence>
+      <xs:element name="Description" type="xs:string"/>
+      <xs:element name="Expression" type="ExpressionType"/>
+      <xs:element name="FailMessage" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <xs:attribute name="criticity" type="ControlCriticityEnum"/>
+  </xs:complexType>
+
+  <xs:complexType name="ExpressionType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <xs:simpleType name="ControlCriticityEnum">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="INFO"/>
+      <xs:enumeration value="WARN"/>
+      <xs:enumeration value="ERROR"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="QuestionTypeEnum">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="SIMPLE"/>
+      <xs:enumeration value="SINGLE_CHOICE"/>
+      <xs:enumeration value="MULTIPLE_CHOICE"/>
+      <xs:enumeration value="TABLE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
