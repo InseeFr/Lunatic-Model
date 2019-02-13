@@ -48,7 +48,7 @@ List of attributes :
 ```json
     {
       "id" : "id_of_questionnaire",
-      "label" : "label of questionnaire"
+      "label" : "label of questionnaire",
       "components": [...], 
       "codeLists" : [...], 
       "variables" : [...]  
@@ -149,14 +149,14 @@ It has has several possible state : PREVIOUS, COLLECTED, FORCED or EDITED.
 ``` json
     "declaration" : [ 
         {
-          "id" : "id_declaration_1",
+          "id" : "id_1",
           "position" : "AFTER_QUESTION_TEXT",
-          "label" : "label_de_la_declaration_1"
+          "label" : "label_1"
         },
         {
-          "id" : "id_declaration_2",
+          "id" : "id_2",
           "position" : "AFTER_QUESTION_TEXT",
-          "label" : "label_de_la_declaration_2"
+          "label" : "label_2"
         } 
       ]
 ```
