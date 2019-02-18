@@ -29,7 +29,7 @@ public class JSONSerializerTest {
 
 		long elapsedTime = System.currentTimeMillis() - startTime;
 
-		FileUtils.writeStringToFile(new File("src/test/resources/questionnaire.json"), jsonQuestionnaire, "UTF-8");
+		//FileUtils.writeStringToFile(new File("src/test/resources/questionnaire.json"), jsonQuestionnaire, "UTF-8");
 		System.out.println("Serialization time: " + elapsedTime);
 	}
 

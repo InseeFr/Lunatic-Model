@@ -31,7 +31,7 @@ public class XMLSerializerTest {
 
 		long elapsedTime = System.currentTimeMillis() - startTime;
 
-		FileUtils.writeStringToFile(new File("src/test/resources/questionnaire-ser.xml"), xmlQuestionnaire, "UTF-8");
+		//FileUtils.writeStringToFile(new File("src/test/resources/questionnaire-ser.xml"), xmlQuestionnaire, "UTF-8");
 		System.out.println("Serialization time: " + elapsedTime);
 	}	
 }
