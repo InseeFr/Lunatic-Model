@@ -4,16 +4,16 @@
                xsi:schemaLocation="http://xml.insee.fr/schema/applis/lunatic file:/src/main/resources/xsd/Questionnaire.xsd"
                id="i6vwid">
    <label>Questionnaire SIMPSONS</label>
-   <components xsi:type="Sequence" id="j6p0ti5h" page="1">
+   <components xsi:type="Sequence" id="j6p0ti5h">
       <label>I - Introduction</label>
-      <declaration declarationType="comment"
-                   id="j6p0ti5h-d1"
-                   position="AFTER_QUESTION_TEXT">
+      <declarations declarationType="COMMENT"
+                    id="j6p0ti5h-d1"
+                    position="AFTER_QUESTION_TEXT">
          <label>We're going to test your knowledge about the simpsons series.Welcome in the simspons world!</label>
-      </declaration>
-      <conditionFilter>() =&gt; true ? 'normal' : ''</conditionFilter>
+      </declarations>
+      <conditionFilter>normal</conditionFilter>
    </components>
-   <components xsi:type="Textarea" id="j6p3dkx6" maxLength="500" page="1">
+   <components xsi:type="Textarea" id="j6p3dkx6" maxLength="500">
             <label>➡ 1. Before starting, do you have any comments about the Simpsons family?</label>
             <response name="COMMENT">
          <valueState type="PREVIOUS">
@@ -32,34 +32,34 @@
             <value/>
          </valueState>
       </response>
-            <conditionFilter>() =&gt; true ? 'normal' : ''</conditionFilter>
+            <conditionFilter>normal</conditionFilter>
          </components>
-   <components xsi:type="CheckboxBoolean" id="j6p0np9q" page="1">
+   <components xsi:type="CheckboxBoolean" id="j6p0np9q">
             <label>➡ 2. Are you ready?</label>
             <response name="READY">
          <valueState type="PREVIOUS">
-            <value/>
+            <value>0</value>
          </valueState>
          <valueState type="COLLECTED">
-            <value/>
+            <value>0</value>
          </valueState>
          <valueState type="FORCED">
-            <value/>
+            <value>0</value>
          </valueState>
          <valueState type="EDITED">
-            <value/>
+            <value>0</value>
          </valueState>
          <valueState type="INPUTED">
-            <value/>
+            <value>0</value>
          </valueState>
       </response>
-            <conditionFilter>() =&gt; true ? 'normal' : ''</conditionFilter>
+            <conditionFilter>normal</conditionFilter>
          </components>
-   <components xsi:type="Subsequence" id="j6p0s7o5" page="1">
+   <components xsi:type="Subsequence" id="j6p0s7o5">
       <label>General knowledge of the series</label>
-      <conditionFilter>(READY) =&gt;(!( READY !== '1')) ? 'normal' : 'hidden'</conditionFilter>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
    </components>
-   <components xsi:type="Input" id="j3343qhx" maxLength="30" page="1">
+   <components xsi:type="Input" id="j3343qhx" maxLength="30">
                <label>➡ 3. Who is the producer?</label>
                <response name="PRODUCER">
          <valueState type="PREVIOUS">
@@ -78,14 +78,13 @@
             <value/>
          </valueState>
       </response>
-               <conditionFilter>(READY) =&gt;(!( READY !== '1')) ? 'normal' : 'hidden'</conditionFilter>
+               <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
             </components>
    <components xsi:type="InputNumber"
                id="j6q9h8tj"
                min="0"
                max="99"
-               decimals="0"
-               page="1">
+               decimals="0">
       <label>➡ 4. What is the current season number?</label>
       <response name="SEASON_NUMBER">
          <valueState type="PREVIOUS">
@@ -104,15 +103,15 @@
             <value/>
          </valueState>
       </response>
-      <conditionFilter>(READY) =&gt;(!( READY !== '1')) ? 'normal' : 'hidden'</conditionFilter>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
    </components>
-   <components xsi:type="Datepicker" id="j334cyqb" page="1">
+   <components xsi:type="Datepicker" id="j334cyqb">
                <label>➡ 5. When was the first episode of the Simpsons?</label>
-               <declaration declarationType="comment"
-                   id="j334cyqb-d11"
-                   position="AFTER_QUESTION_TEXT">
+               <declarations declarationType="COMMENT"
+                    id="j334cyqb-d11"
+                    position="AFTER_QUESTION_TEXT">
          <label>For your information, the date of the last broadcast was on øLAST_BROADCASTø</label>
-      </declaration>
+      </declarations>
                <response name="DATEFIRST">
          <valueState type="PREVIOUS">
             <value/>
@@ -130,15 +129,14 @@
             <value/>
          </valueState>
       </response>
-               <conditionFilter>(READY) =&gt;(!( READY !== '1')) ? 'normal' : 'hidden'</conditionFilter>
+               <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
                <dateFormat>jj/mm/aaaa</dateFormat>
             </components>
    <components xsi:type="InputNumber"
                id="j6z06z1e"
                min="0.0"
                max="99.0"
-               decimals="1"
-               page="1">
+               decimals="1">
       <label>➡ 6. In your opinion, how much is the part of audience share in US for the 2016 season?</label>
       <response name="AUDIENCE_SHARE">
          <valueState type="PREVIOUS">
@@ -157,24 +155,24 @@
             <value/>
          </valueState>
       </response>
-      <conditionFilter>(READY) =&gt;(!( READY !== '1')) ? 'normal' : 'hidden'</conditionFilter>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
    </components>
-   <components xsi:type="Sequence" id="j3341528" page="2">
+   <components xsi:type="Sequence" id="j3341528">
       <label>II - Simpsons' city</label>
-      <declaration declarationType="comment"
-                   id="j3341528-d2"
-                   position="AFTER_QUESTION_TEXT">
+      <declarations declarationType="COMMENT"
+                    id="j3341528-d2"
+                    position="AFTER_QUESTION_TEXT">
          <label>This module asks about your general knowledge of the Simpsons city</label>
-      </declaration>
-      <conditionFilter>(READY) =&gt;(!( READY !== '1')) ? 'normal' : 'hidden'</conditionFilter>
+      </declarations>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
    </components>
-   <components xsi:type="Radio" id="j3343clt" page="2">
+   <components xsi:type="Radio" id="j3343clt">
       <label>➡ 1. In which city do the Simpsons reside?</label>
-      <declaration declarationType="instruction"
-                   id="j3343clt-d3"
-                   position="AFTER_QUESTION_TEXT">
+      <declarations declarationType="INSTRUCTION"
+                    id="j3343clt-d3"
+                    position="AFTER_QUESTION_TEXT">
          <label>One possible answer</label>
-      </declaration>
+      </declarations>
       <response name="CITY">
          <valueState type="PREVIOUS">
             <value/>
@@ -192,16 +190,16 @@
             <value/>
          </valueState>
       </response>
-      <conditionFilter>(READY) =&gt;(!( READY !== '1')) ? 'normal' : 'hidden'</conditionFilter>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
       <codeListReference>j334iumu</codeListReference>
    </components>
-   <components xsi:type="CheckboxOne" id="j6qdfhvw" page="2">
+   <components xsi:type="CheckboxOne" id="j6qdfhvw">
       <label>➡ 2. Who is the Simpsons city mayor?</label>
-      <declaration declarationType="instruction"
-                   id="j6qdfhvw-d4"
-                   position="AFTER_QUESTION_TEXT">
+      <declarations declarationType="INSTRUCTION"
+                    id="j6qdfhvw-d4"
+                    position="AFTER_QUESTION_TEXT">
          <label>Only one possible answer</label>
-      </declaration>
+      </declarations>
       <response name="MAYOR">
          <valueState type="PREVIOUS">
             <value/>
@@ -219,10 +217,10 @@
             <value/>
          </valueState>
       </response>
-      <conditionFilter>(READY) =&gt;(!( READY !== '1')) ? 'normal' : 'hidden'</conditionFilter>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
       <codeListReference>j6qdqoen</codeListReference>
    </components>
-   <components xsi:type="Dropdown" id="j4nw5cqz" page="2">
+   <components xsi:type="Dropdown" id="j4nw5cqz">
       <label>➡ 3. In which state do The Simpsons reside?</label>
       <response name="STATE">
          <valueState type="PREVIOUS">
@@ -241,38 +239,38 @@
             <value/>
          </valueState>
       </response>
-      <conditionFilter>(READY) =&gt;(!( READY !== '1')) ? 'normal' : 'hidden'</conditionFilter>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
       <codeListReference>j4nwo00f</codeListReference>
    </components>
-   <components xsi:type="Sequence" id="j6qe0h9q" page="3">
+   <components xsi:type="Sequence" id="j6qe0h9q">
       <label>III - Characters</label>
-      <conditionFilter>(READY) =&gt;(!( READY !== '1')) ? 'normal' : 'hidden'</conditionFilter>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
    </components>
-   <components xsi:type="Sequence" id="j4nw88h2" page="4">
+   <components xsi:type="Sequence" id="j4nw88h2">
       <label>IV - General questions</label>
-      <conditionFilter>(READY) =&gt;(!( READY !== '1')) ? 'normal' : 'hidden'</conditionFilter>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
    </components>
-   <components xsi:type="Subsequence" id="j6qe237q" page="4">
+   <components xsi:type="Subsequence" id="j6qe237q">
       <label>Kwik-E-Mart</label>
-      <conditionFilter>(READY) =&gt;(!( READY !== '1')) ? 'normal' : 'hidden'</conditionFilter>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
    </components>
-   <components xsi:type="Subsequence" id="j6qejudb" page="4">
+   <components xsi:type="Subsequence" id="j6qejudb">
       <label>Clowning</label>
-      <conditionFilter>(READY) =&gt;(!( READY !== '1')) ? 'normal' : 'hidden'</conditionFilter>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
    </components>
-   <components xsi:type="Subsequence" id="j6qeh91y" page="4">
+   <components xsi:type="Subsequence" id="j6qeh91y">
       <label>Transport</label>
-      <conditionFilter>(READY) =&gt;(!( READY !== '1')) ? 'normal' : 'hidden'</conditionFilter>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
    </components>
-   <components xsi:type="Sequence" id="j6qfx9qe" page="5">
+   <components xsi:type="Sequence" id="j6qfx9qe">
       <label>V - Favourite characters</label>
-      <conditionFilter>(READY) =&gt;(!( READY !== '1')) ? 'normal' : 'hidden'</conditionFilter>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
    </components>
-   <components xsi:type="Sequence" id="j6z12s2d" page="6">
+   <components xsi:type="Sequence" id="j6z12s2d">
       <label>VI - Comment</label>
-      <conditionFilter>() =&gt; true ? 'normal' : ''</conditionFilter>
+      <conditionFilter>normal</conditionFilter>
    </components>
-   <components xsi:type="Textarea" id="j6z0z3us" maxLength="255" page="6">
+   <components xsi:type="Textarea" id="j6z0z3us" maxLength="255">
             <label>➡ 1. Do you have any comment about the survey?</label>
             <response name="SURVEY_COMMENT">
          <valueState type="PREVIOUS">
@@ -291,7 +289,7 @@
             <value/>
          </valueState>
       </response>
-            <conditionFilter>() =&gt; true ? 'normal' : ''</conditionFilter>
+            <conditionFilter>normal</conditionFilter>
          </components>
    <codeLists id="j334iumu">
                <label>TOWN</label>
@@ -448,6 +446,6 @@
    </variables>
    <variables>
       <name>SUM_EXPENSES</name>
-      <value>$PERCENTAGE_EXPENSES11$ + $PERCENTAGE_EXPENSES21$ + $PERCENTAGE_EXPENSES31$ + $PERCENTAGE_EXPENSES41$ + $PERCENTAGE_EXPENSES51$ + $PERCENTAGE_EXPENSES61$ + $PERCENTAGE_EXPENSES71$ + $PERCENTAGE_EXPENSES81$ + $PERCENTAGE_EXPENSES91$ + $PERCENTAGE_EXPENSES101$</value>
+      <value>$PERCENTAGE_EXPENSES11 + $PERCENTAGE_EXPENSES21 + $PERCENTAGE_EXPENSES31 + $PERCENTAGE_EXPENSES41 + $PERCENTAGE_EXPENSES51 + $PERCENTAGE_EXPENSES61 + $PERCENTAGE_EXPENSES71 + $PERCENTAGE_EXPENSES81 + $PERCENTAGE_EXPENSES91 + $PERCENTAGE_EXPENSES101</value>
    </variables>
 </Questionnaire>

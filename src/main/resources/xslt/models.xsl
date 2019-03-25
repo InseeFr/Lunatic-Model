@@ -37,7 +37,7 @@
 	</xsl:template>
 	
 	<xsl:template match="component[@xsi:type='Sequence']">
-		<components xsi:type="{@xsi:type}" id="{@id}" page="{@page}">
+		<components xsi:type="{@xsi:type}" id="{@id}">
 			<xsl:apply-templates select="label"/>
 			<xsl:apply-templates select="declaration"/>
 			<xsl:apply-templates select="conditionFilter"/>
@@ -46,7 +46,7 @@
 	</xsl:template>
 	
 	<xsl:template match="component[@xsi:type='Subsequence']">
-		<components xsi:type="{@xsi:type}" id="{@id}" page="{@page}">
+		<components xsi:type="{@xsi:type}" id="{@id}">
 			<xsl:apply-templates select="label"/>
 			<xsl:apply-templates select="declaration"/>
 			<xsl:apply-templates select="conditionFilter"/>
@@ -82,13 +82,13 @@
 	</xsl:template>
 	
 	<xsl:template match="declaration">
-		<declaration declarationType="{@declarationType}" id="{@id}" position="{@position}">
+		<declarations declarationType="{@declarationType}" id="{@id}" position="{@position}">
 			<xsl:apply-templates select="label"/>
-		</declaration>
+		</declarations>
 	</xsl:template>
 	
 	<xsl:template match="component[@xsi:type='Radio'] | component[@xsi:type='Dropdown'] | component[@xsi:type='CheckboxOne']">
-		<components xsi:type="{@xsi:type}" id="{@id}" page="{@page}">
+		<components xsi:type="{@xsi:type}" id="{@id}">
 			<xsl:apply-templates select="label"/>
 			<xsl:apply-templates select="declaration"/>
 			<xsl:apply-templates select="response"/>

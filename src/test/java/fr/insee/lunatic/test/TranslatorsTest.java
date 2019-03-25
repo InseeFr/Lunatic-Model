@@ -135,7 +135,7 @@ public class TranslatorsTest {
 			long startTime = System.currentTimeMillis();
 			
 			String basePath = Constants.RESOURCES_FOLDER_XMLH_2_JSONF_PATH;
-			Path outputFile = Files.createTempFile(Constants.TEMP_FOLDER, "xmlh-2-jsonf-out", ".xml");
+			Path outputFile = Files.createTempFile(Constants.TEMP_FOLDER, "xmlh-2-jsonf-out", ".json");
 
 			XMLLunaticToXMLLunaticFlatTranslator translator = new XMLLunaticToXMLLunaticFlatTranslator();
 			XMLLunaticFlatToJSONLunaticFlatTranslator translator2 = new XMLLunaticFlatToJSONLunaticFlatTranslator();

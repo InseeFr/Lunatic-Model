@@ -3,21 +3,21 @@
    "label" : "Questionnaire SIMPSONS",
    "components" : [ {
       "id" : "j6p0ti5h",
-      "page" : 1,
       "type" : "Sequence",
       "label" : "I - Introduction",
-      "declaration" : [ {
+      "declarations" : [ {
          "id" : "j6p0ti5h-d1",
+         "declarationType" : "COMMENT",
          "position" : "AFTER_QUESTION_TEXT",
          "label" : "We're going to test your knowledge about the simpsons series.Welcome in the simspons world!"
       } ],
-      "conditionFilter" : "() => true ? 'normal' : ''"
+      "conditionFilter" : "normal"
    }, {
       "id" : "j6p3dkx6",
-      "page" : 1,
-      "maxLength" : 500,
+      "maxLength" : "500",
       "type" : "Textarea",
       "label" : "➡ 1. Before starting, do you have any comments about the Simpsons family?",
+      "conditionFilter" : "normal",
       "response" : {
          "name" : "COMMENT",
          "valueState" : [ {
@@ -36,45 +36,42 @@
             "type" : "INPUTED",
             "value" : ""
          } ]
-      },
-      "conditionFilter" : "() => true ? 'normal' : ''"
+      }
    }, {
       "id" : "j6p0np9q",
-      "page" : 1,
       "type" : "CheckboxBoolean",
       "label" : "➡ 2. Are you ready?",
+      "conditionFilter" : "normal",
       "response" : {
          "name" : "READY",
          "valueState" : [ {
             "type" : "PREVIOUS",
-            "value" : ""
+            "value" : 0
          }, {
             "type" : "COLLECTED",
-            "value" : ""
+            "value" : 0
          }, {
             "type" : "FORCED",
-            "value" : ""
+            "value" : 0
          }, {
             "type" : "EDITED",
-            "value" : ""
+            "value" : 0
          }, {
             "type" : "INPUTED",
-            "value" : ""
+            "value" : 0
          } ]
-      },
-      "conditionFilter" : "() => true ? 'normal' : ''"
+      }
    }, {
       "id" : "j6p0s7o5",
-      "page" : 1,
       "type" : "Subsequence",
       "label" : "General knowledge of the series",
-      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
    }, {
       "id" : "j3343qhx",
-      "page" : 1,
       "maxLength" : "30",
       "type" : "Input",
       "label" : "➡ 3. Who is the producer?",
+      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden",
       "response" : {
          "name" : "PRODUCER",
          "valueState" : [ {
@@ -93,16 +90,15 @@
             "type" : "INPUTED",
             "value" : ""
          } ]
-      },
-      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+      }
    }, {
       "id" : "j6q9h8tj",
-      "page" : 1,
       "min" : 0.0,
       "max" : 99.0,
       "decimals" : 0,
       "type" : "InputNumber",
       "label" : "➡ 4. What is the current season number?",
+      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden",
       "response" : {
          "name" : "SEASON_NUMBER",
          "valueState" : [ {
@@ -121,19 +117,18 @@
             "type" : "INPUTED",
             "value" : ""
          } ]
-      },
-      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'",
-      "unit" : ""
+      }
    }, {
       "id" : "j334cyqb",
-      "page" : 1,
       "type" : "Datepicker",
       "label" : "➡ 5. When was the first episode of the Simpsons?",
-      "declaration" : [ {
+      "declarations" : [ {
          "id" : "j334cyqb-d11",
+         "declarationType" : "COMMENT",
          "position" : "AFTER_QUESTION_TEXT",
          "label" : "For your information, the date of the last broadcast was on øLAST_BROADCASTø"
       } ],
+      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden",
       "response" : {
          "name" : "DATEFIRST",
          "valueState" : [ {
@@ -153,15 +148,15 @@
             "value" : ""
          } ]
       },
-      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+      "dateFormat" : "jj/mm/aaaa"
    }, {
       "id" : "j6z06z1e",
-      "page" : 1,
       "min" : 0.0,
       "max" : 99.0,
       "decimals" : 1,
       "type" : "InputNumber",
       "label" : "➡ 6. In your opinion, how much is the part of audience share in US for the 2016 season?",
+      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden",
       "response" : {
          "name" : "AUDIENCE_SHARE",
          "valueState" : [ {
@@ -180,31 +175,29 @@
             "type" : "INPUTED",
             "value" : ""
          } ]
-      },
-      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'",
-      "unit" : ""
+      }
    }, {
       "id" : "j3341528",
-      "page" : 2,
       "type" : "Sequence",
       "label" : "II - Simpsons' city",
-      "declaration" : [ {
+      "declarations" : [ {
          "id" : "j3341528-d2",
+         "declarationType" : "COMMENT",
          "position" : "AFTER_QUESTION_TEXT",
          "label" : "This module asks about your general knowledge of the Simpsons city"
       } ],
-      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
    }, {
       "id" : "j3343clt",
-      "toValidate" : false,
-      "page" : 2,
       "type" : "Radio",
       "label" : "➡ 1. In which city do the Simpsons reside?",
-      "declaration" : [ {
+      "declarations" : [ {
          "id" : "j3343clt-d3",
+         "declarationType" : "INSTRUCTION",
          "position" : "AFTER_QUESTION_TEXT",
          "label" : "One possible answer"
       } ],
+      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden",
       "response" : {
          "name" : "CITY",
          "valueState" : [ {
@@ -224,19 +217,18 @@
             "value" : ""
          } ]
       },
-      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'",
       "codeListReference" : "j334iumu"
    }, {
       "id" : "j6qdfhvw",
-      "toValidate" : false,
-      "page" : 2,
       "type" : "CheckboxOne",
       "label" : "➡ 2. Who is the Simpsons city mayor?",
-      "declaration" : [ {
+      "declarations" : [ {
          "id" : "j6qdfhvw-d4",
+         "declarationType" : "INSTRUCTION",
          "position" : "AFTER_QUESTION_TEXT",
          "label" : "Only one possible answer"
       } ],
+      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden",
       "response" : {
          "name" : "MAYOR",
          "valueState" : [ {
@@ -256,14 +248,12 @@
             "value" : ""
          } ]
       },
-      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'",
       "codeListReference" : "j6qdqoen"
    }, {
       "id" : "j4nw5cqz",
-      "toValidate" : false,
-      "page" : 2,
       "type" : "Dropdown",
       "label" : "➡ 3. In which state do The Simpsons reside?",
+      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden",
       "response" : {
          "name" : "STATE",
          "valueState" : [ {
@@ -283,56 +273,48 @@
             "value" : ""
          } ]
       },
-      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'",
       "codeListReference" : "j4nwo00f"
    }, {
       "id" : "j6qe0h9q",
-      "page" : 3,
       "type" : "Sequence",
       "label" : "III - Characters",
-      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
    }, {
       "id" : "j4nw88h2",
-      "page" : 4,
       "type" : "Sequence",
       "label" : "IV - General questions",
-      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
    }, {
       "id" : "j6qe237q",
-      "page" : 4,
       "type" : "Subsequence",
       "label" : "Kwik-E-Mart",
-      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
    }, {
       "id" : "j6qejudb",
-      "page" : 4,
       "type" : "Subsequence",
       "label" : "Clowning",
-      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
    }, {
       "id" : "j6qeh91y",
-      "page" : 4,
       "type" : "Subsequence",
       "label" : "Transport",
-      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
    }, {
       "id" : "j6qfx9qe",
-      "page" : 5,
       "type" : "Sequence",
       "label" : "V - Favourite characters",
-      "conditionFilter" : "(READY) =>(!( READY !== '1')) ? 'normal' : 'hidden'"
+      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
    }, {
       "id" : "j6z12s2d",
-      "page" : 6,
       "type" : "Sequence",
       "label" : "VI - Comment",
-      "conditionFilter" : "() => true ? 'normal' : ''"
+      "conditionFilter" : "normal"
    }, {
       "id" : "j6z0z3us",
-      "page" : 6,
-      "maxLength" : 255,
+      "maxLength" : "255",
       "type" : "Textarea",
       "label" : "➡ 1. Do you have any comment about the survey?",
+      "conditionFilter" : "normal",
       "response" : {
          "name" : "SURVEY_COMMENT",
          "valueState" : [ {
@@ -351,8 +333,7 @@
             "type" : "INPUTED",
             "value" : ""
          } ]
-      },
-      "conditionFilter" : "() => true ? 'normal' : ''"
+      }
    } ],
    "codeLists" : [ {
       "id" : "j334iumu",
@@ -448,6 +429,9 @@
       } ]
    } ],
    "variables" : [ {
+      "name" : "LAST_BROADCAST",
+      "label" : "LAST_BROADCAST label"
+   }, {
       "name" : "COMMENT",
       "responseRef" : "COMMENT"
    }, {
@@ -479,8 +463,6 @@
       "responseRef" : "SURVEY_COMMENT"
    }, {
       "name" : "SUM_EXPENSES",
-      "value" : "$PERCENTAGE_EXPENSES11$ + $PERCENTAGE_EXPENSES21$ + $PERCENTAGE_EXPENSES31$ + $PERCENTAGE_EXPENSES41$ + $PERCENTAGE_EXPENSES51$ + $PERCENTAGE_EXPENSES61$ + $PERCENTAGE_EXPENSES71$ + $PERCENTAGE_EXPENSES81$ + $PERCENTAGE_EXPENSES91$ + $PERCENTAGE_EXPENSES101$"
-   }, {
-      "name" : "LAST_BROADCAST"
+      "value" : "$PERCENTAGE_EXPENSES11 + $PERCENTAGE_EXPENSES21 + $PERCENTAGE_EXPENSES31 + $PERCENTAGE_EXPENSES41 + $PERCENTAGE_EXPENSES51 + $PERCENTAGE_EXPENSES61 + $PERCENTAGE_EXPENSES71 + $PERCENTAGE_EXPENSES81 + $PERCENTAGE_EXPENSES91 + $PERCENTAGE_EXPENSES101"
    } ]
 }
