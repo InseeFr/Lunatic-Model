@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire xsi:schemaLocation="http://xml.insee.fr/schema/applis/lunatic file:/src/main/resources/xsd/Questionnaire.xsd" xmlns="http://xml.insee.fr/schema/applis/lunatic" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="i6vwid">
+   <label>Questionnaire SIMPSONS</label>
+   <components id="j6p0ti5h" xsi:type="Sequence">
+      <label>I - Introduction</label>
+      <declarations id="j6p0ti5h-d1" declarationType="COMMENT" position="AFTER_QUESTION_TEXT">
+         <label>We're going to test your knowledge about the simpsons series.Welcome in the simspons world!</label>
+      </declarations>
+      <conditionFilter>normal</conditionFilter>
+   </components>
+   <components id="j6p3dkx6" maxLength="500" xsi:type="Textarea">
+      <label>➡ 1. Before starting, do you have any comments about the Simpsons family?</label>
+      <conditionFilter>normal</conditionFilter>
+      <response name="COMMENT">
+         <valueState type="PREVIOUS">
+            <value></value>
+         </valueState>
+         <valueState type="COLLECTED">
+            <value></value>
+         </valueState>
+         <valueState type="FORCED">
+            <value></value>
+         </valueState>
+         <valueState type="EDITED">
+            <value></value>
+         </valueState>
+         <valueState type="INPUTED">
+            <value></value>
+         </valueState>
+      </response>
+   </components>
+   <components id="j6p0np9q" xsi:type="CheckboxBoolean">
+      <label>➡ 2. Are you ready?</label>
+      <conditionFilter>normal</conditionFilter>
+      <response name="READY">
+         <valueState type="PREVIOUS">
+            <value>0</value>
+         </valueState>
+         <valueState type="COLLECTED">
+            <value>0</value>
+         </valueState>
+         <valueState type="FORCED">
+            <value>0</value>
+         </valueState>
+         <valueState type="EDITED">
+            <value>0</value>
+         </valueState>
+         <valueState type="INPUTED">
+            <value>0</value>
+         </valueState>
+      </response>
+   </components>
+   <components id="j6p0s7o5" xsi:type="Subsequence">
+      <label>General knowledge of the series</label>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
+   </components>
+   <components id="j3343qhx" maxLength="30" xsi:type="Input">
+      <label>➡ 3. Who is the producer?</label>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
+      <response name="PRODUCER">
+         <valueState type="PREVIOUS">
+            <value></value>
+         </valueState>
+         <valueState type="COLLECTED">
+            <value></value>
+         </valueState>
+         <valueState type="FORCED">
+            <value></value>
+         </valueState>
+         <valueState type="EDITED">
+            <value></value>
+         </valueState>
+         <valueState type="INPUTED">
+            <value></value>
+         </valueState>
+      </response>
+   </components>
+   <components id="j6q9h8tj" min="0.0" max="99.0" decimals="0" xsi:type="InputNumber">
+      <label>➡ 4. What is the current season number?</label>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
+      <response name="SEASON_NUMBER">
+         <valueState type="PREVIOUS">
+            <value></value>
+         </valueState>
+         <valueState type="COLLECTED">
+            <value></value>
+         </valueState>
+         <valueState type="FORCED">
+            <value></value>
+         </valueState>
+         <valueState type="EDITED">
+            <value></value>
+         </valueState>
+         <valueState type="INPUTED">
+            <value></value>
+         </valueState>
+      </response>
+   </components>
+   <components id="j334cyqb" xsi:type="Datepicker">
+      <label>➡ 5. When was the first episode of the Simpsons?</label>
+      <declarations id="j334cyqb-d11" declarationType="COMMENT" position="AFTER_QUESTION_TEXT">
+         <label>For your information, the date of the last broadcast was on øLAST_BROADCASTø</label>
+      </declarations>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
+      <response name="DATEFIRST">
+         <valueState type="PREVIOUS">
+            <value></value>
+         </valueState>
+         <valueState type="COLLECTED">
+            <value></value>
+         </valueState>
+         <valueState type="FORCED">
+            <value></value>
+         </valueState>
+         <valueState type="EDITED">
+            <value></value>
+         </valueState>
+         <valueState type="INPUTED">
+            <value></value>
+         </valueState>
+      </response>
+      <dateFormat>jj/mm/aaaa</dateFormat>
+   </components>
+   <components id="j6z06z1e" min="0.0" max="99.0" decimals="1" xsi:type="InputNumber">
+      <label>➡ 6. In your opinion, how much is the part of audience share in US for the 2016 season?</label>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
+      <response name="AUDIENCE_SHARE">
+         <valueState type="PREVIOUS">
+            <value></value>
+         </valueState>
+         <valueState type="COLLECTED">
+            <value></value>
+         </valueState>
+         <valueState type="FORCED">
+            <value></value>
+         </valueState>
+         <valueState type="EDITED">
+            <value></value>
+         </valueState>
+         <valueState type="INPUTED">
+            <value></value>
+         </valueState>
+      </response>
+   </components>
+   <components id="j3341528" xsi:type="Sequence">
+      <label>II - Simpsons' city</label>
+      <declarations id="j3341528-d2" declarationType="COMMENT" position="AFTER_QUESTION_TEXT">
+         <label>This module asks about your general knowledge of the Simpsons city</label>
+      </declarations>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
+   </components>
+   <components id="j3343clt" xsi:type="Radio">
+      <label>➡ 1. In which city do the Simpsons reside?</label>
+      <declarations id="j3343clt-d3" declarationType="INSTRUCTION" position="AFTER_QUESTION_TEXT">
+         <label>One possible answer</label>
+      </declarations>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
+      <response name="CITY">
+         <valueState type="PREVIOUS">
+            <value></value>
+         </valueState>
+         <valueState type="COLLECTED">
+            <value></value>
+         </valueState>
+         <valueState type="FORCED">
+            <value></value>
+         </valueState>
+         <valueState type="EDITED">
+            <value></value>
+         </valueState>
+         <valueState type="INPUTED">
+            <value></value>
+         </valueState>
+      </response>
+      <codeListReference>j334iumu</codeListReference>
+   </components>
+   <components id="j6qdfhvw" xsi:type="CheckboxOne">
+      <label>➡ 2. Who is the Simpsons city mayor?</label>
+      <declarations id="j6qdfhvw-d4" declarationType="INSTRUCTION" position="AFTER_QUESTION_TEXT">
+         <label>Only one possible answer</label>
+      </declarations>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
+      <response name="MAYOR">
+         <valueState type="PREVIOUS">
+            <value></value>
+         </valueState>
+         <valueState type="COLLECTED">
+            <value></value>
+         </valueState>
+         <valueState type="FORCED">
+            <value></value>
+         </valueState>
+         <valueState type="EDITED">
+            <value></value>
+         </valueState>
+         <valueState type="INPUTED">
+            <value></value>
+         </valueState>
+      </response>
+      <codeListReference>j6qdqoen</codeListReference>
+   </components>
+   <components id="j4nw5cqz" xsi:type="Dropdown">
+      <label>➡ 3. In which state do The Simpsons reside?</label>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
+      <response name="STATE">
+         <valueState type="PREVIOUS">
+            <value></value>
+         </valueState>
+         <valueState type="COLLECTED">
+            <value></value>
+         </valueState>
+         <valueState type="FORCED">
+            <value></value>
+         </valueState>
+         <valueState type="EDITED">
+            <value></value>
+         </valueState>
+         <valueState type="INPUTED">
+            <value></value>
+         </valueState>
+      </response>
+      <codeListReference>j4nwo00f</codeListReference>
+   </components>
+   <components id="j6qe0h9q" xsi:type="Sequence">
+      <label>III - Characters</label>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
+   </components>
+   <components id="j4nw88h2" xsi:type="Sequence">
+      <label>IV - General questions</label>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
+   </components>
+   <components id="j6qe237q" xsi:type="Subsequence">
+      <label>Kwik-E-Mart</label>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
+   </components>
+   <components id="j6qejudb" xsi:type="Subsequence">
+      <label>Clowning</label>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
+   </components>
+   <components id="j6qeh91y" xsi:type="Subsequence">
+      <label>Transport</label>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
+   </components>
+   <components id="j6qfx9qe" xsi:type="Sequence">
+      <label>V - Favourite characters</label>
+      <conditionFilter>#if( (!( $READY != '1')) )normal#{else}hidden</conditionFilter>
+   </components>
+   <components id="j6z12s2d" xsi:type="Sequence">
+      <label>VI - Comment</label>
+      <conditionFilter>normal</conditionFilter>
+   </components>
+   <components id="j6z0z3us" maxLength="255" xsi:type="Textarea">
+      <label>➡ 1. Do you have any comment about the survey?</label>
+      <conditionFilter>normal</conditionFilter>
+      <response name="SURVEY_COMMENT">
+         <valueState type="PREVIOUS">
+            <value></value>
+         </valueState>
+         <valueState type="COLLECTED">
+            <value></value>
+         </valueState>
+         <valueState type="FORCED">
+            <value></value>
+         </valueState>
+         <valueState type="EDITED">
+            <value></value>
+         </valueState>
+         <valueState type="INPUTED">
+            <value></value>
+         </valueState>
+      </response>
+   </components>
+   <codeLists id="j334iumu">
+      <label>TOWN</label>
+      <code>
+         <parent></parent>
+         <value>00001</value>
+         <label>Springfield</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>00002</value>
+         <label>Shelbyville</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>00003</value>
+         <label>Seinfeld</label>
+      </code>
+   </codeLists>
+   <codeLists id="j6qdqoen">
+      <label>MAYOR</label>
+      <code>
+         <parent></parent>
+         <value>1</value>
+         <label>Constance Harm</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>2</value>
+         <label>Timothy Lovejoy</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>3</value>
+         <label>Joe Quimby</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>4</value>
+         <label>Poochie</label>
+      </code>
+   </codeLists>
+   <codeLists id="j4nwo00f">
+      <label>State</label>
+      <code>
+         <parent></parent>
+         <value>1</value>
+         <label>Washington</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>2</value>
+         <label>Kentucky</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>3</value>
+         <label>Ohio</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>4</value>
+         <label>Maine</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>5</value>
+         <label>North Dakota</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>6</value>
+         <label>Florida</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>7</value>
+         <label>North Takoma</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>8</value>
+         <label>California</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>9</value>
+         <label>Texas</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>10</value>
+         <label>Massachusetts</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>11</value>
+         <label>Nevada</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>12</value>
+         <label>Illinois</label>
+      </code>
+      <code>
+         <parent></parent>
+         <value>13</value>
+         <label>Not in any state, you fool!</label>
+      </code>
+   </codeLists>
+   <variables>
+      <name>LAST_BROADCAST</name>
+      <label>LAST_BROADCAST label</label>
+   </variables>
+   <variables>
+      <name>COMMENT</name>
+      <responseRef>COMMENT</responseRef>
+   </variables>
+   <variables>
+      <name>READY</name>
+      <responseRef>READY</responseRef>
+   </variables>
+   <variables>
+      <name>PRODUCER</name>
+      <responseRef>PRODUCER</responseRef>
+   </variables>
+   <variables>
+      <name>SEASON_NUMBER</name>
+      <responseRef>SEASON_NUMBER</responseRef>
+   </variables>
+   <variables>
+      <name>DATEFIRST</name>
+      <responseRef>DATEFIRST</responseRef>
+   </variables>
+   <variables>
+      <name>AUDIENCE_SHARE</name>
+      <responseRef>AUDIENCE_SHARE</responseRef>
+   </variables>
+   <variables>
+      <name>CITY</name>
+      <responseRef>CITY</responseRef>
+   </variables>
+   <variables>
+      <name>MAYOR</name>
+      <responseRef>MAYOR</responseRef>
+   </variables>
+   <variables>
+      <name>STATE</name>
+      <responseRef>STATE</responseRef>
+   </variables>
+   <variables>
+      <name>SURVEY_COMMENT</name>
+      <responseRef>SURVEY_COMMENT</responseRef>
+   </variables>
+   <variables>
+      <name>SUM_EXPENSES</name>
+      <value>$PERCENTAGE_EXPENSES11 + $PERCENTAGE_EXPENSES21 + $PERCENTAGE_EXPENSES31 + $PERCENTAGE_EXPENSES41 + $PERCENTAGE_EXPENSES51 + $PERCENTAGE_EXPENSES61 + $PERCENTAGE_EXPENSES71 + $PERCENTAGE_EXPENSES81 + $PERCENTAGE_EXPENSES91 + $PERCENTAGE_EXPENSES101</value>
+   </variables>
+</Questionnaire>
