@@ -3,7 +3,7 @@ package fr.insee.lunatic.mock.h;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import fr.insee.lunatic.model.QuestionType;
+import fr.insee.lunatic.model.hierarchique.QuestionType;
 
 public class QuestionFactory {
 

@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import fr.insee.lunatic.Constants;
 import fr.insee.lunatic.conversion.JSONDeserializer;
-import fr.insee.lunatic.model.Questionnaire;
+import fr.insee.lunatic.model.flat.Questionnaire;
 
 public class JSONDeserializerTest {
 

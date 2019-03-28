@@ -18,7 +18,7 @@ import org.apache.logging.log4j.Logger;
 import org.eclipse.persistence.jaxb.UnmarshallerProperties;
 
 import fr.insee.lunatic.Constants;
-import fr.insee.lunatic.model.Questionnaire;
+import fr.insee.lunatic.model.flat.Questionnaire;
 
 public class JSONLunaticFlatToXMLLunaticFlatTranslator {
 

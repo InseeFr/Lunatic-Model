@@ -3,8 +3,8 @@ package fr.insee.lunatic.mock.h;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import fr.insee.lunatic.model.Questionnaire;
-import fr.insee.lunatic.model.SequenceType;
+import fr.insee.lunatic.model.hierarchique.Questionnaire;
+import fr.insee.lunatic.model.hierarchique.SequenceType;
 
 public class QuestionnaireFactory {
 

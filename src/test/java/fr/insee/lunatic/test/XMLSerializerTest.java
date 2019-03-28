@@ -8,9 +8,7 @@ import org.junit.Test;
 
 import fr.insee.lunatic.conversion.XMLSerializer;
 import fr.insee.lunatic.mock.QuestionnaireFactory;
-import fr.insee.lunatic.mock.SequenceFactory;
-import fr.insee.lunatic.model.Questionnaire;
-import fr.insee.lunatic.model.SequenceType;
+import fr.insee.lunatic.model.flat.Questionnaire;
 
 public class XMLSerializerTest {
 

@@ -46,32 +46,32 @@
          "name" : "READY",
          "valueState" : [ {
             "type" : "PREVIOUS",
-            "value" : 0
+            "value" : false
          }, {
             "type" : "COLLECTED",
-            "value" : 0
+            "value" : false
          }, {
             "type" : "FORCED",
-            "value" : 0
+            "value" : false
          }, {
             "type" : "EDITED",
-            "value" : 0
+            "value" : false
          }, {
             "type" : "INPUTED",
-            "value" : 0
+            "value" : false
          } ]
       }
    }, {
       "id" : "j6p0s7o5",
       "type" : "Subsequence",
       "label" : "General knowledge of the series",
-      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end"
    }, {
       "id" : "j3343qhx",
       "maxLength" : "30",
       "type" : "Input",
       "label" : "➡ 3. Who is the producer?",
-      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden",
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
       "response" : {
          "name" : "PRODUCER",
          "valueState" : [ {
@@ -98,7 +98,7 @@
       "decimals" : 0,
       "type" : "InputNumber",
       "label" : "➡ 4. What is the current season number?",
-      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden",
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
       "response" : {
          "name" : "SEASON_NUMBER",
          "valueState" : [ {
@@ -128,7 +128,7 @@
          "position" : "AFTER_QUESTION_TEXT",
          "label" : "For your information, the date of the last broadcast was on øLAST_BROADCASTø"
       } ],
-      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden",
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
       "response" : {
          "name" : "DATEFIRST",
          "valueState" : [ {
@@ -156,7 +156,7 @@
       "decimals" : 1,
       "type" : "InputNumber",
       "label" : "➡ 6. In your opinion, how much is the part of audience share in US for the 2016 season?",
-      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden",
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
       "response" : {
          "name" : "AUDIENCE_SHARE",
          "valueState" : [ {
@@ -186,7 +186,7 @@
          "position" : "AFTER_QUESTION_TEXT",
          "label" : "This module asks about your general knowledge of the Simpsons city"
       } ],
-      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end"
    }, {
       "id" : "j3343clt",
       "type" : "Radio",
@@ -197,7 +197,7 @@
          "position" : "AFTER_QUESTION_TEXT",
          "label" : "One possible answer"
       } ],
-      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden",
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
       "response" : {
          "name" : "CITY",
          "valueState" : [ {
@@ -228,7 +228,7 @@
          "position" : "AFTER_QUESTION_TEXT",
          "label" : "Only one possible answer"
       } ],
-      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden",
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
       "response" : {
          "name" : "MAYOR",
          "valueState" : [ {
@@ -253,7 +253,7 @@
       "id" : "j4nw5cqz",
       "type" : "Dropdown",
       "label" : "➡ 3. In which state do The Simpsons reside?",
-      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden",
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
       "response" : {
          "name" : "STATE",
          "valueState" : [ {
@@ -278,32 +278,132 @@
       "id" : "j6qe0h9q",
       "type" : "Sequence",
       "label" : "III - Characters",
-      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end"
+   }, {
+      "id" : "j334akov",
+      "type" : "Checkbox",
+      "label" : "➡ 1. What are the pet names that the Simpsons family had?",
+      "declarations" : [ {
+         "id" : "j334akov-d5",
+         "declarationType" : "INSTRUCTION",
+         "position" : "AFTER_QUESTION_TEXT",
+         "label" : "Several possible answers"
+      } ],
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
+      "items" : [ {
+         "id" : "j334akov-QOP-jbgd8qmn",
+         "label" : "Santa's Little Helper",
+         "response" : {
+            "name" : "PET1",
+            "valueState" : [ {
+               "type" : "PREVIOUS",
+               "value" : false
+            }, {
+               "type" : "COLLECTED",
+               "value" : false
+            }, {
+               "type" : "FORCED",
+               "value" : false
+            }, {
+               "type" : "EDITED",
+               "value" : false
+            }, {
+               "type" : "INPUTED",
+               "value" : false
+            } ]
+         }
+      }, {
+         "id" : "j334akov-QOP-jbgd60vl",
+         "label" : "Snowball I",
+         "response" : {
+            "name" : "PET2",
+            "valueState" : [ {
+               "type" : "PREVIOUS",
+               "value" : false
+            }, {
+               "type" : "COLLECTED",
+               "value" : false
+            }, {
+               "type" : "FORCED",
+               "value" : false
+            }, {
+               "type" : "EDITED",
+               "value" : false
+            }, {
+               "type" : "INPUTED",
+               "value" : false
+            } ]
+         }
+      }, {
+         "id" : "j334akov-QOP-jbgda2jo",
+         "label" : "Coltrane",
+         "response" : {
+            "name" : "PET3",
+            "valueState" : [ {
+               "type" : "PREVIOUS",
+               "value" : false
+            }, {
+               "type" : "COLLECTED",
+               "value" : false
+            }, {
+               "type" : "FORCED",
+               "value" : false
+            }, {
+               "type" : "EDITED",
+               "value" : false
+            }, {
+               "type" : "INPUTED",
+               "value" : false
+            } ]
+         }
+      }, {
+         "id" : "j334akov-QOP-jbgdfssy",
+         "label" : "Mojo the Helper Monkey",
+         "response" : {
+            "name" : "PET4",
+            "valueState" : [ {
+               "type" : "PREVIOUS",
+               "value" : false
+            }, {
+               "type" : "COLLECTED",
+               "value" : false
+            }, {
+               "type" : "FORCED",
+               "value" : false
+            }, {
+               "type" : "EDITED",
+               "value" : false
+            }, {
+               "type" : "INPUTED",
+               "value" : false
+            } ]
+         }
+      } ]
    }, {
       "id" : "j4nw88h2",
       "type" : "Sequence",
       "label" : "IV - General questions",
-      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end"
    }, {
       "id" : "j6qe237q",
       "type" : "Subsequence",
       "label" : "Kwik-E-Mart",
-      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end"
    }, {
       "id" : "j6qejudb",
       "type" : "Subsequence",
       "label" : "Clowning",
-      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end"
    }, {
       "id" : "j6qeh91y",
       "type" : "Subsequence",
       "label" : "Transport",
-      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end"
    }, {
       "id" : "j6qfx9qe",
       "type" : "Sequence",
       "label" : "V - Favourite characters",
-      "conditionFilter" : "#if( (!( $READY != '1')) )normal#{else}hidden"
+      "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end"
    }, {
       "id" : "j6z12s2d",
       "type" : "Sequence",
@@ -338,7 +438,7 @@
    "codeLists" : [ {
       "id" : "j334iumu",
       "label" : "TOWN",
-      "code" : [ {
+      "codes" : [ {
          "parent" : "",
          "value" : "00001",
          "label" : "Springfield"
@@ -354,7 +454,7 @@
    }, {
       "id" : "j6qdqoen",
       "label" : "MAYOR",
-      "code" : [ {
+      "codes" : [ {
          "parent" : "",
          "value" : "1",
          "label" : "Constance Harm"
@@ -374,7 +474,7 @@
    }, {
       "id" : "j4nwo00f",
       "label" : "State",
-      "code" : [ {
+      "codes" : [ {
          "parent" : "",
          "value" : "1",
          "label" : "Washington"
@@ -458,6 +558,18 @@
    }, {
       "name" : "STATE",
       "responseRef" : "STATE"
+   }, {
+      "name" : "PET1",
+      "responseRef" : "PET1"
+   }, {
+      "name" : "PET2",
+      "responseRef" : "PET2"
+   }, {
+      "name" : "PET3",
+      "responseRef" : "PET3"
+   }, {
+      "name" : "PET4",
+      "responseRef" : "PET4"
    }, {
       "name" : "SURVEY_COMMENT",
       "responseRef" : "SURVEY_COMMENT"

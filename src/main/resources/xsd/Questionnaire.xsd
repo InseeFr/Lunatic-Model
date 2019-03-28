@@ -15,12 +15,12 @@
   <xs:complexType name="CodeLists">
     <xs:sequence>
       <xs:element name="label" type="xs:string"/>
-      <xs:element name="code" type="Code" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="codes" type="Codes" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute name="id" type="xs:ID" use="required"/>
   </xs:complexType>
   
-  <xs:complexType name="Code">
+  <xs:complexType name="Codes">
     <xs:sequence>
       <xs:element name="parent" type="xs:string"/>
       <xs:element name="value" type="xs:string"/>
@@ -84,6 +84,21 @@
       <xs:element name="valueState" type="ResponseTypeInt" minOccurs="1" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+  
+  <xs:complexType name="ResponseContainerBoolean">
+    <xs:sequence>
+      <xs:element name="valueState" type="ResponseTypeBoolean" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="name" type="xs:string"/>
+  </xs:complexType>
+  
+  <xs:complexType name="ResponseTypeBoolean">
+    <xs:sequence>
+      <xs:element name="value" type="xs:boolean"/>
+      <xs:element name="responseComment" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="ResponseTypeEnum"/>
   </xs:complexType>
   
   <xs:complexType name="ResponseTypeInt">
@@ -178,7 +193,7 @@
     <xs:complexContent>
       <xs:extension base="ComponentType">
         <xs:sequence>
-          <xs:element name="response" type="ResponseContainerInt"/>
+          <xs:element name="response" type="ResponseContainerBoolean"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -215,6 +230,24 @@
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="Checkbox">
+    <xs:complexContent>
+      <xs:extension base="ComponentType">
+        <xs:sequence>
+          <xs:element name="items" type="ItemType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="ItemType">
+    <xs:sequence>
+      <xs:element name="label" type="xs:string"/>
+      <xs:element name="response" type="ResponseContainerBoolean"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
   </xs:complexType>
   
   <xs:complexType name="DeclarationType">

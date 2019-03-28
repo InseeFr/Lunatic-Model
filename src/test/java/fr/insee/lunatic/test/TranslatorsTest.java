@@ -19,6 +19,7 @@ import org.xmlunit.diff.Diff;
 import fr.insee.lunatic.Constants;
 import fr.insee.lunatic.conversion.JSONLunaticFlatToXMLLunaticFlatTranslator;
 import fr.insee.lunatic.conversion.XMLLunaticFlatToJSONLunaticFlatTranslator;
+import fr.insee.lunatic.conversion.XMLLunaticToJSONLunaticTranslator;
 import fr.insee.lunatic.conversion.XMLLunaticToXMLLunaticFlatTranslator;
 
 public class TranslatorsTest {
@@ -30,7 +31,7 @@ public class TranslatorsTest {
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	}
-
+	
 	@Test
 	public void testQuestionnaireJSONFToXMLF() {
 		logger.debug("Launch test : JSONLunaticFlat -> XMLLunaticFlat");
@@ -155,6 +156,38 @@ public class TranslatorsTest {
 			String jsonExpectedString = new String(Files.readAllBytes(expectedFile),StandardCharsets.UTF_8);
 
 			JSONAssert.assertEquals(jsonExpectedString, jsonOut, false);
+		} catch (IOException e) {
+			e.printStackTrace();
+			Assert.fail();
+		} catch (NullPointerException e) {
+			e.printStackTrace();
+			Assert.fail();
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.out.println(e.getMessage());
+			Assert.fail();
+		}
+	}
+	
+	@Test
+	public void testQuestionnaireXMLHToJSONH() {
+		logger.debug("Launch test : XMLLunatic -> JSONLunaticH");
+		try {
+			String basePath = Constants.RESOURCES_FOLDER_XMLH_2_JSONH_PATH;
+			Path outputFile = Files.createTempFile(Constants.TEMP_FOLDER, "xmlh-2-jsonh-out", ".json");
+
+			XMLLunaticToJSONLunaticTranslator translator = new XMLLunaticToJSONLunaticTranslator();
+			File in = new File(String.format("%s/in.xml", basePath));
+			String jsonQuestionnaire = translator.translate(in);
+			JSONObject jsonOut = new JSONObject(jsonQuestionnaire);
+			Files.write(outputFile, jsonQuestionnaire.getBytes());
+			logger.debug("File generated at : "+outputFile.toString());
+
+			Path expectedFile = Paths.get(String.format("%s/out.json", basePath));
+			String jsonExpectedString = new String(Files.readAllBytes(expectedFile),StandardCharsets.UTF_8);
+
+			JSONAssert.assertEquals(jsonExpectedString, jsonOut, false);
+
 		} catch (IOException e) {
 			e.printStackTrace();
 			Assert.fail();

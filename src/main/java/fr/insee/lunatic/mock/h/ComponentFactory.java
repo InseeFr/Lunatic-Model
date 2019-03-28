@@ -1,12 +1,9 @@
 package fr.insee.lunatic.mock.h;
 
-import fr.insee.lunatic.model.ComponentType;
-import fr.insee.lunatic.model.ControlCriticityEnum;
-import fr.insee.lunatic.model.ControlType;
-import fr.insee.lunatic.model.DeclarationPositionEnum;
-import fr.insee.lunatic.model.DeclarationType;
-import fr.insee.lunatic.model.DeclarationTypeEnum;
-import fr.insee.lunatic.model.ExpressionType;
+import fr.insee.lunatic.model.hierarchique.ComponentType;
+import fr.insee.lunatic.model.hierarchique.ControlCriticityEnum;
+import fr.insee.lunatic.model.hierarchique.ControlType;
+import fr.insee.lunatic.model.hierarchique.ExpressionType;
 
 public class ComponentFactory {
 
@@ -25,12 +22,7 @@ public class ComponentFactory {
 
 		int baseId = (int) Math.floor(Math.random() * 10000);
 
-		// Add a declaration
-		DeclarationType declaration = new DeclarationType();
-		declaration.setDeclarationType(DeclarationTypeEnum.INSTRUCTION);
-		declaration.setPosition(DeclarationPositionEnum.BEFORE_QUESTION_TEXT);
-		declaration.setLabel("Instruction for component " + component.getId());
-		component.getDeclaration().add(declaration);
+		
 
 		// Add controls (0 to 2) - 0 is 80%, 1 15% and 2 5%
 		int numberOfControls = (Math.random() < 0.2) ? 1 : 0;

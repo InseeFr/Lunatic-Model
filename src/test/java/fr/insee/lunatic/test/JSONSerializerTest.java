@@ -8,7 +8,7 @@ import org.junit.Test;
 
 import fr.insee.lunatic.conversion.JSONSerializer;
 import fr.insee.lunatic.mock.QuestionnaireFactory;
-import fr.insee.lunatic.model.Questionnaire;
+import fr.insee.lunatic.model.flat.Questionnaire;
 
 public class JSONSerializerTest {
 

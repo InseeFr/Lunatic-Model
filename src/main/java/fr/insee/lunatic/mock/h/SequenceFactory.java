@@ -1,12 +1,10 @@
 package fr.insee.lunatic.mock.h;
 
-import java.math.BigInteger;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import fr.insee.lunatic.mock.QuestionFactory;
-import fr.insee.lunatic.model.SequenceType;
+import fr.insee.lunatic.model.hierarchique.SequenceType;
 
 public class SequenceFactory {
 
@@ -49,7 +47,6 @@ public class SequenceFactory {
 
 		for (int childIndex = 0; childIndex <= numberOfChildren; childIndex++) {
 			int childNumber = number * 10 + childIndex;
-			sequence.getComponents().add(questionFactory.createQuestion(childNumber));
 		}
 
 		return sequence;
