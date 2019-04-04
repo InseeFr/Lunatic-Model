@@ -1,9 +1,9 @@
 package fr.insee.lunatic.mock.h;
 
-import fr.insee.lunatic.model.hierarchique.ComponentType;
-import fr.insee.lunatic.model.hierarchique.ControlCriticityEnum;
-import fr.insee.lunatic.model.hierarchique.ControlType;
-import fr.insee.lunatic.model.hierarchique.ExpressionType;
+import fr.insee.lunatic.model.hierarchical.ComponentType;
+import fr.insee.lunatic.model.hierarchical.ControlCriticityEnum;
+import fr.insee.lunatic.model.hierarchical.ControlType;
+import fr.insee.lunatic.model.hierarchical.ExpressionType;
 
 public class ComponentFactory {
 

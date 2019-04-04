@@ -1,13 +1,13 @@
 package fr.insee.lunatic.mock.h;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import fr.insee.lunatic.model.hierarchique.QuestionType;
+import fr.insee.lunatic.model.hierarchical.QuestionType;
 
 public class QuestionFactory {
 
-	private static final Logger logger = LogManager.getLogger(QuestionFactory.class);
+	private static final Logger logger = LoggerFactory.getLogger(QuestionFactory.class);
 
 
 	public QuestionFactory() {

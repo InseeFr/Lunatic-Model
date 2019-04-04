@@ -5,17 +5,17 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.transform.stream.StreamSource;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.eclipse.persistence.jaxb.UnmarshallerProperties;
 
-import fr.insee.lunatic.model.hierarchique.Questionnaire;
+import fr.insee.lunatic.model.hierarchical.Questionnaire;
 
 public class JSONDeserializerH {
 
 	public JSONDeserializerH() {	}
 
-	private static final Logger logger = LogManager.getLogger(JSONDeserializerH.class);
+	private static final Logger logger = LoggerFactory.getLogger(JSONDeserializerH.class);
 
 	public Questionnaire deserialize(String fileName) throws JAXBException {
 

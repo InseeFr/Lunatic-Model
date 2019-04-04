@@ -3,7 +3,6 @@ import java.io.File;
 
 import javax.xml.transform.stream.StreamSource;
 
-import org.w3c.dom.Attr;
 import org.xmlunit.builder.DiffBuilder;
 import org.xmlunit.diff.DefaultNodeMatcher;
 import org.xmlunit.diff.Diff;

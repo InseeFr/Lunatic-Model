@@ -13,8 +13,8 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.namespace.QName;
 import javax.xml.transform.stream.StreamSource;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.eclipse.persistence.jaxb.UnmarshallerProperties;
 
 import fr.insee.lunatic.Constants;
@@ -32,7 +32,7 @@ public class JSONLunaticFlatToXMLLunaticFlatTranslator {
 		this.monitored = monitored;
 	}
 
-	private static final Logger logger = LogManager.getLogger(JSONLunaticFlatToXMLLunaticFlatTranslator.class);
+	private static final Logger logger = LoggerFactory.getLogger(JSONLunaticFlatToXMLLunaticFlatTranslator.class);
 
 	public String translate(File jsonFile) throws JAXBException, UnsupportedEncodingException {
 

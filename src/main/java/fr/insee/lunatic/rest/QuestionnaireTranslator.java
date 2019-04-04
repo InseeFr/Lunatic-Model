@@ -14,8 +14,8 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import fr.insee.lunatic.conversion.XMLLunaticFlatToJSONLunaticFlatTranslator;
 import fr.insee.lunatic.conversion.XMLLunaticToXMLLunaticFlatTranslator;
@@ -23,7 +23,7 @@ import fr.insee.lunatic.conversion.XMLLunaticToXMLLunaticFlatTranslator;
 @Path("questionnaire")
 public class QuestionnaireTranslator {
 
-	private static final Logger logger = LogManager.getLogger(QuestionnaireTranslator.class);
+	private static final Logger logger = LoggerFactory.getLogger(QuestionnaireTranslator.class);
 
    
     @POST
