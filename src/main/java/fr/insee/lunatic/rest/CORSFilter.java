@@ -7,12 +7,12 @@ import javax.ws.rs.client.ClientResponseContext;
 import javax.ws.rs.client.ClientResponseFilter;
 import javax.ws.rs.core.MultivaluedMap;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class CORSFilter implements ClientResponseFilter {
 
-	static final Logger logger = LogManager.getLogger(CORSFilter.class);
+	static final Logger logger = LoggerFactory.getLogger(CORSFilter.class);
 
 	@Override
 	public void filter(ClientRequestContext requestContext, ClientResponseContext responseContext) throws IOException {

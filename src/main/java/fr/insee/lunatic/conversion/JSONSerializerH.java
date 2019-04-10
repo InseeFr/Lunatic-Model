@@ -11,13 +11,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.eclipse.persistence.jaxb.MarshallerProperties;
 
-import fr.insee.lunatic.model.flat.Questionnaire;
+import fr.insee.lunatic.model.hierarchical.Questionnaire;
 
-public class JSONSerializer {
+public class JSONSerializerH {
 
-	public JSONSerializer() { }
+	public JSONSerializerH() { }
 
-	private static final Logger logger = LoggerFactory.getLogger(JSONSerializer.class);
+	private static final Logger logger = LoggerFactory.getLogger(JSONSerializerH.class);
 
 	public String serialize(Questionnaire questionnaire) throws JAXBException, UnsupportedEncodingException {
 

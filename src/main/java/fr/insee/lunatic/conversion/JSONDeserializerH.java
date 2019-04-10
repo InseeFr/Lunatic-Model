@@ -9,13 +9,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.eclipse.persistence.jaxb.UnmarshallerProperties;
 
-import fr.insee.lunatic.model.flat.Questionnaire;
+import fr.insee.lunatic.model.hierarchical.Questionnaire;
 
-public class JSONDeserializer {
+public class JSONDeserializerH {
 
-	public JSONDeserializer() {	}
+	public JSONDeserializerH() {	}
 
-	private static final Logger logger = LoggerFactory.getLogger(JSONDeserializer.class);
+	private static final Logger logger = LoggerFactory.getLogger(JSONDeserializerH.class);
 
 	public Questionnaire deserialize(String fileName) throws JAXBException {
 

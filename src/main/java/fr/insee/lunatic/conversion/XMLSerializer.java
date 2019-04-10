@@ -7,17 +7,17 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-import fr.insee.lunatic.model.Questionnaire;
-import fr.insee.lunatic.model.SequenceType;
+import fr.insee.lunatic.model.flat.Questionnaire;
+import fr.insee.lunatic.model.flat.SequenceType;
 
 public class XMLSerializer {
 
 	public XMLSerializer() { }
 
-	private static final Logger logger = LogManager.getLogger(XMLSerializer.class);
+	private static final Logger logger = LoggerFactory.getLogger(XMLSerializer.class);
 
 	public String serialize(Questionnaire questionnaire) throws JAXBException, UnsupportedEncodingException {
 

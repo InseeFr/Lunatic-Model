@@ -8,13 +8,13 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Path("/echo")
 public class EchoTestService {
 
-	private static final Logger logger = LogManager.getLogger(EchoTestService.class);
+	private static final Logger logger = LoggerFactory.getLogger(EchoTestService.class);
 
     @POST
     @Path("/json")

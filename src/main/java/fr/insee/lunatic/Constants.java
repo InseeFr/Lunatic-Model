@@ -6,12 +6,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Constants {
 
-		private static final Logger logger = LogManager.getLogger(Constants.class);
+		private static final Logger logger = LoggerFactory.getLogger(Constants.class);
 	
 	
 		private Constants() {
@@ -25,6 +25,7 @@ public class Constants {
 		public static final String RESOURCES_FOLDER_XMLF_2_JSONF_PATH = RESOURCES_FOLDER_PATH +"/xmlf-2-jsonf";
 		public static final String RESOURCES_FOLDER_XMLH_2_XMLF_PATH = RESOURCES_FOLDER_PATH +"/xmlh-2-xmlf";
 		public static final String RESOURCES_FOLDER_XMLH_2_JSONF_PATH = RESOURCES_FOLDER_PATH +"/xmlh-2-jsonf";
+		public static final String RESOURCES_FOLDER_XMLH_2_JSONH_PATH = RESOURCES_FOLDER_PATH + "/xmlh-2-jsonh";
 		
 		public static final String XSD_FILE_PATH = "/src/main/resources/xsd/Questionnaire.xsd";
 		public static final String TRANSFORMATION_XML_2_XMLF = "xslt/models.xsl";

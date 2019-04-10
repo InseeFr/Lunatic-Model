@@ -15,21 +15,21 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.eclipse.persistence.jaxb.MarshallerProperties;
 
-import fr.insee.lunatic.model.flat.Questionnaire;
+import fr.insee.lunatic.model.hierarchical.Questionnaire;
 
-public class XMLLunaticFlatToJSONLunaticFlatTranslator {
+public class XMLLunaticToJSONLunaticTranslator {
 
 	private boolean monitored;
 
-	public XMLLunaticFlatToJSONLunaticFlatTranslator() {
+	public XMLLunaticToJSONLunaticTranslator() {
 		this(false);
 	}
 
-	public XMLLunaticFlatToJSONLunaticFlatTranslator(boolean monitored) {
+	public XMLLunaticToJSONLunaticTranslator(boolean monitored) {
 		this.monitored = monitored;
 	}
 
-	private static final Logger logger = LoggerFactory.getLogger(XMLLunaticFlatToJSONLunaticFlatTranslator.class);
+	private static final Logger logger = LoggerFactory.getLogger(XMLLunaticToJSONLunaticTranslator.class);
 
 	public String translate(File xmlFile) throws JAXBException, UnsupportedEncodingException {
 
@@ -54,7 +54,7 @@ public class XMLLunaticFlatToJSONLunaticFlatTranslator {
 		if (xmlStream == null)
 			return null;
 
-		logger.debug("Preparing to translate from XML to JSON");
+		logger.debug("Preparing to translate from XML to JSONH");
 
 		JAXBContext context = JAXBContext.newInstance(Questionnaire.class);
 		Unmarshaller unmarshaller = context.createUnmarshaller();
