@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire xmlns="http://xml.insee.fr/schema/applis/lunatic-h"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               id="jftg1pu82">
+   <label>Investissements pour protéger l'environnement (ANTIPOL) 2018</label>
+   <components xsi:type="Sequence" id="jftgwrjn">
+      <label>I - Informations générales</label>
+      <declarations declarationType="HELP"
+                    id="jftgwrjn-jqwful9t"
+                    position="AFTER_QUESTION_TEXT">
+         <label>Quelles dépenses prendre en compte dans le questionnaire ?De par son activité de production, votre établissement génère de la pollution (émissions de gaz à effet de serre, émissions polluantes, déchets…). Vous êtes donc amenés à lutter contre cette pollution. Dans ce questionnaire, nous vous demandons de préciser certaines dépenses afférentes à cette lutte. Il s’agit de vos dépenses d’investissement, d’étude ou de gestion destinées à minimiser l’impact de votre activité sur l’environnement, celles que vous engagez avec l’idée de protéger l’environnement et non pas celles nécessaires à la production qui s’avéreraient, finalement, avoir un impact favorable sur l’environnement. Sont donc exclues les dépenses relatives à la sécurité et à l’hygiène des personnes travaillant sur le site (par exemple : « désamiantage », casques anti-bruit…), ainsi que celles ayant pour seul objectif la réduction des consommations de matière première ou d’énergie.Une dépense donnée ne peut apparaître qu’à un seul endroit du questionnaire (aucun double compte entre les différentes rubriques et sous-rubriques décrites ci-dessous ne doit apparaître).</label>
+      </declarations>
+      <conditionFilter>normal</conditionFilter>
+      <components xsi:type="Radio" id="jftmxjzg">
+         <label>➡ 1. Le code APE de votre établissement est-il bien le : ¤ACTIVITE¤, ¤ACTIVITE_LIB¤ ?</label>
+         <codeLists id="jftnpqno">
+               <label>L_ouinon</label>
+               <codes>
+               <parent/>
+               <value>1</value>
+               <label>oui</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>2</value>
+               <label>non</label>
+            </codes>
+            </codeLists>
+         <response name="VERIF_APET">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>normal</conditionFilter>
+      </components>
+      <components xsi:type="Dropdown" id="jftnputy">
+         <label>➡ 2. Si ce n'est pas le cas, merci de préciser votre code APE :</label>
+         <codeLists id="jftnhdh1">
+               <label>L_activite</label>
+               <codes>
+               <parent/>
+               <value>0111Z</value>
+               <label>0111Z - Culture de céréales (à l'exception du riz), de légumineuses et de graines oléagineuses</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>0112Z</value>
+               <label>0112Z - Culture du riz</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>0113Z</value>
+               <label>0113Z - Culture de légumes, de melons, de racines et de tubercules</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>0114Z</value>
+               <label>0114Z - Culture de la canne à sucre</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>0115Z</value>
+               <label>0115Z - Culture du tabac</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>0116Z</value>
+               <label>0116Z - Culture de plantes à fibres</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>0119Z</value>
+               <label>0119Z - Autres cultures non permanentes</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>0121Z</value>
+               <label>0121Z - Culture de la vigne</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>0122Z</value>
+               <label>0122Z - Culture de fruits tropicaux et subtropicaux</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>0123Z</value>
+               <label>0123Z - Culture d'agrumes</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>0124Z</value>
+               <label>0124Z - Culture de fruits à pépins et à noyau</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>0125Z</value>
+               <label>0125Z - Culture d'autres fruits d'arbres ou d'arbustes et de fruits à coque</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>3311Z</value>
+               <label>3311Z - Réparation d'ouvrages en métaux</label>
+            </codes>
+            </codeLists>
+         <response name="MODIF_APE">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>#if((!((¤jftmxjzg-QOP-jfw6707t¤ == '1')&amp;&amp;(substring (¤ACTIVITE¤,1, 2) != '33'  )) ) || (!((¤jftmxjzg-QOP-jfw6707t¤ == '1')&amp;&amp;(substring (¤ACTIVITE¤,1, 2) == '33'  )) ))normal#{else}hidden#end</conditionFilter>
+      </components>
+      <components xsi:type="Radio" id="jfto76f4">
+         <label>➡ 3. Si votre code APE commence par 33 : votre activité est-elle réalisée uniquement chez le client ?</label>
+         <codeLists id="jftnpqno">
+               <label>L_ouinon</label>
+               <codes>
+               <parent/>
+               <value>1</value>
+               <label>oui</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>2</value>
+               <label>non</label>
+            </codes>
+            </codeLists>
+         <response name="HORS_SITE">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>#if((!((¤jftmxjzg-QOP-jfw6707t¤ == '1')&amp;&amp;(substring (¤ACTIVITE¤,1, 2) != '33'  )) ) || (!(((¤jftmxjzg-QOP-jfw6707t¤ == '2' || ¤jftmxjzg-QOP-jfw6707t¤ == '')&amp;&amp;(substring(¤jftnputy-QOP-jftno5gu¤,1,2) != '33')&amp;&amp;¤jftnputy-QOP-jftno5gu¤ != ''
+)&amp;&amp;! (((¤jftmxjzg-QOP-jfw6707t¤ == '1')&amp;&amp;(substring (¤ACTIVITE¤,1, 2) == '33'  )))) ))normal#{else}hidden#end</conditionFilter>
+      </components>
+      <components xsi:type="Radio" id="jftogzlr">
+         <label>➡ 4. L'effectif de votre établissement en 2018 était-il toujours compris entre ces bornes : ¤EFFL1¤et ¤EFFL2¤?</label>
+         <codeLists id="jftnpqno">
+               <label>L_ouinon</label>
+               <codes>
+               <parent/>
+               <value>1</value>
+               <label>oui</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>2</value>
+               <label>non</label>
+            </codes>
+            </codeLists>
+         <response name="VERIF_EFF">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>normal</conditionFilter>
+      </components>
+      <components xsi:type="InputNumber"
+                  id="jg29j6th"
+                  min="0"
+                  max="999999"
+                  decimals="0">
+         <label>➡ 5. Si ce n'est pas le cas, merci d'indiquer votre effectif salarié au 31/12/2018 :</label>
+         <response name="MODIF_EFF">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>#if((!($VERIF_EFF == '1') ))normal#{else}hidden#end</conditionFilter>
+      </components>
+      <components xsi:type="Radio" id="jftoljr3">
+         <label>➡ 6. Votre établissement a-t-il une activité de production ou fabrication (industrielle, artisanale ou énergétique) ?</label>
+         <codeLists id="jftnpqno">
+               <label>L_ouinon</label>
+               <codes>
+               <parent/>
+               <value>1</value>
+               <label>oui</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>2</value>
+               <label>non</label>
+            </codes>
+            </codeLists>
+         <response name="PROD">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>normal</conditionFilter>
+      </components>
+      <components xsi:type="Textarea" id="jftowzt5" maxLength="250">
+         <label>➡ 7. Si ce n'est pas le cas, précisez clairement la nature de l'établissement (gestion administrative, comptable ou informatique, R&amp;D, centre d'essais, entrepôt...)</label>
+         <response name="NATURE_ET">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>#if((!($PROD == '1') ))normal#{else}hidden#end</conditionFilter>
+      </components>
+      <components xsi:type="Radio" id="jftp84pw">
+         <label>➡ 8. Votre réponse à ce questionnaire regroupe-t-elle les réponses de plusieurs établissements ?</label>
+         <codeLists id="jftnpqno">
+               <label>L_ouinon</label>
+               <codes>
+               <parent/>
+               <value>1</value>
+               <label>oui</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>2</value>
+               <label>non</label>
+            </codes>
+            </codeLists>
+         <response name="REP_GROUPE">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>normal</conditionFilter>
+      </components>
+      <components xsi:type="Datepicker" id="jfw6sqml">
+         <label>➡ 10. L'enquête porte sur les dépenses effectuées au cours de l'exercice comptable. Veuillez indiquer sa date de clôture :</label>
+         <response name="DATE_CLO">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>normal</conditionFilter>
+         <dateFormat>jj/mm/aaaa</dateFormat>
+      </components>
+      <components xsi:type="InputNumber"
+                  id="jfw760ge"
+                  min="0"
+                  max="24"
+                  decimals="0">
+         <label>➡ 11. Veuillez indiquer la durée de cet exercice, en mois :</label>
+         <response name="DUREE">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>normal</conditionFilter>
+      </components>
+      <components xsi:type="Radio" id="jfw7bocl">
+         <label>➡ 12. En 2018, votre établissement comportait-il une installation classée pour la protection de l'environnement (article L.511-1s du code de l'environnement) ?</label>
+         <codeLists id="jftnpqno">
+               <label>L_ouinon</label>
+               <codes>
+               <parent/>
+               <value>1</value>
+               <label>oui</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>2</value>
+               <label>non</label>
+            </codes>
+            </codeLists>
+         <response name="INSTCLAS">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>normal</conditionFilter>
+      </components>
+      <components xsi:type="CheckboxOne" id="jfw7ua1k">
+         <label>➡ 13. Était-elle soumise à :</label>
+         <codeLists id="jfw7ciyo">
+               <label>L_autoris</label>
+               <codes>
+               <parent/>
+               <value>1</value>
+               <label>autorisation préfectorale ?</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>2</value>
+               <label>enregistrement (autorisation simplifiée) ?</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>3</value>
+               <label>déclaration ?</label>
+            </codes>
+            </codeLists>
+         <response name="AUTORIS">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>#if((!($INSTCLAS == '2') ))normal#{else}hidden#end</conditionFilter>
+      </components>
+      <components xsi:type="Radio" id="jfw9i6tc">
+         <label>➡ 14. En 2018, votre établissement avait-il une certification environnementale (ISO 14001, EMAS, 1.2.3 Environnement) ?</label>
+         <codeLists id="jftnpqno">
+               <label>L_ouinon</label>
+               <codes>
+               <parent/>
+               <value>1</value>
+               <label>oui</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>2</value>
+               <label>non</label>
+            </codes>
+            </codeLists>
+         <response name="ISO">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>normal</conditionFilter>
+      </components>
+      <components xsi:type="InputNumber"
+                  id="jfwaplux"
+                  min="0.0"
+                  max="999999.0"
+                  decimals="1">
+         <label>➡ 16. Combien de personnes dans votre établissement sont affectées aux activités de protection de l'environnement (en équivalent temps plein - ETP) ?</label>
+         <declarations declarationType="INSTRUCTION"
+                       id="jfwaplux-jrm6xn84"
+                       position="AFTER_QUESTION_TEXT">
+            <label>Si votre entreprise a plusieurs établissements, merci de comptabiliser les ETP affectés à ces activités dans votre établissement, et non dans l'ensemble de l'entreprise.</label>
+         </declarations>
+         <response name="EFF_ENV">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>normal</conditionFilter>
+      </components>
+      <components xsi:type="Radio" id="jfwaf0eh">
+         <label>➡ 17. Parmi ces personnes, y a-t-il un spécialiste entièrement dédié à l'environnement ?</label>
+         <codeLists id="jftnpqno">
+               <label>L_ouinon</label>
+               <codes>
+               <parent/>
+               <value>1</value>
+               <label>oui</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>2</value>
+               <label>non</label>
+            </codes>
+            </codeLists>
+         <response name="serv1">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>#if((!($EFF_ENV == 0 ) ))normal#{else}hidden#end</conditionFilter>
+      </components>
+   </components>
+   <components xsi:type="Sequence" id="jftopgp8">
+      <label>II - Etudes pour protéger l'environnement</label>
+      <declarations declarationType="INSTRUCTION"
+                    id="jftopgp8-jfwb599e"
+                    position="AFTER_QUESTION_TEXT">
+         <label>Au cours de l’année 2018, vous avez pu mener des études visant à protéger l’environnement de votre activité. Leurs coûts sont à préciser dans cette partie, en distinguant ce qui relève, d’une part, des études en prévision d’un investissement (question 2) ; d’autre part, des études réglementaires ou d’impact, des audits pour obtenir une certification, etc. (question 3). La part des achats de service dans la totalité des études est à préciser dans la question 4. Elle s'applique à la somme des montants déclarés aux questions 2 et 3.​Les études pour protéger l'environnement sont des achats de services ou des coûts internes d'ingénierie destinés à améliorer la connaissance ou à établir une synthèse de l'effet de vos activités sur l'environnement (sont exclues les dépenses destinées au développement d'écoproduits). Les coûts internes incluent les frais de personnel (salaires + charges sociales) au prorata du temps passé sur le projet.</label>
+      </declarations>
+      <conditionFilter>normal</conditionFilter>
+      <components xsi:type="Radio" id="jfwbjrun">
+         <label>➡ 1. Avez-vous, au cours du dernier exercice comptable, réalisé des études visant à protéger l'environnement de votre activité ?</label>
+         <codeLists id="jftnpqno">
+               <label>L_ouinon</label>
+               <codes>
+               <parent/>
+               <value>1</value>
+               <label>oui</label>
+            </codes>
+               <codes>
+               <parent/>
+               <value>2</value>
+               <label>non</label>
+            </codes>
+            </codeLists>
+         <response name="Q_ETUDES">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>normal</conditionFilter>
+      </components>
+      <components xsi:type="InputNumber"
+                  id="jfwck7i2"
+                  min="0.0"
+                  max="999999999.0"
+                  decimals="1">
+         <label>➡ 3. Veuillez indiquer ci-dessous le montant dépensé pour les autres études (dossiers ICPE, préparation dossier certification, études d'impact, études réglementaires, audits...) (en milliers d'euros (k€), hors TVA)</label>
+         <unit>k€</unit>
+         <response name="TA">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>#if((!($Q_ETUDES == '2') ))normal#{else}hidden#end</conditionFilter>
+      </components>
+      <components xsi:type="InputNumber"
+                  id="jfwcpmkc"
+                  min="0"
+                  max="100"
+                  decimals="0">
+         <label>➡ 4. Indiquez la part des achats de services dans la totalité des études (si pas de sous-traitance, mettre 0)</label>
+         <unit>%</unit>
+         <response name="PART_ACHAT">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>#if((!($Q_ETUDES == '2') ))normal#{else}hidden#end</conditionFilter>
+      </components>
+      <components xsi:type="Textarea" id="jfwcqoio" maxLength="255">
+         <label>➡ 5. Merci de préciser les études menées :</label>
+         <response name="PRECISION_ETUDES">
+            <valueState type="PREVIOUS">
+               <value/>
+            </valueState>
+            <valueState type="COLLECTED">
+               <value/>
+            </valueState>
+            <valueState type="FORCED">
+               <value/>
+            </valueState>
+            <valueState type="EDITED">
+               <value/>
+            </valueState>
+            <valueState type="INPUTED">
+               <value/>
+            </valueState>
+         </response>
+         <conditionFilter>#if((!($Q_ETUDES == '2') ))normal#{else}hidden#end</conditionFilter>
+      </components>
+   </components>
+   <components xsi:type="Sequence" id="jfwd6v6a">
+      <label>III - Investissements pour protéger l'environnement</label>
+      <declarations declarationType="INSTRUCTION"
+                    id="jfwd6v6a-jfwd87zs"
+                    position="AFTER_QUESTION_TEXT">
+         <label>Ils concernent les achats de bâtiments, terrains, machines ou équipements destinés à traiter, mesurer, contrôler ou limiter la pollution générée par l’activité de votre établissement.​Attention : un investissement donné ne doit être comptabilisé qu’une seule fois :​- soit en III.2 pour les investissements entièrement dédiés à la protection de l’environnement ;​- soit en III.5 pour les achats d’équipements de production plus performants en matière environnementale.​</label>
+      </declarations>
+      <conditionFilter>normal</conditionFilter>
+      <components xsi:type="Subsequence" id="jfwcxp13">
+         <label>Investissements matériels entièrement dédiés à la protection de l'environnement (dits spécifiques)</label>
+         <declarations declarationType="INSTRUCTION"
+                       id="jfwcxp13-jqxrhvl1"
+                       position="AFTER_QUESTION_TEXT">
+            <label>Au cours de l’année 2018, vous avez pu notamment investir pour protéger l’environnement dans des matériels, bâtiments et terrains dédiés entièrement à l’environnement. Il s’agit alors d’investissements spécifiquement dédiés à l’environnement, comme par exemple : matériel de mesure des polluants, filtres, décanteurs, bennes, bacs de rétention…</label>
+         </declarations>
+         <conditionFilter>normal</conditionFilter>
+         <components xsi:type="Radio" id="jfwd1un6">
+            <label>➡ 1. Avez-vous, au cours du dernier exercice comptable, investi dans des équipements spécifiquement dédiés à l'environnement (voir exemples ci-dessus) ?</label>
+            <codeLists id="jftnpqno">
+                  <label>L_ouinon</label>
+                  <codes>
+                  <parent/>
+                  <value>1</value>
+                  <label>oui</label>
+               </codes>
+                  <codes>
+                  <parent/>
+                  <value>2</value>
+                  <label>non</label>
+               </codes>
+               </codeLists>
+            <response name="Q_INV_SPE">
+               <valueState type="PREVIOUS">
+                  <value/>
+               </valueState>
+               <valueState type="COLLECTED">
+                  <value/>
+               </valueState>
+               <valueState type="FORCED">
+                  <value/>
+               </valueState>
+               <valueState type="EDITED">
+                  <value/>
+               </valueState>
+               <valueState type="INPUTED">
+                  <value/>
+               </valueState>
+            </response>
+            <conditionFilter>normal</conditionFilter>
+         </components>
+         <components xsi:type="Textarea" id="jfwcyx1y" maxLength="255">
+            <label>➡ 3. Merci de préciser vos principaux investissements spécifiques :</label>
+            <response name="PRECISION_INV_SPE">
+               <valueState type="PREVIOUS">
+                  <value/>
+               </valueState>
+               <valueState type="COLLECTED">
+                  <value/>
+               </valueState>
+               <valueState type="FORCED">
+                  <value/>
+               </valueState>
+               <valueState type="EDITED">
+                  <value/>
+               </valueState>
+               <valueState type="INPUTED">
+                  <value/>
+               </valueState>
+            </response>
+            <conditionFilter>#if((!($Q_INV_SPE == '2') ))normal#{else}hidden#end</conditionFilter>
+         </components>
+      </components>
+      <components xsi:type="Subsequence" id="jfwgxry6">
+         <label>Investissements matériels pour changement de procédé : achats d'équipements de production plus performants en matière environnementale (dits intégrés)</label>
+         <declarations declarationType="INSTRUCTION"
+                       id="jfwgxry6-jfwgtkks"
+                       position="AFTER_QUESTION_TEXT">
+            <label>Au cours de l’année 2018, vous avez pu investir dans des outils de production en faisant le choix qu’ils soient plus performants en matière environnementale que d’autres équipements possédant des fonctions et caractéristiques similaires.Cette rubrique concerne ces achats de matériels qui permettent de générer moins de pollution par rapport à d’autres outils disponibles sur le marché (exemples : acquisition de véhicules électriques moins polluants, de machines moins bruyantes, émettant moins de fumées, moins de gaz à effet de serre, générant moins de déchets…). Seules les dépenses décidées dans le but de lutter contre la pollution sont ici prises en compte.​Attention : un investissement déclaré ici ne doit pas déjà figurer dans le tableau III.2.Cette rubrique ne comprend pas les équipements en amont ou en aval de la production tels que les stations d'épuration, les décharges ou les installations de pré-traitement ou traitement des déchets ou eaux usées (à inclure dans la partie III, question 2).</label>
+         </declarations>
+         <conditionFilter>normal</conditionFilter>
+         <components xsi:type="Radio" id="jfwgrbz3">
+            <label>➡ 4. Avez-vous, au cours du dernier exercice comptable, investi dans des équipements de production plus performants en matière environnementale ?</label>
+            <declarations declarationType="INSTRUCTION"
+                          id="jfwgrbz3-jsbhee77"
+                          position="AFTER_QUESTION_TEXT">
+               <label>Si l'équipement dans lequel vous avez investi n'est pas plus cher que les autres, il n'est pas à prendre en compte.</label>
+            </declarations>
+            <codeLists id="jftnpqno">
+                  <label>L_ouinon</label>
+                  <codes>
+                  <parent/>
+                  <value>1</value>
+                  <label>oui</label>
+               </codes>
+                  <codes>
+                  <parent/>
+                  <value>2</value>
+                  <label>non</label>
+               </codes>
+               </codeLists>
+            <response name="Q_INV_INT">
+               <valueState type="PREVIOUS">
+                  <value/>
+               </valueState>
+               <valueState type="COLLECTED">
+                  <value/>
+               </valueState>
+               <valueState type="FORCED">
+                  <value/>
+               </valueState>
+               <valueState type="EDITED">
+                  <value/>
+               </valueState>
+               <valueState type="INPUTED">
+                  <value/>
+               </valueState>
+            </response>
+            <conditionFilter>normal</conditionFilter>
+         </components>
+         <components xsi:type="InputNumber"
+                     id="jg274yis"
+                     min="0.0"
+                     max="99999999.0"
+                     decimals="1">
+            <label>➡ 5. Indiquez le montant global de l'investissement pour changement de procédé, c'est-à-dire les achats d'équipements de production plus performants en matière environnementale (en milliers d'euros (k€), hors TVA).</label>
+            <unit>k€</unit>
+            <response name="I1">
+               <valueState type="PREVIOUS">
+                  <value/>
+               </valueState>
+               <valueState type="COLLECTED">
+                  <value/>
+               </valueState>
+               <valueState type="FORCED">
+                  <value/>
+               </valueState>
+               <valueState type="EDITED">
+                  <value/>
+               </valueState>
+               <valueState type="INPUTED">
+                  <value/>
+               </valueState>
+            </response>
+            <conditionFilter>#if((!($Q_INV_INT == '2') ))normal#{else}hidden#end</conditionFilter>
+         </components>
+         <components xsi:type="InputNumber"
+                     id="jsahlp9k"
+                     min="0.0"
+                     max="99999999.0"
+                     decimals="1">
+            <label>➡ 6. Indiquez, au sein de ce montant global, la part relevant de la protection de l'environnement. Elle correspond au surcoût lié à l'achat d'un équipement moins polluant qu'un produit remplissant les mêmes fonctions disponible sur le marché (en milliers d'euros (k€), hors TVA).</label>
+            <unit>k€</unit>
+            <declarations declarationType="INSTRUCTION"
+                          id="jsahlp9k-jsahnjif"
+                          position="AFTER_QUESTION_TEXT">
+               <label>Cette part « environnement » peut être estimée en comparant le prix de votre équipement à celui des autres équipements disponibles sur le marché. Il s’agit du surcoût de votre investissement par rapport au moins onéreux des autres équipements possédant des fonctions et caractéristiques similaires, à l’exception des considérations de protection de l’environnement (via la comparaison de devis, par exemple).</label>
+            </declarations>
+            <response name="I2">
+               <valueState type="PREVIOUS">
+                  <value/>
+               </valueState>
+               <valueState type="COLLECTED">
+                  <value/>
+               </valueState>
+               <valueState type="FORCED">
+                  <value/>
+               </valueState>
+               <valueState type="EDITED">
+                  <value/>
+               </valueState>
+               <valueState type="INPUTED">
+                  <value/>
+               </valueState>
+            </response>
+            <conditionFilter>#if((!($Q_INV_INT == '2') ))normal#{else}hidden#end</conditionFilter>
+         </components>
+         <components xsi:type="InputNumber"
+                     id="jh7s1v0h"
+                     min="0"
+                     max="99"
+                     decimals="0">
+            <label>➡ 7. Ou, si vous préférez, indiquez en pourcentage la part estimée relevant de la protection de l'environnement</label>
+            <unit>%</unit>
+            <declarations declarationType="HELP"
+                          id="jh7s1v0h-jh7rxk90"
+                          position="AFTER_QUESTION_TEXT">
+               <label>Cette part ne peut pas être égale à 100%.</label>
+            </declarations>
+            <response name="I3">
+               <valueState type="PREVIOUS">
+                  <value/>
+               </valueState>
+               <valueState type="COLLECTED">
+                  <value/>
+               </valueState>
+               <valueState type="FORCED">
+                  <value/>
+               </valueState>
+               <valueState type="EDITED">
+                  <value/>
+               </valueState>
+               <valueState type="INPUTED">
+                  <value/>
+               </valueState>
+            </response>
+            <conditionFilter>#if((!($Q_INV_INT == '2') ))normal#{else}hidden#end</conditionFilter>
+         </components>
+         <components xsi:type="Textarea" id="jg29j30j" maxLength="255">
+            <label>➡ 9. Merci de décrire vos nouveaux outils de production améliorant la protection de l’environnement :</label>
+            <response name="DESCRIPTION">
+               <valueState type="PREVIOUS">
+                  <value/>
+               </valueState>
+               <valueState type="COLLECTED">
+                  <value/>
+               </valueState>
+               <valueState type="FORCED">
+                  <value/>
+               </valueState>
+               <valueState type="EDITED">
+                  <value/>
+               </valueState>
+               <valueState type="INPUTED">
+                  <value/>
+               </valueState>
+            </response>
+            <conditionFilter>#if((!($Q_INV_INT == '2') ))normal#{else}hidden#end</conditionFilter>
+         </components>
+      </components>
+   </components>
+   <components xsi:type="Sequence" id="jqwfajkx">
+      <label>IV - Fin questionnaire</label>
+      <conditionFilter>normal</conditionFilter>
+   </components>
+   <variables>
+      <name>ACTIVITE</name>
+      <label>activite au lancement</label>
+   </variables>
+   <variables>
+      <name>EFFL1</name>
+      <label>borne inférieure effectif</label>
+   </variables>
+   <variables>
+      <name>EFFL2</name>
+      <label>borne supérieure effectif</label>
+   </variables>
+   <variables>
+      <name>ACTIVITE_LIB</name>
+      <label>libellé de l'activité au lancement</label>
+   </variables>
+   <variables>
+      <name>SIRET</name>
+      <label>SIRET</label>
+   </variables>
+   <variables>
+      <name>VERIF_APET</name>
+      <responseRef>VERIF_APET</responseRef>
+   </variables>
+   <variables>
+      <name>MODIF_APE</name>
+      <responseRef>MODIF_APE</responseRef>
+   </variables>
+   <variables>
+      <name>HORS_SITE</name>
+      <responseRef>HORS_SITE</responseRef>
+   </variables>
+   <variables>
+      <name>VERIF_EFF</name>
+      <responseRef>VERIF_EFF</responseRef>
+   </variables>
+   <variables>
+      <name>MODIF_EFF</name>
+      <responseRef>MODIF_EFF</responseRef>
+   </variables>
+   <variables>
+      <name>PROD</name>
+      <responseRef>PROD</responseRef>
+   </variables>
+   <variables>
+      <name>NATURE_ET</name>
+      <responseRef>NATURE_ET</responseRef>
+   </variables>
+   <variables>
+      <name>REP_GROUPE</name>
+      <responseRef>REP_GROUPE</responseRef>
+   </variables>
+   <variables>
+      <name>DATE_CLO</name>
+      <responseRef>DATE_CLO</responseRef>
+   </variables>
+   <variables>
+      <name>DUREE</name>
+      <responseRef>DUREE</responseRef>
+   </variables>
+   <variables>
+      <name>INSTCLAS</name>
+      <responseRef>INSTCLAS</responseRef>
+   </variables>
+   <variables>
+      <name>AUTORIS</name>
+      <responseRef>AUTORIS</responseRef>
+   </variables>
+   <variables>
+      <name>ISO</name>
+      <responseRef>ISO</responseRef>
+   </variables>
+   <variables>
+      <name>EFF_ENV</name>
+      <responseRef>EFF_ENV</responseRef>
+   </variables>
+   <variables>
+      <name>serv1</name>
+      <responseRef>serv1</responseRef>
+   </variables>
+   <variables>
+      <name>Q_ETUDES</name>
+      <responseRef>Q_ETUDES</responseRef>
+   </variables>
+   <variables>
+      <name>TA</name>
+      <responseRef>TA</responseRef>
+   </variables>
+   <variables>
+      <name>PART_ACHAT</name>
+      <responseRef>PART_ACHAT</responseRef>
+   </variables>
+   <variables>
+      <name>PRECISION_ETUDES</name>
+      <responseRef>PRECISION_ETUDES</responseRef>
+   </variables>
+   <variables>
+      <name>Q_INV_SPE</name>
+      <responseRef>Q_INV_SPE</responseRef>
+   </variables>
+   <variables>
+      <name>PRECISION_INV_SPE</name>
+      <responseRef>PRECISION_INV_SPE</responseRef>
+   </variables>
+   <variables>
+      <name>Q_INV_INT</name>
+      <responseRef>Q_INV_INT</responseRef>
+   </variables>
+   <variables>
+      <name>I1</name>
+      <responseRef>I1</responseRef>
+   </variables>
+   <variables>
+      <name>I2</name>
+      <responseRef>I2</responseRef>
+   </variables>
+   <variables>
+      <name>I3</name>
+      <responseRef>I3</responseRef>
+   </variables>
+   <variables>
+      <name>DESCRIPTION</name>
+      <responseRef>DESCRIPTION</responseRef>
+   </variables>
+   <variables>
+      <name>TOT_PCT</name>
+      <value>IE + ID + IA + IG + IB + IS + IP + IR</value>
+   </variables>
+   <variables>
+      <name>tot_calc_E</name>
+      <value>$E3+ $E1+ $E2+ $ER</value>
+   </variables>
+   <variables>
+      <name>tot_calc_D</name>
+      <value>$D3+ $D1+ $D2+ $DR</value>
+   </variables>
+   <variables>
+      <name>tot_calc_A</name>
+      <value>$A3+ $A1+ $A2+ $AR</value>
+   </variables>
+   <variables>
+      <name>tot_calc_G</name>
+      <value>$G3+ $G1+ $G2+ $GR</value>
+   </variables>
+   <variables>
+      <name>tot_calc_B</name>
+      <value>$B3+ $B1+ $BR</value>
+   </variables>
+   <variables>
+      <name>tot_calc_S</name>
+      <value>$S3+ $S1+ $SR</value>
+   </variables>
+   <variables>
+      <name>tot_calc_P</name>
+      <value>$P3+ $P1+ $PR</value>
+   </variables>
+   <variables>
+      <name>tot_calc_R</name>
+      <value>$R3+ $R1+ $R2+ $RR</value>
+   </variables>
+</Questionnaire>
