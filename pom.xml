@@ -182,7 +182,6 @@
 				<version>2.5.4</version>
 				<configuration>
 					<descriptors>
-						<descriptor>src/assembly/lunatic-xquery-assembly.xml</descriptor>
 						<descriptor>src/assembly/lunatic-rest-assembly.xml</descriptor>
 					</descriptors>
 					<finalName>lunatic-model-${project.version}</finalName>
