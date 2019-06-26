@@ -1,0 +1,11 @@
+{
+   "Questionnaire" : {
+      "id" : "FQ_128",
+      "label" : "Label for fake questionnaire number 128",
+      "components" : [ {
+         "id" : "FQU_10",
+         "type" : "QuestionType",
+         "label" : "Label for question number 10"
+      } ]
+   }
+}
