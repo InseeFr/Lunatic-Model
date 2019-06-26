@@ -26,8 +26,8 @@
 	</xd:doc>
 	
 	<xsl:template match="h:Questionnaire">
-		<Questionnaire
-			id="{@id}">
+		<Questionnaire>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates select="h:label"/>
 			<xsl:apply-templates select="h:components"/>
 			<xsl:apply-templates select="descendant::h:codeLists"/>
@@ -36,7 +36,8 @@
 	</xsl:template>
 	
 	<xsl:template match="h:components[@xsi:type='Sequence']">
-		<components xsi:type="{@xsi:type}" id="{@id}">
+		<components>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates select="h:label"/>
 			<xsl:apply-templates select="h:declarations"/>
 			<xsl:apply-templates select="h:conditionFilter"/>
@@ -45,7 +46,8 @@
 	</xsl:template>
 	
 	<xsl:template match="h:components[@xsi:type='Subsequence']">
-		<components xsi:type="{@xsi:type}" id="{@id}">
+		<components>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates select="h:label"/>
 			<xsl:apply-templates select="h:declarations"/>
 			<xsl:apply-templates select="h:conditionFilter"/>
@@ -81,13 +83,15 @@
 	</xsl:template>
 	
 	<xsl:template match="h:declarations">
-		<declarations declarationType="{@declarationType}" id="{@id}" position="{@position}">
+		<declarations>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates select="h:label"/>
 		</declarations>
 	</xsl:template>
 	
 	<xsl:template match="h:components[@xsi:type='Radio'] | h:components[@xsi:type='Dropdown'] | h:components[@xsi:type='CheckboxOne']">
-		<components xsi:type="{@xsi:type}" id="{@id}">
+		<components>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates select="h:label"/>
 			<xsl:apply-templates select="h:declarations"/>
 			<xsl:apply-templates select="h:response"/>
@@ -98,8 +102,38 @@
 		</components>
 	</xsl:template>
 	
+	<xsl:template match="h:components[@xsi:type='TableOneAxis']">
+		<components>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates select="h:label"/>
+			<xsl:apply-templates select="h:declarations"/>
+			<xsl:apply-templates select="h:responses"/>
+			<xsl:apply-templates select="h:columns"/>
+			<xsl:apply-templates select="h:conditionFilter"/>
+			<codeListReference>
+				<xsl:value-of select="h:codeLists/@id"/>
+			</codeListReference>
+		</components>
+	</xsl:template>
+	
+	<xsl:template match="h:columns">
+		<columns>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates select="h:label"/>
+			<xsl:apply-templates select="h:declarations"/>
+			<xsl:apply-templates select="h:conditionFilter"/>
+			<xsl:apply-templates select="h:items"/>
+			<xsl:if test="@componentType='Radio' or @componentType='Dropdown' or @componentType='CheckboxOne'">
+				<codeListReference>
+					<xsl:value-of select="h:codeLists/@id"/>
+				</codeListReference>
+			</xsl:if>
+		</columns>
+	</xsl:template>
+	
 	<xsl:template match="h:components[@xsi:type='Checkbox']">
-		<components xsi:type="{@xsi:type}" id="{@id}">
+		<components>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates select="h:label"/>
 			<xsl:apply-templates select="h:declarations"/>
 			<xsl:apply-templates select="h:conditionFilter"/>
@@ -119,25 +153,36 @@
 	</xsl:template>
 	
 	<xsl:template match="h:response">
-		<response name="{@name}">
+		<response>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates  select="h:valueState"/>
 		</response>
 	</xsl:template>
 	
+	<xsl:template match="h:responses">
+		<responses>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates  select="h:valueState"/>
+		</responses>
+	</xsl:template>
+	
 	<xsl:template match="h:valueState">
-		<valueState type="{@type}">
+		<valueState>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates  select="h:value"/>
 		</valueState>
 	</xsl:template>
 	
 	<xsl:template match="h:codeLists">
-		<codeLists id="{@id}">
+		<codeLists>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates/>
 		</codeLists>
 	</xsl:template>	
 	
 	<xsl:template match="h:items">
-		<items id="{@id}">
+		<items>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates/>
 		</items>
 	</xsl:template>	
