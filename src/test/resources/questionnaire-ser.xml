@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire xmlns="http://xml.insee.fr/schema/applis/lunatic" id="FQ_383">
+   <label>Label for fake questionnaire number 383</label>
+   <components id="FQU_10" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="QuestionType">
+      <label>Label for question number 10</label>
+   </components>
+</Questionnaire>
