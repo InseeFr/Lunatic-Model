@@ -113,7 +113,7 @@
 							<packageName>fr.insee.lunatic.model.flat</packageName>
 							<encoding>UTF-8</encoding>
 							<sources>
-								<source>src/main/resources/xsd/Questionnaire.xsd</source>
+								<source>src/main/resources/xsd/LunaticModelFlat.xsd</source>
 							</sources>
 						</configuration>
 					</execution>
@@ -127,7 +127,7 @@
 							<packageName>fr.insee.lunatic.model.hierarchical</packageName>
 							<encoding>UTF-8</encoding>
 							<sources>
-								<source>src/main/resources/xsd/QuestionnaireH.xsd</source>
+								<source>src/main/resources/xsd/LunaticModel.xsd</source>
 							</sources>
 							<clearOutputDir>false</clearOutputDir>
 						</configuration>
