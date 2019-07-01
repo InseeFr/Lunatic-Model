@@ -25,16 +25,21 @@ public class DummyTestXMLLunatic2JSONF {
 
 		try {
 			Path outPath = Paths.get(Constants.TEMP_FOLDER_PATH + "/out-F.json");
+			Path outPath_temp = Paths.get(Constants.TEMP_FOLDER_PATH + "/out-F-temp.json");
 			Files.deleteIfExists(outPath);
+			Files.deleteIfExists(outPath_temp);
 			Path outputFile = Files.createFile(outPath);
+			Path outputFile_temp = Files.createFile(outPath_temp);
 
 			XMLLunaticToXMLLunaticFlatTranslator translator = new XMLLunaticToXMLLunaticFlatTranslator();
 			XMLLunaticFlatToJSONLunaticFlatTranslator translator2 = new XMLLunaticFlatToJSONLunaticFlatTranslator();
 			JSONCleaner jsonCleaner = new JSONCleaner();
 			
-			String jsonQuestionnaire = jsonCleaner.clean(translator2.translate(translator.generate(in)));
-
-			Files.write(outputFile, jsonQuestionnaire.getBytes());
+			
+			String jsonQuestionnaire_temp = translator2.translate(translator.generate(in));
+			Files.write(outputFile_temp, jsonQuestionnaire_temp.getBytes("UTF-8"));
+			String jsonQuestionnaire = jsonCleaner.clean(jsonQuestionnaire_temp);
+			Files.write(outputFile, jsonQuestionnaire.getBytes("UTF-8"));
 			logger.info("File generated at : "+outPath);
 
 		} catch (Exception e) {

@@ -30,10 +30,9 @@ public class DummyTestXMLLunatic2JSONH {
 			Path outputFile_temp = Files.createFile(outPath_temp);
 
 			XMLLunaticToJSONLunaticTranslator translator = new XMLLunaticToJSONLunaticTranslator();
-			JSONCleaner jsonCleaner = new JSONCleaner();
-
-			
+			JSONCleaner jsonCleaner = new JSONCleaner();			
 			String jsonQuestionnaire_temp = translator.translate(in);
+			
 			Files.write(outputFile_temp, jsonQuestionnaire_temp.getBytes("UTF-8"));
 			logger.info("File generated at : "+outputFile_temp);
 			String jsonQuestionnaire = jsonCleaner.clean(jsonQuestionnaire_temp);

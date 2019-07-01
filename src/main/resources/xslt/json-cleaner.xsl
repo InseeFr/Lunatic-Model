@@ -14,6 +14,9 @@
     </xsl:template>
     
     <xsl:template match="Questionnaire">
+       <!-- <xsl:variable name="testJSON">
+            <xsl:value-of select="'{&quot;test&quot;:[[{&quot;coucou&quot;:true}],[{&quot;coucou&quot;:false}]]}'"/>
+        </xsl:variable>-->
         <xsl:variable name="output-xml">
             <xsl:apply-templates select="json-to-xml(.)" mode="clean"/>
         </xsl:variable>
@@ -23,6 +26,18 @@
     
     <!-- delete type attribute -->
     <xsl:template match="*[@key='type']" mode="clean"/>
+    
+    <!-- delete responses attribute in table responses for Table component -->
+    <xsl:template match="*[@key='responses' and preceding-sibling::*[@key='componentType']]" mode="clean">
+        <xsl:copy>
+            <xsl:copy-of select="@*"/>
+            <xsl:for-each select="descendant::*[@key='responses']">
+                <xsl:copy>
+                    <xsl:apply-templates mode="clean"/>
+                </xsl:copy>
+            </xsl:for-each>
+        </xsl:copy>
+    </xsl:template>
     
     <xsl:template match="@*|node()" mode="clean">
         <xsl:choose>
