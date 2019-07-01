@@ -26,26 +26,18 @@
 	</xd:doc>
 	
 	<xsl:template match="h:Questionnaire">
-		<Questionnaire
-			id="{@id}">
+		<Questionnaire>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates select="h:label"/>
 			<xsl:apply-templates select="h:components"/>
-			<xsl:apply-templates select="descendant::h:codeLists"/>
+			<xsl:apply-templates select="h:codeLists"/>
 			<xsl:apply-templates select="h:variables"/>
 		</Questionnaire>
 	</xsl:template>
 	
-	<xsl:template match="h:components[@xsi:type='Sequence']">
-		<components xsi:type="{@xsi:type}" id="{@id}">
-			<xsl:apply-templates select="h:label"/>
-			<xsl:apply-templates select="h:declarations"/>
-			<xsl:apply-templates select="h:conditionFilter"/>
-		</components>
-		<xsl:apply-templates select="h:components"/>
-	</xsl:template>
-	
-	<xsl:template match="h:components[@xsi:type='Subsequence']">
-		<components xsi:type="{@xsi:type}" id="{@id}">
+	<xsl:template match="h:components[@xsi:type='Sequence' or @xsi:type='Subsequence']">
+		<components>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates select="h:label"/>
 			<xsl:apply-templates select="h:declarations"/>
 			<xsl:apply-templates select="h:conditionFilter"/>
@@ -72,6 +64,14 @@
 		<unit><xsl:value-of select="."/></unit>
 	</xsl:template>
 	
+	<xsl:template match="h:header">
+		<header><xsl:value-of select="."/></header>
+	</xsl:template>
+	
+	<xsl:template match="h:codeListReference">
+		<codeListReference><xsl:value-of select="."/></codeListReference>
+	</xsl:template>
+	
 	<xsl:template match="h:dateFormat">
 		<dateFormat><xsl:value-of select="."/></dateFormat>
 	</xsl:template>
@@ -81,72 +81,86 @@
 	</xsl:template>
 	
 	<xsl:template match="h:declarations">
-		<declarations declarationType="{@declarationType}" id="{@id}" position="{@position}">
+		<declarations>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates select="h:label"/>
 		</declarations>
 	</xsl:template>
 	
 	<xsl:template match="h:components[@xsi:type='Radio'] | h:components[@xsi:type='Dropdown'] | h:components[@xsi:type='CheckboxOne']">
-		<components xsi:type="{@xsi:type}" id="{@id}">
-			<xsl:apply-templates select="h:label"/>
-			<xsl:apply-templates select="h:declarations"/>
-			<xsl:apply-templates select="h:response"/>
-			<xsl:apply-templates select="h:conditionFilter"/>
-			<codeListReference>
-				<xsl:value-of select="h:codeLists/@id"/>
-			</codeListReference>
+		<components>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates />
 		</components>
 	</xsl:template>
 	
+	<xsl:template match="h:components[@xsi:type='Table']">
+		<components>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates/>
+		</components>
+	</xsl:template>
+	
+	<xsl:template match="h:columns">
+		<columns>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates/>
+		</columns>
+	</xsl:template>
+	
 	<xsl:template match="h:components[@xsi:type='Checkbox']">
-		<components xsi:type="{@xsi:type}" id="{@id}">
-			<xsl:apply-templates select="h:label"/>
-			<xsl:apply-templates select="h:declarations"/>
-			<xsl:apply-templates select="h:conditionFilter"/>
-			<xsl:apply-templates select="h:items"/>
+		<components>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates/>
 		</components>
 	</xsl:template>
 	
 	<xsl:template match="h:components[@xsi:type='InputNumber']">
 		<components>
 			<xsl:copy-of select="@*"/>
-			<xsl:apply-templates select="h:label"/>
-			<xsl:apply-templates select="h:declarations"/>
-			<xsl:apply-templates select="h:response"/>
-			<xsl:apply-templates select="h:conditionFilter"/>
-			<xsl:apply-templates select="h:unit"/>
+			<xsl:apply-templates/>
 		</components>
 	</xsl:template>
 	
 	<xsl:template match="h:response">
-		<response name="{@name}">
+		<response>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates  select="h:valueState"/>
 		</response>
 	</xsl:template>
 	
+	<xsl:template match="h:responses">
+		<responses>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates/>
+		</responses>
+	</xsl:template>
+	
 	<xsl:template match="h:valueState">
-		<valueState type="{@type}">
-			<xsl:apply-templates  select="h:value"/>
+		<valueState>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates/>
 		</valueState>
 	</xsl:template>
 	
 	<xsl:template match="h:codeLists">
-		<codeLists id="{@id}">
+		<codeLists>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates/>
 		</codeLists>
 	</xsl:template>	
 	
 	<xsl:template match="h:items">
-		<items id="{@id}">
+		<items>
+			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates/>
 		</items>
 	</xsl:template>	
 	
 	<xsl:template match="h:codes">
 		<codes>
-			<parent><xsl:value-of select="h:parent"/></parent>
-			<xsl:apply-templates  select="h:value"/>
-			<xsl:apply-templates select="h:label"/>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates/>
 		</codes>
 	</xsl:template>	
 	

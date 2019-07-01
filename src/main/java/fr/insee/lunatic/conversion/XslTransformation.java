@@ -42,7 +42,16 @@ public class XslTransformation {
 
 	
 	public void transformXMLLunaticToXMLLunaticFlat(InputStream inputFile, OutputStream outputFile, InputStream xslSheet) throws Exception {
-		logger.info("Converting XMLLunaticXML to a XMLLunaticFlat");
+		logger.info("Converting XMLLunaticXML to a XMLLunaticFlat ...");
+		TransformerFactory tFactory = new net.sf.saxon.TransformerFactoryImpl();
+		Transformer transformer = tFactory.newTransformer(new StreamSource(xslSheet));
+
+		xslTransform(transformer, inputFile, outputFile);
+
+	}
+	
+	public void transformJSONLunaticToJSONLunaticClean(InputStream inputFile, OutputStream outputFile, InputStream xslSheet) throws Exception {
+		logger.info("Cleaning json output ...");
 		TransformerFactory tFactory = new net.sf.saxon.TransformerFactoryImpl();
 		Transformer transformer = tFactory.newTransformer(new StreamSource(xslSheet));
 

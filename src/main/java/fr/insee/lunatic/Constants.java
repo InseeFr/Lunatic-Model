@@ -28,7 +28,8 @@ public class Constants {
 		public static final String RESOURCES_FOLDER_XMLH_2_JSONH_PATH = RESOURCES_FOLDER_PATH + "/xmlh-2-jsonh";
 		
 		public static final String XSD_FILE_PATH = "/src/main/resources/xsd/Questionnaire.xsd";
-		public static final String TRANSFORMATION_XML_2_XMLF = "xslt/models.xsl";
+		public static final String TRANSFORMATION_XML_2_XMLF = "xslt/flattener.xsl";
+		public static final String TRANSFORMATION_JSON_2_JSON_CLEANED = "xslt/json-cleaner.xsl";
 		public static final String NAMESPACE_URI = "http://xml.insee.fr/schema/applis/lunatic";
 		public static final String PREFIX = "Questionnaire";
 		public static final String JAXB_SCHEMA_LOCATION = NAMESPACE_URI + " file:"+XSD_FILE_PATH;

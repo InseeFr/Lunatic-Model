@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://xml.insee.fr/schema/applis/lunatic-h" targetNamespace="http://xml.insee.fr/schema/applis/lunatic-h" elementFormDefault="qualified"
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns="http://xml.insee.fr/schema/applis/lunatic-h" 
+    targetNamespace="http://xml.insee.fr/schema/applis/lunatic-h" 
+    elementFormDefault="qualified"
     attributeFormDefault="unqualified">
     
     <xs:element name="Questionnaire">
@@ -22,13 +26,13 @@
     
     <xs:complexType name="Codes">
         <xs:sequence>
-            <xs:element name="parent" type="xs:string"/>
             <xs:element name="value" type="xs:string"/>
             <xs:element name="label" type="xs:string"/>
         </xs:sequence>
+        <xs:attribute name="depth" type="xs:integer"/>
     </xs:complexType>
     
-    <xs:complexType name="VariableTypes">
+    <xs:complexType name="VariableType">
         <xs:sequence>
             <xs:element name="name" type="xs:string"/>
             <xs:element name="value" type="xs:string" minOccurs="0"/>
@@ -42,7 +46,8 @@
             <xs:extension base="ComponentType">
                 <xs:sequence>
                     <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="variables" type="VariableTypes" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="codeLists" type="CodeLists" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="variables" type="VariableType" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -68,7 +73,7 @@
         </xs:complexContent>
     </xs:complexType>
     
-    <xs:complexType name="ComponentType" abstract="true" >
+    <xs:complexType name="ComponentType" abstract="true">
         <xs:sequence>
             <xs:element name="label" type="xs:string"/>
             <xs:element name="declarations" type="DeclarationType" minOccurs="0" maxOccurs="unbounded"/>
@@ -76,28 +81,59 @@
             <xs:element name="conditionFilter" type="xs:string" minOccurs="1"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="required"/>
-        
+        <xs:attribute name="componentType" type="ComponentTypeEnum"/>
     </xs:complexType>
     
+    <xs:simpleType name="ComponentTypeEnum">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="Sequence"/>
+            <xs:enumeration value="Subsequence"/>
+            <xs:enumeration value="Table"/>
+            <xs:enumeration value="Input"/>
+            <xs:enumeration value="InputNumber"/>
+            <xs:enumeration value="Datepicker"/>
+            <xs:enumeration value="Checkbox"/>
+            <xs:enumeration value="CheckboxOne"/>
+            <xs:enumeration value="CheckboxBoolean"/>
+            <xs:enumeration value="Radio"/>
+            <xs:enumeration value="Dropdown"/>
+            <xs:enumeration value="Textarea"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="ReponseContainerInterface" abstract="true"/>
+    
     <xs:complexType name="ResponseContainerString">
-        <xs:sequence>
-            <xs:element name="valueState" type="ResponseTypeString" minOccurs="1" maxOccurs="unbounded"/>
-        </xs:sequence>
-        <xs:attribute name="name" type="xs:string"/>
+        <xs:complexContent>
+            <xs:extension base="ReponseContainerInterface">
+                <xs:sequence>
+                    <xs:element name="valueState" type="ResponseTypeString" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:attribute name="name" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
     
     <xs:complexType name="ResponseContainerInt">
-        <xs:sequence>
-            <xs:element name="valueState" type="ResponseTypeInt" minOccurs="1" maxOccurs="unbounded"/>
-        </xs:sequence>
-        <xs:attribute name="name" type="xs:string"/>
+        <xs:complexContent>
+            <xs:extension base="ReponseContainerInterface">
+                <xs:sequence>
+                    <xs:element name="valueState" type="ResponseTypeInt" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:attribute name="name" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
     
     <xs:complexType name="ResponseContainerBoolean">
-        <xs:sequence>
-            <xs:element name="valueState" type="ResponseTypeBoolean" minOccurs="1" maxOccurs="unbounded"/>
-        </xs:sequence>
-        <xs:attribute name="name" type="xs:string"/>
+        <xs:complexContent>
+            <xs:extension base="ReponseContainerInterface">
+                <xs:sequence>
+                    <xs:element name="valueState" type="ResponseTypeBoolean" minOccurs="1" maxOccurs="unbounded"/>
+                </xs:sequence>
+                <xs:attribute name="name" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
     
     <xs:complexType name="ResponseTypeBoolean">
@@ -105,7 +141,7 @@
             <xs:element name="value" type="xs:boolean"/>
             <xs:element name="responseComment" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
-        <xs:attribute name="type" type="ResponseTypeEnum"/>
+        <xs:attribute name="valueType" type="ResponseTypeEnum"/>
     </xs:complexType>
     
     <xs:complexType name="ResponseTypeInt">
@@ -113,7 +149,7 @@
             <xs:element name="value" type="xs:integer"/>
             <xs:element name="responseComment" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
-        <xs:attribute name="type" type="ResponseTypeEnum"/>
+        <xs:attribute name="valueType" type="ResponseTypeEnum"/>
     </xs:complexType>
     
     <xs:complexType name="ResponseTypeString">
@@ -121,7 +157,7 @@
             <xs:element name="value" type="xs:string"/>
             <xs:element name="responseComment" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
-        <xs:attribute name="type" type="ResponseTypeEnum"/>
+        <xs:attribute name="valueType" type="ResponseTypeEnum"/>
     </xs:complexType>
     
     <xs:simpleType name="ResponseTypeEnum">
@@ -177,9 +213,9 @@
                     <xs:element name="response" type="ResponseContainerString"/>
                     <xs:element name="unit" type="xs:string" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
-                <xs:attribute name="min" type="xs:double"/>
-                <xs:attribute name="max" type="xs:double"/>
-                <xs:attribute name="decimals" type="xs:integer"/>
+                <xs:attribute name="min" type="xs:double" use="optional"/>
+                <xs:attribute name="max" type="xs:double" use="optional"/>
+                <xs:attribute name="decimals" type="xs:integer" use="optional"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -210,7 +246,7 @@
             <xs:extension base="ComponentType">
                 <xs:sequence>
                     <xs:element name="response" type="ResponseContainerString"/>
-                    <xs:element name="codeLists" type="CodeLists" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="codeListReference" type="xs:string"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -221,7 +257,7 @@
             <xs:extension base="ComponentType">
                 <xs:sequence>
                     <xs:element name="response" type="ResponseContainerString"/>
-                    <xs:element name="codeLists" type="CodeLists" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="codeListReference" type="xs:string"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -232,7 +268,7 @@
             <xs:extension base="ComponentType">
                 <xs:sequence>
                     <xs:element name="response" type="ResponseContainerString"/>
-                    <xs:element name="codeLists" type="CodeLists" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="codeListReference" type="xs:string"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -246,6 +282,39 @@
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="Table">
+        <xs:complexContent>
+            <xs:extension base="ComponentType">
+                <xs:sequence>
+                    <xs:element name="columns" type="ColumnType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="responses" type="ResponsesTable" minOccurs="0" maxOccurs="unbounded"/>
+                    
+                </xs:sequence>
+                <xs:attribute name="positioning" type="xs:string"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="ResponsesTable">
+        <xs:sequence>
+            <xs:element name="responses" type="ReponseContainerInterface" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="ColumnType">
+        <xs:sequence>
+            <xs:element name="header" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="dateFormat" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="unit" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="codeListReference" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+        <xs:attribute name="componentType" type="xs:string" use="optional"/>
+        <xs:attribute name="maxLength" type="xs:string" use="optional"/>
+        <xs:attribute name="min" type="xs:double" use="optional"/>
+        <xs:attribute name="max" type="xs:double" use="optional"/>
+        <xs:attribute name="decimals" type="xs:integer" use="optional"/>
     </xs:complexType>
     
     <xs:complexType name="ItemType">
