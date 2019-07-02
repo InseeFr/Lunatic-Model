@@ -64,6 +64,10 @@
 		<unit><xsl:value-of select="."/></unit>
 	</xsl:template>
 	
+	<xsl:template match="h:lines">
+		<lines><xsl:copy-of select="@*"/></lines>
+	</xsl:template>
+	
 	<xsl:template match="h:header">
 		<header><xsl:value-of select="."/></header>
 	</xsl:template>

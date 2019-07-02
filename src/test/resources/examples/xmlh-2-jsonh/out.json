@@ -1471,7 +1471,399 @@
       { "id" : "j6qfx9qe",
         "componentType" : "Sequence",
         "label" : "V - Favourite characters",
-        "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end" },
+        "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
+        "components" : 
+        [ 
+          { "id" : "j6qg8rc6",
+            "componentType" : "Table",
+            "positioning" : "HORIZONTAL",
+            "label" : "➡ 1. Please, complete the following grid with your favourite characters",
+            "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
+            "columns" : 
+            [ 
+              { "componentType" : "Textarea",
+                "maxLength" : "255",
+                "header" : "Name" },
+              
+              { "componentType" : "InputNumber",
+                "min" : 0,
+                "max" : 120,
+                "decimals" : 0,
+                "header" : "Age" } ],
+            "lines" : 
+            { "min" : 1,
+              "max" : 10 },
+            "responses" : 
+            [ 
+              [ 
+                { "name" : "FAVOURITE_CHARACTERS11",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] },
+                
+                { "name" : "FAVOURITE_CHARACTERS12",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] } ],
+              
+              [ 
+                { "name" : "FAVOURITE_CHARACTERS21",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] },
+                
+                { "name" : "FAVOURITE_CHARACTERS22",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] } ],
+              
+              [ 
+                { "name" : "FAVOURITE_CHARACTERS31",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] },
+                
+                { "name" : "FAVOURITE_CHARACTERS32",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] } ],
+              
+              [ 
+                { "name" : "FAVOURITE_CHARACTERS41",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] },
+                
+                { "name" : "FAVOURITE_CHARACTERS42",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] } ],
+              
+              [ 
+                { "name" : "FAVOURITE_CHARACTERS51",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] },
+                
+                { "name" : "FAVOURITE_CHARACTERS52",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] } ],
+              
+              [ 
+                { "name" : "FAVOURITE_CHARACTERS61",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] },
+                
+                { "name" : "FAVOURITE_CHARACTERS62",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] } ],
+              
+              [ 
+                { "name" : "FAVOURITE_CHARACTERS71",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] },
+                
+                { "name" : "FAVOURITE_CHARACTERS72",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] } ],
+              
+              [ 
+                { "name" : "FAVOURITE_CHARACTERS81",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] },
+                
+                { "name" : "FAVOURITE_CHARACTERS82",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] } ],
+              
+              [ 
+                { "name" : "FAVOURITE_CHARACTERS91",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] },
+                
+                { "name" : "FAVOURITE_CHARACTERS92",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] } ],
+              
+              [ 
+                { "name" : "FAVOURITE_CHARACTERS101",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] },
+                
+                { "name" : "FAVOURITE_CHARACTERS102",
+                  "valueState" : 
+                  [ 
+                    { "valueType" : "PREVIOUS",
+                      "value" : "" },
+                    
+                    { "valueType" : "COLLECTED",
+                      "value" : "" },
+                    
+                    { "valueType" : "FORCED",
+                      "value" : "" },
+                    
+                    { "valueType" : "EDITED",
+                      "value" : "" },
+                    
+                    { "valueType" : "INPUTED",
+                      "value" : "" } ] } ] ] } ] },
       
       { "id" : "j6z12s2d",
         "componentType" : "Sequence",
@@ -2034,6 +2426,96 @@
       
       { "name" : "TRAVEL46",
         "responseRef" : "TRAVEL46" },
+      
+      { "name" : "FAVOURITE_CHARACTERS11",
+        "responseRef" : "FAVOURITE_CHARACTERS11" },
+      
+      { "name" : "FAVOURITE_CHARACTERS11",
+        "responseRef" : "FAVOURITE_CHARACTERS11" },
+      
+      { "name" : "FAVOURITE_CHARACTERS12",
+        "responseRef" : "FAVOURITE_CHARACTERS12" },
+      
+      { "name" : "FAVOURITE_CHARACTERS21",
+        "responseRef" : "FAVOURITE_CHARACTERS21" },
+      
+      { "name" : "FAVOURITE_CHARACTERS21",
+        "responseRef" : "FAVOURITE_CHARACTERS21" },
+      
+      { "name" : "FAVOURITE_CHARACTERS22",
+        "responseRef" : "FAVOURITE_CHARACTERS22" },
+      
+      { "name" : "FAVOURITE_CHARACTERS31",
+        "responseRef" : "FAVOURITE_CHARACTERS31" },
+      
+      { "name" : "FAVOURITE_CHARACTERS31",
+        "responseRef" : "FAVOURITE_CHARACTERS31" },
+      
+      { "name" : "FAVOURITE_CHARACTERS32",
+        "responseRef" : "FAVOURITE_CHARACTERS32" },
+      
+      { "name" : "FAVOURITE_CHARACTERS41",
+        "responseRef" : "FAVOURITE_CHARACTERS41" },
+      
+      { "name" : "FAVOURITE_CHARACTERS41",
+        "responseRef" : "FAVOURITE_CHARACTERS41" },
+      
+      { "name" : "FAVOURITE_CHARACTERS42",
+        "responseRef" : "FAVOURITE_CHARACTERS42" },
+      
+      { "name" : "FAVOURITE_CHARACTERS51",
+        "responseRef" : "FAVOURITE_CHARACTERS51" },
+      
+      { "name" : "FAVOURITE_CHARACTERS51",
+        "responseRef" : "FAVOURITE_CHARACTERS51" },
+      
+      { "name" : "FAVOURITE_CHARACTERS52",
+        "responseRef" : "FAVOURITE_CHARACTERS52" },
+      
+      { "name" : "FAVOURITE_CHARACTERS61",
+        "responseRef" : "FAVOURITE_CHARACTERS61" },
+      
+      { "name" : "FAVOURITE_CHARACTERS61",
+        "responseRef" : "FAVOURITE_CHARACTERS61" },
+      
+      { "name" : "FAVOURITE_CHARACTERS62",
+        "responseRef" : "FAVOURITE_CHARACTERS62" },
+      
+      { "name" : "FAVOURITE_CHARACTERS71",
+        "responseRef" : "FAVOURITE_CHARACTERS71" },
+      
+      { "name" : "FAVOURITE_CHARACTERS71",
+        "responseRef" : "FAVOURITE_CHARACTERS71" },
+      
+      { "name" : "FAVOURITE_CHARACTERS72",
+        "responseRef" : "FAVOURITE_CHARACTERS72" },
+      
+      { "name" : "FAVOURITE_CHARACTERS81",
+        "responseRef" : "FAVOURITE_CHARACTERS81" },
+      
+      { "name" : "FAVOURITE_CHARACTERS81",
+        "responseRef" : "FAVOURITE_CHARACTERS81" },
+      
+      { "name" : "FAVOURITE_CHARACTERS82",
+        "responseRef" : "FAVOURITE_CHARACTERS82" },
+      
+      { "name" : "FAVOURITE_CHARACTERS91",
+        "responseRef" : "FAVOURITE_CHARACTERS91" },
+      
+      { "name" : "FAVOURITE_CHARACTERS91",
+        "responseRef" : "FAVOURITE_CHARACTERS91" },
+      
+      { "name" : "FAVOURITE_CHARACTERS92",
+        "responseRef" : "FAVOURITE_CHARACTERS92" },
+      
+      { "name" : "FAVOURITE_CHARACTERS101",
+        "responseRef" : "FAVOURITE_CHARACTERS101" },
+      
+      { "name" : "FAVOURITE_CHARACTERS101",
+        "responseRef" : "FAVOURITE_CHARACTERS101" },
+      
+      { "name" : "FAVOURITE_CHARACTERS102",
+        "responseRef" : "FAVOURITE_CHARACTERS102" },
       
       { "name" : "SURVEY_COMMENT",
         "responseRef" : "SURVEY_COMMENT" },
