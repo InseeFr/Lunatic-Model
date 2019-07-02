@@ -290,7 +290,7 @@
                 <xs:sequence>
                     <xs:element name="columns" type="ColumnType" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="responses" type="ResponsesTable" minOccurs="0" maxOccurs="unbounded"/>
-                    
+                    <xs:element name="lines" type="LinesRoaster" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
                 <xs:attribute name="positioning" type="xs:string"/>
             </xs:extension>
@@ -315,6 +315,11 @@
         <xs:attribute name="min" type="xs:double" use="optional"/>
         <xs:attribute name="max" type="xs:double" use="optional"/>
         <xs:attribute name="decimals" type="xs:integer" use="optional"/>
+    </xs:complexType>
+    
+    <xs:complexType name="LinesRoaster">
+        <xs:attribute name="min" type="xs:integer" use="required"/>
+        <xs:attribute name="max" type="xs:integer" use="required"/>
     </xs:complexType>
     
     <xs:complexType name="ItemType">
