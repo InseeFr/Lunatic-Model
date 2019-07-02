@@ -282,8 +282,8 @@
       <xs:extension base="ComponentType">
         <xs:sequence>
           <xs:element name="columns" type="ColumnType" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element name="responses" type="ResponsesTable" minOccurs="0" maxOccurs="unbounded"/>
           <xs:element name="lines" type="LinesRoaster" minOccurs="0" maxOccurs="1"/>
+          <xs:element name="responses" type="ResponsesTable" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="positioning" type="xs:string"/>
       </xs:extension>
