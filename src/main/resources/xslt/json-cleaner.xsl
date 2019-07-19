@@ -28,10 +28,10 @@
     <xsl:template match="*[@key='type']" mode="clean"/>
     
     <!-- delete responses attribute in table responses for Table component -->
-    <xsl:template match="*[@key='responses' and preceding-sibling::*[@key='componentType']]" mode="clean">
+    <xsl:template match="*[@key='cells' and preceding-sibling::*[@key='componentType']]" mode="clean">
         <xsl:copy>
             <xsl:copy-of select="@*"/>
-            <xsl:for-each select="descendant::*[@key='responses']">
+            <xsl:for-each select="descendant::*[@key='cells']">
                 <xsl:copy>
                     <xsl:apply-templates mode="clean"/>
                 </xsl:copy>
