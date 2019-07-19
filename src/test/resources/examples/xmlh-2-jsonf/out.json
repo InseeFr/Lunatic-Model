@@ -211,7 +211,16 @@
             
             { "valueType" : "INPUTED",
               "value" : "" } ] },
-        "codeListReference" : "j334iumu" },
+        "options" : 
+        [ 
+          { "value" : "00001",
+            "label" : "Springfield" },
+          
+          { "value" : "00002",
+            "label" : "Shelbyville" },
+          
+          { "value" : "00003",
+            "label" : "Seinfeld" } ] },
       
       { "id" : "j6qdfhvw",
         "componentType" : "CheckboxOne",
@@ -241,7 +250,19 @@
             
             { "valueType" : "INPUTED",
               "value" : "" } ] },
-        "codeListReference" : "j6qdqoen" },
+        "options" : 
+        [ 
+          { "value" : "1",
+            "label" : "Constance Harm" },
+          
+          { "value" : "2",
+            "label" : "Timothy Lovejoy" },
+          
+          { "value" : "3",
+            "label" : "Joe Quimby" },
+          
+          { "value" : "4",
+            "label" : "Poochie" } ] },
       
       { "id" : "j4nw5cqz",
         "componentType" : "Dropdown",
@@ -265,7 +286,46 @@
             
             { "valueType" : "INPUTED",
               "value" : "" } ] },
-        "codeListReference" : "j4nwo00f" },
+        "options" : 
+        [ 
+          { "value" : "1",
+            "label" : "Washington" },
+          
+          { "value" : "2",
+            "label" : "Kentucky" },
+          
+          { "value" : "3",
+            "label" : "Ohio" },
+          
+          { "value" : "4",
+            "label" : "Maine" },
+          
+          { "value" : "5",
+            "label" : "North Dakota" },
+          
+          { "value" : "6",
+            "label" : "Florida" },
+          
+          { "value" : "7",
+            "label" : "North Takoma" },
+          
+          { "value" : "8",
+            "label" : "California" },
+          
+          { "value" : "9",
+            "label" : "Texas" },
+          
+          { "value" : "10",
+            "label" : "Massachusetts" },
+          
+          { "value" : "11",
+            "label" : "Nevada" },
+          
+          { "value" : "12",
+            "label" : "Illinois" },
+          
+          { "value" : "13",
+            "label" : "Not in any state, you fool!" } ] },
       
       { "id" : "j6qe0h9q",
         "componentType" : "Sequence",
@@ -282,7 +342,7 @@
             "position" : "AFTER_QUESTION_TEXT",
             "label" : "Several possible answers" } ],
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
-        "items" : 
+        "options" : 
         [ 
           { "id" : "j334akov-QOP-jbgd8qmn",
             "label" : "Santa's Little Helper",
@@ -373,286 +433,469 @@
         "positioning" : "HORIZONTAL",
         "label" : "➡ 2. Does Jay like the following ice cream flavours?",
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
-        "columns" : 
-        [ 
-          { "codeListReference" : "j6p29i81-j6p2mvca" },
-          
-          { "componentType" : "Radio",
-            "codeListReference" : "jbdxh138" } ],
-        "responses" : 
+        "cells" : 
         [ 
           [ 
-            { "name" : "ICE_FLAVOUR1",
-              "valueState" : 
+            { "label" : "Vanilla",
+              "value" : "1" },
+            
+            { "componentType" : "Radio",
+              "response" : 
+              { "name" : "ICE_FLAVOUR1",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Yes" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+                { "value" : "0",
+                  "label" : "No" } ] } ],
           
           [ 
-            { "name" : "ICE_FLAVOUR2",
-              "valueState" : 
+            { "label" : "Strawberry",
+              "value" : "2" },
+            
+            { "componentType" : "Radio",
+              "response" : 
+              { "name" : "ICE_FLAVOUR2",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Yes" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+                { "value" : "0",
+                  "label" : "No" } ] } ],
           
           [ 
-            { "name" : "ICE_FLAVOUR3",
-              "valueState" : 
+            { "label" : "Apple",
+              "value" : "3" },
+            
+            { "componentType" : "Radio",
+              "response" : 
+              { "name" : "ICE_FLAVOUR3",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Yes" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+                { "value" : "0",
+                  "label" : "No" } ] } ],
           
           [ 
-            { "name" : "ICE_FLAVOUR4",
-              "valueState" : 
+            { "label" : "Bacon",
+              "value" : "4" },
+            
+            { "componentType" : "Radio",
+              "response" : 
+              { "name" : "ICE_FLAVOUR4",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Yes" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ] ] },
+                { "value" : "0",
+                  "label" : "No" } ] } ] ] },
       
       { "id" : "j6qefnga",
         "componentType" : "Table",
         "positioning" : "HORIZONTAL",
         "label" : "➡ 3. Which character works in the nuclear power plant?",
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
-        "columns" : 
-        [ 
-          { "codeListReference" : "j6qefnga-j6qeytgc" },
-          
-          { "componentType" : "Dropdown",
-            "codeListReference" : "jbdxh138" } ],
-        "responses" : 
+        "cells" : 
         [ 
           [ 
-            { "name" : "NUCLEAR_CHARACTER1",
-              "valueState" : 
+            { "label" : "Charles Montgomery Burns",
+              "value" : "1" },
+            
+            { "componentType" : "Dropdown",
+              "response" : 
+              { "name" : "NUCLEAR_CHARACTER1",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Yes" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+                { "value" : "0",
+                  "label" : "No" } ] } ],
           
           [ 
-            { "name" : "NUCLEAR_CHARACTER2",
-              "valueState" : 
+            { "label" : "Carl Carlson",
+              "value" : "2" },
+            
+            { "componentType" : "Dropdown",
+              "response" : 
+              { "name" : "NUCLEAR_CHARACTER2",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Yes" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+                { "value" : "0",
+                  "label" : "No" } ] } ],
           
           [ 
-            { "name" : "NUCLEAR_CHARACTER3",
-              "valueState" : 
+            { "label" : "Otto Mann",
+              "value" : "3" },
+            
+            { "componentType" : "Dropdown",
+              "response" : 
+              { "name" : "NUCLEAR_CHARACTER3",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Yes" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+                { "value" : "0",
+                  "label" : "No" } ] } ],
           
           [ 
-            { "name" : "NUCLEAR_CHARACTER4",
-              "valueState" : 
+            { "label" : "Carl Carlson",
+              "value" : "4" },
+            
+            { "componentType" : "Dropdown",
+              "response" : 
+              { "name" : "NUCLEAR_CHARACTER4",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Yes" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ] ] },
+                { "value" : "0",
+                  "label" : "No" } ] } ] ] },
       
       { "id" : "j6yzoc6g",
         "componentType" : "Table",
         "positioning" : "HORIZONTAL",
         "label" : "➡ 4. In which city each character was born?",
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
-        "columns" : 
-        [ 
-          { "codeListReference" : "j6yzoc6g-j6z087mq" },
-          
-          { "componentType" : "CheckboxOne",
-            "codeListReference" : "jbdxricm" } ],
-        "responses" : 
+        "cells" : 
         [ 
           [ 
-            { "name" : "BIRTH_CHARACTER1",
-              "valueState" : 
+            { "label" : "Selma Bouvier",
+              "value" : "1" },
+            
+            { "componentType" : "CheckboxOne",
+              "response" : 
+              { "name" : "BIRTH_CHARACTER1",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Albuquerque" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
+                { "value" : "2",
+                  "label" : "Springfield" },
                 
-                { "valueType" : "FORCED",
-                  "value" : "" },
+                { "value" : "3",
+                  "label" : "Portland" },
                 
-                { "valueType" : "EDITED",
-                  "value" : "" },
+                { "value" : "4",
+                  "label" : "Shelbyville" },
                 
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+                { "value" : "5",
+                  "label" : "Dagstuhl" } ] } ],
           
           [ 
-            { "name" : "BIRTH_CHARACTER2",
-              "valueState" : 
+            { "label" : "Kent Brockman",
+              "value" : "2" },
+            
+            { "componentType" : "CheckboxOne",
+              "response" : 
+              { "name" : "BIRTH_CHARACTER2",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Albuquerque" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
+                { "value" : "2",
+                  "label" : "Springfield" },
                 
-                { "valueType" : "FORCED",
-                  "value" : "" },
+                { "value" : "3",
+                  "label" : "Portland" },
                 
-                { "valueType" : "EDITED",
-                  "value" : "" },
+                { "value" : "4",
+                  "label" : "Shelbyville" },
                 
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+                { "value" : "5",
+                  "label" : "Dagstuhl" } ] } ],
           
           [ 
-            { "name" : "BIRTH_CHARACTER3",
-              "valueState" : 
+            { "label" : "Milhouse Van Houten",
+              "value" : "3" },
+            
+            { "componentType" : "CheckboxOne",
+              "response" : 
+              { "name" : "BIRTH_CHARACTER3",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Albuquerque" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
+                { "value" : "2",
+                  "label" : "Springfield" },
                 
-                { "valueType" : "FORCED",
-                  "value" : "" },
+                { "value" : "3",
+                  "label" : "Portland" },
                 
-                { "valueType" : "EDITED",
-                  "value" : "" },
+                { "value" : "4",
+                  "label" : "Shelbyville" },
                 
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+                { "value" : "5",
+                  "label" : "Dagstuhl" } ] } ],
           
           [ 
-            { "name" : "BIRTH_CHARACTER4",
-              "valueState" : 
+            { "label" : "Nelson Muntz",
+              "value" : "4" },
+            
+            { "componentType" : "CheckboxOne",
+              "response" : 
+              { "name" : "BIRTH_CHARACTER4",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Albuquerque" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
+                { "value" : "2",
+                  "label" : "Springfield" },
                 
-                { "valueType" : "FORCED",
-                  "value" : "" },
+                { "value" : "3",
+                  "label" : "Portland" },
                 
-                { "valueType" : "EDITED",
-                  "value" : "" },
+                { "value" : "4",
+                  "label" : "Shelbyville" },
                 
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+                { "value" : "5",
+                  "label" : "Dagstuhl" } ] } ],
           
           [ 
-            { "name" : "BIRTH_CHARACTER5",
-              "valueState" : 
+            { "label" : "Crazy Cat Lady",
+              "value" : "5" },
+            
+            { "componentType" : "CheckboxOne",
+              "response" : 
+              { "name" : "BIRTH_CHARACTER5",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Albuquerque" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
+                { "value" : "2",
+                  "label" : "Springfield" },
                 
-                { "valueType" : "FORCED",
-                  "value" : "" },
+                { "value" : "3",
+                  "label" : "Portland" },
                 
-                { "valueType" : "EDITED",
-                  "value" : "" },
+                { "value" : "4",
+                  "label" : "Shelbyville" },
                 
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ] ] },
+                { "value" : "5",
+                  "label" : "Dagstuhl" } ] } ] ] },
       
       { "id" : "j4nw88h2",
         "componentType" : "Sequence",
@@ -669,150 +912,223 @@
         "positioning" : "HORIZONTAL",
         "label" : "➡ 1. Please, specify the percentage of Jay's expenses in the Kwik-E-Mart for each product?",
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
-        "columns" : 
-        [ 
-          { "codeListReference" : "j4nwc63q-j4nwh16i" },
-          
-          { "componentType" : "InputNumber",
-            "min" : 0,
-            "max" : 100,
-            "decimals" : 1,
-            "header" : "Percentage",
-            "unit" : "%" } ],
-        "responses" : 
+        "cells" : 
         [ 
           [ 
-            { "name" : "PERCENTAGE_EXPENSES11",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+            { "headerCell" : true,
+              "colspan" : 2,
+              "label" : "" },
+            
+            { "headerCell" : true,
+              "label" : "Percentage" } ],
           
           [ 
-            { "name" : "PERCENTAGE_EXPENSES21",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+            { "rowspan" : 2,
+              "label" : "Frozen products",
+              "value" : "A" },
+            
+            { "label" : "Ice creams",
+              "value" : "A1" },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 100,
+              "decimals" : 1,
+              "unit" : "%",
+              "response" : 
+              { "name" : "PERCENTAGE_EXPENSES11",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
           
           [ 
-            { "name" : "PERCENTAGE_EXPENSES31",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+            { "label" : "Jasper Beardly",
+              "value" : "A2" },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 100,
+              "decimals" : 1,
+              "unit" : "%",
+              "response" : 
+              { "name" : "PERCENTAGE_EXPENSES21",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
           
           [ 
-            { "name" : "PERCENTAGE_EXPENSES41",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+            { "rowspan" : 3,
+              "label" : "Meat",
+              "value" : "B" },
+            
+            { "label" : "Bacon",
+              "value" : "B1" },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 100,
+              "decimals" : 1,
+              "unit" : "%",
+              "response" : 
+              { "name" : "PERCENTAGE_EXPENSES31",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
           
           [ 
-            { "name" : "PERCENTAGE_EXPENSES51",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+            { "label" : "Pork chop",
+              "value" : "B2" },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 100,
+              "decimals" : 1,
+              "unit" : "%",
+              "response" : 
+              { "name" : "PERCENTAGE_EXPENSES41",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
           
           [ 
-            { "name" : "PERCENTAGE_EXPENSES61",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+            { "label" : "Chicken",
+              "value" : "B3" },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 100,
+              "decimals" : 1,
+              "unit" : "%",
+              "response" : 
+              { "name" : "PERCENTAGE_EXPENSES51",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
           
           [ 
-            { "name" : "PERCENTAGE_EXPENSES71",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ] ] },
+            { "label" : "Compote",
+              "value" : "C" },
+            
+            { "label" : "Powersauce",
+              "value" : "C1" },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 100,
+              "decimals" : 1,
+              "unit" : "%",
+              "response" : 
+              { "name" : "PERCENTAGE_EXPENSES61",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
+          
+          [ 
+            { "colspan" : 2,
+              "label" : "Other",
+              "value" : "D" },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 100,
+              "decimals" : 1,
+              "unit" : "%",
+              "response" : 
+              { "name" : "PERCENTAGE_EXPENSES71",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ] ] },
       
       { "id" : "j6qejudb",
         "componentType" : "Subsequence",
@@ -824,166 +1140,249 @@
         "positioning" : "HORIZONTAL",
         "label" : "➡ 2. Who did these clownings and tell us what you remember?",
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
-        "columns" : 
-        [ 
-          { "codeListReference" : "j4nw0rr6-j77dav9b" },
-          
-          { "componentType" : "Dropdown",
-            "header" : "Clowning",
-            "codeListReference" : "jbdyh6b5" },
-          
-          { "componentType" : "Textarea",
-            "maxLength" : "255",
-            "header" : "Remember?" } ],
-        "responses" : 
+        "cells" : 
         [ 
           [ 
-            { "name" : "CLOWNING11",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] },
+            { "headerCell" : true,
+              "label" : "" },
             
-            { "name" : "CLOWNING12",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+            { "headerCell" : true,
+              "label" : "Clowning" },
+            
+            { "headerCell" : true,
+              "label" : "Remember?" } ],
           
           [ 
-            { "name" : "CLOWNING21",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] },
+            { "label" : "Break the windows of the whole city",
+              "value" : "1" },
             
-            { "name" : "CLOWNING22",
-              "valueState" : 
+            { "componentType" : "Dropdown",
+              "response" : 
+              { "name" : "CLOWNING11",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Jay" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
+                { "value" : "2",
+                  "label" : "Bart" },
                 
-                { "valueType" : "FORCED",
-                  "value" : "" },
+                { "value" : "3",
+                  "label" : "Krusty the clown" },
                 
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+                { "value" : "4",
+                  "label" : "Maggie" } ] },
+            
+            { "componentType" : "Textarea",
+              "maxLength" : "255",
+              "response" : 
+              { "name" : "CLOWNING12",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
           
           [ 
-            { "name" : "CLOWNING31",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] },
+            { "label" : "Loose the violin of his daughter playing poker",
+              "value" : "2" },
             
-            { "name" : "CLOWNING32",
-              "valueState" : 
+            { "componentType" : "Dropdown",
+              "response" : 
+              { "name" : "CLOWNING21",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Jay" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
+                { "value" : "2",
+                  "label" : "Bart" },
                 
-                { "valueType" : "FORCED",
-                  "value" : "" },
+                { "value" : "3",
+                  "label" : "Krusty the clown" },
                 
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
+                { "value" : "4",
+                  "label" : "Maggie" } ] },
+            
+            { "componentType" : "Textarea",
+              "maxLength" : "255",
+              "response" : 
+              { "name" : "CLOWNING22",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
           
           [ 
-            { "name" : "CLOWNING41",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] },
+            { "label" : "Kill Mr Burns",
+              "value" : "3" },
             
-            { "name" : "CLOWNING42",
-              "valueState" : 
+            { "componentType" : "Dropdown",
+              "response" : 
+              { "name" : "CLOWNING31",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
               [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
+                { "value" : "1",
+                  "label" : "Jay" },
                 
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
+                { "value" : "2",
+                  "label" : "Bart" },
                 
-                { "valueType" : "FORCED",
-                  "value" : "" },
+                { "value" : "3",
+                  "label" : "Krusty the clown" },
                 
-                { "valueType" : "EDITED",
-                  "value" : "" },
+                { "value" : "4",
+                  "label" : "Maggie" } ] },
+            
+            { "componentType" : "Textarea",
+              "maxLength" : "255",
+              "response" : 
+              { "name" : "CLOWNING32",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
+          
+          [ 
+            { "label" : "Leaving a mechanical object to control the nuclear power plant",
+              "value" : "4" },
+            
+            { "componentType" : "Dropdown",
+              "response" : 
+              { "name" : "CLOWNING41",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] },
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "Jay" },
                 
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ] ] },
+                { "value" : "2",
+                  "label" : "Bart" },
+                
+                { "value" : "3",
+                  "label" : "Krusty the clown" },
+                
+                { "value" : "4",
+                  "label" : "Maggie" } ] },
+            
+            { "componentType" : "Textarea",
+              "maxLength" : "255",
+              "response" : 
+              { "name" : "CLOWNING42",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ] ] },
       
       { "id" : "j6qeh91y",
         "componentType" : "Subsequence",
@@ -1001,464 +1400,525 @@
             "position" : "AFTER_QUESTION_TEXT",
             "label" : "Several answers possible: check off all the relevant boxes" } ],
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
-        "columns" : 
-        [ 
-          { "codeListReference" : "j6p2lwuj-j6p2kivg" },
-          
-          { "componentType" : "CheckboxBoolean",
-            "header" : "Brazil" },
-          
-          { "componentType" : "CheckboxBoolean",
-            "header" : "Canada" },
-          
-          { "componentType" : "CheckboxBoolean",
-            "header" : "Japan" },
-          
-          { "componentType" : "CheckboxBoolean",
-            "header" : "France" },
-          
-          { "componentType" : "CheckboxBoolean",
-            "header" : "Other country" },
-          
-          { "componentType" : "CheckboxBoolean",
-            "header" : "Other planet" } ],
-        "responses" : 
+        "cells" : 
         [ 
           [ 
-            { "name" : "TRAVEL11",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "headerCell" : true,
+              "label" : "" },
             
-            { "name" : "TRAVEL12",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "headerCell" : true,
+              "label" : "Brazil" },
             
-            { "name" : "TRAVEL13",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "headerCell" : true,
+              "label" : "Canada" },
             
-            { "name" : "TRAVEL14",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "headerCell" : true,
+              "label" : "Japan" },
             
-            { "name" : "TRAVEL15",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "headerCell" : true,
+              "label" : "France" },
             
-            { "name" : "TRAVEL16",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] } ],
+            { "headerCell" : true,
+              "label" : "Other country" },
+            
+            { "headerCell" : true,
+              "label" : "Other planet" } ],
           
           [ 
-            { "name" : "TRAVEL21",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "label" : "Car",
+              "value" : "1" },
             
-            { "name" : "TRAVEL22",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL11",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
             
-            { "name" : "TRAVEL23",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL12",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
             
-            { "name" : "TRAVEL24",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL13",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
             
-            { "name" : "TRAVEL25",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL14",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
             
-            { "name" : "TRAVEL26",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] } ],
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL15",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
+            
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL16",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } } ],
           
           [ 
-            { "name" : "TRAVEL31",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "label" : "Bike",
+              "value" : "2" },
             
-            { "name" : "TRAVEL32",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL21",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
             
-            { "name" : "TRAVEL33",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL22",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
             
-            { "name" : "TRAVEL34",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL23",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
             
-            { "name" : "TRAVEL35",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL24",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
             
-            { "name" : "TRAVEL36",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] } ],
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL25",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
+            
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL26",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } } ],
           
           [ 
-            { "name" : "TRAVEL41",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "label" : "Skateboard",
+              "value" : "3" },
             
-            { "name" : "TRAVEL42",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL31",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
             
-            { "name" : "TRAVEL43",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL32",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
             
-            { "name" : "TRAVEL44",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL33",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
             
-            { "name" : "TRAVEL45",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] },
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL34",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
             
-            { "name" : "TRAVEL46",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : false },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : false },
-                
-                { "valueType" : "FORCED",
-                  "value" : false },
-                
-                { "valueType" : "EDITED",
-                  "value" : false },
-                
-                { "valueType" : "INPUTED",
-                  "value" : false } ] } ] ] },
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL35",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
+            
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL36",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } } ],
+          
+          [ 
+            { "label" : "Plane",
+              "value" : "4" },
+            
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL41",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
+            
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL42",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
+            
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL43",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
+            
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL44",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
+            
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL45",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } },
+            
+            { "componentType" : "CheckboxBoolean",
+              "response" : 
+              { "name" : "TRAVEL46",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : false },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : false },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : false },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : false },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : false } ] } } ] ] },
       
       { "id" : "j6qfx9qe",
         "componentType" : "Sequence",
@@ -1470,391 +1930,467 @@
         "positioning" : "HORIZONTAL",
         "label" : "➡ 1. Please, complete the following grid with your favourite characters",
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
-        "columns" : 
+        "cells" : 
         [ 
-          { "componentType" : "Textarea",
-            "maxLength" : "255",
-            "header" : "Name" },
+          [ 
+            { "headerCell" : true,
+              "label" : "Name" },
+            
+            { "headerCell" : true,
+              "label" : "Age" } ],
           
-          { "componentType" : "InputNumber",
-            "min" : 0,
-            "max" : 120,
-            "decimals" : 0,
-            "header" : "Age" } ],
+          [ 
+            { "componentType" : "Textarea",
+              "maxLength" : "255",
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS11",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 120,
+              "decimals" : 0,
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS12",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
+          
+          [ 
+            { "componentType" : "Textarea",
+              "maxLength" : "255",
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS21",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 120,
+              "decimals" : 0,
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS22",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
+          
+          [ 
+            { "componentType" : "Textarea",
+              "maxLength" : "255",
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS31",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 120,
+              "decimals" : 0,
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS32",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
+          
+          [ 
+            { "componentType" : "Textarea",
+              "maxLength" : "255",
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS41",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 120,
+              "decimals" : 0,
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS42",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
+          
+          [ 
+            { "componentType" : "Textarea",
+              "maxLength" : "255",
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS51",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 120,
+              "decimals" : 0,
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS52",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
+          
+          [ 
+            { "componentType" : "Textarea",
+              "maxLength" : "255",
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS61",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 120,
+              "decimals" : 0,
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS62",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
+          
+          [ 
+            { "componentType" : "Textarea",
+              "maxLength" : "255",
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS71",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 120,
+              "decimals" : 0,
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS72",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
+          
+          [ 
+            { "componentType" : "Textarea",
+              "maxLength" : "255",
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS81",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 120,
+              "decimals" : 0,
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS82",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
+          
+          [ 
+            { "componentType" : "Textarea",
+              "maxLength" : "255",
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS91",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 120,
+              "decimals" : 0,
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS92",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ],
+          
+          [ 
+            { "componentType" : "Textarea",
+              "maxLength" : "255",
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS101",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 120,
+              "decimals" : 0,
+              "response" : 
+              { "name" : "FAVOURITE_CHARACTERS102",
+                "valueState" : 
+                [ 
+                  { "valueType" : "PREVIOUS",
+                    "value" : "" },
+                  
+                  { "valueType" : "COLLECTED",
+                    "value" : "" },
+                  
+                  { "valueType" : "FORCED",
+                    "value" : "" },
+                  
+                  { "valueType" : "EDITED",
+                    "value" : "" },
+                  
+                  { "valueType" : "INPUTED",
+                    "value" : "" } ] } } ] ],
         "lines" : 
         { "min" : 1,
-          "max" : 10 },
-        "responses" : 
-        [ 
-          [ 
-            { "name" : "FAVOURITE_CHARACTERS11",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] },
-            
-            { "name" : "FAVOURITE_CHARACTERS12",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
-          
-          [ 
-            { "name" : "FAVOURITE_CHARACTERS21",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] },
-            
-            { "name" : "FAVOURITE_CHARACTERS22",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
-          
-          [ 
-            { "name" : "FAVOURITE_CHARACTERS31",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] },
-            
-            { "name" : "FAVOURITE_CHARACTERS32",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
-          
-          [ 
-            { "name" : "FAVOURITE_CHARACTERS41",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] },
-            
-            { "name" : "FAVOURITE_CHARACTERS42",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
-          
-          [ 
-            { "name" : "FAVOURITE_CHARACTERS51",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] },
-            
-            { "name" : "FAVOURITE_CHARACTERS52",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
-          
-          [ 
-            { "name" : "FAVOURITE_CHARACTERS61",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] },
-            
-            { "name" : "FAVOURITE_CHARACTERS62",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
-          
-          [ 
-            { "name" : "FAVOURITE_CHARACTERS71",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] },
-            
-            { "name" : "FAVOURITE_CHARACTERS72",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
-          
-          [ 
-            { "name" : "FAVOURITE_CHARACTERS81",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] },
-            
-            { "name" : "FAVOURITE_CHARACTERS82",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
-          
-          [ 
-            { "name" : "FAVOURITE_CHARACTERS91",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] },
-            
-            { "name" : "FAVOURITE_CHARACTERS92",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ],
-          
-          [ 
-            { "name" : "FAVOURITE_CHARACTERS101",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] },
-            
-            { "name" : "FAVOURITE_CHARACTERS102",
-              "valueState" : 
-              [ 
-                { "valueType" : "PREVIOUS",
-                  "value" : "" },
-                
-                { "valueType" : "COLLECTED",
-                  "value" : "" },
-                
-                { "valueType" : "FORCED",
-                  "value" : "" },
-                
-                { "valueType" : "EDITED",
-                  "value" : "" },
-                
-                { "valueType" : "INPUTED",
-                  "value" : "" } ] } ] ] },
+          "max" : 10 } },
       
       { "id" : "j6z12s2d",
         "componentType" : "Sequence",
@@ -1884,631 +2420,356 @@
             
             { "valueType" : "INPUTED",
               "value" : "" } ] } } ],
-    "codeLists" : 
-    [ 
-      { "id" : "j334iumu",
-        "label" : "TOWN",
-        "codes" : 
-        [ 
-          { "depth" : 1,
-            "value" : "00001",
-            "label" : "Springfield" },
-          
-          { "depth" : 1,
-            "value" : "00002",
-            "label" : "Shelbyville" },
-          
-          { "depth" : 1,
-            "value" : "00003",
-            "label" : "Seinfeld" } ] },
-      
-      { "id" : "j6qdqoen",
-        "label" : "MAYOR",
-        "codes" : 
-        [ 
-          { "depth" : 1,
-            "value" : "1",
-            "label" : "Constance Harm" },
-          
-          { "depth" : 1,
-            "value" : "2",
-            "label" : "Timothy Lovejoy" },
-          
-          { "depth" : 1,
-            "value" : "3",
-            "label" : "Joe Quimby" },
-          
-          { "depth" : 1,
-            "value" : "4",
-            "label" : "Poochie" } ] },
-      
-      { "id" : "j4nwo00f",
-        "label" : "State",
-        "codes" : 
-        [ 
-          { "depth" : 1,
-            "value" : "1",
-            "label" : "Washington" },
-          
-          { "depth" : 1,
-            "value" : "2",
-            "label" : "Kentucky" },
-          
-          { "depth" : 1,
-            "value" : "3",
-            "label" : "Ohio" },
-          
-          { "depth" : 1,
-            "value" : "4",
-            "label" : "Maine" },
-          
-          { "depth" : 1,
-            "value" : "5",
-            "label" : "North Dakota" },
-          
-          { "depth" : 1,
-            "value" : "6",
-            "label" : "Florida" },
-          
-          { "depth" : 1,
-            "value" : "7",
-            "label" : "North Takoma" },
-          
-          { "depth" : 1,
-            "value" : "8",
-            "label" : "California" },
-          
-          { "depth" : 1,
-            "value" : "9",
-            "label" : "Texas" },
-          
-          { "depth" : 1,
-            "value" : "10",
-            "label" : "Massachusetts" },
-          
-          { "depth" : 1,
-            "value" : "11",
-            "label" : "Nevada" },
-          
-          { "depth" : 1,
-            "value" : "12",
-            "label" : "Illinois" },
-          
-          { "depth" : 1,
-            "value" : "13",
-            "label" : "Not in any state, you fool!" } ] },
-      
-      { "id" : "j6p29i81-j6p2mvca",
-        "codes" : 
-        [ 
-          { "depth" : 1,
-            "value" : "1",
-            "label" : "Vanilla" },
-          
-          { "depth" : 1,
-            "value" : "2",
-            "label" : "Strawberry" },
-          
-          { "depth" : 1,
-            "value" : "3",
-            "label" : "Apple" },
-          
-          { "depth" : 1,
-            "value" : "4",
-            "label" : "Bacon" } ] },
-      
-      { "id" : "jbdxh138",
-        "label" : "YESNO",
-        "codes" : 
-        [ 
-          { "depth" : 1,
-            "value" : "1",
-            "label" : "Yes" },
-          
-          { "depth" : 1,
-            "value" : "0",
-            "label" : "No" } ] },
-      
-      { "id" : "j6qefnga-j6qeytgc",
-        "codes" : 
-        [ 
-          { "depth" : 1,
-            "value" : "1",
-            "label" : "Charles Montgomery Burns" },
-          
-          { "depth" : 1,
-            "value" : "2",
-            "label" : "Carl Carlson" },
-          
-          { "depth" : 1,
-            "value" : "3",
-            "label" : "Otto Mann" },
-          
-          { "depth" : 1,
-            "value" : "4",
-            "label" : "Carl Carlson" } ] },
-      
-      { "id" : "j6yzoc6g-j6z087mq",
-        "codes" : 
-        [ 
-          { "depth" : 1,
-            "value" : "1",
-            "label" : "Selma Bouvier" },
-          
-          { "depth" : 1,
-            "value" : "2",
-            "label" : "Kent Brockman" },
-          
-          { "depth" : 1,
-            "value" : "3",
-            "label" : "Milhouse Van Houten" },
-          
-          { "depth" : 1,
-            "value" : "4",
-            "label" : "Nelson Muntz" },
-          
-          { "depth" : 1,
-            "value" : "5",
-            "label" : "Crazy Cat Lady" } ] },
-      
-      { "id" : "jbdxricm",
-        "label" : "CITY_BIRTH",
-        "codes" : 
-        [ 
-          { "depth" : 1,
-            "value" : "1",
-            "label" : "Albuquerque" },
-          
-          { "depth" : 1,
-            "value" : "2",
-            "label" : "Springfield" },
-          
-          { "depth" : 1,
-            "value" : "3",
-            "label" : "Portland" },
-          
-          { "depth" : 1,
-            "value" : "4",
-            "label" : "Shelbyville" },
-          
-          { "depth" : 1,
-            "value" : "5",
-            "label" : "Dagstuhl" } ] },
-      
-      { "id" : "j4nwc63q-j4nwh16i",
-        "codes" : 
-        [ 
-          { "depth" : 1,
-            "value" : "A",
-            "label" : "Frozen products" },
-          
-          { "value" : "A1",
-            "label" : "Ice creams" },
-          
-          { "value" : "A2",
-            "label" : "Jasper Beardly" },
-          
-          { "depth" : 1,
-            "value" : "B",
-            "label" : "Meat" },
-          
-          { "value" : "B1",
-            "label" : "Bacon" },
-          
-          { "value" : "B2",
-            "label" : "Pork chop" },
-          
-          { "value" : "B3",
-            "label" : "Chicken" },
-          
-          { "depth" : 1,
-            "value" : "C",
-            "label" : "Compote" },
-          
-          { "value" : "C1",
-            "label" : "Powersauce" },
-          
-          { "depth" : 1,
-            "value" : "D",
-            "label" : "Other" } ] },
-      
-      { "id" : "j4nw0rr6-j77dav9b",
-        "codes" : 
-        [ 
-          { "depth" : 1,
-            "value" : "1",
-            "label" : "Break the windows of the whole city" },
-          
-          { "depth" : 1,
-            "value" : "2",
-            "label" : "Loose the violin of his daughter playing poker" },
-          
-          { "depth" : 1,
-            "value" : "3",
-            "label" : "Kill Mr Burns" },
-          
-          { "depth" : 1,
-            "value" : "4",
-            "label" : "Leaving a mechanical object to control the nuclear power plant" } ] },
-      
-      { "id" : "jbdyh6b5",
-        "label" : "Clowning_Characters",
-        "codes" : 
-        [ 
-          { "depth" : 1,
-            "value" : "1",
-            "label" : "Jay" },
-          
-          { "depth" : 1,
-            "value" : "2",
-            "label" : "Bart" },
-          
-          { "depth" : 1,
-            "value" : "3",
-            "label" : "Krusty the clown" },
-          
-          { "depth" : 1,
-            "value" : "4",
-            "label" : "Maggie" } ] },
-      
-      { "id" : "j6p2lwuj-j6p2kivg",
-        "codes" : 
-        [ 
-          { "depth" : 1,
-            "value" : "1",
-            "label" : "Car" },
-          
-          { "depth" : 1,
-            "value" : "2",
-            "label" : "Bike" },
-          
-          { "depth" : 1,
-            "value" : "3",
-            "label" : "Skateboard" },
-          
-          { "depth" : 1,
-            "value" : "4",
-            "label" : "Plane" } ] } ],
     "variables" : 
     [ 
-      { "name" : "LAST_BROADCAST",
+      { "variableType" : "EXTERNAL",
+        "name" : "LAST_BROADCAST",
         "label" : "LAST_BROADCAST label" },
       
-      { "name" : "COMMENT",
+      { "variableType" : "COLLECTED",
+        "name" : "COMMENT",
         "responseRef" : "COMMENT" },
       
-      { "name" : "READY",
+      { "variableType" : "COLLECTED",
+        "name" : "READY",
         "responseRef" : "READY" },
       
-      { "name" : "PRODUCER",
+      { "variableType" : "COLLECTED",
+        "name" : "PRODUCER",
         "responseRef" : "PRODUCER" },
       
-      { "name" : "SEASON_NUMBER",
+      { "variableType" : "COLLECTED",
+        "name" : "SEASON_NUMBER",
         "responseRef" : "SEASON_NUMBER" },
       
-      { "name" : "DATEFIRST",
+      { "variableType" : "COLLECTED",
+        "name" : "DATEFIRST",
         "responseRef" : "DATEFIRST" },
       
-      { "name" : "AUDIENCE_SHARE",
+      { "variableType" : "COLLECTED",
+        "name" : "AUDIENCE_SHARE",
         "responseRef" : "AUDIENCE_SHARE" },
       
-      { "name" : "CITY",
+      { "variableType" : "COLLECTED",
+        "name" : "CITY",
         "responseRef" : "CITY" },
       
-      { "name" : "MAYOR",
+      { "variableType" : "COLLECTED",
+        "name" : "MAYOR",
         "responseRef" : "MAYOR" },
       
-      { "name" : "STATE",
+      { "variableType" : "COLLECTED",
+        "name" : "STATE",
         "responseRef" : "STATE" },
       
-      { "name" : "PET1",
+      { "variableType" : "COLLECTED",
+        "name" : "PET1",
         "responseRef" : "PET1" },
       
-      { "name" : "PET2",
+      { "variableType" : "COLLECTED",
+        "name" : "PET2",
         "responseRef" : "PET2" },
       
-      { "name" : "PET3",
+      { "variableType" : "COLLECTED",
+        "name" : "PET3",
         "responseRef" : "PET3" },
       
-      { "name" : "PET4",
+      { "variableType" : "COLLECTED",
+        "name" : "PET4",
         "responseRef" : "PET4" },
       
-      { "name" : "ICE_FLAVOUR1",
+      { "variableType" : "COLLECTED",
+        "name" : "ICE_FLAVOUR1",
         "responseRef" : "ICE_FLAVOUR1" },
       
-      { "name" : "ICE_FLAVOUR1",
-        "responseRef" : "ICE_FLAVOUR1" },
-      
-      { "name" : "ICE_FLAVOUR2",
+      { "variableType" : "COLLECTED",
+        "name" : "ICE_FLAVOUR2",
         "responseRef" : "ICE_FLAVOUR2" },
       
-      { "name" : "ICE_FLAVOUR2",
-        "responseRef" : "ICE_FLAVOUR2" },
-      
-      { "name" : "ICE_FLAVOUR3",
+      { "variableType" : "COLLECTED",
+        "name" : "ICE_FLAVOUR3",
         "responseRef" : "ICE_FLAVOUR3" },
       
-      { "name" : "ICE_FLAVOUR3",
-        "responseRef" : "ICE_FLAVOUR3" },
-      
-      { "name" : "ICE_FLAVOUR4",
+      { "variableType" : "COLLECTED",
+        "name" : "ICE_FLAVOUR4",
         "responseRef" : "ICE_FLAVOUR4" },
       
-      { "name" : "ICE_FLAVOUR4",
-        "responseRef" : "ICE_FLAVOUR4" },
-      
-      { "name" : "NUCLEAR_CHARACTER1",
+      { "variableType" : "COLLECTED",
+        "name" : "NUCLEAR_CHARACTER1",
         "responseRef" : "NUCLEAR_CHARACTER1" },
       
-      { "name" : "NUCLEAR_CHARACTER1",
-        "responseRef" : "NUCLEAR_CHARACTER1" },
-      
-      { "name" : "NUCLEAR_CHARACTER2",
+      { "variableType" : "COLLECTED",
+        "name" : "NUCLEAR_CHARACTER2",
         "responseRef" : "NUCLEAR_CHARACTER2" },
       
-      { "name" : "NUCLEAR_CHARACTER2",
-        "responseRef" : "NUCLEAR_CHARACTER2" },
-      
-      { "name" : "NUCLEAR_CHARACTER3",
+      { "variableType" : "COLLECTED",
+        "name" : "NUCLEAR_CHARACTER3",
         "responseRef" : "NUCLEAR_CHARACTER3" },
       
-      { "name" : "NUCLEAR_CHARACTER3",
-        "responseRef" : "NUCLEAR_CHARACTER3" },
-      
-      { "name" : "NUCLEAR_CHARACTER4",
+      { "variableType" : "COLLECTED",
+        "name" : "NUCLEAR_CHARACTER4",
         "responseRef" : "NUCLEAR_CHARACTER4" },
       
-      { "name" : "NUCLEAR_CHARACTER4",
-        "responseRef" : "NUCLEAR_CHARACTER4" },
-      
-      { "name" : "BIRTH_CHARACTER1",
+      { "variableType" : "COLLECTED",
+        "name" : "BIRTH_CHARACTER1",
         "responseRef" : "BIRTH_CHARACTER1" },
       
-      { "name" : "BIRTH_CHARACTER2",
+      { "variableType" : "COLLECTED",
+        "name" : "BIRTH_CHARACTER2",
         "responseRef" : "BIRTH_CHARACTER2" },
       
-      { "name" : "BIRTH_CHARACTER3",
+      { "variableType" : "COLLECTED",
+        "name" : "BIRTH_CHARACTER3",
         "responseRef" : "BIRTH_CHARACTER3" },
       
-      { "name" : "BIRTH_CHARACTER4",
+      { "variableType" : "COLLECTED",
+        "name" : "BIRTH_CHARACTER4",
         "responseRef" : "BIRTH_CHARACTER4" },
       
-      { "name" : "BIRTH_CHARACTER5",
+      { "variableType" : "COLLECTED",
+        "name" : "BIRTH_CHARACTER5",
         "responseRef" : "BIRTH_CHARACTER5" },
       
-      { "name" : "PERCENTAGE_EXPENSES11",
+      { "variableType" : "COLLECTED",
+        "name" : "PERCENTAGE_EXPENSES11",
         "responseRef" : "PERCENTAGE_EXPENSES11" },
       
-      { "name" : "PERCENTAGE_EXPENSES21",
+      { "variableType" : "COLLECTED",
+        "name" : "PERCENTAGE_EXPENSES21",
         "responseRef" : "PERCENTAGE_EXPENSES21" },
       
-      { "name" : "PERCENTAGE_EXPENSES31",
+      { "variableType" : "COLLECTED",
+        "name" : "PERCENTAGE_EXPENSES31",
         "responseRef" : "PERCENTAGE_EXPENSES31" },
       
-      { "name" : "PERCENTAGE_EXPENSES41",
+      { "variableType" : "COLLECTED",
+        "name" : "PERCENTAGE_EXPENSES41",
         "responseRef" : "PERCENTAGE_EXPENSES41" },
       
-      { "name" : "PERCENTAGE_EXPENSES51",
+      { "variableType" : "COLLECTED",
+        "name" : "PERCENTAGE_EXPENSES51",
         "responseRef" : "PERCENTAGE_EXPENSES51" },
       
-      { "name" : "PERCENTAGE_EXPENSES61",
+      { "variableType" : "COLLECTED",
+        "name" : "PERCENTAGE_EXPENSES61",
         "responseRef" : "PERCENTAGE_EXPENSES61" },
       
-      { "name" : "PERCENTAGE_EXPENSES71",
+      { "variableType" : "COLLECTED",
+        "name" : "PERCENTAGE_EXPENSES71",
         "responseRef" : "PERCENTAGE_EXPENSES71" },
       
-      { "name" : "CLOWNING11",
+      { "variableType" : "COLLECTED",
+        "name" : "CLOWNING11",
         "responseRef" : "CLOWNING11" },
       
-      { "name" : "CLOWNING11",
-        "responseRef" : "CLOWNING11" },
-      
-      { "name" : "CLOWNING12",
+      { "variableType" : "COLLECTED",
+        "name" : "CLOWNING12",
         "responseRef" : "CLOWNING12" },
       
-      { "name" : "CLOWNING12",
-        "responseRef" : "CLOWNING12" },
-      
-      { "name" : "CLOWNING21",
+      { "variableType" : "COLLECTED",
+        "name" : "CLOWNING21",
         "responseRef" : "CLOWNING21" },
       
-      { "name" : "CLOWNING21",
-        "responseRef" : "CLOWNING21" },
-      
-      { "name" : "CLOWNING22",
+      { "variableType" : "COLLECTED",
+        "name" : "CLOWNING22",
         "responseRef" : "CLOWNING22" },
       
-      { "name" : "CLOWNING22",
-        "responseRef" : "CLOWNING22" },
-      
-      { "name" : "CLOWNING31",
+      { "variableType" : "COLLECTED",
+        "name" : "CLOWNING31",
         "responseRef" : "CLOWNING31" },
       
-      { "name" : "CLOWNING31",
-        "responseRef" : "CLOWNING31" },
-      
-      { "name" : "CLOWNING32",
+      { "variableType" : "COLLECTED",
+        "name" : "CLOWNING32",
         "responseRef" : "CLOWNING32" },
       
-      { "name" : "CLOWNING32",
-        "responseRef" : "CLOWNING32" },
-      
-      { "name" : "CLOWNING41",
+      { "variableType" : "COLLECTED",
+        "name" : "CLOWNING41",
         "responseRef" : "CLOWNING41" },
       
-      { "name" : "CLOWNING41",
-        "responseRef" : "CLOWNING41" },
-      
-      { "name" : "CLOWNING42",
+      { "variableType" : "COLLECTED",
+        "name" : "CLOWNING42",
         "responseRef" : "CLOWNING42" },
       
-      { "name" : "CLOWNING42",
-        "responseRef" : "CLOWNING42" },
-      
-      { "name" : "TRAVEL11",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL11",
         "responseRef" : "TRAVEL11" },
       
-      { "name" : "TRAVEL12",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL12",
         "responseRef" : "TRAVEL12" },
       
-      { "name" : "TRAVEL13",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL13",
         "responseRef" : "TRAVEL13" },
       
-      { "name" : "TRAVEL14",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL14",
         "responseRef" : "TRAVEL14" },
       
-      { "name" : "TRAVEL15",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL15",
         "responseRef" : "TRAVEL15" },
       
-      { "name" : "TRAVEL16",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL16",
         "responseRef" : "TRAVEL16" },
       
-      { "name" : "TRAVEL21",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL21",
         "responseRef" : "TRAVEL21" },
       
-      { "name" : "TRAVEL22",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL22",
         "responseRef" : "TRAVEL22" },
       
-      { "name" : "TRAVEL23",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL23",
         "responseRef" : "TRAVEL23" },
       
-      { "name" : "TRAVEL24",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL24",
         "responseRef" : "TRAVEL24" },
       
-      { "name" : "TRAVEL25",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL25",
         "responseRef" : "TRAVEL25" },
       
-      { "name" : "TRAVEL26",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL26",
         "responseRef" : "TRAVEL26" },
       
-      { "name" : "TRAVEL31",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL31",
         "responseRef" : "TRAVEL31" },
       
-      { "name" : "TRAVEL32",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL32",
         "responseRef" : "TRAVEL32" },
       
-      { "name" : "TRAVEL33",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL33",
         "responseRef" : "TRAVEL33" },
       
-      { "name" : "TRAVEL34",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL34",
         "responseRef" : "TRAVEL34" },
       
-      { "name" : "TRAVEL35",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL35",
         "responseRef" : "TRAVEL35" },
       
-      { "name" : "TRAVEL36",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL36",
         "responseRef" : "TRAVEL36" },
       
-      { "name" : "TRAVEL41",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL41",
         "responseRef" : "TRAVEL41" },
       
-      { "name" : "TRAVEL42",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL42",
         "responseRef" : "TRAVEL42" },
       
-      { "name" : "TRAVEL43",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL43",
         "responseRef" : "TRAVEL43" },
       
-      { "name" : "TRAVEL44",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL44",
         "responseRef" : "TRAVEL44" },
       
-      { "name" : "TRAVEL45",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL45",
         "responseRef" : "TRAVEL45" },
       
-      { "name" : "TRAVEL46",
+      { "variableType" : "COLLECTED",
+        "name" : "TRAVEL46",
         "responseRef" : "TRAVEL46" },
       
-      { "name" : "FAVOURITE_CHARACTERS11",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS11",
         "responseRef" : "FAVOURITE_CHARACTERS11" },
       
-      { "name" : "FAVOURITE_CHARACTERS11",
-        "responseRef" : "FAVOURITE_CHARACTERS11" },
-      
-      { "name" : "FAVOURITE_CHARACTERS12",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS12",
         "responseRef" : "FAVOURITE_CHARACTERS12" },
       
-      { "name" : "FAVOURITE_CHARACTERS21",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS21",
         "responseRef" : "FAVOURITE_CHARACTERS21" },
       
-      { "name" : "FAVOURITE_CHARACTERS21",
-        "responseRef" : "FAVOURITE_CHARACTERS21" },
-      
-      { "name" : "FAVOURITE_CHARACTERS22",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS22",
         "responseRef" : "FAVOURITE_CHARACTERS22" },
       
-      { "name" : "FAVOURITE_CHARACTERS31",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS31",
         "responseRef" : "FAVOURITE_CHARACTERS31" },
       
-      { "name" : "FAVOURITE_CHARACTERS31",
-        "responseRef" : "FAVOURITE_CHARACTERS31" },
-      
-      { "name" : "FAVOURITE_CHARACTERS32",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS32",
         "responseRef" : "FAVOURITE_CHARACTERS32" },
       
-      { "name" : "FAVOURITE_CHARACTERS41",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS41",
         "responseRef" : "FAVOURITE_CHARACTERS41" },
       
-      { "name" : "FAVOURITE_CHARACTERS41",
-        "responseRef" : "FAVOURITE_CHARACTERS41" },
-      
-      { "name" : "FAVOURITE_CHARACTERS42",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS42",
         "responseRef" : "FAVOURITE_CHARACTERS42" },
       
-      { "name" : "FAVOURITE_CHARACTERS51",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS51",
         "responseRef" : "FAVOURITE_CHARACTERS51" },
       
-      { "name" : "FAVOURITE_CHARACTERS51",
-        "responseRef" : "FAVOURITE_CHARACTERS51" },
-      
-      { "name" : "FAVOURITE_CHARACTERS52",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS52",
         "responseRef" : "FAVOURITE_CHARACTERS52" },
       
-      { "name" : "FAVOURITE_CHARACTERS61",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS61",
         "responseRef" : "FAVOURITE_CHARACTERS61" },
       
-      { "name" : "FAVOURITE_CHARACTERS61",
-        "responseRef" : "FAVOURITE_CHARACTERS61" },
-      
-      { "name" : "FAVOURITE_CHARACTERS62",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS62",
         "responseRef" : "FAVOURITE_CHARACTERS62" },
       
-      { "name" : "FAVOURITE_CHARACTERS71",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS71",
         "responseRef" : "FAVOURITE_CHARACTERS71" },
       
-      { "name" : "FAVOURITE_CHARACTERS71",
-        "responseRef" : "FAVOURITE_CHARACTERS71" },
-      
-      { "name" : "FAVOURITE_CHARACTERS72",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS72",
         "responseRef" : "FAVOURITE_CHARACTERS72" },
       
-      { "name" : "FAVOURITE_CHARACTERS81",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS81",
         "responseRef" : "FAVOURITE_CHARACTERS81" },
       
-      { "name" : "FAVOURITE_CHARACTERS81",
-        "responseRef" : "FAVOURITE_CHARACTERS81" },
-      
-      { "name" : "FAVOURITE_CHARACTERS82",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS82",
         "responseRef" : "FAVOURITE_CHARACTERS82" },
       
-      { "name" : "FAVOURITE_CHARACTERS91",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS91",
         "responseRef" : "FAVOURITE_CHARACTERS91" },
       
-      { "name" : "FAVOURITE_CHARACTERS91",
-        "responseRef" : "FAVOURITE_CHARACTERS91" },
-      
-      { "name" : "FAVOURITE_CHARACTERS92",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS92",
         "responseRef" : "FAVOURITE_CHARACTERS92" },
       
-      { "name" : "FAVOURITE_CHARACTERS101",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS101",
         "responseRef" : "FAVOURITE_CHARACTERS101" },
       
-      { "name" : "FAVOURITE_CHARACTERS101",
-        "responseRef" : "FAVOURITE_CHARACTERS101" },
-      
-      { "name" : "FAVOURITE_CHARACTERS102",
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHARACTERS102",
         "responseRef" : "FAVOURITE_CHARACTERS102" },
       
-      { "name" : "SURVEY_COMMENT",
+      { "variableType" : "COLLECTED",
+        "name" : "SURVEY_COMMENT",
         "responseRef" : "SURVEY_COMMENT" },
       
-      { "name" : "SUM_EXPENSES",
+      { "variableType" : "CALCULATED",
+        "name" : "SUM_EXPENSES",
         "value" : "$PERCENTAGE_EXPENSES11 + $PERCENTAGE_EXPENSES21 + $PERCENTAGE_EXPENSES31 + $PERCENTAGE_EXPENSES41 + $PERCENTAGE_EXPENSES51 + $PERCENTAGE_EXPENSES61 + $PERCENTAGE_EXPENSES71 + $PERCENTAGE_EXPENSES81 + $PERCENTAGE_EXPENSES91 + $PERCENTAGE_EXPENSES101" } ] }
