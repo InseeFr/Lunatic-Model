@@ -56,7 +56,10 @@
 	</xsl:template>
 	
 	<xsl:template match="h:value">
-		<value><xsl:value-of select="."/></value>
+		<value>
+			<xsl:copy-of select="@*"/>
+			<xsl:value-of select="."/>
+		</value>
 	</xsl:template>
 	
 	<xsl:template match="h:unit">
