@@ -121,7 +121,7 @@
   
   <xs:complexType name="ResponseTypeBoolean">
     <xs:sequence>
-      <xs:element name="value" type="xs:boolean"/>
+      <xs:element name="value" type="xs:boolean" nillable="true"/>
       <xs:element name="responseComment" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute name="valueType" type="ResponseTypeEnum"/>
@@ -129,7 +129,7 @@
   
   <xs:complexType name="ResponseTypeInt">
     <xs:sequence>
-      <xs:element name="value" type="xs:integer"/>
+      <xs:element name="value" type="xs:integer" nillable="true"/>
       <xs:element name="responseComment" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute name="valueType" type="ResponseTypeEnum"/>
@@ -137,7 +137,7 @@
   
   <xs:complexType name="ResponseTypeString">
     <xs:sequence>
-      <xs:element name="value" type="xs:string"/>
+      <xs:element name="value" type="xs:string" nillable="true"/>
       <xs:element name="responseComment" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute name="valueType" type="ResponseTypeEnum"/>
