@@ -436,6 +436,11 @@
             "componentType" : "Table",
             "positioning" : "HORIZONTAL",
             "label" : "➡ 2. Does Jay like the following ice cream flavours?",
+            "declarations" : 
+            [ 
+              { "id" : "d12-SI",
+                "position" : "BEFORE_QUESTION_TEXT",
+                "label" : "Now we are going to know if you think that Jay is a gluton." } ],
             "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
             "cells" : 
             [ 
