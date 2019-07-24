@@ -75,7 +75,7 @@
       <xs:enumeration value="Input"/>
       <xs:enumeration value="InputNumber"/>
       <xs:enumeration value="Datepicker"/>
-      <xs:enumeration value="Checkbox"/>
+      <xs:enumeration value="CheckboxGroup"/>
       <xs:enumeration value="CheckboxOne"/>
       <xs:enumeration value="CheckboxBoolean"/>
       <xs:enumeration value="Radio"/>
@@ -253,11 +253,11 @@
     </xs:complexContent>
   </xs:complexType>
   
-  <xs:complexType name="Checkbox">
+  <xs:complexType name="CheckboxGroup">
     <xs:complexContent>
       <xs:extension base="ComponentType">
         <xs:sequence>
-          <xs:element name="options" type="OptionsCheckbox" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="responses" type="ResponsesCheckboxGroup" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -305,7 +305,7 @@
     <xs:attribute name="max" type="xs:integer" use="required"/>
   </xs:complexType>
   
-  <xs:complexType name="OptionsCheckbox">
+  <xs:complexType name="ResponsesCheckboxGroup">
     <xs:sequence>
       <xs:element name="label" type="xs:string"/>
       <xs:element name="response" type="ResponseContainerBoolean"/>

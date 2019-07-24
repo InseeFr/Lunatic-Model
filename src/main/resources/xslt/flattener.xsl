@@ -106,7 +106,7 @@
 		</columns>
 	</xsl:template>
 	
-	<xsl:template match="h:components[@xsi:type='Checkbox']">
+	<xsl:template match="h:components[@xsi:type='CheckboxGroup']">
 		<components>
 			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates/>
@@ -154,7 +154,14 @@
 			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates/>
 		</options>
-	</xsl:template>	
+	</xsl:template>
+	
+	<xsl:template match="h:responses">
+		<responses>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates/>
+		</responses>
+	</xsl:template>
 	
 	<xsl:template match="h:codes">
 		<codes>
