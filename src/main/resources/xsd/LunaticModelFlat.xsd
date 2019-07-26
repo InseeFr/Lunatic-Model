@@ -298,6 +298,7 @@
         <xs:attribute name="headerCell" type="xs:boolean" use="optional"/>
         <xs:attribute name="colspan" type="xs:integer" use="optional"/>
         <xs:attribute name="rowspan" type="xs:integer" use="optional"/>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
   
   <xs:complexType name="LinesRoaster">
