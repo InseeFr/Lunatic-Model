@@ -30,7 +30,6 @@
 			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates select="h:label"/>
 			<xsl:apply-templates select="h:components"/>
-			<xsl:apply-templates select="h:codeLists"/>
 			<xsl:apply-templates select="h:variables"/>
 		</Questionnaire>
 	</xsl:template>
@@ -57,7 +56,10 @@
 	</xsl:template>
 	
 	<xsl:template match="h:value">
-		<value><xsl:value-of select="."/></value>
+		<value>
+			<xsl:copy-of select="@*"/>
+			<xsl:value-of select="."/>
+		</value>
 	</xsl:template>
 	
 	<xsl:template match="h:unit">
@@ -66,16 +68,8 @@
 	
 	<xsl:template match="h:lines">
 		<lines><xsl:copy-of select="@*"/></lines>
-	</xsl:template>
-	
-	<xsl:template match="h:header">
-		<header><xsl:value-of select="."/></header>
-	</xsl:template>
-	
-	<xsl:template match="h:codeListReference">
-		<codeListReference><xsl:value-of select="."/></codeListReference>
-	</xsl:template>
-	
+	</xsl:template>	
+		
 	<xsl:template match="h:dateFormat">
 		<dateFormat><xsl:value-of select="."/></dateFormat>
 	</xsl:template>
@@ -112,7 +106,7 @@
 		</columns>
 	</xsl:template>
 	
-	<xsl:template match="h:components[@xsi:type='Checkbox']">
+	<xsl:template match="h:components[@xsi:type='CheckboxGroup']">
 		<components>
 			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates/>
@@ -133,12 +127,13 @@
 		</response>
 	</xsl:template>
 	
-	<xsl:template match="h:responses">
-		<responses>
+	<xsl:template match="h:cells">
+		<cells>
 			<xsl:copy-of select="@*"/>
-			<xsl:apply-templates/>
-		</responses>
+			<xsl:apply-templates />
+		</cells>
 	</xsl:template>
+	
 	
 	<xsl:template match="h:valueState">
 		<valueState>
@@ -154,12 +149,19 @@
 		</codeLists>
 	</xsl:template>	
 	
-	<xsl:template match="h:items">
-		<items>
+	<xsl:template match="h:options">
+		<options>
 			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates/>
-		</items>
-	</xsl:template>	
+		</options>
+	</xsl:template>
+	
+	<xsl:template match="h:responses">
+		<responses>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates/>
+		</responses>
+	</xsl:template>
 	
 	<xsl:template match="h:codes">
 		<codes>
@@ -172,6 +174,7 @@
 		<xsl:variable name="value" select="h:value"/>
 		<xsl:variable name="responseRef" select="h:responseRef"/>		
 		<variables>
+			<xsl:copy-of select="@*"/>
 			<name><xsl:value-of select="h:name"/></name>
 			<xsl:choose>
 				<xsl:when test="$value!=''">

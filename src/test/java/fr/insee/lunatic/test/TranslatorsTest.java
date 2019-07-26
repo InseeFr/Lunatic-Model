@@ -57,7 +57,7 @@ public class TranslatorsTest {
 			Path expectedFile = Paths.get(String.format("%s/out.json", basePath));
 			String jsonExpectedString = new String(Files.readAllBytes(expectedFile),StandardCharsets.UTF_8);
 
-			JSONAssert.assertEquals(jsonExpectedString, jsonOut, false);
+			JSONAssert.assertEquals(jsonExpectedString, jsonOut, true);
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -140,7 +140,7 @@ public class TranslatorsTest {
 			Path expectedFile = Paths.get(String.format("%s/out.json", basePath));
 			String jsonExpectedString = new String(Files.readAllBytes(expectedFile),StandardCharsets.UTF_8);
 
-			JSONAssert.assertEquals(jsonExpectedString, jsonOut, false);
+			JSONAssert.assertEquals(jsonExpectedString, jsonOut, true);
 		} catch (IOException e) {
 			e.printStackTrace();
 			Assert.fail();
@@ -177,7 +177,7 @@ public class TranslatorsTest {
 			Path expectedFile = Paths.get(String.format("%s/out.json", basePath));
 			String jsonExpectedString = new String(Files.readAllBytes(expectedFile),StandardCharsets.UTF_8);
 
-			JSONAssert.assertEquals(jsonExpectedString, jsonOut, false);
+			JSONAssert.assertEquals(jsonExpectedString, jsonOut, true);
 
 		} catch (IOException e) {
 			e.printStackTrace();

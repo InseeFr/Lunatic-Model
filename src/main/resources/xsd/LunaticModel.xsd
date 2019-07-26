@@ -16,20 +16,11 @@
         </xs:complexType>
     </xs:element>
     
-    <xs:complexType name="CodeLists">
-        <xs:sequence>
-            <xs:element name="label" type="xs:string"/>
-            <xs:element name="codes" type="Codes" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-        <xs:attribute name="id" type="xs:ID" use="required"/>
-    </xs:complexType>
-    
-    <xs:complexType name="Codes">
+    <xs:complexType name="Options">
         <xs:sequence>
             <xs:element name="value" type="xs:string"/>
             <xs:element name="label" type="xs:string"/>
         </xs:sequence>
-        <xs:attribute name="depth" type="xs:integer"/>
     </xs:complexType>
     
     <xs:complexType name="VariableType">
@@ -39,6 +30,7 @@
             <xs:element name="responseRef" type="xs:string" minOccurs="0"/>
             <xs:element name="label" type="xs:string" minOccurs="0"/>
         </xs:sequence>
+        <xs:attribute name="variableType" type="VariableTypeEnum"/>
     </xs:complexType>
     
     <xs:complexType name="SequenceType">
@@ -46,7 +38,6 @@
             <xs:extension base="ComponentType">
                 <xs:sequence>
                     <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="codeLists" type="CodeLists" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="variables" type="VariableType" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
@@ -92,7 +83,7 @@
             <xs:enumeration value="Input"/>
             <xs:enumeration value="InputNumber"/>
             <xs:enumeration value="Datepicker"/>
-            <xs:enumeration value="Checkbox"/>
+            <xs:enumeration value="CheckboxGroup"/>
             <xs:enumeration value="CheckboxOne"/>
             <xs:enumeration value="CheckboxBoolean"/>
             <xs:enumeration value="Radio"/>
@@ -138,7 +129,7 @@
     
     <xs:complexType name="ResponseTypeBoolean">
         <xs:sequence>
-            <xs:element name="value" type="xs:boolean"/>
+            <xs:element name="value" type="xs:boolean" nillable="true"/>
             <xs:element name="responseComment" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="valueType" type="ResponseTypeEnum"/>
@@ -146,7 +137,7 @@
     
     <xs:complexType name="ResponseTypeInt">
         <xs:sequence>
-            <xs:element name="value" type="xs:integer"/>
+            <xs:element name="value" type="xs:integer" nillable="true"/>
             <xs:element name="responseComment" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="valueType" type="ResponseTypeEnum"/>
@@ -154,7 +145,7 @@
     
     <xs:complexType name="ResponseTypeString">
         <xs:sequence>
-            <xs:element name="value" type="xs:string"/>
+            <xs:element name="value" type="xs:string" nillable="true"/>
             <xs:element name="responseComment" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="valueType" type="ResponseTypeEnum"/>
@@ -172,17 +163,13 @@
         </xs:restriction>
     </xs:simpleType>
     
-    <xs:complexType name="QuestionType">
-        <xs:complexContent>
-            <xs:extension base="ComponentType">
-                <xs:sequence>
-                    <!--<xs:element name="Response" type="ResponseType" maxOccurs="unbounded"/>-->
-                    <xs:element name="ClarificationQuestion" type="QuestionType" minOccurs="0"/>
-                </xs:sequence>
-                <xs:attribute name="questionType" type="QuestionTypeEnum"/>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
+    <xs:simpleType name="VariableTypeEnum">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="EXTERNAL"/>
+            <xs:enumeration value="COLLECTED"/>
+            <xs:enumeration value="CALCULATED"/>
+        </xs:restriction>
+    </xs:simpleType>
     
     <xs:complexType name="Textarea">
         <xs:complexContent>
@@ -246,7 +233,7 @@
             <xs:extension base="ComponentType">
                 <xs:sequence>
                     <xs:element name="response" type="ResponseContainerString"/>
-                    <xs:element name="codeListReference" type="xs:string"/>
+                    <xs:element name="options" type="Options" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -257,7 +244,7 @@
             <xs:extension base="ComponentType">
                 <xs:sequence>
                     <xs:element name="response" type="ResponseContainerString"/>
-                    <xs:element name="codeListReference" type="xs:string"/>
+                    <xs:element name="options" type="Options" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -268,17 +255,17 @@
             <xs:extension base="ComponentType">
                 <xs:sequence>
                     <xs:element name="response" type="ResponseContainerString"/>
-                    <xs:element name="codeListReference" type="xs:string"/>
+                    <xs:element name="options" type="Options" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
     
-    <xs:complexType name="Checkbox">
+    <xs:complexType name="CheckboxGroup">
         <xs:complexContent>
             <xs:extension base="ComponentType">
                 <xs:sequence>
-                    <xs:element name="items" type="ItemType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="responses" type="ResponsesCheckboxGroup" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -288,33 +275,38 @@
         <xs:complexContent>
             <xs:extension base="ComponentType">
                 <xs:sequence>
-                    <xs:element name="columns" type="ColumnType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="cells" type="CellsLines" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="lines" type="LinesRoaster" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="responses" type="ResponsesTable" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
                 <xs:attribute name="positioning" type="xs:string"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
     
-    <xs:complexType name="ResponsesTable">
+    <xs:complexType name="CellsLines">
         <xs:sequence>
-            <xs:element name="responses" type="ReponseContainerInterface" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            <xs:element name="cells" type="CellsType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-    
-    <xs:complexType name="ColumnType">
+        
+    <xs:complexType name="CellsType">
         <xs:sequence>
-            <xs:element name="header" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="label" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="value" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="dateFormat" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="unit" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="codeListReference" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="response" type="ReponseContainerInterface"/>
+            <xs:element name="options" type="Options" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="componentType" type="xs:string" use="optional"/>
         <xs:attribute name="maxLength" type="xs:string" use="optional"/>
         <xs:attribute name="min" type="xs:double" use="optional"/>
         <xs:attribute name="max" type="xs:double" use="optional"/>
         <xs:attribute name="decimals" type="xs:integer" use="optional"/>
+        <xs:attribute name="headerCell" type="xs:boolean" use="optional"/>
+        <xs:attribute name="colspan" type="xs:integer" use="optional"/>
+        <xs:attribute name="rowspan" type="xs:integer" use="optional"/>
+        <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
     
     <xs:complexType name="LinesRoaster">
@@ -322,7 +314,7 @@
         <xs:attribute name="max" type="xs:integer" use="required"/>
     </xs:complexType>
     
-    <xs:complexType name="ItemType">
+    <xs:complexType name="ResponsesCheckboxGroup">
         <xs:sequence>
             <xs:element name="label" type="xs:string"/>
             <xs:element name="response" type="ResponseContainerBoolean"/>
@@ -345,6 +337,7 @@
             <xs:enumeration value="COMMENT"/>
             <xs:enumeration value="HELP"/>
             <xs:enumeration value="WARNING"/>
+            <xs:enumeration value="STATEMENT"/>
         </xs:restriction>
     </xs:simpleType>
     
@@ -378,15 +371,6 @@
             <xs:enumeration value="INFO"/>
             <xs:enumeration value="WARN"/>
             <xs:enumeration value="ERROR"/>
-        </xs:restriction>
-    </xs:simpleType>
-    
-    <xs:simpleType name="QuestionTypeEnum">
-        <xs:restriction base="xs:token">
-            <xs:enumeration value="SIMPLE"/>
-            <xs:enumeration value="SINGLE_CHOICE"/>
-            <xs:enumeration value="MULTIPLE_CHOICE"/>
-            <xs:enumeration value="TABLE"/>
         </xs:restriction>
     </xs:simpleType>
     
