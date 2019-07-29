@@ -65,6 +65,7 @@
     </xs:sequence>
     <xs:attribute name="id" type="xs:ID" use="required"/>
     <xs:attribute name="componentType" type="ComponentTypeEnum"/>
+    <xs:attribute name="mandatory" type="xs:boolean"/>
   </xs:complexType>
   
   <xs:simpleType name="ComponentTypeEnum">
