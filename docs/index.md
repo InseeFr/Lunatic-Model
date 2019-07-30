@@ -1,1 +1,7 @@
-# Documentation de Lunatic-Model
+# Documentation for Lunatic-Model
+
+
+Choose your language :
+
+- [English]()
+- [Français]() 
