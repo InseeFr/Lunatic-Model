@@ -1,6 +1,30 @@
 {
-  "plugins": [
-    "include-codeblock",
-    "sequence-diagrams"
-  ]
+	"gitbook": "3.2.2",
+	"title": "Lunatic-Model",
+	"plugins": [
+		"edit-link",
+		"prism",
+		"-highlight",
+		"github",
+		"anchorjs",
+		"image-captions",
+		"include-codeblock",
+		"collapsible-chapters"
+	],
+	"root": "./",
+	"pluginsConfig": {
+		"edit-link": {
+			"base": "https://github.com/laurentC35/Lunatic-Model/tree/master/docs",
+			"label": "Edit This Page"
+		},
+		"github": {
+			"url": "https://github.com/laurentC35/Lunatic/"
+		},
+		"theme-default": {
+			"styles": {
+				"website": "gitbook.css"
+			}
+		},
+		"collapsible-chapters": {}
+	}
 }
