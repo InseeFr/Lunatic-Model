@@ -14,11 +14,11 @@
 	"root": "./",
 	"pluginsConfig": {
 		"edit-link": {
-			"base": "https://github.com/laurentC35/Lunatic-Model/tree/master/docs",
+			"base": "https://github.com/InseeFr/Lunatic-Model/tree/master/docs",
 			"label": "Edit This Page"
 		},
 		"github": {
-			"url": "https://github.com/laurentC35/Lunatic/"
+			"url": "https://github.com/InseeFr/Lunatic-Model/"
 		},
 		"theme-default": {
 			"styles": {
