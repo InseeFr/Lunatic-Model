@@ -1,6 +1,6 @@
 ### Les Séquence
 
-Structure du composant Sequence
+Structure du composant Sequence 
 ```json=
 {
   "id":"id_du_composant",
