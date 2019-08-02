@@ -10,10 +10,11 @@ Alors que dans le modèle à plat, les composants sont les uns à la suite des a
 
 Dans cette documentation, seul le modèle à plat est présenté.
 
-
 ## Structure du questionnaire
+
 La structure du questionnaire attendue est la suivante
-```json=
+
+```json
 {
   "id":"idQuestionnaire",
   "label":"Nom du questionnaire",
@@ -23,8 +24,10 @@ La structure du questionnaire attendue est la suivante
 ```
 
 ## Structure générale d'un composant
+
 Tous les composants (excepté Sequence et Subsequence) ont au moins ces attributs :
-```json=
+
+```json
 {
   "id":"id_du_composant",
   "componentType":"type_du_composant"
@@ -43,45 +46,48 @@ Tous les composants (excepté Sequence et Subsequence) ont au moins ces attribut
 - `mandatory` : booléen qui définit si la réponse est obligatoire ou non
 
 ### Les déclarations
-Il s'agit d'un tableau de déclarations 
-```json=
-"declarations" : 
-  [ 
-    { 
+
+Il s'agit d'un tableau de déclarations
+
+```json
+"declarations" :
+  [
+    {
       "id" : "id1",
       "declarationType" : "STATEMENT",
       "position" : "BEFORE_QUESTION_TEXT",
-      "label" : "Label de la declaration" 
+      "label" : "Label de la declaration"
     },
-    { 
+    {
       "id" : "id2",
       "declarationType" : "HELP",
       "position" : "AFTER_QUESTION_TEXT",
-      "label" : "Label de la declaration" 
-    } 
+      "label" : "Label de la declaration"
+    }
   ]
 ```
 
 - `declarationType` : "INSTRUCTION", "COMMENT", "HELP", "WARNING" ou "STATEMENT"
-- `position` :  "BEFORE_QUESTION_TEXT" ou "AFTER_QUESTION_TEXT"
-- `label` : label de la déclarations 
+- `position` : "BEFORE_QUESTION_TEXT" ou "AFTER_QUESTION_TEXT"
+- `label` : label de la déclarations
 
 ### Les réponses
+
 Les composants qui ont pour but de collecter des réponses ont un attribut "response" ayant pour structure :
-```json=
-"response" : 
-  { 
+
+```json
+"response" :
+  {
     "name" : "idVariable",
-    "valueState" : 
-      [ 
+    "valueState" :
+      [
         { "valueType" : "PREVIOUS", "value" : null },
         { "valueType" : "COLLECTED", "value" : null },
         { "valueType" : "FORCED", "value" : null },
         { "valueType" : "EDITED", "value" : null },
         { "valueType" : "INPUTED", "value" : null },
-      ] 
+      ]
   }
 ```
 
 L'attribut `name` faisant référence à l'attribut `responseRef` d'une variable dans le tableau `variables` en fin de questionnaire.
-

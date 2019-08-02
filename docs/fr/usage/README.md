@@ -1,4 +1,4 @@
-# Comment utiliser Luantic-Model
+# Comment utiliser Lunatic-Model
 
 ## Installation
 Il s'agit d'un librairie java utilisant Maven.
@@ -9,7 +9,7 @@ N'étant pas pour le moment publiée sur les repository maven, veuillez suivre l
 	- `mvn clean install -DskipTests`
 - intégrer la dépendances dans votre projet maven 
 
-```xml=
+```xml
 <dependency>
   <groupId>fr.insee.lunatic</groupId>
   <artifactId>lunatic-model</artifactId>
@@ -35,7 +35,7 @@ Le fichier en entrée doit être issue du générateur de questionnaire Eno (ddi
 En sortie :  un json au format `String`.
 
 Transformation:
-```java=
+```java
 XMLLunaticToJSONLunaticTranslator translator = new XMLLunaticToJSONLunaticTranslator();
 JSONCleaner jsonCleaner = new JSONCleaner();
 String jsonQuestionnaire = jsonCleaner.clean(translator.translate(in));
@@ -52,7 +52,7 @@ Le fichier en entrée doit être issue du générateur de questionnaire Eno (ddi
 En sortie :  un json au format `String`.
 
 Transformation:
-```java=
+```java
 XMLLunaticToXMLLunaticFlatTranslator translator = new XMLLunaticToXMLLunaticFlatTranslator();
 XMLLunaticFlatToJSONLunaticFlatTranslator translator2 = new XMLLunaticFlatToJSONLunaticFlatTranslator();
 JSONCleaner jsonCleaner = new JSONCleaner();

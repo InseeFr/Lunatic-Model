@@ -5,8 +5,8 @@ Il dispose de tous les attributs du composant de base avec un attribut `maxLengt
 
 Sa structure est la suivante :
 
-```json=
-{ 
+```json
+{
   "id" : "j3343qhx",
   "componentType" : "Textarea",
   "mandatory" : false,

@@ -4,5 +4,5 @@ Lunatic-Model est un projet complètement adhérent à [Eno](https://github.com/
 A une version d'Eno doit correspondre une version de Lunatic-Model.
 
 ### Utilisation avec Eno
-L'objectif des transformations de Lunatic-Model est de compléter la transformation ddi2js d'Eno afin d'obtenir la sortie JSON attendue par la librairie de composant Lunatic.
+L'objectif des transformations de Lunatic-Model est de compléter la transformation ddi2js d'Eno afin d'obtenir la sortie JSON attendue par la bibliothèque de composant Lunatic.
 Pour obtenir une sortie d'Eno exploitable il faut donc utiliser les transformations définies dans ce projet.

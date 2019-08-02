@@ -7,8 +7,8 @@ Il dispose de tous les attributs du composant de base avec aucun attribut suppl√
 
 Sa structure est la suivante :
 
-```json=
-{ 
+```json
+{
   "id" : "j3343qhx",
   "componentType" : "CheckboxBoolean",
   "mandatory" : false,

@@ -5,8 +5,8 @@ Il dispose de tous les attributs du composant de base avec un attribut `dateForm
 
 Sa structure est la suivante :
 
-```json=
-{ 
+```json
+{
   "id" : "j3343qhx",
   "componentType" : "Datepicker",
   "mandatory" : false,

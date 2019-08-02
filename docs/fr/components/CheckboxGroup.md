@@ -7,7 +7,7 @@ Les différentes options sont définies grâce au tableau `responses` qui est un
 
 Sa structure est la suivante :
 
-```json=
+```json
 { 
   "id" : "j3343qhx",
   "componentType" : "CheckboxGroup",
