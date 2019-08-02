@@ -24,7 +24,7 @@ Il existe 2 transformations possibles :
 
 Pour utiliser ces transformations, il faut utiliser dans un ordre précis les transformations unitaires:
 
-### Sortie 1
+### Transformation 1
 En entrée de la transformation, il possible d'avoir:
 - un fichier xml (`java.io.File`)
 - un `String` répresentant le xml
@@ -41,11 +41,12 @@ JSONCleaner jsonCleaner = new JSONCleaner();
 String jsonQuestionnaire = jsonCleaner.clean(translator.translate(in));
 ```
 
-### Sortie 2
+### Transformation 2
 En entrée de la transformation, il possible d'avoir:
 - un fichier xml (`java.io.File`)
 - un `String` répresentant le xml
 - un type `InputStream` (`java.io.InputStream`)
+
 Le fichier en entrée doit être issue du générateur de questionnaire Eno (ddi2js).
 
 En sortie :  un json au format `String`.
