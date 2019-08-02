@@ -1,9 +1,15 @@
 package fr.insee.lunatic.conversion;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.StringReader;
+import java.io.UnsupportedEncodingException;
+
+import javax.xml.bind.JAXBException;
+import javax.xml.transform.stream.StreamSource;
 
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
@@ -17,6 +23,16 @@ public class XMLLunaticToXMLLunaticFlatTranslator {
 
 	private static final Logger logger = LoggerFactory.getLogger(XMLLunaticToXMLLunaticFlatTranslator.class);
 
+	
+	public String generate(String xmlString) throws Exception {
+
+		if ((xmlString == null) || (xmlString.length() == 0))
+			return null;
+		InputStream xml = new ByteArrayInputStream(xmlString.getBytes());;
+
+		return this.generate(xml);
+	}
+	
 	public String generate(File finalInput) throws Exception {
 
 		InputStream isFinalInput = FileUtils.openInputStream(finalInput);
