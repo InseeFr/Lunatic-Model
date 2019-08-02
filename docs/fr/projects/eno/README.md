@@ -1,6 +1,6 @@
 ## Eno
 
-Lunatic-model est un projet complètement adhérent à Eno dans le sens où la sortie XML de la transformation ddi2js d'Eno doit valider le schéma XSD LunaticModel.xsd.
+Lunatic-Model est un projet complètement adhérent à [Eno](https://github.com/InseeFr/Eno) dans le sens où la sortie XML de la transformation ddi2js d'Eno doit valider le schéma XSD LunaticModel.xsd.
 A une version d'Eno doit correspondre une version de Lunatic-Model.
 
 ### Utilisation avec Eno
