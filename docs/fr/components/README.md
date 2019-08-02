@@ -66,7 +66,22 @@ Il s'agit d'un tableau de déclarations
 - `position` :  "BEFORE_QUESTION_TEXT" ou "AFTER_QUESTION_TEXT"
 - `label` : label de la déclarations 
 
+### Les réponses
+Les composants qui ont pour but de collecter des réponses ont un attribut "response" ayant pour structure :
+```json=
+"response" : 
+  { 
+    "name" : "idVariable",
+    "valueState" : 
+      [ 
+        { "valueType" : "PREVIOUS", "value" : null },
+        { "valueType" : "COLLECTED", "value" : null },
+        { "valueType" : "FORCED", "value" : null },
+        { "valueType" : "EDITED", "value" : null },
+        { "valueType" : "INPUTED", "value" : null },
+      ] 
+  }
+```
 
-
-
+L'attribut `name` faisant référence à l'attribut `responseRef` d'une variable dans le tableau `variables` en fin de questionnaire.
 
