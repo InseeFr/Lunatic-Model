@@ -17,12 +17,16 @@ N'étant pas pour le moment publiée sur les repository maven, veuillez suivre l
 </dependency>
 ```
 
+---
+
 ## Transformations
 Il existe 2 transformations possibles :
 1. XMLLunatic (sortie d'Eno ddi2js) vers JSONLunatic (sortie hiérarchique)
 2. XMLLunatic (sortie d'Eno ddi2js) vers JSONLunaticFlat (sortie à plat)
 
 Pour utiliser ces transformations, il faut utiliser dans un ordre précis les transformations unitaires:
+
+---
 
 ### Transformation 1
 En entrée de la transformation, il possible d'avoir:
@@ -40,6 +44,8 @@ XMLLunaticToJSONLunaticTranslator translator = new XMLLunaticToJSONLunaticTransl
 JSONCleaner jsonCleaner = new JSONCleaner();
 String jsonQuestionnaire = jsonCleaner.clean(translator.translate(in));
 ```
+
+---
 
 ### Transformation 2
 En entrée de la transformation, il possible d'avoir:

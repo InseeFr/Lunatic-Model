@@ -10,19 +10,21 @@ Elles sont de trois types :
 Strucure du tableau `variables` :
 
 ```json
-({
-  "variableType": "EXTERNAL",
-  "name": "LAST_BROADCAST",
-  "label": "label"
-},
-{
-  "variableType": "COLLECTED",
-  "name": "FAVOURITE_CHARACTERS",
-  "responseRef": "FAVOURITE_CHARACTERS"
-},
-{
-  "variableType": "CALCULATED",
-  "name": "SUM_EXPENSES",
-  "value": "$PERCENTAGE_EXPENSES_1 + $PERCENTAGE_EXPENSES_2"
-})
+[
+  {
+    "variableType": "EXTERNAL",
+    "name": "LAST_BROADCAST",
+    "label": "label"
+  },
+  {
+    "variableType": "COLLECTED",
+    "name": "FAVOURITE_CHARACTERS",
+    "responseRef": "FAVOURITE_CHARACTERS"
+  },
+  {
+    "variableType": "CALCULATED",
+    "name": "SUM_EXPENSES",
+    "value": "$PERCENTAGE_EXPENSES_1 + $PERCENTAGE_EXPENSES_2"
+  }
+]
 ```

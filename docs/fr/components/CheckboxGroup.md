@@ -1,7 +1,6 @@
 ### Le composant CheckboxGroup
 
-Il s'agit d'un composant ayant pour but de collecte plusieurs réponses de type booléen par l'intermédiare de plusieurs champ input de type checkbox.
-(case coché ou pas)
+Il s'agit d'un composant ayant pour but de collecter plusieurs réponses de type booléen par l'intermédiare de plusieurs champ input de type checkbox.
 
 Les différentes options sont définies grâce au tableau `responses` qui est un tableau d'objet `response` défini précédemment.
 
