@@ -15,9 +15,9 @@ Sa structure est la suivante :
   "id" : "j3343qhx",
   "componentType" : "InputNumber",
   "mandatory" : false,
-  "min" : "0",
-  "max" : "10",
-  "decimals" : "0",
+  "min" : 0,
+  "max" : 10,
+  "decimals" : 0,
   "unit" : "€"
   "label" : "label de la question",
   "declarations" : [...],

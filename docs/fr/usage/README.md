@@ -2,7 +2,7 @@
 
 ## Installation
 Il s'agit d'un librairie java utilisant Maven.
-N'étant pas pour le moment publier sur les repository maven, veuillez suivre les étapes suivantes:
+N'étant pas pour le moment publiée sur les repository maven, veuillez suivre les étapes suivantes:
 - cloner le dépôt : `git clone https://github.com/InseeFr/Lunatic-Model.git`
 - lancer l'installation : 
 	- se placer dans le dossier Lunatic-Model

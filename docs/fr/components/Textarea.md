@@ -10,7 +10,7 @@ Sa structure est la suivante :
   "id" : "j3343qhx",
   "componentType" : "Textarea",
   "mandatory" : false,
-  "maxLength" : "30",
+  "maxLength" : 250,
   "label" : "label de la question",
   "declarations" : [...],
   "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",

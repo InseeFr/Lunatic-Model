@@ -36,11 +36,11 @@ Tous les composants (excepté Sequence et Subsequence) ont au moins ces attribut
 ```
 
 - `id` : identifiant unique du composant
-- `componentType` : défnie le type du composant
+- `componentType` : définit le type du composant
 - `label` : label de la question associée au composant
 - `declarations` : liste des déclarations éventuelles associées au composant.
 - `conditionFilter` : filtre écrit dans le langage VTL pour savoir s'il faut afficher ou non le questionnaire.
-- `mandatory` : booléen qui défini si la réponse est obligatoire ou non
+- `mandatory` : booléen qui définit si la réponse est obligatoire ou non
 
 ### Les déclarations
 Il s'agit d'un tableau de déclarations 

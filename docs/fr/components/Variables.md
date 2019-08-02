@@ -3,7 +3,7 @@
 Les variables sont toutes externalisées dans un tableau `variables`.
 Elles sont de trois types :
 - `EXTERNAL` : variable externe à valoriser
-- `COLLECTED` : référence à une variable collectée (issue des `reponse` dans les composants)
+- `COLLECTED` : référence à une variable collectée (issue des `response` dans les composants)
 - `CALCULATED` : une formule qui définie la valeur de la variables
 
 Strucure du tableau `variables` : 
