@@ -1,10 +1,10 @@
-### Les composants à options
+## Les composants à options
 
 Il existe 3 composants à options :
 
-- le composant Radio
-- le composant Dropdown
-- le composant CheckboxOne
+- le composant `Radio`
+- le composant `Dropdown`
+- le composant `CheckboxOne`
 
 Les 3 sont identiques en terme de structure JSON, ils sont donc présentés ensemble. Seul diffère le comportement du composant Lunatic.
 Ils peuvent tous les 3 collecter une unique réponse, celle séléctionnée.
@@ -30,21 +30,21 @@ Structure des composants à options:
 }
 ```
 
-#### Le composant Radio
+### Le composant `Radio`
 
-Il correspond à un enchainement de champ html `<input type="radio">`
-
----
-
-#### Le composant Dropdown
-
-Il correspond à un `<select>` en html.
+Il correspond à un enchainement de champ HTML `<input type="radio">`
 
 ---
 
-#### Le composant CheckboxOne
+### Le composant `Dropdown`
 
-Il correspond à un enchainement de champ html `<input type="checkbox">`
+Il correspond à un `<select>` en HTML.
+
+---
+
+### Le composant `CheckboxOne`
+
+Il correspond à un enchainement de champ HTML `<input type="checkbox">`
 
 ---
 

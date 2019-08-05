@@ -5,7 +5,7 @@ Elles sont de trois types :
 
 - `EXTERNAL` : variable externe à valoriser
 - `COLLECTED` : référence à une variable collectée (issue des `response` dans les composants)
-- `CALCULATED` : une formule qui définie la valeur de la variables
+- `CALCULATED` : une formule qui définie la valeur de la variable
 
 Strucure du tableau `variables` :
 

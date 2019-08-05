@@ -1,4 +1,4 @@
-### Le composant Input
+### Le composant `Input`
 
 Il s'agit d'un composant ayant pour but de collecte une réponse de type texte dans un input.
 Il dispose de tous les attributs du composant de base avec un attribut `maxLength` en plus qui définit la longueur maximale du champ input.

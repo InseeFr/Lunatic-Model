@@ -1,4 +1,4 @@
-### Le composant CheckboxGroup
+### Le composant `CheckboxGroup`
 
 Il s'agit d'un composant ayant pour but de collecter plusieurs réponses de type booléen par l'intermédiare de plusieurs champ input de type checkbox.
 
@@ -7,7 +7,7 @@ Les différentes options sont définies grâce au tableau `responses` qui est un
 Sa structure est la suivante :
 
 ```json
-{ 
+{
   "id" : "j3343qhx",
   "componentType" : "CheckboxGroup",
   "mandatory" : false,

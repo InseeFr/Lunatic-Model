@@ -1,9 +1,14 @@
-### Les composants Table
+## Le composant `Table`
 
 Il s'agit du composants le plus complexe de Lunatic.
 Comme tous les composants, il a les attributs communs des composants. Il dispose en plus d'un attribut `positioning` pouvant être égale à "HORIZONTAL" ou "VERTICAL".
-Il y a deux type de composant Table Lunatic, les Table classique qui représente un tableau avec un nombre de cellules fixes, et un tableau dynamique avec un nombre de ligne affiché de façon dynamique.
-Dans le dernier cas, il y a un attribut `lines` qui définit le minimum et le maximum de ligne.
+
+Il y a deux types de composants `Table` Lunatic :
+
+- les `Table` classique qui représente un tableau avec un nombre de cellules fixes
+- les `Table` dynamique qui représente un tableau dynamique avec un nombre de ligne affiché de façon dynamique.
+
+Dans le dernier cas, il y a un attribut `lines` qui définit le minimum et le maximum de lignes.
 
 ```json
 "lines": { "min":1, "max":10 }
@@ -11,6 +16,10 @@ Dans le dernier cas, il y a un attribut `lines` qui définit le minimum et le ma
 
 Le JSON fournit dans ce cas contient toutes les lignes possibles du tableau. C'est au composant Lunatic d'afficher dynamiquement les lignes, en affichant à l'état initial du composant autant de lignes que l'attribut min définit le minimum de ligne.
 Dans tous les cas, le composant Table contient un attribut `cells` qui est une matrice défiisant les cellules du tableau à afficher.
+
+---
+
+### Les `cells`
 
 Une cellule peut être soit:
 
@@ -79,7 +88,7 @@ Dans le dernier cas :
 }
 ```
 
-Résultat en composant Lunatic :
+Résultat en composant Lunatic du `Table` classique :
 
 **label de la question**
 
