@@ -4,7 +4,7 @@ jdk:
 
 install:
   - mvn install -DskipTests
-  - mvn test
+  - mvn test -Djavax.xml.bind.context.factory=org.eclipse.persistence.jaxb.JAXBContextFactory
 
 script:
   - bash scripts/gitbook.sh
