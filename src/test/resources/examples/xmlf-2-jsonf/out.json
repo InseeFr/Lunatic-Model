@@ -16,6 +16,7 @@
       
       { "id" : "j6p3dkx6",
         "componentType" : "Textarea",
+        "mandatory" : false,
         "maxLength" : "500",
         "label" : "➡ 1. Before starting, do you have any comments about the Simpsons family?",
         "conditionFilter" : "normal",
@@ -24,22 +25,23 @@
           "valueState" : 
           [ 
             { "valueType" : "PREVIOUS",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "COLLECTED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "FORCED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "EDITED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "INPUTED",
-              "value" : "" } ] } },
+              "value" : null } ] } },
       
       { "id" : "j6p0np9q",
         "componentType" : "CheckboxBoolean",
+        "mandatory" : false,
         "label" : "➡ 2. Are you ready?",
         "conditionFilter" : "normal",
         "response" : 
@@ -47,19 +49,19 @@
           "valueState" : 
           [ 
             { "valueType" : "PREVIOUS",
-              "value" : false },
+              "value" : null },
             
             { "valueType" : "COLLECTED",
-              "value" : false },
+              "value" : null },
             
             { "valueType" : "FORCED",
-              "value" : false },
+              "value" : null },
             
             { "valueType" : "EDITED",
-              "value" : false },
+              "value" : null },
             
             { "valueType" : "INPUTED",
-              "value" : false } ] } },
+              "value" : null } ] } },
       
       { "id" : "j6p0s7o5",
         "componentType" : "Subsequence",
@@ -68,6 +70,7 @@
       
       { "id" : "j3343qhx",
         "componentType" : "Input",
+        "mandatory" : false,
         "maxLength" : "30",
         "label" : "➡ 3. Who is the producer?",
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
@@ -76,22 +79,23 @@
           "valueState" : 
           [ 
             { "valueType" : "PREVIOUS",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "COLLECTED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "FORCED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "EDITED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "INPUTED",
-              "value" : "" } ] } },
+              "value" : null } ] } },
       
       { "id" : "j6q9h8tj",
         "componentType" : "InputNumber",
+        "mandatory" : false,
         "min" : 0,
         "max" : 99,
         "decimals" : 0,
@@ -102,22 +106,23 @@
           "valueState" : 
           [ 
             { "valueType" : "PREVIOUS",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "COLLECTED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "FORCED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "EDITED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "INPUTED",
-              "value" : "" } ] } },
+              "value" : null } ] } },
       
       { "id" : "j334cyqb",
         "componentType" : "Datepicker",
+        "mandatory" : false,
         "label" : "➡ 5. When was the first episode of the Simpsons?",
         "declarations" : 
         [ 
@@ -131,23 +136,24 @@
           "valueState" : 
           [ 
             { "valueType" : "PREVIOUS",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "COLLECTED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "FORCED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "EDITED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "INPUTED",
-              "value" : "" } ] },
+              "value" : null } ] },
         "dateFormat" : "jj/mm/aaaa" },
       
       { "id" : "j6z06z1e",
         "componentType" : "InputNumber",
+        "mandatory" : false,
         "min" : 0,
         "max" : 99,
         "decimals" : 1,
@@ -158,19 +164,19 @@
           "valueState" : 
           [ 
             { "valueType" : "PREVIOUS",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "COLLECTED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "FORCED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "EDITED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "INPUTED",
-              "value" : "" } ] } },
+              "value" : null } ] } },
       
       { "id" : "j3341528",
         "componentType" : "Sequence",
@@ -185,6 +191,7 @@
       
       { "id" : "j3343clt",
         "componentType" : "Radio",
+        "mandatory" : false,
         "label" : "➡ 1. In which city do the Simpsons reside?",
         "declarations" : 
         [ 
@@ -198,19 +205,19 @@
           "valueState" : 
           [ 
             { "valueType" : "PREVIOUS",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "COLLECTED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "FORCED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "EDITED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "INPUTED",
-              "value" : "" } ] },
+              "value" : null } ] },
         "options" : 
         [ 
           { "value" : "00001",
@@ -224,6 +231,7 @@
       
       { "id" : "j6qdfhvw",
         "componentType" : "CheckboxOne",
+        "mandatory" : false,
         "label" : "➡ 2. Who is the Simpsons city mayor?",
         "declarations" : 
         [ 
@@ -237,19 +245,19 @@
           "valueState" : 
           [ 
             { "valueType" : "PREVIOUS",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "COLLECTED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "FORCED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "EDITED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "INPUTED",
-              "value" : "" } ] },
+              "value" : null } ] },
         "options" : 
         [ 
           { "value" : "1",
@@ -266,6 +274,7 @@
       
       { "id" : "j4nw5cqz",
         "componentType" : "Dropdown",
+        "mandatory" : false,
         "label" : "➡ 3. In which state do The Simpsons reside?",
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
         "response" : 
@@ -273,19 +282,19 @@
           "valueState" : 
           [ 
             { "valueType" : "PREVIOUS",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "COLLECTED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "FORCED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "EDITED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "INPUTED",
-              "value" : "" } ] },
+              "value" : null } ] },
         "options" : 
         [ 
           { "value" : "1",
@@ -333,7 +342,7 @@
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end" },
       
       { "id" : "j334akov",
-        "componentType" : "Checkbox",
+        "componentType" : "CheckboxGroup",
         "label" : "➡ 1. What are the pet names that the Simpsons family had?",
         "declarations" : 
         [ 
@@ -342,7 +351,7 @@
             "position" : "AFTER_QUESTION_TEXT",
             "label" : "Several possible answers" } ],
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
-        "options" : 
+        "responses" : 
         [ 
           { "id" : "j334akov-QOP-jbgd8qmn",
             "label" : "Santa's Little Helper",
@@ -351,19 +360,19 @@
               "valueState" : 
               [ 
                 { "valueType" : "PREVIOUS",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "COLLECTED",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "FORCED",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "EDITED",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "INPUTED",
-                  "value" : false } ] } },
+                  "value" : null } ] } },
           
           { "id" : "j334akov-QOP-jbgd60vl",
             "label" : "Snowball I",
@@ -372,19 +381,19 @@
               "valueState" : 
               [ 
                 { "valueType" : "PREVIOUS",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "COLLECTED",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "FORCED",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "EDITED",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "INPUTED",
-                  "value" : false } ] } },
+                  "value" : null } ] } },
           
           { "id" : "j334akov-QOP-jbgda2jo",
             "label" : "Coltrane",
@@ -393,19 +402,19 @@
               "valueState" : 
               [ 
                 { "valueType" : "PREVIOUS",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "COLLECTED",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "FORCED",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "EDITED",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "INPUTED",
-                  "value" : false } ] } },
+                  "value" : null } ] } },
           
           { "id" : "j334akov-QOP-jbgdfssy",
             "label" : "Mojo the Helper Monkey",
@@ -414,24 +423,31 @@
               "valueState" : 
               [ 
                 { "valueType" : "PREVIOUS",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "COLLECTED",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "FORCED",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "EDITED",
-                  "value" : false },
+                  "value" : null },
                 
                 { "valueType" : "INPUTED",
-                  "value" : false } ] } } ] },
+                  "value" : null } ] } } ] },
       
       { "id" : "j6p29i81",
         "componentType" : "Table",
+        "mandatory" : false,
         "positioning" : "HORIZONTAL",
         "label" : "➡ 2. Does Jay like the following ice cream flavours?",
+        "declarations" : 
+        [ 
+          { "id" : "d12-SI",
+            "declarationType" : "STATEMENT",
+            "position" : "BEFORE_QUESTION_TEXT",
+            "label" : "Now we are going to know if you think that Jay is a gluton." } ],
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
         "cells" : 
         [ 
@@ -440,24 +456,25 @@
               "value" : "1" },
             
             { "componentType" : "Radio",
+              "id" : "j6p29i81-QOP-jbgdb3jx",
               "response" : 
               { "name" : "ICE_FLAVOUR1",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -471,24 +488,25 @@
               "value" : "2" },
             
             { "componentType" : "Radio",
+              "id" : "j6p29i81-QOP-jbgdb61k",
               "response" : 
               { "name" : "ICE_FLAVOUR2",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -502,24 +520,25 @@
               "value" : "3" },
             
             { "componentType" : "Radio",
+              "id" : "j6p29i81-QOP-jbgdl3kc",
               "response" : 
               { "name" : "ICE_FLAVOUR3",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -533,24 +552,25 @@
               "value" : "4" },
             
             { "componentType" : "Radio",
+              "id" : "j6p29i81-QOP-jbgdcobo",
               "response" : 
               { "name" : "ICE_FLAVOUR4",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -561,6 +581,7 @@
       
       { "id" : "j6qefnga",
         "componentType" : "Table",
+        "mandatory" : false,
         "positioning" : "HORIZONTAL",
         "label" : "➡ 3. Which character works in the nuclear power plant?",
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
@@ -571,24 +592,25 @@
               "value" : "1" },
             
             { "componentType" : "Dropdown",
+              "id" : "j6qefnga-QOP-jbgd6p0k",
               "response" : 
               { "name" : "NUCLEAR_CHARACTER1",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -602,24 +624,25 @@
               "value" : "2" },
             
             { "componentType" : "Dropdown",
+              "id" : "j6qefnga-QOP-jbgd9ato",
               "response" : 
               { "name" : "NUCLEAR_CHARACTER2",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -633,24 +656,25 @@
               "value" : "3" },
             
             { "componentType" : "Dropdown",
+              "id" : "j6qefnga-QOP-jbgd3e0p",
               "response" : 
               { "name" : "NUCLEAR_CHARACTER3",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -664,24 +688,25 @@
               "value" : "4" },
             
             { "componentType" : "Dropdown",
+              "id" : "j6qefnga-QOP-jbgdkxne",
               "response" : 
               { "name" : "NUCLEAR_CHARACTER4",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -692,6 +717,7 @@
       
       { "id" : "j6yzoc6g",
         "componentType" : "Table",
+        "mandatory" : false,
         "positioning" : "HORIZONTAL",
         "label" : "➡ 4. In which city each character was born?",
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
@@ -702,24 +728,25 @@
               "value" : "1" },
             
             { "componentType" : "CheckboxOne",
+              "id" : "j6yzoc6g-QOP-jbgd7fr6",
               "response" : 
               { "name" : "BIRTH_CHARACTER1",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -742,24 +769,25 @@
               "value" : "2" },
             
             { "componentType" : "CheckboxOne",
+              "id" : "j6yzoc6g-QOP-jbgd5e9f",
               "response" : 
               { "name" : "BIRTH_CHARACTER2",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -782,24 +810,25 @@
               "value" : "3" },
             
             { "componentType" : "CheckboxOne",
+              "id" : "j6yzoc6g-QOP-jbgd912x",
               "response" : 
               { "name" : "BIRTH_CHARACTER3",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -822,24 +851,25 @@
               "value" : "4" },
             
             { "componentType" : "CheckboxOne",
+              "id" : "j6yzoc6g-QOP-jbgd6bdy",
               "response" : 
               { "name" : "BIRTH_CHARACTER4",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -862,24 +892,25 @@
               "value" : "5" },
             
             { "componentType" : "CheckboxOne",
+              "id" : "j6yzoc6g-QOP-jbgddyry",
               "response" : 
               { "name" : "BIRTH_CHARACTER5",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -909,6 +940,7 @@
       
       { "id" : "j4nwc63q",
         "componentType" : "Table",
+        "mandatory" : false,
         "positioning" : "HORIZONTAL",
         "label" : "➡ 1. Please, specify the percentage of Jay's expenses in the Kwik-E-Mart for each product?",
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
@@ -934,25 +966,26 @@
               "min" : 0,
               "max" : 100,
               "decimals" : 1,
+              "id" : "j4nwc63q-QOP-jbgde5yl",
               "unit" : "%",
               "response" : 
               { "name" : "PERCENTAGE_EXPENSES11",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "label" : "Jasper Beardly",
@@ -962,25 +995,26 @@
               "min" : 0,
               "max" : 100,
               "decimals" : 1,
+              "id" : "j4nwc63q-QOP-jbgd2x2t",
               "unit" : "%",
               "response" : 
               { "name" : "PERCENTAGE_EXPENSES21",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "rowspan" : 3,
@@ -994,25 +1028,26 @@
               "min" : 0,
               "max" : 100,
               "decimals" : 1,
+              "id" : "j4nwc63q-QOP-jbgdjypz",
               "unit" : "%",
               "response" : 
               { "name" : "PERCENTAGE_EXPENSES31",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "label" : "Pork chop",
@@ -1022,25 +1057,26 @@
               "min" : 0,
               "max" : 100,
               "decimals" : 1,
+              "id" : "j4nwc63q-QOP-jbgdcftu",
               "unit" : "%",
               "response" : 
               { "name" : "PERCENTAGE_EXPENSES41",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "label" : "Chicken",
@@ -1050,25 +1086,26 @@
               "min" : 0,
               "max" : 100,
               "decimals" : 1,
+              "id" : "j4nwc63q-QOP-jbgdiyfe",
               "unit" : "%",
               "response" : 
               { "name" : "PERCENTAGE_EXPENSES51",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "label" : "Compote",
@@ -1081,25 +1118,26 @@
               "min" : 0,
               "max" : 100,
               "decimals" : 1,
+              "id" : "j4nwc63q-QOP-jbgdj1wd",
               "unit" : "%",
               "response" : 
               { "name" : "PERCENTAGE_EXPENSES61",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "colspan" : 2,
@@ -1110,25 +1148,26 @@
               "min" : 0,
               "max" : 100,
               "decimals" : 1,
+              "id" : "j4nwc63q-QOP-jbgddylk",
               "unit" : "%",
               "response" : 
               { "name" : "PERCENTAGE_EXPENSES71",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ] ] },
+                    "value" : null } ] } } ] ] },
       
       { "id" : "j6qejudb",
         "componentType" : "Subsequence",
@@ -1137,6 +1176,7 @@
       
       { "id" : "j4nw0rr6",
         "componentType" : "Table",
+        "mandatory" : false,
         "positioning" : "HORIZONTAL",
         "label" : "➡ 2. Who did these clownings and tell us what you remember?",
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
@@ -1157,24 +1197,25 @@
               "value" : "1" },
             
             { "componentType" : "Dropdown",
+              "id" : "j4nw0rr6-QOP-jbgd8tyr",
               "response" : 
               { "name" : "CLOWNING11",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -1191,48 +1232,50 @@
             
             { "componentType" : "Textarea",
               "maxLength" : "255",
+              "id" : "j4nw0rr6-QOP-jbgdit3o",
               "response" : 
               { "name" : "CLOWNING12",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "label" : "Loose the violin of his daughter playing poker",
               "value" : "2" },
             
             { "componentType" : "Dropdown",
+              "id" : "j4nw0rr6-QOP-jbgdep36",
               "response" : 
               { "name" : "CLOWNING21",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -1249,48 +1292,50 @@
             
             { "componentType" : "Textarea",
               "maxLength" : "255",
+              "id" : "j4nw0rr6-QOP-jbgd366k",
               "response" : 
               { "name" : "CLOWNING22",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "label" : "Kill Mr Burns",
               "value" : "3" },
             
             { "componentType" : "Dropdown",
+              "id" : "j4nw0rr6-QOP-jbgdjjgi",
               "response" : 
               { "name" : "CLOWNING31",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -1307,48 +1352,50 @@
             
             { "componentType" : "Textarea",
               "maxLength" : "255",
+              "id" : "j4nw0rr6-QOP-jbgdax06",
               "response" : 
               { "name" : "CLOWNING32",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "label" : "Leaving a mechanical object to control the nuclear power plant",
               "value" : "4" },
             
             { "componentType" : "Dropdown",
+              "id" : "j4nw0rr6-QOP-jbgdgh6k",
               "response" : 
               { "name" : "CLOWNING41",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] },
+                    "value" : null } ] },
               "options" : 
               [ 
                 { "value" : "1",
@@ -1365,24 +1412,25 @@
             
             { "componentType" : "Textarea",
               "maxLength" : "255",
+              "id" : "j4nw0rr6-QOP-jbgdfo1j",
               "response" : 
               { "name" : "CLOWNING42",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ] ] },
+                    "value" : null } ] } } ] ] },
       
       { "id" : "j6qeh91y",
         "componentType" : "Subsequence",
@@ -1391,6 +1439,7 @@
       
       { "id" : "j6p2lwuj",
         "componentType" : "Table",
+        "mandatory" : false,
         "positioning" : "HORIZONTAL",
         "label" : "➡ 3. Which of the following means of transport were used by the hero and in which country?",
         "declarations" : 
@@ -1429,496 +1478,520 @@
               "value" : "1" },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgd92mb",
               "response" : 
               { "name" : "TRAVEL11",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgdnxkt",
               "response" : 
               { "name" : "TRAVEL12",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgdcppc",
               "response" : 
               { "name" : "TRAVEL13",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgd4r2a",
               "response" : 
               { "name" : "TRAVEL14",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgd9cff",
               "response" : 
               { "name" : "TRAVEL15",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgdiva0",
               "response" : 
               { "name" : "TRAVEL16",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "label" : "Bike",
               "value" : "2" },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgdgsat",
               "response" : 
               { "name" : "TRAVEL21",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgd3ef5",
               "response" : 
               { "name" : "TRAVEL22",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgd4cm6",
               "response" : 
               { "name" : "TRAVEL23",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgdkfpq",
               "response" : 
               { "name" : "TRAVEL24",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgddwsp",
               "response" : 
               { "name" : "TRAVEL25",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgd7dqf",
               "response" : 
               { "name" : "TRAVEL26",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "label" : "Skateboard",
               "value" : "3" },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgdaxk2",
               "response" : 
               { "name" : "TRAVEL31",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgd8p1v",
               "response" : 
               { "name" : "TRAVEL32",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgdd2lo",
               "response" : 
               { "name" : "TRAVEL33",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgd7u52",
               "response" : 
               { "name" : "TRAVEL34",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgdncn8",
               "response" : 
               { "name" : "TRAVEL35",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgdnous",
               "response" : 
               { "name" : "TRAVEL36",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "label" : "Plane",
               "value" : "4" },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgd7myn",
               "response" : 
               { "name" : "TRAVEL41",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgdgm0c",
               "response" : 
               { "name" : "TRAVEL42",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgdo0ay",
               "response" : 
               { "name" : "TRAVEL43",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgdgfwl",
               "response" : 
               { "name" : "TRAVEL44",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgdnz6b",
               "response" : 
               { "name" : "TRAVEL45",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "CheckboxBoolean",
+              "id" : "j6p2lwuj-QOP-jbgdkfcz",
               "response" : 
               { "name" : "TRAVEL46",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : false },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : false } ] } } ] ] },
+                    "value" : null } ] } } ] ] },
       
       { "id" : "j6qfx9qe",
         "componentType" : "Sequence",
@@ -1927,6 +2000,7 @@
       
       { "id" : "j6qg8rc6",
         "componentType" : "Table",
+        "mandatory" : false,
         "positioning" : "HORIZONTAL",
         "label" : "➡ 1. Please, complete the following grid with your favourite characters",
         "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
@@ -1942,452 +2016,472 @@
           [ 
             { "componentType" : "Textarea",
               "maxLength" : "255",
+              "id" : "j6qg8rc6-QOP-jbgdl5jb",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS11",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
               "max" : 120,
               "decimals" : 0,
+              "id" : "j6qg8rc6-QOP-jbgdfndq",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS12",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : "255",
+              "id" : "j6qg8rc6-QOP-jbgd8lwo",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS21",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
               "max" : 120,
               "decimals" : 0,
+              "id" : "j6qg8rc6-QOP-jbgd7osi",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS22",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : "255",
+              "id" : "j6qg8rc6-QOP-jbgdbfag",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS31",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
               "max" : 120,
               "decimals" : 0,
+              "id" : "j6qg8rc6-QOP-jbgd7bnw",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS32",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : "255",
+              "id" : "j6qg8rc6-QOP-jbgdlgja",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS41",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
               "max" : 120,
               "decimals" : 0,
+              "id" : "j6qg8rc6-QOP-jbgd9k71",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS42",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : "255",
+              "id" : "j6qg8rc6-QOP-jbgd745y",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS51",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
               "max" : 120,
               "decimals" : 0,
+              "id" : "j6qg8rc6-QOP-jbgdimks",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS52",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : "255",
+              "id" : "j6qg8rc6-QOP-jbgdjkts",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS61",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
               "max" : 120,
               "decimals" : 0,
+              "id" : "j6qg8rc6-QOP-jbgdjquz",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS62",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : "255",
+              "id" : "j6qg8rc6-QOP-jbgdcax7",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS71",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
               "max" : 120,
               "decimals" : 0,
+              "id" : "j6qg8rc6-QOP-jbgdd2w3",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS72",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : "255",
+              "id" : "j6qg8rc6-QOP-jbgdjye1",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS81",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
               "max" : 120,
               "decimals" : 0,
+              "id" : "j6qg8rc6-QOP-jbgdkosc",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS82",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : "255",
+              "id" : "j6qg8rc6-QOP-jbgd5jet",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS91",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
               "max" : 120,
               "decimals" : 0,
+              "id" : "j6qg8rc6-QOP-jbgdk0x4",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS92",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ],
+                    "value" : null } ] } } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : "255",
+              "id" : "j6qg8rc6-QOP-jbgdjw90",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS101",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } },
+                    "value" : null } ] } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
               "max" : 120,
               "decimals" : 0,
+              "id" : "j6qg8rc6-QOP-jbgd2wgf",
               "response" : 
               { "name" : "FAVOURITE_CHARACTERS102",
                 "valueState" : 
                 [ 
                   { "valueType" : "PREVIOUS",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "COLLECTED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "FORCED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "EDITED",
-                    "value" : "" },
+                    "value" : null },
                   
                   { "valueType" : "INPUTED",
-                    "value" : "" } ] } } ] ],
+                    "value" : null } ] } } ] ],
         "lines" : 
         { "min" : 1,
           "max" : 10 } },
@@ -2399,6 +2493,7 @@
       
       { "id" : "j6z0z3us",
         "componentType" : "Textarea",
+        "mandatory" : false,
         "maxLength" : "255",
         "label" : "➡ 1. Do you have any comment about the survey?",
         "conditionFilter" : "normal",
@@ -2407,19 +2502,19 @@
           "valueState" : 
           [ 
             { "valueType" : "PREVIOUS",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "COLLECTED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "FORCED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "EDITED",
-              "value" : "" },
+              "value" : null },
             
             { "valueType" : "INPUTED",
-              "value" : "" } ] } } ],
+              "value" : null } ] } } ],
     "variables" : 
     [ 
       { "variableType" : "EXTERNAL",

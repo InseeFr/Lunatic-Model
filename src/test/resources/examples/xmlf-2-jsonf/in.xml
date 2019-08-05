@@ -15,47 +15,49 @@
    <components xsi:type="Textarea"
                componentType="Textarea"
                id="j6p3dkx6"
-               maxLength="500">
+               maxLength="500"
+               mandatory="false">
          <label>➡ 1. Before starting, do you have any comments about the Simpsons family?</label>
          <response name="COMMENT" xsi:type="ResponseContainerString">
          <valueState valueType="PREVIOUS">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="COLLECTED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="FORCED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="EDITED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="INPUTED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
       </response>
          <conditionFilter>normal</conditionFilter>
       </components>
    <components xsi:type="CheckboxBoolean"
                componentType="CheckboxBoolean"
-               id="j6p0np9q">
+               id="j6p0np9q"
+               mandatory="false">
          <label>➡ 2. Are you ready?</label>
          <response name="READY" xsi:type="ResponseContainerBoolean">
          <valueState valueType="PREVIOUS">
-               <value>false</value>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="COLLECTED">
-               <value>false</value>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="FORCED">
-               <value>false</value>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="EDITED">
-               <value>false</value>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="INPUTED">
-               <value>false</value>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
       </response>
          <conditionFilter>normal</conditionFilter>
       </components>
@@ -66,54 +68,59 @@
    <components xsi:type="Input"
                componentType="Input"
                id="j3343qhx"
-               maxLength="30">
+               maxLength="30"
+               mandatory="false">
             <label>➡ 3. Who is the producer?</label>
             <response name="PRODUCER" xsi:type="ResponseContainerString">
          <valueState valueType="PREVIOUS">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="COLLECTED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="FORCED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="EDITED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="INPUTED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
       </response>
             <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
          </components>
    <components xsi:type="InputNumber"
                componentType="InputNumber"
                id="j6q9h8tj"
+               mandatory="false"
                min="0"
                max="99"
                decimals="0">
             <label>➡ 4. What is the current season number?</label>
             <response name="SEASON_NUMBER" xsi:type="ResponseContainerString">
          <valueState valueType="PREVIOUS">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="COLLECTED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="FORCED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="EDITED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="INPUTED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
       </response>
             <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
          </components>
-   <components xsi:type="Datepicker" componentType="Datepicker" id="j334cyqb">
+   <components xsi:type="Datepicker"
+               componentType="Datepicker"
+               id="j334cyqb"
+               mandatory="false">
             <label>➡ 5. When was the first episode of the Simpsons?</label>
             <declarations declarationType="COMMENT"
                     id="j334cyqb-d11"
@@ -122,20 +129,20 @@
       </declarations>
             <response name="DATEFIRST" xsi:type="ResponseContainerString">
          <valueState valueType="PREVIOUS">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="COLLECTED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="FORCED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="EDITED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="INPUTED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
       </response>
             <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
             <dateFormat>jj/mm/aaaa</dateFormat>
@@ -143,26 +150,27 @@
    <components xsi:type="InputNumber"
                componentType="InputNumber"
                id="j6z06z1e"
+               mandatory="false"
                min="0.0"
                max="99.0"
                decimals="1">
             <label>➡ 6. In your opinion, how much is the part of audience share in US for the 2016 season?</label>
             <response name="AUDIENCE_SHARE" xsi:type="ResponseContainerString">
          <valueState valueType="PREVIOUS">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="COLLECTED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="FORCED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="EDITED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          <valueState valueType="INPUTED">
-                  <value/>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
       </response>
             <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
          </components>
@@ -175,7 +183,10 @@
       </declarations>
       <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
    </components>
-   <components xsi:type="Radio" componentType="Radio" id="j3343clt">
+   <components xsi:type="Radio"
+               componentType="Radio"
+               id="j3343clt"
+               mandatory="false">
          <label>➡ 1. In which city do the Simpsons reside?</label>
          <declarations declarationType="INSTRUCTION"
                     id="j3343clt-d3"
@@ -196,24 +207,27 @@
             </options>
          <response name="CITY" xsi:type="ResponseContainerString">
          <valueState valueType="PREVIOUS">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="COLLECTED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="FORCED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="EDITED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="INPUTED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
       </response>
          <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
       </components>
-   <components xsi:type="CheckboxOne" componentType="CheckboxOne" id="j6qdfhvw">
+   <components xsi:type="CheckboxOne"
+               componentType="CheckboxOne"
+               id="j6qdfhvw"
+               mandatory="false">
          <label>➡ 2. Who is the Simpsons city mayor?</label>
          <declarations declarationType="INSTRUCTION"
                     id="j6qdfhvw-d4"
@@ -238,24 +252,27 @@
             </options>
          <response name="MAYOR" xsi:type="ResponseContainerString">
          <valueState valueType="PREVIOUS">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="COLLECTED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="FORCED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="EDITED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="INPUTED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
       </response>
          <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
       </components>
-   <components xsi:type="Dropdown" componentType="Dropdown" id="j4nw5cqz">
+   <components xsi:type="Dropdown"
+               componentType="Dropdown"
+               id="j4nw5cqz"
+               mandatory="false">
          <label>➡ 3. In which state do The Simpsons reside?</label>
          <options>
                <value>1</value>
@@ -311,20 +328,20 @@
             </options>
          <response name="STATE" xsi:type="ResponseContainerString">
          <valueState valueType="PREVIOUS">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="COLLECTED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="FORCED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="EDITED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="INPUTED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
       </response>
          <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
       </components>
@@ -332,7 +349,9 @@
       <label>III - Characters</label>
       <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
    </components>
-   <components xsi:type="Checkbox" componentType="Checkbox" id="j334akov">
+   <components xsi:type="CheckboxGroup"
+               componentType="CheckboxGroup"
+               id="j334akov">
          <label>➡ 1. What are the pet names that the Simpsons family had?</label>
          <declarations declarationType="INSTRUCTION"
                     id="j334akov-d5"
@@ -340,99 +359,105 @@
          <label>Several possible answers</label>
       </declarations>
          <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
-         <options id="j334akov-QOP-jbgd8qmn">
+         <responses id="j334akov-QOP-jbgd8qmn">
                <label>Santa's Little Helper</label>
                <response name="PET1" xsi:type="ResponseContainerBoolean">
             <valueState valueType="PREVIOUS">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="COLLECTED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="FORCED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="EDITED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="INPUTED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          </response>
-            </options>
-         <options id="j334akov-QOP-jbgd60vl">
+            </responses>
+         <responses id="j334akov-QOP-jbgd60vl">
                <label>Snowball I</label>
                <response name="PET2" xsi:type="ResponseContainerBoolean">
             <valueState valueType="PREVIOUS">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="COLLECTED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="FORCED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="EDITED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="INPUTED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          </response>
-            </options>
-         <options id="j334akov-QOP-jbgda2jo">
+            </responses>
+         <responses id="j334akov-QOP-jbgda2jo">
                <label>Coltrane</label>
                <response name="PET3" xsi:type="ResponseContainerBoolean">
             <valueState valueType="PREVIOUS">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="COLLECTED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="FORCED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="EDITED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="INPUTED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          </response>
-            </options>
-         <options id="j334akov-QOP-jbgdfssy">
+            </responses>
+         <responses id="j334akov-QOP-jbgdfssy">
                <label>Mojo the Helper Monkey</label>
                <response name="PET4" xsi:type="ResponseContainerBoolean">
             <valueState valueType="PREVIOUS">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="COLLECTED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="FORCED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="EDITED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
             <valueState valueType="INPUTED">
-                  <value>false</value>
-               </valueState>
+                     <value xsi:nil="true"/>
+                  </valueState>
          </response>
-            </options>
+            </responses>
       </components>
    <components xsi:type="Table"
                componentType="Table"
                id="j6p29i81"
-               positioning="HORIZONTAL">
+               positioning="HORIZONTAL"
+               mandatory="false">
          <label>➡ 2. Does Jay like the following ice cream flavours?</label>
+         <declarations declarationType="STATEMENT"
+                    id="d12-SI"
+                    position="BEFORE_QUESTION_TEXT">
+         <label>Now we are going to know if you think that Jay is a gluton.</label>
+      </declarations>
          <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
          <cells type="line">
-            <cells id="j6p29i81-j6p2mvca--1">
+            <cells>
                <value>1</value>
                <label>Vanilla</label>
             </cells>
-            <cells id="1" componentType="Radio">
+            <cells id="j6p29i81-QOP-jbgdb3jx" componentType="Radio">
                <options>
                      <value>1</value>
                      <label>Yes</label>
@@ -443,29 +468,29 @@
                   </options>
                <response name="ICE_FLAVOUR1" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells id="j6p29i81-j6p2mvca-0">
+            <cells>
                <value>2</value>
                <label>Strawberry</label>
             </cells>
-            <cells id="2" componentType="Radio">
+            <cells id="j6p29i81-QOP-jbgdb61k" componentType="Radio">
                <options>
                      <value>1</value>
                      <label>Yes</label>
@@ -476,29 +501,29 @@
                   </options>
                <response name="ICE_FLAVOUR2" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells id="j6p29i81-j6p2mvca-1">
+            <cells>
                <value>3</value>
                <label>Apple</label>
             </cells>
-            <cells id="3" componentType="Radio">
+            <cells id="j6p29i81-QOP-jbgdl3kc" componentType="Radio">
                <options>
                      <value>1</value>
                      <label>Yes</label>
@@ -509,29 +534,29 @@
                   </options>
                <response name="ICE_FLAVOUR3" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells id="j6p29i81-j6p2mvca-2">
+            <cells>
                <value>4</value>
                <label>Bacon</label>
             </cells>
-            <cells id="4" componentType="Radio">
+            <cells id="j6p29i81-QOP-jbgdcobo" componentType="Radio">
                <options>
                      <value>1</value>
                      <label>Yes</label>
@@ -542,20 +567,20 @@
                   </options>
                <response name="ICE_FLAVOUR4" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
@@ -563,15 +588,16 @@
    <components xsi:type="Table"
                componentType="Table"
                id="j6qefnga"
-               positioning="HORIZONTAL">
+               positioning="HORIZONTAL"
+               mandatory="false">
          <label>➡ 3. Which character works in the nuclear power plant?</label>
          <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
          <cells type="line">
-            <cells id="j6qefnga-j6qeytgc--1">
+            <cells>
                <value>1</value>
                <label>Charles Montgomery Burns</label>
             </cells>
-            <cells id="1" componentType="Dropdown">
+            <cells id="j6qefnga-QOP-jbgd6p0k" componentType="Dropdown">
                <options>
                      <value>1</value>
                      <label>Yes</label>
@@ -582,29 +608,29 @@
                   </options>
                <response name="NUCLEAR_CHARACTER1" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells id="j6qefnga-j6qeytgc-0">
+            <cells>
                <value>2</value>
                <label>Carl Carlson</label>
             </cells>
-            <cells id="2" componentType="Dropdown">
+            <cells id="j6qefnga-QOP-jbgd9ato" componentType="Dropdown">
                <options>
                      <value>1</value>
                      <label>Yes</label>
@@ -615,29 +641,29 @@
                   </options>
                <response name="NUCLEAR_CHARACTER2" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells id="j6qefnga-j6qeytgc-1">
+            <cells>
                <value>3</value>
                <label>Otto Mann</label>
             </cells>
-            <cells id="3" componentType="Dropdown">
+            <cells id="j6qefnga-QOP-jbgd3e0p" componentType="Dropdown">
                <options>
                      <value>1</value>
                      <label>Yes</label>
@@ -648,29 +674,29 @@
                   </options>
                <response name="NUCLEAR_CHARACTER3" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells id="j6qefnga-j6qeytgc-2">
+            <cells>
                <value>4</value>
                <label>Carl Carlson</label>
             </cells>
-            <cells id="4" componentType="Dropdown">
+            <cells id="j6qefnga-QOP-jbgdkxne" componentType="Dropdown">
                <options>
                      <value>1</value>
                      <label>Yes</label>
@@ -681,20 +707,20 @@
                   </options>
                <response name="NUCLEAR_CHARACTER4" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
@@ -702,15 +728,16 @@
    <components xsi:type="Table"
                componentType="Table"
                id="j6yzoc6g"
-               positioning="HORIZONTAL">
+               positioning="HORIZONTAL"
+               mandatory="false">
          <label>➡ 4. In which city each character was born?</label>
          <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
          <cells type="line">
-            <cells id="j6yzoc6g-j6z087mq--1">
+            <cells>
                <value>1</value>
                <label>Selma Bouvier</label>
             </cells>
-            <cells id="1" componentType="CheckboxOne">
+            <cells id="j6yzoc6g-QOP-jbgd7fr6" componentType="CheckboxOne">
                <options>
                      <value>1</value>
                      <label>Albuquerque</label>
@@ -733,29 +760,29 @@
                   </options>
                <response name="BIRTH_CHARACTER1" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells id="j6yzoc6g-j6z087mq-0">
+            <cells>
                <value>2</value>
                <label>Kent Brockman</label>
             </cells>
-            <cells id="2" componentType="CheckboxOne">
+            <cells id="j6yzoc6g-QOP-jbgd5e9f" componentType="CheckboxOne">
                <options>
                      <value>1</value>
                      <label>Albuquerque</label>
@@ -778,29 +805,29 @@
                   </options>
                <response name="BIRTH_CHARACTER2" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells id="j6yzoc6g-j6z087mq-1">
+            <cells>
                <value>3</value>
                <label>Milhouse Van Houten</label>
             </cells>
-            <cells id="3" componentType="CheckboxOne">
+            <cells id="j6yzoc6g-QOP-jbgd912x" componentType="CheckboxOne">
                <options>
                      <value>1</value>
                      <label>Albuquerque</label>
@@ -823,29 +850,29 @@
                   </options>
                <response name="BIRTH_CHARACTER3" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells id="j6yzoc6g-j6z087mq-2">
+            <cells>
                <value>4</value>
                <label>Nelson Muntz</label>
             </cells>
-            <cells id="4" componentType="CheckboxOne">
+            <cells id="j6yzoc6g-QOP-jbgd6bdy" componentType="CheckboxOne">
                <options>
                      <value>1</value>
                      <label>Albuquerque</label>
@@ -868,29 +895,29 @@
                   </options>
                <response name="BIRTH_CHARACTER4" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells id="j6yzoc6g-j6z087mq-3">
+            <cells>
                <value>5</value>
                <label>Crazy Cat Lady</label>
             </cells>
-            <cells id="5" componentType="CheckboxOne">
+            <cells id="j6yzoc6g-QOP-jbgddyry" componentType="CheckboxOne">
                <options>
                      <value>1</value>
                      <label>Albuquerque</label>
@@ -913,20 +940,20 @@
                   </options>
                <response name="BIRTH_CHARACTER5" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
@@ -942,7 +969,8 @@
    <components xsi:type="Table"
                componentType="Table"
                id="j4nwc63q"
-               positioning="HORIZONTAL">
+               positioning="HORIZONTAL"
+               mandatory="false">
             <label>➡ 1. Please, specify the percentage of Jay's expenses in the Kwik-E-Mart for each product?</label>
             <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
             <cells type="header">
@@ -954,224 +982,224 @@
                </cells>
             </cells>
             <cells type="line">
-               <cells id="j4nwc63q-j4nwh16i--1" rowspan="2">
+               <cells rowspan="2">
                   <value>A</value>
                   <label>Frozen products</label>
                </cells>
-               <cells id="j4nwc63q-j4nwh16i-0">
+               <cells>
                   <value>A1</value>
                   <label>Ice creams</label>
                </cells>
                <cells componentType="InputNumber"
-                id="1"
+                id="j4nwc63q-QOP-jbgde5yl"
                 min="0.0"
                 max="100.0"
                 decimals="1">
                   <unit>%</unit>
                   <response name="PERCENTAGE_EXPENSES11" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
             </cells>
             <cells type="line">
-               <cells id="j4nwc63q-j4nwh16i-1">
+               <cells>
                   <value>A2</value>
                   <label>Jasper Beardly</label>
                </cells>
                <cells componentType="InputNumber"
-                id="2"
+                id="j4nwc63q-QOP-jbgd2x2t"
                 min="0.0"
                 max="100.0"
                 decimals="1">
                   <unit>%</unit>
                   <response name="PERCENTAGE_EXPENSES21" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
             </cells>
             <cells type="line">
-               <cells id="j4nwc63q-j4nwh16i-2" rowspan="3">
+               <cells rowspan="3">
                   <value>B</value>
                   <label>Meat</label>
                </cells>
-               <cells id="j4nwc63q-j4nwh16i-3">
+               <cells>
                   <value>B1</value>
                   <label>Bacon</label>
                </cells>
                <cells componentType="InputNumber"
-                id="3"
+                id="j4nwc63q-QOP-jbgdjypz"
                 min="0.0"
                 max="100.0"
                 decimals="1">
                   <unit>%</unit>
                   <response name="PERCENTAGE_EXPENSES31" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
             </cells>
             <cells type="line">
-               <cells id="j4nwc63q-j4nwh16i-4">
+               <cells>
                   <value>B2</value>
                   <label>Pork chop</label>
                </cells>
                <cells componentType="InputNumber"
-                id="4"
+                id="j4nwc63q-QOP-jbgdcftu"
                 min="0.0"
                 max="100.0"
                 decimals="1">
                   <unit>%</unit>
                   <response name="PERCENTAGE_EXPENSES41" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
             </cells>
             <cells type="line">
-               <cells id="j4nwc63q-j4nwh16i-5">
+               <cells>
                   <value>B3</value>
                   <label>Chicken</label>
                </cells>
                <cells componentType="InputNumber"
-                id="5"
+                id="j4nwc63q-QOP-jbgdiyfe"
                 min="0.0"
                 max="100.0"
                 decimals="1">
                   <unit>%</unit>
                   <response name="PERCENTAGE_EXPENSES51" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
             </cells>
             <cells type="line">
-               <cells id="j4nwc63q-j4nwh16i-6">
+               <cells>
                   <value>C</value>
                   <label>Compote</label>
                </cells>
-               <cells id="j4nwc63q-j4nwh16i-7">
+               <cells>
                   <value>C1</value>
                   <label>Powersauce</label>
                </cells>
                <cells componentType="InputNumber"
-                id="6"
+                id="j4nwc63q-QOP-jbgdj1wd"
                 min="0.0"
                 max="100.0"
                 decimals="1">
                   <unit>%</unit>
                   <response name="PERCENTAGE_EXPENSES61" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
             </cells>
             <cells type="line">
-               <cells id="j4nwc63q-j4nwh16i-8" colspan="2">
+               <cells colspan="2">
                   <value>D</value>
                   <label>Other</label>
                </cells>
                <cells componentType="InputNumber"
-                id="7"
+                id="j4nwc63q-QOP-jbgddylk"
                 min="0.0"
                 max="100.0"
                 decimals="1">
                   <unit>%</unit>
                   <response name="PERCENTAGE_EXPENSES71" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
             </cells>
@@ -1183,7 +1211,8 @@
    <components xsi:type="Table"
                componentType="Table"
                id="j4nw0rr6"
-               positioning="HORIZONTAL">
+               positioning="HORIZONTAL"
+               mandatory="false">
             <label>➡ 2. Who did these clownings and tell us what you remember?</label>
             <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
             <cells type="header">
@@ -1198,11 +1227,11 @@
                </cells>
             </cells>
             <cells type="line">
-               <cells id="j4nw0rr6-j77dav9b--1">
+               <cells>
                   <value>1</value>
                   <label>Break the windows of the whole city</label>
                </cells>
-               <cells id="1" componentType="Dropdown">
+               <cells id="j4nw0rr6-QOP-jbgd8tyr" componentType="Dropdown">
                   <options>
                         <value>1</value>
                         <label>Jay</label>
@@ -1221,48 +1250,48 @@
                      </options>
                   <response name="CLOWNING11" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells componentType="Textarea" id="1" maxLength="255">
+               <cells componentType="Textarea" id="j4nw0rr6-QOP-jbgdit3o" maxLength="255">
                   <response name="CLOWNING12" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
             </cells>
             <cells type="line">
-               <cells id="j4nw0rr6-j77dav9b-0">
+               <cells>
                   <value>2</value>
                   <label>Loose the violin of his daughter playing poker</label>
                </cells>
-               <cells id="2" componentType="Dropdown">
+               <cells id="j4nw0rr6-QOP-jbgdep36" componentType="Dropdown">
                   <options>
                         <value>1</value>
                         <label>Jay</label>
@@ -1281,48 +1310,48 @@
                      </options>
                   <response name="CLOWNING21" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells componentType="Textarea" id="2" maxLength="255">
+               <cells componentType="Textarea" id="j4nw0rr6-QOP-jbgd366k" maxLength="255">
                   <response name="CLOWNING22" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
             </cells>
             <cells type="line">
-               <cells id="j4nw0rr6-j77dav9b-1">
+               <cells>
                   <value>3</value>
                   <label>Kill Mr Burns</label>
                </cells>
-               <cells id="3" componentType="Dropdown">
+               <cells id="j4nw0rr6-QOP-jbgdjjgi" componentType="Dropdown">
                   <options>
                         <value>1</value>
                         <label>Jay</label>
@@ -1341,48 +1370,48 @@
                      </options>
                   <response name="CLOWNING31" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells componentType="Textarea" id="3" maxLength="255">
+               <cells componentType="Textarea" id="j4nw0rr6-QOP-jbgdax06" maxLength="255">
                   <response name="CLOWNING32" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
             </cells>
             <cells type="line">
-               <cells id="j4nw0rr6-j77dav9b-2">
+               <cells>
                   <value>4</value>
                   <label>Leaving a mechanical object to control the nuclear power plant</label>
                </cells>
-               <cells id="4" componentType="Dropdown">
+               <cells id="j4nw0rr6-QOP-jbgdgh6k" componentType="Dropdown">
                   <options>
                         <value>1</value>
                         <label>Jay</label>
@@ -1401,39 +1430,39 @@
                      </options>
                   <response name="CLOWNING41" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells componentType="Textarea" id="4" maxLength="255">
+               <cells componentType="Textarea" id="j4nw0rr6-QOP-jbgdfo1j" maxLength="255">
                   <response name="CLOWNING42" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value/>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
             </cells>
@@ -1445,7 +1474,8 @@
    <components xsi:type="Table"
                componentType="Table"
                id="j6p2lwuj"
-               positioning="HORIZONTAL">
+               positioning="HORIZONTAL"
+               mandatory="false">
             <label>➡ 3. Which of the following means of transport were used by the hero and in which country?</label>
             <declarations declarationType="INSTRUCTION"
                     id="j6p2lwuj-d10"
@@ -1477,482 +1507,482 @@
                </cells>
             </cells>
             <cells type="line">
-               <cells id="j6p2lwuj-j6p2kivg--1">
+               <cells>
                   <value>1</value>
                   <label>Car</label>
                </cells>
-               <cells id="1" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgd92mb" componentType="CheckboxBoolean">
                   <response name="TRAVEL11" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="1" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgdnxkt" componentType="CheckboxBoolean">
                   <response name="TRAVEL12" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="1" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgdcppc" componentType="CheckboxBoolean">
                   <response name="TRAVEL13" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="1" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgd4r2a" componentType="CheckboxBoolean">
                   <response name="TRAVEL14" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="1" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgd9cff" componentType="CheckboxBoolean">
                   <response name="TRAVEL15" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="1" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgdiva0" componentType="CheckboxBoolean">
                   <response name="TRAVEL16" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
             </cells>
             <cells type="line">
-               <cells id="j6p2lwuj-j6p2kivg-0">
+               <cells>
                   <value>2</value>
                   <label>Bike</label>
                </cells>
-               <cells id="2" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgdgsat" componentType="CheckboxBoolean">
                   <response name="TRAVEL21" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="2" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgd3ef5" componentType="CheckboxBoolean">
                   <response name="TRAVEL22" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="2" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgd4cm6" componentType="CheckboxBoolean">
                   <response name="TRAVEL23" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="2" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgdkfpq" componentType="CheckboxBoolean">
                   <response name="TRAVEL24" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="2" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgddwsp" componentType="CheckboxBoolean">
                   <response name="TRAVEL25" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="2" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgd7dqf" componentType="CheckboxBoolean">
                   <response name="TRAVEL26" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
             </cells>
             <cells type="line">
-               <cells id="j6p2lwuj-j6p2kivg-1">
+               <cells>
                   <value>3</value>
                   <label>Skateboard</label>
                </cells>
-               <cells id="3" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgdaxk2" componentType="CheckboxBoolean">
                   <response name="TRAVEL31" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="3" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgd8p1v" componentType="CheckboxBoolean">
                   <response name="TRAVEL32" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="3" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgdd2lo" componentType="CheckboxBoolean">
                   <response name="TRAVEL33" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="3" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgd7u52" componentType="CheckboxBoolean">
                   <response name="TRAVEL34" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="3" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgdncn8" componentType="CheckboxBoolean">
                   <response name="TRAVEL35" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="3" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgdnous" componentType="CheckboxBoolean">
                   <response name="TRAVEL36" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
             </cells>
             <cells type="line">
-               <cells id="j6p2lwuj-j6p2kivg-2">
+               <cells>
                   <value>4</value>
                   <label>Plane</label>
                </cells>
-               <cells id="4" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgd7myn" componentType="CheckboxBoolean">
                   <response name="TRAVEL41" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="4" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgdgm0c" componentType="CheckboxBoolean">
                   <response name="TRAVEL42" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="4" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgdo0ay" componentType="CheckboxBoolean">
                   <response name="TRAVEL43" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="4" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgdgfwl" componentType="CheckboxBoolean">
                   <response name="TRAVEL44" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="4" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgdnz6b" componentType="CheckboxBoolean">
                   <response name="TRAVEL45" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
-               <cells id="4" componentType="CheckboxBoolean">
+               <cells id="j6p2lwuj-QOP-jbgdkfcz" componentType="CheckboxBoolean">
                   <response name="TRAVEL46" xsi:type="ResponseContainerBoolean">
                <valueState valueType="PREVIOUS">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="COLLECTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="FORCED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="EDITED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
                <valueState valueType="INPUTED">
-                        <value>false</value>
-                     </valueState>
+                           <value xsi:nil="true"/>
+                        </valueState>
             </response>
                </cells>
             </cells>
@@ -1964,7 +1994,8 @@
    <components xsi:type="Table"
                componentType="Table"
                id="j6qg8rc6"
-               positioning="HORIZONTAL">
+               positioning="HORIZONTAL"
+               mandatory="false">
          <label>➡ 1. Please, complete the following grid with your favourite characters</label>
          <conditionFilter>#if((!( $READY != '1')))normal#{else}hidden#end</conditionFilter>
          <cells type="header">
@@ -1977,442 +2008,442 @@
          </cells>
          <lines min="1" max="10"/>
          <cells type="line">
-            <cells componentType="Textarea" id="1" maxLength="255">
+            <cells componentType="Textarea" id="j6qg8rc6-QOP-jbgdl5jb" maxLength="255">
                <response name="FAVOURITE_CHARACTERS11" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
             <cells componentType="InputNumber"
-                id="1"
+                id="j6qg8rc6-QOP-jbgdfndq"
                 min="0"
                 max="120"
                 decimals="0">
                <response name="FAVOURITE_CHARACTERS12" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells componentType="Textarea" id="2" maxLength="255">
+            <cells componentType="Textarea" id="j6qg8rc6-QOP-jbgd8lwo" maxLength="255">
                <response name="FAVOURITE_CHARACTERS21" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
             <cells componentType="InputNumber"
-                id="2"
+                id="j6qg8rc6-QOP-jbgd7osi"
                 min="0"
                 max="120"
                 decimals="0">
                <response name="FAVOURITE_CHARACTERS22" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells componentType="Textarea" id="3" maxLength="255">
+            <cells componentType="Textarea" id="j6qg8rc6-QOP-jbgdbfag" maxLength="255">
                <response name="FAVOURITE_CHARACTERS31" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
             <cells componentType="InputNumber"
-                id="3"
+                id="j6qg8rc6-QOP-jbgd7bnw"
                 min="0"
                 max="120"
                 decimals="0">
                <response name="FAVOURITE_CHARACTERS32" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells componentType="Textarea" id="4" maxLength="255">
+            <cells componentType="Textarea" id="j6qg8rc6-QOP-jbgdlgja" maxLength="255">
                <response name="FAVOURITE_CHARACTERS41" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
             <cells componentType="InputNumber"
-                id="4"
+                id="j6qg8rc6-QOP-jbgd9k71"
                 min="0"
                 max="120"
                 decimals="0">
                <response name="FAVOURITE_CHARACTERS42" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells componentType="Textarea" id="5" maxLength="255">
+            <cells componentType="Textarea" id="j6qg8rc6-QOP-jbgd745y" maxLength="255">
                <response name="FAVOURITE_CHARACTERS51" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
             <cells componentType="InputNumber"
-                id="5"
+                id="j6qg8rc6-QOP-jbgdimks"
                 min="0"
                 max="120"
                 decimals="0">
                <response name="FAVOURITE_CHARACTERS52" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells componentType="Textarea" id="6" maxLength="255">
+            <cells componentType="Textarea" id="j6qg8rc6-QOP-jbgdjkts" maxLength="255">
                <response name="FAVOURITE_CHARACTERS61" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
             <cells componentType="InputNumber"
-                id="6"
+                id="j6qg8rc6-QOP-jbgdjquz"
                 min="0"
                 max="120"
                 decimals="0">
                <response name="FAVOURITE_CHARACTERS62" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells componentType="Textarea" id="7" maxLength="255">
+            <cells componentType="Textarea" id="j6qg8rc6-QOP-jbgdcax7" maxLength="255">
                <response name="FAVOURITE_CHARACTERS71" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
             <cells componentType="InputNumber"
-                id="7"
+                id="j6qg8rc6-QOP-jbgdd2w3"
                 min="0"
                 max="120"
                 decimals="0">
                <response name="FAVOURITE_CHARACTERS72" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells componentType="Textarea" id="8" maxLength="255">
+            <cells componentType="Textarea" id="j6qg8rc6-QOP-jbgdjye1" maxLength="255">
                <response name="FAVOURITE_CHARACTERS81" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
             <cells componentType="InputNumber"
-                id="8"
+                id="j6qg8rc6-QOP-jbgdkosc"
                 min="0"
                 max="120"
                 decimals="0">
                <response name="FAVOURITE_CHARACTERS82" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells componentType="Textarea" id="9" maxLength="255">
+            <cells componentType="Textarea" id="j6qg8rc6-QOP-jbgd5jet" maxLength="255">
                <response name="FAVOURITE_CHARACTERS91" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
             <cells componentType="InputNumber"
-                id="9"
+                id="j6qg8rc6-QOP-jbgdk0x4"
                 min="0"
                 max="120"
                 decimals="0">
                <response name="FAVOURITE_CHARACTERS92" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
          <cells type="line">
-            <cells componentType="Textarea" id="10" maxLength="255">
+            <cells componentType="Textarea" id="j6qg8rc6-QOP-jbgdjw90" maxLength="255">
                <response name="FAVOURITE_CHARACTERS101" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
             <cells componentType="InputNumber"
-                id="10"
+                id="j6qg8rc6-QOP-jbgd2wgf"
                 min="0"
                 max="120"
                 decimals="0">
                <response name="FAVOURITE_CHARACTERS102" xsi:type="ResponseContainerString">
                <valueState valueType="PREVIOUS">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="COLLECTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="FORCED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="EDITED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
                <valueState valueType="INPUTED">
-                     <value/>
-                  </valueState>
+                        <value xsi:nil="true"/>
+                     </valueState>
             </response>
             </cells>
          </cells>
@@ -2424,24 +2455,25 @@
    <components xsi:type="Textarea"
                componentType="Textarea"
                id="j6z0z3us"
-               maxLength="255">
+               maxLength="255"
+               mandatory="false">
          <label>➡ 1. Do you have any comment about the survey?</label>
          <response name="SURVEY_COMMENT" xsi:type="ResponseContainerString">
          <valueState valueType="PREVIOUS">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="COLLECTED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="FORCED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="EDITED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
          <valueState valueType="INPUTED">
-               <value/>
-            </valueState>
+                  <value xsi:nil="true"/>
+               </valueState>
       </response>
          <conditionFilter>normal</conditionFilter>
       </components>
