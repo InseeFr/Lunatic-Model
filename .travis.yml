@@ -3,7 +3,7 @@ jdk:
   - openjdk8
 
 install:
-  - mvn install -DskipTests
+  - mvn install -DskipTests=true
   - mvn test
 
 script:
