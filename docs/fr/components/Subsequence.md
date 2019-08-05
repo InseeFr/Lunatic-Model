@@ -1,4 +1,4 @@
-### Le composant Subsequence
+### Le composant `Subsequence`
 
 Structure du composant Subsequence
 
