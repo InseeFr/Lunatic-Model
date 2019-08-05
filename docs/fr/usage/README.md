@@ -8,7 +8,9 @@ Ce projet n'est pour l'instant pas publié sur les `repository` de Maven.
 Pour l'utiliser/installer veuillez suivre les étapes suivantes :
 
 - cloner le dépôt : `git clone https://github.com/InseeFr/Lunatic-Model.git`
-- lancer l'installation : - se placer dans le dossier Lunatic-Model - `mvn clean install -DskipTests=true`
+- lancer l'installation :
+  - se placer dans le dossier Lunatic-Model
+  - `mvn clean install -DskipTests=true`
 - intégrer la dépendances dans votre projet maven
 
 ```xml
