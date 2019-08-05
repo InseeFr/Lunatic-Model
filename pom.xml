@@ -113,7 +113,15 @@
 					<encoding>UTF-8</encoding>
 					<inputEncoding>UTF-8</inputEncoding>
 					<outputEncoding>UTF-8</outputEncoding>
-					<argLine>-Dfile.encoding=UTF-8 -Djavax.xml.bind.context.factory=org.eclipse.persistence.jaxb.JAXBContextFactory</argLine>
+					<argLine>-Dfile.encoding=UTF-8</argLine>
+					<resources>
+						<resource>
+							<directory>src/main/resources/jaxb</directory>
+							<includes>
+								<include>jaxb.properties</include>
+							</includes>
+						</resource>
+					</resources>
 				</configuration>
 			</plugin>
 			<plugin>
