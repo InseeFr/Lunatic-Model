@@ -1,4 +1,4 @@
-### Le composant InputNumber
+### Le composant `InputNumber`
 
 Il s'agit d'un composant ayant pour but de collecte une réponse de type nombre dans un input.
 
@@ -19,7 +19,7 @@ Sa structure est la suivante :
   "min" : 0,
   "max" : 10,
   "decimals" : 0,
-  "unit" : "€"
+  "unit" : "€",
   "label" : "label de la question",
   "declarations" : [...],
   "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",

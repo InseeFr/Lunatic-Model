@@ -1,4 +1,4 @@
-### Le composant Datepicker
+### Le composant `Datepicker`
 
 Il s'agit d'un composant ayant pour but de collecte une date .
 Il dispose de tous les attributs du composant de base avec un attribut `dateFormat` en plus qui définit le format de la date à collecter.

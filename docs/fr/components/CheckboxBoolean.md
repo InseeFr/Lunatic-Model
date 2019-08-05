@@ -1,4 +1,4 @@
-### Le composant CheckboxBoolean
+### Le composant `CheckboxBoolean`
 
 Il s'agit d'un composant ayant pour but de collecte une réponse de type booléen dans un input de type checkbox.
 (case coché ou pas)
