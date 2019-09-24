@@ -11,7 +11,7 @@ Pour l'utiliser/installer veuillez suivre les étapes suivantes :
 - lancer l'installation :
   - se placer dans le dossier Lunatic-Model
   - `mvn clean install -DskipTests=true`
-- intégrer la dépendances dans votre projet maven
+- intégrer la dépendance dans votre projet maven
 
 ```xml
 <dependency>

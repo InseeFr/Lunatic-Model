@@ -21,12 +21,12 @@
             <xsl:apply-templates select="json-to-xml(.)" mode="clean"/>
         </xsl:variable>
         <!--<xsl:copy-of select="$output-xml"/>-->
-        <xsl:copy-of select="replace(xml-to-json($output-xml, map{'indent':true()}),'\\','')"/>
+        <xsl:copy-of select="xml-to-json($output-xml, map{'indent':true()})"/>
     </xsl:template>
     
     <!-- delete type attribute -->
     <xsl:template match="*[@key='type']" mode="clean"/>
-    
+        
     <!-- delete responses attribute in table responses for Table component -->
     <xsl:template match="*[@key='cells' and preceding-sibling::*[@key='componentType']]" mode="clean">
         <xsl:copy>
