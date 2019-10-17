@@ -54,6 +54,12 @@ public class JSONCleaner {
 	}
 	
 	public String wrapJsonWithXml(String json) {
-		return "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Questionnaire>"+json.replaceAll("&", "&amp;")+"</Questionnaire>";
+		return "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Questionnaire>"+preProcessJson2XML(json)+"</Questionnaire>";
+	}
+	
+	public String preProcessJson2XML(String json) {
+		return json.replaceAll("&", "&amp;")
+				.replaceAll("<", "&lt;")
+				.replaceAll(">", "&lt;");
 	}
 }
