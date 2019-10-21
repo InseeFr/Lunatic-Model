@@ -60,6 +60,6 @@ public class JSONCleaner {
 	public String preProcessJson2XML(String json) {
 		return json.replaceAll("&", "&amp;")
 				.replaceAll("<", "&lt;")
-				.replaceAll(">", "&lt;");
+				.replaceAll(">", "&gt;");
 	}
 }
