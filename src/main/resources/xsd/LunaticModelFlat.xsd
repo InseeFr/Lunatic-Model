@@ -170,7 +170,7 @@
         <xs:sequence>
           <xs:element name="response" type="ResponseContainerString"/>
         </xs:sequence>
-        <xs:attribute name="maxLength" type="xs:string"/>
+        <xs:attribute name="maxLength" type="xs:integer"/>
      </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -181,7 +181,7 @@
         <xs:sequence>
           <xs:element name="response" type="ResponseContainerString"/>
         </xs:sequence>
-        <xs:attribute name="maxLength"/>
+        <xs:attribute name="maxLength" type="xs:integer"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
@@ -292,7 +292,7 @@
             <xs:element name="options" type="Options" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="componentType" type="xs:string" use="optional"/>
-        <xs:attribute name="maxLength" type="xs:string" use="optional"/>
+        <xs:attribute name="maxLength" type="xs:integer" use="optional"/>
         <xs:attribute name="min" type="xs:double" use="optional"/>
         <xs:attribute name="max" type="xs:double" use="optional"/>
         <xs:attribute name="decimals" type="xs:integer" use="optional"/>
