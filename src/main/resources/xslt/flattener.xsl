@@ -181,7 +181,7 @@
 					<responseRef><xsl:value-of select="$responseRef"/></responseRef>
 				</xsl:when>
 				<xsl:when test="$expression!=''">
-					<expression><xsl:value-of select="$expression"/></expression>
+					<expression><xsl:value-of select="normalize-space($expression)"/></expression>
 				</xsl:when>
 			</xsl:choose>
 			<xsl:apply-templates select="h:value"/>
