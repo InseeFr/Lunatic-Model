@@ -69,7 +69,7 @@
             <xs:element name="label" type="xs:string"/>
             <xs:element name="declarations" type="DeclarationType" minOccurs="0" maxOccurs="unbounded"/>
             <!-- Warning : To validate the name -->
-            <xs:element name="conditionFilter" type="xs:string" minOccurs="1"/>
+            <xs:element name="conditionFilter" type="xs:string" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="required"/>
         <xs:attribute name="componentType" type="ComponentTypeEnum"/>
@@ -90,6 +90,7 @@
             <xs:enumeration value="Radio"/>
             <xs:enumeration value="Dropdown"/>
             <xs:enumeration value="Textarea"/>
+            <xs:enumeration value="FilterDescription"/>
         </xs:restriction>
     </xs:simpleType>
     
@@ -268,6 +269,14 @@
                 <xs:sequence>
                     <xs:element name="responses" type="ResponsesCheckboxGroup" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="FilterDescription">
+        <xs:complexContent>
+            <xs:extension base="ComponentType">
+                <xs:attribute name="management" type="xs:boolean"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
