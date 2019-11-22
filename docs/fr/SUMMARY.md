@@ -18,6 +18,7 @@
  * [Datepicker](components/Datepicker.md)
  * [Les composants à options : Radio, Dropdown, CheckboxOne](components/OptionsComponents.md)
  * [CheckboxGroup](components/CheckboxGroup.md)
+ * [FilterDescription](components/FilterDescription.md)
  * [Table](components/Table.md)
 * [Comment utiliser Lunatic-Model](usage/README.md)
  

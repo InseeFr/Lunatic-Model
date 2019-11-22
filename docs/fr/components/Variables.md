@@ -24,7 +24,7 @@ Strucure du tableau `variables` :
   {
     "variableType": "CALCULATED",
     "name": "SUM_EXPENSES",
-    "value": "$PERCENTAGE_EXPENSES_1 + $PERCENTAGE_EXPENSES_2"
+    "expression": "$PERCENTAGE_EXPENSES_1 + $PERCENTAGE_EXPENSES_2"
   }
 ]
 ```
