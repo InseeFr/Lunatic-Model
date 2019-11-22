@@ -3,17 +3,8 @@ jdk:
   - openjdk8
 
 install:
-  - mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-  - mvn test -B
+  - mvn install -DskipTests=true
+  - mvn test
 
-deploy:
-  skip_cleanup: true
-  provider: releases
-  api_key:
-    secure: "ZfkijESfwfWz+xv2GlpZXIjwTyrKUIZ5OWmF62XYul27r9vleo1PLkHZp2FYZii1qsMTo/sbd5VDCAZa15W8v2mChV2npWP2m2+5wkVfPpWSJdEoRGzYpbx0z5xgHWeIJ9cl31xiuNgSq+gULWol0j3ceSrH9ZQHaga883eP5cvHqWk9wRbMw8LT2XoVxRm3uo62RkM1S41ldIQlb5Sn9o8PwUeunSckCIg8JZ0dUFqgwBoOnBp/Af9fekuaPvkWZulNpTIMmjgAV8zqVRaFilNzuFy+FG66RykCX/BCLk6zWYkZT5SPGZI8R2uURYAXl+xWxjXthOBFFczvO+szZ4623p+Og7THvHfKTBJ2dQeBlnmc8qLHWYIG7Wu2o4m8EnEsojI7dfPCHsXRl3U8A4pjIt/9Wbx3oNC8EV1NJYNFrARYa2vRf2PYxUepbjOBDrmtKlwiLRKvx9Yb2ijdvRnlDQU6zYPlXNgGmLcE6OtcdLWK6gjXZXU/eH/fT2c48ksGihWjIaVoSIUxXMMrKBtdfUA79ZBVgkeSXQYzkl7szqs1przVSUCL2XVBY97Xgbb3oBLTnFTFoQg/puQeEaLrT7eQH3EIJMRGx30RrBUDij4jYd2Q2WJNXckfQ/bqCHEERND3T2Y9CHiWmTznEW4DervqZtusQDaHqXGPZag="
-  file: target/*.jar
-  on:
-    tags: true
-
-after-deploy:
+script:
   - bash scripts/gitbook.sh
