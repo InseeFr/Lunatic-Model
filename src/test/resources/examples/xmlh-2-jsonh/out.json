@@ -1,6 +1,6 @@
 
   { "id" : "i6vwi0",
-    "label" : "\"Questionnaire SIMPSONS\"",
+    "label" : "Questionnaire SIMPSONS",
     "components" : 
     [ 
       { "id" : "j6p0ti5h",
@@ -64,10 +64,15 @@
                 { "valueType" : "INPUTED",
                   "value" : null } ] } },
           
+          { "id" : "j6p6my1d",
+            "componentType" : "FilterDescription",
+            "management" : false,
+            "label" : "\"If you are not ready, please go to the end of the questionnaire\"" },
+          
           { "id" : "j6p0s7o5",
             "componentType" : "Subsequence",
             "label" : "\"General knowledge of the series\"",
-            "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+            "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
             "components" : 
             [ 
               { "id" : "j3343qhx",
@@ -75,7 +80,7 @@
                 "mandatory" : false,
                 "maxLength" : 30,
                 "label" : "\"➡ 3. Who is the producer?\"",
-                "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+                "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
                 "response" : 
                 { "name" : "PRODUCER",
                   "valueState" : 
@@ -102,7 +107,7 @@
                 "max" : 99,
                 "decimals" : 0,
                 "label" : "\"➡ 4. What is the current season number?\"",
-                "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+                "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
                 "response" : 
                 { "name" : "SEASON_NUMBER",
                   "valueState" : 
@@ -132,7 +137,7 @@
                     "declarationType" : "COMMENT",
                     "position" : "AFTER_QUESTION_TEXT",
                     "label" : "\"For your information, the date of the last broadcast was on \" || cast(cast(LAST_BROADCAST,string),string) || \" \"" } ],
-                "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+                "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
                 "response" : 
                 { "name" : "DATEFIRST",
                   "valueState" : 
@@ -160,7 +165,7 @@
                 "max" : 99,
                 "decimals" : 1,
                 "label" : "\"➡ 6. In your opinion, how much is the part of audience share in US for the 2016 season?\"",
-                "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+                "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
                 "response" : 
                 { "name" : "AUDIENCE_SHARE",
                   "valueState" : 
@@ -189,7 +194,7 @@
             "declarationType" : "COMMENT",
             "position" : "AFTER_QUESTION_TEXT",
             "label" : "\"This module asks about your general knowledge of the Simpsons city\"" } ],
-        "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+        "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
         "components" : 
         [ 
           { "id" : "j3343clt",
@@ -202,7 +207,7 @@
                 "declarationType" : "INSTRUCTION",
                 "position" : "AFTER_QUESTION_TEXT",
                 "label" : "\"One possible answer\"" } ],
-            "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+            "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
             "response" : 
             { "name" : "CITY",
               "valueState" : 
@@ -242,7 +247,7 @@
                 "declarationType" : "INSTRUCTION",
                 "position" : "AFTER_QUESTION_TEXT",
                 "label" : "\"Only one possible answer\"" } ],
-            "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+            "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
             "response" : 
             { "name" : "MAYOR",
               "valueState" : 
@@ -279,7 +284,7 @@
             "componentType" : "Dropdown",
             "mandatory" : false,
             "label" : "\"➡ 3. In which state do The Simpsons reside?\"",
-            "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+            "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
             "response" : 
             { "name" : "STATE",
               "valueState" : 
@@ -342,7 +347,7 @@
       { "id" : "j6qe0h9q",
         "componentType" : "Sequence",
         "label" : "\"III - Characters\"",
-        "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+        "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
         "components" : 
         [ 
           { "id" : "j334akov",
@@ -452,11 +457,11 @@
                 "declarationType" : "STATEMENT",
                 "position" : "BEFORE_QUESTION_TEXT",
                 "label" : "\"Now we are going to know if you think that Jay is a gluton.\"" } ],
-            "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+            "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
             "cells" : 
             [ 
               [ 
-                { "label" : "\"Vanilla\"",
+                { "label" : "Vanilla",
                   "value" : "1" },
                 
                 { "componentType" : "Radio",
@@ -488,7 +493,7 @@
                       "label" : "No" } ] } ],
               
               [ 
-                { "label" : "\"Strawberry\"",
+                { "label" : "Strawberry",
                   "value" : "2" },
                 
                 { "componentType" : "Radio",
@@ -520,7 +525,7 @@
                       "label" : "No" } ] } ],
               
               [ 
-                { "label" : "\"Apple\"",
+                { "label" : "Apple",
                   "value" : "3" },
                 
                 { "componentType" : "Radio",
@@ -552,7 +557,7 @@
                       "label" : "No" } ] } ],
               
               [ 
-                { "label" : "\"Bacon\"",
+                { "label" : "Bacon",
                   "value" : "4" },
                 
                 { "componentType" : "Radio",
@@ -588,11 +593,11 @@
             "mandatory" : false,
             "positioning" : "HORIZONTAL",
             "label" : "\"➡ 3. Which character works in the nuclear power plant?\"",
-            "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+            "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
             "cells" : 
             [ 
               [ 
-                { "label" : "\"Charles Montgomery Burns\"",
+                { "label" : "Charles Montgomery Burns",
                   "value" : "1" },
                 
                 { "componentType" : "Dropdown",
@@ -624,7 +629,7 @@
                       "label" : "No" } ] } ],
               
               [ 
-                { "label" : "\"Carl Carlson\"",
+                { "label" : "Carl Carlson",
                   "value" : "2" },
                 
                 { "componentType" : "Dropdown",
@@ -656,7 +661,7 @@
                       "label" : "No" } ] } ],
               
               [ 
-                { "label" : "\"Otto Mann\"",
+                { "label" : "Otto Mann",
                   "value" : "3" },
                 
                 { "componentType" : "Dropdown",
@@ -688,7 +693,7 @@
                       "label" : "No" } ] } ],
               
               [ 
-                { "label" : "\"Carl Carlson\"",
+                { "label" : "Carl Carlson",
                   "value" : "4" },
                 
                 { "componentType" : "Dropdown",
@@ -724,11 +729,11 @@
             "mandatory" : false,
             "positioning" : "HORIZONTAL",
             "label" : "\"➡ 4. In which city each character was born?\"",
-            "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+            "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
             "cells" : 
             [ 
               [ 
-                { "label" : "\"Selma Bouvier\"",
+                { "label" : "Selma Bouvier",
                   "value" : "1" },
                 
                 { "componentType" : "CheckboxOne",
@@ -769,7 +774,7 @@
                       "label" : "Dagstuhl" } ] } ],
               
               [ 
-                { "label" : "\"Kent Brockman\"",
+                { "label" : "Kent Brockman",
                   "value" : "2" },
                 
                 { "componentType" : "CheckboxOne",
@@ -810,7 +815,7 @@
                       "label" : "Dagstuhl" } ] } ],
               
               [ 
-                { "label" : "\"Milhouse Van Houten\"",
+                { "label" : "Milhouse Van Houten",
                   "value" : "3" },
                 
                 { "componentType" : "CheckboxOne",
@@ -851,7 +856,7 @@
                       "label" : "Dagstuhl" } ] } ],
               
               [ 
-                { "label" : "\"Nelson Muntz\"",
+                { "label" : "Nelson Muntz",
                   "value" : "4" },
                 
                 { "componentType" : "CheckboxOne",
@@ -892,7 +897,7 @@
                       "label" : "Dagstuhl" } ] } ],
               
               [ 
-                { "label" : "\"Crazy Cat Lady\"",
+                { "label" : "Crazy Cat Lady",
                   "value" : "5" },
                 
                 { "componentType" : "CheckboxOne",
@@ -935,13 +940,13 @@
       { "id" : "j4nw88h2",
         "componentType" : "Sequence",
         "label" : "\"IV - General questions\"",
-        "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+        "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
         "components" : 
         [ 
           { "id" : "j6qe237q",
             "componentType" : "Subsequence",
             "label" : "\"Kwik-E-Mart\"",
-            "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+            "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
             "components" : 
             [ 
               { "id" : "j4nwc63q",
@@ -949,23 +954,23 @@
                 "mandatory" : false,
                 "positioning" : "HORIZONTAL",
                 "label" : "\"➡ 1. Please, specify the percentage of Jay's expenses in the Kwik-E-Mart for each product?\"",
-                "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+                "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
                 "cells" : 
                 [ 
                   [ 
                     { "headerCell" : true,
                       "colspan" : 2,
-                      "label" : "\"\"" },
+                      "label" : "" },
                     
                     { "headerCell" : true,
-                      "label" : "\"Percentage\"" } ],
+                      "label" : "Percentage" } ],
                   
                   [ 
                     { "rowspan" : 2,
-                      "label" : "\"Frozen products\"",
+                      "label" : "Frozen products",
                       "value" : "A" },
                     
-                    { "label" : "\"Ice creams\"",
+                    { "label" : "Ice creams",
                       "value" : "A1" },
                     
                     { "componentType" : "InputNumber",
@@ -994,7 +999,7 @@
                             "value" : null } ] } } ],
                   
                   [ 
-                    { "label" : "\"Jasper Beardly\"",
+                    { "label" : "Jasper Beardly",
                       "value" : "A2" },
                     
                     { "componentType" : "InputNumber",
@@ -1024,10 +1029,10 @@
                   
                   [ 
                     { "rowspan" : 3,
-                      "label" : "\"Meat\"",
+                      "label" : "Meat",
                       "value" : "B" },
                     
-                    { "label" : "\"Bacon\"",
+                    { "label" : "Bacon",
                       "value" : "B1" },
                     
                     { "componentType" : "InputNumber",
@@ -1056,7 +1061,7 @@
                             "value" : null } ] } } ],
                   
                   [ 
-                    { "label" : "\"Pork chop\"",
+                    { "label" : "Pork chop",
                       "value" : "B2" },
                     
                     { "componentType" : "InputNumber",
@@ -1085,7 +1090,7 @@
                             "value" : null } ] } } ],
                   
                   [ 
-                    { "label" : "\"Chicken\"",
+                    { "label" : "Chicken",
                       "value" : "B3" },
                     
                     { "componentType" : "InputNumber",
@@ -1114,10 +1119,10 @@
                             "value" : null } ] } } ],
                   
                   [ 
-                    { "label" : "\"Compote\"",
+                    { "label" : "Compote",
                       "value" : "C" },
                     
-                    { "label" : "\"Powersauce\"",
+                    { "label" : "Powersauce",
                       "value" : "C1" },
                     
                     { "componentType" : "InputNumber",
@@ -1147,7 +1152,7 @@
                   
                   [ 
                     { "colspan" : 2,
-                      "label" : "\"Other\"",
+                      "label" : "Other",
                       "value" : "D" },
                     
                     { "componentType" : "InputNumber",
@@ -1178,7 +1183,7 @@
           { "id" : "j6qejudb",
             "componentType" : "Subsequence",
             "label" : "\"Clowning\"",
-            "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+            "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
             "components" : 
             [ 
               { "id" : "j4nw0rr6",
@@ -1186,21 +1191,21 @@
                 "mandatory" : false,
                 "positioning" : "HORIZONTAL",
                 "label" : "\"➡ 2. Who did these clownings and tell us what you remember?\"",
-                "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+                "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
                 "cells" : 
                 [ 
                   [ 
                     { "headerCell" : true,
-                      "label" : "\"\"" },
+                      "label" : "" },
                     
                     { "headerCell" : true,
-                      "label" : "\"Clowning\"" },
+                      "label" : "Clowning" },
                     
                     { "headerCell" : true,
-                      "label" : "\"Remember?\"" } ],
+                      "label" : "Remember?" } ],
                   
                   [ 
-                    { "label" : "\"Break the windows of the whole city\"",
+                    { "label" : "Break the windows of the whole city",
                       "value" : "1" },
                     
                     { "componentType" : "Dropdown",
@@ -1260,7 +1265,7 @@
                             "value" : null } ] } } ],
                   
                   [ 
-                    { "label" : "\"Loose the violin of his daughter playing poker\"",
+                    { "label" : "Loose the violin of his daughter playing poker",
                       "value" : "2" },
                     
                     { "componentType" : "Dropdown",
@@ -1320,7 +1325,7 @@
                             "value" : null } ] } } ],
                   
                   [ 
-                    { "label" : "\"Kill Mr Burns\"",
+                    { "label" : "Kill Mr Burns",
                       "value" : "3" },
                     
                     { "componentType" : "Dropdown",
@@ -1380,7 +1385,7 @@
                             "value" : null } ] } } ],
                   
                   [ 
-                    { "label" : "\"Leaving a mechanical object to control the nuclear power plant\"",
+                    { "label" : "Leaving a mechanical object to control the nuclear power plant",
                       "value" : "4" },
                     
                     { "componentType" : "Dropdown",
@@ -1442,7 +1447,7 @@
           { "id" : "j6qeh91y",
             "componentType" : "Subsequence",
             "label" : "\"Transport\"",
-            "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+            "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
             "components" : 
             [ 
               { "id" : "j6p2lwuj",
@@ -1456,33 +1461,33 @@
                     "declarationType" : "INSTRUCTION",
                     "position" : "AFTER_QUESTION_TEXT",
                     "label" : "\"Several answers possible: check off all the relevant boxes\"" } ],
-                "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+                "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
                 "cells" : 
                 [ 
                   [ 
                     { "headerCell" : true,
-                      "label" : "\"\"" },
+                      "label" : "" },
                     
                     { "headerCell" : true,
-                      "label" : "\"Brazil\"" },
+                      "label" : "Brazil" },
                     
                     { "headerCell" : true,
-                      "label" : "\"Canada\"" },
+                      "label" : "Canada" },
                     
                     { "headerCell" : true,
-                      "label" : "\"Japan\"" },
+                      "label" : "Japan" },
                     
                     { "headerCell" : true,
-                      "label" : "\"France\"" },
+                      "label" : "France" },
                     
                     { "headerCell" : true,
-                      "label" : "\"Other country\"" },
+                      "label" : "Other country" },
                     
                     { "headerCell" : true,
-                      "label" : "\"Other planet\"" } ],
+                      "label" : "Other planet" } ],
                   
                   [ 
-                    { "label" : "\"Car\"",
+                    { "label" : "Car",
                       "value" : "1" },
                     
                     { "componentType" : "CheckboxBoolean",
@@ -1612,7 +1617,7 @@
                             "value" : null } ] } } ],
                   
                   [ 
-                    { "label" : "\"Bike\"",
+                    { "label" : "Bike",
                       "value" : "2" },
                     
                     { "componentType" : "CheckboxBoolean",
@@ -1742,7 +1747,7 @@
                             "value" : null } ] } } ],
                   
                   [ 
-                    { "label" : "\"Skateboard\"",
+                    { "label" : "Skateboard",
                       "value" : "3" },
                     
                     { "componentType" : "CheckboxBoolean",
@@ -1872,7 +1877,7 @@
                             "value" : null } ] } } ],
                   
                   [ 
-                    { "label" : "\"Plane\"",
+                    { "label" : "Plane",
                       "value" : "4" },
                     
                     { "componentType" : "CheckboxBoolean",
@@ -2004,7 +2009,7 @@
       { "id" : "j6qfx9qe",
         "componentType" : "Sequence",
         "label" : "\"V - Favourite characters\"",
-        "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+        "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
         "components" : 
         [ 
           { "id" : "j6qg8rc6",
@@ -2012,15 +2017,15 @@
             "mandatory" : false,
             "positioning" : "HORIZONTAL",
             "label" : "\"➡ 1. Please, complete the following grid with your favourite characters\"",
-            "conditionFilter" : " if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
+            "conditionFilter" : "if ((not( cast(READY,integer) <>  '1') )) then \"normal\" else \"hidden\"",
             "cells" : 
             [ 
               [ 
                 { "headerCell" : true,
-                  "label" : "\"Name\"" },
+                  "label" : "Name" },
                 
                 { "headerCell" : true,
-                  "label" : "\"Age\"" } ],
+                  "label" : "Age" } ],
               
               [ 
                 { "componentType" : "Textarea",

@@ -2,7 +2,7 @@
 <Questionnaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xmlns="http://xml.insee.fr/schema/applis/lunatic"
                id="i6vwi0">
-   <label>"Questionnaire SIMPSONS"</label>
+   <label>Questionnaire SIMPSONS</label>
    <components xsi:type="Sequence" componentType="Sequence" id="j6p0ti5h">
       <label>"I - Introduction"</label>
       <declarations declarationType="COMMENT"
@@ -60,6 +60,12 @@
             </valueState>
       </response>
          <conditionFilter>"normal"</conditionFilter>
+      </components>
+   <components xsi:type="FilterDescription"
+               componentType="FilterDescription"
+               id="j6p6my1d"
+               management="false">
+         <label>"If you are not ready, please go to the end of the questionnaire"</label>
       </components>
    <components xsi:type="Subsequence" componentType="Subsequence" id="j6p0s7o5">
       <label>"General knowledge of the series"</label>
@@ -457,7 +463,7 @@
          <cells type="line">
             <cells>
                <value>1</value>
-               <label>"Vanilla"</label>
+               <label>Vanilla</label>
             </cells>
             <cells id="j6p29i81-QOP-jbgdb3jx" componentType="Radio">
                <options>
@@ -490,7 +496,7 @@
          <cells type="line">
             <cells>
                <value>2</value>
-               <label>"Strawberry"</label>
+               <label>Strawberry</label>
             </cells>
             <cells id="j6p29i81-QOP-jbgdb61k" componentType="Radio">
                <options>
@@ -523,7 +529,7 @@
          <cells type="line">
             <cells>
                <value>3</value>
-               <label>"Apple"</label>
+               <label>Apple</label>
             </cells>
             <cells id="j6p29i81-QOP-jbgdl3kc" componentType="Radio">
                <options>
@@ -556,7 +562,7 @@
          <cells type="line">
             <cells>
                <value>4</value>
-               <label>"Bacon"</label>
+               <label>Bacon</label>
             </cells>
             <cells id="j6p29i81-QOP-jbgdcobo" componentType="Radio">
                <options>
@@ -597,7 +603,7 @@
          <cells type="line">
             <cells>
                <value>1</value>
-               <label>"Charles Montgomery Burns"</label>
+               <label>Charles Montgomery Burns</label>
             </cells>
             <cells id="j6qefnga-QOP-jbgd6p0k" componentType="Dropdown">
                <options>
@@ -630,7 +636,7 @@
          <cells type="line">
             <cells>
                <value>2</value>
-               <label>"Carl Carlson"</label>
+               <label>Carl Carlson</label>
             </cells>
             <cells id="j6qefnga-QOP-jbgd9ato" componentType="Dropdown">
                <options>
@@ -663,7 +669,7 @@
          <cells type="line">
             <cells>
                <value>3</value>
-               <label>"Otto Mann"</label>
+               <label>Otto Mann</label>
             </cells>
             <cells id="j6qefnga-QOP-jbgd3e0p" componentType="Dropdown">
                <options>
@@ -696,7 +702,7 @@
          <cells type="line">
             <cells>
                <value>4</value>
-               <label>"Carl Carlson"</label>
+               <label>Carl Carlson</label>
             </cells>
             <cells id="j6qefnga-QOP-jbgdkxne" componentType="Dropdown">
                <options>
@@ -737,7 +743,7 @@
          <cells type="line">
             <cells>
                <value>1</value>
-               <label>"Selma Bouvier"</label>
+               <label>Selma Bouvier</label>
             </cells>
             <cells id="j6yzoc6g-QOP-jbgd7fr6" componentType="CheckboxOne">
                <options>
@@ -782,7 +788,7 @@
          <cells type="line">
             <cells>
                <value>2</value>
-               <label>"Kent Brockman"</label>
+               <label>Kent Brockman</label>
             </cells>
             <cells id="j6yzoc6g-QOP-jbgd5e9f" componentType="CheckboxOne">
                <options>
@@ -827,7 +833,7 @@
          <cells type="line">
             <cells>
                <value>3</value>
-               <label>"Milhouse Van Houten"</label>
+               <label>Milhouse Van Houten</label>
             </cells>
             <cells id="j6yzoc6g-QOP-jbgd912x" componentType="CheckboxOne">
                <options>
@@ -872,7 +878,7 @@
          <cells type="line">
             <cells>
                <value>4</value>
-               <label>"Nelson Muntz"</label>
+               <label>Nelson Muntz</label>
             </cells>
             <cells id="j6yzoc6g-QOP-jbgd6bdy" componentType="CheckboxOne">
                <options>
@@ -917,7 +923,7 @@
          <cells type="line">
             <cells>
                <value>5</value>
-               <label>"Crazy Cat Lady"</label>
+               <label>Crazy Cat Lady</label>
             </cells>
             <cells id="j6yzoc6g-QOP-jbgddyry" componentType="CheckboxOne">
                <options>
@@ -977,20 +983,20 @@
             <conditionFilter>if ((not( cast(READY,integer) &lt;&gt; '1') )) then "normal" else "hidden"</conditionFilter>
             <cells type="header">
                <cells headerCell="true" colspan="2">
-                  <label>""</label>
+                  <label/>
                </cells>
                <cells headerCell="true">
-                  <label>"Percentage"</label>
+                  <label>Percentage</label>
                </cells>
             </cells>
             <cells type="line">
                <cells rowspan="2">
                   <value>A</value>
-                  <label>"Frozen products"</label>
+                  <label>Frozen products</label>
                </cells>
                <cells>
                   <value>A1</value>
-                  <label>"Ice creams"</label>
+                  <label>Ice creams</label>
                </cells>
                <cells id="j4nwc63q-QOP-jbgde5yl"
                 componentType="InputNumber"
@@ -1020,7 +1026,7 @@
             <cells type="line">
                <cells>
                   <value>A2</value>
-                  <label>"Jasper Beardly"</label>
+                  <label>Jasper Beardly</label>
                </cells>
                <cells id="j4nwc63q-QOP-jbgd2x2t"
                 componentType="InputNumber"
@@ -1050,11 +1056,11 @@
             <cells type="line">
                <cells rowspan="3">
                   <value>B</value>
-                  <label>"Meat"</label>
+                  <label>Meat</label>
                </cells>
                <cells>
                   <value>B1</value>
-                  <label>"Bacon"</label>
+                  <label>Bacon</label>
                </cells>
                <cells id="j4nwc63q-QOP-jbgdjypz"
                 componentType="InputNumber"
@@ -1084,7 +1090,7 @@
             <cells type="line">
                <cells>
                   <value>B2</value>
-                  <label>"Pork chop"</label>
+                  <label>Pork chop</label>
                </cells>
                <cells id="j4nwc63q-QOP-jbgdcftu"
                 componentType="InputNumber"
@@ -1114,7 +1120,7 @@
             <cells type="line">
                <cells>
                   <value>B3</value>
-                  <label>"Chicken"</label>
+                  <label>Chicken</label>
                </cells>
                <cells id="j4nwc63q-QOP-jbgdiyfe"
                 componentType="InputNumber"
@@ -1144,11 +1150,11 @@
             <cells type="line">
                <cells>
                   <value>C</value>
-                  <label>"Compote"</label>
+                  <label>Compote</label>
                </cells>
                <cells>
                   <value>C1</value>
-                  <label>"Powersauce"</label>
+                  <label>Powersauce</label>
                </cells>
                <cells id="j4nwc63q-QOP-jbgdj1wd"
                 componentType="InputNumber"
@@ -1178,7 +1184,7 @@
             <cells type="line">
                <cells colspan="2">
                   <value>D</value>
-                  <label>"Other"</label>
+                  <label>Other</label>
                </cells>
                <cells id="j4nwc63q-QOP-jbgddylk"
                 componentType="InputNumber"
@@ -1219,19 +1225,19 @@
             <conditionFilter>if ((not( cast(READY,integer) &lt;&gt; '1') )) then "normal" else "hidden"</conditionFilter>
             <cells type="header">
                <cells headerCell="true">
-                  <label>""</label>
+                  <label/>
                </cells>
                <cells headerCell="true">
-                  <label>"Clowning"</label>
+                  <label>Clowning</label>
                </cells>
                <cells headerCell="true">
-                  <label>"Remember?"</label>
+                  <label>Remember?</label>
                </cells>
             </cells>
             <cells type="line">
                <cells>
                   <value>1</value>
-                  <label>"Break the windows of the whole city"</label>
+                  <label>Break the windows of the whole city</label>
                </cells>
                <cells id="j4nw0rr6-QOP-jbgd8tyr" componentType="Dropdown">
                   <options>
@@ -1291,7 +1297,7 @@
             <cells type="line">
                <cells>
                   <value>2</value>
-                  <label>"Loose the violin of his daughter playing poker"</label>
+                  <label>Loose the violin of his daughter playing poker</label>
                </cells>
                <cells id="j4nw0rr6-QOP-jbgdep36" componentType="Dropdown">
                   <options>
@@ -1351,7 +1357,7 @@
             <cells type="line">
                <cells>
                   <value>3</value>
-                  <label>"Kill Mr Burns"</label>
+                  <label>Kill Mr Burns</label>
                </cells>
                <cells id="j4nw0rr6-QOP-jbgdjjgi" componentType="Dropdown">
                   <options>
@@ -1411,7 +1417,7 @@
             <cells type="line">
                <cells>
                   <value>4</value>
-                  <label>"Leaving a mechanical object to control the nuclear power plant"</label>
+                  <label>Leaving a mechanical object to control the nuclear power plant</label>
                </cells>
                <cells id="j4nw0rr6-QOP-jbgdgh6k" componentType="Dropdown">
                   <options>
@@ -1487,31 +1493,31 @@
             <conditionFilter>if ((not( cast(READY,integer) &lt;&gt; '1') )) then "normal" else "hidden"</conditionFilter>
             <cells type="header">
                <cells headerCell="true">
-                  <label>""</label>
+                  <label/>
                </cells>
                <cells headerCell="true">
-                  <label>"Brazil"</label>
+                  <label>Brazil</label>
                </cells>
                <cells headerCell="true">
-                  <label>"Canada"</label>
+                  <label>Canada</label>
                </cells>
                <cells headerCell="true">
-                  <label>"Japan"</label>
+                  <label>Japan</label>
                </cells>
                <cells headerCell="true">
-                  <label>"France"</label>
+                  <label>France</label>
                </cells>
                <cells headerCell="true">
-                  <label>"Other country"</label>
+                  <label>Other country</label>
                </cells>
                <cells headerCell="true">
-                  <label>"Other planet"</label>
+                  <label>Other planet</label>
                </cells>
             </cells>
             <cells type="line">
                <cells>
                   <value>1</value>
-                  <label>"Car"</label>
+                  <label>Car</label>
                </cells>
                <cells id="j6p2lwuj-QOP-jbgd92mb" componentType="CheckboxBoolean">
                   <response name="TRAVEL11" xsi:type="ResponseContainerBoolean">
@@ -1631,7 +1637,7 @@
             <cells type="line">
                <cells>
                   <value>2</value>
-                  <label>"Bike"</label>
+                  <label>Bike</label>
                </cells>
                <cells id="j6p2lwuj-QOP-jbgdgsat" componentType="CheckboxBoolean">
                   <response name="TRAVEL21" xsi:type="ResponseContainerBoolean">
@@ -1751,7 +1757,7 @@
             <cells type="line">
                <cells>
                   <value>3</value>
-                  <label>"Skateboard"</label>
+                  <label>Skateboard</label>
                </cells>
                <cells id="j6p2lwuj-QOP-jbgdaxk2" componentType="CheckboxBoolean">
                   <response name="TRAVEL31" xsi:type="ResponseContainerBoolean">
@@ -1871,7 +1877,7 @@
             <cells type="line">
                <cells>
                   <value>4</value>
-                  <label>"Plane"</label>
+                  <label>Plane</label>
                </cells>
                <cells id="j6p2lwuj-QOP-jbgd7myn" componentType="CheckboxBoolean">
                   <response name="TRAVEL41" xsi:type="ResponseContainerBoolean">
@@ -2002,10 +2008,10 @@
          <conditionFilter>if ((not( cast(READY,integer) &lt;&gt; '1') )) then "normal" else "hidden"</conditionFilter>
          <cells type="header">
             <cells headerCell="true">
-               <label>"Name"</label>
+               <label>Name</label>
             </cells>
             <cells headerCell="true">
-               <label>"Age"</label>
+               <label>Age</label>
             </cells>
          </cells>
          <lines min="1" max="10"/>
