@@ -135,6 +135,7 @@
 							<sources>
 								<source>src/main/resources/xsd/LunaticModelFlat.xsd</source>
 							</sources>
+							<clearOutputDir>false</clearOutputDir>
 						</configuration>
 					</execution>
 					<execution>
