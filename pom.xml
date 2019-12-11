@@ -169,7 +169,7 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${project.build.directory}/generated-sources/jaxb/fr/insee/lunatic/model/flat</outputDirectory>
+							<outputDirectory>${project.build.directory}/classes/fr/insee/lunatic/model/flat</outputDirectory>
 							<resources>
 								<resource>
 									<directory>${basedir}/src/main/resources/jaxb</directory>
@@ -188,7 +188,7 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>${project.build.directory}/generated-sources/jaxb/fr/insee/lunatic/model/hierarchical</outputDirectory>
+							<outputDirectory>${project.build.directory}/classes/fr/insee/lunatic/model/hierarchical</outputDirectory>
 							<resources>
 								<resource>
 									<directory>${basedir}/src/main/resources/jaxb</directory>
