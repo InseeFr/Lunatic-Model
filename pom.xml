@@ -135,7 +135,6 @@
 							<sources>
 								<source>src/main/resources/xsd/LunaticModelFlat.xsd</source>
 							</sources>
-							<clearOutputDir>false</clearOutputDir>
 						</configuration>
 					</execution>
 					<execution>
@@ -165,16 +164,33 @@
 				<executions>
 					<execution>
 						<id>copy-resources</id>
-						<phase>process-resources</phase>
+						<phase>process-sources</phase>
 						<goals>
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
 							<outputDirectory>${project.build.directory}/generated-sources/jaxb/fr/insee/lunatic/model/flat</outputDirectory>
+							<resources>
+								<resource>
+									<directory>${basedir}/src/main/resources/jaxb</directory>
+									<includes>
+										<include>jaxb.properties</include>
+									</includes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+					<execution>
+						<id>copy-resources-2</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
 							<outputDirectory>${project.build.directory}/generated-sources/jaxb/fr/insee/lunatic/model/hierarchical</outputDirectory>
 							<resources>
 								<resource>
-									<directory>src/main/resources/jaxb</directory>
+									<directory>${basedir}/src/main/resources/jaxb</directory>
 									<includes>
 										<include>jaxb.properties</include>
 									</includes>
@@ -191,7 +207,7 @@
 				<executions>
 					<execution>
 						<id>add-source</id>
-						<phase>generate-sources</phase>
+						<phase>compile</phase>
 						<goals>
 							<goal>add-source</goal>
 						</goals>
