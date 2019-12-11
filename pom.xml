@@ -164,7 +164,7 @@
 				<executions>
 					<execution>
 						<id>copy-resources</id>
-						<phase>initialize</phase>
+						<phase>prepare-package</phase>
 						<goals>
 							<goal>copy-resources</goal>
 						</goals>
@@ -182,7 +182,7 @@
 					</execution>
 					<execution>
 						<id>copy-resources-2</id>
-						<phase>initialize</phase>
+						<phase>prepare-package</phase>
 						<goals>
 							<goal>copy-resources</goal>
 						</goals>
