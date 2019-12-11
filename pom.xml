@@ -164,7 +164,7 @@
 				<executions>
 					<execution>
 						<id>copy-resources</id>
-						<phase>process-resources</phase>
+						<phase>process-sources</phase>
 						<goals>
 							<goal>copy-resources</goal>
 						</goals>
@@ -182,13 +182,12 @@
 					</execution>
 					<execution>
 						<id>copy-resources-2</id>
-						<phase>process-resources</phase>
+						<phase>process-sources</phase>
 						<goals>
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
 							<outputDirectory>${project.build.directory}/generated-sources/jaxb/fr/insee/lunatic/model/hierarchical</outputDirectory>
-							<outputDirectory>${project.build.directory}/classes/fr/insee/lunatic/model/hierarchical</outputDirectory>
 							<resources>
 								<resource>
 									<directory>src/main/resources/jaxb</directory>
