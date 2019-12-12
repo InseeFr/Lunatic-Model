@@ -268,7 +268,7 @@
   <xs:complexType name="FilterDescription">
     <xs:complexContent>
       <xs:extension base="ComponentType">
-        <xs:attribute name="management" type="xs:boolean"/>
+        <xs:attribute name="filterDescription" type="xs:boolean"/>
       </xs:extension>
     </xs:complexContent>
   </xs:complexType>
