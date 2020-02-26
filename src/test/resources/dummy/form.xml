@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Questionnaire xmlns="http://xml.insee.fr/schema/applis/lunatic-h"
                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-               id="i6vwi0">
+               id="i6vwi0"
+               modele="SIMPSONS">
    <label>Questionnaire SIMPSONS</label>
    <components xsi:type="Sequence" componentType="Sequence" id="j6p0ti5h">
       <label>"I - Introduction"</label>
@@ -63,7 +64,7 @@
       <components xsi:type="FilterDescription"
                   componentType="FilterDescription"
                   id="j6p6my1d"
-                  management="false">
+                  filterDescription="false">
          <label>"If you are not ready, please go to the end of the questionnaire"</label>
       </components>
       <components xsi:type="Subsequence" componentType="Subsequence" id="j6p0s7o5">

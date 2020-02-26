@@ -5,7 +5,7 @@
 	<groupId>fr.insee.lunatic</groupId>
 	<artifactId>lunatic-model</artifactId>
 	<packaging>jar</packaging>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>Lunatic Model</name>
 	<description>Classes and converters for the Lunatic model</description>
 	<url>http://www.insee.fr</url>
@@ -29,6 +29,7 @@
 			<groupId>org.eclipse.persistence</groupId>
 			<artifactId>org.eclipse.persistence.moxy</artifactId>
 			<version>2.6.0</version>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.persistence</groupId>
@@ -113,7 +114,8 @@
 					<encoding>UTF-8</encoding>
 					<inputEncoding>UTF-8</inputEncoding>
 					<outputEncoding>UTF-8</outputEncoding>
-					<argLine>-Dfile.encoding=UTF-8 -Djavax.xml.bind.context.factory=org.eclipse.persistence.jaxb.JAXBContextFactory</argLine>
+					<argLine>-Dfile.encoding=UTF-8
+						-Djavax.xml.bind.context.factory=org.eclipse.persistence.jaxb.JAXBContextFactory</argLine>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -167,13 +169,14 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>target/generated-sources/jaxb/fr/insee/lunatic/model/flat</outputDirectory>
+							<outputDirectory>${project.build.directory}/classes/fr/insee/lunatic/model/flat</outputDirectory>
 							<resources>
 								<resource>
-									<directory>src/main/resources/jaxb</directory>
+									<directory>${basedir}/src/main/resources/jaxb</directory>
 									<includes>
 										<include>jaxb.properties</include>
 									</includes>
+									<filtering>true</filtering>
 								</resource>
 							</resources>
 						</configuration>
@@ -185,13 +188,14 @@
 							<goal>copy-resources</goal>
 						</goals>
 						<configuration>
-							<outputDirectory>target/generated-sources/jaxb/fr/insee/lunatic/model/hierarchical</outputDirectory>
+							<outputDirectory>${project.build.directory}/classes/fr/insee/lunatic/model/hierarchical</outputDirectory>
 							<resources>
 								<resource>
-									<directory>src/main/resources/jaxb</directory>
+									<directory>${basedir}/src/main/resources/jaxb</directory>
 									<includes>
 										<include>jaxb.properties</include>
 									</includes>
+									<filtering>true</filtering>
 								</resource>
 							</resources>
 						</configuration>
@@ -205,7 +209,7 @@
 				<executions>
 					<execution>
 						<id>add-source</id>
-						<phase>generate-sources</phase>
+						<phase>compile</phase>
 						<goals>
 							<goal>add-source</goal>
 						</goals>
