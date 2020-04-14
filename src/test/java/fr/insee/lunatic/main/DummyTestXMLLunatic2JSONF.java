@@ -25,8 +25,10 @@ public class DummyTestXMLLunatic2JSONF {
 
 		try {
 			Path outPath = Paths.get(Constants.TEMP_FOLDER_PATH + "/out-F.json");
+			Path outPath_xml_temp = Paths.get(Constants.TEMP_FOLDER_PATH + "/out-F-temp.xml");
 			Path outPath_temp = Paths.get(Constants.TEMP_FOLDER_PATH + "/out-F-temp.json");
 			Files.deleteIfExists(outPath);
+			Files.deleteIfExists(outPath_xml_temp);
 			Files.deleteIfExists(outPath_temp);
 			Path outputFile = Files.createFile(outPath);
 			Path outputFile_temp = Files.createFile(outPath_temp);
@@ -35,8 +37,9 @@ public class DummyTestXMLLunatic2JSONF {
 			XMLLunaticFlatToJSONLunaticFlatTranslator translator2 = new XMLLunaticFlatToJSONLunaticFlatTranslator();
 			JSONCleaner jsonCleaner = new JSONCleaner();
 			
-			
-			String jsonQuestionnaire_temp = translator2.translate(translator.generate(in));
+			String xmlFlatQuestionnaire = translator.generate(in);
+			Files.write(outPath_xml_temp,xmlFlatQuestionnaire.getBytes("UTF-8"));
+			String jsonQuestionnaire_temp = translator2.translate(xmlFlatQuestionnaire);
 			Files.write(outputFile_temp, jsonQuestionnaire_temp.getBytes("UTF-8"));
 			String jsonQuestionnaire = jsonCleaner.clean(jsonQuestionnaire_temp);
 			Files.write(outputFile, jsonQuestionnaire.getBytes("UTF-8"));
