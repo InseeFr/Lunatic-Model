@@ -123,7 +123,6 @@
 	<xsl:template match="h:response">
 		<response>
 			<xsl:copy-of select="@*"/>
-			<xsl:apply-templates  select="h:valueState"/>
 		</response>
 	</xsl:template>
 	
@@ -185,6 +184,7 @@
 				</xsl:when>
 			</xsl:choose>
 			<xsl:apply-templates select="h:value"/>
+			<xsl:apply-templates select="h:valueState"/>
 		</variables>
 	</xsl:template>
 </xsl:stylesheet>
