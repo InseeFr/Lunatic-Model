@@ -27,7 +27,7 @@
     <xs:complexType name="VariableType">
         <xs:sequence>
             <xs:element name="name" type="xs:string"/>
-            <xs:element name="responseRef" type="xs:string" minOccurs="0"/>
+            <xs:element name="componentRef" type="xs:string" minOccurs="0"/>
             <xs:element name="value" type="xs:string" nillable="true" minOccurs="0"/>
             <xs:element name="expression" type="xs:string" minOccurs="0"/>
             <xs:element name="valueState" type="ValueStateType" minOccurs="0" maxOccurs="unbounded"/>
