@@ -37,9 +37,7 @@
 	<xsl:template match="h:components[@xsi:type='Sequence' or @xsi:type='Subsequence']">
 		<components>
 			<xsl:copy-of select="@*"/>
-			<xsl:apply-templates select="h:label"/>
-			<xsl:apply-templates select="h:declarations"/>
-			<xsl:apply-templates select="h:conditionFilter"/>
+			<xsl:apply-templates select="*[not(self::h:components)]"/>
 		</components>
 		<xsl:apply-templates select="h:components"/>
 	</xsl:template>
@@ -76,6 +74,10 @@
 	
 	<xsl:template match="h:conditionFilter">
 		<conditionFilter><xsl:value-of select="."/></conditionFilter>
+	</xsl:template>
+
+	<xsl:template match="h:bindingsDependency">
+		<bindingsDependency><xsl:value-of select="."/></bindingsDependency>
 	</xsl:template>
 	
 	<xsl:template match="h:declarations">
