@@ -38,6 +38,7 @@ Tous les composants (excepté Sequence et Subsequence) ont au moins ces attribut
   "label":"label",
   "declarations":[...],
   "conditionFilter":"...",
+  "bindingsDependency": true/false,
   "mandatory":true
 }
 ```
@@ -47,6 +48,7 @@ Tous les composants (excepté Sequence et Subsequence) ont au moins ces attribut
 - `label` : label de la question associée au composant
 - `declarations` : liste des déclarations éventuelles associées au composant.
 - `conditionFilter` : filtre écrit dans le langage VTL pour savoir s'il faut afficher ou non le questionnaire.
+- `bindingsDependency` : boolean : true si le composant (ses labels, filtres, declarations) est dépendant de variables (autre que celles qui collecte lui-même)
 - `mandatory` : booléen qui définit si la réponse est obligatoire ou non
 
 ---
