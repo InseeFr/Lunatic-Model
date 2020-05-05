@@ -86,16 +86,8 @@ Les composants qui ont pour but de collecter des réponses ont un attribut "resp
 ```json
 "response" :
   {
-    "name" : "idVariable",
-    "valueState" :
-      [
-        { "valueType" : "PREVIOUS", "value" : null },
-        { "valueType" : "COLLECTED", "value" : null },
-        { "valueType" : "FORCED", "value" : null },
-        { "valueType" : "EDITED", "value" : null },
-        { "valueType" : "INPUTED", "value" : null },
-      ]
+    "name" : "idVariable"    
   }
 ```
 
-L'attribut `name` faisant référence à l'attribut `responseRef` d'une variable dans le tableau `variables` en fin de questionnaire.
+L'attribut `name` faisant référence à l'attribut `name` d'une variable dans le tableau `variables` en fin de questionnaire.
