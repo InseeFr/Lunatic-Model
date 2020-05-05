@@ -1155,7 +1155,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "COMMENT",
-      "responseRef" : "COMMENT",
+      "componentRef" : "j6p3dkx6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1175,7 +1175,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "READY",
-      "responseRef" : "READY",
+      "componentRef" : "j6p0np9q",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1195,7 +1195,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "PRODUCER",
-      "responseRef" : "PRODUCER",
+      "componentRef" : "j3343qhx",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1215,7 +1215,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "SEASON_NUMBER",
-      "responseRef" : "SEASON_NUMBER",
+      "componentRef" : "j6q9h8tj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1235,7 +1235,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "DATEFIRST",
-      "responseRef" : "DATEFIRST",
+      "componentRef" : "j334cyqb",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1255,7 +1255,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "AUDIENCE_SHARE",
-      "responseRef" : "AUDIENCE_SHARE",
+      "componentRef" : "j6z06z1e",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1275,7 +1275,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "CITY",
-      "responseRef" : "CITY",
+      "componentRef" : "j3343clt",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1295,7 +1295,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "MAYOR",
-      "responseRef" : "MAYOR",
+      "componentRef" : "j6qdfhvw",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1315,7 +1315,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "STATE",
-      "responseRef" : "STATE",
+      "componentRef" : "j4nw5cqz",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1335,7 +1335,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "PET1",
-      "responseRef" : "PET1",
+      "componentRef" : "j334akov",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1355,7 +1355,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "PET2",
-      "responseRef" : "PET2",
+      "componentRef" : "j334akov",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1375,7 +1375,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "PET3",
-      "responseRef" : "PET3",
+      "componentRef" : "j334akov",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1395,7 +1395,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "PET4",
-      "responseRef" : "PET4",
+      "componentRef" : "j334akov",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1415,7 +1415,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "ICE_FLAVOUR1",
-      "responseRef" : "ICE_FLAVOUR1",
+      "componentRef" : "j6p29i81",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1435,7 +1435,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "ICE_FLAVOUR2",
-      "responseRef" : "ICE_FLAVOUR2",
+      "componentRef" : "j6p29i81",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1455,7 +1455,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "ICE_FLAVOUR3",
-      "responseRef" : "ICE_FLAVOUR3",
+      "componentRef" : "j6p29i81",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1475,7 +1475,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "ICE_FLAVOUR4",
-      "responseRef" : "ICE_FLAVOUR4",
+      "componentRef" : "j6p29i81",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1495,7 +1495,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "NUCLEAR_CHARACTER1",
-      "responseRef" : "NUCLEAR_CHARACTER1",
+      "componentRef" : "j6qefnga",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1515,7 +1515,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "NUCLEAR_CHARACTER2",
-      "responseRef" : "NUCLEAR_CHARACTER2",
+      "componentRef" : "j6qefnga",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1535,7 +1535,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "NUCLEAR_CHARACTER3",
-      "responseRef" : "NUCLEAR_CHARACTER3",
+      "componentRef" : "j6qefnga",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1555,7 +1555,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "NUCLEAR_CHARACTER4",
-      "responseRef" : "NUCLEAR_CHARACTER4",
+      "componentRef" : "j6qefnga",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1575,7 +1575,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "BIRTH_CHARACTER1",
-      "responseRef" : "BIRTH_CHARACTER1",
+      "componentRef" : "j6yzoc6g",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1595,7 +1595,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "BIRTH_CHARACTER2",
-      "responseRef" : "BIRTH_CHARACTER2",
+      "componentRef" : "j6yzoc6g",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1615,7 +1615,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "BIRTH_CHARACTER3",
-      "responseRef" : "BIRTH_CHARACTER3",
+      "componentRef" : "j6yzoc6g",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1635,7 +1635,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "BIRTH_CHARACTER4",
-      "responseRef" : "BIRTH_CHARACTER4",
+      "componentRef" : "j6yzoc6g",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1655,7 +1655,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "BIRTH_CHARACTER5",
-      "responseRef" : "BIRTH_CHARACTER5",
+      "componentRef" : "j6yzoc6g",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1675,7 +1675,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "PERCENTAGE_EXPENSES11",
-      "responseRef" : "PERCENTAGE_EXPENSES11",
+      "componentRef" : "j4nwc63q",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1695,7 +1695,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "PERCENTAGE_EXPENSES21",
-      "responseRef" : "PERCENTAGE_EXPENSES21",
+      "componentRef" : "j4nwc63q",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1715,7 +1715,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "PERCENTAGE_EXPENSES31",
-      "responseRef" : "PERCENTAGE_EXPENSES31",
+      "componentRef" : "j4nwc63q",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1735,7 +1735,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "PERCENTAGE_EXPENSES41",
-      "responseRef" : "PERCENTAGE_EXPENSES41",
+      "componentRef" : "j4nwc63q",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1755,7 +1755,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "PERCENTAGE_EXPENSES51",
-      "responseRef" : "PERCENTAGE_EXPENSES51",
+      "componentRef" : "j4nwc63q",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1775,7 +1775,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "PERCENTAGE_EXPENSES61",
-      "responseRef" : "PERCENTAGE_EXPENSES61",
+      "componentRef" : "j4nwc63q",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1795,7 +1795,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "PERCENTAGE_EXPENSES71",
-      "responseRef" : "PERCENTAGE_EXPENSES71",
+      "componentRef" : "j4nwc63q",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1815,7 +1815,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING11",
-      "responseRef" : "CLOWNING11",
+      "componentRef" : "j4nw0rr6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1835,7 +1835,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING12",
-      "responseRef" : "CLOWNING12",
+      "componentRef" : "j4nw0rr6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1855,7 +1855,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING21",
-      "responseRef" : "CLOWNING21",
+      "componentRef" : "j4nw0rr6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1875,7 +1875,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING22",
-      "responseRef" : "CLOWNING22",
+      "componentRef" : "j4nw0rr6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1895,7 +1895,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING31",
-      "responseRef" : "CLOWNING31",
+      "componentRef" : "j4nw0rr6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1915,7 +1915,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING32",
-      "responseRef" : "CLOWNING32",
+      "componentRef" : "j4nw0rr6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1935,7 +1935,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING41",
-      "responseRef" : "CLOWNING41",
+      "componentRef" : "j4nw0rr6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1955,7 +1955,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING42",
-      "responseRef" : "CLOWNING42",
+      "componentRef" : "j4nw0rr6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1975,7 +1975,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL11",
-      "responseRef" : "TRAVEL11",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -1995,7 +1995,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL12",
-      "responseRef" : "TRAVEL12",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2015,7 +2015,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL13",
-      "responseRef" : "TRAVEL13",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2035,7 +2035,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL14",
-      "responseRef" : "TRAVEL14",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2055,7 +2055,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL15",
-      "responseRef" : "TRAVEL15",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2075,7 +2075,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL16",
-      "responseRef" : "TRAVEL16",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2095,7 +2095,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL21",
-      "responseRef" : "TRAVEL21",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2115,7 +2115,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL22",
-      "responseRef" : "TRAVEL22",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2135,7 +2135,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL23",
-      "responseRef" : "TRAVEL23",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2155,7 +2155,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL24",
-      "responseRef" : "TRAVEL24",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2175,7 +2175,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL25",
-      "responseRef" : "TRAVEL25",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2195,7 +2195,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL26",
-      "responseRef" : "TRAVEL26",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2215,7 +2215,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL31",
-      "responseRef" : "TRAVEL31",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2235,7 +2235,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL32",
-      "responseRef" : "TRAVEL32",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2255,7 +2255,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL33",
-      "responseRef" : "TRAVEL33",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2275,7 +2275,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL34",
-      "responseRef" : "TRAVEL34",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2295,7 +2295,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL35",
-      "responseRef" : "TRAVEL35",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2315,7 +2315,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL36",
-      "responseRef" : "TRAVEL36",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2335,7 +2335,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL41",
-      "responseRef" : "TRAVEL41",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2355,7 +2355,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL42",
-      "responseRef" : "TRAVEL42",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2375,7 +2375,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL43",
-      "responseRef" : "TRAVEL43",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2395,7 +2395,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL44",
-      "responseRef" : "TRAVEL44",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2415,7 +2415,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL45",
-      "responseRef" : "TRAVEL45",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2435,7 +2435,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL46",
-      "responseRef" : "TRAVEL46",
+      "componentRef" : "j6p2lwuj",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2455,7 +2455,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS11",
-      "responseRef" : "FAVOURITE_CHARACTERS11",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2475,7 +2475,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS12",
-      "responseRef" : "FAVOURITE_CHARACTERS12",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2495,7 +2495,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS21",
-      "responseRef" : "FAVOURITE_CHARACTERS21",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2515,7 +2515,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS22",
-      "responseRef" : "FAVOURITE_CHARACTERS22",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2535,7 +2535,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS31",
-      "responseRef" : "FAVOURITE_CHARACTERS31",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2555,7 +2555,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS32",
-      "responseRef" : "FAVOURITE_CHARACTERS32",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2575,7 +2575,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS41",
-      "responseRef" : "FAVOURITE_CHARACTERS41",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2595,7 +2595,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS42",
-      "responseRef" : "FAVOURITE_CHARACTERS42",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2615,7 +2615,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS51",
-      "responseRef" : "FAVOURITE_CHARACTERS51",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2635,7 +2635,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS52",
-      "responseRef" : "FAVOURITE_CHARACTERS52",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2655,7 +2655,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS61",
-      "responseRef" : "FAVOURITE_CHARACTERS61",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2675,7 +2675,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS62",
-      "responseRef" : "FAVOURITE_CHARACTERS62",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2695,7 +2695,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS71",
-      "responseRef" : "FAVOURITE_CHARACTERS71",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2715,7 +2715,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS72",
-      "responseRef" : "FAVOURITE_CHARACTERS72",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2735,7 +2735,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS81",
-      "responseRef" : "FAVOURITE_CHARACTERS81",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2755,7 +2755,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS82",
-      "responseRef" : "FAVOURITE_CHARACTERS82",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2775,7 +2775,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS91",
-      "responseRef" : "FAVOURITE_CHARACTERS91",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2795,7 +2795,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS92",
-      "responseRef" : "FAVOURITE_CHARACTERS92",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2815,7 +2815,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS101",
-      "responseRef" : "FAVOURITE_CHARACTERS101",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2835,7 +2835,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS102",
-      "responseRef" : "FAVOURITE_CHARACTERS102",
+      "componentRef" : "j6qg8rc6",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
@@ -2855,7 +2855,7 @@
 
     { "variableType" : "COLLECTED",
       "name" : "SURVEY_COMMENT",
-      "responseRef" : "SURVEY_COMMENT",
+      "componentRef" : "j6z0z3us",
       "valueState" :
       [
         { "valueType" : "PREVIOUS",
