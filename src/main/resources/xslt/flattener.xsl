@@ -75,7 +75,7 @@
 	</xsl:template>
 	
 	<xsl:template match="h:conditionFilter">
-		<conditionFilter><xsl:value-of select="normalize-space(.)"/></conditionFilter>
+		<conditionFilter><xsl:value-of select="."/></conditionFilter>
 	</xsl:template>
 	
 	<xsl:template match="h:declarations">
@@ -180,7 +180,7 @@
 					<componentRef><xsl:value-of select="$componentRef"/></componentRef>
 				</xsl:when>
 				<xsl:when test="$expression!=''">
-					<expression><xsl:value-of select="normalize-space($expression)"/></expression>
+					<expression><xsl:value-of select="$expression"/></expression>
 				</xsl:when>
 			</xsl:choose>
 			<xsl:apply-templates select="h:value"/>
