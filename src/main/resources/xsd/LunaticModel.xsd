@@ -30,7 +30,7 @@
             <xs:element name="componentRef" type="xs:string" minOccurs="0"/>
             <xs:element name="value" type="xs:string" nillable="true" minOccurs="0"/>
             <xs:element name="expression" type="xs:string" minOccurs="0"/>
-            <xs:element name="valueState" type="ValueStateType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="values" type="ValuesType" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
         <xs:attribute name="variableType" type="VariableTypeEnum"/>
     </xs:complexType>
@@ -101,25 +101,15 @@
         <xs:attribute name="name" type="xs:string"/>
     </xs:complexType>
 
-    <xs:complexType name="ValueStateType">
+    <xs:complexType name="ValuesType">
         <xs:sequence>
-            <xs:element name="value" type="xs:string" nillable="true"/>
-            <xs:element name="responseComment" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="PREVIOUS" type="xs:string" nillable="true"/>
+            <xs:element name="COLLECTED" type="xs:string" nillable="true"/>
+            <xs:element name="FORCED" type="xs:string" nillable="true"/>
+            <xs:element name="EDITED" type="xs:string" nillable="true"/>
+            <xs:element name="INPUTED" type="xs:string" nillable="true"/>
         </xs:sequence>
-        <xs:attribute name="valueType" type="ValueStateTypeEnum"/>
     </xs:complexType>
-
-    <xs:simpleType name="ValueStateTypeEnum">
-        <xs:restriction base="xs:token">
-            <xs:enumeration value="PREVIOUS"/>
-            <xs:enumeration value="COLLECTED"/>
-            <!-- FORCED: automatic correction -->
-            <xs:enumeration value="FORCED"/>
-            <!-- EDITED: value edited by an expert -->
-            <xs:enumeration value="EDITED"/>
-            <xs:enumeration value="INPUTED"/>
-        </xs:restriction>
-    </xs:simpleType>
 
     <xs:simpleType name="VariableTypeEnum">
         <xs:restriction base="xs:token">

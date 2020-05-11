@@ -136,11 +136,42 @@
 	</xsl:template>
 	
 	
-	<xsl:template match="h:valueState">
-		<valueState>
+	<xsl:template match="h:values">
+		<values>
 			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates/>
-		</valueState>
+		</values>
+	</xsl:template>
+
+	<xsl:template match="h:PREVIOUS">
+		<PREVIOUS>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates/>
+		</PREVIOUS>
+	</xsl:template>
+	<xsl:template match="h:COLLECTED">
+		<COLLECTED>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates/>
+		</COLLECTED>
+	</xsl:template>
+	<xsl:template match="h:FORCED">
+		<FORCED>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates/>
+		</FORCED>
+	</xsl:template>
+	<xsl:template match="h:EDITED">
+		<EDITED>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates/>
+		</EDITED>
+	</xsl:template>
+	<xsl:template match="h:INPUTED">
+		<INPUTED>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates/>
+		</INPUTED>
 	</xsl:template>
 	
 	<xsl:template match="h:codeLists">
@@ -186,7 +217,7 @@
 				</xsl:when>
 			</xsl:choose>
 			<xsl:apply-templates select="h:value"/>
-			<xsl:apply-templates select="h:valueState"/>
+			<xsl:apply-templates select="h:values"/>
 		</variables>
 	</xsl:template>
 </xsl:stylesheet>

@@ -1195,1722 +1195,862 @@
     { "variableType" : "COLLECTED",
       "name" : "COMMENT",
       "componentRef" : "j6p3dkx6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "READY",
       "componentRef" : "j6p0np9q",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "PRODUCER",
       "componentRef" : "j3343qhx",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "SEASON_NUMBER",
       "componentRef" : "j6q9h8tj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "DATEFIRST",
       "componentRef" : "j334cyqb",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "AUDIENCE_SHARE",
       "componentRef" : "j6z06z1e",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "CITY",
       "componentRef" : "j3343clt",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "MAYOR",
       "componentRef" : "j6qdfhvw",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "STATE",
       "componentRef" : "j4nw5cqz",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "PET1",
       "componentRef" : "j334akov",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "PET2",
       "componentRef" : "j334akov",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "PET3",
       "componentRef" : "j334akov",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "PET4",
       "componentRef" : "j334akov",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "ICE_FLAVOUR1",
       "componentRef" : "j6p29i81",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "ICE_FLAVOUR2",
       "componentRef" : "j6p29i81",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "ICE_FLAVOUR3",
       "componentRef" : "j6p29i81",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "ICE_FLAVOUR4",
       "componentRef" : "j6p29i81",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "NUCLEAR_CHARACTER1",
       "componentRef" : "j6qefnga",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "NUCLEAR_CHARACTER2",
       "componentRef" : "j6qefnga",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "NUCLEAR_CHARACTER3",
       "componentRef" : "j6qefnga",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "NUCLEAR_CHARACTER4",
       "componentRef" : "j6qefnga",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "BIRTH_CHARACTER1",
       "componentRef" : "j6yzoc6g",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "BIRTH_CHARACTER2",
       "componentRef" : "j6yzoc6g",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "BIRTH_CHARACTER3",
       "componentRef" : "j6yzoc6g",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "BIRTH_CHARACTER4",
       "componentRef" : "j6yzoc6g",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "BIRTH_CHARACTER5",
       "componentRef" : "j6yzoc6g",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "PERCENTAGE_EXPENSES11",
       "componentRef" : "j4nwc63q",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "PERCENTAGE_EXPENSES21",
       "componentRef" : "j4nwc63q",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "PERCENTAGE_EXPENSES31",
       "componentRef" : "j4nwc63q",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "PERCENTAGE_EXPENSES41",
       "componentRef" : "j4nwc63q",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "PERCENTAGE_EXPENSES51",
       "componentRef" : "j4nwc63q",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "PERCENTAGE_EXPENSES61",
       "componentRef" : "j4nwc63q",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "PERCENTAGE_EXPENSES71",
       "componentRef" : "j4nwc63q",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING11",
       "componentRef" : "j4nw0rr6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING12",
       "componentRef" : "j4nw0rr6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING21",
       "componentRef" : "j4nw0rr6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING22",
       "componentRef" : "j4nw0rr6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING31",
       "componentRef" : "j4nw0rr6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING32",
       "componentRef" : "j4nw0rr6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING41",
       "componentRef" : "j4nw0rr6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "CLOWNING42",
       "componentRef" : "j4nw0rr6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL11",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL12",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL13",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL14",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL15",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL16",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL21",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL22",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL23",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL24",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL25",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL26",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL31",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL32",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL33",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL34",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL35",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL36",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL41",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL42",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL43",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL44",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL45",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "TRAVEL46",
       "componentRef" : "j6p2lwuj",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS11",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS12",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS21",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS22",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS31",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS32",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS41",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS42",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS51",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS52",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS61",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS62",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS71",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS72",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS81",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS82",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS91",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS92",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS101",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "FAVOURITE_CHARACTERS102",
       "componentRef" : "j6qg8rc6",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "COLLECTED",
       "name" : "SURVEY_COMMENT",
       "componentRef" : "j6z0z3us",
-      "valueState" :
-      [
-        { "valueType" : "PREVIOUS",
-          "value" : null },
-
-        { "valueType" : "COLLECTED",
-          "value" : null },
-
-        { "valueType" : "FORCED",
-          "value" : null },
-
-        { "valueType" : "EDITED",
-          "value" : null },
-
-        { "valueType" : "INPUTED",
-          "value" : null } ] },
+      "values" :
+      { "PREVIOUS" : null,
+        "COLLECTED" : null,
+        "FORCED" : null,
+        "EDITED" : null,
+        "INPUTED" : null } },
 
     { "variableType" : "CALCULATED",
       "name" : "SUM_EXPENSES",
