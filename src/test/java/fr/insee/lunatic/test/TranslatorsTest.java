@@ -43,7 +43,7 @@ public class TranslatorsTest {
 			Files.deleteIfExists(outPath);
 			Path outputFile = Files.createFile(outPath);
 			
-			File in = new File(String.format("%s/in.xml", basePath));
+			File in = new File(String.format("%s/form_flat.xml", Constants.RESOURCES_FOLDER_DUMMY_PATH));
 			
 			XMLLunaticFlatToJSONLunaticFlatTranslator translator = new XMLLunaticFlatToJSONLunaticFlatTranslator();
 			JSONCleaner jsonCleaner = new JSONCleaner();
@@ -83,7 +83,7 @@ public class TranslatorsTest {
 			Files.deleteIfExists(outPath);
 			Path outputFile = Files.createFile(outPath);
 			
-			File in = new File(String.format("%s/in.xml", basePath));
+			File in = new File(String.format("%s/form.xml",  Constants.RESOURCES_FOLDER_DUMMY_PATH));
 			
 			XMLLunaticToXMLLunaticFlatTranslator translator = new XMLLunaticToXMLLunaticFlatTranslator();
 
@@ -121,7 +121,7 @@ public class TranslatorsTest {
 			Files.deleteIfExists(outPath);
 			Path outputFile = Files.createFile(outPath);
 
-			File in = new File(String.format("%s/in.xml", basePath));
+			File in = new File(String.format("%s/form.xml",  Constants.RESOURCES_FOLDER_DUMMY_PATH));
 			
 			XMLLunaticToXMLLunaticFlatTranslator translator = new XMLLunaticToXMLLunaticFlatTranslator();
 			XMLLunaticFlatToJSONLunaticFlatTranslator translator2 = new XMLLunaticFlatToJSONLunaticFlatTranslator();
@@ -163,7 +163,7 @@ public class TranslatorsTest {
 			Files.deleteIfExists(outPath);
 			Path outputFile = Files.createFile(outPath);
 			
-			File in = new File(String.format("%s/in.xml", basePath));
+			File in = new File(String.format("%s/form.xml",  Constants.RESOURCES_FOLDER_DUMMY_PATH));
 
 			XMLLunaticToJSONLunaticTranslator translator = new XMLLunaticToJSONLunaticTranslator();
 			JSONCleaner jsonCleaner = new JSONCleaner();
