@@ -38,6 +38,7 @@ Tous les composants (excepté Sequence et Subsequence) ont au moins ces attribut
   "label":"label",
   "declarations":[...],
   "conditionFilter":"...",
+  "bindingsDependency": true/false,
   "mandatory":true
 }
 ```
@@ -47,6 +48,7 @@ Tous les composants (excepté Sequence et Subsequence) ont au moins ces attribut
 - `label` : label de la question associée au composant
 - `declarations` : liste des déclarations éventuelles associées au composant.
 - `conditionFilter` : filtre écrit dans le langage VTL pour savoir s'il faut afficher ou non le questionnaire.
+- `bindingsDependency` : boolean : true si le composant (ses labels, filtres, declarations) est dépendant de variables (autre que celles qui collecte lui-même)
 - `mandatory` : booléen qui définit si la réponse est obligatoire ou non
 
 ---
@@ -86,16 +88,8 @@ Les composants qui ont pour but de collecter des réponses ont un attribut "resp
 ```json
 "response" :
   {
-    "name" : "idVariable",
-    "valueState" :
-      [
-        { "valueType" : "PREVIOUS", "value" : null },
-        { "valueType" : "COLLECTED", "value" : null },
-        { "valueType" : "FORCED", "value" : null },
-        { "valueType" : "EDITED", "value" : null },
-        { "valueType" : "INPUTED", "value" : null },
-      ]
+    "name" : "idVariable"    
   }
 ```
 
-L'attribut `name` faisant référence à l'attribut `responseRef` d'une variable dans le tableau `variables` en fin de questionnaire.
+L'attribut `name` faisant référence à l'attribut `name` d'une variable dans le tableau `variables` en fin de questionnaire.
