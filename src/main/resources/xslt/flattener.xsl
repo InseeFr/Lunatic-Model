@@ -37,7 +37,9 @@
 	<xsl:template match="h:components[@xsi:type='Sequence' or @xsi:type='Subsequence']">
 		<components>
 			<xsl:copy-of select="@*"/>
-			<xsl:apply-templates select="*[not(self::h:components)]"/>
+			<xsl:apply-templates select="h:label"/>
+			<xsl:apply-templates select="h:declarations"/>
+			<xsl:apply-templates select="h:conditionFilter"/>
 		</components>
 		<xsl:apply-templates select="h:components"/>
 	</xsl:template>
@@ -73,11 +75,7 @@
 	</xsl:template>
 	
 	<xsl:template match="h:conditionFilter">
-		<conditionFilter><xsl:value-of select="."/></conditionFilter>
-	</xsl:template>
-
-	<xsl:template match="h:bindingsDependency">
-		<bindingsDependency><xsl:value-of select="."/></bindingsDependency>
+		<conditionFilter><xsl:value-of select="normalize-space(.)"/></conditionFilter>
 	</xsl:template>
 	
 	<xsl:template match="h:declarations">
@@ -125,6 +123,7 @@
 	<xsl:template match="h:response">
 		<response>
 			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates  select="h:valueState"/>
 		</response>
 	</xsl:template>
 	
@@ -136,42 +135,11 @@
 	</xsl:template>
 	
 	
-	<xsl:template match="h:values">
-		<values>
+	<xsl:template match="h:valueState">
+		<valueState>
 			<xsl:copy-of select="@*"/>
 			<xsl:apply-templates/>
-		</values>
-	</xsl:template>
-
-	<xsl:template match="h:PREVIOUS">
-		<PREVIOUS>
-			<xsl:copy-of select="@*"/>
-			<xsl:apply-templates/>
-		</PREVIOUS>
-	</xsl:template>
-	<xsl:template match="h:COLLECTED">
-		<COLLECTED>
-			<xsl:copy-of select="@*"/>
-			<xsl:apply-templates/>
-		</COLLECTED>
-	</xsl:template>
-	<xsl:template match="h:FORCED">
-		<FORCED>
-			<xsl:copy-of select="@*"/>
-			<xsl:apply-templates/>
-		</FORCED>
-	</xsl:template>
-	<xsl:template match="h:EDITED">
-		<EDITED>
-			<xsl:copy-of select="@*"/>
-			<xsl:apply-templates/>
-		</EDITED>
-	</xsl:template>
-	<xsl:template match="h:INPUTED">
-		<INPUTED>
-			<xsl:copy-of select="@*"/>
-			<xsl:apply-templates/>
-		</INPUTED>
+		</valueState>
 	</xsl:template>
 	
 	<xsl:template match="h:codeLists">
@@ -203,21 +171,20 @@
 	</xsl:template>	
 	
 	<xsl:template match="h:variables">
-		<xsl:variable name="componentRef" select="h:componentRef"/>
+		<xsl:variable name="responseRef" select="h:responseRef"/>
 		<xsl:variable name="expression" select="h:expression"/>
 		<variables>
 			<xsl:copy-of select="@*"/>
 			<name><xsl:value-of select="h:name"/></name>
 			<xsl:choose>
-				<xsl:when test="$componentRef!=''">
-					<componentRef><xsl:value-of select="$componentRef"/></componentRef>
+				<xsl:when test="$responseRef!=''">
+					<responseRef><xsl:value-of select="$responseRef"/></responseRef>
 				</xsl:when>
 				<xsl:when test="$expression!=''">
-					<expression><xsl:value-of select="$expression"/></expression>
+					<expression><xsl:value-of select="normalize-space($expression)"/></expression>
 				</xsl:when>
 			</xsl:choose>
 			<xsl:apply-templates select="h:value"/>
-			<xsl:apply-templates select="h:values"/>
 		</variables>
 	</xsl:template>
 </xsl:stylesheet>
