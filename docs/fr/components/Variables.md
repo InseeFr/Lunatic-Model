@@ -19,16 +19,8 @@ Strucure du tableau `variables` :
   {
     "variableType": "COLLECTED",
     "name": "FAVOURITE_CHARACTERS",
-    "componentRef": "FAVOURITE_CHARACTERS_COMPONENT",
-    "valueState" :
-          [
-            { "valueType" : "PREVIOUS", "value" : null },
-            { "valueType" : "COLLECTED", "value" : null },
-            { "valueType" : "FORCED", "value" : null },
-            { "valueType" : "EDITED", "value" : null },
-            { "valueType" : "INPUTED", "value" : null }
-          ]
-      },
+    "responseRef": "FAVOURITE_CHARACTERS"
+  },
   {
     "variableType": "CALCULATED",
     "name": "SUM_EXPENSES",

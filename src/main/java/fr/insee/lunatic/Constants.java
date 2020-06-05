@@ -22,7 +22,7 @@ public class Constants {
 	public static final String TEMP_FOLDER_PATH = System.getProperty("java.io.tmpdir")+"/"+"lunatic-test";
 	public static final Path TEMP_FOLDER= getTempDir(TEMP_FOLDER_PATH);
 	public static final String RESOURCES_FOLDER_PATH = "src/test/resources/examples";
-	public static final String RESOURCES_FOLDER_DUMMY_PATH = "src/test/resources/dummy";
+	public static final String RESOURCES_FOLDER_JSONF_2_XMLF_PATH = RESOURCES_FOLDER_PATH +"/jsonf-2-xmlf";
 	public static final String RESOURCES_FOLDER_XMLF_2_JSONF_PATH = RESOURCES_FOLDER_PATH +"/xmlf-2-jsonf";
 	public static final String RESOURCES_FOLDER_XMLH_2_XMLF_PATH = RESOURCES_FOLDER_PATH +"/xmlh-2-xmlf";
 	public static final String RESOURCES_FOLDER_XMLH_2_JSONF_PATH = RESOURCES_FOLDER_PATH +"/xmlh-2-jsonf";
