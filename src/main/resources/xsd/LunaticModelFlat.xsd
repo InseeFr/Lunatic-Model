@@ -35,6 +35,17 @@
     <xs:attribute name="variableType" type="VariableTypeEnum"/>
   </xs:complexType>
 
+  <xs:complexType name="Loop">
+    <xs:complexContent>
+      <xs:extension base="ComponentType">
+        <xs:sequence>
+          <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute name="iterations" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
   <xs:complexType name="SequenceType">
     <xs:complexContent>
       <xs:extension base="ComponentType">
