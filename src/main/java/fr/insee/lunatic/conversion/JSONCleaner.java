@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fr.insee.lunatic.Constants;
+import fr.insee.lunatic.utils.XslTransformation;
 
 /**
  * remove technical attribute as xsi:type
