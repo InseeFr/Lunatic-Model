@@ -14,18 +14,34 @@
     </xsl:template>
     
     <xsl:template match="Questionnaire">
-       <!-- <xsl:variable name="testJSON">
-            <xsl:value-of select="'{&quot;test&quot;:[[{&quot;coucou&quot;:true}],[{&quot;coucou&quot;:false}]]}'"/>
-        </xsl:variable>-->
         <xsl:variable name="output-xml">
             <xsl:apply-templates select="json-to-xml(.)" mode="clean"/>
         </xsl:variable>
-        <!--<xsl:copy-of select="$output-xml"/>-->
+<!--        <xsl:copy-of select="$output-xml"/>-->
         <xsl:copy-of select="xml-to-json($output-xml, map{'indent':true()})"/>
     </xsl:template>
     
     <!-- delete type attribute -->
     <xsl:template match="*[@key='type']" mode="clean"/>
+     
+    <!-- transform array json data -->
+    <xsl:template match="*[@key=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTED')]" mode="clean">
+        <xsl:copy>
+            <xsl:if test="parent::*[@key='values']">
+                <xsl:copy-of select="@*"/>
+            </xsl:if>
+            <xsl:for-each select="child::*">
+                <xsl:choose>
+                    <xsl:when test="has-children(.)">
+                        <xsl:apply-templates select="*" mode="clean"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:copy/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:for-each>
+        </xsl:copy>
+    </xsl:template>
         
     <!-- delete responses attribute in table responses for Table component -->
     <xsl:template match="*[@key='cells' and preceding-sibling::*[@key='componentType']]" mode="clean">
