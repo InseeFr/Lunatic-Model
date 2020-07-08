@@ -7,25 +7,36 @@
     version="3.0">
     
     <xsl:output method="text" media-type="text/json" encoding="utf-8" omit-xml-declaration="no" indent="yes"/>
-    <!--<xsl:output indent="yes"/>-->
+<!--    <xsl:output indent="yes"/>-->
     
     <xsl:template match="/">
         <xsl:apply-templates/>
     </xsl:template>
     
     <xsl:template match="Questionnaire">
-       <!-- <xsl:variable name="testJSON">
-            <xsl:value-of select="'{&quot;test&quot;:[[{&quot;coucou&quot;:true}],[{&quot;coucou&quot;:false}]]}'"/>
-        </xsl:variable>-->
         <xsl:variable name="output-xml">
             <xsl:apply-templates select="json-to-xml(.)" mode="clean"/>
         </xsl:variable>
-        <!--<xsl:copy-of select="$output-xml"/>-->
+<!--        <xsl:copy-of select="$output-xml"/>-->
         <xsl:copy-of select="xml-to-json($output-xml, map{'indent':true()})"/>
     </xsl:template>
     
     <!-- delete type attribute -->
     <xsl:template match="*[@key='type']" mode="clean"/>
+    <!-- delete map useless inside array -->
+    <xsl:template match="*[local-name(.)='map'][parent::*[@key=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTED') and local-name(.)='array'] | parent::*[@key=('values')]]" mode="clean">
+        <xsl:apply-templates mode="clean"/>
+    </xsl:template>
+    <xsl:template match="*[local-name(.)='map'][parent::*[@key='value' and local-name(.)='array'] or (self::*[@key='value'] and preceding-sibling::*[@key='variableType'])]" mode="clean">
+        <xsl:apply-templates mode="clean"/>
+    </xsl:template>
+    <!-- delete key attribue for array inside array -->
+    <xsl:template match="*[local-name(.)='array' and @key=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTED','value')][ancestor::*[local-name(.)='array' and @key=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTED','value')]]" mode="clean">
+        <xsl:copy>
+            <xsl:apply-templates mode="clean"/>
+        </xsl:copy>
+    </xsl:template>
+    
         
     <!-- delete responses attribute in table responses for Table component -->
     <xsl:template match="*[@key='cells' and preceding-sibling::*[@key='componentType']]" mode="clean">

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data>
+   <COLLECTED>
+      <variable1>
+         <PREVIOUS type="string">Previous</PREVIOUS>
+         <COLLECTED type="string">Collected</COLLECTED>
+         <FORCED type="null"/>
+         <EDITED type="number">34</EDITED>
+         <INPUTED type="string">Inputed</INPUTED>
+      </variable1>
+      <variable2>
+         <COLLECTED>
+            <COLLECTED type="string">individu1</COLLECTED>
+            <COLLECTED type="string">individu2</COLLECTED>
+         </COLLECTED>
+      </variable2>
+      <variable3>
+         <COLLECTED>
+            <COLLECTED>
+               <COLLECTED type="string">individu1</COLLECTED>
+               <COLLECTED type="string">individu2</COLLECTED>
+            </COLLECTED>
+            <COLLECTED>
+               <COLLECTED type="string">individu3</COLLECTED>
+               <COLLECTED type="string">individu4</COLLECTED>
+            </COLLECTED>
+         </COLLECTED>
+      </variable3>
+      <variable4>
+         <COLLECTED>
+            <COLLECTED>
+               <COLLECTED>
+                  <COLLECTED type="boolean">true</COLLECTED>
+                  <COLLECTED type="boolean">true</COLLECTED>
+               </COLLECTED>
+               <COLLECTED>
+                  <COLLECTED type="string">individu3</COLLECTED>
+                  <COLLECTED type="string">individu4</COLLECTED>
+               </COLLECTED>
+            </COLLECTED>
+            <COLLECTED>
+               <COLLECTED>
+                  <COLLECTED type="string">individu5</COLLECTED>
+                  <COLLECTED type="string">individu6</COLLECTED>
+               </COLLECTED>
+               <COLLECTED>
+                  <COLLECTED type="string">individu7</COLLECTED>
+                  <COLLECTED type="string">individu8</COLLECTED>
+               </COLLECTED>
+            </COLLECTED>
+         </COLLECTED>
+      </variable4>
+   </COLLECTED>
+   <EXTERNAL>
+      <variableExt1>
+         <variableExt1 type="string">External var</variableExt1>
+         <variableExt1 type="string">External var2</variableExt1>
+      </variableExt1>
+      <variableExt2 type="string">External var2</variableExt2>
+   </EXTERNAL>
+</Data>

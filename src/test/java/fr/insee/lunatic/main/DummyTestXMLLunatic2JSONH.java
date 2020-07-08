@@ -14,7 +14,7 @@ import fr.insee.lunatic.conversion.XMLLunaticToJSONLunaticTranslator;
 
 public class DummyTestXMLLunatic2JSONH {
 	
-	private static final Logger logger = LoggerFactory.getLogger(DummyTestXMLLunatic2JSONF.class);
+	private static final Logger logger = LoggerFactory.getLogger(DummyTestXMLLunatic2JSONH.class);
 
 	public static void main(String[] args) {
 

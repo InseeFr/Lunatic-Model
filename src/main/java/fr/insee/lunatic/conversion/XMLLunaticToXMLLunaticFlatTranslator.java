@@ -5,17 +5,13 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.io.StringReader;
-import java.io.UnsupportedEncodingException;
-
-import javax.xml.bind.JAXBException;
-import javax.xml.transform.stream.StreamSource;
 
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fr.insee.lunatic.Constants;
+import fr.insee.lunatic.utils.XslTransformation;
 
 public class XMLLunaticToXMLLunaticFlatTranslator {
 

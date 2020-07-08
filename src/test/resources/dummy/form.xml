@@ -1139,11 +1139,11 @@
          <response name="SURVEY_COMMENT"/>
       </components>
    </components>
-   <variables variableType="EXTERNAL">
+   <variables variableType="EXTERNAL" xsi:type="VariableType">
       <name>LAST_BROADCAST</name>
       <value xsi:nil="true"/>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>COMMENT</name>
       <componentRef>j6p3dkx6</componentRef>
       <values>
@@ -1154,7 +1154,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>READY</name>
       <componentRef>j6p0np9q</componentRef>
       <values>
@@ -1165,7 +1165,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>PRODUCER</name>
       <componentRef>j3343qhx</componentRef>
       <values>
@@ -1176,7 +1176,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>SEASON_NUMBER</name>
       <componentRef>j6q9h8tj</componentRef>
       <values>
@@ -1187,7 +1187,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>DATEFIRST</name>
       <componentRef>j334cyqb</componentRef>
       <values>
@@ -1198,7 +1198,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>AUDIENCE_SHARE</name>
       <componentRef>j6z06z1e</componentRef>
       <values>
@@ -1209,7 +1209,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>CITY</name>
       <componentRef>j3343clt</componentRef>
       <values>
@@ -1220,7 +1220,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>MAYOR</name>
       <componentRef>j6qdfhvw</componentRef>
       <values>
@@ -1231,7 +1231,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>STATE</name>
       <componentRef>j4nw5cqz</componentRef>
       <values>
@@ -1242,7 +1242,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>PET1</name>
       <componentRef>j334akov</componentRef>
       <values>
@@ -1253,7 +1253,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>PET2</name>
       <componentRef>j334akov</componentRef>
       <values>
@@ -1264,7 +1264,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>PET3</name>
       <componentRef>j334akov</componentRef>
       <values>
@@ -1275,7 +1275,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>PET4</name>
       <componentRef>j334akov</componentRef>
       <values>
@@ -1286,7 +1286,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>ICE_FLAVOUR1</name>
       <componentRef>j6p29i81</componentRef>
       <values>
@@ -1297,7 +1297,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>ICE_FLAVOUR2</name>
       <componentRef>j6p29i81</componentRef>
       <values>
@@ -1308,7 +1308,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>ICE_FLAVOUR3</name>
       <componentRef>j6p29i81</componentRef>
       <values>
@@ -1319,7 +1319,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>ICE_FLAVOUR4</name>
       <componentRef>j6p29i81</componentRef>
       <values>
@@ -1330,7 +1330,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>NUCLEAR_CHARACTER1</name>
       <componentRef>j6qefnga</componentRef>
       <values>
@@ -1341,7 +1341,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>NUCLEAR_CHARACTER2</name>
       <componentRef>j6qefnga</componentRef>
       <values>
@@ -1352,7 +1352,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>NUCLEAR_CHARACTER3</name>
       <componentRef>j6qefnga</componentRef>
       <values>
@@ -1363,7 +1363,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>NUCLEAR_CHARACTER4</name>
       <componentRef>j6qefnga</componentRef>
       <values>
@@ -1374,7 +1374,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>BIRTH_CHARACTER1</name>
       <componentRef>j6yzoc6g</componentRef>
       <values>
@@ -1385,7 +1385,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>BIRTH_CHARACTER2</name>
       <componentRef>j6yzoc6g</componentRef>
       <values>
@@ -1396,7 +1396,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>BIRTH_CHARACTER3</name>
       <componentRef>j6yzoc6g</componentRef>
       <values>
@@ -1407,7 +1407,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>BIRTH_CHARACTER4</name>
       <componentRef>j6yzoc6g</componentRef>
       <values>
@@ -1418,7 +1418,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>BIRTH_CHARACTER5</name>
       <componentRef>j6yzoc6g</componentRef>
       <values>
@@ -1429,7 +1429,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>PERCENTAGE_EXPENSES11</name>
       <componentRef>j4nwc63q</componentRef>
       <values>
@@ -1440,7 +1440,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>PERCENTAGE_EXPENSES21</name>
       <componentRef>j4nwc63q</componentRef>
       <values>
@@ -1451,7 +1451,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>PERCENTAGE_EXPENSES31</name>
       <componentRef>j4nwc63q</componentRef>
       <values>
@@ -1462,7 +1462,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>PERCENTAGE_EXPENSES41</name>
       <componentRef>j4nwc63q</componentRef>
       <values>
@@ -1473,7 +1473,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>PERCENTAGE_EXPENSES51</name>
       <componentRef>j4nwc63q</componentRef>
       <values>
@@ -1484,7 +1484,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>PERCENTAGE_EXPENSES61</name>
       <componentRef>j4nwc63q</componentRef>
       <values>
@@ -1495,7 +1495,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>PERCENTAGE_EXPENSES71</name>
       <componentRef>j4nwc63q</componentRef>
       <values>
@@ -1506,7 +1506,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>CLOWNING11</name>
       <componentRef>j4nw0rr6</componentRef>
       <values>
@@ -1517,7 +1517,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>CLOWNING12</name>
       <componentRef>j4nw0rr6</componentRef>
       <values>
@@ -1528,7 +1528,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>CLOWNING21</name>
       <componentRef>j4nw0rr6</componentRef>
       <values>
@@ -1539,7 +1539,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>CLOWNING22</name>
       <componentRef>j4nw0rr6</componentRef>
       <values>
@@ -1550,7 +1550,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>CLOWNING31</name>
       <componentRef>j4nw0rr6</componentRef>
       <values>
@@ -1561,7 +1561,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>CLOWNING32</name>
       <componentRef>j4nw0rr6</componentRef>
       <values>
@@ -1572,7 +1572,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>CLOWNING41</name>
       <componentRef>j4nw0rr6</componentRef>
       <values>
@@ -1583,7 +1583,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>CLOWNING42</name>
       <componentRef>j4nw0rr6</componentRef>
       <values>
@@ -1594,7 +1594,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL11</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1605,7 +1605,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL12</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1616,7 +1616,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL13</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1627,7 +1627,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL14</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1638,7 +1638,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL15</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1649,7 +1649,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL16</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1660,7 +1660,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL21</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1671,7 +1671,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL22</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1682,7 +1682,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL23</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1693,7 +1693,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL24</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1704,7 +1704,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL25</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1715,7 +1715,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL26</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1726,7 +1726,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL31</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1737,7 +1737,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL32</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1748,7 +1748,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL33</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1759,7 +1759,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL34</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1770,7 +1770,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL35</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1781,7 +1781,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL36</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1792,7 +1792,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL41</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1803,7 +1803,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL42</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1814,7 +1814,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL43</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1825,7 +1825,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL44</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1836,7 +1836,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL45</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1847,7 +1847,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>TRAVEL46</name>
       <componentRef>j6p2lwuj</componentRef>
       <values>
@@ -1858,7 +1858,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS11</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -1869,7 +1869,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS12</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -1880,7 +1880,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS21</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -1891,7 +1891,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS22</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -1902,7 +1902,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS31</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -1913,7 +1913,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS32</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -1924,7 +1924,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS41</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -1935,7 +1935,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS42</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -1946,7 +1946,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS51</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -1957,7 +1957,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS52</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -1968,7 +1968,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS61</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -1979,7 +1979,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS62</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -1990,7 +1990,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS71</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -2001,7 +2001,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS72</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -2012,7 +2012,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS81</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -2023,7 +2023,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS82</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -2034,7 +2034,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS91</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -2045,7 +2045,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS92</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -2056,7 +2056,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS101</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -2067,7 +2067,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>FAVOURITE_CHARACTERS102</name>
       <componentRef>j6qg8rc6</componentRef>
       <values>
@@ -2078,7 +2078,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="COLLECTED">
+   <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>SURVEY_COMMENT</name>
       <componentRef>j6z0z3us</componentRef>
       <values>
@@ -2089,7 +2089,7 @@
          <INPUTED xsi:nil="true"/>
       </values>
    </variables>
-   <variables variableType="CALCULATED">
+   <variables variableType="CALCULATED" xsi:type="VariableType">
       <name>SUM_EXPENSES</name>
       <expression>cast(PERCENTAGE_EXPENSES11,number) + cast(PERCENTAGE_EXPENSES21,number) + cast(PERCENTAGE_EXPENSES31,number)+ cast(PERCENTAGE_EXPENSES41,number)+ cast(PERCENTAGE_EXPENSES51,number)+ cast(PERCENTAGE_EXPENSES61,number)+ cast(PERCENTAGE_EXPENSES71,number)+ cast(PERCENTAGE_EXPENSES81,number)+ cast(PERCENTAGE_EXPENSES91,number)+ cast(PERCENTAGE_EXPENSES101,number)</expression>
    </variables>

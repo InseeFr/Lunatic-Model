@@ -1,4 +1,4 @@
-package fr.insee.lunatic.conversion;
+package fr.insee.lunatic.utils;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -47,7 +47,6 @@ public class XslTransformation {
 		Transformer transformer = tFactory.newTransformer(new StreamSource(xslSheet));
 
 		xslTransform(transformer, inputFile, outputFile);
-
 	}
 	
 	public void transformJSONLunaticToJSONLunaticClean(InputStream inputFile, OutputStream outputFile, InputStream xslSheet) throws Exception {
@@ -56,8 +55,22 @@ public class XslTransformation {
 		Transformer transformer = tFactory.newTransformer(new StreamSource(xslSheet));
 
 		xslTransform(transformer, inputFile, outputFile);
-
+	}
+	
+	public void transformXMLLunaticDataToJSON(InputStream inputFile, OutputStream outputFile, InputStream xslSheet) throws Exception {
+		logger.info("Lunatic data : xml to json ...");
+		TransformerFactory tFactory = new net.sf.saxon.TransformerFactoryImpl();
+		Transformer transformer = tFactory.newTransformer(new StreamSource(xslSheet));
+		transformer.setParameter("javaCall", true);
+		xslTransform(transformer, inputFile, outputFile);
 	}
 
+	public void transformWithSimpleXSLSheet(InputStream inputFile, OutputStream outputFile, InputStream xslSheet) throws Exception {
+		logger.info("Transforming ...");
+		TransformerFactory tFactory = new net.sf.saxon.TransformerFactoryImpl();
+		Transformer transformer = tFactory.newTransformer(new StreamSource(xslSheet));
+		
+		xslTransform(transformer, inputFile, outputFile);
+	}
 
 }
