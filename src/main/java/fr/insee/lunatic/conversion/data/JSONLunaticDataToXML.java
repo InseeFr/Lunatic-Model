@@ -55,7 +55,7 @@ public class JSONLunaticDataToXML {
 	}
 	
 	public String wrapJsonWithXml(String json) {
-		return "<?xml version=\"1.0\" encoding=\"UTF-8\"?><data>"+preProcessJson2XML(json)+"</data>";
+		return "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Data>"+preProcessJson2XML(json)+"</Data>";
 	}
 	
 	public String preProcessJson2XML(String json) {

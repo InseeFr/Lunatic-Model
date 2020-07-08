@@ -19,7 +19,7 @@
         </xsl:choose>
     </xsl:variable>
     
-    <xsl:variable name="rootName" select="'data'"/>
+    <xsl:variable name="rootName" select="'Data'"/>
     
     
     <xsl:template match="/">

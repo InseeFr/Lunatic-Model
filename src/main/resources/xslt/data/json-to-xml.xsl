@@ -6,7 +6,7 @@
     
     <xsl:output indent="yes"/>
     
-    <xsl:variable name="rootName" select="'data'"/>
+    <xsl:variable name="rootName" select="'Data'"/>
     
     <xsl:template match="/">
         <xsl:apply-templates select="json-to-xml(.)" mode="prepare"/>

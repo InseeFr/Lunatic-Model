@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<data>
+<Data>
     <COLLECTED>
         <variable1>
             <PREVIOUS type="string">Previous</PREVIOUS>
@@ -58,4 +58,4 @@
         </variableExt1>
         <variableExt2 type="string">External var2</variableExt2>
     </EXTERNAL>
-</data>
+</Data>
