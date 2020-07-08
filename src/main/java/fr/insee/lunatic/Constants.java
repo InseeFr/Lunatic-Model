@@ -34,6 +34,8 @@ public class Constants {
 	public static final String TRANSFORMATION_JSON_2_JSON_CLEANED = "xslt/json-cleaner.xsl";
 	public static final String DATA_TRANSFORMATION_XML_2_JSON = "xslt/data/xml-to-json.xsl";
 	public static final String DATA_TRANSFORMATION_JSON_2_XML = "xslt/data/json-to-xml.xsl";
+	public static final String XSD_DATA_GENERATION = "xslt/data/generate-xsd.xsl";
+	public static final String EMPTY_DATA_GENERATION = "xslt/data/generate-empty-data.xsl";
 	public static final String NAMESPACE_URI = "http://xml.insee.fr/schema/applis/lunatic";
 	public static final String PREFIX = "Questionnaire";
 	public static final String JAXB_SCHEMA_LOCATION = NAMESPACE_URI + " file:"+XSD_FILE_PATH;

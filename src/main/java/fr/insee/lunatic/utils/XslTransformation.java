@@ -65,8 +65,8 @@ public class XslTransformation {
 		xslTransform(transformer, inputFile, outputFile);
 	}
 
-	public void transformJSONLLunaticDataToXML(InputStream inputFile, OutputStream outputFile, InputStream xslSheet) throws Exception {
-		logger.info("Lunatic data : json to xml ...");
+	public void transformWithSimpleXSLSheet(InputStream inputFile, OutputStream outputFile, InputStream xslSheet) throws Exception {
+		logger.info("Transforming ...");
 		TransformerFactory tFactory = new net.sf.saxon.TransformerFactoryImpl();
 		Transformer transformer = tFactory.newTransformer(new StreamSource(xslSheet));
 		

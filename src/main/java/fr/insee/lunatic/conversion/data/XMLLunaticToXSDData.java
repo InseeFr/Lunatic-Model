@@ -20,29 +20,28 @@ import fr.insee.lunatic.utils.XslTransformation;
  * @author xbeltv
  *
  */
-public class JSONLunaticDataToXML {
+public class XMLLunaticToXSDData {
 
 	private static XslTransformation saxonService = new XslTransformation();
 
-	private static final Logger logger = LoggerFactory.getLogger(JSONLunaticDataToXML.class);
+	private static final Logger logger = LoggerFactory.getLogger(XMLLunaticToXSDData.class);
+
 
 	public File transform(File input) throws Exception {
 
-		File outputFile = Files.createTempFile("json2xml", ".xml").toFile();
-		
+		File outputFile = Files.createTempFile("xsd-data", ".xsd").toFile();
 
 		logger.debug("Output folder : " + outputFile.getAbsolutePath());
 
-		String jsonString = FileUtils.readFileToString(input, StandardCharsets.UTF_8);
-		InputStream inputStream = new ByteArrayInputStream(wrapJsonWithXml(jsonString).getBytes(StandardCharsets.UTF_8));
+		InputStream inputStream = FileUtils.openInputStream(input);
 		OutputStream outputStream = FileUtils.openOutputStream(outputFile);
 
-		InputStream XSL = XMLLunaticDataToJSON.class.getClassLoader()
-				.getResourceAsStream(Constants.DATA_TRANSFORMATION_JSON_2_XML);
+		InputStream XSL = XMLLunaticToXSDData.class.getClassLoader()
+				.getResourceAsStream(Constants.XSD_DATA_GENERATION);
 		try {
 			saxonService.transformWithSimpleXSLSheet(inputStream,outputStream, XSL);
 		}catch(Exception e) {
-			String errorMessage = "An error was occured during the json to xml transformation. "+e.getMessage();
+			String errorMessage = "An error was occured during the xsd data transformation. "+e.getMessage();
 			logger.error(errorMessage);
 			throw new Exception(errorMessage);
 		}
@@ -52,15 +51,5 @@ public class JSONLunaticDataToXML {
 		XSL.close();
 
 		return outputFile;
-	}
-	
-	public String wrapJsonWithXml(String json) {
-		return "<?xml version=\"1.0\" encoding=\"UTF-8\"?><Data>"+preProcessJson2XML(json)+"</Data>";
-	}
-	
-	public String preProcessJson2XML(String json) {
-		return json.replaceAll("&", "&amp;")
-				.replaceAll("<", "&lt;")
-				.replaceAll(">", "&gt;");
 	}
 }
