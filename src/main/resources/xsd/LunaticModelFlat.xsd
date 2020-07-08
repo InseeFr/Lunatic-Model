@@ -47,7 +47,7 @@
         </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="Loop">
+     <xs:complexType name="Loop">
         <xs:complexContent>
             <xs:extension base="ComponentType">
                 <xs:sequence>
@@ -57,8 +57,7 @@
                 <xs:attribute name="iterations" type="xs:string" use="required"/>
             </xs:extension>
         </xs:complexContent>
-    </xs:complexType>
-    
+    </xs:complexType>    
     
     
     <xs:complexType name="ComponentType" abstract="true" >
@@ -74,40 +73,60 @@
         <xs:attribute name="mandatory" type="xs:boolean"/>
     </xs:complexType>
     
-  <xs:simpleType name="ComponentTypeEnum">
-    <xs:restriction base="xs:token">
-      <xs:enumeration value="Sequence"/>
-      <xs:enumeration value="Subsequence"/>
-      <xs:enumeration value="RosterForLoop"/>
-      <xs:enumeration value="Loop"/>
-      <xs:enumeration value="Table"/>
-      <xs:enumeration value="Input"/>
-      <xs:enumeration value="InputNumber"/>
-      <xs:enumeration value="Datepicker"/>
-      <xs:enumeration value="CheckboxGroup"/>
-      <xs:enumeration value="CheckboxOne"/>
-      <xs:enumeration value="CheckboxBoolean"/>
-      <xs:enumeration value="Radio"/>
-      <xs:enumeration value="Dropdown"/>
-      <xs:enumeration value="Textarea"/>
-      <xs:enumeration value="FilterDescription"/>
-    </xs:restriction>
-  </xs:simpleType>
+    <xs:simpleType name="ComponentTypeEnum">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="Sequence"/>
+            <xs:enumeration value="Subsequence"/>
+            <xs:enumeration value="RosterForLoop"/>
+            <xs:enumeration value="Loop"/>
+            <xs:enumeration value="Table"/>
+            <xs:enumeration value="Input"/>
+            <xs:enumeration value="InputNumber"/>
+            <xs:enumeration value="Datepicker"/>
+            <xs:enumeration value="CheckboxGroup"/>
+            <xs:enumeration value="CheckboxOne"/>
+            <xs:enumeration value="CheckboxBoolean"/>
+            <xs:enumeration value="Radio"/>
+            <xs:enumeration value="Dropdown"/>
+            <xs:enumeration value="Textarea"/>
+            <xs:enumeration value="FilterDescription"/>
+        </xs:restriction>
+    </xs:simpleType>
     
     <xs:complexType name="ResponseType">
         <xs:attribute name="name" type="xs:string"/>
     </xs:complexType>
     
-    
-    <xs:complexType name="VariableType">
-        <xs:sequence>
+    <xs:complexType name="IVariableType" abstract="true">
+        <xs:sequence>            
             <xs:element name="name" type="xs:string"/>
             <xs:element name="componentRef" type="xs:string" minOccurs="0"/>
-            <xs:element name="value" type="xs:string" nillable="true" minOccurs="0"/>
-            <xs:element name="expression" type="xs:string" minOccurs="0"/>
-            <xs:element name="values" type="IValuesType" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
         <xs:attribute name="variableType" type="VariableTypeEnum"/>
+    </xs:complexType>
+    
+    
+    <xs:complexType name="VariableType">
+        <xs:complexContent>
+            <xs:extension base="IVariableType">
+                <xs:sequence>
+                    <xs:element name="value" type="xs:string" nillable="true" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="values" type="ValuesType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="expression" type="xs:string" minOccurs="0"/>
+                </xs:sequence>        
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="VariableTypeArray">
+        <xs:complexContent>
+            <xs:extension base="IVariableType">
+                <xs:sequence>
+                    <xs:element name="value" type="ValueTypeArray" nillable="true" minOccurs="0"/>
+                    <xs:element name="values" type="ValuesTypeArray" minOccurs="0" maxOccurs="1"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
     
     <xs:complexType name="PreviousArray">
@@ -138,39 +157,34 @@
         <xs:sequence>
             <xs:element name="INPUTED" type="xs:anyType" nillable="true" maxOccurs="unbounded"/>
         </xs:sequence>
-    </xs:complexType>
-    
-    
-    <xs:complexType name="IValuesType" abstract="true"/>
+    </xs:complexType>    
     
     <xs:complexType name="ValuesTypeArray">
-        <xs:complexContent>
-            <xs:extension base="IValuesType">
-                <xs:sequence>
-                    <xs:element name="PREVIOUS" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="COLLECTED" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="FORCED" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="EDITED" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="INPUTED" type="xs:anyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
+        <xs:sequence>
+            <xs:element name="PREVIOUS" type="PreviousArray" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="COLLECTED" type="CollectedArray" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="FORCED" type="ForcedArray" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="EDITED" type="EditedArray" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="INPUTED" type="InputedArray" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
     </xs:complexType>
-    
-    
+        
     <xs:complexType name="ValuesType">
-        <xs:complexContent>
-            <xs:extension base="IValuesType">
-                <xs:sequence>
-                    <xs:element name="PREVIOUS" type="xs:string" nillable="true"/>
-                    <xs:element name="COLLECTED" type="xs:string" nillable="true"/>
-                    <xs:element name="FORCED" type="xs:string" nillable="true"/>
-                    <xs:element name="EDITED" type="xs:string" nillable="true"/>
-                    <xs:element name="INPUTED" type="xs:string" nillable="true"/>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
+        <xs:sequence>
+            <xs:element name="PREVIOUS" type="xs:string" nillable="true"/>
+            <xs:element name="COLLECTED" type="xs:string" nillable="true"/>
+            <xs:element name="FORCED" type="xs:string" nillable="true"/>
+            <xs:element name="EDITED" type="xs:string" nillable="true"/>
+            <xs:element name="INPUTED" type="xs:string" nillable="true"/>
+        </xs:sequence>
     </xs:complexType>
+    
+    <xs:complexType name="ValueTypeArray">
+        <xs:sequence>
+            <xs:element name="value" type="xs:anyType" nillable="true" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
     
     <xs:simpleType name="VariableTypeEnum">
         <xs:restriction base="xs:token">
@@ -298,6 +312,7 @@
                     <xs:element name="headers" type="CellsType" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="components" type="CellsType" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
+                <xs:attribute name="positioning" type="xs:string"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
