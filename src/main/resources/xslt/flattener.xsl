@@ -24,6 +24,12 @@
 			<xd:p>It writes the root of the document with the main title.</xd:p>
 		</xd:desc>
 	</xd:doc>
+	<xsl:template match="h:Questionnaire">
+		<Questionnaire>
+			<xsl:copy-of select="@*"/>
+			<xsl:apply-templates/>
+		</Questionnaire>
+	</xsl:template>
 	
 	<xsl:template match="h:components[@xsi:type='Sequence' or @xsi:type='Subsequence']">
 		<components>
