@@ -129,31 +129,31 @@
         </xs:complexContent>
     </xs:complexType>
     
-    <xs:complexType name="PreviousArray">
+    <xs:complexType name="PREVIOUSArray">
         <xs:sequence>
             <xs:element name="PREVIOUS" type="xs:anyType" nillable="true" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="CollectedArray">
+    <xs:complexType name="COLLECTEDArray">
         <xs:sequence>
             <xs:element name="COLLECTED" type="xs:anyType" nillable="true" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="ForcedArray">
+    <xs:complexType name="FORCEDArray">
         <xs:sequence>
             <xs:element name="FORCED" type="xs:anyType" nillable="true" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="EditedArray">
+    <xs:complexType name="EDITEDArray">
         <xs:sequence>
             <xs:element name="EDITED" type="xs:anyType" nillable="true" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     
-    <xs:complexType name="InputedArray">
+    <xs:complexType name="INPUTEDArray">
         <xs:sequence>
             <xs:element name="INPUTED" type="xs:anyType" nillable="true" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -161,11 +161,11 @@
     
     <xs:complexType name="ValuesTypeArray">
         <xs:sequence>
-            <xs:element name="PREVIOUS" type="PreviousArray" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="COLLECTED" type="CollectedArray" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="FORCED" type="ForcedArray" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="EDITED" type="EditedArray" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="INPUTED" type="InputedArray" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="PREVIOUS" type="PREVIOUSArray" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="COLLECTED" type="COLLECTEDArray" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="FORCED" type="FORCEDArray" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="EDITED" type="EDITEDArray" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="INPUTED" type="INPUTEDArray" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
         
