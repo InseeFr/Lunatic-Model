@@ -66,7 +66,7 @@
             <xs:element name="declarations" type="DeclarationType" minOccurs="0" maxOccurs="unbounded"/>
             <!-- Warning : To validate the name -->
             <xs:element name="conditionFilter" type="xs:string" minOccurs="0"/>
-            <xs:element name="bindingsDependency" type="xs:boolean" minOccurs="0"/>
+            <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="required"/>
         <xs:attribute name="componentType" type="ComponentTypeEnum"/>
