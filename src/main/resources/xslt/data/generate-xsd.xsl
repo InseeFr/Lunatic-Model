@@ -23,7 +23,7 @@
                                     <xsl:apply-templates select="//h:variables[@variableType='COLLECTED']"/>
                                 </xs:all>
                             </xs:complexType>
-                        </xs:element>                        
+                        </xs:element>
                         <xs:element name="EXTERNAL" minOccurs="0" maxOccurs="1">
                             <xs:complexType>
                                 <xs:all>

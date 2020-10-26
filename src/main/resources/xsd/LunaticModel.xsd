@@ -87,6 +87,7 @@
         <xs:restriction base="xs:token">
             <xs:enumeration value="Sequence"/>
             <xs:enumeration value="Subsequence"/>
+            <xs:enumeration value="BlockForLoop"/>
             <xs:enumeration value="RosterForLoop"/>
             <xs:enumeration value="Loop"/>
             <xs:enumeration value="Table"/>
@@ -311,6 +312,17 @@
         <xs:complexContent>
             <xs:extension base="ComponentType">
                 <xs:attribute name="filterDescription" type="xs:boolean"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="BlockForLoop">
+        <xs:complexContent>
+            <xs:extension base="ComponentType">
+                <xs:sequence>
+                    <xs:element name="lines" type="LinesRoster" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="components" type="CellsType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
