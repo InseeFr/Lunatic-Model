@@ -12,6 +12,8 @@
         <xs:extension base="SequenceType">
           <xs:attribute name="final" type="xs:boolean"/>
           <xs:attribute name="modele" type="xs:string" use="optional"/>
+          <xs:attribute name="enoCoreVersion" type="xs:string" use="optional"/>
+          <xs:attribute name="lunaticModelVersion" type="xs:string" use="optional"/>
         </xs:extension>
       </xs:complexContent>
     </xs:complexType>

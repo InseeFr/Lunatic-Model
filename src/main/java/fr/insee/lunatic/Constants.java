@@ -6,6 +6,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Properties;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -45,6 +46,8 @@ public class Constants {
 	public static final URL MODEL_FLAT_XSD = Constants.class.getResource(SCHEMAS_FOLDER_PATH+"/LunaticModelFlat.xsd");
 	public static final URL MODEL_HIERARCHICAL_XSD = Constants.class.getResource(SCHEMAS_FOLDER_PATH+"/LunaticModel.xsd");
 
+	public static final String LUNATIC_MODEL_VERSION = getVersion();
+
 	public static Path getTempDir(String pathFolder) {
 		Path tempDirPath = null;
 		File dir = new File(pathFolder);
@@ -61,5 +64,17 @@ public class Constants {
 			}
 		}
 		return tempDirPath;
+	}
+
+	public static String getVersion(){
+		String version="";
+		try {
+			Properties properties = new Properties();
+			properties.load(Constants.class.getResourceAsStream("/lunatic-model.properties"));
+			version = properties.getProperty("version");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return version;
 	}
 }
