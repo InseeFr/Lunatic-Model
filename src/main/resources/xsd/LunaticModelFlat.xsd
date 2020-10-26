@@ -209,6 +209,7 @@
         <xs:complexContent>
             <xs:extension base="ComponentType">
                 <xs:sequence>
+                    <xs:element name="format" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="response" type="ResponseType"/>
                 </xs:sequence>
                 <xs:attribute name="maxLength" type="xs:integer"/>
@@ -340,6 +341,7 @@
         <xs:sequence>
             <xs:element name="value" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="label" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="format" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="dateFormat" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="unit" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="options" type="Options" minOccurs="0" maxOccurs="unbounded"/>
