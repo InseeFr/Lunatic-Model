@@ -61,6 +61,7 @@
         <xs:complexContent>
             <xs:extension base="ComponentType">
                 <xs:sequence>
+                    <xs:element name="rosterDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
                 <xs:attribute name="min" type="xs:integer" use="required"/>
@@ -368,6 +369,7 @@
             <xs:element name="unit" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="options" type="Options" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="response" type="ResponseType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="componentType" type="xs:string" use="optional"/>
         <xs:attribute name="maxLength" type="xs:integer" use="optional"/>
