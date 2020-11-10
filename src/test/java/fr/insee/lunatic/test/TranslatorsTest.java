@@ -11,7 +11,10 @@ import org.json.JSONObject;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.skyscreamer.jsonassert.Customization;
 import org.skyscreamer.jsonassert.JSONAssert;
+import org.skyscreamer.jsonassert.JSONCompareMode;
+import org.skyscreamer.jsonassert.comparator.CustomComparator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xmlunit.diff.Diff;
@@ -57,7 +60,9 @@ public class TranslatorsTest {
 			Path expectedFile = Paths.get(String.format("%s/out.json", basePath));
 			String jsonExpectedString = new String(Files.readAllBytes(expectedFile),StandardCharsets.UTF_8);
 
-			JSONAssert.assertEquals(jsonExpectedString, jsonOut, true);
+			JSONAssert.assertEquals(jsonExpectedString, String.valueOf(jsonOut),
+					new CustomComparator(JSONCompareMode.LENIENT,
+					new Customization("lunaticModelVersion", (o1, o2) -> true)));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -139,7 +144,9 @@ public class TranslatorsTest {
 
 			Path expectedFile = Paths.get(String.format("%s/out.json", basePath));
 			String jsonExpectedString = new String(Files.readAllBytes(expectedFile),StandardCharsets.UTF_8);
-			JSONAssert.assertEquals(jsonExpectedString, jsonOut, true);
+			JSONAssert.assertEquals(jsonExpectedString, String.valueOf(jsonOut),
+					new CustomComparator(JSONCompareMode.LENIENT,
+							new Customization("lunaticModelVersion", (o1, o2) -> true)));
 		} catch (IOException e) {
 			e.printStackTrace();
 			Assert.fail();
@@ -176,7 +183,9 @@ public class TranslatorsTest {
 			Path expectedFile = Paths.get(String.format("%s/out.json", basePath));
 			String jsonExpectedString = new String(Files.readAllBytes(expectedFile),StandardCharsets.UTF_8);
 
-			JSONAssert.assertEquals(jsonExpectedString, jsonOut, true);
+			JSONAssert.assertEquals(jsonExpectedString, String.valueOf(jsonOut),
+					new CustomComparator(JSONCompareMode.LENIENT,
+							new Customization("lunaticModelVersion", (o1, o2) -> true)));
 
 		} catch (IOException e) {
 			e.printStackTrace();

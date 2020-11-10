@@ -12,6 +12,8 @@
                 <xs:extension base="SequenceType">
                     <xs:attribute name="final" type="xs:boolean"/>
                     <xs:attribute name="modele" type="xs:string" use="optional"/>
+                    <xs:attribute name="enoCoreVersion" type="xs:string" use="optional"/>
+                    <xs:attribute name="lunaticModelVersion" type="xs:string" use="optional"/>
                 </xs:extension>
             </xs:complexContent>
         </xs:complexType>
@@ -59,10 +61,11 @@
         <xs:complexContent>
             <xs:extension base="ComponentType">
                 <xs:sequence>
+                    <xs:element name="loopDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
-                <xs:attribute name="min" type="xs:integer" use="required"/>
-                <xs:attribute name="iterations" type="xs:string" use="required"/>
+                <xs:attribute name="min" type="xs:integer"/>
+                <xs:attribute name="iterations" type="xs:string"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>    
@@ -217,6 +220,7 @@
         <xs:complexContent>
             <xs:extension base="ComponentType">
                 <xs:sequence>
+                    <xs:element name="format" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="response" type="ResponseType"/>
                 </xs:sequence>
                 <xs:attribute name="maxLength" type="xs:integer"/>
@@ -311,7 +315,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="RosterForLoop">
         <xs:complexContent>
             <xs:extension base="ComponentType">
@@ -348,10 +352,12 @@
         <xs:sequence>
             <xs:element name="value" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="label" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="format" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="dateFormat" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="unit" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="options" type="Options" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="response" type="ResponseType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="componentType" type="xs:string" use="optional"/>
         <xs:attribute name="maxLength" type="xs:integer" use="optional"/>
