@@ -1,7 +1,8 @@
 
   { "id" : "i6vwi0",
     "modele" : "SIMPSONS",
-    "lunaticModelVersion" : "xxx",
+    "enoCoreVersion" : "2.1.1",
+    "lunaticModelVersion" : "2.0.0-rc4",
     "label" : "Questionnaire SIMPSONS",
     "components" : 
     [ 
@@ -22,6 +23,8 @@
         "maxLength" : 500,
         "label" : "\"➡ 1. Before starting, do you have any comments about the Simpsons family?\"",
         "conditionFilter" : "\"normal\"",
+        "bindingDependencies" : 
+        [ "COMMENT" ],
         "response" : 
         { "name" : "COMMENT" } },
       
@@ -30,6 +33,8 @@
         "mandatory" : false,
         "label" : "\"➡ 2. Are you ready?\"",
         "conditionFilter" : "\"normal\"",
+        "bindingDependencies" : 
+        [ "READY" ],
         "response" : 
         { "name" : "READY" } },
       
@@ -49,6 +54,8 @@
         "maxLength" : 30,
         "label" : "\"➡ 3. Who is the producer?\"",
         "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "bindingDependencies" : 
+        [ "PRODUCER" ],
         "response" : 
         { "name" : "PRODUCER" } },
       
@@ -60,6 +67,8 @@
         "decimals" : 0,
         "label" : "\"➡ 4. What is the current season number?\"",
         "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "bindingDependencies" : 
+        [ "SEASON_NUMBER" ],
         "response" : 
         { "name" : "SEASON_NUMBER" } },
       
@@ -77,7 +86,8 @@
             "label" : "\"For your information, the date of the last broadcast was on \" || cast(cast(LAST_BROADCAST,string),string) || \" \"" } ],
         "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
         "bindingDependencies" : 
-        [ "LAST_BROADCAST" ],
+        [ "LAST_BROADCAST",
+          "DATEFIRST" ],
         "dateFormat" : "YYYY-MM-DD",
         "response" : 
         { "name" : "DATEFIRST" } },
@@ -90,6 +100,8 @@
         "decimals" : 1,
         "label" : "\"➡ 6. In your opinion, how much is the part of audience share in US for the 2016 season?\"",
         "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "bindingDependencies" : 
+        [ "AUDIENCE_SHARE" ],
         "response" : 
         { "name" : "AUDIENCE_SHARE" } },
       
@@ -115,6 +127,8 @@
             "position" : "AFTER_QUESTION_TEXT",
             "label" : "\"One possible answer\"" } ],
         "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "bindingDependencies" : 
+        [ "CITY" ],
         "options" : 
         [ 
           { "value" : "00001",
@@ -139,6 +153,8 @@
             "position" : "AFTER_QUESTION_TEXT",
             "label" : "\"Only one possible answer\"" } ],
         "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "bindingDependencies" : 
+        [ "MAYOR" ],
         "options" : 
         [ 
           { "value" : "1",
@@ -160,6 +176,8 @@
         "mandatory" : false,
         "label" : "\"➡ 3. In which state do The Simpsons reside?\"",
         "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "bindingDependencies" : 
+        [ "STATE" ],
         "options" : 
         [ 
           { "value" : "1",
@@ -218,6 +236,11 @@
             "position" : "AFTER_QUESTION_TEXT",
             "label" : "\"Several possible answers\"" } ],
         "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "bindingDependencies" : 
+        [ "PET1",
+          "PET2",
+          "PET3",
+          "PET4" ],
         "responses" : 
         [ 
           { "id" : "j334akov-QOP-jbgd8qmn",
@@ -252,6 +275,11 @@
             "position" : "BEFORE_QUESTION_TEXT",
             "label" : "\"Now we are going to know if you think that Jay is a gluton.\"" } ],
         "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "bindingDependencies" : 
+        [ "ICE_FLAVOUR1",
+          "ICE_FLAVOUR2",
+          "ICE_FLAVOUR3",
+          "ICE_FLAVOUR4" ],
         "cells" : 
         [ 
           [ 
@@ -268,7 +296,9 @@
                 { "value" : "0",
                   "label" : "\"No\"" } ],
               "response" : 
-              { "name" : "ICE_FLAVOUR1" } } ],
+              { "name" : "ICE_FLAVOUR1" },
+              "bindingDependencies" : 
+              [ "ICE_FLAVOUR1" ] } ],
           
           [ 
             { "value" : "2",
@@ -284,7 +314,9 @@
                 { "value" : "0",
                   "label" : "\"No\"" } ],
               "response" : 
-              { "name" : "ICE_FLAVOUR2" } } ],
+              { "name" : "ICE_FLAVOUR2" },
+              "bindingDependencies" : 
+              [ "ICE_FLAVOUR2" ] } ],
           
           [ 
             { "value" : "3",
@@ -300,7 +332,9 @@
                 { "value" : "0",
                   "label" : "\"No\"" } ],
               "response" : 
-              { "name" : "ICE_FLAVOUR3" } } ],
+              { "name" : "ICE_FLAVOUR3" },
+              "bindingDependencies" : 
+              [ "ICE_FLAVOUR3" ] } ],
           
           [ 
             { "value" : "4",
@@ -316,7 +350,9 @@
                 { "value" : "0",
                   "label" : "\"No\"" } ],
               "response" : 
-              { "name" : "ICE_FLAVOUR4" } } ] ] },
+              { "name" : "ICE_FLAVOUR4" },
+              "bindingDependencies" : 
+              [ "ICE_FLAVOUR4" ] } ] ] },
       
       { "id" : "j6qefnga",
         "componentType" : "Table",
@@ -324,6 +360,11 @@
         "positioning" : "HORIZONTAL",
         "label" : "\"➡ 3. Which character works in the nuclear power plant?\"",
         "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "bindingDependencies" : 
+        [ "NUCLEAR_CHARACTER1",
+          "NUCLEAR_CHARACTER2",
+          "NUCLEAR_CHARACTER3",
+          "NUCLEAR_CHARACTER4" ],
         "cells" : 
         [ 
           [ 
@@ -340,7 +381,9 @@
                 { "value" : "0",
                   "label" : "\"No\"" } ],
               "response" : 
-              { "name" : "NUCLEAR_CHARACTER1" } } ],
+              { "name" : "NUCLEAR_CHARACTER1" },
+              "bindingDependencies" : 
+              [ "NUCLEAR_CHARACTER1" ] } ],
           
           [ 
             { "value" : "2",
@@ -356,7 +399,9 @@
                 { "value" : "0",
                   "label" : "\"No\"" } ],
               "response" : 
-              { "name" : "NUCLEAR_CHARACTER2" } } ],
+              { "name" : "NUCLEAR_CHARACTER2" },
+              "bindingDependencies" : 
+              [ "NUCLEAR_CHARACTER2" ] } ],
           
           [ 
             { "value" : "3",
@@ -372,7 +417,9 @@
                 { "value" : "0",
                   "label" : "\"No\"" } ],
               "response" : 
-              { "name" : "NUCLEAR_CHARACTER3" } } ],
+              { "name" : "NUCLEAR_CHARACTER3" },
+              "bindingDependencies" : 
+              [ "NUCLEAR_CHARACTER3" ] } ],
           
           [ 
             { "value" : "4",
@@ -388,7 +435,9 @@
                 { "value" : "0",
                   "label" : "\"No\"" } ],
               "response" : 
-              { "name" : "NUCLEAR_CHARACTER4" } } ] ] },
+              { "name" : "NUCLEAR_CHARACTER4" },
+              "bindingDependencies" : 
+              [ "NUCLEAR_CHARACTER4" ] } ] ] },
       
       { "id" : "j6yzoc6g",
         "componentType" : "Table",
@@ -396,6 +445,12 @@
         "positioning" : "HORIZONTAL",
         "label" : "\"➡ 4. In which city each character was born?\"",
         "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "bindingDependencies" : 
+        [ "BIRTH_CHARACTER1",
+          "BIRTH_CHARACTER2",
+          "BIRTH_CHARACTER3",
+          "BIRTH_CHARACTER4",
+          "BIRTH_CHARACTER5" ],
         "cells" : 
         [ 
           [ 
@@ -421,7 +476,9 @@
                 { "value" : "5",
                   "label" : "\"Dagstuhl\"" } ],
               "response" : 
-              { "name" : "BIRTH_CHARACTER1" } } ],
+              { "name" : "BIRTH_CHARACTER1" },
+              "bindingDependencies" : 
+              [ "BIRTH_CHARACTER1" ] } ],
           
           [ 
             { "value" : "2",
@@ -446,7 +503,9 @@
                 { "value" : "5",
                   "label" : "\"Dagstuhl\"" } ],
               "response" : 
-              { "name" : "BIRTH_CHARACTER2" } } ],
+              { "name" : "BIRTH_CHARACTER2" },
+              "bindingDependencies" : 
+              [ "BIRTH_CHARACTER2" ] } ],
           
           [ 
             { "value" : "3",
@@ -471,7 +530,9 @@
                 { "value" : "5",
                   "label" : "\"Dagstuhl\"" } ],
               "response" : 
-              { "name" : "BIRTH_CHARACTER3" } } ],
+              { "name" : "BIRTH_CHARACTER3" },
+              "bindingDependencies" : 
+              [ "BIRTH_CHARACTER3" ] } ],
           
           [ 
             { "value" : "4",
@@ -496,7 +557,9 @@
                 { "value" : "5",
                   "label" : "\"Dagstuhl\"" } ],
               "response" : 
-              { "name" : "BIRTH_CHARACTER4" } } ],
+              { "name" : "BIRTH_CHARACTER4" },
+              "bindingDependencies" : 
+              [ "BIRTH_CHARACTER4" ] } ],
           
           [ 
             { "value" : "5",
@@ -521,7 +584,9 @@
                 { "value" : "5",
                   "label" : "\"Dagstuhl\"" } ],
               "response" : 
-              { "name" : "BIRTH_CHARACTER5" } } ] ] },
+              { "name" : "BIRTH_CHARACTER5" },
+              "bindingDependencies" : 
+              [ "BIRTH_CHARACTER5" ] } ] ] },
       
       { "id" : "j4nw88h2",
         "componentType" : "Sequence",
@@ -539,6 +604,14 @@
         "positioning" : "HORIZONTAL",
         "label" : "\"➡ 1. Please, specify the percentage of Jay's expenses in the Kwik-E-Mart for each product?\"",
         "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "bindingDependencies" : 
+        [ "PERCENTAGE_EXPENSES11",
+          "PERCENTAGE_EXPENSES21",
+          "PERCENTAGE_EXPENSES31",
+          "PERCENTAGE_EXPENSES41",
+          "PERCENTAGE_EXPENSES51",
+          "PERCENTAGE_EXPENSES61",
+          "PERCENTAGE_EXPENSES71" ],
         "cells" : 
         [ 
           [ 
@@ -564,7 +637,9 @@
               "id" : "j4nwc63q-QOP-jbgde5yl",
               "unit" : "%",
               "response" : 
-              { "name" : "PERCENTAGE_EXPENSES11" } } ],
+              { "name" : "PERCENTAGE_EXPENSES11" },
+              "bindingDependencies" : 
+              [ "PERCENTAGE_EXPENSES11" ] } ],
           
           [ 
             { "value" : "A2",
@@ -577,7 +652,9 @@
               "id" : "j4nwc63q-QOP-jbgd2x2t",
               "unit" : "%",
               "response" : 
-              { "name" : "PERCENTAGE_EXPENSES21" } } ],
+              { "name" : "PERCENTAGE_EXPENSES21" },
+              "bindingDependencies" : 
+              [ "PERCENTAGE_EXPENSES21" ] } ],
           
           [ 
             { "rowspan" : 3,
@@ -594,7 +671,9 @@
               "id" : "j4nwc63q-QOP-jbgdjypz",
               "unit" : "%",
               "response" : 
-              { "name" : "PERCENTAGE_EXPENSES31" } } ],
+              { "name" : "PERCENTAGE_EXPENSES31" },
+              "bindingDependencies" : 
+              [ "PERCENTAGE_EXPENSES31" ] } ],
           
           [ 
             { "value" : "B2",
@@ -607,7 +686,9 @@
               "id" : "j4nwc63q-QOP-jbgdcftu",
               "unit" : "%",
               "response" : 
-              { "name" : "PERCENTAGE_EXPENSES41" } } ],
+              { "name" : "PERCENTAGE_EXPENSES41" },
+              "bindingDependencies" : 
+              [ "PERCENTAGE_EXPENSES41" ] } ],
           
           [ 
             { "value" : "B3",
@@ -620,7 +701,9 @@
               "id" : "j4nwc63q-QOP-jbgdiyfe",
               "unit" : "%",
               "response" : 
-              { "name" : "PERCENTAGE_EXPENSES51" } } ],
+              { "name" : "PERCENTAGE_EXPENSES51" },
+              "bindingDependencies" : 
+              [ "PERCENTAGE_EXPENSES51" ] } ],
           
           [ 
             { "value" : "C",
@@ -636,7 +719,9 @@
               "id" : "j4nwc63q-QOP-jbgdj1wd",
               "unit" : "%",
               "response" : 
-              { "name" : "PERCENTAGE_EXPENSES61" } } ],
+              { "name" : "PERCENTAGE_EXPENSES61" },
+              "bindingDependencies" : 
+              [ "PERCENTAGE_EXPENSES61" ] } ],
           
           [ 
             { "colspan" : 2,
@@ -650,7 +735,9 @@
               "id" : "j4nwc63q-QOP-jbgddylk",
               "unit" : "%",
               "response" : 
-              { "name" : "PERCENTAGE_EXPENSES71" } } ] ] },
+              { "name" : "PERCENTAGE_EXPENSES71" },
+              "bindingDependencies" : 
+              [ "PERCENTAGE_EXPENSES71" ] } ] ] },
       
       { "id" : "j6qejudb",
         "componentType" : "Subsequence",
@@ -663,6 +750,15 @@
         "positioning" : "HORIZONTAL",
         "label" : "\"➡ 2. Who did these clownings and tell us what you remember?\"",
         "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "bindingDependencies" : 
+        [ "CLOWNING11",
+          "CLOWNING12",
+          "CLOWNING21",
+          "CLOWNING22",
+          "CLOWNING31",
+          "CLOWNING32",
+          "CLOWNING41",
+          "CLOWNING42" ],
         "cells" : 
         [ 
           [ 
@@ -695,13 +791,17 @@
                 { "value" : "4",
                   "label" : "\"Maggie\"" } ],
               "response" : 
-              { "name" : "CLOWNING11" } },
+              { "name" : "CLOWNING11" },
+              "bindingDependencies" : 
+              [ "CLOWNING11" ] },
             
             { "componentType" : "Textarea",
               "maxLength" : 255,
               "id" : "j4nw0rr6-QOP-jbgdit3o",
               "response" : 
-              { "name" : "CLOWNING12" } } ],
+              { "name" : "CLOWNING12" },
+              "bindingDependencies" : 
+              [ "CLOWNING12" ] } ],
           
           [ 
             { "value" : "2",
@@ -723,13 +823,17 @@
                 { "value" : "4",
                   "label" : "\"Maggie\"" } ],
               "response" : 
-              { "name" : "CLOWNING21" } },
+              { "name" : "CLOWNING21" },
+              "bindingDependencies" : 
+              [ "CLOWNING21" ] },
             
             { "componentType" : "Textarea",
               "maxLength" : 255,
               "id" : "j4nw0rr6-QOP-jbgd366k",
               "response" : 
-              { "name" : "CLOWNING22" } } ],
+              { "name" : "CLOWNING22" },
+              "bindingDependencies" : 
+              [ "CLOWNING22" ] } ],
           
           [ 
             { "value" : "3",
@@ -751,13 +855,17 @@
                 { "value" : "4",
                   "label" : "\"Maggie\"" } ],
               "response" : 
-              { "name" : "CLOWNING31" } },
+              { "name" : "CLOWNING31" },
+              "bindingDependencies" : 
+              [ "CLOWNING31" ] },
             
             { "componentType" : "Textarea",
               "maxLength" : 255,
               "id" : "j4nw0rr6-QOP-jbgdax06",
               "response" : 
-              { "name" : "CLOWNING32" } } ],
+              { "name" : "CLOWNING32" },
+              "bindingDependencies" : 
+              [ "CLOWNING32" ] } ],
           
           [ 
             { "value" : "4",
@@ -779,13 +887,17 @@
                 { "value" : "4",
                   "label" : "\"Maggie\"" } ],
               "response" : 
-              { "name" : "CLOWNING41" } },
+              { "name" : "CLOWNING41" },
+              "bindingDependencies" : 
+              [ "CLOWNING41" ] },
             
             { "componentType" : "Textarea",
               "maxLength" : 255,
               "id" : "j4nw0rr6-QOP-jbgdfo1j",
               "response" : 
-              { "name" : "CLOWNING42" } } ] ] },
+              { "name" : "CLOWNING42" },
+              "bindingDependencies" : 
+              [ "CLOWNING42" ] } ] ] },
       
       { "id" : "j6qeh91y",
         "componentType" : "Subsequence",
@@ -804,6 +916,31 @@
             "position" : "AFTER_QUESTION_TEXT",
             "label" : "\"Several answers possible: check off all the relevant boxes\"" } ],
         "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "bindingDependencies" : 
+        [ "TRAVEL11",
+          "TRAVEL12",
+          "TRAVEL13",
+          "TRAVEL14",
+          "TRAVEL15",
+          "TRAVEL16",
+          "TRAVEL21",
+          "TRAVEL22",
+          "TRAVEL23",
+          "TRAVEL24",
+          "TRAVEL25",
+          "TRAVEL26",
+          "TRAVEL31",
+          "TRAVEL32",
+          "TRAVEL33",
+          "TRAVEL34",
+          "TRAVEL35",
+          "TRAVEL36",
+          "TRAVEL41",
+          "TRAVEL42",
+          "TRAVEL43",
+          "TRAVEL44",
+          "TRAVEL45",
+          "TRAVEL46" ],
         "cells" : 
         [ 
           [ 
@@ -835,32 +972,44 @@
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgd92mb",
               "response" : 
-              { "name" : "TRAVEL11" } },
+              { "name" : "TRAVEL11" },
+              "bindingDependencies" : 
+              [ "TRAVEL11" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgdnxkt",
               "response" : 
-              { "name" : "TRAVEL12" } },
+              { "name" : "TRAVEL12" },
+              "bindingDependencies" : 
+              [ "TRAVEL12" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgdcppc",
               "response" : 
-              { "name" : "TRAVEL13" } },
+              { "name" : "TRAVEL13" },
+              "bindingDependencies" : 
+              [ "TRAVEL13" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgd4r2a",
               "response" : 
-              { "name" : "TRAVEL14" } },
+              { "name" : "TRAVEL14" },
+              "bindingDependencies" : 
+              [ "TRAVEL14" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgd9cff",
               "response" : 
-              { "name" : "TRAVEL15" } },
+              { "name" : "TRAVEL15" },
+              "bindingDependencies" : 
+              [ "TRAVEL15" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgdiva0",
               "response" : 
-              { "name" : "TRAVEL16" } } ],
+              { "name" : "TRAVEL16" },
+              "bindingDependencies" : 
+              [ "TRAVEL16" ] } ],
           
           [ 
             { "value" : "2",
@@ -869,32 +1018,44 @@
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgdgsat",
               "response" : 
-              { "name" : "TRAVEL21" } },
+              { "name" : "TRAVEL21" },
+              "bindingDependencies" : 
+              [ "TRAVEL21" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgd3ef5",
               "response" : 
-              { "name" : "TRAVEL22" } },
+              { "name" : "TRAVEL22" },
+              "bindingDependencies" : 
+              [ "TRAVEL22" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgd4cm6",
               "response" : 
-              { "name" : "TRAVEL23" } },
+              { "name" : "TRAVEL23" },
+              "bindingDependencies" : 
+              [ "TRAVEL23" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgdkfpq",
               "response" : 
-              { "name" : "TRAVEL24" } },
+              { "name" : "TRAVEL24" },
+              "bindingDependencies" : 
+              [ "TRAVEL24" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgddwsp",
               "response" : 
-              { "name" : "TRAVEL25" } },
+              { "name" : "TRAVEL25" },
+              "bindingDependencies" : 
+              [ "TRAVEL25" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgd7dqf",
               "response" : 
-              { "name" : "TRAVEL26" } } ],
+              { "name" : "TRAVEL26" },
+              "bindingDependencies" : 
+              [ "TRAVEL26" ] } ],
           
           [ 
             { "value" : "3",
@@ -903,32 +1064,44 @@
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgdaxk2",
               "response" : 
-              { "name" : "TRAVEL31" } },
+              { "name" : "TRAVEL31" },
+              "bindingDependencies" : 
+              [ "TRAVEL31" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgd8p1v",
               "response" : 
-              { "name" : "TRAVEL32" } },
+              { "name" : "TRAVEL32" },
+              "bindingDependencies" : 
+              [ "TRAVEL32" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgdd2lo",
               "response" : 
-              { "name" : "TRAVEL33" } },
+              { "name" : "TRAVEL33" },
+              "bindingDependencies" : 
+              [ "TRAVEL33" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgd7u52",
               "response" : 
-              { "name" : "TRAVEL34" } },
+              { "name" : "TRAVEL34" },
+              "bindingDependencies" : 
+              [ "TRAVEL34" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgdncn8",
               "response" : 
-              { "name" : "TRAVEL35" } },
+              { "name" : "TRAVEL35" },
+              "bindingDependencies" : 
+              [ "TRAVEL35" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgdnous",
               "response" : 
-              { "name" : "TRAVEL36" } } ],
+              { "name" : "TRAVEL36" },
+              "bindingDependencies" : 
+              [ "TRAVEL36" ] } ],
           
           [ 
             { "value" : "4",
@@ -937,32 +1110,44 @@
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgd7myn",
               "response" : 
-              { "name" : "TRAVEL41" } },
+              { "name" : "TRAVEL41" },
+              "bindingDependencies" : 
+              [ "TRAVEL41" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgdgm0c",
               "response" : 
-              { "name" : "TRAVEL42" } },
+              { "name" : "TRAVEL42" },
+              "bindingDependencies" : 
+              [ "TRAVEL42" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgdo0ay",
               "response" : 
-              { "name" : "TRAVEL43" } },
+              { "name" : "TRAVEL43" },
+              "bindingDependencies" : 
+              [ "TRAVEL43" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgdgfwl",
               "response" : 
-              { "name" : "TRAVEL44" } },
+              { "name" : "TRAVEL44" },
+              "bindingDependencies" : 
+              [ "TRAVEL44" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgdnz6b",
               "response" : 
-              { "name" : "TRAVEL45" } },
+              { "name" : "TRAVEL45" },
+              "bindingDependencies" : 
+              [ "TRAVEL45" ] },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-jbgdkfcz",
               "response" : 
-              { "name" : "TRAVEL46" } } ] ] },
+              { "name" : "TRAVEL46" },
+              "bindingDependencies" : 
+              [ "TRAVEL46" ] } ] ] },
       
       { "id" : "j6qfx9qe",
         "componentType" : "Sequence",
@@ -975,6 +1160,27 @@
         "positioning" : "HORIZONTAL",
         "label" : "\"➡ 1. Please, complete the following grid with your favourite characters\"",
         "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "bindingDependencies" : 
+        [ "FAVOURITE_CHARACTERS11",
+          "FAVOURITE_CHARACTERS12",
+          "FAVOURITE_CHARACTERS21",
+          "FAVOURITE_CHARACTERS22",
+          "FAVOURITE_CHARACTERS31",
+          "FAVOURITE_CHARACTERS32",
+          "FAVOURITE_CHARACTERS41",
+          "FAVOURITE_CHARACTERS42",
+          "FAVOURITE_CHARACTERS51",
+          "FAVOURITE_CHARACTERS52",
+          "FAVOURITE_CHARACTERS61",
+          "FAVOURITE_CHARACTERS62",
+          "FAVOURITE_CHARACTERS71",
+          "FAVOURITE_CHARACTERS72",
+          "FAVOURITE_CHARACTERS81",
+          "FAVOURITE_CHARACTERS82",
+          "FAVOURITE_CHARACTERS91",
+          "FAVOURITE_CHARACTERS92",
+          "FAVOURITE_CHARACTERS101",
+          "FAVOURITE_CHARACTERS102" ],
         "lines" : 
         { "min" : 1,
           "max" : 10 },
@@ -992,7 +1198,9 @@
               "maxLength" : 255,
               "id" : "j6qg8rc6-QOP-jbgdl5jb",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS11" } },
+              { "name" : "FAVOURITE_CHARACTERS11" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS11" ] },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1000,14 +1208,18 @@
               "decimals" : 0,
               "id" : "j6qg8rc6-QOP-jbgdfndq",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS12" } } ],
+              { "name" : "FAVOURITE_CHARACTERS12" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS12" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
               "id" : "j6qg8rc6-QOP-jbgd8lwo",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS21" } },
+              { "name" : "FAVOURITE_CHARACTERS21" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS21" ] },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1015,14 +1227,18 @@
               "decimals" : 0,
               "id" : "j6qg8rc6-QOP-jbgd7osi",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS22" } } ],
+              { "name" : "FAVOURITE_CHARACTERS22" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS22" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
               "id" : "j6qg8rc6-QOP-jbgdbfag",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS31" } },
+              { "name" : "FAVOURITE_CHARACTERS31" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS31" ] },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1030,14 +1246,18 @@
               "decimals" : 0,
               "id" : "j6qg8rc6-QOP-jbgd7bnw",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS32" } } ],
+              { "name" : "FAVOURITE_CHARACTERS32" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS32" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
               "id" : "j6qg8rc6-QOP-jbgdlgja",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS41" } },
+              { "name" : "FAVOURITE_CHARACTERS41" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS41" ] },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1045,14 +1265,18 @@
               "decimals" : 0,
               "id" : "j6qg8rc6-QOP-jbgd9k71",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS42" } } ],
+              { "name" : "FAVOURITE_CHARACTERS42" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS42" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
               "id" : "j6qg8rc6-QOP-jbgd745y",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS51" } },
+              { "name" : "FAVOURITE_CHARACTERS51" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS51" ] },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1060,14 +1284,18 @@
               "decimals" : 0,
               "id" : "j6qg8rc6-QOP-jbgdimks",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS52" } } ],
+              { "name" : "FAVOURITE_CHARACTERS52" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS52" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
               "id" : "j6qg8rc6-QOP-jbgdjkts",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS61" } },
+              { "name" : "FAVOURITE_CHARACTERS61" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS61" ] },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1075,14 +1303,18 @@
               "decimals" : 0,
               "id" : "j6qg8rc6-QOP-jbgdjquz",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS62" } } ],
+              { "name" : "FAVOURITE_CHARACTERS62" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS62" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
               "id" : "j6qg8rc6-QOP-jbgdcax7",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS71" } },
+              { "name" : "FAVOURITE_CHARACTERS71" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS71" ] },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1090,14 +1322,18 @@
               "decimals" : 0,
               "id" : "j6qg8rc6-QOP-jbgdd2w3",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS72" } } ],
+              { "name" : "FAVOURITE_CHARACTERS72" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS72" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
               "id" : "j6qg8rc6-QOP-jbgdjye1",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS81" } },
+              { "name" : "FAVOURITE_CHARACTERS81" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS81" ] },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1105,14 +1341,18 @@
               "decimals" : 0,
               "id" : "j6qg8rc6-QOP-jbgdkosc",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS82" } } ],
+              { "name" : "FAVOURITE_CHARACTERS82" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS82" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
               "id" : "j6qg8rc6-QOP-jbgd5jet",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS91" } },
+              { "name" : "FAVOURITE_CHARACTERS91" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS91" ] },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1120,14 +1360,18 @@
               "decimals" : 0,
               "id" : "j6qg8rc6-QOP-jbgdk0x4",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS92" } } ],
+              { "name" : "FAVOURITE_CHARACTERS92" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS92" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
               "id" : "j6qg8rc6-QOP-jbgdjw90",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS101" } },
+              { "name" : "FAVOURITE_CHARACTERS101" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS101" ] },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1135,7 +1379,9 @@
               "decimals" : 0,
               "id" : "j6qg8rc6-QOP-jbgd2wgf",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS102" } } ] ] },
+              { "name" : "FAVOURITE_CHARACTERS102" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHARACTERS102" ] } ] ] },
       
       { "id" : "j6z12s2d",
         "componentType" : "Sequence",
@@ -1148,6 +1394,8 @@
         "maxLength" : 255,
         "label" : "\"➡ 1. Do you have any comment about the survey?\"",
         "conditionFilter" : "\"normal\"",
+        "bindingDependencies" : 
+        [ "SURVEY_COMMENT" ],
         "response" : 
         { "name" : "SURVEY_COMMENT" } } ],
     "variables" : 
