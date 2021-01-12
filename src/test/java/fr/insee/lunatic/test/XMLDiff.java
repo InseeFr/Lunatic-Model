@@ -27,6 +27,8 @@ public class XMLDiff {
         	
             return DiffBuilder
                     .compare(expectedStream)
+                    .withAttributeFilter(attr -> !attr.getName().equals("enoCoreVersion"))
+                    .withAttributeFilter(attr -> !attr.getName().equals("lunaticModelVersion"))
                     .withTest(inputStream)
                     .withNodeMatcher(new DefaultNodeMatcher(ElementSelectors.byName))
                     .withAttributeFilter(att -> !(att.getName().equals("min") || att.getName().equals("max")))
