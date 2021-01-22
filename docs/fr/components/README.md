@@ -19,6 +19,9 @@ La structure du questionnaire attendue est la suivante
 ```json
 {
   "id":"idQuestionnaire",
+  "modele": "SIMPSONS",
+  "enoCoreVersion": "2.1.1",
+  "lunaticModelVersion": "2.0.0",
   "label":"Nom du questionnaire",
   "components":[...],
   "variables":[...]
@@ -35,18 +38,20 @@ Tous les composants (excepté Sequence et Subsequence) ont au moins ces attribut
 {
   "id":"id_du_composant",
   "componentType":"type_du_composant",
+  "mandatory":true,
   "label":"label",
   "declarations":[...],
   "conditionFilter":"...",
-  "mandatory":true
+  "bindingsDependencies": [...],
 }
 ```
 
 - `id` : identifiant unique du composant
 - `componentType` : définit le type du composant
-- `label` : label de la question associée au composant
+- `label` : label de la question associée au composant (expression VTL)
 - `declarations` : liste des déclarations éventuelles associées au composant.
 - `conditionFilter` : filtre écrit dans le langage VTL pour savoir s'il faut afficher ou non le questionnaire.
+- `bindingsDependencies` : liste des variables dont le compasant dépend (labels, declarations et réponse)
 - `mandatory` : booléen qui définit si la réponse est obligatoire ou non
 
 ---
@@ -62,13 +67,13 @@ Il s'agit d'un tableau de déclarations
       "id" : "id1",
       "declarationType" : "STATEMENT",
       "position" : "BEFORE_QUESTION_TEXT",
-      "label" : "Label de la declaration"
+      "label" : "\"Label de la declaration\"""
     },
     {
       "id" : "id2",
       "declarationType" : "HELP",
       "position" : "AFTER_QUESTION_TEXT",
-      "label" : "Label de la declaration"
+      "label" : "\"Label de la declaration\""
     }
   ]
 ```
@@ -84,18 +89,9 @@ Il s'agit d'un tableau de déclarations
 Les composants qui ont pour but de collecter des réponses ont un attribut "response" ayant pour structure :
 
 ```json
-"response" :
-  {
-    "name" : "idVariable",
-    "valueState" :
-      [
-        { "valueType" : "PREVIOUS", "value" : null },
-        { "valueType" : "COLLECTED", "value" : null },
-        { "valueType" : "FORCED", "value" : null },
-        { "valueType" : "EDITED", "value" : null },
-        { "valueType" : "INPUTED", "value" : null },
-      ]
+"response" :  {
+    "name" : "idVariable"    
   }
 ```
 
-L'attribut `name` faisant référence à l'attribut `responseRef` d'une variable dans le tableau `variables` en fin de questionnaire.
+L'attribut `name` faisant référence à l'attribut `name` d'une variable dans le tableau `variables` en fin de questionnaire.

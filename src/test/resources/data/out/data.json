@@ -1,0 +1,41 @@
+
+  { "COLLECTED" : 
+    { "variable1" : 
+      { "PREVIOUS" : "Previous",
+        "COLLECTED" : "Collected",
+        "FORCED" : null,
+        "EDITED" : 34,
+        "INPUTED" : "Inputed" },
+      "variable2" : 
+      { "COLLECTED" : 
+        [ "individu1",
+          "individu2" ] },
+      "variable3" : 
+      { "COLLECTED" : 
+        [ 
+          [ "individu1",
+            "individu2" ],
+          
+          [ "individu3",
+            "individu4" ] ] },
+      "variable4" : 
+      { "COLLECTED" : 
+        [ 
+          [ 
+            [ true,
+              true ],
+            
+            [ "individu3",
+              "individu4" ] ],
+          
+          [ 
+            [ "individu5",
+              "individu6" ],
+            
+            [ "individu7",
+              "individu8" ] ] ] } },
+    "EXTERNAL" : 
+    { "variableExt1" : 
+      [ "External var",
+        "External var2" ],
+      "variableExt2" : "External var2" } }

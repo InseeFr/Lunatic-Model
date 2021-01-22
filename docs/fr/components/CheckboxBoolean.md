@@ -9,12 +9,12 @@ Sa structure est la suivante :
 
 ```json
 {
-  "id" : "j3343qhx",
-  "componentType" : "CheckboxBoolean",
-  "mandatory" : false,
-  "label" : "label de la question",
-  "declarations" : [...],
-  "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
-  "response" : {...}
+      "id": "j6p0np9q",
+      "componentType": "CheckboxBoolean",
+      "mandatory": false,
+      "label": "\"➡ 2. Are you ready?\"",
+      "conditionFilter": "\"normal\"",
+      "bindingDependencies": ["READY"],
+      "response": { "name": "READY" }
 }
 ```

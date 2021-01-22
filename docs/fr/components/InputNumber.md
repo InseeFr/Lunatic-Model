@@ -13,16 +13,15 @@ Sa structure est la suivante :
 
 ```json
 {
-  "id" : "j3343qhx",
-  "componentType" : "InputNumber",
-  "mandatory" : false,
-  "min" : 0,
-  "max" : 10,
-  "decimals" : 0,
-  "unit" : "€",
-  "label" : "label de la question",
-  "declarations" : [...],
-  "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
-  "response" : {...}
+      "id": "j6q9h8tj",
+      "componentType": "InputNumber",
+      "mandatory": false,
+      "min": 0,
+      "max": 99,
+      "decimals": 0,
+      "label": "\"➡ 4. What is the current season number?\"",
+      "conditionFilter": "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+      "bindingDependencies": ["SEASON_NUMBER"],
+      "response": { "name": "SEASON_NUMBER" }
 }
 ```

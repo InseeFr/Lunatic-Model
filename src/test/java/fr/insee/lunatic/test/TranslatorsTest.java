@@ -11,7 +11,10 @@ import org.json.JSONObject;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import org.skyscreamer.jsonassert.Customization;
 import org.skyscreamer.jsonassert.JSONAssert;
+import org.skyscreamer.jsonassert.JSONCompareMode;
+import org.skyscreamer.jsonassert.comparator.CustomComparator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xmlunit.diff.Diff;
@@ -43,7 +46,7 @@ public class TranslatorsTest {
 			Files.deleteIfExists(outPath);
 			Path outputFile = Files.createFile(outPath);
 			
-			File in = new File(String.format("%s/in.xml", basePath));
+			File in = new File(String.format("%s/form_flat.xml", Constants.RESOURCES_FOLDER_DUMMY_PATH));
 			
 			XMLLunaticFlatToJSONLunaticFlatTranslator translator = new XMLLunaticFlatToJSONLunaticFlatTranslator();
 			JSONCleaner jsonCleaner = new JSONCleaner();
@@ -57,7 +60,10 @@ public class TranslatorsTest {
 			Path expectedFile = Paths.get(String.format("%s/out.json", basePath));
 			String jsonExpectedString = new String(Files.readAllBytes(expectedFile),StandardCharsets.UTF_8);
 
-			JSONAssert.assertEquals(jsonExpectedString, jsonOut, true);
+			JSONAssert.assertEquals(jsonExpectedString, String.valueOf(jsonOut),
+					new CustomComparator(JSONCompareMode.LENIENT,
+							new Customization("lunaticModelVersion", (o1, o2) -> true),
+							new Customization("enoCoreVersion",(o1, o2) -> true)));
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -83,7 +89,7 @@ public class TranslatorsTest {
 			Files.deleteIfExists(outPath);
 			Path outputFile = Files.createFile(outPath);
 			
-			File in = new File(String.format("%s/in.xml", basePath));
+			File in = new File(String.format("%s/form.xml",  Constants.RESOURCES_FOLDER_DUMMY_PATH));
 			
 			XMLLunaticToXMLLunaticFlatTranslator translator = new XMLLunaticToXMLLunaticFlatTranslator();
 
@@ -121,7 +127,7 @@ public class TranslatorsTest {
 			Files.deleteIfExists(outPath);
 			Path outputFile = Files.createFile(outPath);
 
-			File in = new File(String.format("%s/in.xml", basePath));
+			File in = new File(String.format("%s/form.xml",  Constants.RESOURCES_FOLDER_DUMMY_PATH));
 			
 			XMLLunaticToXMLLunaticFlatTranslator translator = new XMLLunaticToXMLLunaticFlatTranslator();
 			XMLLunaticFlatToJSONLunaticFlatTranslator translator2 = new XMLLunaticFlatToJSONLunaticFlatTranslator();
@@ -139,7 +145,10 @@ public class TranslatorsTest {
 
 			Path expectedFile = Paths.get(String.format("%s/out.json", basePath));
 			String jsonExpectedString = new String(Files.readAllBytes(expectedFile),StandardCharsets.UTF_8);
-			JSONAssert.assertEquals(jsonExpectedString, jsonOut, true);
+			JSONAssert.assertEquals(jsonExpectedString, String.valueOf(jsonOut),
+					new CustomComparator(JSONCompareMode.LENIENT,
+							new Customization("lunaticModelVersion", (o1, o2) -> true),
+							new Customization("enoCoreVersion",(o1, o2) -> true)));
 		} catch (IOException e) {
 			e.printStackTrace();
 			Assert.fail();
@@ -163,7 +172,7 @@ public class TranslatorsTest {
 			Files.deleteIfExists(outPath);
 			Path outputFile = Files.createFile(outPath);
 			
-			File in = new File(String.format("%s/in.xml", basePath));
+			File in = new File(String.format("%s/form.xml",  Constants.RESOURCES_FOLDER_DUMMY_PATH));
 
 			XMLLunaticToJSONLunaticTranslator translator = new XMLLunaticToJSONLunaticTranslator();
 			JSONCleaner jsonCleaner = new JSONCleaner();
@@ -176,7 +185,10 @@ public class TranslatorsTest {
 			Path expectedFile = Paths.get(String.format("%s/out.json", basePath));
 			String jsonExpectedString = new String(Files.readAllBytes(expectedFile),StandardCharsets.UTF_8);
 
-			JSONAssert.assertEquals(jsonExpectedString, jsonOut, true);
+			JSONAssert.assertEquals(jsonExpectedString, String.valueOf(jsonOut),
+					new CustomComparator(JSONCompareMode.LENIENT,
+							new Customization("lunaticModelVersion", (o1, o2) -> true),
+							new Customization("enoCoreVersion",(o1, o2) -> true)));
 
 		} catch (IOException e) {
 			e.printStackTrace();

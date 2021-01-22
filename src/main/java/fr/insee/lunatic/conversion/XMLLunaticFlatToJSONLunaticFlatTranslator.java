@@ -17,6 +17,8 @@ import org.eclipse.persistence.jaxb.MarshallerProperties;
 
 import fr.insee.lunatic.model.flat.Questionnaire;
 
+import static fr.insee.lunatic.Constants.LUNATIC_MODEL_VERSION;
+
 public class XMLLunaticFlatToJSONLunaticFlatTranslator {
 
 	private boolean monitored;
@@ -62,6 +64,8 @@ public class XMLLunaticFlatToJSONLunaticFlatTranslator {
 			unmarshaller.setListener(new UnmarshallLogger());
 
 		Questionnaire questionnaire = (Questionnaire) unmarshaller.unmarshal(xmlStream);
+		// Set lunatic-model-version to json questionnaire
+		questionnaire.setLunaticModelVersion(LUNATIC_MODEL_VERSION);
 
 		Marshaller marshaller = context.createMarshaller();
 		marshaller.setProperty(MarshallerProperties.MEDIA_TYPE, "application/json");

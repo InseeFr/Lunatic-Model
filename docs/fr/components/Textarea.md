@@ -11,9 +11,9 @@ Sa structure est la suivante :
   "componentType" : "Textarea",
   "mandatory" : false,
   "maxLength" : 250,
-  "label" : "label de la question",
+  "label" : "\"label de la question\"",
   "declarations" : [...],
-  "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
+  "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
   "response" : {...}
 }
 ```
