@@ -6,7 +6,7 @@ Structure du composant Subsequence
 {
   "id":"id_du_composant",
   "componentType":"Subsequence",
-  "label":"Subsequence label",
+  "label":"\"Subsequence label\"",
   "declarations":[...],
   "conditionFilter":"..."
 }

@@ -16,17 +16,20 @@ Structure des composants à options:
   "id" : "j6qdfhvw",
   "componentType" : "Radio / Dropdown / CheckboxOne",
   "mandatory" : false,
-  "label" : "label de la question",
+  "label": "\"➡ 2. Who is the Simpsons city mayor?\"",
   "declarations" : [... ],
-  "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
-  "response" : { ... },
-  "options" :
-    [
-      { "value" : "1", "label" : "Constance Harm" },
-      { "value" : "2", "label" : "Timothy Lovejoy" },
-      { "value" : "3", "label" : "Joe Quimby" },
-      { "value" : "4", "label" : "Poochie" }
-    ]
+  "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+  "bindingDependencies": ["MAYOR"],
+  "options": [
+          { "value": "1", "label": "\"Constance Harm\"" },
+  
+          { "value": "2", "label": "\"Timothy Lovejoy\"" },
+  
+          { "value": "3", "label": "\"Joe Quimby\"" },
+  
+          { "value": "4", "label": "\"Poochie\"" }
+  ],
+  "response": { "name": "MAYOR" }
 }
 ```
 

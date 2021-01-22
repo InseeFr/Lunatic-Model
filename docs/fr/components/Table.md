@@ -37,9 +37,10 @@ Dans le dernier cas :
   "componentType" : "Table",
   "mandatory" : false,
   "positioning" : "HORIZONTAL",
-  "label" : "label de la question",
+  "label" : "\"label de la question\"",
   "declarations": [...],
-  "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
+  "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+  "bindingDependencies": [ ... ],  
   "cells" :
     [
       [

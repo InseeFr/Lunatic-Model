@@ -20,19 +20,18 @@ Strucure du tableau `variables` :
     "variableType": "COLLECTED",
     "name": "FAVOURITE_CHARACTERS",
     "componentRef": "FAVOURITE_CHARACTERS_COMPONENT",
-    "valueState" :
-          [
-            { "valueType" : "PREVIOUS", "value" : null },
-            { "valueType" : "COLLECTED", "value" : null },
-            { "valueType" : "FORCED", "value" : null },
-            { "valueType" : "EDITED", "value" : null },
-            { "valueType" : "INPUTED", "value" : null }
-          ]
-      },
+    "values": {
+            "PREVIOUS": null,
+            "COLLECTED": null,
+            "FORCED": null,
+            "EDITED": null,
+            "INPUTED": null
+    }
+  },
   {
     "variableType": "CALCULATED",
     "name": "SUM_EXPENSES",
-    "expression": "$PERCENTAGE_EXPENSES_1 + $PERCENTAGE_EXPENSES_2"
+    "expression": "cast(PERCENTAGE_EXPENSES11,number) + cast(PERCENTAGE_EXPENSES21,number)" // expression VTL
   }
 ]
 ```

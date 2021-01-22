@@ -7,13 +7,13 @@ Sa structure est la suivante :
 
 ```json
 {
-  "id" : "j3343qhx",
-  "componentType" : "Input",
-  "mandatory" : false,
-  "maxLength" : 30,
-  "label" : "label de la question",
-  "declarations" : [...],
-  "conditionFilter" : "#if((!( $READY != '1')))normal#{else}hidden#end",
-  "response" : {...}
+      "id": "j3343qhx",
+      "componentType": "Input",
+      "mandatory": false,
+      "maxLength": 30,
+      "label": "\"➡ 3. Who is the producer?\"",
+      "conditionFilter": "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+      "bindingDependencies": ["PRODUCER"],
+      "response": { "name": "PRODUCER" }
 }
 ```
