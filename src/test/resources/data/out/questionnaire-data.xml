@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Data>
+   <COLLECTED>
+      <COMMENT>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </COMMENT>
+      <READY>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </READY>
+      <PRODUCER>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </PRODUCER>
+      <SEASON_NUMBER>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </SEASON_NUMBER>
+      <DATEFIRST>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </DATEFIRST>
+      <AUDIENCE_SHARE>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </AUDIENCE_SHARE>
+      <CITY>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </CITY>
+      <MAYOR>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </MAYOR>
+      <STATE>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </STATE>
+      <PET1>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </PET1>
+      <PET2>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </PET2>
+      <PET3>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </PET3>
+      <PET4>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </PET4>
+      <ICE_FLAVOUR1>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </ICE_FLAVOUR1>
+      <ICE_FLAVOUR2>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </ICE_FLAVOUR2>
+      <ICE_FLAVOUR3>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </ICE_FLAVOUR3>
+      <ICE_FLAVOUR4>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </ICE_FLAVOUR4>
+      <NUCLEAR_CHARACTER1>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </NUCLEAR_CHARACTER1>
+      <NUCLEAR_CHARACTER2>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </NUCLEAR_CHARACTER2>
+      <NUCLEAR_CHARACTER3>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </NUCLEAR_CHARACTER3>
+      <NUCLEAR_CHARACTER4>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </NUCLEAR_CHARACTER4>
+      <BIRTH_CHARACTER1>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </BIRTH_CHARACTER1>
+      <BIRTH_CHARACTER2>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </BIRTH_CHARACTER2>
+      <BIRTH_CHARACTER3>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </BIRTH_CHARACTER3>
+      <BIRTH_CHARACTER4>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </BIRTH_CHARACTER4>
+      <BIRTH_CHARACTER5>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </BIRTH_CHARACTER5>
+      <PERCENTAGE_EXPENSES11>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </PERCENTAGE_EXPENSES11>
+      <PERCENTAGE_EXPENSES21>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </PERCENTAGE_EXPENSES21>
+      <PERCENTAGE_EXPENSES31>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </PERCENTAGE_EXPENSES31>
+      <PERCENTAGE_EXPENSES41>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </PERCENTAGE_EXPENSES41>
+      <PERCENTAGE_EXPENSES51>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </PERCENTAGE_EXPENSES51>
+      <PERCENTAGE_EXPENSES61>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </PERCENTAGE_EXPENSES61>
+      <PERCENTAGE_EXPENSES71>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </PERCENTAGE_EXPENSES71>
+      <CLOWNING11>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </CLOWNING11>
+      <CLOWNING12>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </CLOWNING12>
+      <CLOWNING21>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </CLOWNING21>
+      <CLOWNING22>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </CLOWNING22>
+      <CLOWNING31>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </CLOWNING31>
+      <CLOWNING32>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </CLOWNING32>
+      <CLOWNING41>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </CLOWNING41>
+      <CLOWNING42>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </CLOWNING42>
+      <TRAVEL11>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL11>
+      <TRAVEL12>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL12>
+      <TRAVEL13>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL13>
+      <TRAVEL14>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL14>
+      <TRAVEL15>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL15>
+      <TRAVEL16>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL16>
+      <TRAVEL21>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL21>
+      <TRAVEL22>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL22>
+      <TRAVEL23>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL23>
+      <TRAVEL24>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL24>
+      <TRAVEL25>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL25>
+      <TRAVEL26>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL26>
+      <TRAVEL31>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL31>
+      <TRAVEL32>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL32>
+      <TRAVEL33>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL33>
+      <TRAVEL34>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL34>
+      <TRAVEL35>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL35>
+      <TRAVEL36>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL36>
+      <TRAVEL41>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL41>
+      <TRAVEL42>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL42>
+      <TRAVEL43>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL43>
+      <TRAVEL44>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL44>
+      <TRAVEL45>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL45>
+      <TRAVEL46>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </TRAVEL46>
+      <FAVOURITE_CHARACTERS11>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS11>
+      <FAVOURITE_CHARACTERS12>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS12>
+      <FAVOURITE_CHARACTERS21>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS21>
+      <FAVOURITE_CHARACTERS22>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS22>
+      <FAVOURITE_CHARACTERS31>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS31>
+      <FAVOURITE_CHARACTERS32>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS32>
+      <FAVOURITE_CHARACTERS41>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS41>
+      <FAVOURITE_CHARACTERS42>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS42>
+      <FAVOURITE_CHARACTERS51>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS51>
+      <FAVOURITE_CHARACTERS52>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS52>
+      <FAVOURITE_CHARACTERS61>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS61>
+      <FAVOURITE_CHARACTERS62>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS62>
+      <FAVOURITE_CHARACTERS71>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS71>
+      <FAVOURITE_CHARACTERS72>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS72>
+      <FAVOURITE_CHARACTERS81>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS81>
+      <FAVOURITE_CHARACTERS82>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS82>
+      <FAVOURITE_CHARACTERS91>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS91>
+      <FAVOURITE_CHARACTERS92>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS92>
+      <FAVOURITE_CHARACTERS101>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS101>
+      <FAVOURITE_CHARACTERS102>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </FAVOURITE_CHARACTERS102>
+      <SURVEY_COMMENT>
+         <PREVIOUS type="null"/>
+         <COLLECTED type="null"/>
+         <FORCED type="null"/>
+         <EDITED type="null"/>
+         <INPUTED type="null"/>
+      </SURVEY_COMMENT>
+   </COLLECTED>
+   <EXTERNAL>
+      <LAST_BROADCAST type="null"/>
+   </EXTERNAL>
+   <CALCULATED>
+      <SUM_EXPENSES type="string">cast(PERCENTAGE_EXPENSES11,number) + cast(PERCENTAGE_EXPENSES21,number) + cast(PERCENTAGE_EXPENSES31,number)+ cast(PERCENTAGE_EXPENSES41,number)+ cast(PERCENTAGE_EXPENSES51,number)+ cast(PERCENTAGE_EXPENSES61,number)+ cast(PERCENTAGE_EXPENSES71,number)+ cast(PERCENTAGE_EXPENSES81,number)+ cast(PERCENTAGE_EXPENSES91,number)+ cast(PERCENTAGE_EXPENSES101,number)</SUM_EXPENSES>
+   </CALCULATED>
+</Data>
