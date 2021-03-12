@@ -31,10 +31,17 @@
                                 </xs:all>
                             </xs:complexType>
                         </xs:element>
+                        <xs:element name="CALCULATED" minOccurs="0" maxOccurs="1">
+                            <xs:complexType>
+                                <xs:all>
+                                    <xsl:apply-templates select="//h:variables[@variableType='CALCULATED']"/>
+                                </xs:all>
+                            </xs:complexType>
+                        </xs:element>
                     </xs:all>
                 </xs:complexType>
             </xs:element>
-            
+
             <xs:complexType name="VALUE">
                 <xs:simpleContent>
                     <xs:extension base="xs:string">
@@ -58,7 +65,6 @@
         <xsl:variable name="name" select="h:name"/>
         <xsl:variable name="valuesType" select="@xsi:type"/>
         <xsl:variable name="context" select="."/>
-        <xsl:message>Value Type : <xsl:value-of select="$valuesType"/></xsl:message>
         <xs:element name="{$name}" minOccurs="0" maxOccurs="1">
             <xs:complexType>
                 <xs:all>
@@ -117,7 +123,7 @@
                 <xsl:variable name="currentType" select="."/>
                 <xs:element name="{$name}" minOccurs="0" maxOccurs="1">
                     <xs:complexType>
-                        <xs:sequence>                                            
+                        <xs:sequence>
                             <xsl:apply-templates select="h:value/*">
                                 <xsl:with-param name="name" select="$name" tunnel="yes"/>
                             </xsl:apply-templates>
@@ -128,8 +134,14 @@
             <xsl:otherwise>
                 <xs:element name="{$name}" type="VALUE" minOccurs="0" maxOccurs="1"/>                
             </xsl:otherwise>
-        </xsl:choose>                    
+        </xsl:choose>
         
+    </xsl:template>
+
+    <xsl:template match="h:variables[@variableType='CALCULATED']">
+        <xsl:variable name="name" select="h:name"/>
+        <xsl:variable name="valuesType" select="@xsi:type"/>
+        <xs:element name="{$name}" type="VALUE" minOccurs="0" maxOccurs="1"/>
     </xsl:template>
     
     <xsl:template match="h:value">
