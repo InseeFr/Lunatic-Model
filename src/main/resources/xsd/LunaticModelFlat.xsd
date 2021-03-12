@@ -25,7 +25,7 @@
       <xs:extension base="ComponentType">
         <xs:sequence>
           <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
-          <xs:element name="variables" type="VariableType" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="variables" type="IVariableType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
       </xs:extension>
     </xs:complexContent>
@@ -92,7 +92,7 @@
         <xs:sequence>
             <xs:element name="label" type="xs:string"/>
         </xs:sequence>
-        <xs:attribute name="id" type="xs:ID"/>
+        <xs:attribute name="id" type="xs:string"/>
         <xs:attribute name="page" type="xs:string"/>
     </xs:complexType>
     
