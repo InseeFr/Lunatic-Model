@@ -4,6 +4,7 @@
     "enoCoreVersion" : "2.2.3",
     "lunaticModelVersion" : "2.1.0",
     "pagination" : "sequence",
+    "maxPage" : "8",
     "label" : "Questionnaire SIMPSONS 20201215",
     "components" : 
     [ 
@@ -2460,6 +2461,7 @@
           { "id" : "kiq7bjam",
             "componentType" : "Loop",
             "page" : "6",
+            "maxPage" : "6",
             "label" : "\"Add a character\"",
             "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
             "hierarchy" : 
@@ -2535,6 +2537,7 @@
       { "id" : "kiq7cbgo",
         "componentType" : "Loop",
         "page" : "7",
+        "maxPage" : "7.1",
         "min" : 0,
         "iterations" : "count(NAME_CHAR)",
         "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
