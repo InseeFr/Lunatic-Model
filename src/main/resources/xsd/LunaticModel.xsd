@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema 
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns="http://xml.insee.fr/schema/applis/lunatic-h" 
-    targetNamespace="http://xml.insee.fr/schema/applis/lunatic-h" 
-    elementFormDefault="qualified"
-    attributeFormDefault="unqualified">
-    
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns="http://xml.insee.fr/schema/applis/lunatic-h"
+        targetNamespace="http://xml.insee.fr/schema/applis/lunatic-h"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified">
+
     <xs:element name="Questionnaire">
         <xs:complexType>
             <xs:complexContent>
@@ -15,11 +15,12 @@
                     <xs:attribute name="enoCoreVersion" type="xs:string" use="optional"/>
                     <xs:attribute name="lunaticModelVersion" type="xs:string" use="optional"/>
                     <xs:attribute name="pagination" type="xs:string"/>
+                    <xs:attribute name="maxPage" type="xs:string"/>
                 </xs:extension>
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
-    
+
     <xs:complexType name="SequenceType">
         <xs:complexContent>
             <xs:extension base="ComponentType">
@@ -30,7 +31,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="Sequence">
         <xs:complexContent>
             <xs:extension base="ComponentType">
@@ -40,7 +41,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="Subsequence">
         <xs:complexContent>
             <xs:extension base="ComponentType">
@@ -50,14 +51,14 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="Options">
         <xs:sequence>
             <xs:element name="value" type="xs:string"/>
             <xs:element name="label" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="Loop">
         <xs:complexContent>
             <xs:extension base="ComponentType">
@@ -65,14 +66,15 @@
                     <xs:element name="loopDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
+                <xs:attribute name="maxPage" type="xs:string"/>
                 <xs:attribute name="min" type="xs:integer"/>
                 <xs:attribute name="iterations" type="xs:string"/>
             </xs:extension>
         </xs:complexContent>
-    </xs:complexType>    
-    
-    
-    <xs:complexType name="ComponentType" abstract="true" >
+    </xs:complexType>
+
+
+    <xs:complexType name="ComponentType" abstract="true">
         <xs:sequence>
             <xs:element name="label" type="xs:string" minOccurs="0"/>
             <xs:element name="declarations" type="DeclarationType" minOccurs="0" maxOccurs="unbounded"/>
@@ -123,20 +125,20 @@
             <xs:enumeration value="FilterDescription"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
     <xs:complexType name="ResponseType">
         <xs:attribute name="name" type="xs:string"/>
     </xs:complexType>
-    
+
     <xs:complexType name="IVariableType" abstract="true">
-        <xs:sequence>            
+        <xs:sequence>
             <xs:element name="name" type="xs:string"/>
             <xs:element name="componentRef" type="xs:string" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="variableType" type="VariableTypeEnum"/>
     </xs:complexType>
-    
-    
+
+
     <xs:complexType name="VariableType">
         <xs:complexContent>
             <xs:extension base="IVariableType">
@@ -144,11 +146,11 @@
                     <xs:element name="value" type="xs:string" nillable="true" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="values" type="ValuesType" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="expression" type="xs:string" minOccurs="0"/>
-                </xs:sequence>        
+                </xs:sequence>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="VariableTypeArray">
         <xs:complexContent>
             <xs:extension base="IVariableType">
@@ -159,37 +161,37 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="PREVIOUSArray">
         <xs:sequence>
             <xs:element name="PREVIOUS" type="xs:anyType" nillable="true" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="COLLECTEDArray">
         <xs:sequence>
             <xs:element name="COLLECTED" type="xs:anyType" nillable="true" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="FORCEDArray">
         <xs:sequence>
             <xs:element name="FORCED" type="xs:anyType" nillable="true" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="EDITEDArray">
         <xs:sequence>
             <xs:element name="EDITED" type="xs:anyType" nillable="true" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="INPUTEDArray">
         <xs:sequence>
             <xs:element name="INPUTED" type="xs:anyType" nillable="true" maxOccurs="unbounded"/>
         </xs:sequence>
-    </xs:complexType>    
-    
+    </xs:complexType>
+
     <xs:complexType name="ValuesTypeArray">
         <xs:sequence>
             <xs:element name="PREVIOUS" type="PREVIOUSArray" minOccurs="0" maxOccurs="1"/>
@@ -199,7 +201,7 @@
             <xs:element name="INPUTED" type="INPUTEDArray" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
-        
+
     <xs:complexType name="ValuesType">
         <xs:sequence>
             <xs:element name="PREVIOUS" type="xs:string" nillable="true"/>
@@ -209,14 +211,14 @@
             <xs:element name="INPUTED" type="xs:string" nillable="true"/>
         </xs:sequence>
     </xs:complexType>
-    
+
     <xs:complexType name="ValueTypeArray">
         <xs:sequence>
             <xs:element name="value" type="xs:anyType" nillable="true" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
-    
-    
+
+
     <xs:simpleType name="VariableTypeEnum">
         <xs:restriction base="xs:token">
             <xs:enumeration value="EXTERNAL"/>
@@ -224,7 +226,7 @@
             <xs:enumeration value="CALCULATED"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
     <xs:complexType name="Textarea">
         <xs:complexContent>
             <xs:extension base="ComponentType">
@@ -235,7 +237,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="Input">
         <xs:complexContent>
             <xs:extension base="ComponentType">
@@ -247,7 +249,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="InputNumber">
         <xs:complexContent>
             <xs:extension base="ComponentType">
@@ -261,12 +263,12 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="Datepicker">
         <xs:complexContent>
             <xs:extension base="ComponentType">
                 <xs:sequence>
-                    <xs:element name="dateFormat" type="xs:string" />
+                    <xs:element name="dateFormat" type="xs:string"/>
                     <xs:element name="response" type="ResponseType"/>
                 </xs:sequence>
                 <xs:attribute name="min" type="xs:string" use="optional"/>
@@ -274,7 +276,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="CheckboxBoolean">
         <xs:complexContent>
             <xs:extension base="ComponentType">
@@ -284,7 +286,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="CheckboxOne">
         <xs:complexContent>
             <xs:extension base="ComponentType">
@@ -295,7 +297,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="Radio">
         <xs:complexContent>
             <xs:extension base="ComponentType">
@@ -306,7 +308,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="Dropdown">
         <xs:complexContent>
             <xs:extension base="ComponentType">
@@ -317,7 +319,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="CheckboxGroup">
         <xs:complexContent>
             <xs:extension base="ComponentType">
@@ -327,7 +329,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="FilterDescription">
         <xs:complexContent>
             <xs:extension base="ComponentType">
@@ -339,7 +341,7 @@
     <xs:complexType name="RosterForLoop">
         <xs:complexContent>
             <xs:extension base="ComponentType">
-                <xs:sequence>                    
+                <xs:sequence>
                     <xs:element name="lines" type="LinesRoster" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="headers" type="CellsType" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="components" type="CellsType" minOccurs="0" maxOccurs="unbounded"/>
@@ -348,7 +350,7 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="Table">
         <xs:complexContent>
             <xs:extension base="ComponentType">
@@ -360,14 +362,14 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
-    
+
     <xs:complexType name="CellsLines">
         <xs:sequence>
             <xs:element name="cells" type="CellsType" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="type" use="optional"/>
     </xs:complexType>
-    
+
     <xs:complexType name="CellsType">
         <xs:sequence>
             <xs:element name="value" type="xs:string" minOccurs="0" maxOccurs="1"/>
@@ -389,12 +391,12 @@
         <xs:attribute name="rowspan" type="xs:integer" use="optional"/>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
     </xs:complexType>
-    
+
     <xs:complexType name="LinesRoster">
         <xs:attribute name="min" type="xs:integer" use="required"/>
         <xs:attribute name="max" type="xs:integer" use="required"/>
     </xs:complexType>
-    
+
     <xs:complexType name="ResponsesCheckboxGroup">
         <xs:sequence>
             <xs:element name="label" type="xs:string"/>
@@ -402,7 +404,7 @@
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="required"/>
     </xs:complexType>
-    
+
     <xs:complexType name="DeclarationType">
         <xs:sequence>
             <xs:element name="label" type="xs:string"/>
@@ -411,7 +413,7 @@
         <xs:attribute name="declarationType" type="DeclarationTypeEnum"/>
         <xs:attribute name="position" type="DeclarationPositionEnum"/>
     </xs:complexType>
-    
+
     <xs:simpleType name="DeclarationTypeEnum">
         <xs:restriction base="xs:token">
             <xs:enumeration value="INSTRUCTION"/>
@@ -421,7 +423,7 @@
             <xs:enumeration value="STATEMENT"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
     <xs:simpleType name="DeclarationPositionEnum">
         <xs:restriction base="xs:token">
             <xs:enumeration value="AFTER_QUESTION_TEXT"/>
@@ -430,7 +432,7 @@
             <xs:enumeration value="DETACHABLE"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
     <xs:complexType name="ControlType">
         <xs:sequence>
             <xs:element name="Description" type="xs:string"/>
@@ -440,13 +442,13 @@
         <xs:attribute name="id" type="xs:ID" use="required"/>
         <xs:attribute name="criticity" type="ControlCriticityEnum"/>
     </xs:complexType>
-    
+
     <xs:complexType name="ExpressionType">
         <xs:simpleContent>
             <xs:extension base="xs:string"/>
         </xs:simpleContent>
     </xs:complexType>
-    
+
     <xs:simpleType name="ControlCriticityEnum">
         <xs:restriction base="xs:token">
             <xs:enumeration value="INFO"/>
@@ -454,5 +456,5 @@
             <xs:enumeration value="ERROR"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
 </xs:schema>
