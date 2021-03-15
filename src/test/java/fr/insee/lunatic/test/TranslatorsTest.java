@@ -61,7 +61,7 @@ public class TranslatorsTest {
 			String jsonExpectedString = new String(Files.readAllBytes(expectedFile),StandardCharsets.UTF_8);
 
 			JSONAssert.assertEquals(jsonExpectedString, String.valueOf(jsonOut),
-					new CustomComparator(JSONCompareMode.LENIENT,
+					new CustomComparator(JSONCompareMode.STRICT,
 							new Customization("lunaticModelVersion", (o1, o2) -> true),
 							new Customization("enoCoreVersion",(o1, o2) -> true)));
 
@@ -146,7 +146,7 @@ public class TranslatorsTest {
 			Path expectedFile = Paths.get(String.format("%s/out.json", basePath));
 			String jsonExpectedString = new String(Files.readAllBytes(expectedFile),StandardCharsets.UTF_8);
 			JSONAssert.assertEquals(jsonExpectedString, String.valueOf(jsonOut),
-					new CustomComparator(JSONCompareMode.LENIENT,
+					new CustomComparator(JSONCompareMode.STRICT,
 							new Customization("lunaticModelVersion", (o1, o2) -> true),
 							new Customization("enoCoreVersion",(o1, o2) -> true)));
 		} catch (IOException e) {
@@ -186,7 +186,7 @@ public class TranslatorsTest {
 			String jsonExpectedString = new String(Files.readAllBytes(expectedFile),StandardCharsets.UTF_8);
 
 			JSONAssert.assertEquals(jsonExpectedString, String.valueOf(jsonOut),
-					new CustomComparator(JSONCompareMode.LENIENT,
+					new CustomComparator(JSONCompareMode.STRICT,
 							new Customization("lunaticModelVersion", (o1, o2) -> true),
 							new Customization("enoCoreVersion",(o1, o2) -> true)));
 
