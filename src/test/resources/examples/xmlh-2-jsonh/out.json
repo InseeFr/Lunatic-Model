@@ -17,7 +17,7 @@
           { "id" : "j6p0ti5h-d1",
             "declarationType" : "COMMENT",
             "position" : "AFTER_QUESTION_TEXT",
-            "label" : "\"We're going to test your knowledge about the simpsons series.Welcome in the simpsons world!\"" } ],
+            "label" : "\"We’re going to test your knowledge about the simpsons series.Welcome in the simpsons world!\"" } ],
         "conditionFilter" : "\"normal\"",
         "hierarchy" : 
         { "sequence" : 
@@ -346,7 +346,7 @@
       { "id" : "j3341528",
         "componentType" : "Sequence",
         "page" : "2",
-        "label" : "\"II - Simpsons' city\"",
+        "label" : "\"II - Simpsons’ city\"",
         "declarations" : 
         [ 
           { "id" : "j3341528-d2",
@@ -358,7 +358,7 @@
         { "sequence" : 
           { "id" : "j3341528",
             "page" : "2",
-            "label" : "\"II - Simpsons' city\"" } },
+            "label" : "\"II - Simpsons’ city\"" } },
         "components" : 
         [ 
           { "id" : "j3343clt",
@@ -377,7 +377,7 @@
             { "sequence" : 
               { "id" : "j3341528",
                 "page" : "2",
-                "label" : "\"II - Simpsons' city\"" } },
+                "label" : "\"II - Simpsons’ city\"" } },
             "bindingDependencies" : 
             [ "CITY" ],
             "options" : 
@@ -409,7 +409,7 @@
             { "sequence" : 
               { "id" : "j3341528",
                 "page" : "2",
-                "label" : "\"II - Simpsons' city\"" } },
+                "label" : "\"II - Simpsons’ city\"" } },
             "bindingDependencies" : 
             [ "MAYOR" ],
             "options" : 
@@ -438,7 +438,7 @@
             { "sequence" : 
               { "id" : "j3341528",
                 "page" : "2",
-                "label" : "\"II - Simpsons' city\"" } },
+                "label" : "\"II - Simpsons’ city\"" } },
             "bindingDependencies" : 
             [ "STATE" ],
             "options" : 
@@ -520,7 +520,7 @@
             "responses" : 
             [ 
               { "id" : "j334akov-QOP-khokqjtw",
-                "label" : "\"Santa's Little Helper\"",
+                "label" : "\"Santa’s Little Helper\"",
                 "response" : 
                 { "name" : "PET1" } },
               
@@ -915,7 +915,7 @@
                 "mandatory" : false,
                 "page" : "4",
                 "positioning" : "HORIZONTAL",
-                "label" : "\"➡ 1. Please, specify the percentage of Jay's expenses in the Kwik-E-Mart for each product?\"",
+                "label" : "\"➡ 1. Please, specify the percentage of Jay’s expenses in the Kwik-E-Mart for each product?\"",
                 "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
                 "hierarchy" : 
                 { "sequence" : 
