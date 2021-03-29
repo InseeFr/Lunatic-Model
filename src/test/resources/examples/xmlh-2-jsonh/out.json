@@ -2461,7 +2461,7 @@
           { "id" : "kiq7bjam",
             "componentType" : "Loop",
             "page" : "6",
-            "maxPage" : "6",
+            "paginatedLoop" : false,
             "label" : "\"Add a character\"",
             "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
             "hierarchy" : 
@@ -2537,9 +2537,11 @@
       { "id" : "kiq7cbgo",
         "componentType" : "Loop",
         "page" : "7",
-        "maxPage" : "7.1",
+        "maxPage" : "1",
         "min" : 0,
         "iterations" : "count(NAME_CHAR)",
+        "depth" : 1,
+        "paginatedLoop" : true,
         "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
         "bindingDependencies" : 
         [ "NAME_CHAR",
@@ -2560,6 +2562,8 @@
               { "id" : "kiq5xw5p",
                 "page" : "7.1",
                 "label" : "\"VII - Other details about character named \" || cast(cast(NAME_CHAR,string),string) || \" \"" } },
+            "bindingDependencies" : 
+            [ "NAME_CHAR" ],
             "components" : 
             [ 
               { "id" : "kiq65x3c",
