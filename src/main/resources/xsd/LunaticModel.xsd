@@ -69,6 +69,8 @@
                 <xs:attribute name="maxPage" type="xs:string"/>
                 <xs:attribute name="min" type="xs:integer"/>
                 <xs:attribute name="iterations" type="xs:string"/>
+                <xs:attribute name="depth" type="xs:integer"/>
+                <xs:attribute name="paginatedLoop" type="xs:boolean"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>

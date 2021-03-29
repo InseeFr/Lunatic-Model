@@ -2325,7 +2325,7 @@
                componentType="Loop"
                id="kiq7bjam"
                page="6"
-               maxPage="6">
+               paginatedLoop="false">
          <label>"Add a character"</label>
          <conditionFilter>if ((not(cast(READY,integer)  &lt;&gt;  1))) then "normal" else "hidden"</conditionFilter>
          <hierarchy>
@@ -2394,10 +2394,12 @@
    <components xsi:type="Loop"
                componentType="Loop"
                id="kiq7cbgo"
+               depth="1"
                min="0"
                iterations="count(NAME_CHAR)"
                page="7"
-               maxPage="7.1">
+               maxPage="1"
+               paginatedLoop="true">
       <conditionFilter>if ((not(cast(READY,integer)  &lt;&gt;  1))) then "normal" else "hidden"</conditionFilter>
       <bindingDependencies>NAME_CHAR</bindingDependencies>
       <bindingDependencies>FAVCHAR</bindingDependencies>
@@ -2415,6 +2417,7 @@
                <label>"VII - Other details about character named " || cast(cast(NAME_CHAR,string),string) || " "</label>
             </sequence>
          </hierarchy>
+         <bindingDependencies>NAME_CHAR</bindingDependencies>
       </components>
       <components xsi:type="CheckboxOne"
                   componentType="CheckboxOne"
@@ -2487,1499 +2490,1499 @@
          <response name="SURVEY_COMMENT"/>
       </components>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR1_1_1</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR1_1_1</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR2_1_2</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR2_1_2</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR3_1_3</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR3_1_3</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR1_2_1</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR1_2_1</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR2_2_2</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR2_2_2</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR3_2_3</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR3_2_3</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR1_3_1</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR1_3_1</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR2_3_2</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR2_3_2</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR3_3_3</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR3_3_3</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR1_4_1</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR1_4_1</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR2_4_2</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR2_4_2</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR3_4_3</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR3_4_3</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR1_5_1</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR1_5_1</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR2_5_2</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR2_5_2</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR3_5_3</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR3_5_3</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR1_6_1</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR1_6_1</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR2_6_2</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR2_6_2</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR3_6_3</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR3_6_3</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR1_7_1</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR1_7_1</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR2_7_2</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR2_7_2</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR3_7_3</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR3_7_3</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR1_8_1</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR1_8_1</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR2_8_2</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR2_8_2</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR3_8_3</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR3_8_3</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR1_9_1</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR1_9_1</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR2_9_2</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR2_9_2</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR3_9_3</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR3_9_3</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR1_10_1</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR1_10_1</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR2_10_2</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR2_10_2</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>FAVOURITE_CHAR3_10_3</name>
-                  <componentRef>j6qg8rc6</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
+      <name>FAVOURITE_CHAR3_10_3</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="EXTERNAL" xsi:type="VariableType">
       <name>LAST_BROADCAST</name>
       <value xsi:nil="true"/>
    </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-         <name>COMMENT</name>
-         <componentRef>j6p3dkx6</componentRef>
-         <values>
-            <PREVIOUS xsi:nil="true"/>
-            <COLLECTED xsi:nil="true"/>
-            <FORCED xsi:nil="true"/>
-            <EDITED xsi:nil="true"/>
-            <INPUTED xsi:nil="true"/>
-         </values>
-      </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-         <name>READY</name>
-         <componentRef>j6p0np9q</componentRef>
-         <values>
-            <PREVIOUS xsi:nil="true"/>
-            <COLLECTED xsi:nil="true"/>
-            <FORCED xsi:nil="true"/>
-            <EDITED xsi:nil="true"/>
-            <INPUTED xsi:nil="true"/>
-         </values>
-      </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-            <name>PRODUCER</name>
-            <componentRef>j3343qhx</componentRef>
-            <values>
-               <PREVIOUS xsi:nil="true"/>
-               <COLLECTED xsi:nil="true"/>
-               <FORCED xsi:nil="true"/>
-               <EDITED xsi:nil="true"/>
-               <INPUTED xsi:nil="true"/>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-            <name>SEASON_NUMBER</name>
-            <componentRef>j6q9h8tj</componentRef>
-            <values>
-               <PREVIOUS xsi:nil="true"/>
-               <COLLECTED xsi:nil="true"/>
-               <FORCED xsi:nil="true"/>
-               <EDITED xsi:nil="true"/>
-               <INPUTED xsi:nil="true"/>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-            <name>DATEFIRST</name>
-            <componentRef>kiq71eoi</componentRef>
-            <values>
-               <PREVIOUS xsi:nil="true"/>
-               <COLLECTED xsi:nil="true"/>
-               <FORCED xsi:nil="true"/>
-               <EDITED xsi:nil="true"/>
-               <INPUTED xsi:nil="true"/>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-            <name>DATEYYYYMM</name>
-            <componentRef>k5nvty2o</componentRef>
-            <values>
-               <PREVIOUS xsi:nil="true"/>
-               <COLLECTED xsi:nil="true"/>
-               <FORCED xsi:nil="true"/>
-               <EDITED xsi:nil="true"/>
-               <INPUTED xsi:nil="true"/>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-            <name>DATEYYYY</name>
-            <componentRef>k5nw1fir</componentRef>
-            <values>
-               <PREVIOUS xsi:nil="true"/>
-               <COLLECTED xsi:nil="true"/>
-               <FORCED xsi:nil="true"/>
-               <EDITED xsi:nil="true"/>
-               <INPUTED xsi:nil="true"/>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-            <name>DURATIONH</name>
-            <componentRef>k5nw0w05</componentRef>
-            <values>
-               <PREVIOUS xsi:nil="true"/>
-               <COLLECTED xsi:nil="true"/>
-               <FORCED xsi:nil="true"/>
-               <EDITED xsi:nil="true"/>
-               <INPUTED xsi:nil="true"/>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-            <name>DURATIOND</name>
-            <componentRef>k5nvu98z</componentRef>
-            <values>
-               <PREVIOUS xsi:nil="true"/>
-               <COLLECTED xsi:nil="true"/>
-               <FORCED xsi:nil="true"/>
-               <EDITED xsi:nil="true"/>
-               <INPUTED xsi:nil="true"/>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-            <name>DURATIONM</name>
-            <componentRef>k5nw8ei1</componentRef>
-            <values>
-               <PREVIOUS xsi:nil="true"/>
-               <COLLECTED xsi:nil="true"/>
-               <FORCED xsi:nil="true"/>
-               <EDITED xsi:nil="true"/>
-               <INPUTED xsi:nil="true"/>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-            <name>DURATIONY</name>
-            <componentRef>k5nw9dk4</componentRef>
-            <values>
-               <PREVIOUS xsi:nil="true"/>
-               <COLLECTED xsi:nil="true"/>
-               <FORCED xsi:nil="true"/>
-               <EDITED xsi:nil="true"/>
-               <INPUTED xsi:nil="true"/>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-            <name>AUDIENCE_SHARE</name>
-            <componentRef>j6z06z1e</componentRef>
-            <values>
-               <PREVIOUS xsi:nil="true"/>
-               <COLLECTED xsi:nil="true"/>
-               <FORCED xsi:nil="true"/>
-               <EDITED xsi:nil="true"/>
-               <INPUTED xsi:nil="true"/>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-         <name>CITY</name>
-         <componentRef>j3343clt</componentRef>
-         <values>
-            <PREVIOUS xsi:nil="true"/>
-            <COLLECTED xsi:nil="true"/>
-            <FORCED xsi:nil="true"/>
-            <EDITED xsi:nil="true"/>
-            <INPUTED xsi:nil="true"/>
-         </values>
-      </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-         <name>MAYOR</name>
-         <componentRef>j6qdfhvw</componentRef>
-         <values>
-            <PREVIOUS xsi:nil="true"/>
-            <COLLECTED xsi:nil="true"/>
-            <FORCED xsi:nil="true"/>
-            <EDITED xsi:nil="true"/>
-            <INPUTED xsi:nil="true"/>
-         </values>
-      </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-         <name>STATE</name>
-         <componentRef>j4nw5cqz</componentRef>
-         <values>
-            <PREVIOUS xsi:nil="true"/>
-            <COLLECTED xsi:nil="true"/>
-            <FORCED xsi:nil="true"/>
-            <EDITED xsi:nil="true"/>
-            <INPUTED xsi:nil="true"/>
-         </values>
-      </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-            <name>PET1</name>
-            <componentRef>j334akov</componentRef>
-            <values>
-               <PREVIOUS xsi:nil="true"/>
-               <COLLECTED xsi:nil="true"/>
-               <FORCED xsi:nil="true"/>
-               <EDITED xsi:nil="true"/>
-               <INPUTED xsi:nil="true"/>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-            <name>PET2</name>
-            <componentRef>j334akov</componentRef>
-            <values>
-               <PREVIOUS xsi:nil="true"/>
-               <COLLECTED xsi:nil="true"/>
-               <FORCED xsi:nil="true"/>
-               <EDITED xsi:nil="true"/>
-               <INPUTED xsi:nil="true"/>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-            <name>PET3</name>
-            <componentRef>j334akov</componentRef>
-            <values>
-               <PREVIOUS xsi:nil="true"/>
-               <COLLECTED xsi:nil="true"/>
-               <FORCED xsi:nil="true"/>
-               <EDITED xsi:nil="true"/>
-               <INPUTED xsi:nil="true"/>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-            <name>PET4</name>
-            <componentRef>j334akov</componentRef>
-            <values>
-               <PREVIOUS xsi:nil="true"/>
-               <COLLECTED xsi:nil="true"/>
-               <FORCED xsi:nil="true"/>
-               <EDITED xsi:nil="true"/>
-               <INPUTED xsi:nil="true"/>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>ICE_FLAVOUR1</name>
-               <componentRef>j6p29i81</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>ICE_FLAVOUR2</name>
-               <componentRef>j6p29i81</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>ICE_FLAVOUR3</name>
-               <componentRef>j6p29i81</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>ICE_FLAVOUR4</name>
-               <componentRef>j6p29i81</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>NUCLEAR_CHARACTER1</name>
-               <componentRef>j6qefnga</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>NUCLEAR_CHARACTER2</name>
-               <componentRef>j6qefnga</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>NUCLEAR_CHARACTER3</name>
-               <componentRef>j6qefnga</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>NUCLEAR_CHARACTER4</name>
-               <componentRef>j6qefnga</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>BIRTH_CHARACTER1</name>
-               <componentRef>j6yzoc6g</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>BIRTH_CHARACTER2</name>
-               <componentRef>j6yzoc6g</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>BIRTH_CHARACTER3</name>
-               <componentRef>j6yzoc6g</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>BIRTH_CHARACTER4</name>
-               <componentRef>j6yzoc6g</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>BIRTH_CHARACTER5</name>
-               <componentRef>j6yzoc6g</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>PERCENTAGE_EXPENSES11</name>
-                  <componentRef>j4nwc63q</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>PERCENTAGE_EXPENSES21</name>
-                  <componentRef>j4nwc63q</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>PERCENTAGE_EXPENSES31</name>
-                  <componentRef>j4nwc63q</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>PERCENTAGE_EXPENSES41</name>
-                  <componentRef>j4nwc63q</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>PERCENTAGE_EXPENSES51</name>
-                  <componentRef>j4nwc63q</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>PERCENTAGE_EXPENSES61</name>
-                  <componentRef>j4nwc63q</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>PERCENTAGE_EXPENSES71</name>
-                  <componentRef>j4nwc63q</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>LAST_FOOD_SHOPPING11</name>
-                  <componentRef>k9cg2q5t</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>LAST_FOOD_SHOPPING21</name>
-                  <componentRef>k9cg2q5t</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>LAST_FOOD_SHOPPING31</name>
-                  <componentRef>k9cg2q5t</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>LAST_FOOD_SHOPPING41</name>
-                  <componentRef>k9cg2q5t</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>LAST_FOOD_SHOPPING51</name>
-                  <componentRef>k9cg2q5t</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>LAST_FOOD_SHOPPING61</name>
-                  <componentRef>k9cg2q5t</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>LAST_FOOD_SHOPPING71</name>
-                  <componentRef>k9cg2q5t</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>LAST_FOOD_SHOPPING81</name>
-                  <componentRef>k9cg2q5t</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>CLOWNING11</name>
-                  <componentRef>kbkjvgel</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>CLOWNING12</name>
-                  <componentRef>kbkjvgel</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>CLOWNING21</name>
-                  <componentRef>kbkjvgel</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>CLOWNING22</name>
-                  <componentRef>kbkjvgel</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>CLOWNING31</name>
-                  <componentRef>kbkjvgel</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>CLOWNING32</name>
-                  <componentRef>kbkjvgel</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>CLOWNING41</name>
-                  <componentRef>kbkjvgel</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>CLOWNING42</name>
-                  <componentRef>kbkjvgel</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL11</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL12</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL13</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL14</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL15</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL16</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL21</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL22</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL23</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL24</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL25</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL26</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL31</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL32</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL33</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL34</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL35</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL36</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL41</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL42</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL43</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL44</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL45</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-                  <name>TRAVEL46</name>
-                  <componentRef>j6p2lwuj</componentRef>
-                  <values>
-                     <PREVIOUS xsi:nil="true"/>
-                     <COLLECTED xsi:nil="true"/>
-                     <FORCED xsi:nil="true"/>
-                     <EDITED xsi:nil="true"/>
-                     <INPUTED xsi:nil="true"/>
-                  </values>
-               </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>FAVOURITE_CHAR1</name>
-               <componentRef>j6qg8rc6</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>FAVOURITE_CHAR2</name>
-               <componentRef>j6qg8rc6</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>FAVOURITE_CHAR3</name>
-               <componentRef>j6qg8rc6</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>FEELCHAREV1</name>
-               <componentRef>jvxux0mi</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>FEELCHAREV2</name>
-               <componentRef>jvxux0mi</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>FEELCHAREV3</name>
-               <componentRef>jvxux0mi</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>FEELCHAREV4</name>
-               <componentRef>jvxux0mi</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>LEAVDURATION11</name>
-               <componentRef>jvxwy68n</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>LEAVDURATION12</name>
-               <componentRef>jvxwy68n</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>LEAVDURATION21</name>
-               <componentRef>jvxwy68n</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>LEAVDURATION22</name>
-               <componentRef>jvxwy68n</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>LEAVDURATION31</name>
-               <componentRef>jvxwy68n</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>LEAVDURATION32</name>
-               <componentRef>jvxwy68n</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>LEAVDURATION41</name>
-               <componentRef>jvxwy68n</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>LEAVDURATION42</name>
-               <componentRef>jvxwy68n</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>LEAVDURATION51</name>
-               <componentRef>jvxwy68n</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-               <name>LEAVDURATION52</name>
-               <componentRef>jvxwy68n</componentRef>
-               <values>
-                  <PREVIOUS xsi:nil="true"/>
-                  <COLLECTED xsi:nil="true"/>
-                  <FORCED xsi:nil="true"/>
-                  <EDITED xsi:nil="true"/>
-                  <INPUTED xsi:nil="true"/>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-         <name>NB_CHAR</name>
-         <componentRef>kiq612ky</componentRef>
-         <values>
-            <PREVIOUS xsi:nil="true"/>
-            <COLLECTED xsi:nil="true"/>
-            <FORCED xsi:nil="true"/>
-            <EDITED xsi:nil="true"/>
-            <INPUTED xsi:nil="true"/>
-         </values>
-      </variables>
+      <name>COMMENT</name>
+      <componentRef>j6p3dkx6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>READY</name>
+      <componentRef>j6p0np9q</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PRODUCER</name>
+      <componentRef>j3343qhx</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>SEASON_NUMBER</name>
+      <componentRef>j6q9h8tj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>DATEFIRST</name>
+      <componentRef>kiq71eoi</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>DATEYYYYMM</name>
+      <componentRef>k5nvty2o</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>DATEYYYY</name>
+      <componentRef>k5nw1fir</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>DURATIONH</name>
+      <componentRef>k5nw0w05</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>DURATIOND</name>
+      <componentRef>k5nvu98z</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>DURATIONM</name>
+      <componentRef>k5nw8ei1</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>DURATIONY</name>
+      <componentRef>k5nw9dk4</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>AUDIENCE_SHARE</name>
+      <componentRef>j6z06z1e</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>CITY</name>
+      <componentRef>j3343clt</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>MAYOR</name>
+      <componentRef>j6qdfhvw</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>STATE</name>
+      <componentRef>j4nw5cqz</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PET1</name>
+      <componentRef>j334akov</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PET2</name>
+      <componentRef>j334akov</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PET3</name>
+      <componentRef>j334akov</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PET4</name>
+      <componentRef>j334akov</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>ICE_FLAVOUR1</name>
+      <componentRef>j6p29i81</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>ICE_FLAVOUR2</name>
+      <componentRef>j6p29i81</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>ICE_FLAVOUR3</name>
+      <componentRef>j6p29i81</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>ICE_FLAVOUR4</name>
+      <componentRef>j6p29i81</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>NUCLEAR_CHARACTER1</name>
+      <componentRef>j6qefnga</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>NUCLEAR_CHARACTER2</name>
+      <componentRef>j6qefnga</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>NUCLEAR_CHARACTER3</name>
+      <componentRef>j6qefnga</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>NUCLEAR_CHARACTER4</name>
+      <componentRef>j6qefnga</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>BIRTH_CHARACTER1</name>
+      <componentRef>j6yzoc6g</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>BIRTH_CHARACTER2</name>
+      <componentRef>j6yzoc6g</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>BIRTH_CHARACTER3</name>
+      <componentRef>j6yzoc6g</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>BIRTH_CHARACTER4</name>
+      <componentRef>j6yzoc6g</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>BIRTH_CHARACTER5</name>
+      <componentRef>j6yzoc6g</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PERCENTAGE_EXPENSES11</name>
+      <componentRef>j4nwc63q</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PERCENTAGE_EXPENSES21</name>
+      <componentRef>j4nwc63q</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PERCENTAGE_EXPENSES31</name>
+      <componentRef>j4nwc63q</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PERCENTAGE_EXPENSES41</name>
+      <componentRef>j4nwc63q</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PERCENTAGE_EXPENSES51</name>
+      <componentRef>j4nwc63q</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PERCENTAGE_EXPENSES61</name>
+      <componentRef>j4nwc63q</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PERCENTAGE_EXPENSES71</name>
+      <componentRef>j4nwc63q</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LAST_FOOD_SHOPPING11</name>
+      <componentRef>k9cg2q5t</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LAST_FOOD_SHOPPING21</name>
+      <componentRef>k9cg2q5t</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LAST_FOOD_SHOPPING31</name>
+      <componentRef>k9cg2q5t</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LAST_FOOD_SHOPPING41</name>
+      <componentRef>k9cg2q5t</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LAST_FOOD_SHOPPING51</name>
+      <componentRef>k9cg2q5t</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LAST_FOOD_SHOPPING61</name>
+      <componentRef>k9cg2q5t</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LAST_FOOD_SHOPPING71</name>
+      <componentRef>k9cg2q5t</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LAST_FOOD_SHOPPING81</name>
+      <componentRef>k9cg2q5t</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>CLOWNING11</name>
+      <componentRef>kbkjvgel</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>CLOWNING12</name>
+      <componentRef>kbkjvgel</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>CLOWNING21</name>
+      <componentRef>kbkjvgel</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>CLOWNING22</name>
+      <componentRef>kbkjvgel</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>CLOWNING31</name>
+      <componentRef>kbkjvgel</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>CLOWNING32</name>
+      <componentRef>kbkjvgel</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>CLOWNING41</name>
+      <componentRef>kbkjvgel</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>CLOWNING42</name>
+      <componentRef>kbkjvgel</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL11</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL12</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL13</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL14</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL15</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL16</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL21</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL22</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL23</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL24</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL25</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL26</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL31</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL32</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL33</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL34</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL35</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL36</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL41</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL42</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL43</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL44</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL45</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>TRAVEL46</name>
+      <componentRef>j6p2lwuj</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>FAVOURITE_CHAR1</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>FAVOURITE_CHAR2</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>FAVOURITE_CHAR3</name>
+      <componentRef>j6qg8rc6</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>FEELCHAREV1</name>
+      <componentRef>jvxux0mi</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>FEELCHAREV2</name>
+      <componentRef>jvxux0mi</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>FEELCHAREV3</name>
+      <componentRef>jvxux0mi</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>FEELCHAREV4</name>
+      <componentRef>jvxux0mi</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LEAVDURATION11</name>
+      <componentRef>jvxwy68n</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LEAVDURATION12</name>
+      <componentRef>jvxwy68n</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LEAVDURATION21</name>
+      <componentRef>jvxwy68n</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LEAVDURATION22</name>
+      <componentRef>jvxwy68n</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LEAVDURATION31</name>
+      <componentRef>jvxwy68n</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LEAVDURATION32</name>
+      <componentRef>jvxwy68n</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LEAVDURATION41</name>
+      <componentRef>jvxwy68n</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LEAVDURATION42</name>
+      <componentRef>jvxwy68n</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LEAVDURATION51</name>
+      <componentRef>jvxwy68n</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LEAVDURATION52</name>
+      <componentRef>jvxwy68n</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>NB_CHAR</name>
+      <componentRef>kiq612ky</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
    <variables variableType="COLLECTED" xsi:type="VariableTypeArray">
-               <name>NAME_CHAR</name>
-               <componentRef>kiq7bjam</componentRef>
-               <values>
-                  <PREVIOUS xsi:type="PREVIOUSArray">
-                     <PREVIOUS xsi:nil="true"/>
-                  </PREVIOUS>
-                  <COLLECTED xsi:type="COLLECTEDArray">
-                     <COLLECTED xsi:nil="true"/>
-                  </COLLECTED>
-                  <FORCED xsi:type="FORCEDArray">
-                     <FORCED xsi:nil="true"/>
-                  </FORCED>
-                  <EDITED xsi:type="EDITEDArray">
-                     <EDITED xsi:nil="true"/>
-                  </EDITED>
-                  <INPUTED xsi:type="INPUTEDArray">
-                     <INPUTED xsi:nil="true"/>
-                  </INPUTED>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableTypeArray">
-               <name>AGE_CHAR</name>
-               <componentRef>kiq7bjam</componentRef>
-               <values>
-                  <PREVIOUS xsi:type="PREVIOUSArray">
-                     <PREVIOUS xsi:nil="true"/>
-                  </PREVIOUS>
-                  <COLLECTED xsi:type="COLLECTEDArray">
-                     <COLLECTED xsi:nil="true"/>
-                  </COLLECTED>
-                  <FORCED xsi:type="FORCEDArray">
-                     <FORCED xsi:nil="true"/>
-                  </FORCED>
-                  <EDITED xsi:type="EDITEDArray">
-                     <EDITED xsi:nil="true"/>
-                  </EDITED>
-                  <INPUTED xsi:type="INPUTEDArray">
-                     <INPUTED xsi:nil="true"/>
-                  </INPUTED>
-               </values>
-            </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableTypeArray">
-            <name>FAVCHAR</name>
-            <componentRef>kiq7cbgo</componentRef>
-            <values>
-               <PREVIOUS xsi:type="PREVIOUSArray">
-                  <PREVIOUS xsi:nil="true"/>
-               </PREVIOUS>
-               <COLLECTED xsi:type="COLLECTEDArray">
-                  <COLLECTED xsi:nil="true"/>
-               </COLLECTED>
-               <FORCED xsi:type="FORCEDArray">
-                  <FORCED xsi:nil="true"/>
-               </FORCED>
-               <EDITED xsi:type="EDITEDArray">
-                  <EDITED xsi:nil="true"/>
-               </EDITED>
-               <INPUTED xsi:type="INPUTEDArray">
-                  <INPUTED xsi:nil="true"/>
-               </INPUTED>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableTypeArray">
-            <name>MEMORY_CHAR</name>
-            <componentRef>kiq7cbgo</componentRef>
-            <values>
-               <PREVIOUS xsi:type="PREVIOUSArray">
-                  <PREVIOUS xsi:nil="true"/>
-               </PREVIOUS>
-               <COLLECTED xsi:type="COLLECTEDArray">
-                  <COLLECTED xsi:nil="true"/>
-               </COLLECTED>
-               <FORCED xsi:type="FORCEDArray">
-                  <FORCED xsi:nil="true"/>
-               </FORCED>
-               <EDITED xsi:type="EDITEDArray">
-                  <EDITED xsi:nil="true"/>
-               </EDITED>
-               <INPUTED xsi:type="INPUTEDArray">
-                  <INPUTED xsi:nil="true"/>
-               </INPUTED>
-            </values>
-         </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-         <name>SURVEY_COMMENT</name>
-         <componentRef>j6z0z3us</componentRef>
-         <values>
+      <name>NAME_CHAR</name>
+      <componentRef>kiq7bjam</componentRef>
+      <values>
+         <PREVIOUS xsi:type="PREVIOUSArray">
             <PREVIOUS xsi:nil="true"/>
+         </PREVIOUS>
+         <COLLECTED xsi:type="COLLECTEDArray">
             <COLLECTED xsi:nil="true"/>
+         </COLLECTED>
+         <FORCED xsi:type="FORCEDArray">
             <FORCED xsi:nil="true"/>
+         </FORCED>
+         <EDITED xsi:type="EDITEDArray">
             <EDITED xsi:nil="true"/>
+         </EDITED>
+         <INPUTED xsi:type="INPUTEDArray">
             <INPUTED xsi:nil="true"/>
-         </values>
-      </variables>
+         </INPUTED>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableTypeArray">
+      <name>AGE_CHAR</name>
+      <componentRef>kiq7bjam</componentRef>
+      <values>
+         <PREVIOUS xsi:type="PREVIOUSArray">
+            <PREVIOUS xsi:nil="true"/>
+         </PREVIOUS>
+         <COLLECTED xsi:type="COLLECTEDArray">
+            <COLLECTED xsi:nil="true"/>
+         </COLLECTED>
+         <FORCED xsi:type="FORCEDArray">
+            <FORCED xsi:nil="true"/>
+         </FORCED>
+         <EDITED xsi:type="EDITEDArray">
+            <EDITED xsi:nil="true"/>
+         </EDITED>
+         <INPUTED xsi:type="INPUTEDArray">
+            <INPUTED xsi:nil="true"/>
+         </INPUTED>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableTypeArray">
+      <name>FAVCHAR</name>
+      <componentRef>kiq7cbgo</componentRef>
+      <values>
+         <PREVIOUS xsi:type="PREVIOUSArray">
+            <PREVIOUS xsi:nil="true"/>
+         </PREVIOUS>
+         <COLLECTED xsi:type="COLLECTEDArray">
+            <COLLECTED xsi:nil="true"/>
+         </COLLECTED>
+         <FORCED xsi:type="FORCEDArray">
+            <FORCED xsi:nil="true"/>
+         </FORCED>
+         <EDITED xsi:type="EDITEDArray">
+            <EDITED xsi:nil="true"/>
+         </EDITED>
+         <INPUTED xsi:type="INPUTEDArray">
+            <INPUTED xsi:nil="true"/>
+         </INPUTED>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableTypeArray">
+      <name>MEMORY_CHAR</name>
+      <componentRef>kiq7cbgo</componentRef>
+      <values>
+         <PREVIOUS xsi:type="PREVIOUSArray">
+            <PREVIOUS xsi:nil="true"/>
+         </PREVIOUS>
+         <COLLECTED xsi:type="COLLECTEDArray">
+            <COLLECTED xsi:nil="true"/>
+         </COLLECTED>
+         <FORCED xsi:type="FORCEDArray">
+            <FORCED xsi:nil="true"/>
+         </FORCED>
+         <EDITED xsi:type="EDITEDArray">
+            <EDITED xsi:nil="true"/>
+         </EDITED>
+         <INPUTED xsi:type="INPUTEDArray">
+            <INPUTED xsi:nil="true"/>
+         </INPUTED>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>SURVEY_COMMENT</name>
+      <componentRef>j6z0z3us</componentRef>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
 </Questionnaire>
