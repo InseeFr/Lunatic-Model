@@ -40,7 +40,9 @@
 
     <xs:complexType name="Subsequence">
         <xs:complexContent>
-            <xs:extension base="ComponentType"/>
+            <xs:extension base="ComponentType">
+                <xs:attribute name="goToPage" type="xs:string"/>
+            </xs:extension>
         </xs:complexContent>
     </xs:complexType>
 
