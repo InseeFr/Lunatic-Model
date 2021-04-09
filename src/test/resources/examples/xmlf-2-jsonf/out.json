@@ -1,28 +1,42 @@
 
-  { "id" : "i6vwi0",
+  { "id" : "i6vwi2506qf2mms",
     "modele" : "SIMPSONS",
-    "enoCoreVersion" : "2.1.1",
-    "lunaticModelVersion" : "2.0.0-rc4",
-    "label" : "Questionnaire SIMPSONS",
+    "enoCoreVersion" : "2.2.3",
+    "lunaticModelVersion" : "2.1.0",
+    "pagination" : "sequence",
+    "maxPage" : "8",
+    "label" : "Questionnaire SIMPSONS 20201215",
     "components" : 
     [ 
       { "id" : "j6p0ti5h",
         "componentType" : "Sequence",
+        "page" : "1",
         "label" : "\"I - Introduction\"",
         "declarations" : 
         [ 
           { "id" : "j6p0ti5h-d1",
             "declarationType" : "COMMENT",
             "position" : "AFTER_QUESTION_TEXT",
-            "label" : "\"We're going to test your knowledge about the simpsons series.Welcome in the simspons world!\"" } ],
-        "conditionFilter" : "\"normal\"" },
+            "label" : "\"We’re going to test your knowledge about the simpsons series.Welcome in the simpsons world!\"" } ],
+        "conditionFilter" : "\"normal\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6p0ti5h",
+            "page" : "1",
+            "label" : "\"I - Introduction\"" } } },
       
       { "id" : "j6p3dkx6",
         "componentType" : "Textarea",
-        "mandatory" : false,
+        "mandatory" : true,
+        "page" : "1",
         "maxLength" : 500,
         "label" : "\"➡ 1. Before starting, do you have any comments about the Simpsons family?\"",
         "conditionFilter" : "\"normal\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6p0ti5h",
+            "page" : "1",
+            "label" : "\"I - Introduction\"" } },
         "bindingDependencies" : 
         [ "COMMENT" ],
         "response" : 
@@ -31,8 +45,20 @@
       { "id" : "j6p0np9q",
         "componentType" : "CheckboxBoolean",
         "mandatory" : false,
-        "label" : "\"➡ 2. Are you ready?\"",
+        "page" : "1",
+        "label" : "\"➡ 2. If you agree to answer this questionnaire, please check the box\"",
+        "declarations" : 
+        [ 
+          { "id" : "j6p0np9q-kir6xl1e",
+            "declarationType" : "COMMENT",
+            "position" : "AFTER_QUESTION_TEXT",
+            "label" : "\"If not, this is unfortunately the end of this questionnaire.\"" } ],
         "conditionFilter" : "\"normal\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6p0ti5h",
+            "page" : "1",
+            "label" : "\"I - Introduction\"" } },
         "bindingDependencies" : 
         [ "READY" ],
         "response" : 
@@ -40,20 +66,47 @@
       
       { "id" : "j6p6my1d",
         "componentType" : "FilterDescription",
+        "page" : "1",
         "filterDescription" : false,
-        "label" : "\"If you are not ready, please go to the end of the questionnaire\"" },
+        "label" : "\"If you are not ready, please go to the end of the questionnaire\"",
+        "conditionFilter" : "\"normal\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6p0ti5h",
+            "page" : "1",
+            "label" : "\"I - Introduction\"" } } },
       
       { "id" : "j6p0s7o5",
         "componentType" : "Subsequence",
+        "page" : "1",
         "label" : "\"General knowledge of the series\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"" },
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6p0ti5h",
+            "page" : "1",
+            "label" : "\"I - Introduction\"" },
+          "subSequence" : 
+          { "id" : "j6p0s7o5",
+            "page" : "1",
+            "label" : "\"General knowledge of the series\"" } } },
       
       { "id" : "j3343qhx",
         "componentType" : "Input",
         "mandatory" : false,
+        "page" : "1",
         "maxLength" : 30,
         "label" : "\"➡ 3. Who is the producer?\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6p0ti5h",
+            "page" : "1",
+            "label" : "\"I - Introduction\"" },
+          "subSequence" : 
+          { "id" : "j6p0s7o5",
+            "page" : "1",
+            "label" : "\"General knowledge of the series\"" } },
         "bindingDependencies" : 
         [ "PRODUCER" ],
         "response" : 
@@ -61,64 +114,254 @@
       
       { "id" : "j6q9h8tj",
         "componentType" : "InputNumber",
-        "mandatory" : false,
+        "mandatory" : true,
+        "page" : "1",
         "min" : 0,
         "max" : 99,
         "decimals" : 0,
         "label" : "\"➡ 4. What is the current season number?\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6p0ti5h",
+            "page" : "1",
+            "label" : "\"I - Introduction\"" },
+          "subSequence" : 
+          { "id" : "j6p0s7o5",
+            "page" : "1",
+            "label" : "\"General knowledge of the series\"" } },
         "bindingDependencies" : 
         [ "SEASON_NUMBER" ],
         "response" : 
         { "name" : "SEASON_NUMBER" } },
       
-      { "id" : "j334cyqb",
+      { "id" : "kiq71eoi",
         "componentType" : "Datepicker",
         "mandatory" : false,
+        "page" : "1",
         "min" : "1900-01-01",
         "max" : "format-date(current-date(),'[Y0001]-[M01]-[D01]')",
-        "label" : "\"➡ 5. When was the first episode of the Simpsons?\"",
+        "label" : "\"➡ 5. When was the first episode of Simpsons? (format YYYY-MM-DD)\"",
         "declarations" : 
         [ 
-          { "id" : "j334cyqb-d11",
-            "declarationType" : "COMMENT",
+          { "id" : "kiq71eoi-kiq7dsy2",
+            "declarationType" : "INSTRUCTION",
             "position" : "AFTER_QUESTION_TEXT",
-            "label" : "\"For your information, the date of the last broadcast was on \" || cast(cast(LAST_BROADCAST,string),string) || \" \"" } ],
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+            "label" : "\"Please answer with YYYY-MM-DD format\"" } ],
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6p0ti5h",
+            "page" : "1",
+            "label" : "\"I - Introduction\"" },
+          "subSequence" : 
+          { "id" : "j6p0s7o5",
+            "page" : "1",
+            "label" : "\"General knowledge of the series\"" } },
         "bindingDependencies" : 
-        [ "LAST_BROADCAST",
-          "DATEFIRST" ],
+        [ "DATEFIRST" ],
         "dateFormat" : "YYYY-MM-DD",
         "response" : 
         { "name" : "DATEFIRST" } },
       
+      { "id" : "k5nvty2o",
+        "componentType" : "Datepicker",
+        "mandatory" : false,
+        "page" : "1",
+        "min" : "1980-05",
+        "label" : "\"➡ 6. When was the first episode of the Simpsons? (format YYYY-MM)\"",
+        "declarations" : 
+        [ 
+          { "id" : "k5nvty2o-k5nvxld8",
+            "declarationType" : "COMMENT",
+            "position" : "AFTER_QUESTION_TEXT",
+            "label" : "\"Please answer with YYYY-MM format\"" } ],
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6p0ti5h",
+            "page" : "1",
+            "label" : "\"I - Introduction\"" },
+          "subSequence" : 
+          { "id" : "j6p0s7o5",
+            "page" : "1",
+            "label" : "\"General knowledge of the series\"" } },
+        "bindingDependencies" : 
+        [ "DATEYYYYMM" ],
+        "dateFormat" : "YYYY-MM",
+        "response" : 
+        { "name" : "DATEYYYYMM" } },
+      
+      { "id" : "k5nw1fir",
+        "componentType" : "Datepicker",
+        "mandatory" : false,
+        "page" : "1",
+        "min" : "1900",
+        "max" : "year-from-date(current-date())",
+        "label" : "\"➡ 7. When was the first episode of the Simpsons? (format YYYY)\"",
+        "declarations" : 
+        [ 
+          { "id" : "k5nw1fir-k5nvmx3n",
+            "declarationType" : "COMMENT",
+            "position" : "AFTER_QUESTION_TEXT",
+            "label" : "\"Please answer with YYYY format\"" } ],
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6p0ti5h",
+            "page" : "1",
+            "label" : "\"I - Introduction\"" },
+          "subSequence" : 
+          { "id" : "j6p0s7o5",
+            "page" : "1",
+            "label" : "\"General knowledge of the series\"" } },
+        "bindingDependencies" : 
+        [ "DATEYYYY" ],
+        "dateFormat" : "YYYY",
+        "response" : 
+        { "name" : "DATEYYYY" } },
+      
+      { "id" : "k5nw0w05",
+        "componentType" : "InputNumber",
+        "mandatory" : false,
+        "page" : "1",
+        "min" : 0,
+        "max" : 70,
+        "decimals" : 2,
+        "label" : "\"➡ 8. How long does an episode last?\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6p0ti5h",
+            "page" : "1",
+            "label" : "\"I - Introduction\"" },
+          "subSequence" : 
+          { "id" : "j6p0s7o5",
+            "page" : "1",
+            "label" : "\"General knowledge of the series\"" } },
+        "bindingDependencies" : 
+        [ "DURATIONH" ],
+        "unit" : "heures",
+        "response" : 
+        { "name" : "DURATIONH" } },
+      
+      { "id" : "k5nvu98z",
+        "componentType" : "InputNumber",
+        "mandatory" : false,
+        "page" : "1",
+        "min" : 0,
+        "max" : 366,
+        "decimals" : 1,
+        "label" : "\"➡ 9. How long does it take to write a new episode?\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6p0ti5h",
+            "page" : "1",
+            "label" : "\"I - Introduction\"" },
+          "subSequence" : 
+          { "id" : "j6p0s7o5",
+            "page" : "1",
+            "label" : "\"General knowledge of the series\"" } },
+        "bindingDependencies" : 
+        [ "DURATIOND" ],
+        "unit" : "jours",
+        "response" : 
+        { "name" : "DURATIOND" } },
+      
+      { "id" : "k5nw8ei1",
+        "componentType" : "InputNumber",
+        "mandatory" : false,
+        "page" : "1",
+        "min" : 0,
+        "max" : 12,
+        "decimals" : 0,
+        "label" : "\"➡ 10. How long will it take you to watch all the existing episodes?\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6p0ti5h",
+            "page" : "1",
+            "label" : "\"I - Introduction\"" },
+          "subSequence" : 
+          { "id" : "j6p0s7o5",
+            "page" : "1",
+            "label" : "\"General knowledge of the series\"" } },
+        "bindingDependencies" : 
+        [ "DURATIONM" ],
+        "unit" : "mois",
+        "response" : 
+        { "name" : "DURATIONM" } },
+      
+      { "id" : "k5nw9dk4",
+        "componentType" : "InputNumber",
+        "mandatory" : false,
+        "page" : "1",
+        "min" : 0,
+        "max" : 100,
+        "decimals" : 0,
+        "label" : "\"➡ 11. For how long have you known the Simpsons family?\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6p0ti5h",
+            "page" : "1",
+            "label" : "\"I - Introduction\"" },
+          "subSequence" : 
+          { "id" : "j6p0s7o5",
+            "page" : "1",
+            "label" : "\"General knowledge of the series\"" } },
+        "bindingDependencies" : 
+        [ "DURATIONY" ],
+        "unit" : "années",
+        "response" : 
+        { "name" : "DURATIONY" } },
+      
       { "id" : "j6z06z1e",
         "componentType" : "InputNumber",
         "mandatory" : false,
+        "page" : "1",
         "min" : 0,
         "max" : 99,
         "decimals" : 1,
-        "label" : "\"➡ 6. In your opinion, how much is the part of audience share in US for the 2016 season?\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "label" : "\"➡ 15. In your opinion, how much is the part of audience share in US for the 2016 season?\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6p0ti5h",
+            "page" : "1",
+            "label" : "\"I - Introduction\"" },
+          "subSequence" : 
+          { "id" : "j6p0s7o5",
+            "page" : "1",
+            "label" : "\"General knowledge of the series\"" } },
         "bindingDependencies" : 
         [ "AUDIENCE_SHARE" ],
+        "unit" : "%",
         "response" : 
         { "name" : "AUDIENCE_SHARE" } },
       
       { "id" : "j3341528",
         "componentType" : "Sequence",
-        "label" : "\"II - Simpsons' city\"",
+        "page" : "2",
+        "label" : "\"II - Simpsons’ city\"",
         "declarations" : 
         [ 
           { "id" : "j3341528-d2",
             "declarationType" : "COMMENT",
             "position" : "AFTER_QUESTION_TEXT",
             "label" : "\"This module asks about your general knowledge of the Simpsons city\"" } ],
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"" },
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j3341528",
+            "page" : "2",
+            "label" : "\"II - Simpsons’ city\"" } } },
       
       { "id" : "j3343clt",
         "componentType" : "Radio",
         "mandatory" : true,
+        "page" : "2",
         "label" : "\"➡ 1. In which city do the Simpsons reside?\"",
         "declarations" : 
         [ 
@@ -126,7 +369,12 @@
             "declarationType" : "INSTRUCTION",
             "position" : "AFTER_QUESTION_TEXT",
             "label" : "\"One possible answer\"" } ],
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j3341528",
+            "page" : "2",
+            "label" : "\"II - Simpsons’ city\"" } },
         "bindingDependencies" : 
         [ "CITY" ],
         "options" : 
@@ -137,7 +385,7 @@
           { "value" : "00002",
             "label" : "\"Shelbyville\"" },
           
-          { "value" : "00003",
+          { "value" : "03",
             "label" : "\"Seinfeld\"" } ],
         "response" : 
         { "name" : "CITY" } },
@@ -145,6 +393,7 @@
       { "id" : "j6qdfhvw",
         "componentType" : "CheckboxOne",
         "mandatory" : false,
+        "page" : "2",
         "label" : "\"➡ 2. Who is the Simpsons city mayor?\"",
         "declarations" : 
         [ 
@@ -152,7 +401,12 @@
             "declarationType" : "INSTRUCTION",
             "position" : "AFTER_QUESTION_TEXT",
             "label" : "\"Only one possible answer\"" } ],
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j3341528",
+            "page" : "2",
+            "label" : "\"II - Simpsons’ city\"" } },
         "bindingDependencies" : 
         [ "MAYOR" ],
         "options" : 
@@ -166,16 +420,22 @@
           { "value" : "3",
             "label" : "\"Joe Quimby\"" },
           
-          { "value" : "4",
-            "label" : "\"Poochie\"" } ],
+          { "value" : "OT",
+            "label" : "\"Other name\"" } ],
         "response" : 
         { "name" : "MAYOR" } },
       
       { "id" : "j4nw5cqz",
         "componentType" : "Dropdown",
         "mandatory" : false,
+        "page" : "2",
         "label" : "\"➡ 3. In which state do The Simpsons reside?\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j3341528",
+            "page" : "2",
+            "label" : "\"II - Simpsons’ city\"" } },
         "bindingDependencies" : 
         [ "STATE" ],
         "options" : 
@@ -223,11 +483,18 @@
       
       { "id" : "j6qe0h9q",
         "componentType" : "Sequence",
+        "page" : "3",
         "label" : "\"III - Characters\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"" },
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6qe0h9q",
+            "page" : "3",
+            "label" : "\"III - Characters\"" } } },
       
       { "id" : "j334akov",
         "componentType" : "CheckboxGroup",
+        "page" : "3",
         "label" : "\"➡ 1. What are the pet names that the Simpsons family had?\"",
         "declarations" : 
         [ 
@@ -235,7 +502,12 @@
             "declarationType" : "INSTRUCTION",
             "position" : "AFTER_QUESTION_TEXT",
             "label" : "\"Several possible answers\"" } ],
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6qe0h9q",
+            "page" : "3",
+            "label" : "\"III - Characters\"" } },
         "bindingDependencies" : 
         [ "PET1",
           "PET2",
@@ -243,29 +515,30 @@
           "PET4" ],
         "responses" : 
         [ 
-          { "id" : "j334akov-QOP-jbgd8qmn",
-            "label" : "\"Santa's Little Helper\"",
+          { "id" : "j334akov-QOP-khokqjtw",
+            "label" : "\"Santa’s Little Helper\"",
             "response" : 
             { "name" : "PET1" } },
           
-          { "id" : "j334akov-QOP-jbgd60vl",
+          { "id" : "j334akov-QOP-khokur7a",
             "label" : "\"Snowball I\"",
             "response" : 
             { "name" : "PET2" } },
           
-          { "id" : "j334akov-QOP-jbgda2jo",
+          { "id" : "j334akov-QOP-khol82ux",
             "label" : "\"Coltrane\"",
             "response" : 
             { "name" : "PET3" } },
           
-          { "id" : "j334akov-QOP-jbgdfssy",
-            "label" : "\"Mojo the Helper Monkey\"",
+          { "id" : "j334akov-QOP-khokqee5",
+            "label" : "\"Other name\"",
             "response" : 
             { "name" : "PET4" } } ] },
       
       { "id" : "j6p29i81",
         "componentType" : "Table",
         "mandatory" : false,
+        "page" : "3",
         "positioning" : "HORIZONTAL",
         "label" : "\"➡ 2. Does Jay like the following ice cream flavours?\"",
         "declarations" : 
@@ -274,7 +547,12 @@
             "declarationType" : "STATEMENT",
             "position" : "BEFORE_QUESTION_TEXT",
             "label" : "\"Now we are going to know if you think that Jay is a gluton.\"" } ],
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6qe0h9q",
+            "page" : "3",
+            "label" : "\"III - Characters\"" } },
         "bindingDependencies" : 
         [ "ICE_FLAVOUR1",
           "ICE_FLAVOUR2",
@@ -287,7 +565,7 @@
               "label" : "\"Vanilla\"" },
             
             { "componentType" : "Radio",
-              "id" : "j6p29i81-QOP-jbgdb3jx",
+              "id" : "j6p29i81-QOP-kiq5w99y",
               "options" : 
               [ 
                 { "value" : "1",
@@ -305,7 +583,7 @@
               "label" : "\"Strawberry\"" },
             
             { "componentType" : "Radio",
-              "id" : "j6p29i81-QOP-jbgdb61k",
+              "id" : "j6p29i81-QOP-kiq5ummf",
               "options" : 
               [ 
                 { "value" : "1",
@@ -323,7 +601,7 @@
               "label" : "\"Apple\"" },
             
             { "componentType" : "Radio",
-              "id" : "j6p29i81-QOP-jbgdl3kc",
+              "id" : "j6p29i81-QOP-kiq5mry5",
               "options" : 
               [ 
                 { "value" : "1",
@@ -337,11 +615,11 @@
               [ "ICE_FLAVOUR3" ] } ],
           
           [ 
-            { "value" : "4",
-              "label" : "\"Bacon\"" },
+            { "value" : "OT",
+              "label" : "\"Other flavour\"" },
             
             { "componentType" : "Radio",
-              "id" : "j6p29i81-QOP-jbgdcobo",
+              "id" : "j6p29i81-QOP-kiq5lkr8",
               "options" : 
               [ 
                 { "value" : "1",
@@ -357,9 +635,15 @@
       { "id" : "j6qefnga",
         "componentType" : "Table",
         "mandatory" : false,
+        "page" : "3",
         "positioning" : "HORIZONTAL",
         "label" : "\"➡ 3. Which character works in the nuclear power plant?\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6qe0h9q",
+            "page" : "3",
+            "label" : "\"III - Characters\"" } },
         "bindingDependencies" : 
         [ "NUCLEAR_CHARACTER1",
           "NUCLEAR_CHARACTER2",
@@ -372,7 +656,7 @@
               "label" : "\"Charles Montgomery Burns\"" },
             
             { "componentType" : "Dropdown",
-              "id" : "j6qefnga-QOP-jbgd6p0k",
+              "id" : "j6qefnga-QOP-kewva8xg",
               "options" : 
               [ 
                 { "value" : "1",
@@ -390,7 +674,7 @@
               "label" : "\"Carl Carlson\"" },
             
             { "componentType" : "Dropdown",
-              "id" : "j6qefnga-QOP-jbgd9ato",
+              "id" : "j6qefnga-QOP-kewvj0ad",
               "options" : 
               [ 
                 { "value" : "1",
@@ -408,7 +692,7 @@
               "label" : "\"Otto Mann\"" },
             
             { "componentType" : "Dropdown",
-              "id" : "j6qefnga-QOP-jbgd3e0p",
+              "id" : "j6qefnga-QOP-kewveltm",
               "options" : 
               [ 
                 { "value" : "1",
@@ -423,10 +707,10 @@
           
           [ 
             { "value" : "4",
-              "label" : "\"Carl Carlson\"" },
+              "label" : "\"Lenny Leonard\"" },
             
             { "componentType" : "Dropdown",
-              "id" : "j6qefnga-QOP-jbgdkxne",
+              "id" : "j6qefnga-QOP-kewvgax4",
               "options" : 
               [ 
                 { "value" : "1",
@@ -442,9 +726,15 @@
       { "id" : "j6yzoc6g",
         "componentType" : "Table",
         "mandatory" : false,
+        "page" : "3",
         "positioning" : "HORIZONTAL",
         "label" : "\"➡ 4. In which city each character was born?\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6qe0h9q",
+            "page" : "3",
+            "label" : "\"III - Characters\"" } },
         "bindingDependencies" : 
         [ "BIRTH_CHARACTER1",
           "BIRTH_CHARACTER2",
@@ -458,7 +748,7 @@
               "label" : "\"Selma Bouvier\"" },
             
             { "componentType" : "CheckboxOne",
-              "id" : "j6yzoc6g-QOP-jbgd7fr6",
+              "id" : "j6yzoc6g-QOP-kewvjvcs",
               "options" : 
               [ 
                 { "value" : "1",
@@ -485,7 +775,7 @@
               "label" : "\"Kent Brockman\"" },
             
             { "componentType" : "CheckboxOne",
-              "id" : "j6yzoc6g-QOP-jbgd5e9f",
+              "id" : "j6yzoc6g-QOP-kewvhoda",
               "options" : 
               [ 
                 { "value" : "1",
@@ -512,7 +802,7 @@
               "label" : "\"Milhouse Van Houten\"" },
             
             { "componentType" : "CheckboxOne",
-              "id" : "j6yzoc6g-QOP-jbgd912x",
+              "id" : "j6yzoc6g-QOP-kewv64s5",
               "options" : 
               [ 
                 { "value" : "1",
@@ -539,7 +829,7 @@
               "label" : "\"Nelson Muntz\"" },
             
             { "componentType" : "CheckboxOne",
-              "id" : "j6yzoc6g-QOP-jbgd6bdy",
+              "id" : "j6yzoc6g-QOP-kewvj21j",
               "options" : 
               [ 
                 { "value" : "1",
@@ -566,7 +856,7 @@
               "label" : "\"Crazy Cat Lady\"" },
             
             { "componentType" : "CheckboxOne",
-              "id" : "j6yzoc6g-QOP-jbgddyry",
+              "id" : "j6yzoc6g-QOP-kewva5uf",
               "options" : 
               [ 
                 { "value" : "1",
@@ -590,20 +880,46 @@
       
       { "id" : "j4nw88h2",
         "componentType" : "Sequence",
+        "page" : "4",
         "label" : "\"IV - General questions\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"" },
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j4nw88h2",
+            "page" : "4",
+            "label" : "\"IV - General questions\"" } } },
       
       { "id" : "j6qe237q",
         "componentType" : "Subsequence",
+        "page" : "4",
         "label" : "\"Kwik-E-Mart\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"" },
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j4nw88h2",
+            "page" : "4",
+            "label" : "\"IV - General questions\"" },
+          "subSequence" : 
+          { "id" : "j6qe237q",
+            "page" : "4",
+            "label" : "\"Kwik-E-Mart\"" } } },
       
       { "id" : "j4nwc63q",
         "componentType" : "Table",
         "mandatory" : false,
+        "page" : "4",
         "positioning" : "HORIZONTAL",
-        "label" : "\"➡ 1. Please, specify the percentage of Jay's expenses in the Kwik-E-Mart for each product?\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "label" : "\"➡ 1. Please, specify the percentage of Jay’s expenses in the Kwik-E-Mart for each product?\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j4nw88h2",
+            "page" : "4",
+            "label" : "\"IV - General questions\"" },
+          "subSequence" : 
+          { "id" : "j6qe237q",
+            "page" : "4",
+            "label" : "\"Kwik-E-Mart\"" } },
         "bindingDependencies" : 
         [ "PERCENTAGE_EXPENSES11",
           "PERCENTAGE_EXPENSES21",
@@ -634,7 +950,7 @@
               "min" : 0,
               "max" : 100,
               "decimals" : 1,
-              "id" : "j4nwc63q-QOP-jbgde5yl",
+              "id" : "j4nwc63q-QOP-kewv2h3o",
               "unit" : "%",
               "response" : 
               { "name" : "PERCENTAGE_EXPENSES11" },
@@ -649,7 +965,7 @@
               "min" : 0,
               "max" : 100,
               "decimals" : 1,
-              "id" : "j4nwc63q-QOP-jbgd2x2t",
+              "id" : "j4nwc63q-QOP-kewvka2j",
               "unit" : "%",
               "response" : 
               { "name" : "PERCENTAGE_EXPENSES21" },
@@ -668,7 +984,7 @@
               "min" : 0,
               "max" : 100,
               "decimals" : 1,
-              "id" : "j4nwc63q-QOP-jbgdjypz",
+              "id" : "j4nwc63q-QOP-kewv1f2a",
               "unit" : "%",
               "response" : 
               { "name" : "PERCENTAGE_EXPENSES31" },
@@ -683,7 +999,7 @@
               "min" : 0,
               "max" : 100,
               "decimals" : 1,
-              "id" : "j4nwc63q-QOP-jbgdcftu",
+              "id" : "j4nwc63q-QOP-kewvb2ql",
               "unit" : "%",
               "response" : 
               { "name" : "PERCENTAGE_EXPENSES41" },
@@ -698,7 +1014,7 @@
               "min" : 0,
               "max" : 100,
               "decimals" : 1,
-              "id" : "j4nwc63q-QOP-jbgdiyfe",
+              "id" : "j4nwc63q-QOP-kewvbxla",
               "unit" : "%",
               "response" : 
               { "name" : "PERCENTAGE_EXPENSES51" },
@@ -716,7 +1032,7 @@
               "min" : 0,
               "max" : 100,
               "decimals" : 1,
-              "id" : "j4nwc63q-QOP-jbgdj1wd",
+              "id" : "j4nwc63q-QOP-kewvkjp0",
               "unit" : "%",
               "response" : 
               { "name" : "PERCENTAGE_EXPENSES61" },
@@ -732,24 +1048,267 @@
               "min" : 0,
               "max" : 100,
               "decimals" : 1,
-              "id" : "j4nwc63q-QOP-jbgddylk",
+              "id" : "j4nwc63q-QOP-kewv2cyx",
               "unit" : "%",
               "response" : 
               { "name" : "PERCENTAGE_EXPENSES71" },
               "bindingDependencies" : 
-              [ "PERCENTAGE_EXPENSES71" ] } ] ] },
+              [ "PERCENTAGE_EXPENSES71" ] } ],
+          
+          [ 
+            { "colspan" : 2,
+              "value" : "E",
+              "label" : "\"Total\"" },
+            
+            { "headerCell" : false } ] ] },
+      
+      { "id" : "k9cg2q5t",
+        "componentType" : "Table",
+        "mandatory" : false,
+        "page" : "4",
+        "positioning" : "HORIZONTAL",
+        "label" : "\"➡ 2. Please specify if Jay has bought each product in his last food shopping\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j4nw88h2",
+            "page" : "4",
+            "label" : "\"IV - General questions\"" },
+          "subSequence" : 
+          { "id" : "j6qe237q",
+            "page" : "4",
+            "label" : "\"Kwik-E-Mart\"" } },
+        "bindingDependencies" : 
+        [ "LAST_FOOD_SHOPPING11",
+          "LAST_FOOD_SHOPPING21",
+          "LAST_FOOD_SHOPPING31",
+          "LAST_FOOD_SHOPPING41",
+          "LAST_FOOD_SHOPPING51",
+          "LAST_FOOD_SHOPPING61",
+          "LAST_FOOD_SHOPPING71",
+          "LAST_FOOD_SHOPPING81" ],
+        "cells" : 
+        [ 
+          [ 
+            { "headerCell" : true,
+              "colspan" : 2,
+              "label" : "" },
+            
+            { "headerCell" : true,
+              "label" : "\"In his last food shopping\"" } ],
+          
+          [ 
+            { "rowspan" : 2,
+              "value" : "A",
+              "label" : "\"Frozen products\"" },
+            
+            { "value" : "A1",
+              "label" : "\"Ice creams\"" },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "k9cg2q5t-QOP-kiq6pljq",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "LAST_FOOD_SHOPPING11" },
+              "bindingDependencies" : 
+              [ "LAST_FOOD_SHOPPING11" ] } ],
+          
+          [ 
+            { "value" : "A2",
+              "label" : "\"Jasper Beardly\"" },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "k9cg2q5t-QOP-kiq6mgpv",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "LAST_FOOD_SHOPPING21" },
+              "bindingDependencies" : 
+              [ "LAST_FOOD_SHOPPING21" ] } ],
+          
+          [ 
+            { "rowspan" : 3,
+              "value" : "B",
+              "label" : "\"Meat\"" },
+            
+            { "value" : "B1",
+              "label" : "\"Bacon\"" },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "k9cg2q5t-QOP-kiq6pmtz",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "LAST_FOOD_SHOPPING31" },
+              "bindingDependencies" : 
+              [ "LAST_FOOD_SHOPPING31" ] } ],
+          
+          [ 
+            { "value" : "B2",
+              "label" : "\"Pork chop\"" },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "k9cg2q5t-QOP-kiq6k4lf",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "LAST_FOOD_SHOPPING41" },
+              "bindingDependencies" : 
+              [ "LAST_FOOD_SHOPPING41" ] } ],
+          
+          [ 
+            { "value" : "B3",
+              "label" : "\"Chicken\"" },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "k9cg2q5t-QOP-kiq6p70n",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "LAST_FOOD_SHOPPING51" },
+              "bindingDependencies" : 
+              [ "LAST_FOOD_SHOPPING51" ] } ],
+          
+          [ 
+            { "value" : "C",
+              "label" : "\"Compote\"" },
+            
+            { "value" : "C1",
+              "label" : "\"Powersauce\"" },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "k9cg2q5t-QOP-kiq6lh5v",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "LAST_FOOD_SHOPPING61" },
+              "bindingDependencies" : 
+              [ "LAST_FOOD_SHOPPING61" ] } ],
+          
+          [ 
+            { "colspan" : 2,
+              "value" : "D",
+              "label" : "\"Other\"" },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "k9cg2q5t-QOP-kiq703te",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "LAST_FOOD_SHOPPING71" },
+              "bindingDependencies" : 
+              [ "LAST_FOOD_SHOPPING71" ] } ],
+          
+          [ 
+            { "colspan" : 2,
+              "value" : "E",
+              "label" : "\"Total\"" },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "k9cg2q5t-QOP-kiq6zpd3",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "LAST_FOOD_SHOPPING81" },
+              "bindingDependencies" : 
+              [ "LAST_FOOD_SHOPPING81" ] } ] ] },
       
       { "id" : "j6qejudb",
         "componentType" : "Subsequence",
+        "page" : "4",
         "label" : "\"Clowning\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"" },
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j4nw88h2",
+            "page" : "4",
+            "label" : "\"IV - General questions\"" },
+          "subSequence" : 
+          { "id" : "j6qejudb",
+            "page" : "4",
+            "label" : "\"Clowning\"" } } },
       
-      { "id" : "j4nw0rr6",
+      { "id" : "kbkjvgel",
         "componentType" : "Table",
         "mandatory" : false,
+        "page" : "4",
         "positioning" : "HORIZONTAL",
-        "label" : "\"➡ 2. Who did these clownings and tell us what you remember?\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "label" : "\"➡ 3. Who did these clownings and tell us what you remember?\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j4nw88h2",
+            "page" : "4",
+            "label" : "\"IV - General questions\"" },
+          "subSequence" : 
+          { "id" : "j6qejudb",
+            "page" : "4",
+            "label" : "\"Clowning\"" } },
         "bindingDependencies" : 
         [ "CLOWNING11",
           "CLOWNING12",
@@ -776,7 +1335,7 @@
               "label" : "\"Break the windows of the whole city\"" },
             
             { "componentType" : "Dropdown",
-              "id" : "j4nw0rr6-QOP-jbgd8tyr",
+              "id" : "kbkjvgel-QOP-kiq6m5n0",
               "options" : 
               [ 
                 { "value" : "1",
@@ -788,8 +1347,8 @@
                 { "value" : "3",
                   "label" : "\"Krusty the clown\"" },
                 
-                { "value" : "4",
-                  "label" : "\"Maggie\"" } ],
+                { "value" : "O",
+                  "label" : "\"Other\"" } ],
               "response" : 
               { "name" : "CLOWNING11" },
               "bindingDependencies" : 
@@ -797,7 +1356,7 @@
             
             { "componentType" : "Textarea",
               "maxLength" : 255,
-              "id" : "j4nw0rr6-QOP-jbgdit3o",
+              "id" : "kbkjvgel-QOP-kiq6qatu",
               "response" : 
               { "name" : "CLOWNING12" },
               "bindingDependencies" : 
@@ -808,7 +1367,7 @@
               "label" : "\"Loose the violin of his daughter playing poker\"" },
             
             { "componentType" : "Dropdown",
-              "id" : "j4nw0rr6-QOP-jbgdep36",
+              "id" : "kbkjvgel-QOP-kiq6l29o",
               "options" : 
               [ 
                 { "value" : "1",
@@ -820,8 +1379,8 @@
                 { "value" : "3",
                   "label" : "\"Krusty the clown\"" },
                 
-                { "value" : "4",
-                  "label" : "\"Maggie\"" } ],
+                { "value" : "O",
+                  "label" : "\"Other\"" } ],
               "response" : 
               { "name" : "CLOWNING21" },
               "bindingDependencies" : 
@@ -829,7 +1388,7 @@
             
             { "componentType" : "Textarea",
               "maxLength" : 255,
-              "id" : "j4nw0rr6-QOP-jbgd366k",
+              "id" : "kbkjvgel-QOP-kiq6v4oe",
               "response" : 
               { "name" : "CLOWNING22" },
               "bindingDependencies" : 
@@ -840,7 +1399,7 @@
               "label" : "\"Kill Mr Burns\"" },
             
             { "componentType" : "Dropdown",
-              "id" : "j4nw0rr6-QOP-jbgdjjgi",
+              "id" : "kbkjvgel-QOP-kiq72biw",
               "options" : 
               [ 
                 { "value" : "1",
@@ -852,8 +1411,8 @@
                 { "value" : "3",
                   "label" : "\"Krusty the clown\"" },
                 
-                { "value" : "4",
-                  "label" : "\"Maggie\"" } ],
+                { "value" : "O",
+                  "label" : "\"Other\"" } ],
               "response" : 
               { "name" : "CLOWNING31" },
               "bindingDependencies" : 
@@ -861,7 +1420,7 @@
             
             { "componentType" : "Textarea",
               "maxLength" : 255,
-              "id" : "j4nw0rr6-QOP-jbgdax06",
+              "id" : "kbkjvgel-QOP-kiq6q4zm",
               "response" : 
               { "name" : "CLOWNING32" },
               "bindingDependencies" : 
@@ -872,7 +1431,7 @@
               "label" : "\"Leaving a mechanical object to control the nuclear power plant\"" },
             
             { "componentType" : "Dropdown",
-              "id" : "j4nw0rr6-QOP-jbgdgh6k",
+              "id" : "kbkjvgel-QOP-kiq6mlan",
               "options" : 
               [ 
                 { "value" : "1",
@@ -884,8 +1443,8 @@
                 { "value" : "3",
                   "label" : "\"Krusty the clown\"" },
                 
-                { "value" : "4",
-                  "label" : "\"Maggie\"" } ],
+                { "value" : "O",
+                  "label" : "\"Other\"" } ],
               "response" : 
               { "name" : "CLOWNING41" },
               "bindingDependencies" : 
@@ -893,7 +1452,7 @@
             
             { "componentType" : "Textarea",
               "maxLength" : 255,
-              "id" : "j4nw0rr6-QOP-jbgdfo1j",
+              "id" : "kbkjvgel-QOP-kiq6vtud",
               "response" : 
               { "name" : "CLOWNING42" },
               "bindingDependencies" : 
@@ -901,21 +1460,41 @@
       
       { "id" : "j6qeh91y",
         "componentType" : "Subsequence",
+        "page" : "4",
         "label" : "\"Transport\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"" },
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j4nw88h2",
+            "page" : "4",
+            "label" : "\"IV - General questions\"" },
+          "subSequence" : 
+          { "id" : "j6qeh91y",
+            "page" : "4",
+            "label" : "\"Transport\"" } } },
       
       { "id" : "j6p2lwuj",
         "componentType" : "Table",
         "mandatory" : false,
+        "page" : "4",
         "positioning" : "HORIZONTAL",
-        "label" : "\"➡ 3. Which of the following means of transport were used by the hero and in which country?\"",
+        "label" : "\"➡ 4. Which of the following means of transport were used by the hero and in which country?\"",
         "declarations" : 
         [ 
           { "id" : "j6p2lwuj-d10",
             "declarationType" : "INSTRUCTION",
             "position" : "AFTER_QUESTION_TEXT",
             "label" : "\"Several answers possible: check off all the relevant boxes\"" } ],
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j4nw88h2",
+            "page" : "4",
+            "label" : "\"IV - General questions\"" },
+          "subSequence" : 
+          { "id" : "j6qeh91y",
+            "page" : "4",
+            "label" : "\"Transport\"" } },
         "bindingDependencies" : 
         [ "TRAVEL11",
           "TRAVEL12",
@@ -970,42 +1549,42 @@
               "label" : "\"Car\"" },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgd92mb",
+              "id" : "j6p2lwuj-QOP-kewvm4qg",
               "response" : 
               { "name" : "TRAVEL11" },
               "bindingDependencies" : 
               [ "TRAVEL11" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgdnxkt",
+              "id" : "j6p2lwuj-QOP-kewv8wxl",
               "response" : 
               { "name" : "TRAVEL12" },
               "bindingDependencies" : 
               [ "TRAVEL12" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgdcppc",
+              "id" : "j6p2lwuj-QOP-kewvcjrn",
               "response" : 
               { "name" : "TRAVEL13" },
               "bindingDependencies" : 
               [ "TRAVEL13" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgd4r2a",
+              "id" : "j6p2lwuj-QOP-kewvdrv7",
               "response" : 
               { "name" : "TRAVEL14" },
               "bindingDependencies" : 
               [ "TRAVEL14" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgd9cff",
+              "id" : "j6p2lwuj-QOP-kewv226h",
               "response" : 
               { "name" : "TRAVEL15" },
               "bindingDependencies" : 
               [ "TRAVEL15" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgdiva0",
+              "id" : "j6p2lwuj-QOP-kewvlchm",
               "response" : 
               { "name" : "TRAVEL16" },
               "bindingDependencies" : 
@@ -1016,42 +1595,42 @@
               "label" : "\"Bike\"" },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgdgsat",
+              "id" : "j6p2lwuj-QOP-kewvebem",
               "response" : 
               { "name" : "TRAVEL21" },
               "bindingDependencies" : 
               [ "TRAVEL21" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgd3ef5",
+              "id" : "j6p2lwuj-QOP-kewv5u0v",
               "response" : 
               { "name" : "TRAVEL22" },
               "bindingDependencies" : 
               [ "TRAVEL22" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgd4cm6",
+              "id" : "j6p2lwuj-QOP-kewvdarq",
               "response" : 
               { "name" : "TRAVEL23" },
               "bindingDependencies" : 
               [ "TRAVEL23" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgdkfpq",
+              "id" : "j6p2lwuj-QOP-kewvc8ft",
               "response" : 
               { "name" : "TRAVEL24" },
               "bindingDependencies" : 
               [ "TRAVEL24" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgddwsp",
+              "id" : "j6p2lwuj-QOP-kewvc2li",
               "response" : 
               { "name" : "TRAVEL25" },
               "bindingDependencies" : 
               [ "TRAVEL25" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgd7dqf",
+              "id" : "j6p2lwuj-QOP-kewvh5fm",
               "response" : 
               { "name" : "TRAVEL26" },
               "bindingDependencies" : 
@@ -1062,42 +1641,42 @@
               "label" : "\"Skateboard\"" },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgdaxk2",
+              "id" : "j6p2lwuj-QOP-kewv62xx",
               "response" : 
               { "name" : "TRAVEL31" },
               "bindingDependencies" : 
               [ "TRAVEL31" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgd8p1v",
+              "id" : "j6p2lwuj-QOP-kewvbiyv",
               "response" : 
               { "name" : "TRAVEL32" },
               "bindingDependencies" : 
               [ "TRAVEL32" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgdd2lo",
+              "id" : "j6p2lwuj-QOP-kewvcmjn",
               "response" : 
               { "name" : "TRAVEL33" },
               "bindingDependencies" : 
               [ "TRAVEL33" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgd7u52",
+              "id" : "j6p2lwuj-QOP-kewvkci5",
               "response" : 
               { "name" : "TRAVEL34" },
               "bindingDependencies" : 
               [ "TRAVEL34" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgdncn8",
+              "id" : "j6p2lwuj-QOP-kewveam7",
               "response" : 
               { "name" : "TRAVEL35" },
               "bindingDependencies" : 
               [ "TRAVEL35" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgdnous",
+              "id" : "j6p2lwuj-QOP-kewva2r8",
               "response" : 
               { "name" : "TRAVEL36" },
               "bindingDependencies" : 
@@ -1108,42 +1687,42 @@
               "label" : "\"Plane\"" },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgd7myn",
+              "id" : "j6p2lwuj-QOP-kewvjcck",
               "response" : 
               { "name" : "TRAVEL41" },
               "bindingDependencies" : 
               [ "TRAVEL41" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgdgm0c",
+              "id" : "j6p2lwuj-QOP-kewv91bq",
               "response" : 
               { "name" : "TRAVEL42" },
               "bindingDependencies" : 
               [ "TRAVEL42" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgdo0ay",
+              "id" : "j6p2lwuj-QOP-kewvf47u",
               "response" : 
               { "name" : "TRAVEL43" },
               "bindingDependencies" : 
               [ "TRAVEL43" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgdgfwl",
+              "id" : "j6p2lwuj-QOP-kewv5hsr",
               "response" : 
               { "name" : "TRAVEL44" },
               "bindingDependencies" : 
               [ "TRAVEL44" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgdnz6b",
+              "id" : "j6p2lwuj-QOP-kewva3p8",
               "response" : 
               { "name" : "TRAVEL45" },
               "bindingDependencies" : 
               [ "TRAVEL45" ] },
             
             { "componentType" : "CheckboxBoolean",
-              "id" : "j6p2lwuj-QOP-jbgdkfcz",
+              "id" : "j6p2lwuj-QOP-kewve0rb",
               "response" : 
               { "name" : "TRAVEL46" },
               "bindingDependencies" : 
@@ -1151,36 +1730,61 @@
       
       { "id" : "j6qfx9qe",
         "componentType" : "Sequence",
-        "label" : "\"V - Favourite characters\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"" },
+        "page" : "5",
+        "label" : "\"V - Favourite characters (dynamic table)\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6qfx9qe",
+            "page" : "5",
+            "label" : "\"V - Favourite characters (dynamic table)\"" } } },
       
       { "id" : "j6qg8rc6",
         "componentType" : "Table",
         "mandatory" : false,
+        "page" : "5",
         "positioning" : "HORIZONTAL",
         "label" : "\"➡ 1. Please, complete the following grid with your favourite characters\"",
-        "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6qfx9qe",
+            "page" : "5",
+            "label" : "\"V - Favourite characters (dynamic table)\"" } },
         "bindingDependencies" : 
-        [ "FAVOURITE_CHARACTERS11",
-          "FAVOURITE_CHARACTERS12",
-          "FAVOURITE_CHARACTERS21",
-          "FAVOURITE_CHARACTERS22",
-          "FAVOURITE_CHARACTERS31",
-          "FAVOURITE_CHARACTERS32",
-          "FAVOURITE_CHARACTERS41",
-          "FAVOURITE_CHARACTERS42",
-          "FAVOURITE_CHARACTERS51",
-          "FAVOURITE_CHARACTERS52",
-          "FAVOURITE_CHARACTERS61",
-          "FAVOURITE_CHARACTERS62",
-          "FAVOURITE_CHARACTERS71",
-          "FAVOURITE_CHARACTERS72",
-          "FAVOURITE_CHARACTERS81",
-          "FAVOURITE_CHARACTERS82",
-          "FAVOURITE_CHARACTERS91",
-          "FAVOURITE_CHARACTERS92",
-          "FAVOURITE_CHARACTERS101",
-          "FAVOURITE_CHARACTERS102" ],
+        [ "FAVOURITE_CHAR1",
+          "FAVOURITE_CHAR2",
+          "FAVOURITE_CHAR3",
+          "FAVOURITE_CHAR1_1_1",
+          "FAVOURITE_CHAR2_1_2",
+          "FAVOURITE_CHAR3_1_3",
+          "FAVOURITE_CHAR1_2_1",
+          "FAVOURITE_CHAR2_2_2",
+          "FAVOURITE_CHAR3_2_3",
+          "FAVOURITE_CHAR1_3_1",
+          "FAVOURITE_CHAR2_3_2",
+          "FAVOURITE_CHAR3_3_3",
+          "FAVOURITE_CHAR1_4_1",
+          "FAVOURITE_CHAR2_4_2",
+          "FAVOURITE_CHAR3_4_3",
+          "FAVOURITE_CHAR1_5_1",
+          "FAVOURITE_CHAR2_5_2",
+          "FAVOURITE_CHAR3_5_3",
+          "FAVOURITE_CHAR1_6_1",
+          "FAVOURITE_CHAR2_6_2",
+          "FAVOURITE_CHAR3_6_3",
+          "FAVOURITE_CHAR1_7_1",
+          "FAVOURITE_CHAR2_7_2",
+          "FAVOURITE_CHAR3_7_3",
+          "FAVOURITE_CHAR1_8_1",
+          "FAVOURITE_CHAR2_8_2",
+          "FAVOURITE_CHAR3_8_3",
+          "FAVOURITE_CHAR1_9_1",
+          "FAVOURITE_CHAR2_9_2",
+          "FAVOURITE_CHAR3_9_3",
+          "FAVOURITE_CHAR1_10_1",
+          "FAVOURITE_CHAR2_10_2",
+          "FAVOURITE_CHAR3_10_3" ],
         "lines" : 
         { "min" : 1,
           "max" : 10 },
@@ -1191,215 +1795,1136 @@
               "label" : "\"Name\"" },
             
             { "headerCell" : true,
-              "label" : "\"Age\"" } ],
+              "label" : "\"Age\"" },
+            
+            { "headerCell" : true,
+              "label" : "\"Member of the Simpsons family\"" } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
-              "id" : "j6qg8rc6-QOP-jbgdl5jb",
+              "id" : "j6qg8rc6-QOP-kiq7p16z_1_1",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS11" },
+              { "name" : "FAVOURITE_CHAR1_1_1" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS11" ] },
+              [ "FAVOURITE_CHAR1_1_1" ] },
             
-            { "componentType" : "InputNumber",
-              "min" : 0,
-              "max" : 120,
-              "decimals" : 0,
-              "id" : "j6qg8rc6-QOP-jbgdfndq",
+            { "componentType" : "Textarea",
+              "maxLength" : 255,
+              "id" : "j6qg8rc6-QOP-kiq7kny3_1_2",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS12" },
+              { "name" : "FAVOURITE_CHAR2_1_2" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS12" ] } ],
+              [ "FAVOURITE_CHAR2_1_2" ] },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "j6qg8rc6-QOP-kiq7lffy_1_3",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "FAVOURITE_CHAR3_1_3" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHAR3_1_3" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
-              "id" : "j6qg8rc6-QOP-jbgd8lwo",
+              "id" : "j6qg8rc6-QOP-kiq7p16z_2_1",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS21" },
+              { "name" : "FAVOURITE_CHAR1_2_1" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS21" ] },
+              [ "FAVOURITE_CHAR1_2_1" ] },
             
-            { "componentType" : "InputNumber",
-              "min" : 0,
-              "max" : 120,
-              "decimals" : 0,
-              "id" : "j6qg8rc6-QOP-jbgd7osi",
+            { "componentType" : "Textarea",
+              "maxLength" : 255,
+              "id" : "j6qg8rc6-QOP-kiq7kny3_2_2",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS22" },
+              { "name" : "FAVOURITE_CHAR2_2_2" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS22" ] } ],
+              [ "FAVOURITE_CHAR2_2_2" ] },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "j6qg8rc6-QOP-kiq7lffy_2_3",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "FAVOURITE_CHAR3_2_3" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHAR3_2_3" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
-              "id" : "j6qg8rc6-QOP-jbgdbfag",
+              "id" : "j6qg8rc6-QOP-kiq7p16z_3_1",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS31" },
+              { "name" : "FAVOURITE_CHAR1_3_1" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS31" ] },
+              [ "FAVOURITE_CHAR1_3_1" ] },
             
-            { "componentType" : "InputNumber",
-              "min" : 0,
-              "max" : 120,
-              "decimals" : 0,
-              "id" : "j6qg8rc6-QOP-jbgd7bnw",
+            { "componentType" : "Textarea",
+              "maxLength" : 255,
+              "id" : "j6qg8rc6-QOP-kiq7kny3_3_2",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS32" },
+              { "name" : "FAVOURITE_CHAR2_3_2" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS32" ] } ],
+              [ "FAVOURITE_CHAR2_3_2" ] },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "j6qg8rc6-QOP-kiq7lffy_3_3",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "FAVOURITE_CHAR3_3_3" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHAR3_3_3" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
-              "id" : "j6qg8rc6-QOP-jbgdlgja",
+              "id" : "j6qg8rc6-QOP-kiq7p16z_4_1",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS41" },
+              { "name" : "FAVOURITE_CHAR1_4_1" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS41" ] },
+              [ "FAVOURITE_CHAR1_4_1" ] },
             
-            { "componentType" : "InputNumber",
-              "min" : 0,
-              "max" : 120,
-              "decimals" : 0,
-              "id" : "j6qg8rc6-QOP-jbgd9k71",
+            { "componentType" : "Textarea",
+              "maxLength" : 255,
+              "id" : "j6qg8rc6-QOP-kiq7kny3_4_2",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS42" },
+              { "name" : "FAVOURITE_CHAR2_4_2" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS42" ] } ],
+              [ "FAVOURITE_CHAR2_4_2" ] },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "j6qg8rc6-QOP-kiq7lffy_4_3",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "FAVOURITE_CHAR3_4_3" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHAR3_4_3" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
-              "id" : "j6qg8rc6-QOP-jbgd745y",
+              "id" : "j6qg8rc6-QOP-kiq7p16z_5_1",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS51" },
+              { "name" : "FAVOURITE_CHAR1_5_1" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS51" ] },
+              [ "FAVOURITE_CHAR1_5_1" ] },
             
-            { "componentType" : "InputNumber",
-              "min" : 0,
-              "max" : 120,
-              "decimals" : 0,
-              "id" : "j6qg8rc6-QOP-jbgdimks",
+            { "componentType" : "Textarea",
+              "maxLength" : 255,
+              "id" : "j6qg8rc6-QOP-kiq7kny3_5_2",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS52" },
+              { "name" : "FAVOURITE_CHAR2_5_2" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS52" ] } ],
+              [ "FAVOURITE_CHAR2_5_2" ] },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "j6qg8rc6-QOP-kiq7lffy_5_3",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "FAVOURITE_CHAR3_5_3" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHAR3_5_3" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
-              "id" : "j6qg8rc6-QOP-jbgdjkts",
+              "id" : "j6qg8rc6-QOP-kiq7p16z_6_1",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS61" },
+              { "name" : "FAVOURITE_CHAR1_6_1" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS61" ] },
+              [ "FAVOURITE_CHAR1_6_1" ] },
             
-            { "componentType" : "InputNumber",
-              "min" : 0,
-              "max" : 120,
-              "decimals" : 0,
-              "id" : "j6qg8rc6-QOP-jbgdjquz",
+            { "componentType" : "Textarea",
+              "maxLength" : 255,
+              "id" : "j6qg8rc6-QOP-kiq7kny3_6_2",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS62" },
+              { "name" : "FAVOURITE_CHAR2_6_2" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS62" ] } ],
+              [ "FAVOURITE_CHAR2_6_2" ] },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "j6qg8rc6-QOP-kiq7lffy_6_3",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "FAVOURITE_CHAR3_6_3" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHAR3_6_3" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
-              "id" : "j6qg8rc6-QOP-jbgdcax7",
+              "id" : "j6qg8rc6-QOP-kiq7p16z_7_1",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS71" },
+              { "name" : "FAVOURITE_CHAR1_7_1" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS71" ] },
+              [ "FAVOURITE_CHAR1_7_1" ] },
             
-            { "componentType" : "InputNumber",
-              "min" : 0,
-              "max" : 120,
-              "decimals" : 0,
-              "id" : "j6qg8rc6-QOP-jbgdd2w3",
+            { "componentType" : "Textarea",
+              "maxLength" : 255,
+              "id" : "j6qg8rc6-QOP-kiq7kny3_7_2",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS72" },
+              { "name" : "FAVOURITE_CHAR2_7_2" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS72" ] } ],
+              [ "FAVOURITE_CHAR2_7_2" ] },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "j6qg8rc6-QOP-kiq7lffy_7_3",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "FAVOURITE_CHAR3_7_3" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHAR3_7_3" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
-              "id" : "j6qg8rc6-QOP-jbgdjye1",
+              "id" : "j6qg8rc6-QOP-kiq7p16z_8_1",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS81" },
+              { "name" : "FAVOURITE_CHAR1_8_1" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS81" ] },
+              [ "FAVOURITE_CHAR1_8_1" ] },
             
-            { "componentType" : "InputNumber",
-              "min" : 0,
-              "max" : 120,
-              "decimals" : 0,
-              "id" : "j6qg8rc6-QOP-jbgdkosc",
+            { "componentType" : "Textarea",
+              "maxLength" : 255,
+              "id" : "j6qg8rc6-QOP-kiq7kny3_8_2",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS82" },
+              { "name" : "FAVOURITE_CHAR2_8_2" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS82" ] } ],
+              [ "FAVOURITE_CHAR2_8_2" ] },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "j6qg8rc6-QOP-kiq7lffy_8_3",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "FAVOURITE_CHAR3_8_3" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHAR3_8_3" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
-              "id" : "j6qg8rc6-QOP-jbgd5jet",
+              "id" : "j6qg8rc6-QOP-kiq7p16z_9_1",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS91" },
+              { "name" : "FAVOURITE_CHAR1_9_1" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS91" ] },
+              [ "FAVOURITE_CHAR1_9_1" ] },
             
-            { "componentType" : "InputNumber",
-              "min" : 0,
-              "max" : 120,
-              "decimals" : 0,
-              "id" : "j6qg8rc6-QOP-jbgdk0x4",
+            { "componentType" : "Textarea",
+              "maxLength" : 255,
+              "id" : "j6qg8rc6-QOP-kiq7kny3_9_2",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS92" },
+              { "name" : "FAVOURITE_CHAR2_9_2" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS92" ] } ],
+              [ "FAVOURITE_CHAR2_9_2" ] },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "j6qg8rc6-QOP-kiq7lffy_9_3",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "FAVOURITE_CHAR3_9_3" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHAR3_9_3" ] } ],
           
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
-              "id" : "j6qg8rc6-QOP-jbgdjw90",
+              "id" : "j6qg8rc6-QOP-kiq7p16z_10_1",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS101" },
+              { "name" : "FAVOURITE_CHAR1_10_1" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS101" ] },
+              [ "FAVOURITE_CHAR1_10_1" ] },
+            
+            { "componentType" : "Textarea",
+              "maxLength" : 255,
+              "id" : "j6qg8rc6-QOP-kiq7kny3_10_2",
+              "response" : 
+              { "name" : "FAVOURITE_CHAR2_10_2" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHAR2_10_2" ] },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "j6qg8rc6-QOP-kiq7lffy_10_3",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Yes\"" },
+                
+                { "value" : "2",
+                  "label" : "\"No\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Other\"" } ],
+              "response" : 
+              { "name" : "FAVOURITE_CHAR3_10_3" },
+              "bindingDependencies" : 
+              [ "FAVOURITE_CHAR3_10_3" ] } ] ] },
+      
+      { "id" : "jvxux0mi",
+        "componentType" : "Table",
+        "mandatory" : false,
+        "page" : "5",
+        "positioning" : "HORIZONTAL",
+        "label" : "\"➡ 2. How has your feeling about the following characters evolved over time?\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6qfx9qe",
+            "page" : "5",
+            "label" : "\"V - Favourite characters (dynamic table)\"" } },
+        "bindingDependencies" : 
+        [ "FEELCHAREV1",
+          "FEELCHAREV2",
+          "FEELCHAREV3",
+          "FEELCHAREV4" ],
+        "cells" : 
+        [ 
+          [ 
+            { "value" : "1",
+              "label" : "\"Jay\"" },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "jvxux0mi-QOP-kiq76emy",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Up\"" },
+                
+                { "value" : "2",
+                  "label" : "\"Down\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Steady\"" } ],
+              "response" : 
+              { "name" : "FEELCHAREV1" },
+              "bindingDependencies" : 
+              [ "FEELCHAREV1" ] } ],
+          
+          [ 
+            { "value" : "2",
+              "label" : "\"Bart\"" },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "jvxux0mi-QOP-kiq6zv60",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Up\"" },
+                
+                { "value" : "2",
+                  "label" : "\"Down\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Steady\"" } ],
+              "response" : 
+              { "name" : "FEELCHAREV2" },
+              "bindingDependencies" : 
+              [ "FEELCHAREV2" ] } ],
+          
+          [ 
+            { "value" : "3",
+              "label" : "\"Krusty the clown\"" },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "jvxux0mi-QOP-kiq7bgk3",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Up\"" },
+                
+                { "value" : "2",
+                  "label" : "\"Down\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Steady\"" } ],
+              "response" : 
+              { "name" : "FEELCHAREV3" },
+              "bindingDependencies" : 
+              [ "FEELCHAREV3" ] } ],
+          
+          [ 
+            { "value" : "O",
+              "label" : "\"Other\"" },
+            
+            { "componentType" : "CheckboxOne",
+              "id" : "jvxux0mi-QOP-kiq6ync3",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Up\"" },
+                
+                { "value" : "2",
+                  "label" : "\"Down\"" },
+                
+                { "value" : "3",
+                  "label" : "\"Steady\"" } ],
+              "response" : 
+              { "name" : "FEELCHAREV4" },
+              "bindingDependencies" : 
+              [ "FEELCHAREV4" ] } ] ] },
+      
+      { "id" : "jvxwy68n",
+        "componentType" : "Table",
+        "mandatory" : false,
+        "page" : "5",
+        "positioning" : "HORIZONTAL",
+        "label" : "\"➡ 3. Can you tell how long Bart Simpson has been on leave for each type and whether there has been another type?\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6qfx9qe",
+            "page" : "5",
+            "label" : "\"V - Favourite characters (dynamic table)\"" } },
+        "bindingDependencies" : 
+        [ "LEAVDURATION11",
+          "LEAVDURATION12",
+          "LEAVDURATION21",
+          "LEAVDURATION22",
+          "LEAVDURATION31",
+          "LEAVDURATION32",
+          "LEAVDURATION41",
+          "LEAVDURATION42",
+          "LEAVDURATION51",
+          "LEAVDURATION52" ],
+        "cells" : 
+        [ 
+          [ 
+            { "headerCell" : true,
+              "label" : "" },
+            
+            { "headerCell" : true,
+              "label" : "\"Days\"" },
+            
+            { "headerCell" : true,
+              "label" : "\"Unit\"" } ],
+          
+          [ 
+            { "value" : "1",
+              "label" : "\"Leave with pay\"" },
             
             { "componentType" : "InputNumber",
               "min" : 0,
-              "max" : 120,
+              "max" : 365,
               "decimals" : 0,
-              "id" : "j6qg8rc6-QOP-jbgd2wgf",
+              "id" : "jvxwy68n-QOP-kewv511d",
               "response" : 
-              { "name" : "FAVOURITE_CHARACTERS102" },
+              { "name" : "LEAVDURATION11" },
               "bindingDependencies" : 
-              [ "FAVOURITE_CHARACTERS102" ] } ] ] },
+              [ "LEAVDURATION11" ] },
+            
+            { "componentType" : "Dropdown",
+              "id" : "jvxwy68n-QOP-kewv20qg",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Working Days\"" },
+                
+                { "value" : "2",
+                  "label" : "\"Calendar days\"" } ],
+              "response" : 
+              { "name" : "LEAVDURATION12" },
+              "bindingDependencies" : 
+              [ "LEAVDURATION12" ] } ],
+          
+          [ 
+            { "value" : "2",
+              "label" : "\"Public holiday\"" },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 365,
+              "decimals" : 0,
+              "id" : "jvxwy68n-QOP-kewv67nj",
+              "response" : 
+              { "name" : "LEAVDURATION21" },
+              "bindingDependencies" : 
+              [ "LEAVDURATION21" ] },
+            
+            { "componentType" : "Dropdown",
+              "id" : "jvxwy68n-QOP-kewvizdm",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Working Days\"" },
+                
+                { "value" : "2",
+                  "label" : "\"Calendar days\"" } ],
+              "response" : 
+              { "name" : "LEAVDURATION22" },
+              "bindingDependencies" : 
+              [ "LEAVDURATION22" ] } ],
+          
+          [ 
+            { "value" : "3",
+              "label" : "\"Sick leave\"" },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 365,
+              "decimals" : 0,
+              "id" : "jvxwy68n-QOP-kewv23wm",
+              "response" : 
+              { "name" : "LEAVDURATION31" },
+              "bindingDependencies" : 
+              [ "LEAVDURATION31" ] },
+            
+            { "componentType" : "Dropdown",
+              "id" : "jvxwy68n-QOP-kewv9jcl",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Working Days\"" },
+                
+                { "value" : "2",
+                  "label" : "\"Calendar days\"" } ],
+              "response" : 
+              { "name" : "LEAVDURATION32" },
+              "bindingDependencies" : 
+              [ "LEAVDURATION32" ] } ],
+          
+          [ 
+            { "value" : "4",
+              "label" : "\"Maternity\/paternity leave\"" },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 365,
+              "decimals" : 0,
+              "id" : "jvxwy68n-QOP-kewv2jks",
+              "response" : 
+              { "name" : "LEAVDURATION41" },
+              "bindingDependencies" : 
+              [ "LEAVDURATION41" ] },
+            
+            { "componentType" : "Dropdown",
+              "id" : "jvxwy68n-QOP-kewvf0gf",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Working Days\"" },
+                
+                { "value" : "2",
+                  "label" : "\"Calendar days\"" } ],
+              "response" : 
+              { "name" : "LEAVDURATION42" },
+              "bindingDependencies" : 
+              [ "LEAVDURATION42" ] } ],
+          
+          [ 
+            { "value" : "5",
+              "label" : "\"Other type\"" },
+            
+            { "componentType" : "InputNumber",
+              "min" : 0,
+              "max" : 365,
+              "decimals" : 0,
+              "id" : "jvxwy68n-QOP-kewvl896",
+              "response" : 
+              { "name" : "LEAVDURATION51" },
+              "bindingDependencies" : 
+              [ "LEAVDURATION51" ] },
+            
+            { "componentType" : "Dropdown",
+              "id" : "jvxwy68n-QOP-kewvalmd",
+              "options" : 
+              [ 
+                { "value" : "1",
+                  "label" : "\"Working Days\"" },
+                
+                { "value" : "2",
+                  "label" : "\"Calendar days\"" } ],
+              "response" : 
+              { "name" : "LEAVDURATION52" },
+              "bindingDependencies" : 
+              [ "LEAVDURATION52" ] } ] ] },
+      
+      { "id" : "kiq5mr0b",
+        "componentType" : "Sequence",
+        "page" : "6",
+        "label" : "\"VI - Favourite characters (Loop)\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "kiq5mr0b",
+            "page" : "6",
+            "label" : "\"VI - Favourite characters (Loop)\"" } } },
+      
+      { "id" : "kiq612ky",
+        "componentType" : "InputNumber",
+        "mandatory" : false,
+        "page" : "6",
+        "min" : 0,
+        "max" : 20,
+        "decimals" : 0,
+        "label" : "\"➡ 1. How many characters from the Simpsons family could you precisely describe?\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "kiq5mr0b",
+            "page" : "6",
+            "label" : "\"VI - Favourite characters (Loop)\"" } },
+        "bindingDependencies" : 
+        [ "NB_CHAR" ],
+        "response" : 
+        { "name" : "NB_CHAR" } },
+      
+      { "id" : "kiq7bjam",
+        "componentType" : "Loop",
+        "page" : "6",
+        "paginatedLoop" : false,
+        "label" : "\"Add a character\"",
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "kiq5mr0b",
+            "page" : "6",
+            "label" : "\"VI - Favourite characters (Loop)\"" } },
+        "bindingDependencies" : 
+        [ "NAME_CHAR",
+          "AGE_CHAR" ],
+        "components" : 
+        [ 
+          { "id" : "kiq5u8d5",
+            "componentType" : "Subsequence",
+            "page" : "6",
+            "label" : "\"Description of each character\"",
+            "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+            "hierarchy" : 
+            { "sequence" : 
+              { "id" : "kiq5mr0b",
+                "page" : "6",
+                "label" : "\"VI - Favourite characters (Loop)\"" },
+              "subSequence" : 
+              { "id" : "kiq5u8d5",
+                "page" : "6",
+                "label" : "\"Description of each character\"" } } },
+          
+          { "id" : "kiq66gtw",
+            "componentType" : "Input",
+            "mandatory" : false,
+            "page" : "6",
+            "maxLength" : 30,
+            "label" : "\"➡ 2. What is the first name of this character?\"",
+            "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+            "hierarchy" : 
+            { "sequence" : 
+              { "id" : "kiq5mr0b",
+                "page" : "6",
+                "label" : "\"VI - Favourite characters (Loop)\"" },
+              "subSequence" : 
+              { "id" : "kiq5u8d5",
+                "page" : "6",
+                "label" : "\"Description of each character\"" } },
+            "bindingDependencies" : 
+            [ "NAME_CHAR" ],
+            "response" : 
+            { "name" : "NAME_CHAR" } },
+          
+          { "id" : "kiq5r8wu",
+            "componentType" : "InputNumber",
+            "mandatory" : false,
+            "page" : "6",
+            "min" : 0,
+            "max" : 120,
+            "decimals" : 0,
+            "label" : "\"➡ 3. How old is this character in the first episode of the Simpsons family?\"",
+            "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+            "hierarchy" : 
+            { "sequence" : 
+              { "id" : "kiq5mr0b",
+                "page" : "6",
+                "label" : "\"VI - Favourite characters (Loop)\"" },
+              "subSequence" : 
+              { "id" : "kiq5u8d5",
+                "page" : "6",
+                "label" : "\"Description of each character\"" } },
+            "bindingDependencies" : 
+            [ "AGE_CHAR" ],
+            "response" : 
+            { "name" : "AGE_CHAR" } } ] },
+      
+      { "id" : "kiq7cbgo",
+        "componentType" : "Loop",
+        "page" : "7",
+        "maxPage" : "1",
+        "min" : 0,
+        "iterations" : "count(NAME_CHAR)",
+        "depth" : 1,
+        "paginatedLoop" : true,
+        "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+        "bindingDependencies" : 
+        [ "NAME_CHAR",
+          "FAVCHAR",
+          "MEMORY_CHAR" ],
+        "loopDependencies" : 
+        [ "NAME_CHAR",
+          "AGE_CHAR" ],
+        "components" : 
+        [ 
+          { "id" : "kiq5xw5p",
+            "componentType" : "Sequence",
+            "page" : "7.1",
+            "label" : "\"VII - Other details about character named \" || cast(cast(NAME_CHAR,string),string) || \" \"",
+            "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+            "hierarchy" : 
+            { "sequence" : 
+              { "id" : "kiq5xw5p",
+                "page" : "7.1",
+                "label" : "\"VII - Other details about character named \" || cast(cast(NAME_CHAR,string),string) || \" \"" } },
+            "bindingDependencies" : 
+            [ "NAME_CHAR" ] },
+          
+          { "id" : "kiq65x3c",
+            "componentType" : "CheckboxOne",
+            "mandatory" : false,
+            "page" : "7.1",
+            "label" : "\"➡ 1. Is character named \" || cast(cast(NAME_CHAR,string),string) || \" your favourite one ? \"",
+            "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+            "hierarchy" : 
+            { "sequence" : 
+              { "id" : "kiq5xw5p",
+                "page" : "7.1",
+                "label" : "\"VII - Other details about character named \" || cast(cast(NAME_CHAR,string),string) || \" \"" } },
+            "bindingDependencies" : 
+            [ "NAME_CHAR",
+              "FAVCHAR" ],
+            "options" : 
+            [ 
+              { "value" : "1",
+                "label" : "\"Yes\"" },
+              
+              { "value" : "0",
+                "label" : "\"No\"" } ],
+            "response" : 
+            { "name" : "FAVCHAR" } },
+          
+          { "id" : "kiq651zv",
+            "componentType" : "Textarea",
+            "mandatory" : false,
+            "page" : "7.1",
+            "maxLength" : 255,
+            "label" : "\"➡ 2. What is your best memory about character named \" || cast(cast(NAME_CHAR,string),string) || \" ? \"",
+            "conditionFilter" : "if ((not(cast(READY,integer)  <>  1))) then \"normal\" else \"hidden\"",
+            "hierarchy" : 
+            { "sequence" : 
+              { "id" : "kiq5xw5p",
+                "page" : "7.1",
+                "label" : "\"VII - Other details about character named \" || cast(cast(NAME_CHAR,string),string) || \" \"" } },
+            "bindingDependencies" : 
+            [ "NAME_CHAR",
+              "MEMORY_CHAR" ],
+            "response" : 
+            { "name" : "MEMORY_CHAR" } } ] },
       
       { "id" : "j6z12s2d",
         "componentType" : "Sequence",
-        "label" : "\"VI - Comment\"",
-        "conditionFilter" : "\"normal\"" },
+        "page" : "8",
+        "label" : "\"VIII - Comment\"",
+        "conditionFilter" : "\"normal\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6z12s2d",
+            "page" : "8",
+            "label" : "\"VIII - Comment\"" } } },
       
       { "id" : "j6z0z3us",
         "componentType" : "Textarea",
         "mandatory" : false,
+        "page" : "8",
         "maxLength" : 255,
         "label" : "\"➡ 1. Do you have any comment about the survey?\"",
         "conditionFilter" : "\"normal\"",
+        "hierarchy" : 
+        { "sequence" : 
+          { "id" : "j6z12s2d",
+            "page" : "8",
+            "label" : "\"VIII - Comment\"" } },
         "bindingDependencies" : 
         [ "SURVEY_COMMENT" ],
         "response" : 
         { "name" : "SURVEY_COMMENT" } } ],
     "variables" : 
     [ 
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR1_1_1",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR2_1_2",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR3_1_3",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR1_2_1",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR2_2_2",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR3_2_3",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR1_3_1",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR2_3_2",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR3_3_3",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR1_4_1",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR2_4_2",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR3_4_3",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR1_5_1",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR2_5_2",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR3_5_3",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR1_6_1",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR2_6_2",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR3_6_3",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR1_7_1",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR2_7_2",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR3_7_3",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR1_8_1",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR2_8_2",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR3_8_3",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR1_9_1",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR2_9_2",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR3_9_3",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR1_10_1",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR2_10_2",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVOURITE_CHAR3_10_3",
+        "componentRef" : "j6qg8rc6",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
       { "variableType" : "EXTERNAL",
         "name" : "LAST_BROADCAST",
         "value" : null },
@@ -1446,7 +2971,67 @@
       
       { "variableType" : "COLLECTED",
         "name" : "DATEFIRST",
-        "componentRef" : "j334cyqb",
+        "componentRef" : "kiq71eoi",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "DATEYYYYMM",
+        "componentRef" : "k5nvty2o",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "DATEYYYY",
+        "componentRef" : "k5nw1fir",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "DURATIONH",
+        "componentRef" : "k5nw0w05",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "DURATIOND",
+        "componentRef" : "k5nvu98z",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "DURATIONM",
+        "componentRef" : "k5nw8ei1",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "DURATIONY",
+        "componentRef" : "k5nw9dk4",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -1735,8 +3320,88 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
+        "name" : "LAST_FOOD_SHOPPING11",
+        "componentRef" : "k9cg2q5t",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "LAST_FOOD_SHOPPING21",
+        "componentRef" : "k9cg2q5t",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "LAST_FOOD_SHOPPING31",
+        "componentRef" : "k9cg2q5t",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "LAST_FOOD_SHOPPING41",
+        "componentRef" : "k9cg2q5t",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "LAST_FOOD_SHOPPING51",
+        "componentRef" : "k9cg2q5t",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "LAST_FOOD_SHOPPING61",
+        "componentRef" : "k9cg2q5t",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "LAST_FOOD_SHOPPING71",
+        "componentRef" : "k9cg2q5t",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "LAST_FOOD_SHOPPING81",
+        "componentRef" : "k9cg2q5t",
+        "values" : 
+        { "PREVIOUS" : null,
+          "COLLECTED" : null,
+          "FORCED" : null,
+          "EDITED" : null,
+          "INPUTED" : null } },
+      
+      { "variableType" : "COLLECTED",
         "name" : "CLOWNING11",
-        "componentRef" : "j4nw0rr6",
+        "componentRef" : "kbkjvgel",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -1746,7 +3411,7 @@
       
       { "variableType" : "COLLECTED",
         "name" : "CLOWNING12",
-        "componentRef" : "j4nw0rr6",
+        "componentRef" : "kbkjvgel",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -1756,7 +3421,7 @@
       
       { "variableType" : "COLLECTED",
         "name" : "CLOWNING21",
-        "componentRef" : "j4nw0rr6",
+        "componentRef" : "kbkjvgel",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -1766,7 +3431,7 @@
       
       { "variableType" : "COLLECTED",
         "name" : "CLOWNING22",
-        "componentRef" : "j4nw0rr6",
+        "componentRef" : "kbkjvgel",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -1776,7 +3441,7 @@
       
       { "variableType" : "COLLECTED",
         "name" : "CLOWNING31",
-        "componentRef" : "j4nw0rr6",
+        "componentRef" : "kbkjvgel",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -1786,7 +3451,7 @@
       
       { "variableType" : "COLLECTED",
         "name" : "CLOWNING32",
-        "componentRef" : "j4nw0rr6",
+        "componentRef" : "kbkjvgel",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -1796,7 +3461,7 @@
       
       { "variableType" : "COLLECTED",
         "name" : "CLOWNING41",
-        "componentRef" : "j4nw0rr6",
+        "componentRef" : "kbkjvgel",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -1806,7 +3471,7 @@
       
       { "variableType" : "COLLECTED",
         "name" : "CLOWNING42",
-        "componentRef" : "j4nw0rr6",
+        "componentRef" : "kbkjvgel",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2055,7 +3720,7 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS11",
+        "name" : "FAVOURITE_CHAR1",
         "componentRef" : "j6qg8rc6",
         "values" : 
         { "PREVIOUS" : null,
@@ -2065,7 +3730,7 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS12",
+        "name" : "FAVOURITE_CHAR2",
         "componentRef" : "j6qg8rc6",
         "values" : 
         { "PREVIOUS" : null,
@@ -2075,7 +3740,7 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS21",
+        "name" : "FAVOURITE_CHAR3",
         "componentRef" : "j6qg8rc6",
         "values" : 
         { "PREVIOUS" : null,
@@ -2085,8 +3750,8 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS22",
-        "componentRef" : "j6qg8rc6",
+        "name" : "FEELCHAREV1",
+        "componentRef" : "jvxux0mi",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2095,8 +3760,8 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS31",
-        "componentRef" : "j6qg8rc6",
+        "name" : "FEELCHAREV2",
+        "componentRef" : "jvxux0mi",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2105,8 +3770,8 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS32",
-        "componentRef" : "j6qg8rc6",
+        "name" : "FEELCHAREV3",
+        "componentRef" : "jvxux0mi",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2115,8 +3780,8 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS41",
-        "componentRef" : "j6qg8rc6",
+        "name" : "FEELCHAREV4",
+        "componentRef" : "jvxux0mi",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2125,8 +3790,8 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS42",
-        "componentRef" : "j6qg8rc6",
+        "name" : "LEAVDURATION11",
+        "componentRef" : "jvxwy68n",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2135,8 +3800,8 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS51",
-        "componentRef" : "j6qg8rc6",
+        "name" : "LEAVDURATION12",
+        "componentRef" : "jvxwy68n",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2145,8 +3810,8 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS52",
-        "componentRef" : "j6qg8rc6",
+        "name" : "LEAVDURATION21",
+        "componentRef" : "jvxwy68n",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2155,8 +3820,8 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS61",
-        "componentRef" : "j6qg8rc6",
+        "name" : "LEAVDURATION22",
+        "componentRef" : "jvxwy68n",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2165,8 +3830,8 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS62",
-        "componentRef" : "j6qg8rc6",
+        "name" : "LEAVDURATION31",
+        "componentRef" : "jvxwy68n",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2175,8 +3840,8 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS71",
-        "componentRef" : "j6qg8rc6",
+        "name" : "LEAVDURATION32",
+        "componentRef" : "jvxwy68n",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2185,8 +3850,8 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS72",
-        "componentRef" : "j6qg8rc6",
+        "name" : "LEAVDURATION41",
+        "componentRef" : "jvxwy68n",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2195,8 +3860,8 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS81",
-        "componentRef" : "j6qg8rc6",
+        "name" : "LEAVDURATION42",
+        "componentRef" : "jvxwy68n",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2205,8 +3870,8 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS82",
-        "componentRef" : "j6qg8rc6",
+        "name" : "LEAVDURATION51",
+        "componentRef" : "jvxwy68n",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2215,8 +3880,8 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS91",
-        "componentRef" : "j6qg8rc6",
+        "name" : "LEAVDURATION52",
+        "componentRef" : "jvxwy68n",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2225,8 +3890,8 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS92",
-        "componentRef" : "j6qg8rc6",
+        "name" : "NB_CHAR",
+        "componentRef" : "kiq612ky",
         "values" : 
         { "PREVIOUS" : null,
           "COLLECTED" : null,
@@ -2235,24 +3900,64 @@
           "INPUTED" : null } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS101",
-        "componentRef" : "j6qg8rc6",
+        "name" : "NAME_CHAR",
+        "componentRef" : "kiq7bjam",
         "values" : 
-        { "PREVIOUS" : null,
-          "COLLECTED" : null,
-          "FORCED" : null,
-          "EDITED" : null,
-          "INPUTED" : null } },
+        { "PREVIOUS" : 
+          [ null ],
+          "COLLECTED" : 
+          [ null ],
+          "FORCED" : 
+          [ null ],
+          "EDITED" : 
+          [ null ],
+          "INPUTED" : 
+          [ null ] } },
       
       { "variableType" : "COLLECTED",
-        "name" : "FAVOURITE_CHARACTERS102",
-        "componentRef" : "j6qg8rc6",
+        "name" : "AGE_CHAR",
+        "componentRef" : "kiq7bjam",
         "values" : 
-        { "PREVIOUS" : null,
-          "COLLECTED" : null,
-          "FORCED" : null,
-          "EDITED" : null,
-          "INPUTED" : null } },
+        { "PREVIOUS" : 
+          [ null ],
+          "COLLECTED" : 
+          [ null ],
+          "FORCED" : 
+          [ null ],
+          "EDITED" : 
+          [ null ],
+          "INPUTED" : 
+          [ null ] } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "FAVCHAR",
+        "componentRef" : "kiq7cbgo",
+        "values" : 
+        { "PREVIOUS" : 
+          [ null ],
+          "COLLECTED" : 
+          [ null ],
+          "FORCED" : 
+          [ null ],
+          "EDITED" : 
+          [ null ],
+          "INPUTED" : 
+          [ null ] } },
+      
+      { "variableType" : "COLLECTED",
+        "name" : "MEMORY_CHAR",
+        "componentRef" : "kiq7cbgo",
+        "values" : 
+        { "PREVIOUS" : 
+          [ null ],
+          "COLLECTED" : 
+          [ null ],
+          "FORCED" : 
+          [ null ],
+          "EDITED" : 
+          [ null ],
+          "INPUTED" : 
+          [ null ] } },
       
       { "variableType" : "COLLECTED",
         "name" : "SURVEY_COMMENT",
@@ -2262,8 +3967,4 @@
           "COLLECTED" : null,
           "FORCED" : null,
           "EDITED" : null,
-          "INPUTED" : null } },
-      
-      { "variableType" : "CALCULATED",
-        "name" : "SUM_EXPENSES",
-        "expression" : "cast(PERCENTAGE_EXPENSES11,number) + cast(PERCENTAGE_EXPENSES21,number) + cast(PERCENTAGE_EXPENSES31,number)+ cast(PERCENTAGE_EXPENSES41,number)+ cast(PERCENTAGE_EXPENSES51,number)+ cast(PERCENTAGE_EXPENSES61,number)+ cast(PERCENTAGE_EXPENSES71,number)+ cast(PERCENTAGE_EXPENSES81,number)+ cast(PERCENTAGE_EXPENSES91,number)+ cast(PERCENTAGE_EXPENSES101,number)" } ] }
+          "INPUTED" : null } } ] }
