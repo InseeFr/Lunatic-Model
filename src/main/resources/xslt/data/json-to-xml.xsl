@@ -14,10 +14,13 @@
     
     <xsl:template match="*" mode="prepare">
         <xsl:variable name="name">
+            
             <xsl:choose>
                 <xsl:when test="@key!=''"><xsl:value-of select="@key"/></xsl:when>
-                <xsl:when test="local-name(.)='map'"><xsl:value-of select="$rootName"/></xsl:when>
-                <xsl:otherwise><xsl:value-of select="ancestor::*[local-name(.)='array'][@key!='']/@key"/></xsl:otherwise>
+                <xsl:otherwise>
+                    <xsl:variable name="arrayName" select="ancestor::*[local-name(.)='array'][@key!='']/@key"/>
+                    <xsl:value-of select="if($arrayName) then $arrayName else $rootName"/>
+                </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
         <xsl:element name="{$name}">
