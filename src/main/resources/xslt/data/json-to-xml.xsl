@@ -13,7 +13,7 @@
     </xsl:template>
     
     <xsl:template match="*" mode="prepare">
-        <xsl:variable name="name">            
+        <xsl:variable name="name">
             <xsl:choose>
                 <xsl:when test="@key!=''"><xsl:value-of select="@key"/></xsl:when>
                 <xsl:otherwise>
