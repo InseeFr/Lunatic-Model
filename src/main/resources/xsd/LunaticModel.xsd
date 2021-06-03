@@ -65,10 +65,10 @@
             <xs:extension base="ComponentType">
                 <xs:sequence>
                     <xs:element name="loopDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="lines" type="LinesRoster" minOccurs="0"/>
                     <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
                 <xs:attribute name="maxPage" type="xs:string"/>
-                <xs:attribute name="min" type="xs:integer"/>
                 <xs:attribute name="iterations" type="xs:string"/>
                 <xs:attribute name="depth" type="xs:integer"/>
                 <xs:attribute name="paginatedLoop" type="xs:boolean"/>
@@ -76,13 +76,19 @@
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="ConditionFilterType">
+        <xs:sequence>
+            <xs:element name="value" type="xs:string"/>
+            <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
 
     <xs:complexType name="ComponentType" abstract="true">
         <xs:sequence>
             <xs:element name="label" type="xs:string" minOccurs="0"/>
             <xs:element name="declarations" type="DeclarationType" minOccurs="0" maxOccurs="unbounded"/>
             <!-- Warning : To validate the name -->
-            <xs:element name="conditionFilter" type="xs:string" minOccurs="0"/>
+            <xs:element name="conditionFilter" type="ConditionFilterType" minOccurs="0"/>
 
             <xs:element name="hierarchy" type="hierarchy" minOccurs="0"/>
 
@@ -149,6 +155,7 @@
                     <xs:element name="value" type="xs:string" nillable="true" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="values" type="ValuesType" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="expression" type="xs:string" minOccurs="0"/>
+                    <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
