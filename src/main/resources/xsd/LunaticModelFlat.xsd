@@ -57,11 +57,11 @@
         <xs:complexContent>
             <xs:extension base="ComponentType">
                 <xs:sequence>
+                    <xs:element name="lines" type="LinesRoster" minOccurs="0"/>
                     <xs:element name="loopDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
                 <xs:attribute name="maxPage" type="xs:string"/>
-                <xs:attribute name="min" type="xs:integer"/>
                 <xs:attribute name="iterations" type="xs:string"/>
                 <xs:attribute name="depth" type="xs:integer"/>
                 <xs:attribute name="paginatedLoop" type="xs:boolean"/>
