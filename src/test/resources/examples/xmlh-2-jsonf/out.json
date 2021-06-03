@@ -2646,7 +2646,6 @@
         "componentType" : "Loop",
         "page" : "35",
         "maxPage" : "3",
-        "min" : 0,
         "iterations" : "count(NAME_CHAR)",
         "depth" : 1,
         "paginatedLoop" : true,
