@@ -65,7 +65,7 @@
             <xs:extension base="ComponentType">
                 <xs:sequence>
                     <xs:element name="loopDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="lines" type="LinesRoster" minOccurs="0"/>
+                    <xs:element name="lines" type="LinesLoop" minOccurs="0"/>
                     <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
                 <xs:attribute name="maxPage" type="xs:string"/>
@@ -74,6 +74,11 @@
                 <xs:attribute name="paginatedLoop" type="xs:boolean"/>
             </xs:extension>
         </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="LinesLoop">
+        <xs:attribute name="min" type="xs:string" use="required"/>
+        <xs:attribute name="max" type="xs:string" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="ConditionFilterType">
