@@ -55,12 +55,26 @@
          <INPUTED type="string">Inputed</INPUTED>
       </variable1>
       <variable2>
+         <PREVIOUS>
+            <PREVIOUS type="string">previous individu1</PREVIOUS>
+            <PREVIOUS type="string">previous individu2</PREVIOUS>
+         </PREVIOUS>
          <COLLECTED>
             <COLLECTED type="string">individu1</COLLECTED>
             <COLLECTED type="string">individu2</COLLECTED>
          </COLLECTED>
       </variable2>
       <variable3>
+         <PREVIOUS>
+            <PREVIOUS>
+               <PREVIOUS type="string">previous individu1</PREVIOUS>
+               <PREVIOUS type="string">previous individu2</PREVIOUS>
+            </PREVIOUS>
+            <PREVIOUS>
+               <PREVIOUS type="string">previous individu3</PREVIOUS>
+               <PREVIOUS type="string">previous individu4</PREVIOUS>
+            </PREVIOUS>
+         </PREVIOUS>
          <COLLECTED>
             <COLLECTED>
                <COLLECTED type="string">individu1</COLLECTED>
