@@ -13,9 +13,14 @@
       "INPUTED": "Inputed"
     },
     "variable2": {
+      "PREVIOUS": ["previous individu1", "previous individu2"],
       "COLLECTED": ["individu1", "individu2"]
     },
     "variable3": {
+      "PREVIOUS": [
+        ["previous individu1", "previous individu2"],
+        ["previous individu3", "previous individu4"]
+      ],
       "COLLECTED": [
         ["individu1", "individu2"],
         ["individu3", "individu4"]
