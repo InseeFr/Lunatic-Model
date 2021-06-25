@@ -25,6 +25,7 @@ figure {
   text-align: center;
 }
 
-.markdown-section code:after, .markdown-section code:before {
+.markdown-section code:after,
+.markdown-section code:before {
   content: "";
 }
