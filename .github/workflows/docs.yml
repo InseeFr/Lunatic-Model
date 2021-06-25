@@ -3,7 +3,7 @@ name: Lunatic CI
 on:
   push:
     branches:
-      - 'docs-update'
+      - 'master'
 
 jobs:
 
