@@ -17,7 +17,7 @@ Pour l'utiliser/installer veuillez suivre les étapes suivantes :
 <dependency>
   <groupId>fr.insee.lunatic</groupId>
   <artifactId>lunatic-model</artifactId>
-  <version>1.0.0</version>
+  <version>2.2.0</version>
 </dependency>
 ```
 
@@ -27,8 +27,8 @@ Pour l'utiliser/installer veuillez suivre les étapes suivantes :
 
 Il existe 2 transformations possibles :
 
-1. XMLLunatic (sortie d'Eno ddi2js) vers JSONLunatic (sortie hiérarchique)
-2. XMLLunatic (sortie d'Eno ddi2js) vers JSONLunaticFlat (sortie à plat)
+1. XMLLunatic (sortie d'Eno ddi2lunatic-xml) vers JSONLunatic (sortie hiérarchique)
+2. XMLLunatic (sortie d'Eno ddi2lunatic-xml) vers JSONLunaticFlat (sortie à plat)
 
 Pour utiliser ces transformations, il faut utiliser dans un ordre précis les transformations unitaires:
 
