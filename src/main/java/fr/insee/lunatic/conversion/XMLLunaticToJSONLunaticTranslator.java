@@ -11,6 +11,7 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 import javax.xml.transform.stream.StreamSource;
 
+import fr.insee.lunatic.utils.DateUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.eclipse.persistence.jaxb.MarshallerProperties;
@@ -66,6 +67,8 @@ public class XMLLunaticToJSONLunaticTranslator {
 		Questionnaire questionnaire = (Questionnaire) unmarshaller.unmarshal(xmlStream);
 		// Set lunatic-model-version to json questionnaire
 		questionnaire.setLunaticModelVersion(LUNATIC_MODEL_VERSION);
+		// Set generated Date to json questionnaire
+		questionnaire.setGeneratingDate(DateUtils.getCurrentDate());
 
 		Marshaller marshaller = context.createMarshaller();
 		marshaller.setProperty(MarshallerProperties.MEDIA_TYPE, "application/json");
