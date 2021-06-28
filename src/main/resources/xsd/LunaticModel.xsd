@@ -96,7 +96,7 @@
             <xs:element name="conditionFilter" type="ConditionFilterType" minOccurs="0"/>
 
             <xs:element name="hierarchy" type="hierarchy" minOccurs="0"/>
-            <xs:element name="nspResponse" type="xs:string" minOccurs="0"/>
+            <xs:element name="missingResponse" type="xs:string" minOccurs="0"/>
 
             <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
