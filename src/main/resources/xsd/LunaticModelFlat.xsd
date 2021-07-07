@@ -14,6 +14,7 @@
                     <xs:attribute name="modele" type="xs:string" use="optional"/>
                     <xs:attribute name="enoCoreVersion" type="xs:string" use="optional"/>
                     <xs:attribute name="lunaticModelVersion" type="xs:string" use="optional"/>
+                    <xs:attribute name="generatingDate" type="xs:string" use="optional"/>
                     <xs:attribute name="pagination" type="xs:string"/>
                     <xs:attribute name="maxPage" type="xs:string"/>
                 </xs:extension>
@@ -89,6 +90,7 @@
             <xs:element name="conditionFilter" type="ConditionFilterType" minOccurs="0"/>
 
             <xs:element name="hierarchy" type="hierarchy" minOccurs="0"/>
+            <xs:element name="missingResponse" type="ResponseType" minOccurs="0"/>
 
             <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
