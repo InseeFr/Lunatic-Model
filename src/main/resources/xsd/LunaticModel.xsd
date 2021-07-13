@@ -15,7 +15,8 @@
                     <xs:attribute name="enoCoreVersion" type="xs:string" use="optional"/>
                     <xs:attribute name="lunaticModelVersion" type="xs:string" use="optional"/>
                     <xs:attribute name="generatingDate" type="xs:string" use="optional"/>
-                    <xs:attribute name="pagination" type="xs:string"/>
+                    <xs:attribute name="missing" type="xs:boolean" use="optional"/>
+                    <xs:attribute name="pagination" type="xs:string" use="optional"/>
                     <xs:attribute name="maxPage" type="xs:string"/>
                 </xs:extension>
             </xs:complexContent>
