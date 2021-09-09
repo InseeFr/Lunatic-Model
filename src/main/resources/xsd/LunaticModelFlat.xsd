@@ -432,6 +432,7 @@
             <xs:enumeration value="INSTRUCTION"/>
             <xs:enumeration value="COMMENT"/>
             <xs:enumeration value="HELP"/>
+            <xs:enumeration value="CODECARD"/>
             <xs:enumeration value="WARNING"/>
             <xs:enumeration value="STATEMENT"/>
         </xs:restriction>
