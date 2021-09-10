@@ -42,7 +42,7 @@ Tous les composants (excepté Sequence et Subsequence) ont au moins ces attribut
   "label":"label",
   "declarations":[...],
   "conditionFilter":"...",
-  "bindingsDependencies": [...],
+  "bindingDependencies": [...],
 }
 ```
 
@@ -51,7 +51,7 @@ Tous les composants (excepté Sequence et Subsequence) ont au moins ces attribut
 - `label` : label de la question associée au composant (expression VTL)
 - `declarations` : liste des déclarations éventuelles associées au composant.
 - `conditionFilter` : filtre écrit dans le langage VTL pour savoir s'il faut afficher ou non le questionnaire.
-- `bindingsDependencies` : liste des variables dont le compasant dépend (labels, declarations et réponse)
+- `bindingDependencies` : liste des variables dont le compasant dépend (labels, declarations et réponse)
 - `mandatory` : booléen qui définit si la réponse est obligatoire ou non
 
 ---
@@ -90,7 +90,7 @@ Les composants qui ont pour but de collecter des réponses ont un attribut "resp
 
 ```json
 "response" :  {
-    "name" : "idVariable"    
+    "name" : "idVariable"
   }
 ```
 
