@@ -185,13 +185,13 @@
     <xs:complexType name="SuggesterOrder">
     	<xs:sequence>
     		<xs:element name="field" type="xs:string"/>
-    		<xs:element name="orderType" type="xs:string"/>
+    		<xs:element name="type" type="xs:string"/>
     	</xs:sequence>
     </xs:complexType>
     
     <xs:complexType name="SuggesterQueryParser">
     	<xs:sequence>
-    		<xs:element name="parserType" type="xs:string"/>
+    		<xs:element name="type" type="xs:string"/>
     		<xs:element name="params" type="SuggesterQueryParserParams" minOccurs="0"/>
     	</xs:sequence>
     </xs:complexType>
