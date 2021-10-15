@@ -146,21 +146,11 @@
     </xs:complexType>
     
     <xs:complexType name="SuggesterType">
-    	<xs:all>
-    		<xs:element name="L_DEPNAIS" type="SuggesterOccurence" minOccurs="0"/>
-    		<xs:element name="L_PAYSNAIS" type="SuggesterOccurence" minOccurs="0"/>
-    		<xs:element name="L_NATIONETR" type="SuggesterOccurence" minOccurs="0"/>
-    		<xs:element name="cog-communes" type="SuggesterOccurence" minOccurs="0"/>
-    		<xs:element name="bailleurs-sociaux" type="SuggesterOccurence" minOccurs="0"/>
-    	</xs:all>
-    </xs:complexType>
-    
-    <xs:complexType name="SuggesterOccurence">
     	<xs:sequence>
+    		<xs:element name="name" type="xs:string"/>
     		<xs:element name="fields" type="SuggesterField" minOccurs="1" maxOccurs="unbounded"/>
     		<xs:element name="max" type="xs:integer" minOccurs="0"/>
     		<xs:element name="order" type="SuggesterOrder" minOccurs="0"/>
-    		<xs:element name="name" type="xs:string"/>
     		<xs:element name="queryParser" type="SuggesterQueryParser"/>
     		<xs:element name="url" type="xs:string" minOccurs="0"/>
     		<xs:element name="version" type="xs:string"/>
