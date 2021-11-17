@@ -217,6 +217,7 @@
                     <xs:element name="expression" type="xs:string" minOccurs="0"/>
                     <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="shapeFrom" type="xs:string" minOccurs="0"/>
+                    <xs:element name="inFilter" type="xs:string" minOccurs="0"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
