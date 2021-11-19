@@ -21,7 +21,7 @@
         <xsl:copy-of select="xml-to-json($output-xml, map{'indent':true()})"/>
     </xsl:template>
     
-    <!-- delete type attribute -->
+    <!-- delete type attribute except when key is linked to the suggesters block-->
     <xsl:template match="*[@key='type'][not(ancestor::*[@key=('suggesters')])]" mode="clean"/>
     <!-- delete map useless inside array -->
     <xsl:template match="*[local-name(.)='map'][parent::*[@key=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTED') and local-name(.)='array'] | parent::*[@key=('values')]]" mode="clean">

@@ -152,9 +152,10 @@
     
     <xs:complexType name="SuggesterType">
     	<xs:sequence>
-    	    <xs:element name="name" type="xs:string"/>
+    		<xs:element name="name" type="xs:string"/>
     		<xs:element name="fields" type="SuggesterField" minOccurs="1" maxOccurs="unbounded"/>
     		<xs:element name="max" type="xs:integer" minOccurs="0"/>
+    		<xs:element name="stopWords" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
     		<xs:element name="order" type="SuggesterOrder" minOccurs="0"/>
     		<xs:element name="queryParser" type="SuggesterQueryParser"/>
     		<xs:element name="url" type="xs:string" minOccurs="0"/>
@@ -165,10 +166,18 @@
     <xs:complexType name="SuggesterField">
     	<xs:sequence>
     		<xs:element name="name" type="xs:string"/>
-    		<xs:element name="rules" type="xs:string" minOccurs="0"/>
+    		<xs:element name="rules" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
     		<xs:element name="language" type="xs:string" minOccurs="0"/>
     		<xs:element name="min" type="xs:integer" minOccurs="0"/>
     		<xs:element name="stemmer" type="xs:boolean" minOccurs="0"/>
+    		<xs:element name="synonyms" type="FieldSynonym" minOccurs="0" maxOccurs="unbounded"/>
+    	</xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="FieldSynonym">
+    	<xs:sequence>
+    		<xs:element name="source" type="xs:string" minOccurs="1"/>
+    		<xs:element name="target" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
     	</xs:sequence>
     </xs:complexType>
     
@@ -188,9 +197,9 @@
     
     <xs:complexType name="SuggesterQueryParserParams">
     	<xs:sequence>
-    		<xs:element name="language" type="xs:string"/>
-    		<xs:element name="min" type="xs:integer"/>
-    		<xs:element name="pattern" type="xs:string"/>
+    		<xs:element name="language" type="xs:string" minOccurs="0"/>
+    		<xs:element name="min" type="xs:integer" minOccurs="0"/>
+    		<xs:element name="pattern" type="xs:string" minOccurs="0"/>
     	</xs:sequence>
     </xs:complexType>
     
@@ -213,6 +222,7 @@
                     <xs:element name="expression" type="xs:string" minOccurs="0"/>
                     <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="shapeFrom" type="xs:string" minOccurs="0"/>
+                    <xs:element name="inFilter" type="xs:string" minOccurs="0"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
