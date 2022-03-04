@@ -528,15 +528,9 @@
     </xs:simpleType>
     
     <xs:complexType name="CleaningType">
-      <xs:sequence>
-        <xs:element name="cleaning">
-          <xs:complexType>
-            <xs:sequence maxOccurs="unbounded">
-              <xs:any processContents="lax"/>
-            </xs:sequence>
-          </xs:complexType>
-        </xs:element>
-      </xs:sequence>
+        <xs:sequence maxOccurs="unbounded">
+            <xs:any processContents="lax"/>
+        </xs:sequence>
     </xs:complexType>
     
 
