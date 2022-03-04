@@ -30,6 +30,7 @@
                     <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="suggesters" type="SuggesterType" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="variables" type="IVariableType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="cleaning" type="CleaningType" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -525,5 +526,18 @@
             <xs:enumeration value="ERROR"/>
         </xs:restriction>
     </xs:simpleType>
+    
+    <xs:complexType name="CleaningType">
+      <xs:sequence>
+        <xs:element name="cleaning">
+          <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+              <xs:any processContents="lax"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+    
 
 </xs:schema>
