@@ -58,6 +58,22 @@
         </xsl:copy>
     </xsl:template>
     
+    <!-- Transform the array produced inside cleaning block into simple map object -->
+    <!-- 1. When encountering the array ndoe, not copying it but treating its children -->
+    <xsl:template match="*[parent::*/@key='cleaning']" mode="clean">
+        <xsl:apply-templates select="node()" mode="clean"/>
+    </xsl:template>
+    <!-- 2. When encountering the map child of the array, putting the attribute key of variable inside -->
+    <xsl:template match="*[parent::*/parent::*/@key='cleaning']" mode="clean">
+        <xsl:copy>
+            <xsl:attribute name="key" select="parent::*/@key"/>
+            <xsl:apply-templates select="node()" mode="clean"/>
+        </xsl:copy>
+    </xsl:template>
+    <!-- 3. When encountering value node, do not copy (it is a line return wrongly treated as an object 
+    since we do not have a proper schema model for the cleaning part...-->
+    <xsl:template match="*[@key='value' and ancestor::*/@key='cleaning']"  mode="clean"/>
+    
     <xsl:template match="@*|node()" mode="clean">
         <xsl:choose>
             <xsl:when test="self::text()">
