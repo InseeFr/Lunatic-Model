@@ -3,7 +3,7 @@
     "modele" : "SIMPSONS",
     "enoCoreVersion" : "2.2.8",
     "lunaticModelVersion" : "2.2.11",
-    "generatingDate" : "11-03-2022 11:35:02",
+    "generatingDate" : "15-03-2022 13:41:50",
     "pagination" : "question",
     "maxPage" : "37",
     "label" : 
@@ -26,7 +26,8 @@
             { "value" : "\"We’re going to test your knowledge about the simpsons series.Welcome in the simpsons world!\"",
               "type" : "VTL|MD" } } ],
         "conditionFilter" : 
-        { "value" : "true" },
+        { "value" : "true",
+          "type" : "VTL|MD" },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
@@ -44,7 +45,8 @@
         { "value" : "\"➡ 1. Before starting, do you have any comments about the Simpsons family?\"",
           "type" : "VTL|MD" },
         "conditionFilter" : 
-        { "value" : "true" },
+        { "value" : "true",
+          "type" : "VTL|MD" },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
@@ -73,7 +75,8 @@
             { "value" : "\"If not, this is unfortunately the end of this questionnaire.\"",
               "type" : "VTL|MD" } } ],
         "conditionFilter" : 
-        { "value" : "true" },
+        { "value" : "true",
+          "type" : "VTL|MD" },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
@@ -94,7 +97,8 @@
         { "value" : "\"If you are not ready, please go to the end of the questionnaire\"",
           "type" : "VTL|MD" },
         "conditionFilter" : 
-        { "value" : "true" },
+        { "value" : "true",
+          "type" : "VTL|MD" },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
@@ -111,6 +115,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -137,6 +142,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -169,6 +175,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -208,6 +215,7 @@
               "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -247,6 +255,7 @@
               "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -287,6 +296,7 @@
               "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -320,6 +330,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -353,6 +364,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -386,6 +398,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -419,6 +432,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -452,6 +466,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -489,6 +504,7 @@
               "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -516,6 +532,7 @@
               "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -563,6 +580,7 @@
               "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -607,6 +625,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -695,6 +714,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -721,6 +741,7 @@
               "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -783,6 +804,7 @@
               "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -905,6 +927,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -1027,6 +1050,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -1247,6 +1271,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -1265,6 +1290,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -1291,6 +1317,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -1484,6 +1511,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -1781,6 +1809,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -1807,6 +1836,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -2025,6 +2055,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -2059,6 +2090,7 @@
               "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -2337,6 +2369,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -2357,6 +2390,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -2401,8 +2435,12 @@
           "FAVOURITE_CHAR2_10_2",
           "FAVOURITE_CHAR3_10_3" ],
         "lines" : 
-        { "min" : 1,
-          "max" : 10 },
+        { "min" : 
+          { "value" : "1",
+            "type" : "VTL|MD" },
+          "max" : 
+          { "value" : "10",
+            "type" : "VTL|MD" } },
         "cells" : 
         [ 
           [ 
@@ -2831,6 +2869,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -2973,6 +3012,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -3189,6 +3229,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -3211,6 +3252,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -3234,6 +3276,7 @@
           "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
@@ -3257,6 +3300,7 @@
               "type" : "VTL|MD" },
             "conditionFilter" : 
             { "value" : "(not(cast(READY,integer)  <>  1))",
+              "type" : "VTL|MD",
               "bindingDependencies" : 
               [ "READY" ] },
             "hierarchy" : 
@@ -3283,6 +3327,7 @@
               "type" : "VTL|MD" },
             "conditionFilter" : 
             { "value" : "(not(cast(READY,integer)  <>  1))",
+              "type" : "VTL|MD",
               "bindingDependencies" : 
               [ "READY" ] },
             "hierarchy" : 
@@ -3315,6 +3360,7 @@
               "type" : "VTL|MD" },
             "conditionFilter" : 
             { "value" : "(not(cast(READY,integer)  <>  1))",
+              "type" : "VTL|MD",
               "bindingDependencies" : 
               [ "READY" ] },
             "hierarchy" : 
@@ -3339,11 +3385,11 @@
         "componentType" : "Loop",
         "page" : "35",
         "maxPage" : "3",
-        "iterations" : "count(NAME_CHAR)",
         "depth" : 1,
         "paginatedLoop" : true,
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "bindingDependencies" : 
@@ -3363,6 +3409,7 @@
               "type" : "VTL|MD" },
             "conditionFilter" : 
             { "value" : "(not(cast(READY,integer)  <>  1))",
+              "type" : "VTL|MD",
               "bindingDependencies" : 
               [ "READY" ] },
             "hierarchy" : 
@@ -3384,6 +3431,7 @@
               "type" : "VTL|MD" },
             "conditionFilter" : 
             { "value" : "(not(cast(READY,integer)  <>  1))",
+              "type" : "VTL|MD",
               "bindingDependencies" : 
               [ "READY" ] },
             "hierarchy" : 
@@ -3420,6 +3468,7 @@
               "type" : "VTL|MD" },
             "conditionFilter" : 
             { "value" : "(not(cast(READY,integer)  <>  1))",
+              "type" : "VTL|MD",
               "bindingDependencies" : 
               [ "READY" ] },
             "hierarchy" : 
@@ -3433,7 +3482,10 @@
             [ "NAME_CHAR",
               "MEMORY_CHAR" ],
             "response" : 
-            { "name" : "MEMORY_CHAR" } } ] },
+            { "name" : "MEMORY_CHAR" } } ],
+        "iterations" : 
+        { "value" : "count(NAME_CHAR)",
+          "type" : "VTL|MD" } },
       
       { "id" : "j6z12s2d",
         "componentType" : "Sequence",
@@ -3442,7 +3494,8 @@
         { "value" : "\"VIII - Comment\"",
           "type" : "VTL|MD" },
         "conditionFilter" : 
-        { "value" : "true" },
+        { "value" : "true",
+          "type" : "VTL|MD" },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6z12s2d",
@@ -3460,7 +3513,8 @@
         { "value" : "\"➡ 1. Do you have any comment about the survey?\"",
           "type" : "VTL|MD" },
         "conditionFilter" : 
-        { "value" : "true" },
+        { "value" : "true",
+          "type" : "VTL|MD" },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6z12s2d",

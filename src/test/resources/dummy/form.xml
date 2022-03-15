@@ -28,6 +28,7 @@
       </declarations>
       <conditionFilter>
          <value>true</value>
+         <type>VTL|MD</type>
       </conditionFilter>
       <hierarchy>
          <sequence id="j6p0ti5h" page="1">
@@ -49,6 +50,7 @@
          </label>
          <conditionFilter>
             <value>true</value>
+            <type>VTL|MD</type>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6p0ti5h" page="1">
@@ -80,6 +82,7 @@
          </declarations>
          <conditionFilter>
             <value>true</value>
+            <type>VTL|MD</type>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6p0ti5h" page="1">
@@ -103,6 +106,7 @@
          </label>
          <conditionFilter>
             <value>true</value>
+            <type>VTL|MD</type>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6p0ti5h" page="1">
@@ -123,6 +127,7 @@
          </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -151,6 +156,7 @@
             </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -184,6 +190,7 @@
             </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -224,6 +231,7 @@
             </declarations>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -264,6 +272,7 @@
             </declarations>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -305,6 +314,7 @@
             </declarations>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -339,6 +349,7 @@
             </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -373,6 +384,7 @@
             </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -407,6 +419,7 @@
             </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -441,6 +454,7 @@
             </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -475,6 +489,7 @@
             </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -515,6 +530,7 @@
       </declarations>
       <conditionFilter>
          <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+         <type>VTL|MD</type>
          <bindingDependencies>READY</bindingDependencies>
       </conditionFilter>
       <hierarchy>
@@ -544,6 +560,7 @@
          </declarations>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -597,6 +614,7 @@
          </declarations>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -649,6 +667,7 @@
          </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -764,6 +783,7 @@
       </label>
       <conditionFilter>
          <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+         <type>VTL|MD</type>
          <bindingDependencies>READY</bindingDependencies>
       </conditionFilter>
       <hierarchy>
@@ -792,6 +812,7 @@
          </declarations>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -855,6 +876,7 @@
          </declarations>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -990,6 +1012,7 @@
          </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -1125,6 +1148,7 @@
          </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -1392,6 +1416,7 @@
       </label>
       <conditionFilter>
          <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+         <type>VTL|MD</type>
          <bindingDependencies>READY</bindingDependencies>
       </conditionFilter>
       <hierarchy>
@@ -1412,6 +1437,7 @@
          </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -1440,6 +1466,7 @@
             </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -1647,6 +1674,7 @@
             </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -1990,6 +2018,7 @@
          </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -2018,6 +2047,7 @@
             </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -2254,6 +2284,7 @@
          </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -2290,6 +2321,7 @@
             </declarations>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -2519,6 +2551,7 @@
       </label>
       <conditionFilter>
          <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+         <type>VTL|MD</type>
          <bindingDependencies>READY</bindingDependencies>
       </conditionFilter>
       <hierarchy>
@@ -2541,6 +2574,7 @@
          </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -2584,7 +2618,16 @@
          <bindingDependencies>FAVOURITE_CHAR1_10_1</bindingDependencies>
          <bindingDependencies>FAVOURITE_CHAR2_10_2</bindingDependencies>
          <bindingDependencies>FAVOURITE_CHAR3_10_3</bindingDependencies>
-         <lines min="1" max="10"/>
+         <lines>
+            <min>
+               <value>1</value>
+               <type>VTL|MD</type>
+            </min>
+            <max>
+               <value>10</value>
+               <type>VTL|MD</type>
+            </max>
+         </lines>
          <cells type="header">
             <cells headerCell="true">
                <label>
@@ -3008,6 +3051,7 @@
          </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -3171,6 +3215,7 @@
          </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -3398,6 +3443,7 @@
       </label>
       <conditionFilter>
          <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+         <type>VTL|MD</type>
          <bindingDependencies>READY</bindingDependencies>
       </conditionFilter>
       <hierarchy>
@@ -3422,6 +3468,7 @@
          </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -3446,6 +3493,7 @@
          </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -3469,6 +3517,7 @@
             </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -3497,6 +3546,7 @@
                </label>
                <conditionFilter>
                   <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+                  <type>VTL|MD</type>
                   <bindingDependencies>READY</bindingDependencies>
                </conditionFilter>
                <hierarchy>
@@ -3530,6 +3580,7 @@
                </label>
                <conditionFilter>
                   <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+                  <type>VTL|MD</type>
                   <bindingDependencies>READY</bindingDependencies>
                </conditionFilter>
                <hierarchy>
@@ -3556,12 +3607,16 @@
                componentType="Loop"
                id="kiq7cbgo"
                depth="1"
-               iterations="count(NAME_CHAR)"
                page="35"
                maxPage="3"
                paginatedLoop="true">
+      <iterations>
+         <value>count(NAME_CHAR)</value>
+         <type>VTL|MD</type>
+      </iterations>
       <conditionFilter>
          <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+         <type>VTL|MD</type>
          <bindingDependencies>READY</bindingDependencies>
       </conditionFilter>
       <bindingDependencies>NAME_CHAR</bindingDependencies>
@@ -3579,6 +3634,7 @@
          </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
@@ -3601,6 +3657,7 @@
             </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -3641,6 +3698,7 @@
             </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
@@ -3667,6 +3725,7 @@
       </label>
       <conditionFilter>
          <value>true</value>
+         <type>VTL|MD</type>
       </conditionFilter>
       <hierarchy>
          <sequence id="j6z12s2d" page="36">
@@ -3688,6 +3747,7 @@
          </label>
          <conditionFilter>
             <value>true</value>
+            <type>VTL|MD</type>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6z12s2d" page="36">

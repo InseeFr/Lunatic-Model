@@ -53,7 +53,7 @@
     <xs:complexType name="Options">
         <xs:sequence>
             <xs:element name="value" type="xs:string"/>
-            <xs:element name="label" type="label"/>
+            <xs:element name="label" type="labelType"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -64,9 +64,9 @@
                     <xs:element name="loopDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="lines" type="LinesLoop" minOccurs="0"/>
                     <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="iterations" type="labelType" minOccurs="0"/>
                 </xs:sequence>
                 <xs:attribute name="maxPage" type="xs:string"/>
-                <xs:attribute name="iterations" type="xs:string"/>
                 <xs:attribute name="depth" type="xs:integer"/>
                 <xs:attribute name="paginatedLoop" type="xs:boolean"/>
             </xs:extension>
@@ -74,20 +74,23 @@
     </xs:complexType>
 
     <xs:complexType name="LinesLoop">
-        <xs:attribute name="min" type="xs:string" use="required"/>
-        <xs:attribute name="max" type="xs:string" use="required"/>
+    	<xs:sequence>
+        	<xs:element name="min" type="labelType"/>
+        	<xs:element name="max" type="labelType"/>
+        </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="ConditionFilterType">
         <xs:sequence>
             <xs:element name="value" type="xs:string"/>
+            <xs:element name="type" type="xs:string"/>
             <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="ComponentType" abstract="true">
         <xs:sequence>
-            <xs:element name="label" type="label" minOccurs="0"/>
+            <xs:element name="label" type="labelType" minOccurs="0"/>
             <xs:element name="declarations" type="DeclarationType" minOccurs="0" maxOccurs="unbounded"/>
             <!-- Warning : To validate the name -->
             <xs:element name="conditionFilter" type="ConditionFilterType" minOccurs="0"/>
@@ -106,7 +109,7 @@
         <xs:attribute name="page" type="xs:string"/>
     </xs:complexType>
     
-    <xs:complexType name="label">
+    <xs:complexType name="labelType">
         <xs:sequence>
             <xs:element name="value" type="xs:string" minOccurs="0"/>
             <xs:element name="type" type="xs:string" minOccurs="0"/>
@@ -122,7 +125,7 @@
 
     <xs:complexType name="sequenceDescription">
         <xs:sequence>
-            <xs:element name="label" type="label"/>
+            <xs:element name="label" type="labelType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:string"/>
         <xs:attribute name="page" type="xs:string"/>
@@ -456,7 +459,7 @@
     <xs:complexType name="CellsType">
         <xs:sequence>
             <xs:element name="value" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="label" type="label" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="label" type="labelType" minOccurs="0" maxOccurs="1"/>
             <xs:element name="format" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="dateFormat" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="unit" type="xs:string" minOccurs="0" maxOccurs="1"/>
@@ -476,13 +479,15 @@
     </xs:complexType>
 
     <xs:complexType name="LinesRoster">
-        <xs:attribute name="min" type="xs:integer" use="required"/>
-        <xs:attribute name="max" type="xs:integer" use="required"/>
+    	<xs:sequence>
+        	<xs:element name="min" type="labelType"/>
+        	<xs:element name="max" type="labelType"/>
+        </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="ResponsesCheckboxGroup">
         <xs:sequence>
-            <xs:element name="label" type="label"/>
+            <xs:element name="label" type="labelType"/>
             <xs:element name="response" type="ResponseType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="required"/>
@@ -490,7 +495,7 @@
 
     <xs:complexType name="DeclarationType">
         <xs:sequence>
-            <xs:element name="label" type="label"/>
+            <xs:element name="label" type="labelType"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="required"/>
         <xs:attribute name="declarationType" type="DeclarationTypeEnum"/>
@@ -519,8 +524,8 @@
 
     <xs:complexType name="ControlType">
         <xs:sequence>
-            <xs:element name="control" type="xs:string"/>
-            <xs:element name="errorMessage" type="xs:string"/>
+            <xs:element name="control" type="labelType"/>
+            <xs:element name="errorMessage" type="labelType"/>
             <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" />
