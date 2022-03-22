@@ -3610,10 +3610,6 @@
                page="35"
                maxPage="3"
                paginatedLoop="true">
-      <iterations>
-         <value>count(NAME_CHAR)</value>
-         <type>VTL|MD</type>
-      </iterations>
       <conditionFilter>
          <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
          <type>VTL|MD</type>
@@ -3714,6 +3710,10 @@
          <bindingDependencies>MEMORY_CHAR</bindingDependencies>
          <response name="MEMORY_CHAR"/>
       </components>
+      <iterations>
+         <value>count(NAME_CHAR)</value>
+         <type>VTL|MD</type>
+      </iterations>
    </components>
    <components xsi:type="Sequence"
                componentType="Sequence"
