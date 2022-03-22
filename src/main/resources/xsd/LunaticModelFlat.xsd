@@ -430,7 +430,7 @@
                 <xs:sequence>
                     <xs:element name="lines" type="LinesRoster" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="header" type="HeaderType" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="components" type="BodyType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="components" type="BodyLine" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
                 <xs:attribute name="positioning" type="xs:string"/>
             </xs:extension>
@@ -450,6 +450,11 @@
         </xs:complexContent>
     </xs:complexType>
 
+	<xs:complexType name="BodyType">
+		<xs:sequence>
+			<xs:element name="body" type="BodyLine" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
 
     <xs:complexType name="HeaderType">
         <xs:sequence>
@@ -461,7 +466,7 @@
         <xs:attribute name="rowspan" type="xs:integer" use="optional"/>
     </xs:complexType>
 
-    <xs:complexType name="BodyType">
+    <xs:complexType name="BodyLine">
         <xs:sequence>
             <xs:element name="value" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="label" type="labelType" minOccurs="0" maxOccurs="1"/>
