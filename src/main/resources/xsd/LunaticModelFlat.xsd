@@ -429,8 +429,8 @@
             <xs:extension base="ComponentType">
                 <xs:sequence>
                     <xs:element name="lines" type="LinesRoster" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="headers" type="CellsType" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="components" type="CellsType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="header" type="HeaderType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="components" type="BodyType" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
                 <xs:attribute name="positioning" type="xs:string"/>
             </xs:extension>
@@ -442,21 +442,26 @@
             <xs:extension base="ComponentType">
                 <xs:sequence>
                     <xs:element name="lines" type="LinesRoster" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="cells" type="CellsLines" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="header" type="HeaderType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="body" type="BodyType" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
                 <xs:attribute name="positioning" type="xs:string"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="CellsLines">
+
+    <xs:complexType name="HeaderType">
         <xs:sequence>
-            <xs:element name="cells" type="CellsType" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="value" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="label" type="labelType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="options" type="Options" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
-        <xs:attribute name="type" use="optional"/>
+        <xs:attribute name="colspan" type="xs:integer" use="optional"/>
+        <xs:attribute name="rowspan" type="xs:integer" use="optional"/>
     </xs:complexType>
 
-    <xs:complexType name="CellsType">
+    <xs:complexType name="BodyType">
         <xs:sequence>
             <xs:element name="value" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="label" type="labelType" minOccurs="0" maxOccurs="1"/>
@@ -472,7 +477,6 @@
         <xs:attribute name="min" type="xs:double" use="optional"/>
         <xs:attribute name="max" type="xs:double" use="optional"/>
         <xs:attribute name="decimals" type="xs:integer" use="optional"/>
-        <xs:attribute name="headerCell" type="xs:boolean" use="optional"/>
         <xs:attribute name="colspan" type="xs:integer" use="optional"/>
         <xs:attribute name="rowspan" type="xs:integer" use="optional"/>
         <xs:attribute name="id" type="xs:ID" use="optional"/>
