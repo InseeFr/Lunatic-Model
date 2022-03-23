@@ -38,15 +38,15 @@
     </xsl:template>
     
         
-    <!-- delete responses attribute in table responses for Table component -->
-    <xsl:template match="*[@key='cells' and preceding-sibling::*[@key='componentType']]" mode="clean">
+    <!-- Delete the second level bodyLines, which we do not want to keep in the final JSON -->
+    <!--1. Do not keep the map surrounding the bodyline -->
+    <xsl:template match="*[child::*[@key='bodyLine']]" mode="clean">
+        <xsl:apply-templates select="child::*[@key='bodyLine']" mode="clean"/>
+    </xsl:template>
+    <!-- Do not keep the attribute key bodyLine of array -->
+    <xsl:template match="*[@key='bodyLine']" mode="clean">
         <xsl:copy>
-            <xsl:copy-of select="@*"/>
-            <xsl:for-each select="descendant::*[@key='cells']">
-                <xsl:copy>
-                    <xsl:apply-templates mode="clean"/>
-                </xsl:copy>
-            </xsl:for-each>
+            <xsl:apply-templates select="node()" mode="clean"/>
         </xsl:copy>
     </xsl:template>
     
