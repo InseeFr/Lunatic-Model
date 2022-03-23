@@ -452,7 +452,7 @@
 
 	<xs:complexType name="BodyType">
 		<xs:sequence>
-			<xs:element name="body" type="BodyLine" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="bodyLine" type="BodyLine" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
 
