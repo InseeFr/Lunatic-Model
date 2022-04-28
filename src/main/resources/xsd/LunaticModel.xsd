@@ -31,6 +31,7 @@
                     <xs:element name="suggesters" type="SuggesterType" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="variables" type="IVariableType" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="cleaning" type="CleaningType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="missingBlock" type="MissingType" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -554,6 +555,12 @@
     </xs:simpleType>
     
     <xs:complexType name="CleaningType">
+        <xs:sequence maxOccurs="unbounded">
+            <xs:any processContents="lax"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="MissingType">
         <xs:sequence maxOccurs="unbounded">
             <xs:any processContents="lax"/>
         </xs:sequence>
