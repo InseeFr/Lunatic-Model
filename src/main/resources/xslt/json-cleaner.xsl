@@ -2,6 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:j="http://www.w3.org/2013/XSL/json"
+    xmlns:fn="http://www.w3.org/2005/xpath-functions"
     exclude-result-prefixes="xs"
     expand-text="yes"
     version="3.0">
@@ -59,7 +60,7 @@
     </xsl:template>
     
     <!-- Transform the array produced inside cleaning block into simple map object -->
-    <!-- 1. When encountering the array ndoe, not copying it but treating its children -->
+    <!-- 1. When encountering the array node, not copying it but treating its children -->
     <xsl:template match="*[parent::*/@key='cleaning']" mode="clean">
         <xsl:apply-templates select="node()" mode="clean"/>
     </xsl:template>
@@ -73,6 +74,36 @@
     <!-- 3. When encountering value node, do not copy (it is a line return wrongly treated as an object 
     since we do not have a proper schema model for the cleaning part...-->
     <xsl:template match="*[@key='value' and ancestor::*/@key='cleaning']"  mode="clean"/>
+    
+    
+    <!-- Transform the array produced inside resizing block into simple map object -->
+    <!-- 1. When encountering the array node, not copying it but treating its children -->
+    <xsl:template match="*[parent::*/@key='resizing']" mode="clean">
+        <xsl:apply-templates select="node()" mode="clean"/>
+    </xsl:template>
+    <!-- 2. When encountering the map child of the array, putting the attribute key of variable inside -->
+    <xsl:template match="*[parent::*/parent::*/@key='resizing']" mode="clean">
+        <xsl:copy>
+            <xsl:attribute name="key" select="parent::*/@key"/>
+            <xsl:apply-templates select="node()" mode="clean"/>
+        </xsl:copy>
+    </xsl:template>
+    
+    <!-- Transform the multiple variables inside an item of resizing block into an array -->
+    <!-- 1. When encountering the first variables node, not copying it but putting it in an array and copying all other variables node -->
+    <xsl:template match="*[@key='variables' and ancestor::*/@key='resizing'][1]" mode="clean">
+        <fn:array key="variables">
+            <xsl:for-each select="../fn:string[@key='variables']">
+                <fn:string><xsl:value-of select="text()"/></fn:string>
+            </xsl:for-each>
+        </fn:array>
+    </xsl:template>
+    <!-- 2. When encountering variables node that is not the first, do nothing, the copy to array has already been done at previous step -->    
+    <xsl:template match="*[@key='variables' and ancestor::*/@key='resizing' and preceding-sibling::*[@key='variables']]" mode="clean"/>
+    <!-- 3. When encountering value node, do not copy (it is a line return wrongly treated as an object 
+    since we do not have a proper schema model for the resizing part...-->
+    <xsl:template match="*[@key='value' and ancestor::*/@key='resizing']"  mode="clean"/>
+    
     
     <xsl:template match="@*|node()" mode="clean">
         <xsl:choose>
