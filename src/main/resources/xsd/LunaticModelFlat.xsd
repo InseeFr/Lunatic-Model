@@ -230,7 +230,7 @@
                 <xs:sequence>
                     <xs:element name="value" type="xs:string" nillable="true" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="values" type="ValuesType" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="expression" type="xs:string" minOccurs="0"/>
+                    <xs:element name="expression" type="labelType" minOccurs="0"/>
                     <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="shapeFrom" type="xs:string" minOccurs="0"/>
                     <xs:element name="inFilter" type="xs:string" minOccurs="0"/>
