@@ -1,16 +1,14 @@
 package fr.insee.lunatic.test;
 
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-
+import fr.insee.lunatic.Constants;
+import fr.insee.lunatic.conversion.JSONCleaner;
+import fr.insee.lunatic.conversion.XMLLunaticFlatToJSONLunaticFlatTranslator;
+import fr.insee.lunatic.conversion.XMLLunaticToJSONLunaticTranslator;
+import fr.insee.lunatic.conversion.XMLLunaticToXMLLunaticFlatTranslator;
 import org.json.JSONObject;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.Customization;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
@@ -19,11 +17,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xmlunit.diff.Diff;
 
-import fr.insee.lunatic.Constants;
-import fr.insee.lunatic.conversion.JSONCleaner;
-import fr.insee.lunatic.conversion.XMLLunaticFlatToJSONLunaticFlatTranslator;
-import fr.insee.lunatic.conversion.XMLLunaticToJSONLunaticTranslator;
-import fr.insee.lunatic.conversion.XMLLunaticToXMLLunaticFlatTranslator;
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class TranslatorsTest {
 
@@ -31,12 +30,12 @@ public class TranslatorsTest {
 	
 	private static final Logger logger = LoggerFactory.getLogger(TranslatorsTest.class);
 	
-	@BeforeClass
+	@BeforeAll
 	public static void setUpBeforeClass() throws Exception {
 	}
 	
 	
-	@Test
+	@org.junit.jupiter.api.Test
 	public void testQuestionnaireXMLFToJSONF() {
 		logger.debug("Launch test : XMLLunaticFlat -> JSONLunaticFlat");
 		try {
@@ -68,14 +67,14 @@ public class TranslatorsTest {
 
 		} catch (IOException e) {
 			e.printStackTrace();
-			Assert.fail();
+			Assertions.fail();
 		} catch (NullPointerException e) {
 			e.printStackTrace();
-			Assert.fail();
+			Assertions.fail();
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
-			Assert.fail();
+			Assertions.fail();
 		}
 	}
 	
@@ -100,18 +99,18 @@ public class TranslatorsTest {
 			
 			File expectedFile = new File(String.format("%s/out.xml", basePath));
 			Diff diff = xmlDiff.getDiff(outputFile.toFile(),expectedFile);
-			Assert.assertFalse(getDiffMessage(diff, basePath), diff.hasDifferences());
+			Assertions.assertFalse(diff.hasDifferences(), getDiffMessage(diff, basePath));
 			
 		} catch (IOException e) {
 			e.printStackTrace();
-			Assert.fail();
+			Assertions.fail();
 		} catch (NullPointerException e) {
 			e.printStackTrace();
-			Assert.fail();
+			Assertions.fail();
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
-			Assert.fail();
+			Assertions.fail();
 		}
 	}
 	
@@ -153,14 +152,14 @@ public class TranslatorsTest {
 							new Customization("enoCoreVersion",(o1, o2) -> true)));
 		} catch (IOException e) {
 			e.printStackTrace();
-			Assert.fail();
+			Assertions.fail();
 		} catch (NullPointerException e) {
 			e.printStackTrace();
-			Assert.fail();
+			Assertions.fail();
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
-			Assert.fail();
+			Assertions.fail();
 		}
 	}
 	
@@ -195,14 +194,14 @@ public class TranslatorsTest {
 
 		} catch (IOException e) {
 			e.printStackTrace();
-			Assert.fail();
+			Assertions.fail();
 		} catch (NullPointerException e) {
 			e.printStackTrace();
-			Assert.fail();
+			Assertions.fail();
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println(e.getMessage());
-			Assert.fail();
+			Assertions.fail();
 		}
 	}
 	
