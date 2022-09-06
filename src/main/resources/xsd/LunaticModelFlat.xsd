@@ -553,7 +553,7 @@
     <xs:simpleType name="ControlTypeOfControlEnum">
         <xs:restriction base="xs:token">
             <xs:enumeration value="FORMAT"/>
-            <xs:enumeration value="COHERENCE"/>
+            <xs:enumeration value="CONSISTENCY"/>
         </xs:restriction>
     </xs:simpleType>
     
