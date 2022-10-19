@@ -2,44 +2,58 @@
   { "id" : "i6vwi2506qf2mms",
     "modele" : "SIMPSONS",
     "enoCoreVersion" : "2.2.8",
-    "lunaticModelVersion" : "2.1.2",
-    "generatingDate" : "28-06-2021 17:07:23",
+    "lunaticModelVersion" : "2.2.11",
+    "generatingDate" : "23-03-2022 11:22:03",
     "pagination" : "question",
     "maxPage" : "37",
-    "label" : "Questionnaire SIMPSONS 20201215",
+    "label" : 
+    { "value" : "Questionnaire SIMPSONS 20201215",
+      "type" : "VTL|MD" },
     "components" : 
     [ 
       { "id" : "j6p0ti5h",
         "componentType" : "Sequence",
         "page" : "1",
-        "label" : "\"I - Introduction\"",
+        "label" : 
+        { "value" : "\"I - Introduction\"",
+          "type" : "VTL|MD" },
         "declarations" : 
         [ 
           { "id" : "j6p0ti5h-d1",
             "declarationType" : "COMMENT",
             "position" : "AFTER_QUESTION_TEXT",
-            "label" : "\"We’re going to test your knowledge about the simpsons series.Welcome in the simpsons world!\"" } ],
+            "label" : 
+            { "value" : "\"We’re going to test your knowledge about the simpsons series.Welcome in the simpsons world!\"",
+              "type" : "VTL|MD" } } ],
         "conditionFilter" : 
-        { "value" : "true" },
+        { "value" : "true",
+          "type" : "VTL|MD" },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
             "page" : "1",
-            "label" : "\"I - Introduction\"" } } },
+            "label" : 
+            { "value" : "\"I - Introduction\"",
+              "type" : "VTL|MD" } } } },
       
       { "id" : "j6p3dkx6",
         "componentType" : "Textarea",
         "mandatory" : true,
         "page" : "2",
         "maxLength" : 500,
-        "label" : "\"➡ 1. Before starting, do you have any comments about the Simpsons family?\"",
+        "label" : 
+        { "value" : "\"➡ 1. Before starting, do you have any comments about the Simpsons family?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
-        { "value" : "true" },
+        { "value" : "true",
+          "type" : "VTL|MD" },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
             "page" : "1",
-            "label" : "\"I - Introduction\"" } },
+            "label" : 
+            { "value" : "\"I - Introduction\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "COMMENT" ],
         "response" : 
@@ -49,20 +63,27 @@
         "componentType" : "CheckboxBoolean",
         "mandatory" : false,
         "page" : "3",
-        "label" : "\"➡ 2. If you agree to answer this questionnaire, please check the box\"",
+        "label" : 
+        { "value" : "\"➡ 2. If you agree to answer this questionnaire, please check the box\"",
+          "type" : "VTL|MD" },
         "declarations" : 
         [ 
           { "id" : "j6p0np9q-kir6xl1e",
             "declarationType" : "COMMENT",
             "position" : "AFTER_QUESTION_TEXT",
-            "label" : "\"If not, this is unfortunately the end of this questionnaire.\"" } ],
+            "label" : 
+            { "value" : "\"If not, this is unfortunately the end of this questionnaire.\"",
+              "type" : "VTL|MD" } } ],
         "conditionFilter" : 
-        { "value" : "true" },
+        { "value" : "true",
+          "type" : "VTL|MD" },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
             "page" : "1",
-            "label" : "\"I - Introduction\"" } },
+            "label" : 
+            { "value" : "\"I - Introduction\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "READY" ],
         "response" : 
@@ -72,52 +93,71 @@
         "componentType" : "FilterDescription",
         "page" : "3",
         "filterDescription" : false,
-        "label" : "\"If you are not ready, please go to the end of the questionnaire\"",
+        "label" : 
+        { "value" : "\"If you are not ready, please go to the end of the questionnaire\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
-        { "value" : "true" },
+        { "value" : "true",
+          "type" : "VTL|MD" },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
             "page" : "1",
-            "label" : "\"I - Introduction\"" } } },
+            "label" : 
+            { "value" : "\"I - Introduction\"",
+              "type" : "VTL|MD" } } } },
       
       { "id" : "j6p0s7o5",
         "componentType" : "Subsequence",
         "goToPage" : "4",
-        "label" : "\"General knowledge of the series\"",
+        "label" : 
+        { "value" : "\"General knowledge of the series\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
             "page" : "1",
-            "label" : "\"I - Introduction\"" },
+            "label" : 
+            { "value" : "\"I - Introduction\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6p0s7o5",
             "page" : "4",
-            "label" : "\"General knowledge of the series\"" } } },
+            "label" : 
+            { "value" : "\"General knowledge of the series\"",
+              "type" : "VTL|MD" } } } },
       
       { "id" : "j3343qhx",
         "componentType" : "Input",
         "mandatory" : false,
         "page" : "4",
         "maxLength" : 30,
-        "label" : "\"➡ 3. Who is the producer?\"",
+        "label" : 
+        { "value" : "\"➡ 3. Who is the producer?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
             "page" : "1",
-            "label" : "\"I - Introduction\"" },
+            "label" : 
+            { "value" : "\"I - Introduction\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6p0s7o5",
             "page" : "4",
-            "label" : "\"General knowledge of the series\"" } },
+            "label" : 
+            { "value" : "\"General knowledge of the series\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "PRODUCER" ],
         "response" : 
@@ -130,20 +170,27 @@
         "min" : 0,
         "max" : 99,
         "decimals" : 0,
-        "label" : "\"➡ 4. What is the current season number?\"",
+        "label" : 
+        { "value" : "\"➡ 4. What is the current season number?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
             "page" : "1",
-            "label" : "\"I - Introduction\"" },
+            "label" : 
+            { "value" : "\"I - Introduction\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6p0s7o5",
             "page" : "4",
-            "label" : "\"General knowledge of the series\"" } },
+            "label" : 
+            { "value" : "\"General knowledge of the series\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "SEASON_NUMBER" ],
         "response" : 
@@ -155,26 +202,35 @@
         "page" : "6",
         "min" : "1900-01-01",
         "max" : "format-date(current-date(),'[Y0001]-[M01]-[D01]')",
-        "label" : "\"➡ 5. When was the first episode of Simpsons? (format YYYY-MM-DD)\"",
+        "label" : 
+        { "value" : "\"➡ 5. When was the first episode of Simpsons? (format YYYY-MM-DD)\"",
+          "type" : "VTL|MD" },
         "declarations" : 
         [ 
           { "id" : "kiq71eoi-kiq7dsy2",
             "declarationType" : "INSTRUCTION",
             "position" : "AFTER_QUESTION_TEXT",
-            "label" : "\"Please answer with YYYY-MM-DD format\"" } ],
+            "label" : 
+            { "value" : "\"Please answer with YYYY-MM-DD format\"",
+              "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
             "page" : "1",
-            "label" : "\"I - Introduction\"" },
+            "label" : 
+            { "value" : "\"I - Introduction\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6p0s7o5",
             "page" : "4",
-            "label" : "\"General knowledge of the series\"" } },
+            "label" : 
+            { "value" : "\"General knowledge of the series\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "DATEFIRST" ],
         "dateFormat" : "YYYY-MM-DD",
@@ -186,26 +242,35 @@
         "mandatory" : false,
         "page" : "7",
         "min" : "1980-05",
-        "label" : "\"➡ 6. When was the first episode of the Simpsons? (format YYYY-MM)\"",
+        "label" : 
+        { "value" : "\"➡ 6. When was the first episode of the Simpsons? (format YYYY-MM)\"",
+          "type" : "VTL|MD" },
         "declarations" : 
         [ 
           { "id" : "k5nvty2o-k5nvxld8",
             "declarationType" : "COMMENT",
             "position" : "AFTER_QUESTION_TEXT",
-            "label" : "\"Please answer with YYYY-MM format\"" } ],
+            "label" : 
+            { "value" : "\"Please answer with YYYY-MM format\"",
+              "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
             "page" : "1",
-            "label" : "\"I - Introduction\"" },
+            "label" : 
+            { "value" : "\"I - Introduction\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6p0s7o5",
             "page" : "4",
-            "label" : "\"General knowledge of the series\"" } },
+            "label" : 
+            { "value" : "\"General knowledge of the series\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "DATEYYYYMM" ],
         "dateFormat" : "YYYY-MM",
@@ -218,26 +283,35 @@
         "page" : "8",
         "min" : "1900",
         "max" : "year-from-date(current-date())",
-        "label" : "\"➡ 7. When was the first episode of the Simpsons? (format YYYY)\"",
+        "label" : 
+        { "value" : "\"➡ 7. When was the first episode of the Simpsons? (format YYYY)\"",
+          "type" : "VTL|MD" },
         "declarations" : 
         [ 
           { "id" : "k5nw1fir-k5nvmx3n",
             "declarationType" : "COMMENT",
             "position" : "AFTER_QUESTION_TEXT",
-            "label" : "\"Please answer with YYYY format\"" } ],
+            "label" : 
+            { "value" : "\"Please answer with YYYY format\"",
+              "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
             "page" : "1",
-            "label" : "\"I - Introduction\"" },
+            "label" : 
+            { "value" : "\"I - Introduction\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6p0s7o5",
             "page" : "4",
-            "label" : "\"General knowledge of the series\"" } },
+            "label" : 
+            { "value" : "\"General knowledge of the series\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "DATEYYYY" ],
         "dateFormat" : "YYYY",
@@ -251,20 +325,27 @@
         "min" : 0,
         "max" : 70,
         "decimals" : 2,
-        "label" : "\"➡ 8. How long does an episode last?\"",
+        "label" : 
+        { "value" : "\"➡ 8. How long does an episode last?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
             "page" : "1",
-            "label" : "\"I - Introduction\"" },
+            "label" : 
+            { "value" : "\"I - Introduction\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6p0s7o5",
             "page" : "4",
-            "label" : "\"General knowledge of the series\"" } },
+            "label" : 
+            { "value" : "\"General knowledge of the series\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "DURATIONH" ],
         "unit" : "heures",
@@ -278,20 +359,27 @@
         "min" : 0,
         "max" : 366,
         "decimals" : 1,
-        "label" : "\"➡ 9. How long does it take to write a new episode?\"",
+        "label" : 
+        { "value" : "\"➡ 9. How long does it take to write a new episode?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
             "page" : "1",
-            "label" : "\"I - Introduction\"" },
+            "label" : 
+            { "value" : "\"I - Introduction\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6p0s7o5",
             "page" : "4",
-            "label" : "\"General knowledge of the series\"" } },
+            "label" : 
+            { "value" : "\"General knowledge of the series\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "DURATIOND" ],
         "unit" : "jours",
@@ -305,20 +393,27 @@
         "min" : 0,
         "max" : 12,
         "decimals" : 0,
-        "label" : "\"➡ 10. How long will it take you to watch all the existing episodes?\"",
+        "label" : 
+        { "value" : "\"➡ 10. How long will it take you to watch all the existing episodes?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
             "page" : "1",
-            "label" : "\"I - Introduction\"" },
+            "label" : 
+            { "value" : "\"I - Introduction\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6p0s7o5",
             "page" : "4",
-            "label" : "\"General knowledge of the series\"" } },
+            "label" : 
+            { "value" : "\"General knowledge of the series\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "DURATIONM" ],
         "unit" : "mois",
@@ -332,20 +427,27 @@
         "min" : 0,
         "max" : 100,
         "decimals" : 0,
-        "label" : "\"➡ 11. For how long have you known the Simpsons family?\"",
+        "label" : 
+        { "value" : "\"➡ 11. For how long have you known the Simpsons family?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
             "page" : "1",
-            "label" : "\"I - Introduction\"" },
+            "label" : 
+            { "value" : "\"I - Introduction\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6p0s7o5",
             "page" : "4",
-            "label" : "\"General knowledge of the series\"" } },
+            "label" : 
+            { "value" : "\"General knowledge of the series\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "DURATIONY" ],
         "unit" : "années",
@@ -359,20 +461,27 @@
         "min" : 0,
         "max" : 99,
         "decimals" : 1,
-        "label" : "\"➡ 15. In your opinion, how much is the part of audience share in US for the 2016 season?\"",
+        "label" : 
+        { "value" : "\"➡ 15. In your opinion, how much is the part of audience share in US for the 2016 season?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6p0ti5h",
             "page" : "1",
-            "label" : "\"I - Introduction\"" },
+            "label" : 
+            { "value" : "\"I - Introduction\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6p0s7o5",
             "page" : "4",
-            "label" : "\"General knowledge of the series\"" } },
+            "label" : 
+            { "value" : "\"General knowledge of the series\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "AUDIENCE_SHARE" ],
         "unit" : "%",
@@ -382,55 +491,75 @@
       { "id" : "j3341528",
         "componentType" : "Sequence",
         "page" : "14",
-        "label" : "\"II - Simpsons’ city\"",
+        "label" : 
+        { "value" : "\"II - Simpsons’ city\"",
+          "type" : "VTL|MD" },
         "declarations" : 
         [ 
           { "id" : "j3341528-d2",
             "declarationType" : "COMMENT",
             "position" : "AFTER_QUESTION_TEXT",
-            "label" : "\"This module asks about your general knowledge of the Simpsons city\"" } ],
+            "label" : 
+            { "value" : "\"This module asks about your general knowledge of the Simpsons city\"",
+              "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j3341528",
             "page" : "14",
-            "label" : "\"II - Simpsons’ city\"" } } },
+            "label" : 
+            { "value" : "\"II - Simpsons’ city\"",
+              "type" : "VTL|MD" } } } },
       
       { "id" : "j3343clt",
         "componentType" : "Radio",
         "mandatory" : true,
         "page" : "15",
-        "label" : "\"➡ 1. In which city do the Simpsons reside?\"",
+        "label" : 
+        { "value" : "\"➡ 1. In which city do the Simpsons reside?\"",
+          "type" : "VTL|MD" },
         "declarations" : 
         [ 
           { "id" : "j3343clt-d3",
             "declarationType" : "INSTRUCTION",
             "position" : "AFTER_QUESTION_TEXT",
-            "label" : "\"One possible answer\"" } ],
+            "label" : 
+            { "value" : "\"One possible answer\"",
+              "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j3341528",
             "page" : "14",
-            "label" : "\"II - Simpsons’ city\"" } },
+            "label" : 
+            { "value" : "\"II - Simpsons’ city\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "CITY" ],
         "options" : 
         [ 
           { "value" : "00001",
-            "label" : "\"Springfield\"" },
+            "label" : 
+            { "value" : "\"Springfield\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "00002",
-            "label" : "\"Shelbyville\"" },
+            "label" : 
+            { "value" : "\"Shelbyville\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "03",
-            "label" : "\"Seinfeld\"" } ],
+            "label" : 
+            { "value" : "\"Seinfeld\"",
+              "type" : "VTL|MD" } } ],
         "response" : 
         { "name" : "CITY" } },
       
@@ -438,37 +567,52 @@
         "componentType" : "CheckboxOne",
         "mandatory" : false,
         "page" : "16",
-        "label" : "\"➡ 2. Who is the Simpsons city mayor?\"",
+        "label" : 
+        { "value" : "\"➡ 2. Who is the Simpsons city mayor?\"",
+          "type" : "VTL|MD" },
         "declarations" : 
         [ 
           { "id" : "j6qdfhvw-d4",
             "declarationType" : "INSTRUCTION",
             "position" : "AFTER_QUESTION_TEXT",
-            "label" : "\"Only one possible answer\"" } ],
+            "label" : 
+            { "value" : "\"Only one possible answer\"",
+              "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j3341528",
             "page" : "14",
-            "label" : "\"II - Simpsons’ city\"" } },
+            "label" : 
+            { "value" : "\"II - Simpsons’ city\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "MAYOR" ],
         "options" : 
         [ 
           { "value" : "1",
-            "label" : "\"Constance Harm\"" },
+            "label" : 
+            { "value" : "\"Constance Harm\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "2",
-            "label" : "\"Timothy Lovejoy\"" },
+            "label" : 
+            { "value" : "\"Timothy Lovejoy\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "3",
-            "label" : "\"Joe Quimby\"" },
+            "label" : 
+            { "value" : "\"Joe Quimby\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "OT",
-            "label" : "\"Other name\"" } ],
+            "label" : 
+            { "value" : "\"Other name\"",
+              "type" : "VTL|MD" } } ],
         "response" : 
         { "name" : "MAYOR" } },
       
@@ -476,94 +620,137 @@
         "componentType" : "Dropdown",
         "mandatory" : false,
         "page" : "17",
-        "label" : "\"➡ 3. In which state do The Simpsons reside?\"",
+        "label" : 
+        { "value" : "\"➡ 3. In which state do The Simpsons reside?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j3341528",
             "page" : "14",
-            "label" : "\"II - Simpsons’ city\"" } },
+            "label" : 
+            { "value" : "\"II - Simpsons’ city\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "STATE" ],
         "options" : 
         [ 
           { "value" : "1",
-            "label" : "\"Washington\"" },
+            "label" : 
+            { "value" : "\"Washington\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "2",
-            "label" : "\"Kentucky\"" },
+            "label" : 
+            { "value" : "\"Kentucky\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "3",
-            "label" : "\"Ohio\"" },
+            "label" : 
+            { "value" : "\"Ohio\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "4",
-            "label" : "\"Maine\"" },
+            "label" : 
+            { "value" : "\"Maine\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "5",
-            "label" : "\"North Dakota\"" },
+            "label" : 
+            { "value" : "\"North Dakota\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "6",
-            "label" : "\"Florida\"" },
+            "label" : 
+            { "value" : "\"Florida\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "7",
-            "label" : "\"North Takoma\"" },
+            "label" : 
+            { "value" : "\"North Takoma\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "8",
-            "label" : "\"California\"" },
+            "label" : 
+            { "value" : "\"California\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "9",
-            "label" : "\"Texas\"" },
+            "label" : 
+            { "value" : "\"Texas\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "10",
-            "label" : "\"Massachusetts\"" },
+            "label" : 
+            { "value" : "\"Massachusetts\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "11",
-            "label" : "\"Nevada\"" },
+            "label" : 
+            { "value" : "\"Nevada\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "12",
-            "label" : "\"Illinois\"" },
+            "label" : 
+            { "value" : "\"Illinois\"",
+              "type" : "VTL|MD" } },
           
           { "value" : "13",
-            "label" : "\"Not in any state, you fool!\"" } ],
+            "label" : 
+            { "value" : "\"Not in any state, you fool!\"",
+              "type" : "VTL|MD" } } ],
         "response" : 
         { "name" : "STATE" } },
       
       { "id" : "j6qe0h9q",
         "componentType" : "Sequence",
         "page" : "18",
-        "label" : "\"III - Characters\"",
+        "label" : 
+        { "value" : "\"III - Characters\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6qe0h9q",
             "page" : "18",
-            "label" : "\"III - Characters\"" } } },
+            "label" : 
+            { "value" : "\"III - Characters\"",
+              "type" : "VTL|MD" } } } },
       
       { "id" : "j334akov",
         "componentType" : "CheckboxGroup",
         "page" : "19",
-        "label" : "\"➡ 1. What are the pet names that the Simpsons family had?\"",
+        "label" : 
+        { "value" : "\"➡ 1. What are the pet names that the Simpsons family had?\"",
+          "type" : "VTL|MD" },
         "declarations" : 
         [ 
           { "id" : "j334akov-d5",
             "declarationType" : "INSTRUCTION",
             "position" : "AFTER_QUESTION_TEXT",
-            "label" : "\"Several possible answers\"" } ],
+            "label" : 
+            { "value" : "\"Several possible answers\"",
+              "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6qe0h9q",
             "page" : "18",
-            "label" : "\"III - Characters\"" } },
+            "label" : 
+            { "value" : "\"III - Characters\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "PET1",
           "PET2",
@@ -572,22 +759,30 @@
         "responses" : 
         [ 
           { "id" : "j334akov-QOP-khokqjtw",
-            "label" : "\"Santa’s Little Helper\"",
+            "label" : 
+            { "value" : "\"Santa’s Little Helper\"",
+              "type" : "VTL|MD" },
             "response" : 
             { "name" : "PET1" } },
           
           { "id" : "j334akov-QOP-khokur7a",
-            "label" : "\"Snowball I\"",
+            "label" : 
+            { "value" : "\"Snowball I\"",
+              "type" : "VTL|MD" },
             "response" : 
             { "name" : "PET2" } },
           
           { "id" : "j334akov-QOP-khol82ux",
-            "label" : "\"Coltrane\"",
+            "label" : 
+            { "value" : "\"Coltrane\"",
+              "type" : "VTL|MD" },
             "response" : 
             { "name" : "PET3" } },
           
           { "id" : "j334akov-QOP-khokqee5",
-            "label" : "\"Other name\"",
+            "label" : 
+            { "value" : "\"Other name\"",
+              "type" : "VTL|MD" },
             "response" : 
             { "name" : "PET4" } } ] },
       
@@ -596,42 +791,55 @@
         "mandatory" : false,
         "page" : "20",
         "positioning" : "HORIZONTAL",
-        "label" : "\"➡ 2. Does Jay like the following ice cream flavours?\"",
+        "label" : 
+        { "value" : "\"➡ 2. Does Jay like the following ice cream flavours?\"",
+          "type" : "VTL|MD" },
         "declarations" : 
         [ 
           { "id" : "d12-SI",
             "declarationType" : "STATEMENT",
             "position" : "BEFORE_QUESTION_TEXT",
-            "label" : "\"Now we are going to know if you think that Jay is a gluton.\"" } ],
+            "label" : 
+            { "value" : "\"Now we are going to know if you think that Jay is a gluton.\"",
+              "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6qe0h9q",
             "page" : "18",
-            "label" : "\"III - Characters\"" } },
+            "label" : 
+            { "value" : "\"III - Characters\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "ICE_FLAVOUR1",
           "ICE_FLAVOUR2",
           "ICE_FLAVOUR3",
           "ICE_FLAVOUR4" ],
-        "cells" : 
+        "body" : 
         [ 
           [ 
             { "value" : "1",
-              "label" : "\"Vanilla\"" },
+              "label" : 
+              { "value" : "\"Vanilla\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "Radio",
               "id" : "j6p29i81-QOP-kiq5w99y",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "0",
-                  "label" : "\"No\"" } ],
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "ICE_FLAVOUR1" },
               "bindingDependencies" : 
@@ -639,17 +847,23 @@
           
           [ 
             { "value" : "2",
-              "label" : "\"Strawberry\"" },
+              "label" : 
+              { "value" : "\"Strawberry\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "Radio",
               "id" : "j6p29i81-QOP-kiq5ummf",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "0",
-                  "label" : "\"No\"" } ],
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "ICE_FLAVOUR2" },
               "bindingDependencies" : 
@@ -657,17 +871,23 @@
           
           [ 
             { "value" : "3",
-              "label" : "\"Apple\"" },
+              "label" : 
+              { "value" : "\"Apple\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "Radio",
               "id" : "j6p29i81-QOP-kiq5mry5",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "0",
-                  "label" : "\"No\"" } ],
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "ICE_FLAVOUR3" },
               "bindingDependencies" : 
@@ -675,17 +895,23 @@
           
           [ 
             { "value" : "OT",
-              "label" : "\"Other flavour\"" },
+              "label" : 
+              { "value" : "\"Other flavour\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "Radio",
               "id" : "j6p29i81-QOP-kiq5lkr8",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "0",
-                  "label" : "\"No\"" } ],
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "ICE_FLAVOUR4" },
               "bindingDependencies" : 
@@ -696,36 +922,47 @@
         "mandatory" : false,
         "page" : "21",
         "positioning" : "HORIZONTAL",
-        "label" : "\"➡ 3. Which character works in the nuclear power plant?\"",
+        "label" : 
+        { "value" : "\"➡ 3. Which character works in the nuclear power plant?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6qe0h9q",
             "page" : "18",
-            "label" : "\"III - Characters\"" } },
+            "label" : 
+            { "value" : "\"III - Characters\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "NUCLEAR_CHARACTER1",
           "NUCLEAR_CHARACTER2",
           "NUCLEAR_CHARACTER3",
           "NUCLEAR_CHARACTER4" ],
-        "cells" : 
+        "body" : 
         [ 
           [ 
             { "value" : "1",
-              "label" : "\"Charles Montgomery Burns\"" },
+              "label" : 
+              { "value" : "\"Charles Montgomery Burns\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "Dropdown",
               "id" : "j6qefnga-QOP-kewva8xg",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "0",
-                  "label" : "\"No\"" } ],
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "NUCLEAR_CHARACTER1" },
               "bindingDependencies" : 
@@ -733,17 +970,23 @@
           
           [ 
             { "value" : "2",
-              "label" : "\"Carl Carlson\"" },
+              "label" : 
+              { "value" : "\"Carl Carlson\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "Dropdown",
               "id" : "j6qefnga-QOP-kewvj0ad",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "0",
-                  "label" : "\"No\"" } ],
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "NUCLEAR_CHARACTER2" },
               "bindingDependencies" : 
@@ -751,17 +994,23 @@
           
           [ 
             { "value" : "3",
-              "label" : "\"Otto Mann\"" },
+              "label" : 
+              { "value" : "\"Otto Mann\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "Dropdown",
               "id" : "j6qefnga-QOP-kewveltm",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "0",
-                  "label" : "\"No\"" } ],
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "NUCLEAR_CHARACTER3" },
               "bindingDependencies" : 
@@ -769,17 +1018,23 @@
           
           [ 
             { "value" : "4",
-              "label" : "\"Lenny Leonard\"" },
+              "label" : 
+              { "value" : "\"Lenny Leonard\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "Dropdown",
               "id" : "j6qefnga-QOP-kewvgax4",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "0",
-                  "label" : "\"No\"" } ],
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "NUCLEAR_CHARACTER4" },
               "bindingDependencies" : 
@@ -790,46 +1045,63 @@
         "mandatory" : false,
         "page" : "22",
         "positioning" : "HORIZONTAL",
-        "label" : "\"➡ 4. In which city each character was born?\"",
+        "label" : 
+        { "value" : "\"➡ 4. In which city each character was born?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6qe0h9q",
             "page" : "18",
-            "label" : "\"III - Characters\"" } },
+            "label" : 
+            { "value" : "\"III - Characters\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "BIRTH_CHARACTER1",
           "BIRTH_CHARACTER2",
           "BIRTH_CHARACTER3",
           "BIRTH_CHARACTER4",
           "BIRTH_CHARACTER5" ],
-        "cells" : 
+        "body" : 
         [ 
           [ 
             { "value" : "1",
-              "label" : "\"Selma Bouvier\"" },
+              "label" : 
+              { "value" : "\"Selma Bouvier\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "j6yzoc6g-QOP-kewvjvcs",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Albuquerque\"" },
+                  "label" : 
+                  { "value" : "\"Albuquerque\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Springfield\"" },
+                  "label" : 
+                  { "value" : "\"Springfield\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Portland\"" },
+                  "label" : 
+                  { "value" : "\"Portland\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "4",
-                  "label" : "\"Shelbyville\"" },
+                  "label" : 
+                  { "value" : "\"Shelbyville\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "5",
-                  "label" : "\"Dagstuhl\"" } ],
+                  "label" : 
+                  { "value" : "\"Dagstuhl\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "BIRTH_CHARACTER1" },
               "bindingDependencies" : 
@@ -837,26 +1109,38 @@
           
           [ 
             { "value" : "2",
-              "label" : "\"Kent Brockman\"" },
+              "label" : 
+              { "value" : "\"Kent Brockman\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "j6yzoc6g-QOP-kewvhoda",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Albuquerque\"" },
+                  "label" : 
+                  { "value" : "\"Albuquerque\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Springfield\"" },
+                  "label" : 
+                  { "value" : "\"Springfield\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Portland\"" },
+                  "label" : 
+                  { "value" : "\"Portland\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "4",
-                  "label" : "\"Shelbyville\"" },
+                  "label" : 
+                  { "value" : "\"Shelbyville\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "5",
-                  "label" : "\"Dagstuhl\"" } ],
+                  "label" : 
+                  { "value" : "\"Dagstuhl\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "BIRTH_CHARACTER2" },
               "bindingDependencies" : 
@@ -864,26 +1148,38 @@
           
           [ 
             { "value" : "3",
-              "label" : "\"Milhouse Van Houten\"" },
+              "label" : 
+              { "value" : "\"Milhouse Van Houten\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "j6yzoc6g-QOP-kewv64s5",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Albuquerque\"" },
+                  "label" : 
+                  { "value" : "\"Albuquerque\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Springfield\"" },
+                  "label" : 
+                  { "value" : "\"Springfield\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Portland\"" },
+                  "label" : 
+                  { "value" : "\"Portland\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "4",
-                  "label" : "\"Shelbyville\"" },
+                  "label" : 
+                  { "value" : "\"Shelbyville\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "5",
-                  "label" : "\"Dagstuhl\"" } ],
+                  "label" : 
+                  { "value" : "\"Dagstuhl\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "BIRTH_CHARACTER3" },
               "bindingDependencies" : 
@@ -891,26 +1187,38 @@
           
           [ 
             { "value" : "4",
-              "label" : "\"Nelson Muntz\"" },
+              "label" : 
+              { "value" : "\"Nelson Muntz\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "j6yzoc6g-QOP-kewvj21j",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Albuquerque\"" },
+                  "label" : 
+                  { "value" : "\"Albuquerque\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Springfield\"" },
+                  "label" : 
+                  { "value" : "\"Springfield\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Portland\"" },
+                  "label" : 
+                  { "value" : "\"Portland\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "4",
-                  "label" : "\"Shelbyville\"" },
+                  "label" : 
+                  { "value" : "\"Shelbyville\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "5",
-                  "label" : "\"Dagstuhl\"" } ],
+                  "label" : 
+                  { "value" : "\"Dagstuhl\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "BIRTH_CHARACTER4" },
               "bindingDependencies" : 
@@ -918,26 +1226,38 @@
           
           [ 
             { "value" : "5",
-              "label" : "\"Crazy Cat Lady\"" },
+              "label" : 
+              { "value" : "\"Crazy Cat Lady\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "j6yzoc6g-QOP-kewva5uf",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Albuquerque\"" },
+                  "label" : 
+                  { "value" : "\"Albuquerque\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Springfield\"" },
+                  "label" : 
+                  { "value" : "\"Springfield\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Portland\"" },
+                  "label" : 
+                  { "value" : "\"Portland\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "4",
-                  "label" : "\"Shelbyville\"" },
+                  "label" : 
+                  { "value" : "\"Shelbyville\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "5",
-                  "label" : "\"Dagstuhl\"" } ],
+                  "label" : 
+                  { "value" : "\"Dagstuhl\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "BIRTH_CHARACTER5" },
               "bindingDependencies" : 
@@ -946,54 +1266,73 @@
       { "id" : "j4nw88h2",
         "componentType" : "Sequence",
         "page" : "23",
-        "label" : "\"IV - General questions\"",
+        "label" : 
+        { "value" : "\"IV - General questions\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j4nw88h2",
             "page" : "23",
-            "label" : "\"IV - General questions\"" } } },
+            "label" : 
+            { "value" : "\"IV - General questions\"",
+              "type" : "VTL|MD" } } } },
       
       { "id" : "j6qe237q",
         "componentType" : "Subsequence",
         "goToPage" : "24",
-        "label" : "\"Kwik-E-Mart\"",
+        "label" : 
+        { "value" : "\"Kwik-E-Mart\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j4nw88h2",
             "page" : "23",
-            "label" : "\"IV - General questions\"" },
+            "label" : 
+            { "value" : "\"IV - General questions\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6qe237q",
             "page" : "24",
-            "label" : "\"Kwik-E-Mart\"" } } },
+            "label" : 
+            { "value" : "\"Kwik-E-Mart\"",
+              "type" : "VTL|MD" } } } },
       
       { "id" : "j4nwc63q",
         "componentType" : "Table",
         "mandatory" : false,
         "page" : "24",
         "positioning" : "HORIZONTAL",
-        "label" : "\"➡ 1. Please, specify the percentage of Jay’s expenses in the Kwik-E-Mart for each product?\"",
+        "label" : 
+        { "value" : "\"➡ 1. Please, specify the percentage of Jay’s expenses in the Kwik-E-Mart for each product?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j4nw88h2",
             "page" : "23",
-            "label" : "\"IV - General questions\"" },
+            "label" : 
+            { "value" : "\"IV - General questions\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6qe237q",
             "page" : "24",
-            "label" : "\"Kwik-E-Mart\"" } },
+            "label" : 
+            { "value" : "\"Kwik-E-Mart\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "PERCENTAGE_EXPENSES11",
           "PERCENTAGE_EXPENSES21",
@@ -1002,23 +1341,29 @@
           "PERCENTAGE_EXPENSES51",
           "PERCENTAGE_EXPENSES61",
           "PERCENTAGE_EXPENSES71" ],
-        "cells" : 
+        "header" : 
         [ 
-          [ 
-            { "headerCell" : true,
-              "colspan" : 2,
-              "label" : "" },
-            
-            { "headerCell" : true,
-              "label" : "\"Percentage\"" } ],
+          { "colspan" : 2,
+            "label" : 
+            { "value" : "",
+              "type" : "VTL|MD" } },
           
+          { "label" : 
+            { "value" : "\"Percentage\"",
+              "type" : "VTL|MD" } } ],
+        "body" : 
+        [ 
           [ 
             { "rowspan" : 2,
               "value" : "A",
-              "label" : "\"Frozen products\"" },
+              "label" : 
+              { "value" : "\"Frozen products\"",
+                "type" : "VTL|MD" } },
             
             { "value" : "A1",
-              "label" : "\"Ice creams\"" },
+              "label" : 
+              { "value" : "\"Ice creams\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1033,7 +1378,9 @@
           
           [ 
             { "value" : "A2",
-              "label" : "\"Jasper Beardly\"" },
+              "label" : 
+              { "value" : "\"Jasper Beardly\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1049,10 +1396,14 @@
           [ 
             { "rowspan" : 3,
               "value" : "B",
-              "label" : "\"Meat\"" },
+              "label" : 
+              { "value" : "\"Meat\"",
+                "type" : "VTL|MD" } },
             
             { "value" : "B1",
-              "label" : "\"Bacon\"" },
+              "label" : 
+              { "value" : "\"Bacon\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1067,7 +1418,9 @@
           
           [ 
             { "value" : "B2",
-              "label" : "\"Pork chop\"" },
+              "label" : 
+              { "value" : "\"Pork chop\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1082,7 +1435,9 @@
           
           [ 
             { "value" : "B3",
-              "label" : "\"Chicken\"" },
+              "label" : 
+              { "value" : "\"Chicken\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1097,10 +1452,14 @@
           
           [ 
             { "value" : "C",
-              "label" : "\"Compote\"" },
+              "label" : 
+              { "value" : "\"Compote\"",
+                "type" : "VTL|MD" } },
             
             { "value" : "C1",
-              "label" : "\"Powersauce\"" },
+              "label" : 
+              { "value" : "\"Powersauce\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1116,7 +1475,9 @@
           [ 
             { "colspan" : 2,
               "value" : "D",
-              "label" : "\"Other\"" },
+              "label" : 
+              { "value" : "\"Other\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -1132,29 +1493,38 @@
           [ 
             { "colspan" : 2,
               "value" : "E",
-              "label" : "\"Total\"" },
+              "label" : 
+              { "value" : "\"Total\"",
+                "type" : "VTL|MD" } },
             
-            { "headerCell" : false } ] ] },
+            {  } ] ] },
       
       { "id" : "k9cg2q5t",
         "componentType" : "Table",
         "mandatory" : false,
         "page" : "25",
         "positioning" : "HORIZONTAL",
-        "label" : "\"➡ 2. Please specify if Jay has bought each product in his last food shopping\"",
+        "label" : 
+        { "value" : "\"➡ 2. Please specify if Jay has bought each product in his last food shopping\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j4nw88h2",
             "page" : "23",
-            "label" : "\"IV - General questions\"" },
+            "label" : 
+            { "value" : "\"IV - General questions\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6qe237q",
             "page" : "24",
-            "label" : "\"Kwik-E-Mart\"" } },
+            "label" : 
+            { "value" : "\"Kwik-E-Mart\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "LAST_FOOD_SHOPPING11",
           "LAST_FOOD_SHOPPING21",
@@ -1164,36 +1534,48 @@
           "LAST_FOOD_SHOPPING61",
           "LAST_FOOD_SHOPPING71",
           "LAST_FOOD_SHOPPING81" ],
-        "cells" : 
+        "header" : 
         [ 
-          [ 
-            { "headerCell" : true,
-              "colspan" : 2,
-              "label" : "" },
-            
-            { "headerCell" : true,
-              "label" : "\"In his last food shopping\"" } ],
+          { "colspan" : 2,
+            "label" : 
+            { "value" : "",
+              "type" : "VTL|MD" } },
           
+          { "label" : 
+            { "value" : "\"In his last food shopping\"",
+              "type" : "VTL|MD" } } ],
+        "body" : 
+        [ 
           [ 
             { "rowspan" : 2,
               "value" : "A",
-              "label" : "\"Frozen products\"" },
+              "label" : 
+              { "value" : "\"Frozen products\"",
+                "type" : "VTL|MD" } },
             
             { "value" : "A1",
-              "label" : "\"Ice creams\"" },
+              "label" : 
+              { "value" : "\"Ice creams\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "k9cg2q5t-QOP-kiq6pljq",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "LAST_FOOD_SHOPPING11" },
               "bindingDependencies" : 
@@ -1201,20 +1583,28 @@
           
           [ 
             { "value" : "A2",
-              "label" : "\"Jasper Beardly\"" },
+              "label" : 
+              { "value" : "\"Jasper Beardly\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "k9cg2q5t-QOP-kiq6mgpv",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "LAST_FOOD_SHOPPING21" },
               "bindingDependencies" : 
@@ -1223,23 +1613,33 @@
           [ 
             { "rowspan" : 3,
               "value" : "B",
-              "label" : "\"Meat\"" },
+              "label" : 
+              { "value" : "\"Meat\"",
+                "type" : "VTL|MD" } },
             
             { "value" : "B1",
-              "label" : "\"Bacon\"" },
+              "label" : 
+              { "value" : "\"Bacon\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "k9cg2q5t-QOP-kiq6pmtz",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "LAST_FOOD_SHOPPING31" },
               "bindingDependencies" : 
@@ -1247,20 +1647,28 @@
           
           [ 
             { "value" : "B2",
-              "label" : "\"Pork chop\"" },
+              "label" : 
+              { "value" : "\"Pork chop\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "k9cg2q5t-QOP-kiq6k4lf",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "LAST_FOOD_SHOPPING41" },
               "bindingDependencies" : 
@@ -1268,20 +1676,28 @@
           
           [ 
             { "value" : "B3",
-              "label" : "\"Chicken\"" },
+              "label" : 
+              { "value" : "\"Chicken\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "k9cg2q5t-QOP-kiq6p70n",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "LAST_FOOD_SHOPPING51" },
               "bindingDependencies" : 
@@ -1289,23 +1705,33 @@
           
           [ 
             { "value" : "C",
-              "label" : "\"Compote\"" },
+              "label" : 
+              { "value" : "\"Compote\"",
+                "type" : "VTL|MD" } },
             
             { "value" : "C1",
-              "label" : "\"Powersauce\"" },
+              "label" : 
+              { "value" : "\"Powersauce\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "k9cg2q5t-QOP-kiq6lh5v",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "LAST_FOOD_SHOPPING61" },
               "bindingDependencies" : 
@@ -1314,20 +1740,28 @@
           [ 
             { "colspan" : 2,
               "value" : "D",
-              "label" : "\"Other\"" },
+              "label" : 
+              { "value" : "\"Other\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "k9cg2q5t-QOP-kiq703te",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "LAST_FOOD_SHOPPING71" },
               "bindingDependencies" : 
@@ -1336,20 +1770,28 @@
           [ 
             { "colspan" : 2,
               "value" : "E",
-              "label" : "\"Total\"" },
+              "label" : 
+              { "value" : "\"Total\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "k9cg2q5t-QOP-kiq6zpd3",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "LAST_FOOD_SHOPPING81" },
               "bindingDependencies" : 
@@ -1358,40 +1800,54 @@
       { "id" : "j6qejudb",
         "componentType" : "Subsequence",
         "goToPage" : "26",
-        "label" : "\"Clowning\"",
+        "label" : 
+        { "value" : "\"Clowning\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j4nw88h2",
             "page" : "23",
-            "label" : "\"IV - General questions\"" },
+            "label" : 
+            { "value" : "\"IV - General questions\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6qejudb",
             "page" : "26",
-            "label" : "\"Clowning\"" } } },
+            "label" : 
+            { "value" : "\"Clowning\"",
+              "type" : "VTL|MD" } } } },
       
       { "id" : "kbkjvgel",
         "componentType" : "Table",
         "mandatory" : false,
         "page" : "26",
         "positioning" : "HORIZONTAL",
-        "label" : "\"➡ 3. Who did these clownings and tell us what you remember?\"",
+        "label" : 
+        { "value" : "\"➡ 3. Who did these clownings and tell us what you remember?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j4nw88h2",
             "page" : "23",
-            "label" : "\"IV - General questions\"" },
+            "label" : 
+            { "value" : "\"IV - General questions\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6qejudb",
             "page" : "26",
-            "label" : "\"Clowning\"" } },
+            "label" : 
+            { "value" : "\"Clowning\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "CLOWNING11",
           "CLOWNING12",
@@ -1401,37 +1857,50 @@
           "CLOWNING32",
           "CLOWNING41",
           "CLOWNING42" ],
-        "cells" : 
+        "header" : 
+        [ 
+          { "label" : 
+            { "value" : "",
+              "type" : "VTL|MD" } },
+          
+          { "label" : 
+            { "value" : "\"Clowning\"",
+              "type" : "VTL|MD" } },
+          
+          { "label" : 
+            { "value" : "\"Remember?\"",
+              "type" : "VTL|MD" } } ],
+        "body" : 
         [ 
           [ 
-            { "headerCell" : true,
-              "label" : "" },
-            
-            { "headerCell" : true,
-              "label" : "\"Clowning\"" },
-            
-            { "headerCell" : true,
-              "label" : "\"Remember?\"" } ],
-          
-          [ 
             { "value" : "1",
-              "label" : "\"Break the windows of the whole city\"" },
+              "label" : 
+              { "value" : "\"Break the windows of the whole city\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "Dropdown",
               "id" : "kbkjvgel-QOP-kiq6m5n0",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Jay\"" },
+                  "label" : 
+                  { "value" : "\"Jay\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Bart\"" },
+                  "label" : 
+                  { "value" : "\"Bart\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Krusty the clown\"" },
+                  "label" : 
+                  { "value" : "\"Krusty the clown\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "O",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "CLOWNING11" },
               "bindingDependencies" : 
@@ -1447,23 +1916,33 @@
           
           [ 
             { "value" : "2",
-              "label" : "\"Loose the violin of his daughter playing poker\"" },
+              "label" : 
+              { "value" : "\"Loose the violin of his daughter playing poker\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "Dropdown",
               "id" : "kbkjvgel-QOP-kiq6l29o",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Jay\"" },
+                  "label" : 
+                  { "value" : "\"Jay\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Bart\"" },
+                  "label" : 
+                  { "value" : "\"Bart\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Krusty the clown\"" },
+                  "label" : 
+                  { "value" : "\"Krusty the clown\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "O",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "CLOWNING21" },
               "bindingDependencies" : 
@@ -1479,23 +1958,33 @@
           
           [ 
             { "value" : "3",
-              "label" : "\"Kill Mr Burns\"" },
+              "label" : 
+              { "value" : "\"Kill Mr Burns\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "Dropdown",
               "id" : "kbkjvgel-QOP-kiq72biw",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Jay\"" },
+                  "label" : 
+                  { "value" : "\"Jay\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Bart\"" },
+                  "label" : 
+                  { "value" : "\"Bart\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Krusty the clown\"" },
+                  "label" : 
+                  { "value" : "\"Krusty the clown\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "O",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "CLOWNING31" },
               "bindingDependencies" : 
@@ -1511,23 +2000,33 @@
           
           [ 
             { "value" : "4",
-              "label" : "\"Leaving a mechanical object to control the nuclear power plant\"" },
+              "label" : 
+              { "value" : "\"Leaving a mechanical object to control the nuclear power plant\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "Dropdown",
               "id" : "kbkjvgel-QOP-kiq6mlan",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Jay\"" },
+                  "label" : 
+                  { "value" : "\"Jay\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Bart\"" },
+                  "label" : 
+                  { "value" : "\"Bart\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Krusty the clown\"" },
+                  "label" : 
+                  { "value" : "\"Krusty the clown\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "O",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "CLOWNING41" },
               "bindingDependencies" : 
@@ -1544,46 +2043,62 @@
       { "id" : "j6qeh91y",
         "componentType" : "Subsequence",
         "goToPage" : "27",
-        "label" : "\"Transport\"",
+        "label" : 
+        { "value" : "\"Transport\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j4nw88h2",
             "page" : "23",
-            "label" : "\"IV - General questions\"" },
+            "label" : 
+            { "value" : "\"IV - General questions\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6qeh91y",
             "page" : "27",
-            "label" : "\"Transport\"" } } },
+            "label" : 
+            { "value" : "\"Transport\"",
+              "type" : "VTL|MD" } } } },
       
       { "id" : "j6p2lwuj",
         "componentType" : "Table",
         "mandatory" : false,
         "page" : "27",
         "positioning" : "HORIZONTAL",
-        "label" : "\"➡ 4. Which of the following means of transport were used by the hero and in which country?\"",
+        "label" : 
+        { "value" : "\"➡ 4. Which of the following means of transport were used by the hero and in which country?\"",
+          "type" : "VTL|MD" },
         "declarations" : 
         [ 
           { "id" : "j6p2lwuj-d10",
             "declarationType" : "INSTRUCTION",
             "position" : "AFTER_QUESTION_TEXT",
-            "label" : "\"Several answers possible: check off all the relevant boxes\"" } ],
+            "label" : 
+            { "value" : "\"Several answers possible: check off all the relevant boxes\"",
+              "type" : "VTL|MD" } } ],
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j4nw88h2",
             "page" : "23",
-            "label" : "\"IV - General questions\"" },
+            "label" : 
+            { "value" : "\"IV - General questions\"",
+              "type" : "VTL|MD" } },
           "subSequence" : 
           { "id" : "j6qeh91y",
             "page" : "27",
-            "label" : "\"Transport\"" } },
+            "label" : 
+            { "value" : "\"Transport\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "TRAVEL11",
           "TRAVEL12",
@@ -1609,33 +2124,42 @@
           "TRAVEL44",
           "TRAVEL45",
           "TRAVEL46" ],
-        "cells" : 
+        "header" : 
+        [ 
+          { "label" : 
+            { "value" : "",
+              "type" : "VTL|MD" } },
+          
+          { "label" : 
+            { "value" : "\"Brazil\"",
+              "type" : "VTL|MD" } },
+          
+          { "label" : 
+            { "value" : "\"Canada\"",
+              "type" : "VTL|MD" } },
+          
+          { "label" : 
+            { "value" : "\"Japan\"",
+              "type" : "VTL|MD" } },
+          
+          { "label" : 
+            { "value" : "\"France\"",
+              "type" : "VTL|MD" } },
+          
+          { "label" : 
+            { "value" : "\"Other country\"",
+              "type" : "VTL|MD" } },
+          
+          { "label" : 
+            { "value" : "\"Other planet\"",
+              "type" : "VTL|MD" } } ],
+        "body" : 
         [ 
           [ 
-            { "headerCell" : true,
-              "label" : "" },
-            
-            { "headerCell" : true,
-              "label" : "\"Brazil\"" },
-            
-            { "headerCell" : true,
-              "label" : "\"Canada\"" },
-            
-            { "headerCell" : true,
-              "label" : "\"Japan\"" },
-            
-            { "headerCell" : true,
-              "label" : "\"France\"" },
-            
-            { "headerCell" : true,
-              "label" : "\"Other country\"" },
-            
-            { "headerCell" : true,
-              "label" : "\"Other planet\"" } ],
-          
-          [ 
             { "value" : "1",
-              "label" : "\"Car\"" },
+              "label" : 
+              { "value" : "\"Car\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-kewvm4qg",
@@ -1681,7 +2205,9 @@
           
           [ 
             { "value" : "2",
-              "label" : "\"Bike\"" },
+              "label" : 
+              { "value" : "\"Bike\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-kewvebem",
@@ -1727,7 +2253,9 @@
           
           [ 
             { "value" : "3",
-              "label" : "\"Skateboard\"" },
+              "label" : 
+              { "value" : "\"Skateboard\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-kewv62xx",
@@ -1773,7 +2301,9 @@
           
           [ 
             { "value" : "4",
-              "label" : "\"Plane\"" },
+              "label" : 
+              { "value" : "\"Plane\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxBoolean",
               "id" : "j6p2lwuj-QOP-kewvjcck",
@@ -1820,32 +2350,42 @@
       { "id" : "j6qfx9qe",
         "componentType" : "Sequence",
         "page" : "28",
-        "label" : "\"V - Favourite characters (dynamic table)\"",
+        "label" : 
+        { "value" : "\"V - Favourite characters (dynamic table)\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6qfx9qe",
             "page" : "28",
-            "label" : "\"V - Favourite characters (dynamic table)\"" } } },
+            "label" : 
+            { "value" : "\"V - Favourite characters (dynamic table)\"",
+              "type" : "VTL|MD" } } } },
       
       { "id" : "j6qg8rc6",
         "componentType" : "Table",
         "mandatory" : false,
         "page" : "29",
         "positioning" : "HORIZONTAL",
-        "label" : "\"➡ 1. Please, complete the following grid with your favourite characters\"",
+        "label" : 
+        { "value" : "\"➡ 1. Please, complete the following grid with your favourite characters\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6qfx9qe",
             "page" : "28",
-            "label" : "\"V - Favourite characters (dynamic table)\"" } },
+            "label" : 
+            { "value" : "\"V - Favourite characters (dynamic table)\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "FAVOURITE_CHAR1",
           "FAVOURITE_CHAR2",
@@ -1881,20 +2421,27 @@
           "FAVOURITE_CHAR2_10_2",
           "FAVOURITE_CHAR3_10_3" ],
         "lines" : 
-        { "min" : 1,
-          "max" : 10 },
-        "cells" : 
+        { "min" : 
+          { "value" : "1",
+            "type" : "VTL|MD" },
+          "max" : 
+          { "value" : "10",
+            "type" : "VTL|MD" } },
+        "header" : 
         [ 
-          [ 
-            { "headerCell" : true,
-              "label" : "\"Name\"" },
-            
-            { "headerCell" : true,
-              "label" : "\"Age\"" },
-            
-            { "headerCell" : true,
-              "label" : "\"Member of the Simpsons family\"" } ],
+          { "label" : 
+            { "value" : "\"Name\"",
+              "type" : "VTL|MD" } },
           
+          { "label" : 
+            { "value" : "\"Age\"",
+              "type" : "VTL|MD" } },
+          
+          { "label" : 
+            { "value" : "\"Member of the Simpsons family\"",
+              "type" : "VTL|MD" } } ],
+        "body" : 
+        [ 
           [ 
             { "componentType" : "Textarea",
               "maxLength" : 255,
@@ -1917,13 +2464,19 @@
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "FAVOURITE_CHAR3_1_3" },
               "bindingDependencies" : 
@@ -1951,13 +2504,19 @@
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "FAVOURITE_CHAR3_2_3" },
               "bindingDependencies" : 
@@ -1985,13 +2544,19 @@
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "FAVOURITE_CHAR3_3_3" },
               "bindingDependencies" : 
@@ -2019,13 +2584,19 @@
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "FAVOURITE_CHAR3_4_3" },
               "bindingDependencies" : 
@@ -2053,13 +2624,19 @@
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "FAVOURITE_CHAR3_5_3" },
               "bindingDependencies" : 
@@ -2087,13 +2664,19 @@
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "FAVOURITE_CHAR3_6_3" },
               "bindingDependencies" : 
@@ -2121,13 +2704,19 @@
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "FAVOURITE_CHAR3_7_3" },
               "bindingDependencies" : 
@@ -2155,13 +2744,19 @@
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "FAVOURITE_CHAR3_8_3" },
               "bindingDependencies" : 
@@ -2189,13 +2784,19 @@
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "FAVOURITE_CHAR3_9_3" },
               "bindingDependencies" : 
@@ -2223,13 +2824,19 @@
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Yes\"" },
+                  "label" : 
+                  { "value" : "\"Yes\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"No\"" },
+                  "label" : 
+                  { "value" : "\"No\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Other\"" } ],
+                  "label" : 
+                  { "value" : "\"Other\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "FAVOURITE_CHAR3_10_3" },
               "bindingDependencies" : 
@@ -2240,39 +2847,52 @@
         "mandatory" : false,
         "page" : "30",
         "positioning" : "HORIZONTAL",
-        "label" : "\"➡ 2. How has your feeling about the following characters evolved over time?\"",
+        "label" : 
+        { "value" : "\"➡ 2. How has your feeling about the following characters evolved over time?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6qfx9qe",
             "page" : "28",
-            "label" : "\"V - Favourite characters (dynamic table)\"" } },
+            "label" : 
+            { "value" : "\"V - Favourite characters (dynamic table)\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "FEELCHAREV1",
           "FEELCHAREV2",
           "FEELCHAREV3",
           "FEELCHAREV4" ],
-        "cells" : 
+        "body" : 
         [ 
           [ 
             { "value" : "1",
-              "label" : "\"Jay\"" },
+              "label" : 
+              { "value" : "\"Jay\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "jvxux0mi-QOP-kiq76emy",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Up\"" },
+                  "label" : 
+                  { "value" : "\"Up\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Down\"" },
+                  "label" : 
+                  { "value" : "\"Down\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Steady\"" } ],
+                  "label" : 
+                  { "value" : "\"Steady\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "FEELCHAREV1" },
               "bindingDependencies" : 
@@ -2280,20 +2900,28 @@
           
           [ 
             { "value" : "2",
-              "label" : "\"Bart\"" },
+              "label" : 
+              { "value" : "\"Bart\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "jvxux0mi-QOP-kiq6zv60",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Up\"" },
+                  "label" : 
+                  { "value" : "\"Up\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Down\"" },
+                  "label" : 
+                  { "value" : "\"Down\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Steady\"" } ],
+                  "label" : 
+                  { "value" : "\"Steady\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "FEELCHAREV2" },
               "bindingDependencies" : 
@@ -2301,20 +2929,28 @@
           
           [ 
             { "value" : "3",
-              "label" : "\"Krusty the clown\"" },
+              "label" : 
+              { "value" : "\"Krusty the clown\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "jvxux0mi-QOP-kiq7bgk3",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Up\"" },
+                  "label" : 
+                  { "value" : "\"Up\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Down\"" },
+                  "label" : 
+                  { "value" : "\"Down\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Steady\"" } ],
+                  "label" : 
+                  { "value" : "\"Steady\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "FEELCHAREV3" },
               "bindingDependencies" : 
@@ -2322,20 +2958,28 @@
           
           [ 
             { "value" : "O",
-              "label" : "\"Other\"" },
+              "label" : 
+              { "value" : "\"Other\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "CheckboxOne",
               "id" : "jvxux0mi-QOP-kiq6ync3",
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Up\"" },
+                  "label" : 
+                  { "value" : "\"Up\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Down\"" },
+                  "label" : 
+                  { "value" : "\"Down\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "3",
-                  "label" : "\"Steady\"" } ],
+                  "label" : 
+                  { "value" : "\"Steady\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "FEELCHAREV4" },
               "bindingDependencies" : 
@@ -2346,16 +2990,21 @@
         "mandatory" : false,
         "page" : "31",
         "positioning" : "HORIZONTAL",
-        "label" : "\"➡ 3. Can you tell how long Bart Simpson has been on leave for each type and whether there has been another type?\"",
+        "label" : 
+        { "value" : "\"➡ 3. Can you tell how long Bart Simpson has been on leave for each type and whether there has been another type?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6qfx9qe",
             "page" : "28",
-            "label" : "\"V - Favourite characters (dynamic table)\"" } },
+            "label" : 
+            { "value" : "\"V - Favourite characters (dynamic table)\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "LEAVDURATION11",
           "LEAVDURATION12",
@@ -2367,21 +3016,26 @@
           "LEAVDURATION42",
           "LEAVDURATION51",
           "LEAVDURATION52" ],
-        "cells" : 
+        "header" : 
+        [ 
+          { "label" : 
+            { "value" : "",
+              "type" : "VTL|MD" } },
+          
+          { "label" : 
+            { "value" : "\"Days\"",
+              "type" : "VTL|MD" } },
+          
+          { "label" : 
+            { "value" : "\"Unit\"",
+              "type" : "VTL|MD" } } ],
+        "body" : 
         [ 
           [ 
-            { "headerCell" : true,
-              "label" : "" },
-            
-            { "headerCell" : true,
-              "label" : "\"Days\"" },
-            
-            { "headerCell" : true,
-              "label" : "\"Unit\"" } ],
-          
-          [ 
             { "value" : "1",
-              "label" : "\"Leave with pay\"" },
+              "label" : 
+              { "value" : "\"Leave with pay\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -2398,10 +3052,14 @@
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Working Days\"" },
+                  "label" : 
+                  { "value" : "\"Working Days\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Calendar days\"" } ],
+                  "label" : 
+                  { "value" : "\"Calendar days\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "LEAVDURATION12" },
               "bindingDependencies" : 
@@ -2409,7 +3067,9 @@
           
           [ 
             { "value" : "2",
-              "label" : "\"Public holiday\"" },
+              "label" : 
+              { "value" : "\"Public holiday\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -2426,10 +3086,14 @@
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Working Days\"" },
+                  "label" : 
+                  { "value" : "\"Working Days\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Calendar days\"" } ],
+                  "label" : 
+                  { "value" : "\"Calendar days\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "LEAVDURATION22" },
               "bindingDependencies" : 
@@ -2437,7 +3101,9 @@
           
           [ 
             { "value" : "3",
-              "label" : "\"Sick leave\"" },
+              "label" : 
+              { "value" : "\"Sick leave\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -2454,10 +3120,14 @@
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Working Days\"" },
+                  "label" : 
+                  { "value" : "\"Working Days\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Calendar days\"" } ],
+                  "label" : 
+                  { "value" : "\"Calendar days\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "LEAVDURATION32" },
               "bindingDependencies" : 
@@ -2465,7 +3135,9 @@
           
           [ 
             { "value" : "4",
-              "label" : "\"Maternity\/paternity leave\"" },
+              "label" : 
+              { "value" : "\"Maternity\/paternity leave\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -2482,10 +3154,14 @@
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Working Days\"" },
+                  "label" : 
+                  { "value" : "\"Working Days\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Calendar days\"" } ],
+                  "label" : 
+                  { "value" : "\"Calendar days\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "LEAVDURATION42" },
               "bindingDependencies" : 
@@ -2493,7 +3169,9 @@
           
           [ 
             { "value" : "5",
-              "label" : "\"Other type\"" },
+              "label" : 
+              { "value" : "\"Other type\"",
+                "type" : "VTL|MD" } },
             
             { "componentType" : "InputNumber",
               "min" : 0,
@@ -2510,10 +3188,14 @@
               "options" : 
               [ 
                 { "value" : "1",
-                  "label" : "\"Working Days\"" },
+                  "label" : 
+                  { "value" : "\"Working Days\"",
+                    "type" : "VTL|MD" } },
                 
                 { "value" : "2",
-                  "label" : "\"Calendar days\"" } ],
+                  "label" : 
+                  { "value" : "\"Calendar days\"",
+                    "type" : "VTL|MD" } } ],
               "response" : 
               { "name" : "LEAVDURATION52" },
               "bindingDependencies" : 
@@ -2522,16 +3204,21 @@
       { "id" : "kiq5mr0b",
         "componentType" : "Sequence",
         "page" : "32",
-        "label" : "\"VI - Favourite characters (Loop)\"",
+        "label" : 
+        { "value" : "\"VI - Favourite characters (Loop)\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "kiq5mr0b",
             "page" : "32",
-            "label" : "\"VI - Favourite characters (Loop)\"" } } },
+            "label" : 
+            { "value" : "\"VI - Favourite characters (Loop)\"",
+              "type" : "VTL|MD" } } } },
       
       { "id" : "kiq612ky",
         "componentType" : "InputNumber",
@@ -2540,16 +3227,21 @@
         "min" : 0,
         "max" : 20,
         "decimals" : 0,
-        "label" : "\"➡ 1. How many characters from the Simpsons family could you precisely describe?\"",
+        "label" : 
+        { "value" : "\"➡ 1. How many characters from the Simpsons family could you precisely describe?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "kiq5mr0b",
             "page" : "32",
-            "label" : "\"VI - Favourite characters (Loop)\"" } },
+            "label" : 
+            { "value" : "\"VI - Favourite characters (Loop)\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "NB_CHAR" ],
         "response" : 
@@ -2559,16 +3251,21 @@
         "componentType" : "Loop",
         "page" : "34",
         "paginatedLoop" : false,
-        "label" : "\"Add a character\"",
+        "label" : 
+        { "value" : "\"Add a character\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "kiq5mr0b",
             "page" : "32",
-            "label" : "\"VI - Favourite characters (Loop)\"" } },
+            "label" : 
+            { "value" : "\"VI - Favourite characters (Loop)\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "NAME_CHAR",
           "AGE_CHAR" ],
@@ -2578,40 +3275,54 @@
             "componentType" : "Subsequence",
             "page" : "34",
             "goToPage" : "34",
-            "label" : "\"Description of each character\"",
+            "label" : 
+            { "value" : "\"Description of each character\"",
+              "type" : "VTL|MD" },
             "conditionFilter" : 
             { "value" : "(not(cast(READY,integer)  <>  1))",
+              "type" : "VTL|MD",
               "bindingDependencies" : 
               [ "READY" ] },
             "hierarchy" : 
             { "sequence" : 
               { "id" : "kiq5mr0b",
                 "page" : "32",
-                "label" : "\"VI - Favourite characters (Loop)\"" },
+                "label" : 
+                { "value" : "\"VI - Favourite characters (Loop)\"",
+                  "type" : "VTL|MD" } },
               "subSequence" : 
               { "id" : "kiq5u8d5",
                 "page" : "34",
-                "label" : "\"Description of each character\"" } } },
+                "label" : 
+                { "value" : "\"Description of each character\"",
+                  "type" : "VTL|MD" } } } },
           
           { "id" : "kiq66gtw",
             "componentType" : "Input",
             "mandatory" : false,
             "page" : "34",
             "maxLength" : 30,
-            "label" : "\"➡ 2. What is the first name of this character?\"",
+            "label" : 
+            { "value" : "\"➡ 2. What is the first name of this character?\"",
+              "type" : "VTL|MD" },
             "conditionFilter" : 
             { "value" : "(not(cast(READY,integer)  <>  1))",
+              "type" : "VTL|MD",
               "bindingDependencies" : 
               [ "READY" ] },
             "hierarchy" : 
             { "sequence" : 
               { "id" : "kiq5mr0b",
                 "page" : "32",
-                "label" : "\"VI - Favourite characters (Loop)\"" },
+                "label" : 
+                { "value" : "\"VI - Favourite characters (Loop)\"",
+                  "type" : "VTL|MD" } },
               "subSequence" : 
               { "id" : "kiq5u8d5",
                 "page" : "34",
-                "label" : "\"Description of each character\"" } },
+                "label" : 
+                { "value" : "\"Description of each character\"",
+                  "type" : "VTL|MD" } } },
             "bindingDependencies" : 
             [ "NAME_CHAR" ],
             "response" : 
@@ -2624,20 +3335,27 @@
             "min" : 0,
             "max" : 120,
             "decimals" : 0,
-            "label" : "\"➡ 3. How old is this character in the first episode of the Simpsons family?\"",
+            "label" : 
+            { "value" : "\"➡ 3. How old is this character in the first episode of the Simpsons family?\"",
+              "type" : "VTL|MD" },
             "conditionFilter" : 
             { "value" : "(not(cast(READY,integer)  <>  1))",
+              "type" : "VTL|MD",
               "bindingDependencies" : 
               [ "READY" ] },
             "hierarchy" : 
             { "sequence" : 
               { "id" : "kiq5mr0b",
                 "page" : "32",
-                "label" : "\"VI - Favourite characters (Loop)\"" },
+                "label" : 
+                { "value" : "\"VI - Favourite characters (Loop)\"",
+                  "type" : "VTL|MD" } },
               "subSequence" : 
               { "id" : "kiq5u8d5",
                 "page" : "34",
-                "label" : "\"Description of each character\"" } },
+                "label" : 
+                { "value" : "\"Description of each character\"",
+                  "type" : "VTL|MD" } } },
             "bindingDependencies" : 
             [ "AGE_CHAR" ],
             "response" : 
@@ -2647,11 +3365,11 @@
         "componentType" : "Loop",
         "page" : "35",
         "maxPage" : "3",
-        "iterations" : "count(NAME_CHAR)",
         "depth" : 1,
         "paginatedLoop" : true,
         "conditionFilter" : 
         { "value" : "(not(cast(READY,integer)  <>  1))",
+          "type" : "VTL|MD",
           "bindingDependencies" : 
           [ "READY" ] },
         "bindingDependencies" : 
@@ -2666,16 +3384,21 @@
           { "id" : "kiq5xw5p",
             "componentType" : "Sequence",
             "page" : "35.1",
-            "label" : "\"VII - Other details about character named \" || cast(cast(NAME_CHAR,string),string) || \" \"",
+            "label" : 
+            { "value" : "\"VII - Other details about character named \" || cast(cast(NAME_CHAR,string),string) || \" \"",
+              "type" : "VTL|MD" },
             "conditionFilter" : 
             { "value" : "(not(cast(READY,integer)  <>  1))",
+              "type" : "VTL|MD",
               "bindingDependencies" : 
               [ "READY" ] },
             "hierarchy" : 
             { "sequence" : 
               { "id" : "kiq5xw5p",
                 "page" : "35.1",
-                "label" : "\"VII - Other details about character named \" || cast(cast(NAME_CHAR,string),string) || \" \"" } },
+                "label" : 
+                { "value" : "\"VII - Other details about character named \" || cast(cast(NAME_CHAR,string),string) || \" \"",
+                  "type" : "VTL|MD" } } },
             "bindingDependencies" : 
             [ "NAME_CHAR" ] },
           
@@ -2683,26 +3406,35 @@
             "componentType" : "CheckboxOne",
             "mandatory" : false,
             "page" : "35.2",
-            "label" : "\"➡ 1. Is character named \" || cast(cast(NAME_CHAR,string),string) || \" your favourite one ? \"",
+            "label" : 
+            { "value" : "\"➡ 1. Is character named \" || cast(cast(NAME_CHAR,string),string) || \" your favourite one ? \"",
+              "type" : "VTL|MD" },
             "conditionFilter" : 
             { "value" : "(not(cast(READY,integer)  <>  1))",
+              "type" : "VTL|MD",
               "bindingDependencies" : 
               [ "READY" ] },
             "hierarchy" : 
             { "sequence" : 
               { "id" : "kiq5xw5p",
                 "page" : "35.1",
-                "label" : "\"VII - Other details about character named \" || cast(cast(NAME_CHAR,string),string) || \" \"" } },
+                "label" : 
+                { "value" : "\"VII - Other details about character named \" || cast(cast(NAME_CHAR,string),string) || \" \"",
+                  "type" : "VTL|MD" } } },
             "bindingDependencies" : 
             [ "NAME_CHAR",
               "FAVCHAR" ],
             "options" : 
             [ 
               { "value" : "1",
-                "label" : "\"Yes\"" },
+                "label" : 
+                { "value" : "\"Yes\"",
+                  "type" : "VTL|MD" } },
               
               { "value" : "0",
-                "label" : "\"No\"" } ],
+                "label" : 
+                { "value" : "\"No\"",
+                  "type" : "VTL|MD" } } ],
             "response" : 
             { "name" : "FAVCHAR" } },
           
@@ -2711,47 +3443,65 @@
             "mandatory" : false,
             "page" : "35.3",
             "maxLength" : 255,
-            "label" : "\"➡ 2. What is your best memory about character named \" || cast(cast(NAME_CHAR,string),string) || \" ? \"",
+            "label" : 
+            { "value" : "\"➡ 2. What is your best memory about character named \" || cast(cast(NAME_CHAR,string),string) || \" ? \"",
+              "type" : "VTL|MD" },
             "conditionFilter" : 
             { "value" : "(not(cast(READY,integer)  <>  1))",
+              "type" : "VTL|MD",
               "bindingDependencies" : 
               [ "READY" ] },
             "hierarchy" : 
             { "sequence" : 
               { "id" : "kiq5xw5p",
                 "page" : "35.1",
-                "label" : "\"VII - Other details about character named \" || cast(cast(NAME_CHAR,string),string) || \" \"" } },
+                "label" : 
+                { "value" : "\"VII - Other details about character named \" || cast(cast(NAME_CHAR,string),string) || \" \"",
+                  "type" : "VTL|MD" } } },
             "bindingDependencies" : 
             [ "NAME_CHAR",
               "MEMORY_CHAR" ],
             "response" : 
-            { "name" : "MEMORY_CHAR" } } ] },
+            { "name" : "MEMORY_CHAR" } } ],
+        "iterations" : 
+        { "value" : "count(NAME_CHAR)",
+          "type" : "VTL|MD" } },
       
       { "id" : "j6z12s2d",
         "componentType" : "Sequence",
         "page" : "36",
-        "label" : "\"VIII - Comment\"",
+        "label" : 
+        { "value" : "\"VIII - Comment\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
-        { "value" : "true" },
+        { "value" : "true",
+          "type" : "VTL|MD" },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6z12s2d",
             "page" : "36",
-            "label" : "\"VIII - Comment\"" } } },
+            "label" : 
+            { "value" : "\"VIII - Comment\"",
+              "type" : "VTL|MD" } } } },
       
       { "id" : "j6z0z3us",
         "componentType" : "Textarea",
         "mandatory" : false,
         "page" : "37",
         "maxLength" : 255,
-        "label" : "\"➡ 1. Do you have any comment about the survey?\"",
+        "label" : 
+        { "value" : "\"➡ 1. Do you have any comment about the survey?\"",
+          "type" : "VTL|MD" },
         "conditionFilter" : 
-        { "value" : "true" },
+        { "value" : "true",
+          "type" : "VTL|MD" },
         "hierarchy" : 
         { "sequence" : 
           { "id" : "j6z12s2d",
             "page" : "36",
-            "label" : "\"VIII - Comment\"" } },
+            "label" : 
+            { "value" : "\"VIII - Comment\"",
+              "type" : "VTL|MD" } } },
         "bindingDependencies" : 
         [ "SURVEY_COMMENT" ],
         "response" : 
