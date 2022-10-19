@@ -6,23 +6,36 @@
                enoCoreVersion="2.2.8"
                pagination="question"
                maxPage="37">
-   <label>Questionnaire SIMPSONS 20201215</label>
+   <label>
+      <value>Questionnaire SIMPSONS 20201215</value>
+      <type>VTL|MD</type>
+   </label>
    <components xsi:type="Sequence"
                componentType="Sequence"
                id="j6p0ti5h"
                page="1">
-      <label>"I - Introduction"</label>
+      <label>
+         <value>"I - Introduction"</value>
+         <type>VTL|MD</type>
+      </label>
       <declarations declarationType="COMMENT"
                     id="j6p0ti5h-d1"
                     position="AFTER_QUESTION_TEXT">
-         <label>"We’re going to test your knowledge about the simpsons series.Welcome in the simpsons world!"</label>
+         <label>
+            <value>"We’re going to test your knowledge about the simpsons series.Welcome in the simpsons world!"</value>
+            <type>VTL|MD</type>
+         </label>
       </declarations>
       <conditionFilter>
          <value>true</value>
+         <type>VTL|MD</type>
       </conditionFilter>
       <hierarchy>
          <sequence id="j6p0ti5h" page="1">
-            <label>"I - Introduction"</label>
+            <label>
+               <value>"I - Introduction"</value>
+               <type>VTL|MD</type>
+            </label>
          </sequence>
       </hierarchy>
       <components xsi:type="Textarea"
@@ -31,13 +44,20 @@
                   maxLength="500"
                   mandatory="true"
                   page="2">
-         <label>"➡ 1. Before starting, do you have any comments about the Simpsons family?"</label>
+         <label>
+            <value>"➡ 1. Before starting, do you have any comments about the Simpsons family?"</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>true</value>
+            <type>VTL|MD</type>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6p0ti5h" page="1">
-               <label>"I - Introduction"</label>
+               <label>
+                  <value>"I - Introduction"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>COMMENT</bindingDependencies>
@@ -48,18 +68,28 @@
                   id="j6p0np9q"
                   mandatory="false"
                   page="3">
-         <label>"➡ 2. If you agree to answer this questionnaire, please check the box"</label>
+         <label>
+            <value>"➡ 2. If you agree to answer this questionnaire, please check the box"</value>
+            <type>VTL|MD</type>
+         </label>
          <declarations declarationType="COMMENT"
                        id="j6p0np9q-kir6xl1e"
                        position="AFTER_QUESTION_TEXT">
-            <label>"If not, this is unfortunately the end of this questionnaire."</label>
+            <label>
+               <value>"If not, this is unfortunately the end of this questionnaire."</value>
+               <type>VTL|MD</type>
+            </label>
          </declarations>
          <conditionFilter>
             <value>true</value>
+            <type>VTL|MD</type>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6p0ti5h" page="1">
-               <label>"I - Introduction"</label>
+               <label>
+                  <value>"I - Introduction"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>READY</bindingDependencies>
@@ -70,13 +100,20 @@
                   id="j6p6my1d"
                   filterDescription="false"
                   page="3">
-         <label>"If you are not ready, please go to the end of the questionnaire"</label>
+         <label>
+            <value>"If you are not ready, please go to the end of the questionnaire"</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>true</value>
+            <type>VTL|MD</type>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6p0ti5h" page="1">
-               <label>"I - Introduction"</label>
+               <label>
+                  <value>"I - Introduction"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
       </components>
@@ -84,17 +121,27 @@
                   componentType="Subsequence"
                   id="j6p0s7o5"
                   goToPage="4">
-         <label>"General knowledge of the series"</label>
+         <label>
+            <value>"General knowledge of the series"</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6p0ti5h" page="1">
-               <label>"I - Introduction"</label>
+               <label>
+                  <value>"I - Introduction"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
             <subSequence id="j6p0s7o5" page="4">
-               <label>"General knowledge of the series"</label>
+               <label>
+                  <value>"General knowledge of the series"</value>
+                  <type>VTL|MD</type>
+               </label>
             </subSequence>
          </hierarchy>
          <components xsi:type="Input"
@@ -103,17 +150,27 @@
                      maxLength="30"
                      mandatory="false"
                      page="4">
-            <label>"➡ 3. Who is the producer?"</label>
+            <label>
+               <value>"➡ 3. Who is the producer?"</value>
+               <type>VTL|MD</type>
+            </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="j6p0ti5h" page="1">
-                  <label>"I - Introduction"</label>
+                  <label>
+                     <value>"I - Introduction"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
                <subSequence id="j6p0s7o5" page="4">
-                  <label>"General knowledge of the series"</label>
+                  <label>
+                     <value>"General knowledge of the series"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </subSequence>
             </hierarchy>
             <bindingDependencies>PRODUCER</bindingDependencies>
@@ -127,17 +184,27 @@
                      max="99"
                      decimals="0"
                      page="5">
-            <label>"➡ 4. What is the current season number?"</label>
+            <label>
+               <value>"➡ 4. What is the current season number?"</value>
+               <type>VTL|MD</type>
+            </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="j6p0ti5h" page="1">
-                  <label>"I - Introduction"</label>
+                  <label>
+                     <value>"I - Introduction"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
                <subSequence id="j6p0s7o5" page="4">
-                  <label>"General knowledge of the series"</label>
+                  <label>
+                     <value>"General knowledge of the series"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </subSequence>
             </hierarchy>
             <bindingDependencies>SEASON_NUMBER</bindingDependencies>
@@ -150,22 +217,35 @@
                      min="1900-01-01"
                      max="format-date(current-date(),'[Y0001]-[M01]-[D01]')"
                      page="6">
-            <label>"➡ 5. When was the first episode of Simpsons? (format YYYY-MM-DD)"</label>
+            <label>
+               <value>"➡ 5. When was the first episode of Simpsons? (format YYYY-MM-DD)"</value>
+               <type>VTL|MD</type>
+            </label>
             <declarations declarationType="INSTRUCTION"
                           id="kiq71eoi-kiq7dsy2"
                           position="AFTER_QUESTION_TEXT">
-               <label>"Please answer with YYYY-MM-DD format"</label>
+               <label>
+                  <value>"Please answer with YYYY-MM-DD format"</value>
+                  <type>VTL|MD</type>
+               </label>
             </declarations>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="j6p0ti5h" page="1">
-                  <label>"I - Introduction"</label>
+                  <label>
+                     <value>"I - Introduction"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
                <subSequence id="j6p0s7o5" page="4">
-                  <label>"General knowledge of the series"</label>
+                  <label>
+                     <value>"General knowledge of the series"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </subSequence>
             </hierarchy>
             <bindingDependencies>DATEFIRST</bindingDependencies>
@@ -178,22 +258,35 @@
                      mandatory="false"
                      min="1980-05"
                      page="7">
-            <label>"➡ 6. When was the first episode of the Simpsons? (format YYYY-MM)"</label>
+            <label>
+               <value>"➡ 6. When was the first episode of the Simpsons? (format YYYY-MM)"</value>
+               <type>VTL|MD</type>
+            </label>
             <declarations declarationType="COMMENT"
                           id="k5nvty2o-k5nvxld8"
                           position="AFTER_QUESTION_TEXT">
-               <label>"Please answer with YYYY-MM format"</label>
+               <label>
+                  <value>"Please answer with YYYY-MM format"</value>
+                  <type>VTL|MD</type>
+               </label>
             </declarations>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="j6p0ti5h" page="1">
-                  <label>"I - Introduction"</label>
+                  <label>
+                     <value>"I - Introduction"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
                <subSequence id="j6p0s7o5" page="4">
-                  <label>"General knowledge of the series"</label>
+                  <label>
+                     <value>"General knowledge of the series"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </subSequence>
             </hierarchy>
             <bindingDependencies>DATEYYYYMM</bindingDependencies>
@@ -207,22 +300,35 @@
                      min="1900"
                      max="year-from-date(current-date())"
                      page="8">
-            <label>"➡ 7. When was the first episode of the Simpsons? (format YYYY)"</label>
+            <label>
+               <value>"➡ 7. When was the first episode of the Simpsons? (format YYYY)"</value>
+               <type>VTL|MD</type>
+            </label>
             <declarations declarationType="COMMENT"
                           id="k5nw1fir-k5nvmx3n"
                           position="AFTER_QUESTION_TEXT">
-               <label>"Please answer with YYYY format"</label>
+               <label>
+                  <value>"Please answer with YYYY format"</value>
+                  <type>VTL|MD</type>
+               </label>
             </declarations>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="j6p0ti5h" page="1">
-                  <label>"I - Introduction"</label>
+                  <label>
+                     <value>"I - Introduction"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
                <subSequence id="j6p0s7o5" page="4">
-                  <label>"General knowledge of the series"</label>
+                  <label>
+                     <value>"General knowledge of the series"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </subSequence>
             </hierarchy>
             <bindingDependencies>DATEYYYY</bindingDependencies>
@@ -237,17 +343,27 @@
                      max="70.00"
                      decimals="2"
                      page="9">
-            <label>"➡ 8. How long does an episode last?"</label>
+            <label>
+               <value>"➡ 8. How long does an episode last?"</value>
+               <type>VTL|MD</type>
+            </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="j6p0ti5h" page="1">
-                  <label>"I - Introduction"</label>
+                  <label>
+                     <value>"I - Introduction"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
                <subSequence id="j6p0s7o5" page="4">
-                  <label>"General knowledge of the series"</label>
+                  <label>
+                     <value>"General knowledge of the series"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </subSequence>
             </hierarchy>
             <bindingDependencies>DURATIONH</bindingDependencies>
@@ -262,17 +378,27 @@
                      max="366.0"
                      decimals="1"
                      page="10">
-            <label>"➡ 9. How long does it take to write a new episode?"</label>
+            <label>
+               <value>"➡ 9. How long does it take to write a new episode?"</value>
+               <type>VTL|MD</type>
+            </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="j6p0ti5h" page="1">
-                  <label>"I - Introduction"</label>
+                  <label>
+                     <value>"I - Introduction"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
                <subSequence id="j6p0s7o5" page="4">
-                  <label>"General knowledge of the series"</label>
+                  <label>
+                     <value>"General knowledge of the series"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </subSequence>
             </hierarchy>
             <bindingDependencies>DURATIOND</bindingDependencies>
@@ -287,17 +413,27 @@
                      max="12"
                      decimals="0"
                      page="11">
-            <label>"➡ 10. How long will it take you to watch all the existing episodes?"</label>
+            <label>
+               <value>"➡ 10. How long will it take you to watch all the existing episodes?"</value>
+               <type>VTL|MD</type>
+            </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="j6p0ti5h" page="1">
-                  <label>"I - Introduction"</label>
+                  <label>
+                     <value>"I - Introduction"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
                <subSequence id="j6p0s7o5" page="4">
-                  <label>"General knowledge of the series"</label>
+                  <label>
+                     <value>"General knowledge of the series"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </subSequence>
             </hierarchy>
             <bindingDependencies>DURATIONM</bindingDependencies>
@@ -312,17 +448,27 @@
                      max="100"
                      decimals="0"
                      page="12">
-            <label>"➡ 11. For how long have you known the Simpsons family?"</label>
+            <label>
+               <value>"➡ 11. For how long have you known the Simpsons family?"</value>
+               <type>VTL|MD</type>
+            </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="j6p0ti5h" page="1">
-                  <label>"I - Introduction"</label>
+                  <label>
+                     <value>"I - Introduction"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
                <subSequence id="j6p0s7o5" page="4">
-                  <label>"General knowledge of the series"</label>
+                  <label>
+                     <value>"General knowledge of the series"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </subSequence>
             </hierarchy>
             <bindingDependencies>DURATIONY</bindingDependencies>
@@ -337,17 +483,27 @@
                      max="99.0"
                      decimals="1"
                      page="13">
-            <label>"➡ 15. In your opinion, how much is the part of audience share in US for the 2016 season?"</label>
+            <label>
+               <value>"➡ 15. In your opinion, how much is the part of audience share in US for the 2016 season?"</value>
+               <type>VTL|MD</type>
+            </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="j6p0ti5h" page="1">
-                  <label>"I - Introduction"</label>
+                  <label>
+                     <value>"I - Introduction"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
                <subSequence id="j6p0s7o5" page="4">
-                  <label>"General knowledge of the series"</label>
+                  <label>
+                     <value>"General knowledge of the series"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </subSequence>
             </hierarchy>
             <bindingDependencies>AUDIENCE_SHARE</bindingDependencies>
@@ -360,19 +516,29 @@
                componentType="Sequence"
                id="j3341528"
                page="14">
-      <label>"II - Simpsons’ city"</label>
+      <label>
+         <value>"II - Simpsons’ city"</value>
+         <type>VTL|MD</type>
+      </label>
       <declarations declarationType="COMMENT"
                     id="j3341528-d2"
                     position="AFTER_QUESTION_TEXT">
-         <label>"This module asks about your general knowledge of the Simpsons city"</label>
+         <label>
+            <value>"This module asks about your general knowledge of the Simpsons city"</value>
+            <type>VTL|MD</type>
+         </label>
       </declarations>
       <conditionFilter>
          <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+         <type>VTL|MD</type>
          <bindingDependencies>READY</bindingDependencies>
       </conditionFilter>
       <hierarchy>
          <sequence id="j3341528" page="14">
-            <label>"II - Simpsons’ city"</label>
+            <label>
+               <value>"II - Simpsons’ city"</value>
+               <type>VTL|MD</type>
+            </label>
          </sequence>
       </hierarchy>
       <components xsi:type="Radio"
@@ -380,33 +546,52 @@
                   id="j3343clt"
                   mandatory="true"
                   page="15">
-         <label>"➡ 1. In which city do the Simpsons reside?"</label>
+         <label>
+            <value>"➡ 1. In which city do the Simpsons reside?"</value>
+            <type>VTL|MD</type>
+         </label>
          <declarations declarationType="INSTRUCTION"
                        id="j3343clt-d3"
                        position="AFTER_QUESTION_TEXT">
-            <label>"One possible answer"</label>
+            <label>
+               <value>"One possible answer"</value>
+               <type>VTL|MD</type>
+            </label>
          </declarations>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="j3341528" page="14">
-               <label>"II - Simpsons’ city"</label>
+               <label>
+                  <value>"II - Simpsons’ city"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>CITY</bindingDependencies>
          <options>
             <value>00001</value>
-            <label>"Springfield"</label>
+            <label>
+               <value>"Springfield"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>00002</value>
-            <label>"Shelbyville"</label>
+            <label>
+               <value>"Shelbyville"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>03</value>
-            <label>"Seinfeld"</label>
+            <label>
+               <value>"Seinfeld"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <response name="CITY"/>
       </components>
@@ -415,37 +600,59 @@
                   id="j6qdfhvw"
                   mandatory="false"
                   page="16">
-         <label>"➡ 2. Who is the Simpsons city mayor?"</label>
+         <label>
+            <value>"➡ 2. Who is the Simpsons city mayor?"</value>
+            <type>VTL|MD</type>
+         </label>
          <declarations declarationType="INSTRUCTION"
                        id="j6qdfhvw-d4"
                        position="AFTER_QUESTION_TEXT">
-            <label>"Only one possible answer"</label>
+            <label>
+               <value>"Only one possible answer"</value>
+               <type>VTL|MD</type>
+            </label>
          </declarations>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="j3341528" page="14">
-               <label>"II - Simpsons’ city"</label>
+               <label>
+                  <value>"II - Simpsons’ city"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>MAYOR</bindingDependencies>
          <options>
             <value>1</value>
-            <label>"Constance Harm"</label>
+            <label>
+               <value>"Constance Harm"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>2</value>
-            <label>"Timothy Lovejoy"</label>
+            <label>
+               <value>"Timothy Lovejoy"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>3</value>
-            <label>"Joe Quimby"</label>
+            <label>
+               <value>"Joe Quimby"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>OT</value>
-            <label>"Other name"</label>
+            <label>
+               <value>"Other name"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <response name="MAYOR"/>
       </components>
@@ -454,68 +661,114 @@
                   id="j4nw5cqz"
                   mandatory="false"
                   page="17">
-         <label>"➡ 3. In which state do The Simpsons reside?"</label>
+         <label>
+            <value>"➡ 3. In which state do The Simpsons reside?"</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="j3341528" page="14">
-               <label>"II - Simpsons’ city"</label>
+               <label>
+                  <value>"II - Simpsons’ city"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>STATE</bindingDependencies>
          <options>
             <value>1</value>
-            <label>"Washington"</label>
+            <label>
+               <value>"Washington"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>2</value>
-            <label>"Kentucky"</label>
+            <label>
+               <value>"Kentucky"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>3</value>
-            <label>"Ohio"</label>
+            <label>
+               <value>"Ohio"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>4</value>
-            <label>"Maine"</label>
+            <label>
+               <value>"Maine"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>5</value>
-            <label>"North Dakota"</label>
+            <label>
+               <value>"North Dakota"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>6</value>
-            <label>"Florida"</label>
+            <label>
+               <value>"Florida"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>7</value>
-            <label>"North Takoma"</label>
+            <label>
+               <value>"North Takoma"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>8</value>
-            <label>"California"</label>
+            <label>
+               <value>"California"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>9</value>
-            <label>"Texas"</label>
+            <label>
+               <value>"Texas"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>10</value>
-            <label>"Massachusetts"</label>
+            <label>
+               <value>"Massachusetts"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>11</value>
-            <label>"Nevada"</label>
+            <label>
+               <value>"Nevada"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>12</value>
-            <label>"Illinois"</label>
+            <label>
+               <value>"Illinois"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <options>
             <value>13</value>
-            <label>"Not in any state, you fool!"</label>
+            <label>
+               <value>"Not in any state, you fool!"</value>
+               <type>VTL|MD</type>
+            </label>
          </options>
          <response name="STATE"/>
       </components>
@@ -524,33 +777,50 @@
                componentType="Sequence"
                id="j6qe0h9q"
                page="18">
-      <label>"III - Characters"</label>
+      <label>
+         <value>"III - Characters"</value>
+         <type>VTL|MD</type>
+      </label>
       <conditionFilter>
          <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+         <type>VTL|MD</type>
          <bindingDependencies>READY</bindingDependencies>
       </conditionFilter>
       <hierarchy>
          <sequence id="j6qe0h9q" page="18">
-            <label>"III - Characters"</label>
+            <label>
+               <value>"III - Characters"</value>
+               <type>VTL|MD</type>
+            </label>
          </sequence>
       </hierarchy>
       <components xsi:type="CheckboxGroup"
                   componentType="CheckboxGroup"
                   id="j334akov"
                   page="19">
-         <label>"➡ 1. What are the pet names that the Simpsons family had?"</label>
+         <label>
+            <value>"➡ 1. What are the pet names that the Simpsons family had?"</value>
+            <type>VTL|MD</type>
+         </label>
          <declarations declarationType="INSTRUCTION"
                        id="j334akov-d5"
                        position="AFTER_QUESTION_TEXT">
-            <label>"Several possible answers"</label>
+            <label>
+               <value>"Several possible answers"</value>
+               <type>VTL|MD</type>
+            </label>
          </declarations>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6qe0h9q" page="18">
-               <label>"III - Characters"</label>
+               <label>
+                  <value>"III - Characters"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>PET1</bindingDependencies>
@@ -558,19 +828,31 @@
          <bindingDependencies>PET3</bindingDependencies>
          <bindingDependencies>PET4</bindingDependencies>
          <responses id="j334akov-QOP-khokqjtw">
-            <label>"Santa’s Little Helper"</label>
+            <label>
+               <value>"Santa’s Little Helper"</value>
+               <type>VTL|MD</type>
+            </label>
             <response name="PET1"/>
          </responses>
          <responses id="j334akov-QOP-khokur7a">
-            <label>"Snowball I"</label>
+            <label>
+               <value>"Snowball I"</value>
+               <type>VTL|MD</type>
+            </label>
             <response name="PET2"/>
          </responses>
          <responses id="j334akov-QOP-khol82ux">
-            <label>"Coltrane"</label>
+            <label>
+               <value>"Coltrane"</value>
+               <type>VTL|MD</type>
+            </label>
             <response name="PET3"/>
          </responses>
          <responses id="j334akov-QOP-khokqee5">
-            <label>"Other name"</label>
+            <label>
+               <value>"Other name"</value>
+               <type>VTL|MD</type>
+            </label>
             <response name="PET4"/>
          </responses>
       </components>
@@ -580,97 +862,143 @@
                   positioning="HORIZONTAL"
                   mandatory="false"
                   page="20">
-         <label>"➡ 2. Does Jay like the following ice cream flavours?"</label>
+         <label>
+            <value>"➡ 2. Does Jay like the following ice cream flavours?"</value>
+            <type>VTL|MD</type>
+         </label>
          <declarations declarationType="STATEMENT"
                        id="d12-SI"
                        position="BEFORE_QUESTION_TEXT">
-            <label>"Now we are going to know if you think that Jay is a gluton."</label>
+            <label>
+               <value>"Now we are going to know if you think that Jay is a gluton."</value>
+               <type>VTL|MD</type>
+            </label>
          </declarations>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6qe0h9q" page="18">
-               <label>"III - Characters"</label>
+               <label>
+                  <value>"III - Characters"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>ICE_FLAVOUR1</bindingDependencies>
          <bindingDependencies>ICE_FLAVOUR2</bindingDependencies>
          <bindingDependencies>ICE_FLAVOUR3</bindingDependencies>
          <bindingDependencies>ICE_FLAVOUR4</bindingDependencies>
-         <cells type="line">
-            <cells>
+         <body>
+            <bodyLine>
                <value>1</value>
-               <label>"Vanilla"</label>
-            </cells>
-            <cells id="j6p29i81-QOP-kiq5w99y" componentType="Radio">
+               <label>
+                  <value>"Vanilla"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="j6p29i81-QOP-kiq5w99y" componentType="Radio">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>0</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="ICE_FLAVOUR1"/>
                <bindingDependencies>ICE_FLAVOUR1</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>2</value>
-               <label>"Strawberry"</label>
-            </cells>
-            <cells id="j6p29i81-QOP-kiq5ummf" componentType="Radio">
+               <label>
+                  <value>"Strawberry"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="j6p29i81-QOP-kiq5ummf" componentType="Radio">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>0</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="ICE_FLAVOUR2"/>
                <bindingDependencies>ICE_FLAVOUR2</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>3</value>
-               <label>"Apple"</label>
-            </cells>
-            <cells id="j6p29i81-QOP-kiq5mry5" componentType="Radio">
+               <label>
+                  <value>"Apple"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="j6p29i81-QOP-kiq5mry5" componentType="Radio">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>0</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="ICE_FLAVOUR3"/>
                <bindingDependencies>ICE_FLAVOUR3</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>OT</value>
-               <label>"Other flavour"</label>
-            </cells>
-            <cells id="j6p29i81-QOP-kiq5lkr8" componentType="Radio">
+               <label>
+                  <value>"Other flavour"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="j6p29i81-QOP-kiq5lkr8" componentType="Radio">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>0</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="ICE_FLAVOUR4"/>
                <bindingDependencies>ICE_FLAVOUR4</bindingDependencies>
-            </cells>
-         </cells>
+            </bodyLine>
+         </body>
       </components>
       <components xsi:type="Table"
                   componentType="Table"
@@ -678,92 +1006,135 @@
                   positioning="HORIZONTAL"
                   mandatory="false"
                   page="21">
-         <label>"➡ 3. Which character works in the nuclear power plant?"</label>
+         <label>
+            <value>"➡ 3. Which character works in the nuclear power plant?"</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6qe0h9q" page="18">
-               <label>"III - Characters"</label>
+               <label>
+                  <value>"III - Characters"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>NUCLEAR_CHARACTER1</bindingDependencies>
          <bindingDependencies>NUCLEAR_CHARACTER2</bindingDependencies>
          <bindingDependencies>NUCLEAR_CHARACTER3</bindingDependencies>
          <bindingDependencies>NUCLEAR_CHARACTER4</bindingDependencies>
-         <cells type="line">
-            <cells>
+         <body>
+            <bodyLine>
                <value>1</value>
-               <label>"Charles Montgomery Burns"</label>
-            </cells>
-            <cells id="j6qefnga-QOP-kewva8xg" componentType="Dropdown">
+               <label>
+                  <value>"Charles Montgomery Burns"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="j6qefnga-QOP-kewva8xg" componentType="Dropdown">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>0</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="NUCLEAR_CHARACTER1"/>
                <bindingDependencies>NUCLEAR_CHARACTER1</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>2</value>
-               <label>"Carl Carlson"</label>
-            </cells>
-            <cells id="j6qefnga-QOP-kewvj0ad" componentType="Dropdown">
+               <label>
+                  <value>"Carl Carlson"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="j6qefnga-QOP-kewvj0ad" componentType="Dropdown">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>0</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="NUCLEAR_CHARACTER2"/>
                <bindingDependencies>NUCLEAR_CHARACTER2</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>3</value>
-               <label>"Otto Mann"</label>
-            </cells>
-            <cells id="j6qefnga-QOP-kewveltm" componentType="Dropdown">
+               <label>
+                  <value>"Otto Mann"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="j6qefnga-QOP-kewveltm" componentType="Dropdown">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>0</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="NUCLEAR_CHARACTER3"/>
                <bindingDependencies>NUCLEAR_CHARACTER3</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>4</value>
-               <label>"Lenny Leonard"</label>
-            </cells>
-            <cells id="j6qefnga-QOP-kewvgax4" componentType="Dropdown">
+               <label>
+                  <value>"Lenny Leonard"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="j6qefnga-QOP-kewvgax4" componentType="Dropdown">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>0</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="NUCLEAR_CHARACTER4"/>
                <bindingDependencies>NUCLEAR_CHARACTER4</bindingDependencies>
-            </cells>
-         </cells>
+            </bodyLine>
+         </body>
       </components>
       <components xsi:type="Table"
                   componentType="Table"
@@ -771,14 +1142,21 @@
                   positioning="HORIZONTAL"
                   mandatory="false"
                   page="22">
-         <label>"➡ 4. In which city each character was born?"</label>
+         <label>
+            <value>"➡ 4. In which city each character was born?"</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6qe0h9q" page="18">
-               <label>"III - Characters"</label>
+               <label>
+                  <value>"III - Characters"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>BIRTH_CHARACTER1</bindingDependencies>
@@ -786,187 +1164,294 @@
          <bindingDependencies>BIRTH_CHARACTER3</bindingDependencies>
          <bindingDependencies>BIRTH_CHARACTER4</bindingDependencies>
          <bindingDependencies>BIRTH_CHARACTER5</bindingDependencies>
-         <cells type="line">
-            <cells>
+         <body>
+            <bodyLine>
                <value>1</value>
-               <label>"Selma Bouvier"</label>
-            </cells>
-            <cells id="j6yzoc6g-QOP-kewvjvcs" componentType="CheckboxOne">
+               <label>
+                  <value>"Selma Bouvier"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="j6yzoc6g-QOP-kewvjvcs" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Albuquerque"</label>
+                  <label>
+                     <value>"Albuquerque"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"Springfield"</label>
+                  <label>
+                     <value>"Springfield"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Portland"</label>
+                  <label>
+                     <value>"Portland"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>4</value>
-                  <label>"Shelbyville"</label>
+                  <label>
+                     <value>"Shelbyville"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>5</value>
-                  <label>"Dagstuhl"</label>
+                  <label>
+                     <value>"Dagstuhl"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="BIRTH_CHARACTER1"/>
                <bindingDependencies>BIRTH_CHARACTER1</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>2</value>
-               <label>"Kent Brockman"</label>
-            </cells>
-            <cells id="j6yzoc6g-QOP-kewvhoda" componentType="CheckboxOne">
+               <label>
+                  <value>"Kent Brockman"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="j6yzoc6g-QOP-kewvhoda" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Albuquerque"</label>
+                  <label>
+                     <value>"Albuquerque"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"Springfield"</label>
+                  <label>
+                     <value>"Springfield"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Portland"</label>
+                  <label>
+                     <value>"Portland"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>4</value>
-                  <label>"Shelbyville"</label>
+                  <label>
+                     <value>"Shelbyville"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>5</value>
-                  <label>"Dagstuhl"</label>
+                  <label>
+                     <value>"Dagstuhl"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="BIRTH_CHARACTER2"/>
                <bindingDependencies>BIRTH_CHARACTER2</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>3</value>
-               <label>"Milhouse Van Houten"</label>
-            </cells>
-            <cells id="j6yzoc6g-QOP-kewv64s5" componentType="CheckboxOne">
+               <label>
+                  <value>"Milhouse Van Houten"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="j6yzoc6g-QOP-kewv64s5" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Albuquerque"</label>
+                  <label>
+                     <value>"Albuquerque"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"Springfield"</label>
+                  <label>
+                     <value>"Springfield"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Portland"</label>
+                  <label>
+                     <value>"Portland"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>4</value>
-                  <label>"Shelbyville"</label>
+                  <label>
+                     <value>"Shelbyville"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>5</value>
-                  <label>"Dagstuhl"</label>
+                  <label>
+                     <value>"Dagstuhl"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="BIRTH_CHARACTER3"/>
                <bindingDependencies>BIRTH_CHARACTER3</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>4</value>
-               <label>"Nelson Muntz"</label>
-            </cells>
-            <cells id="j6yzoc6g-QOP-kewvj21j" componentType="CheckboxOne">
+               <label>
+                  <value>"Nelson Muntz"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="j6yzoc6g-QOP-kewvj21j" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Albuquerque"</label>
+                  <label>
+                     <value>"Albuquerque"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"Springfield"</label>
+                  <label>
+                     <value>"Springfield"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Portland"</label>
+                  <label>
+                     <value>"Portland"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>4</value>
-                  <label>"Shelbyville"</label>
+                  <label>
+                     <value>"Shelbyville"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>5</value>
-                  <label>"Dagstuhl"</label>
+                  <label>
+                     <value>"Dagstuhl"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="BIRTH_CHARACTER4"/>
                <bindingDependencies>BIRTH_CHARACTER4</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>5</value>
-               <label>"Crazy Cat Lady"</label>
-            </cells>
-            <cells id="j6yzoc6g-QOP-kewva5uf" componentType="CheckboxOne">
+               <label>
+                  <value>"Crazy Cat Lady"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="j6yzoc6g-QOP-kewva5uf" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Albuquerque"</label>
+                  <label>
+                     <value>"Albuquerque"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"Springfield"</label>
+                  <label>
+                     <value>"Springfield"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Portland"</label>
+                  <label>
+                     <value>"Portland"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>4</value>
-                  <label>"Shelbyville"</label>
+                  <label>
+                     <value>"Shelbyville"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>5</value>
-                  <label>"Dagstuhl"</label>
+                  <label>
+                     <value>"Dagstuhl"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="BIRTH_CHARACTER5"/>
                <bindingDependencies>BIRTH_CHARACTER5</bindingDependencies>
-            </cells>
-         </cells>
+            </bodyLine>
+         </body>
       </components>
    </components>
    <components xsi:type="Sequence"
                componentType="Sequence"
                id="j4nw88h2"
                page="23">
-      <label>"IV - General questions"</label>
+      <label>
+         <value>"IV - General questions"</value>
+         <type>VTL|MD</type>
+      </label>
       <conditionFilter>
          <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+         <type>VTL|MD</type>
          <bindingDependencies>READY</bindingDependencies>
       </conditionFilter>
       <hierarchy>
          <sequence id="j4nw88h2" page="23">
-            <label>"IV - General questions"</label>
+            <label>
+               <value>"IV - General questions"</value>
+               <type>VTL|MD</type>
+            </label>
          </sequence>
       </hierarchy>
       <components xsi:type="Subsequence"
                   componentType="Subsequence"
                   id="j6qe237q"
                   goToPage="24">
-         <label>"Kwik-E-Mart"</label>
+         <label>
+            <value>"Kwik-E-Mart"</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="j4nw88h2" page="23">
-               <label>"IV - General questions"</label>
+               <label>
+                  <value>"IV - General questions"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
             <subSequence id="j6qe237q" page="24">
-               <label>"Kwik-E-Mart"</label>
+               <label>
+                  <value>"Kwik-E-Mart"</value>
+                  <type>VTL|MD</type>
+               </label>
             </subSequence>
          </hierarchy>
          <components xsi:type="Table"
@@ -975,17 +1460,27 @@
                      positioning="HORIZONTAL"
                      mandatory="false"
                      page="24">
-            <label>"➡ 1. Please, specify the percentage of Jay’s expenses in the Kwik-E-Mart for each product?"</label>
+            <label>
+               <value>"➡ 1. Please, specify the percentage of Jay’s expenses in the Kwik-E-Mart for each product?"</value>
+               <type>VTL|MD</type>
+            </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="j4nw88h2" page="23">
-                  <label>"IV - General questions"</label>
+                  <label>
+                     <value>"IV - General questions"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
                <subSequence id="j6qe237q" page="24">
-                  <label>"Kwik-E-Mart"</label>
+                  <label>
+                     <value>"Kwik-E-Mart"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </subSequence>
             </hierarchy>
             <bindingDependencies>PERCENTAGE_EXPENSES11</bindingDependencies>
@@ -995,138 +1490,175 @@
             <bindingDependencies>PERCENTAGE_EXPENSES51</bindingDependencies>
             <bindingDependencies>PERCENTAGE_EXPENSES61</bindingDependencies>
             <bindingDependencies>PERCENTAGE_EXPENSES71</bindingDependencies>
-            <cells type="header">
-               <cells headerCell="true" colspan="2">
-                  <label/>
-               </cells>
-               <cells headerCell="true">
-                  <label>"Percentage"</label>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells rowspan="2">
+            <header colspan="2">
+               <label>
+                  <value/>
+                  <type>VTL|MD</type>
+               </label>
+            </header>
+            <header>
+               <label>
+                  <value>"Percentage"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </header>
+            <body>
+               <bodyLine rowspan="2">
                   <value>A</value>
-                  <label>"Frozen products"</label>
-               </cells>
-               <cells>
+                  <label>
+                     <value>"Frozen products"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine>
                   <value>A1</value>
-                  <label>"Ice creams"</label>
-               </cells>
-               <cells id="j4nwc63q-QOP-kewv2h3o"
-                      componentType="InputNumber"
-                      min="0.0"
-                      max="100.0"
-                      decimals="1">
+                  <label>
+                     <value>"Ice creams"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="j4nwc63q-QOP-kewv2h3o"
+                         componentType="InputNumber"
+                         min="0.0"
+                         max="100.0"
+                         decimals="1">
                   <unit>%</unit>
                   <response name="PERCENTAGE_EXPENSES11"/>
                   <bindingDependencies>PERCENTAGE_EXPENSES11</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine>
                   <value>A2</value>
-                  <label>"Jasper Beardly"</label>
-               </cells>
-               <cells id="j4nwc63q-QOP-kewvka2j"
-                      componentType="InputNumber"
-                      min="0.0"
-                      max="100.0"
-                      decimals="1">
+                  <label>
+                     <value>"Jasper Beardly"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="j4nwc63q-QOP-kewvka2j"
+                         componentType="InputNumber"
+                         min="0.0"
+                         max="100.0"
+                         decimals="1">
                   <unit>%</unit>
                   <response name="PERCENTAGE_EXPENSES21"/>
                   <bindingDependencies>PERCENTAGE_EXPENSES21</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells rowspan="3">
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine rowspan="3">
                   <value>B</value>
-                  <label>"Meat"</label>
-               </cells>
-               <cells>
+                  <label>
+                     <value>"Meat"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine>
                   <value>B1</value>
-                  <label>"Bacon"</label>
-               </cells>
-               <cells id="j4nwc63q-QOP-kewv1f2a"
-                      componentType="InputNumber"
-                      min="0.0"
-                      max="100.0"
-                      decimals="1">
+                  <label>
+                     <value>"Bacon"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="j4nwc63q-QOP-kewv1f2a"
+                         componentType="InputNumber"
+                         min="0.0"
+                         max="100.0"
+                         decimals="1">
                   <unit>%</unit>
                   <response name="PERCENTAGE_EXPENSES31"/>
                   <bindingDependencies>PERCENTAGE_EXPENSES31</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine>
                   <value>B2</value>
-                  <label>"Pork chop"</label>
-               </cells>
-               <cells id="j4nwc63q-QOP-kewvb2ql"
-                      componentType="InputNumber"
-                      min="0.0"
-                      max="100.0"
-                      decimals="1">
+                  <label>
+                     <value>"Pork chop"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="j4nwc63q-QOP-kewvb2ql"
+                         componentType="InputNumber"
+                         min="0.0"
+                         max="100.0"
+                         decimals="1">
                   <unit>%</unit>
                   <response name="PERCENTAGE_EXPENSES41"/>
                   <bindingDependencies>PERCENTAGE_EXPENSES41</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine>
                   <value>B3</value>
-                  <label>"Chicken"</label>
-               </cells>
-               <cells id="j4nwc63q-QOP-kewvbxla"
-                      componentType="InputNumber"
-                      min="0.0"
-                      max="100.0"
-                      decimals="1">
+                  <label>
+                     <value>"Chicken"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="j4nwc63q-QOP-kewvbxla"
+                         componentType="InputNumber"
+                         min="0.0"
+                         max="100.0"
+                         decimals="1">
                   <unit>%</unit>
                   <response name="PERCENTAGE_EXPENSES51"/>
                   <bindingDependencies>PERCENTAGE_EXPENSES51</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine>
                   <value>C</value>
-                  <label>"Compote"</label>
-               </cells>
-               <cells>
+                  <label>
+                     <value>"Compote"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine>
                   <value>C1</value>
-                  <label>"Powersauce"</label>
-               </cells>
-               <cells id="j4nwc63q-QOP-kewvkjp0"
-                      componentType="InputNumber"
-                      min="0.0"
-                      max="100.0"
-                      decimals="1">
+                  <label>
+                     <value>"Powersauce"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="j4nwc63q-QOP-kewvkjp0"
+                         componentType="InputNumber"
+                         min="0.0"
+                         max="100.0"
+                         decimals="1">
                   <unit>%</unit>
                   <response name="PERCENTAGE_EXPENSES61"/>
                   <bindingDependencies>PERCENTAGE_EXPENSES61</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells colspan="2">
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine colspan="2">
                   <value>D</value>
-                  <label>"Other"</label>
-               </cells>
-               <cells id="j4nwc63q-QOP-kewv2cyx"
-                      componentType="InputNumber"
-                      min="0.0"
-                      max="100.0"
-                      decimals="1">
+                  <label>
+                     <value>"Other"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="j4nwc63q-QOP-kewv2cyx"
+                         componentType="InputNumber"
+                         min="0.0"
+                         max="100.0"
+                         decimals="1">
                   <unit>%</unit>
                   <response name="PERCENTAGE_EXPENSES71"/>
                   <bindingDependencies>PERCENTAGE_EXPENSES71</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells colspan="2">
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine colspan="2">
                   <value>E</value>
-                  <label>"Total"</label>
-               </cells>
-               <cells headerCell="false"/>
-            </cells>
+                  <label>
+                     <value>"Total"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine />
+            </body>
          </components>
          <components xsi:type="Table"
                      componentType="Table"
@@ -1134,17 +1666,27 @@
                      positioning="HORIZONTAL"
                      mandatory="false"
                      page="25">
-            <label>"➡ 2. Please specify if Jay has bought each product in his last food shopping"</label>
+            <label>
+               <value>"➡ 2. Please specify if Jay has bought each product in his last food shopping"</value>
+               <type>VTL|MD</type>
+            </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="j4nw88h2" page="23">
-                  <label>"IV - General questions"</label>
+                  <label>
+                     <value>"IV - General questions"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
                <subSequence id="j6qe237q" page="24">
-                  <label>"Kwik-E-Mart"</label>
+                  <label>
+                     <value>"Kwik-E-Mart"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </subSequence>
             </hierarchy>
             <bindingDependencies>LAST_FOOD_SHOPPING11</bindingDependencies>
@@ -1155,219 +1697,338 @@
             <bindingDependencies>LAST_FOOD_SHOPPING61</bindingDependencies>
             <bindingDependencies>LAST_FOOD_SHOPPING71</bindingDependencies>
             <bindingDependencies>LAST_FOOD_SHOPPING81</bindingDependencies>
-            <cells type="header">
-               <cells headerCell="true" colspan="2">
-                  <label/>
-               </cells>
-               <cells headerCell="true">
-                  <label>"In his last food shopping"</label>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells rowspan="2">
+            <header colspan="2">
+               <label>
+                  <value/>
+                  <type>VTL|MD</type>
+               </label>
+            </header>
+            <header>
+               <label>
+                  <value>"In his last food shopping"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </header>
+            <body>
+               <bodyLine rowspan="2">
                   <value>A</value>
-                  <label>"Frozen products"</label>
-               </cells>
-               <cells>
+                  <label>
+                     <value>"Frozen products"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine>
                   <value>A1</value>
-                  <label>"Ice creams"</label>
-               </cells>
-               <cells id="k9cg2q5t-QOP-kiq6pljq" componentType="CheckboxOne">
+                  <label>
+                     <value>"Ice creams"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="k9cg2q5t-QOP-kiq6pljq" componentType="CheckboxOne">
                   <options>
                      <value>1</value>
-                     <label>"Yes"</label>
+                     <label>
+                        <value>"Yes"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>2</value>
-                     <label>"No"</label>
+                     <label>
+                        <value>"No"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>3</value>
-                     <label>"Other"</label>
+                     <label>
+                        <value>"Other"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <response name="LAST_FOOD_SHOPPING11"/>
                   <bindingDependencies>LAST_FOOD_SHOPPING11</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine>
                   <value>A2</value>
-                  <label>"Jasper Beardly"</label>
-               </cells>
-               <cells id="k9cg2q5t-QOP-kiq6mgpv" componentType="CheckboxOne">
+                  <label>
+                     <value>"Jasper Beardly"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="k9cg2q5t-QOP-kiq6mgpv" componentType="CheckboxOne">
                   <options>
                      <value>1</value>
-                     <label>"Yes"</label>
+                     <label>
+                        <value>"Yes"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>2</value>
-                     <label>"No"</label>
+                     <label>
+                        <value>"No"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>3</value>
-                     <label>"Other"</label>
+                     <label>
+                        <value>"Other"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <response name="LAST_FOOD_SHOPPING21"/>
                   <bindingDependencies>LAST_FOOD_SHOPPING21</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells rowspan="3">
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine rowspan="3">
                   <value>B</value>
-                  <label>"Meat"</label>
-               </cells>
-               <cells>
+                  <label>
+                     <value>"Meat"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine>
                   <value>B1</value>
-                  <label>"Bacon"</label>
-               </cells>
-               <cells id="k9cg2q5t-QOP-kiq6pmtz" componentType="CheckboxOne">
+                  <label>
+                     <value>"Bacon"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="k9cg2q5t-QOP-kiq6pmtz" componentType="CheckboxOne">
                   <options>
                      <value>1</value>
-                     <label>"Yes"</label>
+                     <label>
+                        <value>"Yes"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>2</value>
-                     <label>"No"</label>
+                     <label>
+                        <value>"No"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>3</value>
-                     <label>"Other"</label>
+                     <label>
+                        <value>"Other"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <response name="LAST_FOOD_SHOPPING31"/>
                   <bindingDependencies>LAST_FOOD_SHOPPING31</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine>
                   <value>B2</value>
-                  <label>"Pork chop"</label>
-               </cells>
-               <cells id="k9cg2q5t-QOP-kiq6k4lf" componentType="CheckboxOne">
+                  <label>
+                     <value>"Pork chop"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="k9cg2q5t-QOP-kiq6k4lf" componentType="CheckboxOne">
                   <options>
                      <value>1</value>
-                     <label>"Yes"</label>
+                     <label>
+                        <value>"Yes"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>2</value>
-                     <label>"No"</label>
+                     <label>
+                        <value>"No"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>3</value>
-                     <label>"Other"</label>
+                     <label>
+                        <value>"Other"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <response name="LAST_FOOD_SHOPPING41"/>
                   <bindingDependencies>LAST_FOOD_SHOPPING41</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine>
                   <value>B3</value>
-                  <label>"Chicken"</label>
-               </cells>
-               <cells id="k9cg2q5t-QOP-kiq6p70n" componentType="CheckboxOne">
+                  <label>
+                     <value>"Chicken"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="k9cg2q5t-QOP-kiq6p70n" componentType="CheckboxOne">
                   <options>
                      <value>1</value>
-                     <label>"Yes"</label>
+                     <label>
+                        <value>"Yes"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>2</value>
-                     <label>"No"</label>
+                     <label>
+                        <value>"No"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>3</value>
-                     <label>"Other"</label>
+                     <label>
+                        <value>"Other"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <response name="LAST_FOOD_SHOPPING51"/>
                   <bindingDependencies>LAST_FOOD_SHOPPING51</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine>
                   <value>C</value>
-                  <label>"Compote"</label>
-               </cells>
-               <cells>
+                  <label>
+                     <value>"Compote"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine>
                   <value>C1</value>
-                  <label>"Powersauce"</label>
-               </cells>
-               <cells id="k9cg2q5t-QOP-kiq6lh5v" componentType="CheckboxOne">
+                  <label>
+                     <value>"Powersauce"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="k9cg2q5t-QOP-kiq6lh5v" componentType="CheckboxOne">
                   <options>
                      <value>1</value>
-                     <label>"Yes"</label>
+                     <label>
+                        <value>"Yes"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>2</value>
-                     <label>"No"</label>
+                     <label>
+                        <value>"No"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>3</value>
-                     <label>"Other"</label>
+                     <label>
+                        <value>"Other"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <response name="LAST_FOOD_SHOPPING61"/>
                   <bindingDependencies>LAST_FOOD_SHOPPING61</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells colspan="2">
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine colspan="2">
                   <value>D</value>
-                  <label>"Other"</label>
-               </cells>
-               <cells id="k9cg2q5t-QOP-kiq703te" componentType="CheckboxOne">
+                  <label>
+                     <value>"Other"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="k9cg2q5t-QOP-kiq703te" componentType="CheckboxOne">
                   <options>
                      <value>1</value>
-                     <label>"Yes"</label>
+                     <label>
+                        <value>"Yes"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>2</value>
-                     <label>"No"</label>
+                     <label>
+                        <value>"No"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>3</value>
-                     <label>"Other"</label>
+                     <label>
+                        <value>"Other"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <response name="LAST_FOOD_SHOPPING71"/>
                   <bindingDependencies>LAST_FOOD_SHOPPING71</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells colspan="2">
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine colspan="2">
                   <value>E</value>
-                  <label>"Total"</label>
-               </cells>
-               <cells id="k9cg2q5t-QOP-kiq6zpd3" componentType="CheckboxOne">
+                  <label>
+                     <value>"Total"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="k9cg2q5t-QOP-kiq6zpd3" componentType="CheckboxOne">
                   <options>
                      <value>1</value>
-                     <label>"Yes"</label>
+                     <label>
+                        <value>"Yes"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>2</value>
-                     <label>"No"</label>
+                     <label>
+                        <value>"No"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>3</value>
-                     <label>"Other"</label>
+                     <label>
+                        <value>"Other"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <response name="LAST_FOOD_SHOPPING81"/>
                   <bindingDependencies>LAST_FOOD_SHOPPING81</bindingDependencies>
-               </cells>
-            </cells>
+               </bodyLine>
+            </body>
          </components>
       </components>
       <components xsi:type="Subsequence"
                   componentType="Subsequence"
                   id="j6qejudb"
                   goToPage="26">
-         <label>"Clowning"</label>
+         <label>
+            <value>"Clowning"</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="j4nw88h2" page="23">
-               <label>"IV - General questions"</label>
+               <label>
+                  <value>"IV - General questions"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
             <subSequence id="j6qejudb" page="26">
-               <label>"Clowning"</label>
+               <label>
+                  <value>"Clowning"</value>
+                  <type>VTL|MD</type>
+               </label>
             </subSequence>
          </hierarchy>
          <components xsi:type="Table"
@@ -1376,17 +2037,27 @@
                      positioning="HORIZONTAL"
                      mandatory="false"
                      page="26">
-            <label>"➡ 3. Who did these clownings and tell us what you remember?"</label>
+            <label>
+               <value>"➡ 3. Who did these clownings and tell us what you remember?"</value>
+               <type>VTL|MD</type>
+            </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="j4nw88h2" page="23">
-                  <label>"IV - General questions"</label>
+                  <label>
+                     <value>"IV - General questions"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
                <subSequence id="j6qejudb" page="26">
-                  <label>"Clowning"</label>
+                  <label>
+                     <value>"Clowning"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </subSequence>
             </hierarchy>
             <bindingDependencies>CLOWNING11</bindingDependencies>
@@ -1397,154 +2068,231 @@
             <bindingDependencies>CLOWNING32</bindingDependencies>
             <bindingDependencies>CLOWNING41</bindingDependencies>
             <bindingDependencies>CLOWNING42</bindingDependencies>
-            <cells type="header">
-               <cells headerCell="true">
-                  <label/>
-               </cells>
-               <cells headerCell="true">
-                  <label>"Clowning"</label>
-               </cells>
-               <cells headerCell="true">
-                  <label>"Remember?"</label>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+            <header>
+               <label>
+                  <value/>
+                  <type>VTL|MD</type>
+               </label>
+            </header>
+            <header>
+               <label>
+                  <value>"Clowning"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </header>
+            <header>
+               <label>
+                  <value>"Remember?"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </header>
+            <body>
+               <bodyLine>
                   <value>1</value>
-                  <label>"Break the windows of the whole city"</label>
-               </cells>
-               <cells id="kbkjvgel-QOP-kiq6m5n0" componentType="Dropdown">
+                  <label>
+                     <value>"Break the windows of the whole city"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="kbkjvgel-QOP-kiq6m5n0" componentType="Dropdown">
                   <options>
                      <value>1</value>
-                     <label>"Jay"</label>
+                     <label>
+                        <value>"Jay"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>2</value>
-                     <label>"Bart"</label>
+                     <label>
+                        <value>"Bart"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>3</value>
-                     <label>"Krusty the clown"</label>
+                     <label>
+                        <value>"Krusty the clown"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>O</value>
-                     <label>"Other"</label>
+                     <label>
+                        <value>"Other"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <response name="CLOWNING11"/>
                   <bindingDependencies>CLOWNING11</bindingDependencies>
-               </cells>
-               <cells id="kbkjvgel-QOP-kiq6qatu" componentType="Textarea" maxLength="255">
+               </bodyLine>
+               <bodyLine id="kbkjvgel-QOP-kiq6qatu" componentType="Textarea" maxLength="255">
                   <response name="CLOWNING12"/>
                   <bindingDependencies>CLOWNING12</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine>
                   <value>2</value>
-                  <label>"Loose the violin of his daughter playing poker"</label>
-               </cells>
-               <cells id="kbkjvgel-QOP-kiq6l29o" componentType="Dropdown">
+                  <label>
+                     <value>"Loose the violin of his daughter playing poker"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="kbkjvgel-QOP-kiq6l29o" componentType="Dropdown">
                   <options>
                      <value>1</value>
-                     <label>"Jay"</label>
+                     <label>
+                        <value>"Jay"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>2</value>
-                     <label>"Bart"</label>
+                     <label>
+                        <value>"Bart"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>3</value>
-                     <label>"Krusty the clown"</label>
+                     <label>
+                        <value>"Krusty the clown"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>O</value>
-                     <label>"Other"</label>
+                     <label>
+                        <value>"Other"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <response name="CLOWNING21"/>
                   <bindingDependencies>CLOWNING21</bindingDependencies>
-               </cells>
-               <cells id="kbkjvgel-QOP-kiq6v4oe" componentType="Textarea" maxLength="255">
+               </bodyLine>
+               <bodyLine id="kbkjvgel-QOP-kiq6v4oe" componentType="Textarea" maxLength="255">
                   <response name="CLOWNING22"/>
                   <bindingDependencies>CLOWNING22</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine>
                   <value>3</value>
-                  <label>"Kill Mr Burns"</label>
-               </cells>
-               <cells id="kbkjvgel-QOP-kiq72biw" componentType="Dropdown">
+                  <label>
+                     <value>"Kill Mr Burns"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="kbkjvgel-QOP-kiq72biw" componentType="Dropdown">
                   <options>
                      <value>1</value>
-                     <label>"Jay"</label>
+                     <label>
+                        <value>"Jay"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>2</value>
-                     <label>"Bart"</label>
+                     <label>
+                        <value>"Bart"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>3</value>
-                     <label>"Krusty the clown"</label>
+                     <label>
+                        <value>"Krusty the clown"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>O</value>
-                     <label>"Other"</label>
+                     <label>
+                        <value>"Other"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <response name="CLOWNING31"/>
                   <bindingDependencies>CLOWNING31</bindingDependencies>
-               </cells>
-               <cells id="kbkjvgel-QOP-kiq6q4zm" componentType="Textarea" maxLength="255">
+               </bodyLine>
+               <bodyLine id="kbkjvgel-QOP-kiq6q4zm" componentType="Textarea" maxLength="255">
                   <response name="CLOWNING32"/>
                   <bindingDependencies>CLOWNING32</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine>
                   <value>4</value>
-                  <label>"Leaving a mechanical object to control the nuclear power plant"</label>
-               </cells>
-               <cells id="kbkjvgel-QOP-kiq6mlan" componentType="Dropdown">
+                  <label>
+                     <value>"Leaving a mechanical object to control the nuclear power plant"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="kbkjvgel-QOP-kiq6mlan" componentType="Dropdown">
                   <options>
                      <value>1</value>
-                     <label>"Jay"</label>
+                     <label>
+                        <value>"Jay"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>2</value>
-                     <label>"Bart"</label>
+                     <label>
+                        <value>"Bart"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>3</value>
-                     <label>"Krusty the clown"</label>
+                     <label>
+                        <value>"Krusty the clown"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <options>
                      <value>O</value>
-                     <label>"Other"</label>
+                     <label>
+                        <value>"Other"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </options>
                   <response name="CLOWNING41"/>
                   <bindingDependencies>CLOWNING41</bindingDependencies>
-               </cells>
-               <cells id="kbkjvgel-QOP-kiq6vtud" componentType="Textarea" maxLength="255">
+               </bodyLine>
+               <bodyLine id="kbkjvgel-QOP-kiq6vtud" componentType="Textarea" maxLength="255">
                   <response name="CLOWNING42"/>
                   <bindingDependencies>CLOWNING42</bindingDependencies>
-               </cells>
-            </cells>
+               </bodyLine>
+            </body>
          </components>
       </components>
       <components xsi:type="Subsequence"
                   componentType="Subsequence"
                   id="j6qeh91y"
                   goToPage="27">
-         <label>"Transport"</label>
+         <label>
+            <value>"Transport"</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="j4nw88h2" page="23">
-               <label>"IV - General questions"</label>
+               <label>
+                  <value>"IV - General questions"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
             <subSequence id="j6qeh91y" page="27">
-               <label>"Transport"</label>
+               <label>
+                  <value>"Transport"</value>
+                  <type>VTL|MD</type>
+               </label>
             </subSequence>
          </hierarchy>
          <components xsi:type="Table"
@@ -1553,22 +2301,35 @@
                      positioning="HORIZONTAL"
                      mandatory="false"
                      page="27">
-            <label>"➡ 4. Which of the following means of transport were used by the hero and in which country?"</label>
+            <label>
+               <value>"➡ 4. Which of the following means of transport were used by the hero and in which country?"</value>
+               <type>VTL|MD</type>
+            </label>
             <declarations declarationType="INSTRUCTION"
                           id="j6p2lwuj-d10"
                           position="AFTER_QUESTION_TEXT">
-               <label>"Several answers possible: check off all the relevant boxes"</label>
+               <label>
+                  <value>"Several answers possible: check off all the relevant boxes"</value>
+                  <type>VTL|MD</type>
+               </label>
             </declarations>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="j4nw88h2" page="23">
-                  <label>"IV - General questions"</label>
+                  <label>
+                     <value>"IV - General questions"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
                <subSequence id="j6qeh91y" page="27">
-                  <label>"Transport"</label>
+                  <label>
+                     <value>"Transport"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </subSequence>
             </hierarchy>
             <bindingDependencies>TRAVEL11</bindingDependencies>
@@ -1595,149 +2356,180 @@
             <bindingDependencies>TRAVEL44</bindingDependencies>
             <bindingDependencies>TRAVEL45</bindingDependencies>
             <bindingDependencies>TRAVEL46</bindingDependencies>
-            <cells type="header">
-               <cells headerCell="true">
-                  <label/>
-               </cells>
-               <cells headerCell="true">
-                  <label>"Brazil"</label>
-               </cells>
-               <cells headerCell="true">
-                  <label>"Canada"</label>
-               </cells>
-               <cells headerCell="true">
-                  <label>"Japan"</label>
-               </cells>
-               <cells headerCell="true">
-                  <label>"France"</label>
-               </cells>
-               <cells headerCell="true">
-                  <label>"Other country"</label>
-               </cells>
-               <cells headerCell="true">
-                  <label>"Other planet"</label>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+            <header>
+               <label>
+                  <value/>
+                  <type>VTL|MD</type>
+               </label>
+            </header>
+            <header>
+               <label>
+                  <value>"Brazil"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </header>
+            <header>
+               <label>
+                  <value>"Canada"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </header>
+            <header>
+               <label>
+                  <value>"Japan"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </header>
+            <header>
+               <label>
+                  <value>"France"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </header>
+            <header>
+               <label>
+                  <value>"Other country"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </header>
+            <header>
+               <label>
+                  <value>"Other planet"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </header>
+            <body>
+               <bodyLine>
                   <value>1</value>
-                  <label>"Car"</label>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewvm4qg" componentType="CheckboxBoolean">
+                  <label>
+                     <value>"Car"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewvm4qg" componentType="CheckboxBoolean">
                   <response name="TRAVEL11"/>
                   <bindingDependencies>TRAVEL11</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewv8wxl" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewv8wxl" componentType="CheckboxBoolean">
                   <response name="TRAVEL12"/>
                   <bindingDependencies>TRAVEL12</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewvcjrn" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewvcjrn" componentType="CheckboxBoolean">
                   <response name="TRAVEL13"/>
                   <bindingDependencies>TRAVEL13</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewvdrv7" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewvdrv7" componentType="CheckboxBoolean">
                   <response name="TRAVEL14"/>
                   <bindingDependencies>TRAVEL14</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewv226h" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewv226h" componentType="CheckboxBoolean">
                   <response name="TRAVEL15"/>
                   <bindingDependencies>TRAVEL15</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewvlchm" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewvlchm" componentType="CheckboxBoolean">
                   <response name="TRAVEL16"/>
                   <bindingDependencies>TRAVEL16</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine>
                   <value>2</value>
-                  <label>"Bike"</label>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewvebem" componentType="CheckboxBoolean">
+                  <label>
+                     <value>"Bike"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewvebem" componentType="CheckboxBoolean">
                   <response name="TRAVEL21"/>
                   <bindingDependencies>TRAVEL21</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewv5u0v" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewv5u0v" componentType="CheckboxBoolean">
                   <response name="TRAVEL22"/>
                   <bindingDependencies>TRAVEL22</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewvdarq" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewvdarq" componentType="CheckboxBoolean">
                   <response name="TRAVEL23"/>
                   <bindingDependencies>TRAVEL23</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewvc8ft" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewvc8ft" componentType="CheckboxBoolean">
                   <response name="TRAVEL24"/>
                   <bindingDependencies>TRAVEL24</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewvc2li" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewvc2li" componentType="CheckboxBoolean">
                   <response name="TRAVEL25"/>
                   <bindingDependencies>TRAVEL25</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewvh5fm" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewvh5fm" componentType="CheckboxBoolean">
                   <response name="TRAVEL26"/>
                   <bindingDependencies>TRAVEL26</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine>
                   <value>3</value>
-                  <label>"Skateboard"</label>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewv62xx" componentType="CheckboxBoolean">
+                  <label>
+                     <value>"Skateboard"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewv62xx" componentType="CheckboxBoolean">
                   <response name="TRAVEL31"/>
                   <bindingDependencies>TRAVEL31</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewvbiyv" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewvbiyv" componentType="CheckboxBoolean">
                   <response name="TRAVEL32"/>
                   <bindingDependencies>TRAVEL32</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewvcmjn" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewvcmjn" componentType="CheckboxBoolean">
                   <response name="TRAVEL33"/>
                   <bindingDependencies>TRAVEL33</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewvkci5" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewvkci5" componentType="CheckboxBoolean">
                   <response name="TRAVEL34"/>
                   <bindingDependencies>TRAVEL34</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewveam7" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewveam7" componentType="CheckboxBoolean">
                   <response name="TRAVEL35"/>
                   <bindingDependencies>TRAVEL35</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewva2r8" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewva2r8" componentType="CheckboxBoolean">
                   <response name="TRAVEL36"/>
                   <bindingDependencies>TRAVEL36</bindingDependencies>
-               </cells>
-            </cells>
-            <cells type="line">
-               <cells>
+               </bodyLine>
+            </body>
+            <body>
+               <bodyLine>
                   <value>4</value>
-                  <label>"Plane"</label>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewvjcck" componentType="CheckboxBoolean">
+                  <label>
+                     <value>"Plane"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewvjcck" componentType="CheckboxBoolean">
                   <response name="TRAVEL41"/>
                   <bindingDependencies>TRAVEL41</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewv91bq" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewv91bq" componentType="CheckboxBoolean">
                   <response name="TRAVEL42"/>
                   <bindingDependencies>TRAVEL42</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewvf47u" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewvf47u" componentType="CheckboxBoolean">
                   <response name="TRAVEL43"/>
                   <bindingDependencies>TRAVEL43</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewv5hsr" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewv5hsr" componentType="CheckboxBoolean">
                   <response name="TRAVEL44"/>
                   <bindingDependencies>TRAVEL44</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewva3p8" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewva3p8" componentType="CheckboxBoolean">
                   <response name="TRAVEL45"/>
                   <bindingDependencies>TRAVEL45</bindingDependencies>
-               </cells>
-               <cells id="j6p2lwuj-QOP-kewve0rb" componentType="CheckboxBoolean">
+               </bodyLine>
+               <bodyLine id="j6p2lwuj-QOP-kewve0rb" componentType="CheckboxBoolean">
                   <response name="TRAVEL46"/>
                   <bindingDependencies>TRAVEL46</bindingDependencies>
-               </cells>
-            </cells>
+               </bodyLine>
+            </body>
          </components>
       </components>
    </components>
@@ -1745,14 +2537,21 @@
                componentType="Sequence"
                id="j6qfx9qe"
                page="28">
-      <label>"V - Favourite characters (dynamic table)"</label>
+      <label>
+         <value>"V - Favourite characters (dynamic table)"</value>
+         <type>VTL|MD</type>
+      </label>
       <conditionFilter>
          <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+         <type>VTL|MD</type>
          <bindingDependencies>READY</bindingDependencies>
       </conditionFilter>
       <hierarchy>
          <sequence id="j6qfx9qe" page="28">
-            <label>"V - Favourite characters (dynamic table)"</label>
+            <label>
+               <value>"V - Favourite characters (dynamic table)"</value>
+               <type>VTL|MD</type>
+            </label>
          </sequence>
       </hierarchy>
       <components xsi:type="Table"
@@ -1761,14 +2560,21 @@
                   positioning="HORIZONTAL"
                   mandatory="false"
                   page="29">
-         <label>"➡ 1. Please, complete the following grid with your favourite characters"</label>
+         <label>
+            <value>"➡ 1. Please, complete the following grid with your favourite characters"</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6qfx9qe" page="28">
-               <label>"V - Favourite characters (dynamic table)"</label>
+               <label>
+                  <value>"V - Favourite characters (dynamic table)"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>FAVOURITE_CHAR1</bindingDependencies>
@@ -1804,318 +2610,424 @@
          <bindingDependencies>FAVOURITE_CHAR1_10_1</bindingDependencies>
          <bindingDependencies>FAVOURITE_CHAR2_10_2</bindingDependencies>
          <bindingDependencies>FAVOURITE_CHAR3_10_3</bindingDependencies>
-         <lines min="1" max="10"/>
-         <cells type="header">
-            <cells headerCell="true">
-               <label>"Name"</label>
-            </cells>
-            <cells headerCell="true">
-               <label>"Age"</label>
-            </cells>
-            <cells headerCell="true">
-               <label>"Member of the Simpsons family"</label>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells id="j6qg8rc6-QOP-kiq7p16z_1_1"
-                   componentType="Textarea"
-                   maxLength="255">
+         <lines>
+            <min>
+               <value>1</value>
+               <type>VTL|MD</type>
+            </min>
+            <max>
+               <value>10</value>
+               <type>VTL|MD</type>
+            </max>
+         </lines>
+         <header>
+            <label>
+               <value>"Name"</value>
+               <type>VTL|MD</type>
+            </label>
+         </header>
+         <header>
+            <label>
+               <value>"Age"</value>
+               <type>VTL|MD</type>
+            </label>
+         </header>
+         <header>
+            <label>
+               <value>"Member of the Simpsons family"</value>
+               <type>VTL|MD</type>
+            </label>
+         </header>
+         <body>
+            <bodyLine id="j6qg8rc6-QOP-kiq7p16z_1_1"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR1_1_1"/>
                <bindingDependencies>FAVOURITE_CHAR1_1_1</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7kny3_1_2"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7kny3_1_2"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR2_1_2"/>
                <bindingDependencies>FAVOURITE_CHAR2_1_2</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7lffy_1_3" componentType="CheckboxOne">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7lffy_1_3" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Other"</label>
+                  <label>
+                     <value>"Other"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="FAVOURITE_CHAR3_1_3"/>
                <bindingDependencies>FAVOURITE_CHAR3_1_3</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells id="j6qg8rc6-QOP-kiq7p16z_2_1"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="j6qg8rc6-QOP-kiq7p16z_2_1"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR1_2_1"/>
                <bindingDependencies>FAVOURITE_CHAR1_2_1</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7kny3_2_2"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7kny3_2_2"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR2_2_2"/>
                <bindingDependencies>FAVOURITE_CHAR2_2_2</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7lffy_2_3" componentType="CheckboxOne">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7lffy_2_3" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Other"</label>
+                  <label>
+                     <value>"Other"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="FAVOURITE_CHAR3_2_3"/>
                <bindingDependencies>FAVOURITE_CHAR3_2_3</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells id="j6qg8rc6-QOP-kiq7p16z_3_1"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="j6qg8rc6-QOP-kiq7p16z_3_1"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR1_3_1"/>
                <bindingDependencies>FAVOURITE_CHAR1_3_1</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7kny3_3_2"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7kny3_3_2"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR2_3_2"/>
                <bindingDependencies>FAVOURITE_CHAR2_3_2</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7lffy_3_3" componentType="CheckboxOne">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7lffy_3_3" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Other"</label>
+                  <label>
+                     <value>"Other"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="FAVOURITE_CHAR3_3_3"/>
                <bindingDependencies>FAVOURITE_CHAR3_3_3</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells id="j6qg8rc6-QOP-kiq7p16z_4_1"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="j6qg8rc6-QOP-kiq7p16z_4_1"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR1_4_1"/>
                <bindingDependencies>FAVOURITE_CHAR1_4_1</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7kny3_4_2"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7kny3_4_2"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR2_4_2"/>
                <bindingDependencies>FAVOURITE_CHAR2_4_2</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7lffy_4_3" componentType="CheckboxOne">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7lffy_4_3" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Other"</label>
+                  <label>
+                     <value>"Other"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="FAVOURITE_CHAR3_4_3"/>
                <bindingDependencies>FAVOURITE_CHAR3_4_3</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells id="j6qg8rc6-QOP-kiq7p16z_5_1"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="j6qg8rc6-QOP-kiq7p16z_5_1"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR1_5_1"/>
                <bindingDependencies>FAVOURITE_CHAR1_5_1</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7kny3_5_2"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7kny3_5_2"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR2_5_2"/>
                <bindingDependencies>FAVOURITE_CHAR2_5_2</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7lffy_5_3" componentType="CheckboxOne">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7lffy_5_3" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Other"</label>
+                  <label>
+                     <value>"Other"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="FAVOURITE_CHAR3_5_3"/>
                <bindingDependencies>FAVOURITE_CHAR3_5_3</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells id="j6qg8rc6-QOP-kiq7p16z_6_1"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="j6qg8rc6-QOP-kiq7p16z_6_1"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR1_6_1"/>
                <bindingDependencies>FAVOURITE_CHAR1_6_1</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7kny3_6_2"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7kny3_6_2"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR2_6_2"/>
                <bindingDependencies>FAVOURITE_CHAR2_6_2</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7lffy_6_3" componentType="CheckboxOne">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7lffy_6_3" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Other"</label>
+                  <label>
+                     <value>"Other"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="FAVOURITE_CHAR3_6_3"/>
                <bindingDependencies>FAVOURITE_CHAR3_6_3</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells id="j6qg8rc6-QOP-kiq7p16z_7_1"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="j6qg8rc6-QOP-kiq7p16z_7_1"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR1_7_1"/>
                <bindingDependencies>FAVOURITE_CHAR1_7_1</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7kny3_7_2"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7kny3_7_2"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR2_7_2"/>
                <bindingDependencies>FAVOURITE_CHAR2_7_2</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7lffy_7_3" componentType="CheckboxOne">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7lffy_7_3" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Other"</label>
+                  <label>
+                     <value>"Other"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="FAVOURITE_CHAR3_7_3"/>
                <bindingDependencies>FAVOURITE_CHAR3_7_3</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells id="j6qg8rc6-QOP-kiq7p16z_8_1"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="j6qg8rc6-QOP-kiq7p16z_8_1"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR1_8_1"/>
                <bindingDependencies>FAVOURITE_CHAR1_8_1</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7kny3_8_2"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7kny3_8_2"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR2_8_2"/>
                <bindingDependencies>FAVOURITE_CHAR2_8_2</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7lffy_8_3" componentType="CheckboxOne">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7lffy_8_3" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Other"</label>
+                  <label>
+                     <value>"Other"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="FAVOURITE_CHAR3_8_3"/>
                <bindingDependencies>FAVOURITE_CHAR3_8_3</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells id="j6qg8rc6-QOP-kiq7p16z_9_1"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="j6qg8rc6-QOP-kiq7p16z_9_1"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR1_9_1"/>
                <bindingDependencies>FAVOURITE_CHAR1_9_1</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7kny3_9_2"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7kny3_9_2"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR2_9_2"/>
                <bindingDependencies>FAVOURITE_CHAR2_9_2</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7lffy_9_3" componentType="CheckboxOne">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7lffy_9_3" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Other"</label>
+                  <label>
+                     <value>"Other"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="FAVOURITE_CHAR3_9_3"/>
                <bindingDependencies>FAVOURITE_CHAR3_9_3</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells id="j6qg8rc6-QOP-kiq7p16z_10_1"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="j6qg8rc6-QOP-kiq7p16z_10_1"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR1_10_1"/>
                <bindingDependencies>FAVOURITE_CHAR1_10_1</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7kny3_10_2"
-                   componentType="Textarea"
-                   maxLength="255">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7kny3_10_2"
+                      componentType="Textarea"
+                      maxLength="255">
                <response name="FAVOURITE_CHAR2_10_2"/>
                <bindingDependencies>FAVOURITE_CHAR2_10_2</bindingDependencies>
-            </cells>
-            <cells id="j6qg8rc6-QOP-kiq7lffy_10_3" componentType="CheckboxOne">
+            </bodyLine>
+            <bodyLine id="j6qg8rc6-QOP-kiq7lffy_10_3" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Yes"</label>
+                  <label>
+                     <value>"Yes"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"No"</label>
+                  <label>
+                     <value>"No"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Other"</label>
+                  <label>
+                     <value>"Other"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="FAVOURITE_CHAR3_10_3"/>
                <bindingDependencies>FAVOURITE_CHAR3_10_3</bindingDependencies>
-            </cells>
-         </cells>
+            </bodyLine>
+         </body>
       </components>
       <components xsi:type="Table"
                   componentType="Table"
@@ -2123,108 +3035,163 @@
                   positioning="HORIZONTAL"
                   mandatory="false"
                   page="30">
-         <label>"➡ 2. How has your feeling about the following characters evolved over time?"</label>
+         <label>
+            <value>"➡ 2. How has your feeling about the following characters evolved over time?"</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6qfx9qe" page="28">
-               <label>"V - Favourite characters (dynamic table)"</label>
+               <label>
+                  <value>"V - Favourite characters (dynamic table)"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>FEELCHAREV1</bindingDependencies>
          <bindingDependencies>FEELCHAREV2</bindingDependencies>
          <bindingDependencies>FEELCHAREV3</bindingDependencies>
          <bindingDependencies>FEELCHAREV4</bindingDependencies>
-         <cells type="line">
-            <cells>
+         <body>
+            <bodyLine>
                <value>1</value>
-               <label>"Jay"</label>
-            </cells>
-            <cells id="jvxux0mi-QOP-kiq76emy" componentType="CheckboxOne">
+               <label>
+                  <value>"Jay"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="jvxux0mi-QOP-kiq76emy" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Up"</label>
+                  <label>
+                     <value>"Up"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"Down"</label>
+                  <label>
+                     <value>"Down"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Steady"</label>
+                  <label>
+                     <value>"Steady"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="FEELCHAREV1"/>
                <bindingDependencies>FEELCHAREV1</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>2</value>
-               <label>"Bart"</label>
-            </cells>
-            <cells id="jvxux0mi-QOP-kiq6zv60" componentType="CheckboxOne">
+               <label>
+                  <value>"Bart"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="jvxux0mi-QOP-kiq6zv60" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Up"</label>
+                  <label>
+                     <value>"Up"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"Down"</label>
+                  <label>
+                     <value>"Down"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Steady"</label>
+                  <label>
+                     <value>"Steady"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="FEELCHAREV2"/>
                <bindingDependencies>FEELCHAREV2</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>3</value>
-               <label>"Krusty the clown"</label>
-            </cells>
-            <cells id="jvxux0mi-QOP-kiq7bgk3" componentType="CheckboxOne">
+               <label>
+                  <value>"Krusty the clown"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="jvxux0mi-QOP-kiq7bgk3" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Up"</label>
+                  <label>
+                     <value>"Up"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"Down"</label>
+                  <label>
+                     <value>"Down"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Steady"</label>
+                  <label>
+                     <value>"Steady"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="FEELCHAREV3"/>
                <bindingDependencies>FEELCHAREV3</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>O</value>
-               <label>"Other"</label>
-            </cells>
-            <cells id="jvxux0mi-QOP-kiq6ync3" componentType="CheckboxOne">
+               <label>
+                  <value>"Other"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="jvxux0mi-QOP-kiq6ync3" componentType="CheckboxOne">
                <options>
                   <value>1</value>
-                  <label>"Up"</label>
+                  <label>
+                     <value>"Up"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"Down"</label>
+                  <label>
+                     <value>"Down"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>3</value>
-                  <label>"Steady"</label>
+                  <label>
+                     <value>"Steady"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="FEELCHAREV4"/>
                <bindingDependencies>FEELCHAREV4</bindingDependencies>
-            </cells>
-         </cells>
+            </bodyLine>
+         </body>
       </components>
       <components xsi:type="Table"
                   componentType="Table"
@@ -2232,14 +3199,21 @@
                   positioning="HORIZONTAL"
                   mandatory="false"
                   page="31">
-         <label>"➡ 3. Can you tell how long Bart Simpson has been on leave for each type and whether there has been another type?"</label>
+         <label>
+            <value>"➡ 3. Can you tell how long Bart Simpson has been on leave for each type and whether there has been another type?"</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6qfx9qe" page="28">
-               <label>"V - Favourite characters (dynamic table)"</label>
+               <label>
+                  <value>"V - Favourite characters (dynamic table)"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>LEAVDURATION11</bindingDependencies>
@@ -2252,161 +3226,220 @@
          <bindingDependencies>LEAVDURATION42</bindingDependencies>
          <bindingDependencies>LEAVDURATION51</bindingDependencies>
          <bindingDependencies>LEAVDURATION52</bindingDependencies>
-         <cells type="header">
-            <cells headerCell="true">
-               <label/>
-            </cells>
-            <cells headerCell="true">
-               <label>"Days"</label>
-            </cells>
-            <cells headerCell="true">
-               <label>"Unit"</label>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+         <header>
+            <label>
+               <value/>
+               <type>VTL|MD</type>
+            </label>
+         </header>
+         <header>
+            <label>
+               <value>"Days"</value>
+               <type>VTL|MD</type>
+            </label>
+         </header>
+         <header>
+            <label>
+               <value>"Unit"</value>
+               <type>VTL|MD</type>
+            </label>
+         </header>
+         <body>
+            <bodyLine>
                <value>1</value>
-               <label>"Leave with pay"</label>
-            </cells>
-            <cells id="jvxwy68n-QOP-kewv511d"
-                   componentType="InputNumber"
-                   min="0"
-                   max="365"
-                   decimals="0">
+               <label>
+                  <value>"Leave with pay"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="jvxwy68n-QOP-kewv511d"
+                      componentType="InputNumber"
+                      min="0"
+                      max="365"
+                      decimals="0">
                <response name="LEAVDURATION11"/>
                <bindingDependencies>LEAVDURATION11</bindingDependencies>
-            </cells>
-            <cells id="jvxwy68n-QOP-kewv20qg" componentType="Dropdown">
+            </bodyLine>
+            <bodyLine id="jvxwy68n-QOP-kewv20qg" componentType="Dropdown">
                <options>
                   <value>1</value>
-                  <label>"Working Days"</label>
+                  <label>
+                     <value>"Working Days"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"Calendar days"</label>
+                  <label>
+                     <value>"Calendar days"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="LEAVDURATION12"/>
                <bindingDependencies>LEAVDURATION12</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>2</value>
-               <label>"Public holiday"</label>
-            </cells>
-            <cells id="jvxwy68n-QOP-kewv67nj"
-                   componentType="InputNumber"
-                   min="0"
-                   max="365"
-                   decimals="0">
+               <label>
+                  <value>"Public holiday"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="jvxwy68n-QOP-kewv67nj"
+                      componentType="InputNumber"
+                      min="0"
+                      max="365"
+                      decimals="0">
                <response name="LEAVDURATION21"/>
                <bindingDependencies>LEAVDURATION21</bindingDependencies>
-            </cells>
-            <cells id="jvxwy68n-QOP-kewvizdm" componentType="Dropdown">
+            </bodyLine>
+            <bodyLine id="jvxwy68n-QOP-kewvizdm" componentType="Dropdown">
                <options>
                   <value>1</value>
-                  <label>"Working Days"</label>
+                  <label>
+                     <value>"Working Days"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"Calendar days"</label>
+                  <label>
+                     <value>"Calendar days"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="LEAVDURATION22"/>
                <bindingDependencies>LEAVDURATION22</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>3</value>
-               <label>"Sick leave"</label>
-            </cells>
-            <cells id="jvxwy68n-QOP-kewv23wm"
-                   componentType="InputNumber"
-                   min="0"
-                   max="365"
-                   decimals="0">
+               <label>
+                  <value>"Sick leave"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="jvxwy68n-QOP-kewv23wm"
+                      componentType="InputNumber"
+                      min="0"
+                      max="365"
+                      decimals="0">
                <response name="LEAVDURATION31"/>
                <bindingDependencies>LEAVDURATION31</bindingDependencies>
-            </cells>
-            <cells id="jvxwy68n-QOP-kewv9jcl" componentType="Dropdown">
+            </bodyLine>
+            <bodyLine id="jvxwy68n-QOP-kewv9jcl" componentType="Dropdown">
                <options>
                   <value>1</value>
-                  <label>"Working Days"</label>
+                  <label>
+                     <value>"Working Days"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"Calendar days"</label>
+                  <label>
+                     <value>"Calendar days"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="LEAVDURATION32"/>
                <bindingDependencies>LEAVDURATION32</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>4</value>
-               <label>"Maternity/paternity leave"</label>
-            </cells>
-            <cells id="jvxwy68n-QOP-kewv2jks"
-                   componentType="InputNumber"
-                   min="0"
-                   max="365"
-                   decimals="0">
+               <label>
+                  <value>"Maternity/paternity leave"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="jvxwy68n-QOP-kewv2jks"
+                      componentType="InputNumber"
+                      min="0"
+                      max="365"
+                      decimals="0">
                <response name="LEAVDURATION41"/>
                <bindingDependencies>LEAVDURATION41</bindingDependencies>
-            </cells>
-            <cells id="jvxwy68n-QOP-kewvf0gf" componentType="Dropdown">
+            </bodyLine>
+            <bodyLine id="jvxwy68n-QOP-kewvf0gf" componentType="Dropdown">
                <options>
                   <value>1</value>
-                  <label>"Working Days"</label>
+                  <label>
+                     <value>"Working Days"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"Calendar days"</label>
+                  <label>
+                     <value>"Calendar days"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="LEAVDURATION42"/>
                <bindingDependencies>LEAVDURATION42</bindingDependencies>
-            </cells>
-         </cells>
-         <cells type="line">
-            <cells>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine>
                <value>5</value>
-               <label>"Other type"</label>
-            </cells>
-            <cells id="jvxwy68n-QOP-kewvl896"
-                   componentType="InputNumber"
-                   min="0"
-                   max="365"
-                   decimals="0">
+               <label>
+                  <value>"Other type"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </bodyLine>
+            <bodyLine id="jvxwy68n-QOP-kewvl896"
+                      componentType="InputNumber"
+                      min="0"
+                      max="365"
+                      decimals="0">
                <response name="LEAVDURATION51"/>
                <bindingDependencies>LEAVDURATION51</bindingDependencies>
-            </cells>
-            <cells id="jvxwy68n-QOP-kewvalmd" componentType="Dropdown">
+            </bodyLine>
+            <bodyLine id="jvxwy68n-QOP-kewvalmd" componentType="Dropdown">
                <options>
                   <value>1</value>
-                  <label>"Working Days"</label>
+                  <label>
+                     <value>"Working Days"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <options>
                   <value>2</value>
-                  <label>"Calendar days"</label>
+                  <label>
+                     <value>"Calendar days"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </options>
                <response name="LEAVDURATION52"/>
                <bindingDependencies>LEAVDURATION52</bindingDependencies>
-            </cells>
-         </cells>
+            </bodyLine>
+         </body>
       </components>
    </components>
    <components xsi:type="Sequence"
                componentType="Sequence"
                id="kiq5mr0b"
                page="32">
-      <label>"VI - Favourite characters (Loop)"</label>
+      <label>
+         <value>"VI - Favourite characters (Loop)"</value>
+         <type>VTL|MD</type>
+      </label>
       <conditionFilter>
          <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+         <type>VTL|MD</type>
          <bindingDependencies>READY</bindingDependencies>
       </conditionFilter>
       <hierarchy>
          <sequence id="kiq5mr0b" page="32">
-            <label>"VI - Favourite characters (Loop)"</label>
+            <label>
+               <value>"VI - Favourite characters (Loop)"</value>
+               <type>VTL|MD</type>
+            </label>
          </sequence>
       </hierarchy>
       <components xsi:type="InputNumber"
@@ -2417,14 +3450,21 @@
                   max="20"
                   decimals="0"
                   page="33">
-         <label>"➡ 1. How many characters from the Simpsons family could you precisely describe?"</label>
+         <label>
+            <value>"➡ 1. How many characters from the Simpsons family could you precisely describe?"</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="kiq5mr0b" page="32">
-               <label>"VI - Favourite characters (Loop)"</label>
+               <label>
+                  <value>"VI - Favourite characters (Loop)"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>NB_CHAR</bindingDependencies>
@@ -2435,14 +3475,21 @@
                   id="kiq7bjam"
                   page="34"
                   paginatedLoop="false">
-         <label>"Add a character"</label>
+         <label>
+            <value>"Add a character"</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="kiq5mr0b" page="32">
-               <label>"VI - Favourite characters (Loop)"</label>
+               <label>
+                  <value>"VI - Favourite characters (Loop)"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>NAME_CHAR</bindingDependencies>
@@ -2452,17 +3499,27 @@
                      id="kiq5u8d5"
                      page="34"
                      goToPage="34">
-            <label>"Description of each character"</label>
+            <label>
+               <value>"Description of each character"</value>
+               <type>VTL|MD</type>
+            </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="kiq5mr0b" page="32">
-                  <label>"VI - Favourite characters (Loop)"</label>
+                  <label>
+                     <value>"VI - Favourite characters (Loop)"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
                <subSequence id="kiq5u8d5" page="34">
-                  <label>"Description of each character"</label>
+                  <label>
+                     <value>"Description of each character"</value>
+                     <type>VTL|MD</type>
+                  </label>
                </subSequence>
             </hierarchy>
             <components xsi:type="Input"
@@ -2471,17 +3528,27 @@
                         maxLength="30"
                         mandatory="false"
                         page="34">
-               <label>"➡ 2. What is the first name of this character?"</label>
+               <label>
+                  <value>"➡ 2. What is the first name of this character?"</value>
+                  <type>VTL|MD</type>
+               </label>
                <conditionFilter>
                   <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+                  <type>VTL|MD</type>
                   <bindingDependencies>READY</bindingDependencies>
                </conditionFilter>
                <hierarchy>
                   <sequence id="kiq5mr0b" page="32">
-                     <label>"VI - Favourite characters (Loop)"</label>
+                     <label>
+                        <value>"VI - Favourite characters (Loop)"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </sequence>
                   <subSequence id="kiq5u8d5" page="34">
-                     <label>"Description of each character"</label>
+                     <label>
+                        <value>"Description of each character"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </subSequence>
                </hierarchy>
                <bindingDependencies>NAME_CHAR</bindingDependencies>
@@ -2495,17 +3562,27 @@
                         max="120"
                         decimals="0"
                         page="34">
-               <label>"➡ 3. How old is this character in the first episode of the Simpsons family?"</label>
+               <label>
+                  <value>"➡ 3. How old is this character in the first episode of the Simpsons family?"</value>
+                  <type>VTL|MD</type>
+               </label>
                <conditionFilter>
                   <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+                  <type>VTL|MD</type>
                   <bindingDependencies>READY</bindingDependencies>
                </conditionFilter>
                <hierarchy>
                   <sequence id="kiq5mr0b" page="32">
-                     <label>"VI - Favourite characters (Loop)"</label>
+                     <label>
+                        <value>"VI - Favourite characters (Loop)"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </sequence>
                   <subSequence id="kiq5u8d5" page="34">
-                     <label>"Description of each character"</label>
+                     <label>
+                        <value>"Description of each character"</value>
+                        <type>VTL|MD</type>
+                     </label>
                   </subSequence>
                </hierarchy>
                <bindingDependencies>AGE_CHAR</bindingDependencies>
@@ -2518,12 +3595,12 @@
                componentType="Loop"
                id="kiq7cbgo"
                depth="1"
-               iterations="count(NAME_CHAR)"
                page="35"
                maxPage="3"
                paginatedLoop="true">
       <conditionFilter>
          <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+         <type>VTL|MD</type>
          <bindingDependencies>READY</bindingDependencies>
       </conditionFilter>
       <bindingDependencies>NAME_CHAR</bindingDependencies>
@@ -2535,14 +3612,21 @@
                   componentType="Sequence"
                   id="kiq5xw5p"
                   page="35.1">
-         <label>"VII - Other details about character named " || cast(cast(NAME_CHAR,string),string) || " "</label>
+         <label>
+            <value>"VII - Other details about character named " || cast(cast(NAME_CHAR,string),string) || " "</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+            <type>VTL|MD</type>
             <bindingDependencies>READY</bindingDependencies>
          </conditionFilter>
          <hierarchy>
             <sequence id="kiq5xw5p" page="35.1">
-               <label>"VII - Other details about character named " || cast(cast(NAME_CHAR,string),string) || " "</label>
+               <label>
+                  <value>"VII - Other details about character named " || cast(cast(NAME_CHAR,string),string) || " "</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>NAME_CHAR</bindingDependencies>
@@ -2551,25 +3635,38 @@
                      id="kiq65x3c"
                      mandatory="false"
                      page="35.2">
-            <label>"➡ 1. Is character named " || cast(cast(NAME_CHAR,string),string) || " your favourite one ? "</label>
+            <label>
+               <value>"➡ 1. Is character named " || cast(cast(NAME_CHAR,string),string) || " your favourite one ? "</value>
+               <type>VTL|MD</type>
+            </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="kiq5xw5p" page="35.1">
-                  <label>"VII - Other details about character named " || cast(cast(NAME_CHAR,string),string) || " "</label>
+                  <label>
+                     <value>"VII - Other details about character named " || cast(cast(NAME_CHAR,string),string) || " "</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
             </hierarchy>
             <bindingDependencies>NAME_CHAR</bindingDependencies>
             <bindingDependencies>FAVCHAR</bindingDependencies>
             <options>
                <value>1</value>
-               <label>"Yes"</label>
+               <label>
+                  <value>"Yes"</value>
+                  <type>VTL|MD</type>
+               </label>
             </options>
             <options>
                <value>0</value>
-               <label>"No"</label>
+               <label>
+                  <value>"No"</value>
+                  <type>VTL|MD</type>
+               </label>
             </options>
             <response name="FAVCHAR"/>
          </components>
@@ -2579,14 +3676,21 @@
                      maxLength="255"
                      mandatory="false"
                      page="35.3">
-            <label>"➡ 2. What is your best memory about character named " || cast(cast(NAME_CHAR,string),string) || " ? "</label>
+            <label>
+               <value>"➡ 2. What is your best memory about character named " || cast(cast(NAME_CHAR,string),string) || " ? "</value>
+               <type>VTL|MD</type>
+            </label>
             <conditionFilter>
                <value>(not(cast(READY,integer)  &lt;&gt;  1))</value>
+               <type>VTL|MD</type>
                <bindingDependencies>READY</bindingDependencies>
             </conditionFilter>
             <hierarchy>
                <sequence id="kiq5xw5p" page="35.1">
-                  <label>"VII - Other details about character named " || cast(cast(NAME_CHAR,string),string) || " "</label>
+                  <label>
+                     <value>"VII - Other details about character named " || cast(cast(NAME_CHAR,string),string) || " "</value>
+                     <type>VTL|MD</type>
+                  </label>
                </sequence>
             </hierarchy>
             <bindingDependencies>NAME_CHAR</bindingDependencies>
@@ -2594,18 +3698,29 @@
             <response name="MEMORY_CHAR"/>
          </components>
       </components>
+      <iterations>
+         <value>count(NAME_CHAR)</value>
+         <type>VTL|MD</type>
+      </iterations>
    </components>
    <components xsi:type="Sequence"
                componentType="Sequence"
                id="j6z12s2d"
                page="36">
-      <label>"VIII - Comment"</label>
+      <label>
+         <value>"VIII - Comment"</value>
+         <type>VTL|MD</type>
+      </label>
       <conditionFilter>
          <value>true</value>
+         <type>VTL|MD</type>
       </conditionFilter>
       <hierarchy>
          <sequence id="j6z12s2d" page="36">
-            <label>"VIII - Comment"</label>
+            <label>
+               <value>"VIII - Comment"</value>
+               <type>VTL|MD</type>
+            </label>
          </sequence>
       </hierarchy>
       <components xsi:type="Textarea"
@@ -2614,13 +3729,20 @@
                   maxLength="255"
                   mandatory="false"
                   page="37">
-         <label>"➡ 1. Do you have any comment about the survey?"</label>
+         <label>
+            <value>"➡ 1. Do you have any comment about the survey?"</value>
+            <type>VTL|MD</type>
+         </label>
          <conditionFilter>
             <value>true</value>
+            <type>VTL|MD</type>
          </conditionFilter>
          <hierarchy>
             <sequence id="j6z12s2d" page="36">
-               <label>"VIII - Comment"</label>
+               <label>
+                  <value>"VIII - Comment"</value>
+                  <type>VTL|MD</type>
+               </label>
             </sequence>
          </hierarchy>
          <bindingDependencies>SURVEY_COMMENT</bindingDependencies>
