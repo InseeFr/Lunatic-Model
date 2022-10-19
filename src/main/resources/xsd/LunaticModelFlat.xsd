@@ -540,6 +540,7 @@
             <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" />
+        <xs:attribute name="typeOfControl" type="ControlTypeOfControlEnum"/>
         <xs:attribute name="criticality" type="ControlCriticityEnum"/>
     </xs:complexType>
     <xs:simpleType name="ControlCriticityEnum">
@@ -547,6 +548,12 @@
             <xs:enumeration value="INFO"/>
             <xs:enumeration value="WARN"/>
             <xs:enumeration value="ERROR"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="ControlTypeOfControlEnum">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="FORMAT"/>
+            <xs:enumeration value="CONSISTENCY"/>
         </xs:restriction>
     </xs:simpleType>
     
