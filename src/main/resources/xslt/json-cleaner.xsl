@@ -21,8 +21,8 @@
         <xsl:copy-of select="xml-to-json($output-xml, map{'indent':true()})"/>
     </xsl:template>
     
-    <!-- delete type attribute -->
-    <xsl:template match="*[@key='type']" mode="clean"/>
+    <!-- delete type attribute except when key is linked to the suggesters block-->
+    <xsl:template match="*[@key='type'][not(ancestor::*[@key=('suggesters')])]" mode="clean"/>
     <!-- delete map useless inside array -->
     <xsl:template match="*[local-name(.)='map'][parent::*[@key=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTED') and local-name(.)='array'] | parent::*[@key=('values')]]" mode="clean">
         <xsl:apply-templates mode="clean"/>
@@ -30,7 +30,7 @@
     <xsl:template match="*[local-name(.)='map'][parent::*[@key='value' and local-name(.)='array'] or (self::*[@key='value'] and preceding-sibling::*[@key='variableType'])]" mode="clean">
         <xsl:apply-templates mode="clean"/>
     </xsl:template>
-    <!-- delete key attribue for array inside array -->
+    <!-- delete key attribute for array inside array -->
     <xsl:template match="*[local-name(.)='array' and @key=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTED','value')][ancestor::*[local-name(.)='array' and @key=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTED','value')]]" mode="clean">
         <xsl:copy>
             <xsl:apply-templates mode="clean"/>
@@ -47,6 +47,14 @@
                     <xsl:apply-templates mode="clean"/>
                 </xsl:copy>
             </xsl:for-each>
+        </xsl:copy>
+    </xsl:template>
+    
+    <!-- rename the rulesA key of suggesters to rules -->
+    <xsl:template match="*[@key='rulesA']" mode="clean">
+        <xsl:copy>
+        	<xsl:attribute name="key" select="'rules'"/>
+            <xsl:apply-templates select="node()" mode="clean"/>
         </xsl:copy>
     </xsl:template>
     
