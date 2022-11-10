@@ -43,6 +43,19 @@
             <xs:extension base="ComponentType"/>
         </xs:complexContent>
     </xs:complexType>
+    
+    
+    <xs:complexType name="PairwiseLinks">
+        <xs:complexContent>
+            <xs:extension base="ComponentType">
+                <xs:sequence>
+                    <xs:element name="xAxisIterations" type="labelType"/>
+                    <xs:element name="yAxisIterations" type="labelType"/>
+                    <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
 
     <xs:complexType name="Subsequence">
         <xs:complexContent>
@@ -141,6 +154,7 @@
             <xs:enumeration value="Loop"/>
             <xs:enumeration value="Table"/>
             <xs:enumeration value="Input"/>
+            <xs:enumeration value="Pairwise"/>
             <xs:enumeration value="InputNumber"/>
             <xs:enumeration value="Datepicker"/>
             <xs:enumeration value="CheckboxGroup"/>
