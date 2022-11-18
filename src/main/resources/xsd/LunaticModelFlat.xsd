@@ -154,7 +154,7 @@
             <xs:enumeration value="Loop"/>
             <xs:enumeration value="Table"/>
             <xs:enumeration value="Input"/>
-            <xs:enumeration value="Pairwise"/>
+            <xs:enumeration value="PairwiseLinks"/>
             <xs:enumeration value="InputNumber"/>
             <xs:enumeration value="Datepicker"/>
             <xs:enumeration value="CheckboxGroup"/>
