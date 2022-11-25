@@ -43,19 +43,6 @@
             <xs:extension base="ComponentType"/>
         </xs:complexContent>
     </xs:complexType>
-    
-    
-    <xs:complexType name="PairwiseLinks">
-        <xs:complexContent>
-            <xs:extension base="ComponentType">
-                <xs:sequence>
-                    <xs:element name="xAxisIterations" type="labelType"/>
-                    <xs:element name="yAxisIterations" type="labelType"/>
-                    <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
 
     <xs:complexType name="Subsequence">
         <xs:complexContent>
@@ -122,6 +109,37 @@
         <xs:attribute name="componentType" type="ComponentTypeEnum"/>
         <xs:attribute name="mandatory" type="xs:boolean"/>
         <xs:attribute name="page" type="xs:string"/>
+    </xs:complexType>
+    
+    <xs:complexType name="PairwiseLinks">
+        <xs:complexContent>
+            <xs:extension base="ComponentType">
+                <xs:sequence>
+                    <xs:element name="xAxisIterations" type="labelType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="yAxisIterations" type="labelType" minOccurs="0"/>
+                    <xs:element name="symLinks" type="symLinksType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="symLinksType">
+        <xs:sequence>
+            <xs:element name="LINKS"  minOccurs="0">
+                <xs:complexType>
+                    <xs:all>
+                        <xs:element name="LINK" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="source" type="xs:int" minOccurs="0"/>
+                                    <xs:element name="target" type="xs:int" minOccurs="0"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:all>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
     </xs:complexType>
     
     <xs:complexType name="labelType">
