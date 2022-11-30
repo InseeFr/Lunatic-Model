@@ -15,6 +15,7 @@
 		<saxon.version>9.7.0-8</saxon.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.compiler.release>11</maven.compiler.release>
 	</properties>
 
 	<licenses>
@@ -47,12 +48,7 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.25</version>
 		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.13.1</version>
-			<scope>test</scope>
-		</dependency>
+
 		<dependency>
 			<groupId>org.xmlunit</groupId>
 			<artifactId>xmlunit-matchers</artifactId>
@@ -87,22 +83,22 @@
 			<artifactId>jaxb-api</artifactId>
 			<version>2.3.1</version>
 		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>5.8.1</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
 		<pluginManagement>
 			<plugins>
 				<plugin>
+					<!-- Force version of maven compiler plugin-->
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<configuration>
-						<source>1.8</source>
-						<target>1.8</target>
-						<encoding>UTF-8</encoding>
-						<inputEncoding>UTF-8</inputEncoding>
-						<outputEncoding>UTF-8</outputEncoding>
-						<argLine>-Dfile.encoding=UTF-8</argLine>
-					</configuration>
+					<version>3.10.1</version>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -113,8 +109,6 @@
 				<version>2.22.0</version>
 				<configuration>
 					<encoding>UTF-8</encoding>
-					<inputEncoding>UTF-8</inputEncoding>
-					<outputEncoding>UTF-8</outputEncoding>
 					<argLine>-Dfile.encoding=UTF-8
 						-Djavax.xml.bind.context.factory=org.eclipse.persistence.jaxb.JAXBContextFactory</argLine>
 				</configuration>

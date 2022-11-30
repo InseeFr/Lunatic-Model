@@ -1,14 +1,13 @@
 package fr.insee.lunatic.test;
 
 import fr.insee.lunatic.Constants;
-import fr.insee.lunatic.conversion.data.JSONLunaticDataToXML;
 import fr.insee.lunatic.conversion.data.XMLLunaticDataToJSON;
 import fr.insee.lunatic.conversion.data.XMLLunaticToXMLEmptyData;
 import org.apache.commons.io.FileUtils;
 import org.json.JSONObject;
-import org.junit.Assert;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -27,12 +26,12 @@ public class LunaticXmlToDataTest {
 
     private static final Logger logger = LoggerFactory.getLogger(LunaticXmlToDataTest.class);
 
-    @BeforeClass
+    @BeforeAll
     public static void setUpBeforeClass() throws Exception {
     }
 
 
-    @Test
+    @org.junit.jupiter.api.Test
     public void testLunaticXml2EmptyXmlData() {
         logger.debug("Launch test : lunaticXML to empty xml data");
         try {
@@ -46,18 +45,18 @@ public class LunaticXmlToDataTest {
 
             File expectedFile = new File(String.format("%s/out/questionnaire-data.xml", Constants.RESOURCES_FOLDER_DATA_PATH));
             Diff diff = xmlDiff.getDiff(xmlOut,expectedFile);
-            Assert.assertFalse(getDiffMessage(diff, basePath), diff.hasDifferences());
+            Assertions.assertFalse(diff.hasDifferences(), getDiffMessage(diff, basePath));
 
         } catch (IOException e) {
             e.printStackTrace();
-            Assert.fail();
+            Assertions.fail();
         } catch (NullPointerException e) {
             e.printStackTrace();
-            Assert.fail();
+            Assertions.fail();
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
-            Assert.fail();
+            Assertions.fail();
         }
     }
 
@@ -86,14 +85,14 @@ public class LunaticXmlToDataTest {
 
         } catch (IOException e) {
             e.printStackTrace();
-            Assert.fail();
+            Assertions.fail();
         } catch (NullPointerException e) {
             e.printStackTrace();
-            Assert.fail();
+            Assertions.fail();
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println(e.getMessage());
-            Assert.fail();
+            Assertions.fail();
         }
     }
 
