@@ -125,14 +125,14 @@
     
     <xs:complexType name="symLinksType">
         <xs:sequence>
-            <xs:element name="LINKS"  minOccurs="0">
+            <xs:element name="LINKS"  minOccurs="0" maxOccurs="1">
                 <xs:complexType>
-                        <xs:element name="LINK" minOccurs="0">
                     <xs:sequence>
+                        <xs:element name="LINK" minOccurs="0" maxOccurs="unbounded">
                             <xs:complexType>
                                 <xs:sequence>
-                                    <xs:element name="source" type="xs:int" minOccurs="0"/>
-                                    <xs:element name="target" type="xs:int" minOccurs="0"/>
+                                    <xs:element name="source" type="xs:int" minOccurs="0" maxOccurs="1"/>
+                                    <xs:element name="target" type="xs:int" minOccurs="0" maxOccurs="1"/>
                                 </xs:sequence>
                             </xs:complexType>
                         </xs:element>
