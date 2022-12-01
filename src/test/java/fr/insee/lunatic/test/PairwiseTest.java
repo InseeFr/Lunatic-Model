@@ -19,7 +19,7 @@ public class PairwiseTest {
             jsonCleaner.clean(
                     translator2.translate(
                             translator.generate(
-                                    this.getClass().getClassLoader().getResourceAsStream("pairwise/pairwise-test.xml")
+                                    this.getClass().getClassLoader().getResourceAsStream("pairwise/pairwise-hierarchical-test.xml")
                             )));
         });
     }
