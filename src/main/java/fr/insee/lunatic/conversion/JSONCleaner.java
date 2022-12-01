@@ -102,12 +102,12 @@ public class JSONCleaner {
 								((JsonObject) jsonSymLinks.get(0)).getJsonObject("LINKS")
 										.getJsonArray("LINK").forEach(jsonValue3 -> {
 											JsonObject jsonSourceTarget = (JsonObject) jsonValue3;
-											int sourceValue = jsonSourceTarget.getInt("source");
+											String sourceKey = String.valueOf(jsonSourceTarget.get("source"));
 											if (jsonSourceTarget.get("target") != null) {
-												int targetValue = jsonSourceTarget.getInt("target");
-												jsonLINKSBuilder.add(String.valueOf(sourceValue), String.valueOf(targetValue));
+												String targetKey = String.valueOf(jsonSourceTarget.get("target"));
+												jsonLINKSBuilder.add(sourceKey, targetKey);
 											} else {
-												jsonLINKSBuilder.addNull(String.valueOf(sourceValue));
+												jsonLINKSBuilder.addNull(sourceKey);
 											}
 										});
 								jsonSymLinksBuilder.add("LINKS", jsonLINKSBuilder.build());
