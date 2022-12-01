@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire xmlns="http://xml.insee.fr/schema/applis/lunatic-h"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                id="lawbsbdk"
+                modele="RECETTELIE"
+                enoCoreVersion="2.4.1-pairwise-dev-pairwise"
+                missing="false"
+                pagination="question"
+                maxPage="6">
+   <label>
+      <value>Recette liens deux à deux</value>
+      <type>VTL|MD</type>
+   </label>
+   <components xsi:type="Sequence"
+                componentType="Sequence"
+                id="lawc2k2g"
+                page="1">
+      <label>
+         <value>"I - " || "S1"</value>
+         <type>VTL|MD</type>
+      </label>
+      <conditionFilter>
+         <value>true</value>
+         <type>VTL</type>
+      </conditionFilter>
+      <hierarchy>
+         <sequence id="lawc2k2g" page="1">
+            <label>
+               <value>"I - " || "S1"</value>
+               <type>VTL|MD</type>
+            </label>
+         </sequence>
+      </hierarchy>
+      <components xsi:type="Table"
+                   componentType="Table"
+                   id="lawceaq9"
+                   positioning="HORIZONTAL"
+                   mandatory="false"
+                   page="2">
+         <label>
+            <value>"➡ 1. " || "Prénoms"</value>
+            <type>VTL|MD</type>
+         </label>
+         <conditionFilter>
+            <value>true</value>
+            <type>VTL</type>
+         </conditionFilter>
+         <hierarchy>
+            <sequence id="lawc2k2g" page="1">
+               <label>
+                  <value>"I - " || "S1"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </sequence>
+         </hierarchy>
+         <bindingDependencies>PRENOMS1</bindingDependencies>
+         <bindingDependencies>PRENOMS1_1_1</bindingDependencies>
+         <bindingDependencies>PRENOMS1_2_1</bindingDependencies>
+         <bindingDependencies>PRENOMS1_3_1</bindingDependencies>
+         <bindingDependencies>PRENOMS1_4_1</bindingDependencies>
+         <bindingDependencies>PRENOMS1_5_1</bindingDependencies>
+         <bindingDependencies>PRENOMS1_6_1</bindingDependencies>
+         <bindingDependencies>PRENOMS1_7_1</bindingDependencies>
+         <bindingDependencies>PRENOMS1_8_1</bindingDependencies>
+         <bindingDependencies>PRENOMS1_9_1</bindingDependencies>
+         <bindingDependencies>PRENOMS1_10_1</bindingDependencies>
+         <lines>
+            <min>
+               <value>1</value>
+               <type>VTL</type>
+            </min>
+            <max>
+               <value>10</value>
+               <type>VTL</type>
+            </max>
+         </lines>
+         <header>
+            <label>
+               <value>"Prénom"</value>
+               <type>VTL|MD</type>
+            </label>
+         </header>
+         <body>
+            <bodyLine id="lawceaq9-QOP-lawcigj6" componentType="Input" maxLength="50">
+               <response name="PRENOMS1_1_1"/>
+               <bindingDependencies>PRENOMS1_1_1</bindingDependencies>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="lawceaq9-QOP-lawcigj6" componentType="Input" maxLength="50">
+               <response name="PRENOMS1_2_1"/>
+               <bindingDependencies>PRENOMS1_2_1</bindingDependencies>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="lawceaq9-QOP-lawcigj6" componentType="Input" maxLength="50">
+               <response name="PRENOMS1_3_1"/>
+               <bindingDependencies>PRENOMS1_3_1</bindingDependencies>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="lawceaq9-QOP-lawcigj6" componentType="Input" maxLength="50">
+               <response name="PRENOMS1_4_1"/>
+               <bindingDependencies>PRENOMS1_4_1</bindingDependencies>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="lawceaq9-QOP-lawcigj6" componentType="Input" maxLength="50">
+               <response name="PRENOMS1_5_1"/>
+               <bindingDependencies>PRENOMS1_5_1</bindingDependencies>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="lawceaq9-QOP-lawcigj6" componentType="Input" maxLength="50">
+               <response name="PRENOMS1_6_1"/>
+               <bindingDependencies>PRENOMS1_6_1</bindingDependencies>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="lawceaq9-QOP-lawcigj6" componentType="Input" maxLength="50">
+               <response name="PRENOMS1_7_1"/>
+               <bindingDependencies>PRENOMS1_7_1</bindingDependencies>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="lawceaq9-QOP-lawcigj6" componentType="Input" maxLength="50">
+               <response name="PRENOMS1_8_1"/>
+               <bindingDependencies>PRENOMS1_8_1</bindingDependencies>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="lawceaq9-QOP-lawcigj6" componentType="Input" maxLength="50">
+               <response name="PRENOMS1_9_1"/>
+               <bindingDependencies>PRENOMS1_9_1</bindingDependencies>
+            </bodyLine>
+         </body>
+         <body>
+            <bodyLine id="lawceaq9-QOP-lawcigj6" componentType="Input" maxLength="50">
+               <response name="PRENOMS1_10_1"/>
+               <bindingDependencies>PRENOMS1_10_1</bindingDependencies>
+            </bodyLine>
+         </body>
+      </components>
+      <components xsi:type="Subsequence"
+                   componentType="Subsequence"
+                   id="lawc61hb"
+                   goToPage="3">
+         <label>
+            <value>SS_LIENS</value>
+            <type>VTL|MD</type>
+         </label>
+         <conditionFilter>
+            <value>true</value>
+            <type>VTL</type>
+         </conditionFilter>
+         <hierarchy>
+            <sequence id="lawc2k2g" page="1">
+               <label>
+                  <value>"I - " || "S1"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </sequence>
+            <subSequence id="lawc61hb" page="3">
+               <label>
+                  <value>SS_LIENS</value>
+                  <type>VTL|MD</type>
+               </label>
+            </subSequence>
+         </hierarchy>
+         <components xsi:type="PairwiseLinks"
+                      componentType="PairwiseLinks"
+                      id="lawc36ok"
+                      mandatory="false"
+                      page="3">
+            <conditionFilter>
+               <value>true</value>
+               <type>VTL</type>
+            </conditionFilter>
+            <hierarchy>
+               <sequence id="lawc2k2g" page="1">
+                  <label>
+                     <value>"I - " || "S1"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </sequence>
+               <subSequence id="lawc61hb" page="3">
+                  <label>
+                     <value>SS_LIENS</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </subSequence>
+            </hierarchy>
+            <bindingDependencies>LIENS</bindingDependencies>
+            <xAxisIterations>
+               <value>count(PRENOMS1)</value>
+               <type>VTL|MD</type>
+            </xAxisIterations>
+            <yAxisIterations>
+               <value>count(PRENOMS1)</value>
+               <type>VTL|MD</type>
+            </yAxisIterations>
+            <symLinks>
+               <LINKS>
+                  <LINK>
+                     <source>1</source>
+                     <target>1</target>
+                  </LINK>
+                  <LINK>
+                     <source>2</source>
+                     <target>3</target>
+                  </LINK>
+                  <LINK>
+                     <source>3</source>
+                     <target>2</target>
+                  </LINK>
+                  <LINK>
+                     <source>4</source>
+                     <target>4</target>
+                  </LINK>
+                  <LINK>
+                     <source>5</source>
+                     <target>6</target>
+                  </LINK>
+                  <LINK>
+                     <source>6</source>
+                     <target>5</target>
+                  </LINK>
+                  <LINK>
+                     <source>7</source>
+                     <target>8</target>
+                  </LINK>
+                  <LINK>
+                     <source>8</source>
+                     <target>7</target>
+                  </LINK>
+                  <LINK>
+                     <source>9</source>
+                     <target>9</target>
+                  </LINK>
+                  <LINK>
+                     <source>10</source>
+                     <target>12</target>
+                  </LINK>
+                  <LINK>
+                     <source>11</source>
+                     <target>13</target>
+                  </LINK>
+                  <LINK>
+                     <source>12</source>
+                     <target>10</target>
+                  </LINK>
+                  <LINK>
+                     <source>13</source>
+                     <target>11</target>
+                  </LINK>
+                  <LINK>
+                     <source>14</source>
+                     <target>null</target>
+                  </LINK>
+                  <LINK>
+                     <source>15</source>
+                     <target>null</target>
+                  </LINK>
+                  <LINK>
+                     <source>16</source>
+                     <target>16</target>
+                  </LINK>
+                  <LINK>
+                     <source>17</source>
+                     <target>null</target>
+                  </LINK>
+               </LINKS>
+            </symLinks>
+            <components xsi:type="Dropdown"
+                         componentType="Dropdown"
+                         id="lawc36ok-pairwise-dropdown"
+                         mandatory="false"
+                         page="4">
+               <label>
+                  <value>"➡ 2. " || "Liens"</value>
+                  <type>VTL|MD</type>
+               </label>
+               <conditionFilter>
+                  <value>true</value>
+                  <type>VTL</type>
+               </conditionFilter>
+               <bindingDependencies>LIENS</bindingDependencies>
+               <options>
+                  <value>1</value>
+                  <label>
+                     <value>"Toto"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>2</value>
+                  <label>
+                     <value>"Truc"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <response name="LIENS"/>
+            </components>
+         </components>
+      </components>
+   </components>
+   <components xsi:type="Sequence"
+                componentType="Sequence"
+                id="COMMENT-SEQ"
+                page="5">
+      <label>
+         <value>"Commentaire"</value>
+         <type>VTL|MD</type>
+      </label>
+      <conditionFilter>
+         <value>true</value>
+         <type>VTL</type>
+      </conditionFilter>
+      <hierarchy>
+         <sequence id="COMMENT-SEQ" page="5">
+            <label>
+               <value>"Commentaire"</value>
+               <type>VTL|MD</type>
+            </label>
+         </sequence>
+      </hierarchy>
+      <components xsi:type="Textarea"
+                   componentType="Textarea"
+                   id="COMMENT-QUESTION"
+                   maxLength="2000"
+                   mandatory="false"
+                   page="6">
+         <label>
+            <value>"Avez-vous des remarques concernant l'enquête ou des commentaires ?"</value>
+            <type>VTL|MD</type>
+         </label>
+         <conditionFilter>
+            <value>true</value>
+            <type>VTL</type>
+         </conditionFilter>
+         <hierarchy>
+            <sequence id="COMMENT-SEQ" page="5">
+               <label>
+                  <value>"Commentaire"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </sequence>
+         </hierarchy>
+         <bindingDependencies>COMMENT_QE</bindingDependencies>
+         <response name="COMMENT_QE"/>
+      </components>
+   </components>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PRENOMS1_1_1</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PRENOMS1_2_1</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PRENOMS1_3_1</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PRENOMS1_4_1</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PRENOMS1_5_1</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PRENOMS1_6_1</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PRENOMS1_7_1</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PRENOMS1_8_1</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PRENOMS1_9_1</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PRENOMS1_10_1</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>COMMENT_QE</name>
+      <!--<componentRef>COMMENT-QUESTION</componentRef>-->
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>PRENOMS1</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>LIENS</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="CALCULATED" xsi:type="VariableType">
+      <name>FILTER_RESULT_PRENOMS</name>
+      <expression>
+         <value>true</value>
+         <type>VTL</type>
+      </expression>
+      <inFilter>false</inFilter>
+   </variables>
+   <variables variableType="CALCULATED" xsi:type="VariableType">
+      <name>FILTER_RESULT_LIENS</name>
+      <expression>
+         <value>true</value>
+         <type>VTL</type>
+      </expression>
+      <inFilter>false</inFilter>
+   </variables>
+   <cleaning/>
+   <resizing/>
+</Questionnaire>
