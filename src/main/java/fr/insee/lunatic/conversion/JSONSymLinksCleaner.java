@@ -17,6 +17,7 @@ public class JSONSymLinksCleaner {
     /**
      * Given a Lunatic JSON flat questionnaire, replace the source/target fields by key/values in "symLinks" attribute
      * in "PairwiseLinks" components to be compliant with the Lunatic JS library.
+     * Warning: no validation is done on the string input. */
     public String clean(String stringFlatQuestionnaire) throws IOException {
 
         if (stringFlatQuestionnaire == null) {
