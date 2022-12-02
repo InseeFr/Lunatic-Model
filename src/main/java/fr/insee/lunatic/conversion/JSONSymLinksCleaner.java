@@ -4,10 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.json.*;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 
 public class JSONSymLinksCleaner {
@@ -26,23 +23,25 @@ public class JSONSymLinksCleaner {
         }
 
         // Read the json string into a JsonObject
-        JsonReader jsonReader = Json.createReader(
-                new ByteArrayInputStream(stringFlatQuestionnaire.getBytes(StandardCharsets.UTF_8)));
-        JsonObject jsonQuestionnaire = jsonReader.readObject();
+        try (JsonReader jsonReader = Json.createReader(
+                new ByteArrayInputStream(stringFlatQuestionnaire.getBytes(StandardCharsets.UTF_8)))) {
+            JsonObject jsonQuestionnaire = jsonReader.readObject();
 
-        // We will copy the entire input json object, except the "symLinks" attribute in PairwiseLinks components
-        JsonObjectBuilder jsonQuestionnaireBuilder = Json.createObjectBuilder();
-        editQuestionnaire(jsonQuestionnaire, jsonQuestionnaireBuilder);
+            // We will copy the entire input json object, except the "symLinks" attribute in PairwiseLinks components
+            JsonObjectBuilder jsonQuestionnaireBuilder = Json.createObjectBuilder();
+            editQuestionnaire(jsonQuestionnaire, jsonQuestionnaireBuilder);
 
-        OutputStream outputStream = new ByteArrayOutputStream();
+            OutputStream outputStream = new ByteArrayOutputStream();
 
-        JsonWriter jsonWriter = Json.createWriter(outputStream);
-        jsonWriter.writeObject(jsonQuestionnaireBuilder.build());
+            JsonWriter jsonWriter = Json.createWriter(outputStream);
+            jsonWriter.writeObject(jsonQuestionnaireBuilder.build());
 
-        String result = outputStream.toString();
-        outputStream.close();
+            String result = outputStream.toString();
+            outputStream.close();
 
-        return result;
+            return result;
+        }
+
     }
 
     private static void editQuestionnaire(JsonObject jsonQuestionnaire, JsonObjectBuilder jsonQuestionnaireBuilder) {
