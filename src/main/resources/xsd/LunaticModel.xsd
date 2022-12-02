@@ -121,7 +121,7 @@
         <xs:complexContent>
             <xs:extension base="ComponentType">
                 <xs:sequence>
-                    <xs:element name="xAxisIterations" type="labelType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="xAxisIterations" type="labelType" minOccurs="0"/>
                     <xs:element name="yAxisIterations" type="labelType" minOccurs="0"/>
                     <xs:element name="symLinks" type="symLinksType" minOccurs="0" maxOccurs="unbounded"/>
                 </xs:sequence>
