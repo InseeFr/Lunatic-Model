@@ -47,7 +47,7 @@ public class JSONSymLinksCleaner {
 
     private static void editQuestionnaire(JsonObject jsonQuestionnaire, JsonObjectBuilder jsonQuestionnaireBuilder) {
         jsonQuestionnaire.forEach((key, jsonValue) -> {
-            if (!key.equals("components")) {
+            if (! "components".equals(key)) {
                 jsonQuestionnaireBuilder.add(key, jsonValue);
             } else {
                 editComponents(jsonQuestionnaireBuilder, (JsonArray) jsonValue);
@@ -59,7 +59,7 @@ public class JSONSymLinksCleaner {
         JsonArrayBuilder jsonComponentsBuilder = Json.createArrayBuilder();
         for (JsonValue jsonValue1 : jsonComponents) {
             JsonObject jsonComponent = (JsonObject) jsonValue1;
-            if (!jsonComponent.getString("componentType").equals("PairwiseLinks")) {
+            if (! "PairwiseLinks".equals(jsonComponent.getString("componentType"))) {
                 jsonComponentsBuilder.add(jsonValue1);
             } else {
                 editPairwiseLinks(jsonComponentsBuilder, (JsonObject) jsonValue1);
@@ -71,7 +71,7 @@ public class JSONSymLinksCleaner {
     private static void editPairwiseLinks(JsonArrayBuilder jsonComponentsBuilder, JsonObject jsonPairwiseLinks) {
         JsonObjectBuilder jsonPairwiseBuilder = Json.createObjectBuilder();
         jsonPairwiseLinks.forEach((key2, jsonValue2) -> {
-            if (!key2.equals("symLinks")) {
+            if (! "symLinks".equals(key2)) {
                 jsonPairwiseBuilder.add(key2, jsonValue2);
             } else {
                 editSymLinks(jsonPairwiseBuilder, (JsonObject) jsonValue2);
