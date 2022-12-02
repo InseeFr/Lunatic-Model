@@ -77,49 +77,9 @@ public class JSONCleaner {
 				new ByteArrayInputStream(stringQuestionnaire.getBytes(StandardCharsets.UTF_8)));
 		JsonObject jsonQuestionnaire = jsonReader.readObject();
 
-		// // We will copy the entire input json object, except the "symLinks" attribute in PairwiseLinks components
+		// We will copy the entire input json object, except the "symLinks" attribute in PairwiseLinks components
 		JsonObjectBuilder jsonQuestionnaireBuilder = Json.createObjectBuilder();
-
-		jsonQuestionnaire.forEach((key, jsonValue) -> {
-			if (!key.equals("components")) {
-				jsonQuestionnaireBuilder.add(key, jsonValue);
-			} else {
-				JsonArray jsonComponents = (JsonArray) jsonValue;
-				JsonArrayBuilder jsonComponentsBuilder = Json.createArrayBuilder();
-				for (JsonValue jsonValue1 : jsonComponents) {
-					JsonObject jsonComponent = (JsonObject) jsonValue1;
-					if (!jsonComponent.getString("componentType").equals("PairwiseLinks")) {
-						jsonComponentsBuilder.add(jsonValue1);
-					} else {
-						JsonObjectBuilder jsonPairwiseBuilder = Json.createObjectBuilder();
-						((JsonObject) jsonValue1).forEach((key2, jsonValue2) -> {
-							if (!key2.equals("symLinks")) {
-								jsonPairwiseBuilder.add(key2, jsonValue2);
-							} else {
-								JsonObject jsonSymLinks = (JsonObject) jsonValue2;
-								JsonObjectBuilder jsonSymLinksBuilder = Json.createObjectBuilder();
-								JsonObjectBuilder jsonLINKSBuilder = Json.createObjectBuilder();
-								jsonSymLinks.getJsonObject("LINKS")
-										.getJsonArray("LINK").forEach(jsonValue3 -> {
-											JsonObject jsonSourceTarget = (JsonObject) jsonValue3;
-											String sourceKey = String.valueOf(jsonSourceTarget.get("source"));
-											if (jsonSourceTarget.get("target") != null) {
-												String targetKey = String.valueOf(jsonSourceTarget.get("target"));
-												jsonLINKSBuilder.add(sourceKey, targetKey);
-											} else {
-												jsonLINKSBuilder.addNull(sourceKey);
-											}
-										});
-								jsonSymLinksBuilder.add("LINKS", jsonLINKSBuilder.build());
-								jsonPairwiseBuilder.add("symLinks", jsonSymLinksBuilder.build());
-							}
-						});
-						jsonComponentsBuilder.add(jsonPairwiseBuilder.build());
-					}
-				}
-				jsonQuestionnaireBuilder.add("components", jsonComponentsBuilder.build());
-			}
-		});
+		editQuestionnaire(jsonQuestionnaire, jsonQuestionnaireBuilder);
 
 		OutputStream outputStream = new ByteArrayOutputStream();
 
@@ -130,6 +90,59 @@ public class JSONCleaner {
 		outputStream.close();
 
 		return result;
+	}
+
+	private static void editQuestionnaire(JsonObject jsonQuestionnaire, JsonObjectBuilder jsonQuestionnaireBuilder) {
+		jsonQuestionnaire.forEach((key, jsonValue) -> {
+			if (!key.equals("components")) {
+				jsonQuestionnaireBuilder.add(key, jsonValue);
+			} else {
+				editComponents(jsonQuestionnaireBuilder, (JsonArray) jsonValue);
+			}
+		});
+	}
+
+	private static void editComponents(JsonObjectBuilder jsonQuestionnaireBuilder, JsonArray jsonComponents) {
+		JsonArrayBuilder jsonComponentsBuilder = Json.createArrayBuilder();
+		for (JsonValue jsonValue1 : jsonComponents) {
+			JsonObject jsonComponent = (JsonObject) jsonValue1;
+			if (!jsonComponent.getString("componentType").equals("PairwiseLinks")) {
+				jsonComponentsBuilder.add(jsonValue1);
+			} else {
+				editPairwiseLinks(jsonComponentsBuilder, (JsonObject) jsonValue1);
+			}
+		}
+		jsonQuestionnaireBuilder.add("components", jsonComponentsBuilder.build());
+	}
+
+	private static void editPairwiseLinks(JsonArrayBuilder jsonComponentsBuilder, JsonObject jsonPairwiseLinks) {
+		JsonObjectBuilder jsonPairwiseBuilder = Json.createObjectBuilder();
+		jsonPairwiseLinks.forEach((key2, jsonValue2) -> {
+			if (!key2.equals("symLinks")) {
+				jsonPairwiseBuilder.add(key2, jsonValue2);
+			} else {
+				editSymLinks(jsonPairwiseBuilder, (JsonObject) jsonValue2);
+			}
+		});
+		jsonComponentsBuilder.add(jsonPairwiseBuilder.build());
+	}
+
+	private static void editSymLinks(JsonObjectBuilder jsonPairwiseBuilder, JsonObject jsonLINKS) {
+		JsonObjectBuilder jsonSymLinksBuilder = Json.createObjectBuilder();
+		JsonObjectBuilder jsonLINKSBuilder = Json.createObjectBuilder();
+		jsonLINKS.getJsonObject("LINKS")
+				.getJsonArray("LINK").forEach(jsonValue3 -> {
+					JsonObject jsonSourceTarget = (JsonObject) jsonValue3;
+					String sourceKey = String.valueOf(jsonSourceTarget.get("source"));
+					if (jsonSourceTarget.get("target") != null) {
+						String targetKey = String.valueOf(jsonSourceTarget.get("target"));
+						jsonLINKSBuilder.add(sourceKey, targetKey);
+					} else {
+						jsonLINKSBuilder.addNull(sourceKey);
+					}
+				});
+		jsonSymLinksBuilder.add("LINKS", jsonLINKSBuilder.build());
+		jsonPairwiseBuilder.add("symLinks", jsonSymLinksBuilder.build());
 	}
 
 }
