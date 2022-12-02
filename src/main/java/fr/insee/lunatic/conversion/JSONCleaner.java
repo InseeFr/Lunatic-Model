@@ -96,10 +96,10 @@ public class JSONCleaner {
 							if (!key2.equals("symLinks")) {
 								jsonPairwiseBuilder.add(key2, jsonValue2);
 							} else {
-								JsonArray jsonSymLinks = (JsonArray) jsonValue2;
+								JsonObject jsonSymLinks = (JsonObject) jsonValue2;
 								JsonObjectBuilder jsonSymLinksBuilder = Json.createObjectBuilder();
 								JsonObjectBuilder jsonLINKSBuilder = Json.createObjectBuilder();
-								((JsonObject) jsonSymLinks.get(0)).getJsonObject("LINKS")
+								jsonSymLinks.getJsonObject("LINKS")
 										.getJsonArray("LINK").forEach(jsonValue3 -> {
 											JsonObject jsonSourceTarget = (JsonObject) jsonValue3;
 											String sourceKey = String.valueOf(jsonSourceTarget.get("source"));
