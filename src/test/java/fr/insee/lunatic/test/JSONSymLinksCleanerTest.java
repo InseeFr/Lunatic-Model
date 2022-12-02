@@ -17,4 +17,9 @@ public class JSONSymLinksCleanerTest {
         symLinksCleaner = new JSONSymLinksCleaner();
     }
 
+    @Test
+    public void nullString() throws IOException {
+        assertNull(symLinksCleaner.clean(null));
+    }
+    
 }

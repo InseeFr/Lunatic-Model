@@ -1,5 +1,8 @@
 package fr.insee.lunatic.conversion;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.json.*;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -9,10 +12,17 @@ import java.nio.charset.StandardCharsets;
 
 public class JSONSymLinksCleaner {
 
+    private static final Logger logger = LoggerFactory.getLogger(JSONSymLinksCleaner.class);
+
     /**
      * Given a Lunatic JSON flat questionnaire, replace the source/target fields by key/values in "symLinks" attribute
      * in "PairwiseLinks" components to be compliant with the Lunatic JS library.
     public String clean(String stringFlatQuestionnaire) throws IOException {
+
+        if (stringFlatQuestionnaire == null) {
+            logger.warn("null string given in JSON SymLinks cleaner.");
+            return null;
+        }
 
         // Read the json string into a JsonObject
         JsonReader jsonReader = Json.createReader(
