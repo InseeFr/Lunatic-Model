@@ -1,15 +1,11 @@
 package fr.insee.lunatic.conversion;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-
+import fr.insee.lunatic.Constants;
+import fr.insee.lunatic.utils.XslTransformation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.insee.lunatic.Constants;
-import fr.insee.lunatic.utils.XslTransformation;
+import java.io.*;
 
 /**
  * remove technical attribute as xsi:type
@@ -26,6 +22,10 @@ public class JSONCleaner {
 	
 	public String clean(String jsonString) throws Exception {
 
+		// New step: apply (Java) symLinks cleaning
+		JSONSymLinksCleaner jsonSymLinksCleaner = new JSONSymLinksCleaner();
+		jsonString = jsonSymLinksCleaner.clean(jsonString);
+
 		if ((jsonString == null) || (jsonString.length() == 0))
 			return null;
 		InputStream json = new ByteArrayInputStream(wrapJsonWithXml(jsonString).getBytes("UTF-8"));
@@ -34,9 +34,11 @@ public class JSONCleaner {
 	}
 	
 	public String generate(InputStream isFinalInput) throws Exception {
+		// Unchanged step: use XSLT "cleaning" sheet
 		OutputStream osOutputFile = generateOS(isFinalInput);
 		String res = osOutputFile.toString();
 		osOutputFile.close();
+
 		return res;
 	}
 
@@ -63,4 +65,5 @@ public class JSONCleaner {
 				.replaceAll("<", "&lt;")
 				.replaceAll(">", "&gt;");
 	}
+
 }
