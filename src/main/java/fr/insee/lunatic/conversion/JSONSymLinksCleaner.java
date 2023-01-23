@@ -85,12 +85,14 @@ public class JSONSymLinksCleaner {
         jsonLINKS.getJsonObject("LINKS")
                 .getJsonArray("LINK").forEach(jsonValue3 -> {
                     JsonObject jsonSourceTarget = (JsonObject) jsonValue3;
-                    String sourceKey = String.valueOf(jsonSourceTarget.get("source"));
-                    if (jsonSourceTarget.get("target") != null) {
-                        String targetKey = String.valueOf(jsonSourceTarget.get("target"));
-                        jsonLINKSBuilder.add(sourceKey, targetKey);
+                    JsonString sourceKey = (JsonString) jsonSourceTarget.get("source");
+                    JsonString targetKey = (JsonString) jsonSourceTarget.get("target");
+                    // target field is not mandatory and can be null
+                    // json converted from xml can contain "null" string values
+                    if (targetKey != null && !"null".equals(targetKey.getString())) {
+                        jsonLINKSBuilder.add(sourceKey.getString(), targetKey);
                     } else {
-                        jsonLINKSBuilder.addNull(sourceKey);
+                        jsonLINKSBuilder.addNull(sourceKey.getString());
                     }
                 });
         jsonSymLinksBuilder.add("LINKS", jsonLINKSBuilder.build());
