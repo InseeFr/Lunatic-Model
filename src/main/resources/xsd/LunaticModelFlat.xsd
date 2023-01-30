@@ -126,23 +126,18 @@
     
     <xs:complexType name="symLinksType">
         <xs:sequence>
-            <xs:element name="LINKS"  minOccurs="0" maxOccurs="1">
+            <xs:element name="LINK" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="LINK" minOccurs="0" maxOccurs="unbounded">
-                            <xs:complexType>
-                                <xs:sequence>
-                                    <xs:element name="source" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                                    <xs:element name="target" type="xs:string" minOccurs="0" maxOccurs="1"/>
-                                </xs:sequence>
-                            </xs:complexType>
-                        </xs:element>
+                        <xs:element name="source" type="xs:string" maxOccurs="1"/>
+                        <xs:element name="target" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
+        <xs:attribute name="name" type="xs:string"/>
     </xs:complexType>
-    
+
     <xs:complexType name="labelType">
         <xs:sequence>
             <xs:element name="value" type="xs:string" minOccurs="0"/>

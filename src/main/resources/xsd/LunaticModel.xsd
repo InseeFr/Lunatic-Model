@@ -135,7 +135,7 @@
             <xs:element name="LINK" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="source" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                        <xs:element name="source" type="xs:string" maxOccurs="1"/>
                         <xs:element name="target" type="xs:string" minOccurs="0" maxOccurs="1"/>
                     </xs:sequence>
                 </xs:complexType>
@@ -143,7 +143,6 @@
         </xs:sequence>
         <xs:attribute name="name" type="xs:string"/>
     </xs:complexType>
-    
 
     <xs:complexType name="labelType">
         <xs:sequence>
