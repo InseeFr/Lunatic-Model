@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Questionnaire xmlns="http://xml.insee.fr/schema/applis/lunatic-h"
-                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                id="lawbsbdk"
-                modele="RECETTELIE"
-                enoCoreVersion="2.4.1-pairwise-dev-pairwise"
-                missing="false"
-                pagination="question"
-                maxPage="6">
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               id="lcswhwa1"
+               modele="L2A2_LOOP"
+               enoCoreVersion="${project.version}"
+               missing="false">
    <label>
-      <value>Recette liens deux à deux</value>
+      <value>Recette liens deux à deux --- Boucle</value>
       <type>VTL|MD</type>
    </label>
-   <components xsi:type="Sequence"
-                componentType="Sequence"
-                id="lawc2k2g"
-                page="1">
+   <components xsi:type="Sequence" componentType="Sequence" id="lcswhkve">
       <label>
-         <value>"I - " || "S1"</value>
+         <value>"I - " || "Composition du ménage"</value>
          <type>VTL|MD</type>
       </label>
       <conditionFilter>
@@ -24,218 +19,408 @@
          <type>VTL</type>
       </conditionFilter>
       <hierarchy>
-         <sequence id="lawc2k2g" page="1">
+         <sequence id="lcswhkve">
             <label>
-               <value>"I - " || "S1"</value>
+               <value>"I - " || "Composition du ménage"</value>
                <type>VTL|MD</type>
             </label>
          </sequence>
       </hierarchy>
-      <components xsi:type="Table"
-                   componentType="Table"
-                   id="lawceaq9"
-                   positioning="HORIZONTAL"
-                   mandatory="false"
-                   page="2">
+      <components xsi:type="InputNumber"
+                  componentType="InputNumber"
+                  id="lcswldsp"
+                  mandatory="false"
+                  min="1"
+                  max="10"
+                  decimals="0">
          <label>
-            <value>"➡ 1. " || "Prénoms"</value>
+            <value>"➡ 1. " || "Combien de personnes dans votre ménage ?"</value>
             <type>VTL|MD</type>
          </label>
          <conditionFilter>
             <value>true</value>
             <type>VTL</type>
          </conditionFilter>
+         <controls id="lcswldsp-format-borne-inf-sup"
+                   criticality="ERROR"
+                   typeOfControl="FORMAT">
+            <control>
+               <value>not(not(isnull(NB)) and (1&gt;NB or 10&lt;NB))</value>
+               <type>VTL</type>
+            </control>
+            <errorMessage>
+               <value>" La valeur doit être comprise entre 1 et 10."</value>
+               <type>VTL|MD</type>
+            </errorMessage>
+         </controls>
+         <controls id="lcswldsp-format-decimal"
+                   criticality="ERROR"
+                   typeOfControl="FORMAT">
+            <control>
+               <value>not(not(isnull(NB))  and round(NB,0)&lt;&gt;NB)</value>
+               <type>VTL</type>
+            </control>
+            <errorMessage>
+               <value>"Le nombre doit comporter au maximum 0 chiffre(s) après la virgule."</value>
+               <type>VTL|MD</type>
+            </errorMessage>
+         </controls>
          <hierarchy>
-            <sequence id="lawc2k2g" page="1">
+            <sequence id="lcswhkve">
                <label>
-                  <value>"I - " || "S1"</value>
+                  <value>"I - " || "Composition du ménage"</value>
                   <type>VTL|MD</type>
                </label>
             </sequence>
          </hierarchy>
-         <bindingDependencies>PRENOMS1</bindingDependencies>
+         <bindingDependencies>NB</bindingDependencies>
+         <response name="NB"/>
+      </components>
+      <components xsi:type="Loop" componentType="Loop" id="lcswrct3" depth="1">
          <lines>
             <min>
-               <value>1</value>
+               <value>nvl(NB, 1)</value>
                <type>VTL</type>
             </min>
             <max>
-               <value>10</value>
+               <value>nvl(NB, 1)</value>
                <type>VTL</type>
             </max>
          </lines>
-         <header>
-            <label>
-               <value>"Prénom"</value>
-               <type>VTL|MD</type>
-            </label>
-         </header>
-         <body>
-            <bodyLine id="lawceaq9-QOP-lawcigj6" componentType="Input" maxLength="50">
-               <response name="PRENOMS1"/>
-               <bindingDependencies>PRENOMS1</bindingDependencies>
-            </bodyLine>
-         </body>
-      </components>
-      <components xsi:type="Subsequence"
-                   componentType="Subsequence"
-                   id="lawc61hb"
-                   goToPage="3">
-         <label>
-            <value>SS_LIENS</value>
-            <type>VTL|MD</type>
-         </label>
          <conditionFilter>
             <value>true</value>
             <type>VTL</type>
          </conditionFilter>
          <hierarchy>
-            <sequence id="lawc2k2g" page="1">
+            <sequence id="lcswhkve">
                <label>
-                  <value>"I - " || "S1"</value>
+                  <value>"I - " || "Composition du ménage"</value>
                   <type>VTL|MD</type>
                </label>
             </sequence>
-            <subSequence id="lawc61hb" page="3">
-               <label>
-                  <value>SS_LIENS</value>
-                  <type>VTL|MD</type>
-               </label>
-            </subSequence>
          </hierarchy>
-         <components xsi:type="PairwiseLinks"
-                      componentType="PairwiseLinks"
-                      id="lawc36ok"
-                      mandatory="false"
-                      page="3">
+         <bindingDependencies>NB</bindingDependencies>
+         <bindingDependencies>PRENOM</bindingDependencies>
+         <loopDependencies>NB</loopDependencies>
+         <components xsi:type="Subsequence" componentType="Subsequence" id="lcswbr49">
+            <label>
+               <value>Prénoms</value>
+               <type>VTL|MD</type>
+            </label>
             <conditionFilter>
                <value>true</value>
                <type>VTL</type>
             </conditionFilter>
             <hierarchy>
-               <sequence id="lawc2k2g" page="1">
+               <sequence id="lcswhkve">
                   <label>
-                     <value>"I - " || "S1"</value>
+                     <value>"I - " || "Composition du ménage"</value>
                      <type>VTL|MD</type>
                   </label>
                </sequence>
-               <subSequence id="lawc61hb" page="3">
+               <subSequence id="lcswbr49">
                   <label>
-                     <value>SS_LIENS</value>
+                     <value>Prénoms</value>
                      <type>VTL|MD</type>
                   </label>
                </subSequence>
             </hierarchy>
-            <bindingDependencies>LIENS</bindingDependencies>
-            <xAxisIterations>
-               <value>count(PRENOMS1)</value>
-               <type>VTL|MD</type>
-            </xAxisIterations>
-            <yAxisIterations>
-               <value>count(PRENOMS1)</value>
-               <type>VTL|MD</type>
-            </yAxisIterations>
-            <symLinks>
-               <LINKS>
-                  <LINK>
-                     <source>1</source>
-                     <target>1</target>
-                  </LINK>
-                  <LINK>
-                     <source>2</source>
-                     <target>3</target>
-                  </LINK>
-                  <LINK>
-                     <source>3</source>
-                     <target>2</target>
-                  </LINK>
-                  <LINK>
-                     <source>4</source>
-                     <target>4</target>
-                  </LINK>
-                  <LINK>
-                     <source>5</source>
-                     <target>6</target>
-                  </LINK>
-                  <LINK>
-                     <source>6</source>
-                     <target>5</target>
-                  </LINK>
-                  <LINK>
-                     <source>7</source>
-                     <target>8</target>
-                  </LINK>
-                  <LINK>
-                     <source>8</source>
-                     <target>7</target>
-                  </LINK>
-                  <LINK>
-                     <source>9</source>
-                     <target>10</target>
-                  </LINK>
-                  <LINK>
-                     <source>10</source>
-                     <target>9</target>
-                  </LINK>
-                  <LINK>
-                     <source>11</source>
-                     <target>13</target>
-                  </LINK>
-                  <LINK>
-                     <source>12</source>
-                     <target>12</target>
-                  </LINK>
-                  <LINK>
-                     <source>13</source>
-                     <target>11</target>
-                  </LINK>
-                  <LINK>
-                     <source>14</source>
-                     <target>null</target>
-                  </LINK>
-                  <LINK>
-                     <source>15</source>
-                     <target>null</target>
-                  </LINK>
-                  <LINK>
-                     <source>16</source>
-                     <target>16</target>
-                  </LINK>
-                  <LINK>
-                     <source>17</source>
-                     <target>17</target>
-                  </LINK>
-                  <LINK>
-                     <source>18</source>
-                     <target>18</target>
-                  </LINK>
-               </LINKS>
-            </symLinks>
-            <components xsi:type="Dropdown"
-                         componentType="Dropdown"
-                         id="lawc36ok-pairwise-dropdown"
-                         mandatory="false"
-                         page="4">
+            <bindingDependencies>NB</bindingDependencies>
+            <components xsi:type="Input"
+                        componentType="Input"
+                        id="lcswmnod"
+                        maxLength="249"
+                        mandatory="false">
                <label>
-                  <value>"➡ 2. " || "Liens"</value>
+                  <value>"➡ 2. " || "Prénom ?"</value>
                   <type>VTL|MD</type>
                </label>
                <conditionFilter>
                   <value>true</value>
                   <type>VTL</type>
                </conditionFilter>
+               <hierarchy>
+                  <sequence id="lcswhkve">
+                     <label>
+                        <value>"I - " || "Composition du ménage"</value>
+                        <type>VTL|MD</type>
+                     </label>
+                  </sequence>
+                  <subSequence id="lcswbr49">
+                     <label>
+                        <value>Prénoms</value>
+                        <type>VTL|MD</type>
+                     </label>
+                  </subSequence>
+               </hierarchy>
+               <bindingDependencies>PRENOM</bindingDependencies>
+               <bindingDependencies>NB</bindingDependencies>
+               <response name="PRENOM"/>
+            </components>
+         </components>
+      </components>
+      <components xsi:type="Subsequence" componentType="Subsequence" id="lcswo5m5">
+         <label>
+            <value>Liens deux à deux</value>
+            <type>VTL|MD</type>
+         </label>
+         <conditionFilter>
+            <value>true</value>
+            <type>VTL</type>
+         </conditionFilter>
+         <hierarchy>
+            <sequence id="lcswhkve">
+               <label>
+                  <value>"I - " || "Composition du ménage"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </sequence>
+            <subSequence id="lcswo5m5">
+               <label>
+                  <value>Liens deux à deux</value>
+                  <type>VTL|MD</type>
+               </label>
+            </subSequence>
+         </hierarchy>
+         <components xsi:type="PairwiseLinks"
+                     componentType="PairwiseLinks"
+                     id="lcsxm1eu"
+                     mandatory="false">
+            <conditionFilter>
+               <value>true</value>
+               <type>VTL</type>
+            </conditionFilter>
+            <hierarchy>
+               <sequence id="lcswhkve">
+                  <label>
+                     <value>"I - " || "Composition du ménage"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </sequence>
+               <subSequence id="lcswo5m5">
+                  <label>
+                     <value>Liens deux à deux</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </subSequence>
+            </hierarchy>
+            <bindingDependencies>LIENS</bindingDependencies>
+            <xAxisIterations>
+               <value>count(PRENOM)</value>
+               <type>VTL</type>
+            </xAxisIterations>
+            <yAxisIterations>
+               <value>count(PRENOM)</value>
+               <type>VTL</type>
+            </yAxisIterations>
+            <symLinks name="LIENS">
+               <LINK>
+                  <source>1</source>
+                  <target>1</target>
+               </LINK>
+               <LINK>
+                  <source>2</source>
+                  <target>3</target>
+               </LINK>
+               <LINK>
+                  <source>3</source>
+                  <target>2</target>
+               </LINK>
+               <LINK>
+                  <source>4</source>
+                  <target>4</target>
+               </LINK>
+               <LINK>
+                  <source>5</source>
+                  <target>6</target>
+               </LINK>
+               <LINK>
+                  <source>6</source>
+                  <target>5</target>
+               </LINK>
+               <LINK>
+                  <source>7</source>
+                  <target>8</target>
+               </LINK>
+               <LINK>
+                  <source>8</source>
+                  <target>7</target>
+               </LINK>
+               <LINK>
+                  <source>9</source>
+                  <target>10</target>
+               </LINK>
+               <LINK>
+                  <source>10</source>
+                  <target>9</target>
+               </LINK>
+               <LINK>
+                  <source>11</source>
+                  <target>13</target>
+               </LINK>
+               <LINK>
+                  <source>12</source>
+                  <target>12</target>
+               </LINK>
+               <LINK>
+                  <source>13</source>
+                  <target>11</target>
+               </LINK>
+               <LINK>
+                  <source>14</source>
+                  <target>null</target>
+               </LINK>
+               <LINK>
+                  <source>15</source>
+                  <target>null</target>
+               </LINK>
+               <LINK>
+                  <source>16</source>
+                  <target>16</target>
+               </LINK>
+               <LINK>
+                  <source>17</source>
+                  <target>17</target>
+               </LINK>
+               <LINK>
+                  <source>18</source>
+                  <target>18</target>
+               </LINK>
+            </symLinks>
+            <components xsi:type="Dropdown"
+                        componentType="Dropdown"
+                        id="lcsxm1eu-pairwise-dropdown"
+                        mandatory="false">
+               <label>
+                  <value>"➡ 3. " || "Quels sont vos liens ?"</value>
+                  <type>VTL|MD</type>
+               </label>
+               <conditionFilter>
+                  <value>xAxis &lt;&gt; yAxis</value>
+                  <type>VTL</type>
+                  
+                  
+                  <bindingDependencies>xAxis</bindingDependencies>
+                  <bindingDependencies>PRENOM</bindingDependencies>
+                  <bindingDependencies>yAxis</bindingDependencies>
+               </conditionFilter>
                <bindingDependencies>LIENS</bindingDependencies>
                <options>
                   <value>1</value>
                   <label>
-                     <value>"Toto"</value>
+                     <value>Son conjoint, sa conjointe</value>
                      <type>VTL|MD</type>
                   </label>
                </options>
                <options>
                   <value>2</value>
                   <label>
-                     <value>"Truc"</value>
+                     <value>Sa mère, son père</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>3</value>
+                  <label>
+                     <value>Sa fille, son fils</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>4</value>
+                  <label>
+                     <value>Sa soeur, son frère (y compris demi et quasi)</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>5</value>
+                  <label>
+                     <value>Sa belle-mère, son beau-père (conjoint.e d’un des parents)</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>6</value>
+                  <label>
+                     <value>L’enfant du conjoint (belle-fille, beau-fils)</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>7</value>
+                  <label>
+                     <value>Sa belle-mère, son beau-père (parent du conjoint)</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>8</value>
+                  <label>
+                     <value>Sa belle-fille, son beau-fils (conjoint.e d’un enfant)</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>9</value>
+                  <label>
+                     <value>Sa grand-mère, son grand-père</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>10</value>
+                  <label>
+                     <value>Sa petite-fille, petit-fils</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>11</value>
+                  <label>
+                     <value>Sa tante, son oncle</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>12</value>
+                  <label>
+                     <value>Sa cousine, son cousin</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>13</value>
+                  <label>
+                     <value>Sa nièce, son neveu</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>14</value>
+                  <label>
+                     <value>Un enfant placé en famille d’accueil</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>15</value>
+                  <label>
+                     <value>Sa belle-soeur, son beau-frère</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>16</value>
+                  <label>
+                     <value>Un autre lien familial</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </options>
+               <options>
+                  <value>17</value>
+                  <label>
+                     <value>Autre lien (employé de maison, salarié logé, jeune au pair …)</value>
                      <type>VTL|MD</type>
                   </label>
                </options>
@@ -244,119 +429,104 @@
          </components>
       </components>
    </components>
-   <components xsi:type="Sequence"
-                componentType="Sequence"
-                id="COMMENT-SEQ"
-                page="5">
-      <label>
-         <value>"Commentaire"</value>
-         <type>VTL|MD</type>
-      </label>
-      <conditionFilter>
-         <value>true</value>
-         <type>VTL</type>
-      </conditionFilter>
-      <hierarchy>
-         <sequence id="COMMENT-SEQ" page="5">
-            <label>
-               <value>"Commentaire"</value>
-               <type>VTL|MD</type>
-            </label>
-         </sequence>
-      </hierarchy>
-      <components xsi:type="Textarea"
-                   componentType="Textarea"
-                   id="COMMENT-QUESTION"
-                   maxLength="2000"
-                   mandatory="false"
-                   page="6">
-         <label>
-            <value>"Avez-vous des remarques concernant l'enquête ou des commentaires ?"</value>
-            <type>VTL|MD</type>
-         </label>
-         <conditionFilter>
-            <value>true</value>
-            <type>VTL</type>
-         </conditionFilter>
-         <hierarchy>
-            <sequence id="COMMENT-SEQ" page="5">
-               <label>
-                  <value>"Commentaire"</value>
-                  <type>VTL|MD</type>
-               </label>
-            </sequence>
-         </hierarchy>
-         <bindingDependencies>COMMENT_QE</bindingDependencies>
-         <response name="COMMENT_QE"/>
-      </components>
-   </components>
    <variables variableType="COLLECTED" xsi:type="VariableType">
-      <name>COMMENT_QE</name>
-      <!--<componentRef>COMMENT-QUESTION</componentRef>-->
-      <values>
-         <PREVIOUS xsi:nil="true"/>
-         <COLLECTED xsi:nil="true"/>
-         <FORCED xsi:nil="true"/>
-         <EDITED xsi:nil="true"/>
-         <INPUTED xsi:nil="true"/>
-      </values>
-   </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-      <name>PRENOMS1</name>
-      <values>
-         <PREVIOUS xsi:nil="true"/>
-         <COLLECTED xsi:nil="true"/>
-         <FORCED xsi:nil="true"/>
-         <EDITED xsi:nil="true"/>
-         <INPUTED xsi:nil="true"/>
-      </values>
-   </variables>
-   <variables variableType="COLLECTED" xsi:type="VariableType">
-      <name>LIENS</name>
-      <values>
-         <PREVIOUS xsi:nil="true"/>
-         <COLLECTED xsi:nil="true"/>
-         <FORCED xsi:nil="true"/>
-         <EDITED xsi:nil="true"/>
-         <INPUTED xsi:nil="true"/>
-      </values>
+         <name>NB</name>
+         <values>
+            <PREVIOUS xsi:nil="true"/>
+            <COLLECTED xsi:nil="true"/>
+            <FORCED xsi:nil="true"/>
+            <EDITED xsi:nil="true"/>
+            <INPUTED xsi:nil="true"/>
+         </values>
+      </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableTypeArray">
+               <name>PRENOM</name>
+               <values>
+                  <PREVIOUS xsi:type="PREVIOUSArray">
+                     <PREVIOUS xsi:nil="true"/>
+                  </PREVIOUS>
+                  <COLLECTED xsi:type="COLLECTEDArray">
+                     <COLLECTED xsi:nil="true"/>
+                  </COLLECTED>
+                  <FORCED xsi:type="FORCEDArray">
+                     <FORCED xsi:nil="true"/>
+                  </FORCED>
+                  <EDITED xsi:type="EDITEDArray">
+                     <EDITED xsi:nil="true"/>
+                  </EDITED>
+                  <INPUTED xsi:type="INPUTEDArray">
+                     <INPUTED xsi:nil="true"/>
+                  </INPUTED>
+               </values>
+            </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableTypeArray">
+               <name>LIENS</name>
+               <values>
+                  <PREVIOUS xsi:type="PREVIOUSArray">
+                     <PREVIOUS xsi:type="PREVIOUSArray">
+                        <PREVIOUS xsi:nil="true"/>
+                     </PREVIOUS>
+                  </PREVIOUS>
+                  <COLLECTED xsi:type="COLLECTEDArray">
+                     <COLLECTED xsi:type="COLLECTEDArray">
+                        <COLLECTED xsi:nil="true"/>
+                     </COLLECTED>
+                  </COLLECTED>
+                  <FORCED xsi:type="FORCEDArray">
+                     <FORCED xsi:type="FORCEDArray">
+                        <FORCED xsi:nil="true"/>
+                     </FORCED>
+                  </FORCED>
+                  <EDITED xsi:type="EDITEDArray">
+                     <EDITED xsi:type="EDITEDArray">
+                        <EDITED xsi:nil="true"/>
+                     </EDITED>
+                  </EDITED>
+                  <INPUTED xsi:type="INPUTEDArray">
+                     <INPUTED xsi:type="INPUTEDArray">
+                        <INPUTED xsi:nil="true"/>
+                     </INPUTED>
+                  </INPUTED>
+               </values>
+            </variables>
+   <variables variableType="CALCULATED" xsi:type="VariableType">
+            <name>xAxis</name>
+            <expression>
+               <value>PRENOM</value>
+               <type>VTL</type>
+            </expression>
+            <bindingDependencies>PRENOM</bindingDependencies>
+            <shapeFrom>PRENOM</shapeFrom>
+         <inFilter>true</inFilter>
    </variables>
    <variables variableType="CALCULATED" xsi:type="VariableType">
-      <name>FILTER_RESULT_PRENOMS</name>
-      <expression>
-         <value>true</value>
-         <type>VTL</type>
-      </expression>
-      <inFilter>false</inFilter>
+            <name>yAxis</name>
+            <expression>
+               <value>PRENOM</value>
+               <type>VTL</type>
+            </expression>
+            <bindingDependencies>PRENOM</bindingDependencies>
+            <shapeFrom>PRENOM</shapeFrom>
+         <inFilter>true</inFilter>
    </variables>
-   <variables variableType="CALCULATED" xsi:type="VariableType">
-      <name>FILTER_RESULT_LIENS</name>
-      <expression>
-         <value>true</value>
-         <type>VTL</type>
-      </expression>
-      <inFilter>false</inFilter>
-   </variables>
-   <variables variableType="CALCULATED" xsi:type="VariableType">
-      <name>xAxis</name>
-      <expression>
-         <value>PRENOMS1</value>
-         <type>VTL</type>
-      </expression>
-      <bindingDependencies>PRENOMS1</bindingDependencies>
-      <shapeFrom>PRENOMS1</shapeFrom>
-      <inFilter>true</inFilter>
-   </variables>
-   <variables variableType="CALCULATED" xsi:type="VariableType">
-      <name>yAxis</name>
-      <expression>
-         <value>PRENOMS1</value>
-         <type>VTL</type>
-      </expression>
-      <bindingDependencies>PRENOMS1</bindingDependencies>
-      <shapeFrom>PRENOMS1</shapeFrom>
-      <inFilter>true</inFilter>
-   </variables>
-   <cleaning/>
-   <resizing/>
+   <cleaning>
+      <xAxis>
+         <LIENS>xAxis &lt;&gt; yAxis</LIENS>
+      </xAxis>
+      <PRENOM>
+         <LIENS>xAxis &lt;&gt; yAxis</LIENS>
+      </PRENOM>
+      <yAxis>
+         <LIENS>xAxis &lt;&gt; yAxis</LIENS>
+      </yAxis>
+   </cleaning>
+   <resizing>
+      <NB>
+         <size>nvl(NB, 1)</size>
+         <variables>PRENOM</variables>
+      </NB>
+      <PRENOM>
+         <sizeForLinksVariables>count(PRENOM)</sizeForLinksVariables>
+         <sizeForLinksVariables>count(PRENOM)</sizeForLinksVariables>LIENS</PRENOM>
+   </resizing>
 </Questionnaire>
