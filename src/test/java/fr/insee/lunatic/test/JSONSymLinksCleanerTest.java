@@ -12,7 +12,7 @@ import java.io.IOException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class JSONSymLinksCleanerTest {
+class JSONSymLinksCleanerTest {
 
     JSONSymLinksCleaner symLinksCleaner;
 
@@ -22,7 +22,7 @@ public class JSONSymLinksCleanerTest {
     }
 
     @Test
-    public void nullString() throws IOException {
+    void nullString() throws IOException {
         assertNull(symLinksCleaner.clean(null));
     }
 

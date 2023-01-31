@@ -79,23 +79,23 @@ public class JSONSymLinksCleaner {
         jsonComponentsBuilder.add(jsonPairwiseBuilder.build());
     }
 
-    private static void editSymLinks(JsonObjectBuilder jsonPairwiseBuilder, JsonObject jsonLINKS) {
+    private static void editSymLinks(JsonObjectBuilder jsonPairwiseBuilder, JsonObject jsonSymLinks) {
         JsonObjectBuilder jsonSymLinksBuilder = Json.createObjectBuilder();
         JsonObjectBuilder jsonLINKSBuilder = Json.createObjectBuilder();
-        jsonLINKS.getJsonObject("LINKS")
-                .getJsonArray("LINK").forEach(jsonValue3 -> {
-                    JsonObject jsonSourceTarget = (JsonObject) jsonValue3;
-                    JsonString sourceKey = (JsonString) jsonSourceTarget.get("source");
-                    JsonString targetKey = (JsonString) jsonSourceTarget.get("target");
-                    // target field is not mandatory and can be null
-                    // json converted from xml can contain "null" string values
-                    if (targetKey != null && !"null".equals(targetKey.getString())) {
-                        jsonLINKSBuilder.add(sourceKey.getString(), targetKey);
-                    } else {
-                        jsonLINKSBuilder.addNull(sourceKey.getString());
-                    }
-                });
-        jsonSymLinksBuilder.add("LINKS", jsonLINKSBuilder.build());
+        String symLinksName = jsonSymLinks.getJsonString("name").getString();
+        jsonSymLinks.getJsonArray("LINK").forEach(jsonValue3 -> {
+            JsonObject jsonSourceTarget = (JsonObject) jsonValue3;
+            JsonString sourceKey = (JsonString) jsonSourceTarget.get("source");
+            JsonString targetKey = (JsonString) jsonSourceTarget.get("target");
+            // target field is not mandatory and can be null
+            // json converted from xml can contain "null" string values
+            if (targetKey != null && !"null".equals(targetKey.getString())) {
+                jsonLINKSBuilder.add(sourceKey.getString(), targetKey);
+            } else {
+                jsonLINKSBuilder.addNull(sourceKey.getString());
+            }
+        });
+        jsonSymLinksBuilder.add(symLinksName, jsonLINKSBuilder.build());
         jsonPairwiseBuilder.add("symLinks", jsonSymLinksBuilder.build());
     }
 

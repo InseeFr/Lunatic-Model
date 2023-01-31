@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Questionnaire xmlns="http://xml.insee.fr/schema/applis/lunatic-h"
-               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<Questionnaire xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xmlns="http://xml.insee.fr/schema/applis/lunatic"
                id="lcswhwa1"
                modele="L2A2_LOOP"
                enoCoreVersion="2.4.1-pairwise-dev-pairwise"
@@ -31,14 +31,15 @@
             </label>
          </sequence>
       </hierarchy>
-      <components xsi:type="InputNumber"
-                  componentType="InputNumber"
-                  id="lcswldsp"
-                  mandatory="false"
-                  min="1"
-                  max="10"
-                  decimals="0"
-                  page="2">
+   </components>
+   <components xsi:type="InputNumber"
+               componentType="InputNumber"
+               id="lcswldsp"
+               mandatory="false"
+               min="1"
+               max="10"
+               decimals="0"
+               page="2">
          <label>
             <value>"➡ " || "Combien de personnes dans votre ménage ?"</value>
             <type>VTL|MD</type>
@@ -48,8 +49,8 @@
             <type>VTL</type>
          </conditionFilter>
          <controls id="lcswldsp-format-borne-inf-sup"
-                   criticality="ERROR"
-                   typeOfControl="FORMAT">
+                criticality="ERROR"
+                typeOfControl="FORMAT">
             <control>
                <value>not(not(isnull(NB)) and (1&gt;NB or 10&lt;NB))</value>
                <type>VTL</type>
@@ -60,8 +61,8 @@
             </errorMessage>
          </controls>
          <controls id="lcswldsp-format-decimal"
-                   criticality="ERROR"
-                   typeOfControl="FORMAT">
+                criticality="ERROR"
+                typeOfControl="FORMAT">
             <control>
                <value>not(not(isnull(NB))  and round(NB,0)&lt;&gt;NB)</value>
                <type>VTL</type>
@@ -82,12 +83,12 @@
          <bindingDependencies>NB</bindingDependencies>
          <response name="NB"/>
       </components>
-      <components xsi:type="Loop"
-                  componentType="Loop"
-                  id="lcswrct3"
-                  depth="1"
-                  page="3"
-                  paginatedLoop="false">
+   <components xsi:type="Loop"
+               componentType="Loop"
+               id="lcswrct3"
+               depth="1"
+               page="3"
+               paginatedLoop="false">
          <lines>
             <min>
                <value>nvl(NB, 1)</value>
@@ -114,19 +115,19 @@
          <bindingDependencies>PRENOM</bindingDependencies>
          <loopDependencies>NB</loopDependencies>
          <components xsi:type="Subsequence"
-                     componentType="Subsequence"
-                     id="lcswbr49"
-                     page="3"
-                     goToPage="3">
-            <label>
+                  componentType="Subsequence"
+                  id="lcswbr49"
+                  page="3"
+                  goToPage="3">
+         <label>
                <value>Prénoms</value>
                <type>VTL|MD</type>
             </label>
-            <conditionFilter>
+         <conditionFilter>
                <value>true</value>
                <type>VTL</type>
             </conditionFilter>
-            <hierarchy>
+         <hierarchy>
                <sequence id="lcswhkve" page="1">
                   <label>
                      <value>"I - " || "Composition du ménage"</value>
@@ -140,13 +141,14 @@
                   </label>
                </subSequence>
             </hierarchy>
-            <bindingDependencies>NB</bindingDependencies>
-            <components xsi:type="Input"
-                        componentType="Input"
-                        id="lcswmnod"
-                        maxLength="249"
-                        mandatory="false"
-                        page="3">
+         <bindingDependencies>NB</bindingDependencies>
+      </components>
+      <components xsi:type="Input"
+                  componentType="Input"
+                  id="lcswmnod"
+                  maxLength="249"
+                  mandatory="false"
+                  page="3">
                <label>
                   <value>"➡ " || "Prénom ?"</value>
                   <type>VTL|MD</type>
@@ -173,21 +175,20 @@
                <bindingDependencies>NB</bindingDependencies>
                <response name="PRENOM"/>
             </components>
-         </components>
       </components>
-      <components xsi:type="Subsequence"
-                  componentType="Subsequence"
-                  id="lcswo5m5"
-                  goToPage="4">
-         <label>
+   <components xsi:type="Subsequence"
+               componentType="Subsequence"
+               id="lcswo5m5"
+               goToPage="4">
+      <label>
             <value>Liens deux à deux</value>
             <type>VTL|MD</type>
          </label>
-         <conditionFilter>
+      <conditionFilter>
             <value>true</value>
             <type>VTL</type>
          </conditionFilter>
-         <hierarchy>
+      <hierarchy>
             <sequence id="lcswhkve" page="1">
                <label>
                   <value>"I - " || "Composition du ménage"</value>
@@ -201,11 +202,12 @@
                </label>
             </subSequence>
          </hierarchy>
-         <components xsi:type="PairwiseLinks"
-                     componentType="PairwiseLinks"
-                     id="lcsxm1eu"
-                     mandatory="false"
-                     page="4">
+   </components>
+   <components xsi:type="PairwiseLinks"
+               componentType="PairwiseLinks"
+               id="lcsxm1eu"
+               mandatory="false"
+               page="4">
             <conditionFilter>
                <value>true</value>
                <type>VTL</type>
@@ -308,10 +310,10 @@
                </LINK>
             </symLinks>
             <components xsi:type="Dropdown"
-                        componentType="Dropdown"
-                        id="lcsxm1eu-pairwise-dropdown"
-                        mandatory="false"
-                        page="5">
+                  componentType="Dropdown"
+                  id="lcsxm1eu-pairwise-dropdown"
+                  mandatory="false"
+                  page="5">
                <label>
                   <value>"➡ " || "Quels sont vos liens ?"</value>
                   <type>VTL|MD</type>
@@ -443,8 +445,6 @@
                <response name="LIENS"/>
             </components>
          </components>
-      </components>
-   </components>
    <components xsi:type="Sequence"
                componentType="Sequence"
                id="COMMENT-SEQ"
@@ -465,12 +465,13 @@
             </label>
          </sequence>
       </hierarchy>
-      <components xsi:type="Textarea"
-                  componentType="Textarea"
-                  id="COMMENT-QUESTION"
-                  maxLength="2000"
-                  mandatory="false"
-                  page="7">
+   </components>
+   <components xsi:type="Textarea"
+               componentType="Textarea"
+               id="COMMENT-QUESTION"
+               maxLength="2000"
+               mandatory="false"
+               page="7">
          <label>
             <value>"Avez-vous des remarques concernant l'enquête ou des commentaires ?"</value>
             <type>VTL|MD</type>
@@ -490,10 +491,9 @@
          <bindingDependencies>COMMENT_QE</bindingDependencies>
          <response name="COMMENT_QE"/>
       </components>
-   </components>
    <variables variableType="COLLECTED" xsi:type="VariableType">
       <name>COMMENT_QE</name>
-      <!--<componentRef>COMMENT-QUESTION</componentRef>-->
+      
       <values>
          <PREVIOUS xsi:nil="true"/>
          <COLLECTED xsi:nil="true"/>
