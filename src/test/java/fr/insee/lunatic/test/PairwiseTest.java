@@ -4,6 +4,7 @@ import fr.insee.lunatic.conversion.JSONCleaner;
 import fr.insee.lunatic.conversion.JSONDeserializer;
 import fr.insee.lunatic.conversion.XMLLunaticFlatToJSONLunaticFlatTranslator;
 import fr.insee.lunatic.conversion.XMLLunaticToXMLLunaticFlatTranslator;
+import fr.insee.lunatic.model.flat.PairwiseLinks;
 import fr.insee.lunatic.model.flat.Questionnaire;
 import org.junit.jupiter.api.Test;
 
@@ -13,16 +14,22 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /** Test class to see if PairwiseLinks object doesn't break translators */
 class PairwiseTest {
 
     @Test
-    void deserializeQuestionnaireContainingPairwise_doesNotThrow() throws JAXBException {
+    void deserializeQuestionnaireContainingPairwise_doesContainPairwise() throws JAXBException {
+        //
         JSONDeserializer jsonDeserializer = new JSONDeserializer();
+        //
         Questionnaire questionnaire = jsonDeserializer.deserialize(
                 this.getClass().getClassLoader().getResourceAsStream("pairwise/pairwise-flat.json"));
+        //
         assertNotNull(questionnaire);
+        assertTrue(questionnaire.getComponents().stream()
+                .anyMatch(componentType -> componentType instanceof PairwiseLinks));
     }
 
     @Test
