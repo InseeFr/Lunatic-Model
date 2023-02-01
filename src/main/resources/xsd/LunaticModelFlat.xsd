@@ -348,6 +348,7 @@
                 <xs:attribute name="min" type="xs:double" use="optional"/>
                 <xs:attribute name="max" type="xs:double" use="optional"/>
                 <xs:attribute name="decimals" type="xs:integer" use="optional"/>
+                <xs:attribute name="thousandSeparator" type="xs:boolean" use="optional"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>

@@ -168,8 +168,9 @@
         "mandatory" : true,
         "page" : "5",
         "min" : 0,
-        "max" : 99,
+        "max" : 10000,
         "decimals" : 0,
+        "thousandSeparator" : true,
         "label" : 
         { "value" : "\"➡ 4. What is the current season number?\"",
           "type" : "VTL|MD" },
