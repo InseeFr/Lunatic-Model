@@ -1,4 +1,4 @@
-package fr.insee.lunatic.test;
+package fr.insee.lunatic.test.utils;
 import java.io.File;
 
 import javax.xml.transform.stream.StreamSource;
