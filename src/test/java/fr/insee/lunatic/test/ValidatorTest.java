@@ -1,5 +1,6 @@
 package fr.insee.lunatic.test;
 
+import fr.insee.lunatic.test.utils.XMLDiff;
 import fr.insee.lunatic.utils.Modele;
 import fr.insee.lunatic.utils.SchemaValidator;
 import org.junit.jupiter.api.Assertions;

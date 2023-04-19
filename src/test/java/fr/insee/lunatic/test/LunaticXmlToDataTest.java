@@ -3,6 +3,7 @@ package fr.insee.lunatic.test;
 import fr.insee.lunatic.Constants;
 import fr.insee.lunatic.conversion.data.XMLLunaticDataToJSON;
 import fr.insee.lunatic.conversion.data.XMLLunaticToXMLEmptyData;
+import fr.insee.lunatic.test.utils.XMLDiff;
 import org.apache.commons.io.FileUtils;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Assertions;
