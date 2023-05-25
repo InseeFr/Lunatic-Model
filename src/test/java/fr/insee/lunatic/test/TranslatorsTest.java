@@ -18,12 +18,22 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xmlunit.diff.Diff;
 
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
+import javax.json.stream.JsonParser;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Set;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class TranslatorsTest {
 
@@ -209,5 +219,30 @@ public class TranslatorsTest {
 		return String.format("Transformed output for %s should match expected XML document:\n %s", path,
 				diff.toString());
 	}
-	
+
+	@Test
+	void xmlHierarchicalToJsonFlat_resizingIssue() throws Exception {
+		//
+		XMLLunaticToXMLLunaticFlatTranslator translator1 = new XMLLunaticToXMLLunaticFlatTranslator();
+		XMLLunaticFlatToJSONLunaticFlatTranslator translator2 = new XMLLunaticFlatToJSONLunaticFlatTranslator();
+		JSONCleaner cleaner = new JSONCleaner();
+		//
+		String xmlFlat = translator1.generate(this.getClass().getClassLoader().getResourceAsStream(
+				"pairwise/resizing-issue/lb3ei722-lunatic-hierarchical.xml"));
+		String jsonFlat = translator2.translate(xmlFlat);
+		String result = cleaner.clean(jsonFlat);
+		//
+		assertNotNull(result);
+		try (JsonReader jsonReader = Json.createReader(
+				new ByteArrayInputStream(result.getBytes(StandardCharsets.UTF_8)))) {
+			JsonObject resultJson = jsonReader.readObject();
+			JsonArray resizingVariables = resultJson.getJsonObject("resizing").getJsonObject("NB")
+					.getJsonArray("variables");
+			assertEquals(2, resizingVariables.size());
+			String variableName1 = resizingVariables.getString(0);
+			String variableName2 = resizingVariables.getString(1);
+			assertEquals(Set.of("PRENOM", "AGE"), Set.of(variableName1, variableName2));
+		}
+	}
+
 }
