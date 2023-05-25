@@ -23,19 +23,19 @@ public class JSONCleaner {
 	
 	public String clean(String jsonString) throws Exception {
 
-		// New step: apply (Java) symLinks cleaning
-		JSONSymLinksCleaner jsonSymLinksCleaner = new JSONSymLinksCleaner();
-		jsonString = jsonSymLinksCleaner.clean(jsonString);
-
 		if ((jsonString == null) || (jsonString.length() == 0))
 			return null;
 		InputStream json = new ByteArrayInputStream(wrapJsonWithXml(jsonString).getBytes(StandardCharsets.UTF_8));
 
-		return this.generate(json);
+		// Unchanged step: use XSLT "cleaning" sheet
+		String generatedUsingXslt = generate(json);
+
+		// New step: apply (Java) symLinks cleaning
+		JSONSymLinksCleaner jsonSymLinksCleaner = new JSONSymLinksCleaner();
+		return jsonSymLinksCleaner.clean(generatedUsingXslt);
 	}
 	
 	public String generate(InputStream isFinalInput) throws Exception {
-		// Unchanged step: use XSLT "cleaning" sheet
 		OutputStream osOutputFile = generateOS(isFinalInput);
 		String res = osOutputFile.toString();
 		osOutputFile.close();
