@@ -51,14 +51,6 @@
         </xsl:copy>
     </xsl:template>
     
-    <!-- rename the rulesA key of suggesters to rules -->
-    <xsl:template match="*[@key='rulesA']" mode="clean">
-        <xsl:copy>
-        	<xsl:attribute name="key" select="'rules'"/>
-            <xsl:apply-templates select="node()" mode="clean"/>
-        </xsl:copy>
-    </xsl:template>
-    
     <!-- Transform the array produced inside cleaning block into simple map object -->
     <!-- 1. When encountering the array node, not copying it but treating its children -->
     <xsl:template match="*[parent::*/@key='cleaning']" mode="clean">
