@@ -57,27 +57,27 @@ class PairwiseTest {
         //
         URL pairwiseFileUrl = this.getClass().getClassLoader().getResource("pairwise/pairwise-hierarchical-test.xml");
         assert pairwiseFileUrl != null;
-
-        //
-        String xmlFlat = translator.generate(pairwiseFileUrl.openStream());
-        String jsonFlat = translator2.translate(xmlFlat);
-        String result = jsonCleaner.clean(jsonFlat);
-
-        //
-        assertNotNull(result);
         //
         Path pairwisePath = Path.of(pairwiseFileUrl.toURI()).getParent();
         Path outPath = Files.createTempDirectory(pairwisePath, "out");
-        System.out.printf("Writing test pairwise outputs in %s", outPath);
+        System.out.printf("Writing test pairwise outputs in \n%s\n", outPath);
+
+        //
+        String xmlFlat = translator.generate(pairwiseFileUrl.openStream());
         Files.writeString(
                 outPath.resolve("pairwise-flat.xml"),
                 xmlFlat);
+        String jsonFlat = translator2.translate(xmlFlat);
         Files.writeString(
                 outPath.resolve("pairwise-flat.json"),
                 jsonFlat);
+        String result = jsonCleaner.clean(jsonFlat);
         Files.writeString(
                 outPath.resolve("pairwise-cleaned.json"),
                 result);
+
+        //
+        assertNotNull(result);
     }
 
 }

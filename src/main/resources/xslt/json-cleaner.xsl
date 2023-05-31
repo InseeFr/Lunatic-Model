@@ -92,11 +92,35 @@
     </xsl:template>
     <!-- 2. When encountering variables node that is not the first, do nothing, the copy to array has already been done at previous step -->    
     <xsl:template match="*[@key='variables' and ancestor::*/@key='resizing' and preceding-sibling::*[@key='variables']]" mode="clean"/>
-    <!-- 3. When encountering value node, do not copy (it is a line return wrongly treated as an object 
+
+    <!-- Copy of the template for "variables" in resizing with "sizeForLinksVariables" for the pairwise component -->
+    <!-- 1.  -->
+    <xsl:template match="*[@key='sizeForLinksVariables' and ancestor::*/@key='resizing'][1]" mode="clean">
+        <fn:array key="sizeForLinksVariables">
+            <xsl:for-each select="../fn:string[@key='sizeForLinksVariables']">
+                <fn:string><xsl:value-of select="text()"/></fn:string>
+            </xsl:for-each>
+        </fn:array>
+    </xsl:template>
+    <!-- 2.  -->
+    <xsl:template match="*[@key='sizeForLinksVariables' and ancestor::*/@key='resizing' and preceding-sibling::*[@key='sizeForLinksVariables']]" mode="clean"/>
+
+    <!-- Same thing for "linksVariables" (pairwise component) -->
+    <!-- 1.  -->
+    <xsl:template match="*[@key='linksVariables' and ancestor::*/@key='resizing'][1]" mode="clean">
+        <fn:array key="linksVariables">
+            <xsl:for-each select="../fn:string[@key='linksVariables']">
+                <fn:string><xsl:value-of select="text()"/></fn:string>
+            </xsl:for-each>
+        </fn:array>
+    </xsl:template>
+    <!-- 2.  -->
+    <xsl:template match="*[@key='linksVariables' and ancestor::*/@key='resizing' and preceding-sibling::*[@key='linksVariables']]" mode="clean"/>
+
+    <!-- When encountering value node, do not copy (it is a line return wrongly treated as an object
     since we do not have a proper schema model for the resizing part...-->
     <xsl:template match="*[@key='value' and ancestor::*/@key='resizing']"  mode="clean"/>
-    
-    
+
     <xsl:template match="@*|node()" mode="clean">
         <xsl:choose>
             <xsl:when test="self::text()">

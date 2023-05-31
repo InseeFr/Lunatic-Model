@@ -18,42 +18,51 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.xmlunit.diff.Diff;
 
+import javax.json.Json;
+import javax.json.JsonArray;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
+import javax.json.stream.JsonParser;
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Set;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 public class TranslatorsTest {
 
 	private XMLDiff xmlDiff = new XMLDiff();
-	
+
 	private static final Logger logger = LoggerFactory.getLogger(TranslatorsTest.class);
-	
+
 	@BeforeAll
 	public static void setUpBeforeClass() throws Exception {
 	}
-	
-	
+
 	@org.junit.jupiter.api.Test
 	public void testQuestionnaireXMLFToJSONF() {
 		logger.debug("Launch test : XMLLunaticFlat -> JSONLunaticFlat");
 		try {
 			String basePath = Constants.RESOURCES_FOLDER_XMLF_2_JSONF_PATH;
-			
+
 			Path outPath = Paths.get(Constants.TEMP_FOLDER_PATH + "/xmlf-2-jsonf-out.json");
 			Files.deleteIfExists(outPath);
 			Path outputFile = Files.createFile(outPath);
-			
+
 			File in = new File(String.format("%s/form_flat.xml", Constants.RESOURCES_FOLDER_DUMMY_PATH));
-			
+
 			XMLLunaticFlatToJSONLunaticFlatTranslator translator = new XMLLunaticFlatToJSONLunaticFlatTranslator();
 			JSONCleaner jsonCleaner = new JSONCleaner();
-			
+
 			String jsonQuestionnaire = jsonCleaner.clean(translator.translate(in));
 			JSONObject jsonOut = new JSONObject(jsonQuestionnaire);
-			
+
 			Files.write(outputFile, jsonQuestionnaire.getBytes("UTF-8"));
 			logger.debug("File generated at : "+outputFile.toString());
 
@@ -78,30 +87,30 @@ public class TranslatorsTest {
 			Assertions.fail();
 		}
 	}
-	
+
 	@Test
 	public void testQuestionnaireXMLHToXMLF() {
 		logger.debug("Launch test : XMLLunatic -> XMLLunaticFlat");
 
 		try {
 			String basePath = Constants.RESOURCES_FOLDER_XMLH_2_XMLF_PATH;
-			
+
 			Path outPath = Paths.get(Constants.TEMP_FOLDER_PATH + "/xmlh-2-xmlf-out.xml");
 			Files.deleteIfExists(outPath);
 			Path outputFile = Files.createFile(outPath);
-			
+
 			File in = new File(String.format("%s/form.xml",  Constants.RESOURCES_FOLDER_DUMMY_PATH));
-			
+
 			XMLLunaticToXMLLunaticFlatTranslator translator = new XMLLunaticToXMLLunaticFlatTranslator();
 
 			String xmlQuestionnaire = translator.generate(in);
 			Files.write(outputFile, xmlQuestionnaire.getBytes("UTF-8"));
 			logger.debug("File generated at : "+outputFile.toString());
-			
+
 			File expectedFile = new File(String.format("%s/out.xml", basePath));
 			Diff diff = xmlDiff.getDiff(outputFile.toFile(),expectedFile);
 			Assertions.assertFalse(diff.hasDifferences(), getDiffMessage(diff, basePath));
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 			Assertions.fail();
@@ -114,33 +123,33 @@ public class TranslatorsTest {
 			Assertions.fail();
 		}
 	}
-	
+
 	@Test
 	public void testQuestionnaireXMLHToJSONF() {
 		logger.debug("Launch test : XMLLunatic -> JSONLunaticFlat");
 		try {
-			
+
 			long startTime = System.currentTimeMillis();
-			
+
 			String basePath = Constants.RESOURCES_FOLDER_XMLH_2_JSONF_PATH;
-			
+
 			Path outPath = Paths.get(Constants.TEMP_FOLDER_PATH + "/xmlh-2-jsonf-out.json");
 			Files.deleteIfExists(outPath);
 			Path outputFile = Files.createFile(outPath);
 
 			File in = new File(String.format("%s/form.xml",  Constants.RESOURCES_FOLDER_DUMMY_PATH));
-			
+
 			XMLLunaticToXMLLunaticFlatTranslator translator = new XMLLunaticToXMLLunaticFlatTranslator();
 			XMLLunaticFlatToJSONLunaticFlatTranslator translator2 = new XMLLunaticFlatToJSONLunaticFlatTranslator();
-			JSONCleaner jsonCleaner = new JSONCleaner();			
-			
+			JSONCleaner jsonCleaner = new JSONCleaner();
+
 			String jsonQuestionnaire = jsonCleaner.clean(translator2.translate(translator.generate(in)));
 			JSONObject jsonOut = new JSONObject(jsonQuestionnaire);
 
 			Files.write(outputFile, jsonQuestionnaire.getBytes("UTF-8"));
-			
+
 			long elapsedTime = System.currentTimeMillis() - startTime;
-			
+
 			logger.debug("File generated at : "+outputFile.toString());
 			logger.debug("Transformation time for eno-XML to json lunatic fo JS: " + elapsedTime +" ms");
 
@@ -163,22 +172,22 @@ public class TranslatorsTest {
 			Assertions.fail();
 		}
 	}
-	
+
 	@Test
 	public void testQuestionnaireXMLHToJSONH() {
 		logger.debug("Launch test : XMLLunatic -> JSONLunaticH");
 		try {
 			String basePath = Constants.RESOURCES_FOLDER_XMLH_2_JSONH_PATH;
-			
+
 			Path outPath = Paths.get(Constants.TEMP_FOLDER_PATH + "/xmlh-2-jsonh-out.json");
 			Files.deleteIfExists(outPath);
 			Path outputFile = Files.createFile(outPath);
-			
+
 			File in = new File(String.format("%s/form.xml",  Constants.RESOURCES_FOLDER_DUMMY_PATH));
 
 			XMLLunaticToJSONLunaticTranslator translator = new XMLLunaticToJSONLunaticTranslator();
 			JSONCleaner jsonCleaner = new JSONCleaner();
-			
+
 			String jsonQuestionnaire = jsonCleaner.clean(translator.translate(in));
 			JSONObject jsonOut = new JSONObject(jsonQuestionnaire);
 			Files.write(outputFile, jsonQuestionnaire.getBytes("UTF-8"));
@@ -210,6 +219,30 @@ public class TranslatorsTest {
 		return String.format("Transformed output for %s should match expected XML document:\n %s", path,
 				diff.toString());
 	}
-	
-	
+
+	@Test
+	void xmlHierarchicalToJsonFlat_resizingIssue() throws Exception {
+		//
+		XMLLunaticToXMLLunaticFlatTranslator translator1 = new XMLLunaticToXMLLunaticFlatTranslator();
+		XMLLunaticFlatToJSONLunaticFlatTranslator translator2 = new XMLLunaticFlatToJSONLunaticFlatTranslator();
+		JSONCleaner cleaner = new JSONCleaner();
+		//
+		String xmlFlat = translator1.generate(this.getClass().getClassLoader().getResourceAsStream(
+				"pairwise/resizing-issue/lb3ei722-lunatic-hierarchical.xml"));
+		String jsonFlat = translator2.translate(xmlFlat);
+		String result = cleaner.clean(jsonFlat);
+		//
+		assertNotNull(result);
+		try (JsonReader jsonReader = Json.createReader(
+				new ByteArrayInputStream(result.getBytes(StandardCharsets.UTF_8)))) {
+			JsonObject resultJson = jsonReader.readObject();
+			JsonArray resizingVariables = resultJson.getJsonObject("resizing").getJsonObject("NB")
+					.getJsonArray("variables");
+			assertEquals(2, resizingVariables.size());
+			String variableName1 = resizingVariables.getString(0);
+			String variableName2 = resizingVariables.getString(1);
+			assertEquals(Set.of("PRENOM", "AGE"), Set.of(variableName1, variableName2));
+		}
+	}
+
 }
