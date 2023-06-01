@@ -32,7 +32,7 @@
                     <xs:element name="variables" type="IVariableType" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="cleaning" type="CleaningType" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="missingBlock" type="MissingType" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="resizing" type="ResizingType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="resizing" type="MissingType" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -101,7 +101,7 @@
             <xs:element name="hierarchy" type="hierarchy" minOccurs="0"/>
             <xs:element name="missingResponse" type="ResponseType" minOccurs="0"/>
 			
-			<xs:element name="storeName" type="xs:string" minOccurs="0"/>
+			<xs:element name="storeName" minOccurs="0"/>
 			
             <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
@@ -202,7 +202,10 @@
     <xs:complexType name="SuggesterField">
     	<xs:sequence>
     		<xs:element name="name" type="xs:string"/>
-			<xs:element name="rules" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:choice>
+				<xs:element name="rules" type="xs:string"/>
+				<xs:element name="rulesA" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:choice>
 			<xs:element name="language" type="xs:string" minOccurs="0"/>
     		<xs:element name="min" type="xs:integer" minOccurs="0"/>
     		<xs:element name="stemmer" type="xs:boolean" minOccurs="0"/>
