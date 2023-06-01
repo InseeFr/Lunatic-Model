@@ -32,7 +32,7 @@
                     <xs:element name="variables" type="IVariableType" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="cleaning" type="CleaningType" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="missingBlock" type="MissingType" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="resizing" type="MissingType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="resizing" type="ResizingType" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
