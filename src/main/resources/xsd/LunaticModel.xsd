@@ -32,7 +32,7 @@
                     <xs:element name="variables" type="IVariableType" minOccurs="0" maxOccurs="unbounded"/>
                     <xs:element name="cleaning" type="CleaningType" minOccurs="0" maxOccurs="1"/>
                     <xs:element name="missingBlock" type="MissingType" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="resizing" type="MissingType" minOccurs="0" maxOccurs="1"/>
+                    <xs:element name="resizing" type="ResizingType" minOccurs="0" maxOccurs="1"/>
                 </xs:sequence>
             </xs:extension>
         </xs:complexContent>
@@ -115,6 +115,34 @@
         <xs:attribute name="mandatory" type="xs:boolean"/>
         <xs:attribute name="page" type="xs:string"/>
     </xs:complexType>
+    
+    
+    <xs:complexType name="PairwiseLinks">
+        <xs:complexContent>
+            <xs:extension base="ComponentType">
+                <xs:sequence>
+                    <xs:element name="xAxisIterations" type="labelType" minOccurs="0"/>
+                    <xs:element name="yAxisIterations" type="labelType" minOccurs="0"/>
+                    <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:element name="symLinks" type="symLinksType" minOccurs="0"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="symLinksType">
+        <xs:sequence>
+            <xs:element name="LINK" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="source" type="xs:string" maxOccurs="1"/>
+                        <xs:element name="target" type="xs:string" minOccurs="0" maxOccurs="1"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:string"/>
+    </xs:complexType>
 
     <xs:complexType name="labelType">
         <xs:sequence>
@@ -146,6 +174,7 @@
             <xs:enumeration value="Loop"/>
             <xs:enumeration value="Table"/>
             <xs:enumeration value="Input"/>
+            <xs:enumeration value="PairwiseLinks"/>
             <xs:enumeration value="InputNumber"/>
             <xs:enumeration value="Datepicker"/>
             <xs:enumeration value="CheckboxGroup"/>

@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire xmlns="http://xml.insee.fr/schema/applis/lunatic-h"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                id="lb3ei722"
+                modele="TESTSURSUM"
+                enoCoreVersion="2.4.1"
+                missing="false"
+                pagination="question"
+                maxPage="10">
+   <label>
+      <value>QNONREG - sum, min dans une boucle et sur controle prénom et test filtre occurrence</value>
+      <type>VTL|MD</type>
+   </label>
+   <components xsi:type="Sequence"
+                componentType="Sequence"
+                id="ksyjs7vy"
+                page="1">
+      <label>
+         <value>"I - " || "S0"</value>
+         <type>VTL|MD</type>
+      </label>
+      <conditionFilter>
+         <value>true</value>
+         <type>VTL</type>
+      </conditionFilter>
+      <hierarchy>
+         <sequence id="ksyjs7vy" page="1">
+            <label>
+               <value>"I - " || "S0"</value>
+               <type>VTL|MD</type>
+            </label>
+         </sequence>
+      </hierarchy>
+      <components xsi:type="InputNumber"
+                   componentType="InputNumber"
+                   id="kze792d8"
+                   mandatory="false"
+                   min="0"
+                   max="10"
+                   decimals="0"
+                   page="2">
+         <label>
+            <value>"➡ " || "NB"</value>
+            <type>VTL|MD</type>
+         </label>
+         <conditionFilter>
+            <value>true</value>
+            <type>VTL</type>
+         </conditionFilter>
+         <controls id="kze792d8-format-borne-inf-sup"
+                    criticality="ERROR"
+                    typeOfControl="FORMAT">
+            <control>
+               <value>not(not(isnull(NB)) and (0&gt;NB or 10&lt;NB))</value>
+               <type>VTL</type>
+            </control>
+            <errorMessage>
+               <value>" La valeur doit être comprise entre 0 et 10."</value>
+               <type>VTL|MD</type>
+            </errorMessage>
+         </controls>
+         <controls id="kze792d8-format-decimal"
+                    criticality="ERROR"
+                    typeOfControl="FORMAT">
+            <control>
+               <value>not(not(isnull(NB))  and round(NB,0)&lt;&gt;NB)</value>
+               <type>VTL</type>
+            </control>
+            <errorMessage>
+               <value>"Le nombre doit comporter au maximum 0 chiffre(s) après la virgule."</value>
+               <type>VTL|MD</type>
+            </errorMessage>
+         </controls>
+         <hierarchy>
+            <sequence id="ksyjs7vy" page="1">
+               <label>
+                  <value>"I - " || "S0"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </sequence>
+         </hierarchy>
+         <bindingDependencies>NB</bindingDependencies>
+         <response name="NB"/>
+      </components>
+      <components xsi:type="Loop"
+                   componentType="Loop"
+                   id="ksykfdm9"
+                   depth="1"
+                   page="3"
+                   paginatedLoop="false">
+         <lines>
+            <min>
+               <value>cast(NB,integer)</value>
+               <type>VTL</type>
+            </min>
+            <max>
+               <value>cast(NB,integer)</value>
+               <type>VTL</type>
+            </max>
+         </lines>
+         <conditionFilter>
+            <value>true</value>
+            <type>VTL</type>
+         </conditionFilter>
+         <hierarchy>
+            <sequence id="ksyjs7vy" page="1">
+               <label>
+                  <value>"I - " || "S0"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </sequence>
+         </hierarchy>
+         <bindingDependencies>NB</bindingDependencies>
+         <bindingDependencies>PRENOM</bindingDependencies>
+         <loopDependencies>NB</loopDependencies>
+         <components xsi:type="Subsequence"
+                      componentType="Subsequence"
+                      id="ksynhpl3"
+                      page="3"
+                      goToPage="3">
+            <label>
+               <value>"Habitants"</value>
+               <type>VTL|MD</type>
+            </label>
+            <conditionFilter>
+               <value>true</value>
+               <type>VTL</type>
+            </conditionFilter>
+            <hierarchy>
+               <sequence id="ksyjs7vy" page="1">
+                  <label>
+                     <value>"I - " || "S0"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </sequence>
+               <subSequence id="ksynhpl3" page="3">
+                  <label>
+                     <value>"Habitants"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </subSequence>
+            </hierarchy>
+            <bindingDependencies>NB</bindingDependencies>
+            <components xsi:type="Input"
+                         componentType="Input"
+                         id="ksyjvi40"
+                         maxLength="249"
+                         mandatory="false"
+                         page="3">
+               <label>
+                  <value>"➡ " || "prénom"</value>
+                  <type>VTL|MD</type>
+               </label>
+               <declarations declarationType="HELP"
+                              id="ksyjvi40-l7uj49ok"
+                              position="AFTER_QUESTION_TEXT">
+                  <label>
+                     <value>"Tester Prénom vide et Prénom = A"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </declarations>
+               <conditionFilter>
+                  <value>true</value>
+                  <type>VTL</type>
+               </conditionFilter>
+               <controls id="ksyjvi40-CI-0" criticality="WARN" typeOfControl="CONSISTENCY">
+                  <control>
+                     <value>not(nvl(PRENOM,"")="")</value>
+                     <type>VTL</type>
+                  </control>
+                  <errorMessage>
+                     <value>"Prenom est vide - controle nvl"</value>
+                     <type>VTL|MD</type>
+                  </errorMessage>
+                  <bindingDependencies>PRENOM</bindingDependencies>
+               </controls>
+               <controls id="ksyjvi40-CI-1" criticality="WARN" typeOfControl="CONSISTENCY">
+                  <control>
+                     <value>not(PRENOM = "A")</value>
+                     <type>VTL</type>
+                  </control>
+                  <errorMessage>
+                     <value>"PRénom vaut A"</value>
+                     <type>VTL|MD</type>
+                  </errorMessage>
+                  <bindingDependencies>PRENOM</bindingDependencies>
+               </controls>
+               <hierarchy>
+                  <sequence id="ksyjs7vy" page="1">
+                     <label>
+                        <value>"I - " || "S0"</value>
+                        <type>VTL|MD</type>
+                     </label>
+                  </sequence>
+                  <subSequence id="ksynhpl3" page="3">
+                     <label>
+                        <value>"Habitants"</value>
+                        <type>VTL|MD</type>
+                     </label>
+                  </subSequence>
+               </hierarchy>
+               <bindingDependencies>PRENOM</bindingDependencies>
+               <bindingDependencies>NB</bindingDependencies>
+               <response name="PRENOM"/>
+            </components>
+         </components>
+      </components>
+   </components>
+   <components xsi:type="Sequence"
+                componentType="Sequence"
+                id="ksyniqzx"
+                page="4">
+      <label>
+         <value>"II - " || "S1"</value>
+         <type>VTL|MD</type>
+      </label>
+      <conditionFilter>
+         <value>true</value>
+         <type>VTL</type>
+      </conditionFilter>
+      <hierarchy>
+         <sequence id="ksyniqzx" page="4">
+            <label>
+               <value>"II - " || "S1"</value>
+               <type>VTL|MD</type>
+            </label>
+         </sequence>
+      </hierarchy>
+      <components xsi:type="Loop"
+                   componentType="Loop"
+                   id="ksynkaoo"
+                   depth="1"
+                   page="5"
+                   maxPage="1"
+                   paginatedLoop="true">
+         <iterations>
+            <value>count(PRENOM)</value>
+            <type>VTL</type>
+         </iterations>
+         <conditionFilter>
+            <value>true</value>
+            <type>VTL</type>
+         </conditionFilter>
+         <hierarchy>
+            <sequence id="ksyniqzx" page="4">
+               <label>
+                  <value>"II - " || "S1"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </sequence>
+         </hierarchy>
+         <bindingDependencies>AGE</bindingDependencies>
+         <bindingDependencies>IND_MAJEUR</bindingDependencies>
+         <bindingDependencies>PRENOM</bindingDependencies>
+         <loopDependencies>PRENOM</loopDependencies>
+         <components xsi:type="Subsequence"
+                      componentType="Subsequence"
+                      id="ksyjxw3a"
+                      goToPage="5.1">
+            <label>
+               <value>"Les ages"</value>
+               <type>VTL|MD</type>
+            </label>
+            <conditionFilter>
+               <value>true</value>
+               <type>VTL</type>
+            </conditionFilter>
+            <hierarchy>
+               <sequence id="ksyniqzx" page="4">
+                  <label>
+                     <value>"II - " || "S1"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </sequence>
+               <subSequence id="ksyjxw3a" page="5.1">
+                  <label>
+                     <value>"Les ages"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </subSequence>
+            </hierarchy>
+            <bindingDependencies>PRENOM</bindingDependencies>
+            <components xsi:type="InputNumber"
+                         componentType="InputNumber"
+                         id="ksyke448"
+                         mandatory="false"
+                         min="0"
+                         max="100"
+                         decimals="0"
+                         page="5.1">
+               <label>
+                  <value>"➡ " || "Age de l’individu : " || PRENOM</value>
+                  <type>VTL|MD</type>
+               </label>
+               <declarations declarationType="HELP"
+                              id="ksyke448-ktwsl4qu"
+                              position="AFTER_QUESTION_TEXT">
+                  <label>
+                     <value>"AGE vaut : " || cast(AGE,string)</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </declarations>
+               <declarations declarationType="HELP"
+                              id="ksyke448-l7g2enbf"
+                              position="AFTER_QUESTION_TEXT">
+                  <label>
+                     <value>"IND_MAJEUR :" || cast(IND_MAJEUR,string)</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </declarations>
+               <conditionFilter>
+                  <value>true</value>
+                  <type>VTL</type>
+               </conditionFilter>
+               <controls id="ksyke448-format-borne-inf-sup"
+                          criticality="ERROR"
+                          typeOfControl="FORMAT">
+                  <control>
+                     <value>not(not(isnull(AGE)) and (0&gt;AGE or 100&lt;AGE))</value>
+                     <type>VTL</type>
+                  </control>
+                  <errorMessage>
+                     <value>" La valeur doit être comprise entre 0 et 100."</value>
+                     <type>VTL|MD</type>
+                  </errorMessage>
+               </controls>
+               <controls id="ksyke448-format-decimal"
+                          criticality="ERROR"
+                          typeOfControl="FORMAT">
+                  <control>
+                     <value>not(not(isnull(AGE))  and round(AGE,0)&lt;&gt;AGE)</value>
+                     <type>VTL</type>
+                  </control>
+                  <errorMessage>
+                     <value>"Le nombre doit comporter au maximum 0 chiffre(s) après la virgule."</value>
+                     <type>VTL|MD</type>
+                  </errorMessage>
+               </controls>
+               <controls id="ksyke448-CI-0" criticality="WARN" typeOfControl="CONSISTENCY">
+                  <control>
+                     <value>not(isnull(AGE))</value>
+                     <type>VTL</type>
+                  </control>
+                  <errorMessage>
+                     <value>"Age est vide"</value>
+                     <type>VTL|MD</type>
+                  </errorMessage>
+                  <bindingDependencies>AGE</bindingDependencies>
+               </controls>
+               <hierarchy>
+                  <sequence id="ksyniqzx" page="4">
+                     <label>
+                        <value>"II - " || "S1"</value>
+                        <type>VTL|MD</type>
+                     </label>
+                  </sequence>
+                  <subSequence id="ksyjxw3a" page="5.1">
+                     <label>
+                        <value>"Les ages"</value>
+                        <type>VTL|MD</type>
+                     </label>
+                  </subSequence>
+               </hierarchy>
+               <bindingDependencies>AGE</bindingDependencies>
+               <bindingDependencies>IND_MAJEUR</bindingDependencies>
+               <bindingDependencies>PRENOM</bindingDependencies>
+               <response name="AGE"/>
+            </components>
+         </components>
+      </components>
+      <components xsi:type="Subsequence"
+                   componentType="Subsequence"
+                   id="ku2pnlmr"
+                   page="6"
+                   goToPage="6">
+         <label>
+            <value>"Affichage de qq var"</value>
+            <type>VTL|MD</type>
+         </label>
+         <declarations declarationType="HELP"
+                        id="ku2pnlmr-l7t4dzz2"
+                        position="AFTER_QUESTION_TEXT">
+            <label>
+               <value>"Affichage du nb de majeurs : " || cast(SUM_MAJEUR,string)</value>
+               <type>VTL|MD</type>
+            </label>
+         </declarations>
+         <declarations declarationType="HELP"
+                        id="ku2pnlmr-l806u4c8"
+                        position="AFTER_QUESTION_TEXT">
+            <label>
+               <value>"Affichage du somme age : " || cast(SUM_AGE,string)</value>
+               <type>VTL|MD</type>
+            </label>
+         </declarations>
+         <declarations declarationType="HELP"
+                        id="ku2pnlmr-lg6mo14c"
+                        position="AFTER_QUESTION_TEXT">
+            <label>
+               <value>"Affichage du min des ages sans cast: " || cast(MIN_AGE,string)</value>
+               <type>VTL|MD</type>
+            </label>
+         </declarations>
+         <conditionFilter>
+            <value>true</value>
+            <type>VTL</type>
+         </conditionFilter>
+         <hierarchy>
+            <sequence id="ksyniqzx" page="4">
+               <label>
+                  <value>"II - " || "S1"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </sequence>
+            <subSequence id="ku2pnlmr" page="6">
+               <label>
+                  <value>"Affichage de qq var"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </subSequence>
+         </hierarchy>
+         <bindingDependencies>SUM_MAJEUR</bindingDependencies>
+         <bindingDependencies>SUM_AGE</bindingDependencies>
+         <bindingDependencies>MIN_AGE</bindingDependencies>
+         <components xsi:type="Input"
+                      componentType="Input"
+                      id="ku2pxugf"
+                      maxLength="249"
+                      mandatory="false"
+                      page="7">
+            <label>
+               <value>"➡ " || "divers"</value>
+               <type>VTL|MD</type>
+            </label>
+            <conditionFilter>
+               <value>(SUM_MAJEUR &gt; 0)</value>
+               <type>VTL</type>
+               <bindingDependencies>SUM_MAJEUR</bindingDependencies>
+               <bindingDependencies>IND_MAJEUR</bindingDependencies>
+               <bindingDependencies>AGE</bindingDependencies>
+            </conditionFilter>
+            <hierarchy>
+               <sequence id="ksyniqzx" page="4">
+                  <label>
+                     <value>"II - " || "S1"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </sequence>
+               <subSequence id="ku2pnlmr" page="6">
+                  <label>
+                     <value>"Affichage de qq var"</value>
+                     <type>VTL|MD</type>
+                  </label>
+               </subSequence>
+            </hierarchy>
+            <bindingDependencies>DIVERS</bindingDependencies>
+            <response name="DIVERS"/>
+         </components>
+      </components>
+   </components>
+   <components xsi:type="Sequence"
+                componentType="Sequence"
+                id="l7yz0fe5"
+                page="8">
+      <label>
+         <value>"III - " || "S3"</value>
+         <type>VTL|MD</type>
+      </label>
+      <declarations declarationType="HELP"
+                     id="l7yz0fe5-l7yyye9y"
+                     position="AFTER_QUESTION_TEXT">
+         <label>
+            <value>"Affichage de la somme des ages : " || cast(SUM_AGE,string)</value>
+            <type>VTL|MD</type>
+         </label>
+      </declarations>
+      <declarations declarationType="HELP"
+                     id="l7yz0fe5-l7yz5mgk"
+                     position="AFTER_QUESTION_TEXT">
+         <label>
+            <value>"Affichage du nb de majeurs : " || cast(SUM_MAJEUR,string)</value>
+            <type>VTL|MD</type>
+         </label>
+      </declarations>
+      <declarations declarationType="HELP"
+                     id="l7yz0fe5-l7yyrp0q"
+                     position="AFTER_QUESTION_TEXT">
+         <label>
+            <value>"Affichage du min des ages : " || cast(MIN_AGE,string)</value>
+            <type>VTL|MD</type>
+         </label>
+      </declarations>
+      <conditionFilter>
+         <value>true</value>
+         <type>VTL</type>
+      </conditionFilter>
+      <hierarchy>
+         <sequence id="l7yz0fe5" page="8">
+            <label>
+               <value>"III - " || "S3"</value>
+               <type>VTL|MD</type>
+            </label>
+         </sequence>
+      </hierarchy>
+      <bindingDependencies>SUM_AGE</bindingDependencies>
+      <bindingDependencies>SUM_MAJEUR</bindingDependencies>
+      <bindingDependencies>MIN_AGE</bindingDependencies>
+   </components>
+   <components xsi:type="Sequence"
+                componentType="Sequence"
+                id="COMMENT-SEQ"
+                page="9">
+      <label>
+         <value>"Commentaire"</value>
+         <type>VTL|MD</type>
+      </label>
+      <conditionFilter>
+         <value>true</value>
+         <type>VTL</type>
+      </conditionFilter>
+      <hierarchy>
+         <sequence id="COMMENT-SEQ" page="9">
+            <label>
+               <value>"Commentaire"</value>
+               <type>VTL|MD</type>
+            </label>
+         </sequence>
+      </hierarchy>
+      <components xsi:type="Textarea"
+                   componentType="Textarea"
+                   id="COMMENT-QUESTION"
+                   maxLength="2000"
+                   mandatory="false"
+                   page="10">
+         <label>
+            <value>"Avez-vous des remarques concernant l'enquête ou des commentaires ?"</value>
+            <type>VTL|MD</type>
+         </label>
+         <conditionFilter>
+            <value>true</value>
+            <type>VTL</type>
+         </conditionFilter>
+         <hierarchy>
+            <sequence id="COMMENT-SEQ" page="9">
+               <label>
+                  <value>"Commentaire"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </sequence>
+         </hierarchy>
+         <bindingDependencies>COMMENT_QE</bindingDependencies>
+         <response name="COMMENT_QE"/>
+      </components>
+   </components>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>COMMENT_QE</name>
+      <!--<componentRef>COMMENT-QUESTION</componentRef>-->
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>NB</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableTypeArray">
+      <name>PRENOM</name>
+      <values>
+         <PREVIOUS xsi:type="PREVIOUSArray">
+            <PREVIOUS xsi:nil="true"/>
+         </PREVIOUS>
+         <COLLECTED xsi:type="COLLECTEDArray">
+            <COLLECTED xsi:nil="true"/>
+         </COLLECTED>
+         <FORCED xsi:type="FORCEDArray">
+            <FORCED xsi:nil="true"/>
+         </FORCED>
+         <EDITED xsi:type="EDITEDArray">
+            <EDITED xsi:nil="true"/>
+         </EDITED>
+         <INPUTED xsi:type="INPUTEDArray">
+            <INPUTED xsi:nil="true"/>
+         </INPUTED>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableTypeArray">
+      <name>AGE</name>
+      <values>
+         <PREVIOUS xsi:type="PREVIOUSArray">
+            <PREVIOUS xsi:nil="true"/>
+         </PREVIOUS>
+         <COLLECTED xsi:type="COLLECTEDArray">
+            <COLLECTED xsi:nil="true"/>
+         </COLLECTED>
+         <FORCED xsi:type="FORCEDArray">
+            <FORCED xsi:nil="true"/>
+         </FORCED>
+         <EDITED xsi:type="EDITEDArray">
+            <EDITED xsi:nil="true"/>
+         </EDITED>
+         <INPUTED xsi:type="INPUTEDArray">
+            <INPUTED xsi:nil="true"/>
+         </INPUTED>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>DIVERS</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="CALCULATED" xsi:type="VariableType">
+      <name>FILTER_RESULT_NB</name>
+      <expression>
+         <value>true</value>
+         <type>VTL</type>
+      </expression>
+      <inFilter>false</inFilter>
+   </variables>
+   <variables variableType="CALCULATED" xsi:type="VariableType">
+      <name>FILTER_RESULT_PRENOM</name>
+      <expression>
+         <value>true</value>
+         <type>VTL</type>
+      </expression>
+      <shapeFrom>PRENOM</shapeFrom>
+      <inFilter>false</inFilter>
+   </variables>
+   <variables variableType="CALCULATED" xsi:type="VariableType">
+      <name>IND_MAJEUR</name>
+      <expression>
+         <value>if nvl(AGE,0) &gt; 17 then 1 else 0</value>
+         <type>VTL</type>
+      </expression>
+      <bindingDependencies>AGE</bindingDependencies>
+      <shapeFrom>PRENOM</shapeFrom>
+      <inFilter>true</inFilter>
+   </variables>
+   <variables variableType="CALCULATED" xsi:type="VariableType">
+      <name>FILTER_RESULT_AGE</name>
+      <expression>
+         <value>true</value>
+         <type>VTL</type>
+      </expression>
+      <shapeFrom>AGE</shapeFrom>
+      <inFilter>false</inFilter>
+   </variables>
+   <variables variableType="CALCULATED" xsi:type="VariableType">
+      <name>FILTER_RESULT_DIVERS</name>
+      <expression>
+         <value>(SUM_MAJEUR &gt; 0)</value>
+         <type>VTL</type>
+      </expression>
+      <bindingDependencies>SUM_MAJEUR</bindingDependencies>
+      <inFilter>false</inFilter>
+   </variables>
+   <variables variableType="CALCULATED" xsi:type="VariableType">
+      <name>SUM_MAJEUR</name>
+      <expression>
+         <value>sum(IND_MAJEUR)</value>
+         <type>VTL</type>
+      </expression>
+      <bindingDependencies>IND_MAJEUR</bindingDependencies>
+      <bindingDependencies>AGE</bindingDependencies>
+      <inFilter>true</inFilter>
+   </variables>
+   <variables variableType="CALCULATED" xsi:type="VariableType">
+      <name>SUM_AGE</name>
+      <expression>
+         <value>sum(AGE)</value>
+         <type>VTL</type>
+      </expression>
+      <bindingDependencies>AGE</bindingDependencies>
+      <inFilter>false</inFilter>
+   </variables>
+   <variables variableType="CALCULATED" xsi:type="VariableType">
+      <name>MIN_AGE</name>
+      <expression>
+         <value>min(AGE)</value>
+         <type>VTL</type>
+      </expression>
+      <bindingDependencies>AGE</bindingDependencies>
+      <inFilter>false</inFilter>
+   </variables>
+   <cleaning>
+      <SUM_MAJEUR>
+         <DIVERS>(SUM_MAJEUR &gt; 0)</DIVERS>
+      </SUM_MAJEUR>
+      <IND_MAJEUR>
+         <DIVERS>(SUM_MAJEUR &gt; 0)</DIVERS>
+      </IND_MAJEUR>
+      <AGE>
+         <DIVERS>(SUM_MAJEUR &gt; 0)</DIVERS>
+      </AGE>
+   </cleaning>
+   <resizing>
+      <NB>
+         <size>cast(NB,integer)</size>
+         <variables>PRENOM</variables>
+         <variables>AGE</variables>
+      </NB>
+   </resizing>
+</Questionnaire>

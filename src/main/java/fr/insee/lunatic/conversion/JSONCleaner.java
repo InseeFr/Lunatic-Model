@@ -1,15 +1,12 @@
 package fr.insee.lunatic.conversion;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-
+import fr.insee.lunatic.Constants;
+import fr.insee.lunatic.utils.XslTransformation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import fr.insee.lunatic.Constants;
-import fr.insee.lunatic.utils.XslTransformation;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 /**
  * remove technical attribute as xsi:type
@@ -19,7 +16,7 @@ import fr.insee.lunatic.utils.XslTransformation;
  */
 public class JSONCleaner {
 
-	private static XslTransformation saxonService = new XslTransformation();
+	private static final XslTransformation saxonService = new XslTransformation();
 
 	private static final Logger logger = LoggerFactory.getLogger(JSONCleaner.class);
 
@@ -28,15 +25,21 @@ public class JSONCleaner {
 
 		if ((jsonString == null) || (jsonString.length() == 0))
 			return null;
-		InputStream json = new ByteArrayInputStream(wrapJsonWithXml(jsonString).getBytes("UTF-8"));
+		InputStream json = new ByteArrayInputStream(wrapJsonWithXml(jsonString).getBytes(StandardCharsets.UTF_8));
 
-		return this.generate(json);
+		// Unchanged step: use XSLT "cleaning" sheet
+		String generatedUsingXslt = generate(json);
+
+		// New step: apply (Java) symLinks cleaning
+		JSONSymLinksCleaner jsonSymLinksCleaner = new JSONSymLinksCleaner();
+		return jsonSymLinksCleaner.clean(generatedUsingXslt);
 	}
 	
 	public String generate(InputStream isFinalInput) throws Exception {
 		OutputStream osOutputFile = generateOS(isFinalInput);
 		String res = osOutputFile.toString();
 		osOutputFile.close();
+
 		return res;
 	}
 
@@ -63,4 +66,5 @@ public class JSONCleaner {
 				.replaceAll("<", "&lt;")
 				.replaceAll(">", "&gt;");
 	}
+
 }
