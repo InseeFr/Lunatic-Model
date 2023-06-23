@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<jxb:bindings version="1.0"
+              xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+              xmlns:xs="http://www.w3.org/2001/XMLSchema-instance"
+              xmlns:namespace="http://jaxb2-commons.dev.java.net/namespace-prefix"
+              xmlns:inheritance="http://jaxb2-commons.dev.java.net/basic/inheritance"
+              xs:schemaLocation="http://java.sun.com/xml/ns/jaxb http://java.sun.com/xml/ns/jaxb/bindingschema_2_0.xsd
+    http://jaxb2-commons.dev.java.net/namespace-prefix https://raw.githubusercontent.com/Siggen/jaxb2-namespace-prefix/master/src/main/resources/prefix-namespace-schema.xsd">
+
+    <jxb:bindings schemaLocation="file:../xsd/LunaticModelFlat.xsd">
+        <jxb:schemaBindings>
+            <jxb:package name="fr.insee.lunatic.model.flat" />
+        </jxb:schemaBindings>
+        <jxb:bindings>
+            <!-- Additional @XmlNs prefix declarations to take effect for this schema/package -->
+            <namespace:prefix name="xs" namespaceURI="http://www.w3.org/2001/XMLSchema-instance" />
+        </jxb:bindings>
+        <jxb:bindings node="//*[local-name(.)='complexType'][@name='Textarea']">
+            <inheritance:implements>fr.insee.lunatic.model.flat.SimpleResponseType</inheritance:implements>
+        </jxb:bindings>
+
+        <jxb:bindings node="//*[local-name(.)='complexType'][@name='Input']">
+            <inheritance:implements>fr.insee.lunatic.model.flat.SimpleResponseType</inheritance:implements>
+        </jxb:bindings>
+
+        <jxb:bindings node="//*[local-name(.)='complexType'][@name='InputNumber']">
+            <inheritance:implements>fr.insee.lunatic.model.flat.SimpleResponseType</inheritance:implements>
+        </jxb:bindings>
+
+        <jxb:bindings node="//*[local-name(.)='complexType'][@name='Datepicker']">
+            <inheritance:implements>fr.insee.lunatic.model.flat.SimpleResponseType</inheritance:implements>
+        </jxb:bindings>
+
+        <jxb:bindings node="//*[local-name(.)='complexType'][@name='CheckboxOne']">
+            <inheritance:implements>fr.insee.lunatic.model.flat.SimpleResponseType</inheritance:implements>
+        </jxb:bindings>
+
+        <jxb:bindings node="//*[local-name(.)='complexType'][@name='CheckboxBoolean' ]">
+            <inheritance:implements>fr.insee.lunatic.model.flat.SimpleResponseType</inheritance:implements>
+        </jxb:bindings>
+
+        <jxb:bindings node="//*[local-name(.)='complexType'][@name='Radio']">
+            <inheritance:implements>fr.insee.lunatic.model.flat.SimpleResponseType</inheritance:implements>
+        </jxb:bindings>
+
+        <jxb:bindings node="//*[local-name(.)='complexType'][@name='Dropdown']">
+            <inheritance:implements>fr.insee.lunatic.model.flat.SimpleResponseType</inheritance:implements>
+        </jxb:bindings>
+
+
+        <jxb:bindings node="//*[local-name(.)='complexType'][@name='CheckboxGroup']">
+            <inheritance:implements>fr.insee.lunatic.model.flat.MultipleResponseType</inheritance:implements>
+        </jxb:bindings>
+
+        <jxb:bindings node="//*[local-name(.)='complexType'][@name='Table']">
+            <inheritance:implements>fr.insee.lunatic.model.flat.MultipleResponseType</inheritance:implements>
+        </jxb:bindings>
+
+        <jxb:bindings node="//*[local-name(.)='complexType'][@name='RosterForLoop' ]">
+            <inheritance:implements>fr.insee.lunatic.model.flat.MultipleResponseType</inheritance:implements>
+        </jxb:bindings>
+
+        <jxb:bindings node="//*[local-name(.)='complexType'][@name='Loop']">
+            <inheritance:implements>fr.insee.lunatic.model.flat.ComponentNestingType</inheritance:implements>
+        </jxb:bindings>
+
+        <jxb:bindings node="//*[local-name(.)='complexType'][@name='PairwiseLinks']">
+            <inheritance:implements>fr.insee.lunatic.model.flat.ComponentNestingType</inheritance:implements>
+        </jxb:bindings>
+    </jxb:bindings>
+</jxb:bindings>
