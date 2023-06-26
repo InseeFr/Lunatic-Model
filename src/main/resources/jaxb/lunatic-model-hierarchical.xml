@@ -16,56 +16,64 @@
             <namespace:prefix name="xs" namespaceURI="http://www.w3.org/2001/XMLSchema-instance" />
         </jxb:bindings>
         <jxb:bindings node="//*[local-name(.)='complexType'][@name='Textarea']">
-            <inheritance:implements>fr.insee.lunatic.model.hierarchical.SimpleResponseType</inheritance:implements>
+            <inheritance:implements>fr.insee.lunatic.model.hierarchical.ComponentSimpleResponseType</inheritance:implements>
         </jxb:bindings>
 
         <jxb:bindings node="//*[local-name(.)='complexType'][@name='Input']">
-            <inheritance:implements>fr.insee.lunatic.model.hierarchical.SimpleResponseType</inheritance:implements>
+            <inheritance:implements>fr.insee.lunatic.model.hierarchical.ComponentSimpleResponseType</inheritance:implements>
         </jxb:bindings>
 
         <jxb:bindings node="//*[local-name(.)='complexType'][@name='InputNumber']">
-            <inheritance:implements>fr.insee.lunatic.model.hierarchical.SimpleResponseType</inheritance:implements>
+            <inheritance:implements>fr.insee.lunatic.model.hierarchical.ComponentSimpleResponseType</inheritance:implements>
         </jxb:bindings>
 
         <jxb:bindings node="//*[local-name(.)='complexType'][@name='Datepicker']">
-            <inheritance:implements>fr.insee.lunatic.model.hierarchical.SimpleResponseType</inheritance:implements>
+            <inheritance:implements>fr.insee.lunatic.model.hierarchical.ComponentSimpleResponseType</inheritance:implements>
         </jxb:bindings>
 
         <jxb:bindings node="//*[local-name(.)='complexType'][@name='CheckboxOne']">
-            <inheritance:implements>fr.insee.lunatic.model.hierarchical.SimpleResponseType</inheritance:implements>
+            <inheritance:implements>fr.insee.lunatic.model.hierarchical.ComponentSimpleResponseType</inheritance:implements>
         </jxb:bindings>
 
         <jxb:bindings node="//*[local-name(.)='complexType'][@name='CheckboxBoolean' ]">
-            <inheritance:implements>fr.insee.lunatic.model.hierarchical.SimpleResponseType</inheritance:implements>
+            <inheritance:implements>fr.insee.lunatic.model.hierarchical.ComponentSimpleResponseType</inheritance:implements>
         </jxb:bindings>
 
         <jxb:bindings node="//*[local-name(.)='complexType'][@name='Radio']">
-            <inheritance:implements>fr.insee.lunatic.model.hierarchical.SimpleResponseType</inheritance:implements>
+            <inheritance:implements>fr.insee.lunatic.model.hierarchical.ComponentSimpleResponseType</inheritance:implements>
         </jxb:bindings>
 
         <jxb:bindings node="//*[local-name(.)='complexType'][@name='Dropdown']">
-            <inheritance:implements>fr.insee.lunatic.model.hierarchical.SimpleResponseType</inheritance:implements>
+            <inheritance:implements>fr.insee.lunatic.model.hierarchical.ComponentSimpleResponseType</inheritance:implements>
         </jxb:bindings>
 
 
         <jxb:bindings node="//*[local-name(.)='complexType'][@name='CheckboxGroup']">
-            <inheritance:implements>fr.insee.lunatic.model.hierarchical.MultipleResponseType</inheritance:implements>
+            <inheritance:implements>fr.insee.lunatic.model.hierarchical.ComponentMultipleResponseType</inheritance:implements>
         </jxb:bindings>
 
         <jxb:bindings node="//*[local-name(.)='complexType'][@name='PairwiseLinks']">
-            <inheritance:implements>fr.insee.lunatic.model.hierarchical.MultipleResponseType</inheritance:implements>
+            <inheritance:implements>fr.insee.lunatic.model.hierarchical.ComponentMultipleResponseType</inheritance:implements>
         </jxb:bindings>
 
         <jxb:bindings node="//*[local-name(.)='complexType'][@name='Table']">
-            <inheritance:implements>fr.insee.lunatic.model.hierarchical.MultipleResponseType</inheritance:implements>
+            <inheritance:implements>fr.insee.lunatic.model.hierarchical.ComponentMultipleResponseType</inheritance:implements>
         </jxb:bindings>
 
         <jxb:bindings node="//*[local-name(.)='complexType'][@name='RosterForLoop' ]">
-            <inheritance:implements>fr.insee.lunatic.model.hierarchical.MultipleResponseType</inheritance:implements>
+            <inheritance:implements>fr.insee.lunatic.model.hierarchical.ComponentMultipleResponseType</inheritance:implements>
         </jxb:bindings>
 
         <jxb:bindings node="//*[local-name(.)='complexType'][@name='Loop']">
-            <inheritance:implements>fr.insee.lunatic.model.hierarchical.MultipleResponseType</inheritance:implements>
+            <inheritance:implements>fr.insee.lunatic.model.hierarchical.ComponentMultipleResponseType</inheritance:implements>
+        </jxb:bindings>
+
+        <jxb:bindings node="//*[local-name(.)='complexType'][@name='Sequence']">
+            <inheritance:implements>fr.insee.lunatic.model.hierarchical.ComponentSequenceType</inheritance:implements>
+        </jxb:bindings>
+
+        <jxb:bindings node="//*[local-name(.)='complexType'][@name='Subsequence']">
+            <inheritance:implements>fr.insee.lunatic.model.hierarchical.ComponentSequenceType</inheritance:implements>
         </jxb:bindings>
     </jxb:bindings>
 </jxb:bindings>

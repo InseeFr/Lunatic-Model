@@ -1,6 +1,6 @@
 package fr.insee.lunatic.model.flat;
 
-public interface SimpleResponseType {
+public interface ComponentSimpleResponseType {
     void setResponse(ResponseType responseType);
 
     ResponseType getResponse();

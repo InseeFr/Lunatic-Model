@@ -1,4 +1,4 @@
 package fr.insee.lunatic.model.hierarchical;
 
-public interface MultipleResponseType {
+public interface ComponentSequenceType {
 }
