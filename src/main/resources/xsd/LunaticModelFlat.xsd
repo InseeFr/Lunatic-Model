@@ -9,7 +9,15 @@
     <xs:element name="Questionnaire">
         <xs:complexType>
             <xs:complexContent>
-                <xs:extension base="SequenceType">
+                <xs:extension base="ComponentType">
+                    <xs:sequence>
+						<xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element name="suggesters" type="SuggesterType" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element name="variables" type="IVariableType" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element name="cleaning" type="CleaningType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="missingBlock" type="MissingType" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="resizing" type="ResizingType" minOccurs="0" maxOccurs="1"/>
+					</xs:sequence>
                     <xs:attribute name="final" type="xs:boolean"/>
                     <xs:attribute name="modele" type="xs:string" use="optional"/>
                     <xs:attribute name="enoCoreVersion" type="xs:string" use="optional"/>
@@ -22,21 +30,6 @@
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
-
-    <xs:complexType name="SequenceType">
-        <xs:complexContent>
-            <xs:extension base="ComponentType">
-                <xs:sequence>
-                    <xs:element name="components" type="ComponentType" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="suggesters" type="SuggesterType" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="variables" type="IVariableType" minOccurs="0" maxOccurs="unbounded"/>
-                    <xs:element name="cleaning" type="CleaningType" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="missingBlock" type="MissingType" minOccurs="0" maxOccurs="1"/>
-                    <xs:element name="resizing" type="ResizingType" minOccurs="0" maxOccurs="1"/>
-                </xs:sequence>
-            </xs:extension>
-        </xs:complexContent>
-    </xs:complexType>
 
     <xs:complexType name="Sequence">
         <xs:complexContent>
@@ -96,14 +89,10 @@
             <xs:element name="declarations" type="DeclarationType" minOccurs="0" maxOccurs="unbounded"/>
             <!-- Warning : To validate the name -->
             <xs:element name="conditionFilter" type="ConditionFilterType" minOccurs="0"/>
-
             <xs:element name="controls" type="ControlType" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="hierarchy" type="hierarchy" minOccurs="0"/>
             <xs:element name="missingResponse" type="ResponseType" minOccurs="0"/>
-			
-			<xs:element name="storeName" type="xs:string" minOccurs="0"/>
-			
-            <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="id" type="xs:ID" use="required"/>
         <xs:attribute name="componentType" type="ComponentTypeEnum"/>
@@ -435,6 +424,28 @@
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
+
+    <xs:complexType name="Suggester">
+        <xs:complexContent>
+            <xs:extension base="ComponentType">
+                <xs:sequence>
+				    <xs:element name="storeName" type="xs:string"/>
+                    <xs:element name="options" type="Options" minOccurs="0" maxOccurs="unbounded"/>
+                    <xs:choice>
+						<xs:element name="response" type="ResponseType"/>
+						<xs:element name="responses" type="SuggesterMultipleResponsesType" maxOccurs="unbounded"/>
+					</xs:choice>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="SuggesterMultipleResponsesType">
+		<xs:sequence>
+			<xs:element name="id" type="xs:string"/>
+			<xs:element name="response" type="ResponseType"/>
+		</xs:sequence>
+	</xs:complexType>
 
     <xs:complexType name="CheckboxGroup">
         <xs:complexContent>
