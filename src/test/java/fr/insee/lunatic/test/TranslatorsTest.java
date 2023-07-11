@@ -1,14 +1,17 @@
 package fr.insee.lunatic.test;
 
 import fr.insee.lunatic.Constants;
-import fr.insee.lunatic.conversion.JSONCleaner;
-import fr.insee.lunatic.conversion.XMLLunaticFlatToJSONLunaticFlatTranslator;
-import fr.insee.lunatic.conversion.XMLLunaticToJSONLunaticTranslator;
-import fr.insee.lunatic.conversion.XMLLunaticToXMLLunaticFlatTranslator;
+import fr.insee.lunatic.conversion.*;
+import fr.insee.lunatic.exception.SerializationException;
+import fr.insee.lunatic.model.flat.ConditionFilterType;
+import fr.insee.lunatic.model.flat.Input;
+import fr.insee.lunatic.model.flat.LabelType;
+import fr.insee.lunatic.model.flat.Questionnaire;
 import fr.insee.lunatic.test.utils.XMLDiff;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.Customization;
 import org.skyscreamer.jsonassert.JSONAssert;
@@ -22,7 +25,6 @@ import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
-import javax.json.stream.JsonParser;
 import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
@@ -45,7 +47,8 @@ public class TranslatorsTest {
 	public static void setUpBeforeClass() throws Exception {
 	}
 
-	@org.junit.jupiter.api.Test
+	@Test
+	@Disabled("Translators will be removed with Eno v3")
 	public void testQuestionnaireXMLFToJSONF() {
 		logger.debug("Launch test : XMLLunaticFlat -> JSONLunaticFlat");
 		try {
@@ -89,6 +92,7 @@ public class TranslatorsTest {
 	}
 
 	@Test
+	@Disabled("Translators will be removed with Eno v3")
 	public void testQuestionnaireXMLHToXMLF() {
 		logger.debug("Launch test : XMLLunatic -> XMLLunaticFlat");
 
@@ -125,6 +129,7 @@ public class TranslatorsTest {
 	}
 
 	@Test
+	@Disabled("Translators will be removed with Eno v3")
 	public void testQuestionnaireXMLHToJSONF() {
 		logger.debug("Launch test : XMLLunatic -> JSONLunaticFlat");
 		try {
@@ -174,6 +179,7 @@ public class TranslatorsTest {
 	}
 
 	@Test
+	@Disabled("Translators will be removed with Eno v3")
 	public void testQuestionnaireXMLHToJSONH() {
 		logger.debug("Launch test : XMLLunatic -> JSONLunaticH");
 		try {
@@ -242,6 +248,37 @@ public class TranslatorsTest {
 			String variableName1 = resizingVariables.getString(0);
 			String variableName2 = resizingVariables.getString(1);
 			assertEquals(Set.of("PRENOM", "AGE"), Set.of(variableName1, variableName2));
+		}
+	}
+
+	@Test
+	void serializeQuestionnaire_withConditionFilter() throws SerializationException {
+		// Given
+		String stringValue = "some vtl expression";
+		String stringType = "type should be an enum later on";
+		//
+		Questionnaire questionnaire = new Questionnaire();
+		Input component = new Input();
+		ConditionFilterType conditionFilterType = new ConditionFilterType();
+		LabelType expression = new LabelType();
+		expression.setValue(stringValue);
+		expression.setType(stringType);
+		conditionFilterType.setExpression(expression);
+		component.setConditionFilter(conditionFilterType);
+		questionnaire.getComponents().add(component);
+		// When
+		JSONSerializer serializer = new JSONSerializer();
+		String result = serializer.serialize2(questionnaire);
+		// Then
+		assertNotNull(result);
+		try (JsonReader jsonReader = Json.createReader(
+				new ByteArrayInputStream(result.getBytes(StandardCharsets.UTF_8)))) {
+			JsonObject resultJson = jsonReader.readObject();
+			JsonObject expressionJson = resultJson.getJsonArray("components").getJsonObject(0)
+					.getJsonObject("conditionFilter")
+					.getJsonObject("expression");
+			assertEquals(stringValue, expressionJson.getString("value"));
+			assertEquals(stringType, expressionJson.getString("type"));
 		}
 	}
 
