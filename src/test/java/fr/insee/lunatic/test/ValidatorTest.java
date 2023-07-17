@@ -4,7 +4,6 @@ import fr.insee.lunatic.test.utils.XMLDiff;
 import fr.insee.lunatic.utils.Modele;
 import fr.insee.lunatic.utils.SchemaValidator;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +18,6 @@ public class ValidatorTest {
 
 	
 	@Test
-	@Disabled("Xml format will no longer be used in Eno v3")
 	public void testValidateH() {
 		logger.debug("Launch test : Validate Hierarchical modele");
 		String basePath = "src/test/resources/dummy";
@@ -35,7 +33,6 @@ public class ValidatorTest {
 		}
 	}
 	@Test
-	@Disabled("Xml format will no longer be used in Eno v3")
 	public void testValidateF() {
 		logger.debug("Launch test : Validate flat modele");
 		String basePath = "src/test/resources/dummy";

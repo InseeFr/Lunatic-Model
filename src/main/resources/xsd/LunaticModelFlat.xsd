@@ -84,7 +84,8 @@
 
     <xs:complexType name="ConditionFilterType">
         <xs:sequence>
-            <xs:element name="expression" type="labelType"/>
+            <xs:element name="value" type="xs:string"/>
+            <xs:element name="type" type="xs:string"/>
             <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
