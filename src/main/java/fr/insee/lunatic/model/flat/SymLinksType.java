@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonKey;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonValue;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,6 +28,7 @@ public class SymLinksType {
 
     @Getter
     @Setter
+    @AllArgsConstructor
     public static class LINK {
         @JsonKey
         protected String source;
