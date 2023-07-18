@@ -1,0 +1,21 @@
+package fr.insee.lunatic.model.flat;
+
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.math.BigInteger;
+
+@JsonPropertyOrder({
+        "language",
+        "min",
+        "pattern"
+})
+@Getter
+@Setter
+public class SuggesterQueryParserParams {
+
+    protected String language;
+    protected BigInteger min;
+    protected String pattern;
+}
