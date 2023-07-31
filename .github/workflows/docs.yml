@@ -1,9 +1,11 @@
-name: Lunatic CI
+name: Publish docs
 
 on:
   push:
     branches:
       - 'master'
+    paths:
+      - 'docs/**'
 
 jobs:
 
