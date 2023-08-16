@@ -72,6 +72,7 @@ jobs:
           toTag: ${{ steps.previousTag.outputs.previousTag}}
           token: ${{ secrets.GITHUB_TOKEN }}
           writeToFile: false
+          excludeTypes: docs,other,style
 
       - uses: softprops/action-gh-release@v1
         with:
