@@ -11,7 +11,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import fr.insee.lunatic.model.flat.Questionnaire;
-import fr.insee.lunatic.model.flat.SequenceType;
+import fr.insee.lunatic.model.flat.ComponentType;
 
 public class XMLSerializer {
 
@@ -37,19 +37,19 @@ public class XMLSerializer {
 
 	}
 
-	public String serialize(SequenceType sequence) throws JAXBException, UnsupportedEncodingException {
+	public String serialize(ComponentType component) throws JAXBException, UnsupportedEncodingException {
 
-		if (sequence == null) return "";
+		if (component == null) return "";
 
-		logger.debug("Serializing sequence " + sequence.getId());
+		logger.debug("Serializing component " + component.getId());
 
-		JAXBContext context = JAXBContext.newInstance(SequenceType.class);
+		JAXBContext context = JAXBContext.newInstance(ComponentType.class);
 		Marshaller marshaller = context.createMarshaller();
 		marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
 		marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
-		marshaller.marshal(sequence, baos);
+		marshaller.marshal(component, baos);
 
 		return baos.toString("UTF-8");
 	}
