@@ -9,7 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @JsonPropertyOrder({
-        "expression",
+        "value",
+        "type",
         "bindingDependencies"
 })
 @Getter

@@ -1,9 +1,8 @@
 package fr.insee.lunatic.model.flat;
 
-import com.fasterxml.jackson.annotation.JsonKey;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import fr.insee.lunatic.conversion.SymLinksSerializer;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,11 +15,12 @@ import java.util.List;
 })
 @Getter
 @Setter
+@JsonSerialize(using = SymLinksSerializer.class)
 public class SymLinksType {
 
-    @JsonProperty(value="LINK", required = true)
-    protected List<LINK> link;
     protected String name;
+
+    protected List<LINK> link;
 
     public SymLinksType() {
         this.link = new ArrayList<>();
@@ -30,9 +30,7 @@ public class SymLinksType {
     @Setter
     @AllArgsConstructor
     public static class LINK {
-        @JsonKey
         protected String source;
-        @JsonValue
         protected String target;
     }
 }
