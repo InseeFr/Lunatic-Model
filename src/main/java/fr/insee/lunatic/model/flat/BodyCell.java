@@ -39,7 +39,7 @@ public class BodyCell {
     protected ResponseType response;
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     protected List<String> bindingDependencies;
-    protected String componentType;
+    protected ComponentTypeEnum componentType;
     protected BigInteger maxLength;
     protected Double min;
     protected Double max;
