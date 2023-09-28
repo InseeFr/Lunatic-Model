@@ -5,6 +5,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @JsonPropertyOrder({
         "previous",
         "collected",
@@ -16,14 +19,18 @@ import lombok.Setter;
 @Setter
 public class ValuesTypeArray {
 
+    /* Note: for now, seems that nested loops (or loop of loop) will be forbidden.
+    * This modeling only works for "simple" loops. */
+
     @JsonProperty(value = "PREVIOUS")
-    protected PREVIOUSArray previous;
+    protected List<String> previous = new ArrayList<>();
     @JsonProperty(value = "COLLECTED")
-    protected COLLECTEDArray collected;
+    protected List<String> collected = new ArrayList<>();
     @JsonProperty(value = "FORCED")
-    protected FORCEDArray forced;
+    protected List<String> forced = new ArrayList<>();
     @JsonProperty(value = "EDITED")
-    protected EDITEDArray edited;
+    protected List<String> edited = new ArrayList<>();
     @JsonProperty(value = "INPUTED")
-    protected INPUTEDArray inputed;
+    protected List<String> inputed = new ArrayList<>();
+
 }
