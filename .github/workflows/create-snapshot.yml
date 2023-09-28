@@ -2,7 +2,7 @@ name: Create snapshot
 
 on:
   pull_request:
-    types: [opened, edited, synchronize, reopened, labeled]
+    types: [labeled]
 
 jobs:
   # begin the snapshot verification before deployment
