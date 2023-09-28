@@ -1,5 +1,6 @@
 package fr.insee.lunatic.model.flat;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
@@ -16,14 +17,14 @@ import lombok.Setter;
 @Setter
 public class ValuesType {
 
-    @JsonProperty(value = "PREVIOUS")
+    @JsonInclude @JsonProperty(value = "PREVIOUS")
     protected String previous;
-    @JsonProperty(value = "COLLECTED")
+    @JsonInclude @JsonProperty(value = "COLLECTED")
     protected String collected;
-    @JsonProperty(value = "FORCED")
+    @JsonInclude @JsonProperty(value = "FORCED")
     protected String forced;
-    @JsonProperty(value = "EDITED")
+    @JsonInclude @JsonProperty(value = "EDITED")
     protected String edited;
-    @JsonProperty(value = "INPUTED")
+    @JsonInclude @JsonProperty(value = "INPUTED")
     protected String inputed;
 }
