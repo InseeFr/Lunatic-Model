@@ -11,20 +11,20 @@ import org.slf4j.LoggerFactory;
 
 public class JsonSerializer {
 
-	public JsonSerializer() { }
-
 	private static final Logger logger = LoggerFactory.getLogger(JsonSerializer.class);
 
 	public String serialize(Questionnaire questionnaire) throws SerializationException {
-
-		if (questionnaire == null) return "";
+		if (questionnaire == null) {
+			logger.warn("null questionnaire given, empty string will be returned.");
+			return "";
+		}
 
 		logger.info("Serializing questionnaire {}", questionnaire.getId());
 
 		ObjectMapper objectMapper = new ObjectMapper();
 		objectMapper.disable(SerializationFeature.INDENT_OUTPUT);
 		objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
-		String jsonQuestionnaire = null;
+		String jsonQuestionnaire;
 
 		try {
 			jsonQuestionnaire = objectMapper.writeValueAsString(questionnaire);
@@ -34,6 +34,6 @@ public class JsonSerializer {
 
 		logger.info("Questionnaire {} successfully deserialized", questionnaire.getId());
 		return jsonQuestionnaire;
-
 	}
+
 }
