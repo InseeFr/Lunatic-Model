@@ -14,7 +14,7 @@ import java.util.List;
 @Setter
 public class ValueTypeArray {
 
-    protected List<Object> value;
+    protected List<String> value;
 
     public ValueTypeArray() {
         this.value = new ArrayList<>();

@@ -9,6 +9,8 @@ import lombok.Setter;
 @Setter
 public abstract class IVariableType {
 
+    // TODO: make a proper modeling for collected/external/calculated variables
+
     @JsonProperty(required = true)
     protected String name;
     protected String componentRef;
