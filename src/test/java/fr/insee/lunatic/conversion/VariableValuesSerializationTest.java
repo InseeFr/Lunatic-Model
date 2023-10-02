@@ -75,4 +75,37 @@ class VariableValuesSerializationTest {
         JSONAssert.assertEquals(expectedJson, result, JSONCompareMode.STRICT);
     }
 
+    @Test
+    void serializeVariableTwoDimensionsArrayWithEmptyValues() throws SerializationException, JSONException {
+        //
+        Questionnaire questionnaire = new Questionnaire();
+        //
+        VariableTypeTwoDimensionsArray loopVariable = new VariableTypeTwoDimensionsArray();
+        loopVariable.setName("PAIRWISE_VAR");
+        loopVariable.setVariableType(VariableTypeEnum.COLLECTED);
+        loopVariable.setValues(new ValuesTypeTwoDimensionsArray());
+        questionnaire.getVariables().add(loopVariable);
+        //
+        JsonSerializer jsonSerializer = new JsonSerializer();
+        String result = jsonSerializer.serialize(questionnaire);
+        //
+        String expectedJson = """
+                {
+                  "variables": [
+                    {
+                      "variableType": "COLLECTED",
+                      "name": "PAIRWISE_VAR",
+                      "values": {
+                        "PREVIOUS": [[]],
+                        "COLLECTED": [[]],
+                        "FORCED": [[]],
+                        "EDITED": [[]],
+                        "INPUTED": [[]]
+                      }
+                    }
+                  ]
+                }""";
+        JSONAssert.assertEquals(expectedJson, result, JSONCompareMode.STRICT);
+    }
+
 }
