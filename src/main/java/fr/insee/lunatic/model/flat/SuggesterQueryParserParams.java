@@ -9,7 +9,8 @@ import java.math.BigInteger;
 @JsonPropertyOrder({
         "language",
         "min",
-        "pattern"
+        "pattern",
+        "stemmer"
 })
 @Getter
 @Setter
@@ -18,4 +19,5 @@ public class SuggesterQueryParserParams {
     protected String language;
     protected BigInteger min;
     protected String pattern;
+    protected Boolean stemmer;
 }
