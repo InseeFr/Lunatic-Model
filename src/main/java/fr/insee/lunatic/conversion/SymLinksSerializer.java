@@ -7,7 +7,7 @@ import fr.insee.lunatic.model.flat.SymLinksType;
 
 import java.io.IOException;
 
-public class SymLinksSerializer  extends StdSerializer<SymLinksType> {
+public class SymLinksSerializer extends StdSerializer<SymLinksType> {
 
     public SymLinksSerializer() {
         this(null);
@@ -19,15 +19,15 @@ public class SymLinksSerializer  extends StdSerializer<SymLinksType> {
 
     @Override
     public void serialize(
-            SymLinksType symLinksType, JsonGenerator jgen, SerializerProvider provider)
+            SymLinksType symLinksType, JsonGenerator jsonGenerator, SerializerProvider provider)
             throws IOException {
-
-        jgen.writeStartObject();
-            jgen.writeObjectFieldStart(symLinksType.getName());
-            for(SymLinksType.LINK link : symLinksType.getLink()) {
-                jgen.writeStringField(link.getSource(), link.getTarget());
-            }
-            jgen.writeEndObject();
-        jgen.writeEndObject();
+        jsonGenerator.writeStartObject();
+        jsonGenerator.writeObjectFieldStart(symLinksType.getName());
+        for(SymLinksType.LINK link : symLinksType.getLink()) {
+            jsonGenerator.writeStringField(link.getSource(), link.getTarget());
+        }
+        jsonGenerator.writeEndObject();
+        jsonGenerator.writeEndObject();
     }
+
 }
