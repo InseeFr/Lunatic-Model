@@ -8,9 +8,7 @@ import lombok.Setter;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @JsonPropertyOrder({
         "name",
