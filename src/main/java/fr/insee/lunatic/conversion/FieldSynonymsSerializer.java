@@ -22,14 +22,6 @@ public class FieldSynonymsSerializer extends StdSerializer<FieldSynonyms> {
     @Override
     public void serialize(FieldSynonyms fieldSynonyms, JsonGenerator jsonGenerator, SerializerProvider provider)
             throws IOException {
-        if (fieldSynonyms.isEmpty()) {
-            jsonGenerator.writeNull();
-            return;
-        }
-        serializeSynonyms(fieldSynonyms, jsonGenerator);
-    }
-
-    private static void serializeSynonyms(FieldSynonyms fieldSynonyms, JsonGenerator jsonGenerator) throws IOException {
         jsonGenerator.writeStartObject();
         for(FieldSynonym fieldSynonym : fieldSynonyms) {
             jsonGenerator.writeArrayFieldStart(fieldSynonym.getSource());
