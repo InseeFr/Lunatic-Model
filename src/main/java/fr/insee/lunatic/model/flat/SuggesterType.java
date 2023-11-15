@@ -12,6 +12,7 @@ import java.util.List;
 @JsonPropertyOrder({
         "name",
         "fields",
+        "meloto",
         "max",
         "stopWords",
         "order",
@@ -27,6 +28,7 @@ public class SuggesterType {
     protected String name;
     @JsonProperty(required = true)
     protected List<SuggesterField> fields;
+    protected Boolean meloto;
     protected BigInteger max;
     protected List<String> stopWords;
     protected SuggesterOrder order;
