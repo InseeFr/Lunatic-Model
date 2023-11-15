@@ -1,5 +1,6 @@
 package fr.insee.lunatic.model.flat;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
@@ -30,6 +31,7 @@ public class SuggesterType {
     protected List<SuggesterField> fields;
     protected Boolean meloto;
     protected BigInteger max;
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
     protected List<String> stopWords;
     protected SuggesterOrder order;
     @JsonProperty(required = true)
