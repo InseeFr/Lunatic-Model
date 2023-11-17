@@ -7,6 +7,9 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigInteger;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @JsonPropertyOrder({
         "name",
@@ -28,7 +31,11 @@ public class SuggesterField {
     protected String language;
     protected BigInteger min;
     protected Boolean stemmer;
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    protected FieldSynonyms synonyms;
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    protected Map<String, List<String>> synonyms;
+
+    public SuggesterField() {
+        synonyms = new HashMap<>();
+    }
 
 }

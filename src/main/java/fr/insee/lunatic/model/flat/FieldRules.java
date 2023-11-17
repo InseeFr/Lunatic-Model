@@ -1,6 +1,8 @@
 package fr.insee.lunatic.model.flat;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import fr.insee.lunatic.conversion.FieldRulesDeserializer;
 import fr.insee.lunatic.conversion.FieldRulesSerializer;
 
 import java.util.ArrayList;
@@ -8,6 +10,7 @@ import java.util.List;
 
 /** Temporary class before Lunatic modeling is changed so to not have a property that can be either string or list. */
 @JsonSerialize(using = FieldRulesSerializer.class)
+@JsonDeserialize(using = FieldRulesDeserializer.class)
 public class FieldRules {
 
     public static final String SOFT_RULE = "soft";
