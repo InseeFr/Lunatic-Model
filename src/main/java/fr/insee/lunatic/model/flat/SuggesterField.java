@@ -7,12 +7,11 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigInteger;
-import java.util.ArrayList;
-import java.util.List;
 
 @JsonPropertyOrder({
         "name",
         "rules",
+        "fieldRules",
         "language",
         "min",
         "stemmer",
@@ -24,15 +23,12 @@ public class SuggesterField {
 
     @JsonProperty(required = true)
     protected String name;
-    @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    protected List<String> rules;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    protected FieldRules rules;
     protected String language;
     protected BigInteger min;
     protected Boolean stemmer;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     protected FieldSynonyms synonyms;
 
-    public SuggesterField() {
-        this.rules = new ArrayList<>();
-        this.synonyms = new FieldSynonyms();
-    }
 }
