@@ -2,7 +2,6 @@ package fr.insee.lunatic.conversion;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
 import fr.insee.lunatic.exception.SerializationException;
 import fr.insee.lunatic.model.flat.FieldRules;
 import fr.insee.lunatic.model.flat.Questionnaire;
@@ -13,7 +12,7 @@ import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
-class FieldRulesSerializationTest {
+class FieldRulesSerializerTest {
 
     @Test
     void serializeRulesProperty_stringCase() throws JsonProcessingException, JSONException {
@@ -21,11 +20,7 @@ class FieldRulesSerializationTest {
         FieldRules fieldRules = new FieldRules();
         fieldRules.setRule("soft");
         //
-        ObjectMapper mapper = new ObjectMapper();
-        SimpleModule module = new SimpleModule("FieldRulesSerializer");
-        module.addSerializer(FieldRules.class, new FieldRulesSerializer());
-        mapper.registerModule(module);
-        String result = mapper.writeValueAsString(fieldRules);
+        String result = new ObjectMapper().writerFor(FieldRules.class).writeValueAsString(fieldRules);
         //
         JSONAssert.assertEquals("\"soft\"", result, JSONCompareMode.STRICT);
     }
@@ -36,11 +31,7 @@ class FieldRulesSerializationTest {
         FieldRules fieldRules = new FieldRules();
         fieldRules.addPattern("[\\w]+");
         //
-        ObjectMapper mapper = new ObjectMapper();
-        SimpleModule module = new SimpleModule("FieldRulesSerializer");
-        module.addSerializer(FieldRules.class, new FieldRulesSerializer());
-        mapper.registerModule(module);
-        String result = mapper.writeValueAsString(fieldRules);
+        String result = new ObjectMapper().writerFor(FieldRules.class).writeValueAsString(fieldRules);
         //
         JSONAssert.assertEquals("[\"[\\\\w]+\"]", result, JSONCompareMode.STRICT);
     }
