@@ -50,6 +50,7 @@ class FieldSynonymsSerializationTest {
         fieldSynonym.setSource("some word");
         fieldSynonym.setTarget(List.of("synonym 1", "synonym 2"));
         //
+        suggesterField.setSynonyms(new FieldSynonyms());
         suggesterField.getSynonyms().add(fieldSynonym);
         suggesterType.getFields().add(suggesterField);
         questionnaire.getSuggesters().add(suggesterType);
