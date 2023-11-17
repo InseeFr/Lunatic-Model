@@ -2,32 +2,26 @@ package fr.insee.lunatic.conversion;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.module.SimpleModule;
 import fr.insee.lunatic.exception.SerializationException;
-import fr.insee.lunatic.model.flat.*;
+import fr.insee.lunatic.model.flat.Questionnaire;
+import fr.insee.lunatic.model.flat.SuggesterField;
+import fr.insee.lunatic.model.flat.SuggesterType;
 import org.json.JSONException;
 import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
 import java.util.List;
+import java.util.Map;
 
 class FieldSynonymsSerializationTest {
 
     @Test
     void serializeSynonyms() throws JsonProcessingException, JSONException {
         //
-        FieldSynonyms fieldSynonyms = new FieldSynonyms();
-        FieldSynonym fieldSynonym = new FieldSynonym();
-        fieldSynonym.setSource("some word");
-        fieldSynonym.setTarget(List.of("synonym 1", "synonym 2"));
-        fieldSynonyms.add(fieldSynonym);
+        var synonyms = Map.of("some word", List.of("synonym 1", "synonym 2"));
         //
-        ObjectMapper mapper = new ObjectMapper();
-        SimpleModule module = new SimpleModule("FieldSynonymsSerializer");
-        module.addSerializer(FieldSynonyms.class, new FieldSynonymsSerializer());
-        mapper.registerModule(module);
-        String result = mapper.writeValueAsString(fieldSynonyms);
+        String result = new ObjectMapper().writeValueAsString(synonyms);
         //
         String expectedJson = """
                 {
@@ -45,13 +39,7 @@ class FieldSynonymsSerializationTest {
         Questionnaire questionnaire = new Questionnaire();
         SuggesterType suggesterType = new SuggesterType();
         SuggesterField suggesterField = new SuggesterField();
-        //
-        FieldSynonym fieldSynonym = new FieldSynonym();
-        fieldSynonym.setSource("some word");
-        fieldSynonym.setTarget(List.of("synonym 1", "synonym 2"));
-        //
-        suggesterField.setSynonyms(new FieldSynonyms());
-        suggesterField.getSynonyms().add(fieldSynonym);
+        suggesterField.setSynonyms(Map.of("some word", List.of("synonym 1", "synonym 2")));
         suggesterType.getFields().add(suggesterField);
         questionnaire.getSuggesters().add(suggesterType);
 
