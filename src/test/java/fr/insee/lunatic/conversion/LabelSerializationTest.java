@@ -12,6 +12,7 @@ import org.skyscreamer.jsonassert.JSONCompareMode;
 import java.io.ByteArrayInputStream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class LabelSerializationTest {
 
@@ -28,7 +29,7 @@ class LabelSerializationTest {
         String result = jsonSerializer.serialize(questionnaire);
         //
         String expected = """
-                {"label": {"value": "Foo label", "type": "VTL_MD"}}
+                {"label": {"value": "Foo label", "type": "VTL|MD"}}
                 """;
         JSONAssert.assertEquals(expected, result, JSONCompareMode.STRICT);
     }
@@ -39,23 +40,29 @@ class LabelSerializationTest {
         Questionnaire questionnaire = new Questionnaire();
         LabelType label = new LabelType();
         label.setValue("Foo label");
-        label.setType("VTL_MD");
+        label.setType("VTL|MD");
         questionnaire.setLabel(label);
         //
         JsonSerializer jsonSerializer = new JsonSerializer();
         String result = jsonSerializer.serialize(questionnaire);
         //
         String expected = """
-                {"label": {"value": "Foo label", "type": "VTL_MD"}}
+                {"label": {"value": "Foo label", "type": "VTL|MD"}}
                 """;
         JSONAssert.assertEquals(expected, result, JSONCompareMode.STRICT);
+    }
+
+    @Test
+    void labelObject_usingStringType_illegalValue() {
+        LabelType label = new LabelType();
+        assertThrows(IllegalArgumentException.class, () -> label.setType("Foo type"));
     }
 
     @Test
     void deserializeFromQuestionnaire() throws SerializationException {
         //
         String jsonInput = """
-                {"label": {"value": "Foo label", "type": "VTL_MD"}}
+                {"label": {"value": "Foo label", "type": "VTL|MD"}}
                 """;
         //
         JsonDeserializer jsonDeserializer = new JsonDeserializer();
@@ -63,7 +70,19 @@ class LabelSerializationTest {
         //
         LabelType label = questionnaire.getLabel();
         assertEquals(LabelTypeEnum.VTL_MD, label.getTypeEnum());
-        assertEquals("VTL_MD", label.getType());
+        assertEquals("VTL|MD", label.getType());
+    }
+
+    @Test
+    void deserializeFromQuestionnaire_illegalTypeValue() {
+        //
+        String jsonInput = """
+                {"label": {"value": "Foo label", "type": "Foo value"}}
+                """;
+        //
+        JsonDeserializer jsonDeserializer = new JsonDeserializer();
+        assertThrows(SerializationException.class, () ->
+                jsonDeserializer.deserialize(new ByteArrayInputStream(jsonInput.getBytes())));
     }
 
 }

@@ -26,7 +26,7 @@ public class LabelType {
     @Deprecated(since = "3.2.6")
     public String getType() {
         if (typeEnum != null)
-            return typeEnum.toString();
+            return typeEnum.value();
         return type;
     }
 
@@ -37,8 +37,10 @@ public class LabelType {
      */
     @Deprecated(since = "3.2.6")
     public void setType(String type) {
-        if (! ("VTL_MD".equals(type) || "VTL".equals(type)))
-            throw new IllegalArgumentException("Label type can be either \"VTL_MD\" or \"VTL\".");
+        if (! (LabelTypeEnum.VTL_MD.value().equals(type) || LabelTypeEnum.VTL.value().equals(type)))
+            throw new IllegalArgumentException(String.format(
+                    "Label type can be either \"%s\" or \"%s\".",
+                    LabelTypeEnum.VTL_MD.value(), LabelTypeEnum.VTL.value()));
         this.type = type;
         this.typeEnum = null;
     }
@@ -50,7 +52,7 @@ public class LabelType {
      */
     public LabelTypeEnum getTypeEnum() {
         if (type != null)
-            return LabelTypeEnum.valueOf(type);
+            return LabelTypeEnum.fromValue(type);
         return typeEnum;
     }
 
