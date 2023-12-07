@@ -184,7 +184,7 @@
     		<xs:element name="order" type="SuggesterOrder" minOccurs="0"/>
     		<xs:element name="queryParser" type="SuggesterQueryParser"/>
     		<xs:element name="url" type="xs:string" minOccurs="0"/>
-    	    <xs:element name="version" type="integer"/>
+    	    <xs:element name="version" type="xs:integer"/>
     	</xs:sequence>
     </xs:complexType>
     
