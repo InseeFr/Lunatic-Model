@@ -23,7 +23,7 @@
     </xsl:template>
     
     <!-- delete type attribute except when key is linked to the suggesters block or to a label...-->
-    <xsl:template match="*[@key='type'][not(ancestor::*[@key=('suggesters')] or parent::*[@key=('label','min','max','iterations','conditionFilter','errorMessage','control','expression')])]" mode="clean"/>
+    <xsl:template match="*[@key='type'][not(ancestor::*[@key=('suggesters')] or parent::*[@key=('label','min','max','iterations','conditionFilter','errorMessage','control','expression','xAxisIterations','yAxisIterations')])]" mode="clean"/>
     <!-- delete map useless inside array -->
     <xsl:template match="*[local-name(.)='map'][parent::*[@key=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTED') and local-name(.)='array'] | parent::*[@key=('values')]]" mode="clean">
         <xsl:apply-templates mode="clean"/>
