@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Questionnaire xmlns="http://xml.insee.fr/schema/applis/lunatic-h"
+               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               id="lopmtru2"
+               modele="SUGGART"
+               enoCoreVersion="2.4.10"
+               missing="false"
+               pagination="question"
+               maxPage="6">
+   <label>
+      <value>sugg-art</value>
+      <type>VTL|MD</type>
+   </label>
+   <components xsi:type="Sequence"
+               componentType="Sequence"
+               id="lopmudo4"
+               page="1">
+      <label>
+         <value>"I - " || "seq0"</value>
+         <type>VTL|MD</type>
+      </label>
+      <conditionFilter>
+         <value>true</value>
+         <type>VTL</type>
+      </conditionFilter>
+      <hierarchy>
+         <sequence id="lopmudo4" page="1">
+            <label>
+               <value>"I - " || "seq0"</value>
+               <type>VTL|MD</type>
+            </label>
+         </sequence>
+      </hierarchy>
+      <components xsi:type="Radio"
+                  componentType="Radio"
+                  id="lopn3rst"
+                  mandatory="false"
+                  page="2">
+         <label>
+            <value>"➡ 1. " || "qcu"</value>
+            <type>VTL|MD</type>
+         </label>
+         <conditionFilter>
+            <value>true</value>
+            <type>VTL</type>
+         </conditionFilter>
+         <hierarchy>
+            <sequence id="lopmudo4" page="1">
+               <label>
+                  <value>"I - " || "seq0"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </sequence>
+         </hierarchy>
+         <bindingDependencies>QCU</bindingDependencies>
+         <options>
+            <value>1</value>
+            <label>
+               <value>oui</value>
+               <type>VTL|MD</type>
+            </label>
+         </options>
+         <options>
+            <value>0</value>
+            <label>
+               <value>non</value>
+               <type>VTL|MD</type>
+            </label>
+         </options>
+         <response name="QCU"/>
+      </components>
+      <components xsi:type="Suggester"
+                  componentType="Suggester"
+                  id="lopnemss"
+                  mandatory="false"
+                  page="3">
+         <label>
+            <value>"➡ 2. " || "suggcomm"</value>
+            <type>VTL|MD</type>
+         </label>
+         <conditionFilter>
+            <value>true</value>
+            <type>VTL</type>
+         </conditionFilter>
+         <hierarchy>
+            <sequence id="lopmudo4" page="1">
+               <label>
+                  <value>"I - " || "seq0"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </sequence>
+         </hierarchy>
+         <bindingDependencies>SUGGCOMM</bindingDependencies>
+         <response name="SUGGCOMM"/>
+      </components>
+      <components xsi:type="Suggester"
+                  componentType="Suggester"
+                  id="lopwob88"
+                  mandatory="false"
+                  page="4">
+         <label>
+            <value>"➡ 3. " || "inerror"</value>
+            <type>VTL|MD</type>
+         </label>
+         <storeName>in-error</storeName>
+         <conditionFilter>
+            <value>true</value>
+            <type>VTL</type>
+         </conditionFilter>
+         <hierarchy>
+            <sequence id="lopmudo4" page="1">
+               <label>
+                  <value>"I - " || "seq0"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </sequence>
+         </hierarchy>
+         <bindingDependencies>INERROR</bindingDependencies>
+         <response name="INERROR"/>
+      </components>
+   </components>
+   <components xsi:type="Sequence"
+               componentType="Sequence"
+               id="COMMENT-SEQ"
+               page="5">
+      <label>
+         <value>"Commentaire"</value>
+         <type>VTL|MD</type>
+      </label>
+      <conditionFilter>
+         <value>true</value>
+         <type>VTL</type>
+      </conditionFilter>
+      <hierarchy>
+         <sequence id="COMMENT-SEQ" page="5">
+            <label>
+               <value>"Commentaire"</value>
+               <type>VTL|MD</type>
+            </label>
+         </sequence>
+      </hierarchy>
+      <components xsi:type="Textarea"
+                  componentType="Textarea"
+                  id="COMMENT-QUESTION"
+                  maxLength="2000"
+                  mandatory="false"
+                  page="6">
+         <label>
+            <value>"Avez-vous des remarques concernant l'enquête ou des commentaires ?"</value>
+            <type>VTL|MD</type>
+         </label>
+         <conditionFilter>
+            <value>true</value>
+            <type>VTL</type>
+         </conditionFilter>
+         <hierarchy>
+            <sequence id="COMMENT-SEQ" page="5">
+               <label>
+                  <value>"Commentaire"</value>
+                  <type>VTL|MD</type>
+               </label>
+            </sequence>
+         </hierarchy>
+         <bindingDependencies>COMMENT_QE</bindingDependencies>
+         <response name="COMMENT_QE"/>
+      </components>
+   </components>
+   <suggesters>
+      <name/>
+      <fields xmlns="">
+         <name>id</name>
+         <rules>soft</rules>
+      </fields>
+      <queryParser xmlns="">
+         <type>soft</type>
+      </queryParser>
+   </suggesters>
+   <suggesters>
+      <name>in-error</name>
+      <fields xmlns="">
+         <name>id</name>
+         <rules>soft</rules>
+      </fields>
+      <queryParser xmlns="">
+         <type>soft</type>
+      </queryParser>
+   </suggesters>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>COMMENT_QE</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>QCU</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>SUGGCOMM</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="COLLECTED" xsi:type="VariableType">
+      <name>INERROR</name>
+      <values>
+         <PREVIOUS xsi:nil="true"/>
+         <COLLECTED xsi:nil="true"/>
+         <FORCED xsi:nil="true"/>
+         <EDITED xsi:nil="true"/>
+         <INPUTED xsi:nil="true"/>
+      </values>
+   </variables>
+   <variables variableType="CALCULATED" xsi:type="VariableType">
+      <name>FILTER_RESULT_QCU</name>
+      <expression>
+         <value>true</value>
+         <type>VTL</type>
+      </expression>
+      <inFilter>false</inFilter>
+   </variables>
+   <variables variableType="CALCULATED" xsi:type="VariableType">
+      <name>FILTER_RESULT_SUGGCOMM</name>
+      <expression>
+         <value>true</value>
+         <type>VTL</type>
+      </expression>
+      <inFilter>false</inFilter>
+   </variables>
+   <variables variableType="CALCULATED" xsi:type="VariableType">
+      <name>FILTER_RESULT_INERROR</name>
+      <expression>
+         <value>true</value>
+         <type>VTL</type>
+      </expression>
+      <inFilter>false</inFilter>
+   </variables>
+   <cleaning/>
+   <resizing/>
+</Questionnaire>
