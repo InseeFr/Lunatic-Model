@@ -177,7 +177,7 @@
             <xs:enumeration value="Dropdown"/>
             <xs:enumeration value="Textarea"/>
             <xs:enumeration value="FilterDescription"/>
-        <xs:enumeration value="Suggester"/>
+            <xs:enumeration value="Suggester"/>
         </xs:restriction>
     </xs:simpleType>
 
@@ -195,7 +195,7 @@
     		<xs:element name="order" type="SuggesterOrder" minOccurs="0"/>
     		<xs:element name="queryParser" type="SuggesterQueryParser"/>
     		<xs:element name="url" type="xs:string" minOccurs="0"/>
-    		<xs:element name="version" type="xs:string"/>
+    		<xs:element name="version" type="xs:integer"/>
     	</xs:sequence>
     </xs:complexType>
     
