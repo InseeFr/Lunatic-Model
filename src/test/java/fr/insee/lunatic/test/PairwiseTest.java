@@ -4,6 +4,7 @@ import fr.insee.lunatic.conversion.JSONCleaner;
 import fr.insee.lunatic.conversion.JSONDeserializer;
 import fr.insee.lunatic.conversion.XMLLunaticFlatToJSONLunaticFlatTranslator;
 import fr.insee.lunatic.conversion.XMLLunaticToXMLLunaticFlatTranslator;
+import fr.insee.lunatic.model.flat.LabelType;
 import fr.insee.lunatic.model.flat.PairwiseLinks;
 import fr.insee.lunatic.model.flat.Questionnaire;
 import org.junit.jupiter.api.Test;
@@ -18,6 +19,26 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /** Test class to see if PairwiseLinks object doesn't break translators */
 class PairwiseTest {
+
+    @Test
+    void convertQuestionnaireWithPairwise_testLabelType() throws Exception {
+        // Given + When
+        XMLLunaticToXMLLunaticFlatTranslator translator1 = new XMLLunaticToXMLLunaticFlatTranslator();
+        XMLLunaticFlatToJSONLunaticFlatTranslator translator2 = new XMLLunaticFlatToJSONLunaticFlatTranslator();
+        JSONCleaner jsonCleaner = new JSONCleaner();
+        String result = jsonCleaner.clean(
+                translator2.translate(
+                        translator1.generate(
+                                this.getClass().getClassLoader().getResourceAsStream(
+                                        "pairwise/label-type-issue/form-hierarchical.xml"))));
+        // Then
+        assertNotNull(result);
+        // Not really clean testing but...
+        String xAxisExpected = "\"xAxisIterations\":{\"value\":\"count(PAIRWISE_SOURCE)\",\"type\":\"VTL\"},";
+        String yAxisExpected = "\"yAxisIterations\":{\"value\":\"count(PAIRWISE_SOURCE)\",\"type\":\"VTL\"},";
+        assertTrue(result.contains(xAxisExpected));
+        assertTrue(result.contains(yAxisExpected));
+    }
 
     @Test
     void deserializeQuestionnaireContainingPairwise_doesContainPairwise() throws JAXBException {
