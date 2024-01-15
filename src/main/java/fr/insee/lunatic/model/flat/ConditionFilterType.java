@@ -15,10 +15,8 @@ import java.util.List;
 })
 @Getter
 @Setter
-public class ConditionFilterType {
+public class ConditionFilterType extends LabelType {
 
-    protected String value;
-    protected String type;
     @JsonIgnore
     protected List<String> bindingDependencies;
 
