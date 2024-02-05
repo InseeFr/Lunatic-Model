@@ -517,6 +517,7 @@
             <xs:element name="dateFormat" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="unit" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="options" type="Options" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="storeName" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="response" type="ResponseType" minOccurs="0" maxOccurs="1"/>
             <xs:element name="bindingDependencies" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
