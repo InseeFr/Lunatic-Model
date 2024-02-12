@@ -3,7 +3,7 @@ name: Create release
 on:
   push:
     branches:
-      - master
+      - v2-main
     paths:
       - 'src/**'
       - 'pom.xml'

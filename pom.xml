@@ -40,7 +40,7 @@
 	<scm>
 		<connection>scm:git:git://github.com/InseeFr/Lunatic-Model.git</connection>
 		<developerConnection>scm:git:ssh://github.com:InseeFr/Lunatic-Model.git</developerConnection>
-		<url>http://github.com/InseeFr/Lunatic-Model.git/tree/master</url>
+		<url>http://github.com/InseeFr/Lunatic-Model.git</url>
 	</scm>
 
 	<distributionManagement>

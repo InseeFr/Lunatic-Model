@@ -7,7 +7,7 @@
 set -e
 
 DOC_FOLDER="docs"
-MAIN_BRANCH="master"
+MAIN_BRANCH="v2-main"
 UPSTREAM="https://$GITHUB_TOKEN@github.com/$TRAVIS_REPO_SLUG.git"
 MESSAGE="Rebuild doc for revision $TRAVIS_COMMIT: $TRAVIS_COMMIT_MESSAGE"
 AUTHOR="$USER <>"

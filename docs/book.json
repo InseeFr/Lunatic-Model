@@ -14,7 +14,7 @@
 	"root": "./",
 	"pluginsConfig": {
 		"edit-link": {
-			"base": "https://github.com/InseeFr/Lunatic-Model/tree/master/docs",
+			"base": "https://github.com/InseeFr/Lunatic-Model/tree/v2-main/docs",
 			"label": "Edit This Page"
 		},
 		"github": {
