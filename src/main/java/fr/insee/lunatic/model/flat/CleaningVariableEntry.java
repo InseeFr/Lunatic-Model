@@ -8,9 +8,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Slf4j
-@Getter
 public class CleaningVariableEntry {
 
+    @Getter
     private final String cleaningVariableName;
 
     @JsonValue
