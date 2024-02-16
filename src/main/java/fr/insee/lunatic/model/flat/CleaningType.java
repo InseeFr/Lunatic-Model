@@ -1,22 +1,35 @@
 package fr.insee.lunatic.model.flat;
 
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
-import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
-@JsonPropertyOrder({
-        "any"
-})
 @Getter
-@Setter
-public class CleaningType {
-
-    protected List<Object> any;
+@Slf4j
+public class CleaningType extends LinkedHashMap<String, Map<String, String>> {
 
     public CleaningType() {
-        this.any = new ArrayList<>();
+        super();
     }
+
+    public void insertCleaningEntry(String cleaningVariableName, CleaningEntry cleaningEntry) {
+        if (! this.containsKey(cleaningVariableName))
+            this.put(cleaningVariableName, new LinkedHashMap<>());
+        if (this.get(cleaningVariableName).containsKey(cleaningVariableName))
+            log.warn("Overwriting cleaning entry '{}' in cleaning variable '{}'",
+                    cleaningEntry.variableName(), cleaningVariableName);
+        this.get(cleaningVariableName).put(cleaningEntry.variableName(), cleaningEntry.filterExpression());
+    }
+
+    public void removeCleaningEntries(String cleaningVariableName) {
+        this.remove(cleaningVariableName);
+    }
+
+    public void removeCleaningEntry(String cleaningVariableName, String variableName) {
+        if (this.containsKey(cleaningVariableName))
+            this.get(cleaningVariableName).remove(variableName);
+    }
+
 }
