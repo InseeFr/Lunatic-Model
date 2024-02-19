@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.LinkedHashMap;
+import java.util.Set;
 
 @Slf4j
 public class CleaningType {
@@ -24,6 +25,14 @@ public class CleaningType {
 
     public CleaningVariableEntry getCleaningEntry(String cleaningVariableName) {
         return cleaningVariables.get(cleaningVariableName);
+    }
+
+    public Set<String> getCleaningVariableNames() {
+        return cleaningVariables.keySet();
+    }
+
+    public int countCleaningVariables() {
+        return cleaningVariables.size();
     }
 
     public CleaningVariableEntry removeCleaningEntry(String cleaningVariableName) {
