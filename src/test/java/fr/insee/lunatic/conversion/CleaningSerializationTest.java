@@ -6,7 +6,6 @@ import fr.insee.lunatic.model.flat.CleaningType;
 import fr.insee.lunatic.model.flat.CleaningVariableEntry;
 import fr.insee.lunatic.model.flat.Questionnaire;
 import org.json.JSONException;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
@@ -18,11 +17,24 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class CleaningSerializationTest {
 
-    private Questionnaire questionnaire;
+    /** Json content used in following tests. */
+    private final String jsonCleaningExample = """
+            {
+              "cleaning": {
+                "Q1": {
+                  "Q21": "(Q1)",
+                  "Q22": "(Q1) and (Q2)"
+                },
+                "Q2": {
+                  "Q22": "(Q1) and (Q2)"
+                }
+              }
+            }""";
 
-    @BeforeEach
-    void cleaningObject() {
-        questionnaire = new Questionnaire();
+    @Test
+    void serializeCleaning() throws SerializationException, JSONException {
+        //
+        Questionnaire questionnaire = new Questionnaire();
         CleaningType cleaning = new CleaningType();
         CleaningVariableEntry cleaningEntry1 = new CleaningVariableEntry("Q1");
         cleaningEntry1.addCleanedVariable(new CleanedVariableEntry("Q21", "(Q1)"));
@@ -32,48 +44,18 @@ class CleaningSerializationTest {
         cleaning.addCleaningEntry(cleaningEntry1);
         cleaning.addCleaningEntry(cleaningEntry2);
         questionnaire.setCleaning(cleaning);
-    }
-
-    @Test
-    void serializeCleaning() throws SerializationException, JSONException {
         //
         JsonSerializer jsonSerializer = new JsonSerializer();
         String result = jsonSerializer.serialize(questionnaire);
         //
-        String expectedJson = """
-                {
-                  "cleaning": {
-                    "Q1": {
-                      "Q21": "(Q1)",
-                      "Q22": "(Q1) and (Q2)"
-                    },
-                    "Q2": {
-                      "Q22": "(Q1) and (Q2)"
-                    }
-                  }
-                }""";
-        JSONAssert.assertEquals(expectedJson, result, JSONCompareMode.STRICT);
+        JSONAssert.assertEquals(jsonCleaningExample, result, JSONCompareMode.STRICT);
     }
 
     @Test
     void deserializeCleaning() throws SerializationException {
         //
-        String jsonInput = """
-                {
-                  "cleaning": {
-                    "Q1": {
-                      "Q21": "(Q1)",
-                      "Q22": "(Q1) and (Q2)"
-                    },
-                    "Q2": {
-                      "Q22": "(Q1) and (Q2)"
-                    }
-                  }
-                }""";
-
-        //
         JsonDeserializer jsonDeserializer = new JsonDeserializer();
-        Questionnaire result = jsonDeserializer.deserialize(new ByteArrayInputStream(jsonInput.getBytes()));
+        Questionnaire result = jsonDeserializer.deserialize(new ByteArrayInputStream(jsonCleaningExample.getBytes()));
 
         //
         assertNotNull(result.getCleaning());
