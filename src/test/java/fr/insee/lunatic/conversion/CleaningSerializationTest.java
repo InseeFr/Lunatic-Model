@@ -11,6 +11,11 @@ import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
+import java.io.ByteArrayInputStream;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 class CleaningSerializationTest {
 
     private Questionnaire questionnaire;
@@ -48,6 +53,42 @@ class CleaningSerializationTest {
                   }
                 }""";
         JSONAssert.assertEquals(expectedJson, result, JSONCompareMode.STRICT);
+    }
+
+    @Test
+    void deserializeCleaning() throws SerializationException {
+        //
+        String jsonInput = """
+                {
+                  "cleaning": {
+                    "Q1": {
+                      "Q21": "(Q1)",
+                      "Q22": "(Q1) and (Q2)"
+                    },
+                    "Q2": {
+                      "Q22": "(Q1) and (Q2)"
+                    }
+                  }
+                }""";
+
+        //
+        JsonDeserializer jsonDeserializer = new JsonDeserializer();
+        Questionnaire result = jsonDeserializer.deserialize(new ByteArrayInputStream(jsonInput.getBytes()));
+
+        //
+        assertNotNull(result.getCleaning());
+        //
+        CleaningVariableEntry q1Entry = result.getCleaning().getCleaningEntry("Q1");
+        assertNotNull(q1Entry);
+        assertNotNull(q1Entry.getCleanedVariable("Q21"));
+        assertNotNull(q1Entry.getCleanedVariable("Q22"));
+        assertEquals("(Q1)", q1Entry.getCleanedVariable("Q21").filterExpression());
+        assertEquals("(Q1) and (Q2)", q1Entry.getCleanedVariable("Q22").filterExpression());
+        //
+        CleaningVariableEntry q2Entry = result.getCleaning().getCleaningEntry("Q2");
+        assertNotNull(q2Entry);
+        assertNotNull(q2Entry.getCleanedVariable("Q22"));
+        assertEquals("(Q1) and (Q2)", q2Entry.getCleanedVariable("Q22").filterExpression());
     }
 
 }
