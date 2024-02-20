@@ -54,6 +54,8 @@ jobs:
   create-release:
     needs: check-version
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
@@ -74,14 +76,14 @@ jobs:
           writeToFile: false
           excludeTypes: docs,other,style
 
-      - uses: softprops/action-gh-release@v1
+      - name: Create release
+        uses: ncipollo/release-action@v1 # This action allows to publish non 'latest' releases
         with:
-          tag_name: ${{ needs.check-version.outputs.release-version }}
-          target_commitish: ${{ github.head_ref || github.ref }}
-          name: ${{ needs.check-version.outputs.release-version }}
+          tag: ${{ needs.check-version.outputs.release-version }}
+          commit: ${{ github.head_ref || github.ref }}
+          name: "v${{ needs.check-version.outputs.release-version }}"
           body: ${{steps.changelog.outputs.changes}}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          makeLatest: 'false'
 
   deploy-maven-repo:
     needs: create-release
