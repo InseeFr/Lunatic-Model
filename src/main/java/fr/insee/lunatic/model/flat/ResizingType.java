@@ -1,22 +1,44 @@
 package fr.insee.lunatic.model.flat;
 
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import lombok.Getter;
-import lombok.Setter;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
 
-@JsonPropertyOrder({
-        "any"
-})
-@Getter
-@Setter
 public class ResizingType {
 
-    protected List<Object> any;
+    @JsonValue
+    private final Map<String, ResizingEntry> resizingEntries;
+
+    @JsonCreator
+    private ResizingType(final Map<String, ResizingEntry> resizingEntries) {
+        this.resizingEntries = resizingEntries;
+    }
 
     public ResizingType() {
-        this.any = new ArrayList<>();
+        resizingEntries = new LinkedHashMap<>();
     }
+
+    public void putResizingEntry(String resizingVariableName, ResizingEntry resizingEntry) {
+        resizingEntries.put(resizingVariableName, resizingEntry);
+    }
+
+    public ResizingEntry getResizingEntry(String resizingVariableName) {
+        return resizingEntries.get(resizingVariableName);
+    }
+
+    public Set<String> getResizingVariableNames() {
+        return resizingEntries.keySet();
+    }
+
+    public int countResizingEntries() {
+        return resizingEntries.size();
+    }
+
+    public ResizingEntry removeResizingEntry(String resizingVariableName) {
+        return resizingEntries.remove(resizingVariableName);
+    }
+
 }

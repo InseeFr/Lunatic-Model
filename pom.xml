@@ -6,7 +6,7 @@
 	<artifactId>lunatic-model</artifactId>
 	<packaging>jar</packaging>
 
-	<version>3.3.1</version>
+	<version>3.3.2</version>
 	<name>Lunatic Model</name>
 	<description>Classes and converters for the Lunatic model</description>
 	<url>https://inseefr.github.io/Lunatic-Model/</url>
@@ -38,7 +38,7 @@
 	<scm>
 		<connection>scm:git:git://github.com/InseeFr/Lunatic-Model.git</connection>
 		<developerConnection>scm:git:ssh://github.com:InseeFr/Lunatic-Model.git</developerConnection>
-		<url>https://github.com/InseeFr/Lunatic-Model.git/tree/v3-main</url>
+		<url>https://github.com/InseeFr/Lunatic-Model.git</url>
 	</scm>
 
 	<distributionManagement>
