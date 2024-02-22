@@ -18,4 +18,8 @@ public class VariableTypeTwoDimensionsArray extends IVariableType {
     /** Values field for collected variables */
     protected ValuesTypeTwoDimensionsArray values;
 
+    public VariableTypeTwoDimensionsArray() {
+        this.values = new ValuesTypeTwoDimensionsArray();
+    }
+
 }

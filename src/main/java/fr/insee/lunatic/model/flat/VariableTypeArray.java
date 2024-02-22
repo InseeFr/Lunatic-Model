@@ -18,4 +18,8 @@ public class VariableTypeArray extends IVariableType {
     /** Values field for collected variables */
     protected ValuesTypeArray values;
 
+    public VariableTypeArray() {
+        this.values = new ValuesTypeArray();
+    }
+
 }

@@ -32,5 +32,6 @@ public class VariableType
 
     public VariableType() {
         this.bindingDependencies = new ArrayList<>();
+        this.values = new ValuesType();
     }
 }

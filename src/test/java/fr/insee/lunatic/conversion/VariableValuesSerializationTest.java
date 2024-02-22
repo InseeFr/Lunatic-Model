@@ -17,7 +17,6 @@ class VariableValuesSerializationTest {
         VariableType simpleVariable = new VariableType();
         simpleVariable.setName("SIMPLE_VAR");
         simpleVariable.setVariableType(VariableTypeEnum.COLLECTED);
-        simpleVariable.setValues(new ValuesType());
         questionnaire.getVariables().add(simpleVariable);
         //
         JsonSerializer jsonSerializer = new JsonSerializer();
@@ -50,7 +49,6 @@ class VariableValuesSerializationTest {
         VariableTypeArray loopVariable = new VariableTypeArray();
         loopVariable.setName("LOOP_VAR");
         loopVariable.setVariableType(VariableTypeEnum.COLLECTED);
-        loopVariable.setValues(new ValuesTypeArray());
         questionnaire.getVariables().add(loopVariable);
         //
         JsonSerializer jsonSerializer = new JsonSerializer();
@@ -83,7 +81,6 @@ class VariableValuesSerializationTest {
         VariableTypeTwoDimensionsArray loopVariable = new VariableTypeTwoDimensionsArray();
         loopVariable.setName("PAIRWISE_VAR");
         loopVariable.setVariableType(VariableTypeEnum.COLLECTED);
-        loopVariable.setValues(new ValuesTypeTwoDimensionsArray());
         questionnaire.getVariables().add(loopVariable);
         //
         JsonSerializer jsonSerializer = new JsonSerializer();
