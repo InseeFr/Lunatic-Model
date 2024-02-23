@@ -6,31 +6,31 @@ import com.fasterxml.jackson.annotation.JsonValue;
 public enum VariableDimension {
 
     /** Variable is a scalar point. */
-    SCALAR("0"),
+    SCALAR(0),
 
     /** Variable is a vector. */
-    ARRAY("1"),
+    ARRAY(1),
 
     /** Variable is a two dimensions vector. */
-    DOUBLE_ARRAY("2");
+    DOUBLE_ARRAY(2);
 
-    private final String label;
+    private final int value;
 
-    VariableDimension(String label) {
-        this.label = label;
+    VariableDimension(int value) {
+        this.value = value;
     }
 
     @JsonValue
-    public String label() {
-        return this.label;
+    public int value() {
+        return this.value;
     }
 
     @JsonCreator
-    public VariableDimension fromLabel(String label) {
+    public VariableDimension fromLabel(int label) {
         return switch (label) {
-            case "0" -> SCALAR;
-            case "1" -> ARRAY;
-            case "2" -> DOUBLE_ARRAY;
+            case 0 -> SCALAR;
+            case 1 -> ARRAY;
+            case 2 -> DOUBLE_ARRAY;
             default -> throw new IllegalArgumentException("Variable dimension '" + label + "' is not allowed");
         };
     }

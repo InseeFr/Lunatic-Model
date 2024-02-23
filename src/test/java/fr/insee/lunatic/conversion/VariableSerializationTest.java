@@ -19,7 +19,7 @@ class VariableSerializationTest {
                 {
                   "variableType": "COLLECTED",
                   "name": "SIMPLE_VAR",
-                  "variableDimension": "0",
+                  "variableDimension": 0,
                   "values": {
                     "PREVIOUS": null,
                     "COLLECTED": null,
@@ -37,7 +37,7 @@ class VariableSerializationTest {
                 {
                   "variableType": "COLLECTED",
                   "name": "LOOP_VAR",
-                  "variableDimension": "1",
+                  "variableDimension": 1,
                   "values": {
                     "PREVIOUS": [],
                     "COLLECTED": [],
@@ -55,7 +55,7 @@ class VariableSerializationTest {
                 {
                   "variableType": "COLLECTED",
                   "name": "PAIRWISE_VAR",
-                  "variableDimension": "2",
+                  "variableDimension": 2,
                   "values": {
                     "PREVIOUS": [[]],
                     "COLLECTED": [[]],
