@@ -1,0 +1,30 @@
+# Nexus staging errors can occur when trying to publish to Maven Central.
+# This action is intended to manually retry the artifact deployment when this happens.
+# Artifacts can never be deleted in Maven Central, use this action carefully.
+
+name: Manual deployment
+
+on: workflow_dispatch
+
+jobs:
+  deploy-maven-repo:
+    needs: create-release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Maven Central Repository
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          server-id: ossrh
+          server-username: MAVEN_USERNAME
+          server-password: MAVEN_PASSWORD
+          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE
+      - name: Deploy with Maven
+        run: mvn --batch-mode clean deploy -Pdeploy --no-transfer-progress
+        env:
+          MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
