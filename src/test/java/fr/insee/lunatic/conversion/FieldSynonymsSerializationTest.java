@@ -50,6 +50,7 @@ class FieldSynonymsSerializationTest {
         //
         String expectedJson = """
                 {
+                  "componentType": "Questionnaire",
                   "suggesters": [
                     {
                       "fields": [

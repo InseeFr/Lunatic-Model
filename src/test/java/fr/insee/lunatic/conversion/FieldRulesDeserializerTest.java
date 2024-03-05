@@ -34,6 +34,7 @@ class FieldRulesDeserializerTest {
         //
         String jsonQuestionnaire = """
                 {
+                  "componentType": "Questionnaire",
                   "suggesters": [
                     {
                       "fields": [
@@ -58,6 +59,7 @@ class FieldRulesDeserializerTest {
     void deserializeRulesFromQuestionnaire_arrayCase() throws SerializationException {
         String jsonQuestionnaire = """
                 {
+                  "componentType": "Questionnaire",
                   "suggesters": [
                     {
                       "fields": [

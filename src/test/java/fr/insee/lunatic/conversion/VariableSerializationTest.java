@@ -15,6 +15,7 @@ class VariableSerializationTest {
 
     private final String simpleVarJson = """
             {
+              "componentType": "Questionnaire",
               "variables": [
                 {
                   "variableType": "COLLECTED",
@@ -33,6 +34,7 @@ class VariableSerializationTest {
 
     private final String loopVarJson = """
             {
+              "componentType": "Questionnaire",
               "variables": [
                 {
                   "variableType": "COLLECTED",
@@ -51,6 +53,7 @@ class VariableSerializationTest {
 
     private final String pairwiseVarJson = """
             {
+              "componentType": "Questionnaire",
               "variables": [
                 {
                   "variableType": "COLLECTED",

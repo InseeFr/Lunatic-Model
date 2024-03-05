@@ -17,7 +17,7 @@ class JsonSerializerTest {
         JsonSerializer serializer = new JsonSerializer();
         String result = serializer.serialize(questionnaire);
         //
-        assertEquals("{\"id\":\"foo-id\"}",
+        assertEquals("{\"id\":\"foo-id\",\"componentType\":\"Questionnaire\"}",
                 result);
     }
 
