@@ -58,13 +58,13 @@ import java.util.List;
         @JsonSubTypes.Type(value = Dropdown.class, name = "Dropdown"),
         @JsonSubTypes.Type(value = Textarea.class, name = "Textarea"),
         @JsonSubTypes.Type(value = FilterDescription.class, name = "FilterDescription"),
-        //@JsonSubTypes.Type(value = Suggester.class, name = "Suggester"), TODO: create class for the suggester component
+        @JsonSubTypes.Type(value = Suggester.class, name = "Suggester")
 })
 @Getter
 @Setter
 public abstract class ComponentType {
-    protected LabelType label;
 
+    protected LabelType label;
     @JsonInclude(Include.NON_EMPTY)
     protected List<DeclarationType> declarations;
     protected ConditionFilterType conditionFilter;
@@ -72,9 +72,13 @@ public abstract class ComponentType {
     protected List<ControlType> controls;
     protected Hierarchy hierarchy;
     protected ResponseType missingResponse;
-    protected String storeName;
+
+    /** Collected or external variable names required to evaluate expressions used in the component properties.
+     * @deprecated Binding dependencies at component level are not used anymore in Lunatic. */
     @JsonInclude(Include.NON_EMPTY)
+    @Deprecated(since = "3.4.0")
     protected List<String> bindingDependencies;
+
     @JsonProperty(required = true)
     protected String id;
     protected ComponentTypeEnum componentType;
