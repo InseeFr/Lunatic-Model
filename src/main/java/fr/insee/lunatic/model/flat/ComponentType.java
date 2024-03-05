@@ -77,7 +77,7 @@ public abstract class ComponentType {
      * @deprecated Binding dependencies at component level are not used anymore in Lunatic. */
     @JsonInclude(Include.NON_EMPTY)
     @Deprecated(since = "3.4.0")
-    protected List<String> bindingDependencies;
+    protected List<String> bindingDependencies = new ArrayList<>();
 
     @JsonProperty(required = true)
     protected String id;
@@ -86,7 +86,6 @@ public abstract class ComponentType {
     protected String page;
 
     protected ComponentType() {
-        bindingDependencies = new ArrayList<>();
         controls = new ArrayList<>();
         declarations = new ArrayList<>();
     }
