@@ -20,6 +20,7 @@ class CleaningSerializationTest {
     /** Json content used in following tests. */
     private final String jsonCleaningExample = """
             {
+              "componentType": "Questionnaire",
               "cleaning": {
                 "Q1": {
                   "Q21": "(Q1)",

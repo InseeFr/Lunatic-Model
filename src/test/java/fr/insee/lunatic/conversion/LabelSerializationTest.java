@@ -29,7 +29,10 @@ class LabelSerializationTest {
         String result = jsonSerializer.serialize(questionnaire);
         //
         String expected = """
-                {"label": {"value": "Foo label", "type": "VTL|MD"}}
+                {
+                  "componentType": "Questionnaire",
+                  "label": {"value": "Foo label", "type": "VTL|MD"}
+                }
                 """;
         JSONAssert.assertEquals(expected, result, JSONCompareMode.STRICT);
     }
@@ -47,7 +50,10 @@ class LabelSerializationTest {
         String result = jsonSerializer.serialize(questionnaire);
         //
         String expected = """
-                {"label": {"value": "Foo label", "type": "VTL|MD"}}
+                {
+                  "componentType": "Questionnaire",
+                  "label": {"value": "Foo label", "type": "VTL|MD"}
+                }
                 """;
         JSONAssert.assertEquals(expected, result, JSONCompareMode.STRICT);
     }
@@ -62,7 +68,10 @@ class LabelSerializationTest {
     void deserializeFromQuestionnaire() throws SerializationException {
         //
         String jsonInput = """
-                {"label": {"value": "Foo label", "type": "VTL|MD"}}
+                {
+                  "componentType": "Questionnaire",
+                  "label": {"value": "Foo label", "type": "VTL|MD"}
+                }
                 """;
         //
         JsonDeserializer jsonDeserializer = new JsonDeserializer();
@@ -77,7 +86,10 @@ class LabelSerializationTest {
     void deserializeFromQuestionnaire_illegalTypeValue() {
         //
         String jsonInput = """
-                {"label": {"value": "Foo label", "type": "Foo value"}}
+                {
+                  "componentType": "Questionnaire",
+                  "label": {"value": "Foo label", "type": "Foo value"}
+                }
                 """;
         //
         JsonDeserializer jsonDeserializer = new JsonDeserializer();

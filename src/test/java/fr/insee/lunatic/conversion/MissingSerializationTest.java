@@ -15,10 +15,11 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-public class MissingSerializationTest {
+class MissingSerializationTest {
 
     String jsonMissingBlockExample = """
             {
+              "componentType": "Questionnaire",
               "missingBlock": {
                 "SCALAR_MISSING": ["SCALAR"],
                 "SCALAR": ["SCALAR_MISSING"],

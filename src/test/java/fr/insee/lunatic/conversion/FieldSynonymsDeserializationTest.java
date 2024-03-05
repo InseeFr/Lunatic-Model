@@ -16,6 +16,7 @@ class FieldSynonymsDeserializationTest {
         //
         String jsonQuestionnaire = """
                 {
+                  "componentType": "Questionnaire",
                   "suggesters": [
                     {
                       "fields": [
