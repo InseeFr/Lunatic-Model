@@ -16,6 +16,7 @@ class ResizingSerializationTest {
 
     private final String jsonResizingIteration = """
             {
+              "componentType": "Questionnaire",
               "resizing": {
                 "LOOP_SIZE": {
                   "size": "max(1, LOOP_SIZE)",
@@ -26,6 +27,7 @@ class ResizingSerializationTest {
 
     private final String jsonResizingPairwise = """
             {
+              "componentType": "Questionnaire",
               "resizing": {
                 "FIRST_NAME": {
                   "sizeForLinksVariables": [
@@ -39,6 +41,7 @@ class ResizingSerializationTest {
 
     private final String jsonResizingIterationAndPairwise = """
             {
+              "componentType": "Questionnaire",
               "resizing": {
                 "FIRST_NAME": {
                   "size": "count(FIRST_NAME)",

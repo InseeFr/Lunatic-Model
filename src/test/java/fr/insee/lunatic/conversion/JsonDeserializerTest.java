@@ -1,6 +1,7 @@
 package fr.insee.lunatic.conversion;
 
 import fr.insee.lunatic.exception.SerializationException;
+import fr.insee.lunatic.model.flat.ComponentTypeEnum;
 import fr.insee.lunatic.model.flat.Questionnaire;
 import org.junit.jupiter.api.Test;
 
@@ -14,13 +15,14 @@ class JsonDeserializerTest {
     @Test
     void deserialize_simplestCase() throws SerializationException {
         //
-        String jsonInput = "{\"id\":\"foo-id\"}";
+        String jsonInput = "{\"id\":\"foo-id\",\"componentType\":\"Questionnaire\"}";
         //
         JsonDeserializer jsonDeserializer = new JsonDeserializer();
         Questionnaire questionnaire = jsonDeserializer.deserialize(new ByteArrayInputStream(jsonInput.getBytes()));
         //
         assertNotNull(questionnaire);
         assertEquals("foo-id", questionnaire.getId());
+        assertEquals(ComponentTypeEnum.QUESTIONNAIRE, questionnaire.getComponentType());
     }
 
 }

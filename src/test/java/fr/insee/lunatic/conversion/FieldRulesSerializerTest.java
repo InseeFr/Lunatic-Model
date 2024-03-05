@@ -52,6 +52,7 @@ class FieldRulesSerializerTest {
         //
         String expected = """
                 {
+                  "componentType": "Questionnaire",
                   "suggesters": [
                     {
                       "fields": [
@@ -81,6 +82,7 @@ class FieldRulesSerializerTest {
         //
         String expected = """
                 {
+                  "componentType": "Questionnaire",
                   "suggesters": [
                     {
                       "fields": [

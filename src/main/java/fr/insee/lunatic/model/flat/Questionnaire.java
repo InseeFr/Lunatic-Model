@@ -53,6 +53,7 @@ public class Questionnaire extends ComponentType
 
     public Questionnaire () {
         super();
+        this.componentType = ComponentTypeEnum.QUESTIONNAIRE;
         this.components = new ArrayList<>();
         this.suggesters = new ArrayList<>();
         this.variables = new ArrayList<>();
