@@ -10,6 +10,10 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Object that contains configuration options for suggester components used in the questionnaire.
+ * This object belongs in the "suggesters" list at questionnaire level.
+ */
 @JsonPropertyOrder({
         "name",
         "fields",
