@@ -42,7 +42,7 @@ public class SuggesterType {
     protected SuggesterQueryParser queryParser;
     protected String url;
     @JsonProperty(required = true)
-    protected String version;
+    protected BigInteger version;
 
     public SuggesterType() {
         this.stopWords = new ArrayList<>();

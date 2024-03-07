@@ -23,7 +23,7 @@ public class JsonDeserializer {
 		logger.info("Deserializing questionnaire from file {}", fileName);
 
 		ObjectMapper mapper = new ObjectMapper();
-		Questionnaire questionnaire = null;
+		Questionnaire questionnaire;
 		try {
 			questionnaire = mapper.readValue(new StreamSource(fileName).getInputStream(), Questionnaire.class);
 		} catch (IOException e) {
