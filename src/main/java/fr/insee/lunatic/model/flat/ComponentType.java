@@ -85,6 +85,11 @@ public abstract class ComponentType {
     protected Boolean mandatory;
     protected String page;
 
+    /** This property should be moved in the Suggester component.
+     * Yet having this property defined here makes Eno suggester specific treatment easier.
+     * To be moved in the Suggester class when the suggester specific treatment is removed in Eno. */
+    protected String storeName;
+
     protected ComponentType() {
         controls = new ArrayList<>();
         declarations = new ArrayList<>();
