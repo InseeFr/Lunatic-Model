@@ -11,8 +11,8 @@ import lombok.Setter;
 @Setter
 public class Suggester extends ComponentType implements ComponentSimpleResponseType {
 
-    /** Name of the code list used for auto-completion. */
-    private String storeName;
+    /* Name of the code list used for auto-completion. */
+    //private String storeName;
 
     /** Collected response of the suggester component. */
     @JsonProperty(required = true)
