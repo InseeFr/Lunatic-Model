@@ -10,12 +10,11 @@ import java.io.IOException;
 
 public class FieldRulesDeserializer extends StdDeserializer<FieldRules> {
 
-    @SuppressWarnings("unused") // default constructor is required by jackson
     public FieldRulesDeserializer() {
         this(null);
     }
 
-    public FieldRulesDeserializer(Class<FieldRules> fieldRulesClass) {
+    FieldRulesDeserializer(Class<FieldRules> fieldRulesClass) {
         super(fieldRulesClass);
     }
 
