@@ -27,6 +27,7 @@ import java.util.List;
         "missingResponse",
         "storeName",
         "bindingDependencies",
+        "components",
         "lines",
         "header",
         "body",
@@ -35,7 +36,19 @@ import java.util.List;
         "format",
         "unit",
         "response",
-        "responses"
+        "responses",
+        "modele",
+        "enoCoreVersion",
+        "lunaticModelVersion",
+        "generatingDate",
+        "missing",
+        "pagination",
+        "maxPage",
+        "suggesters",
+        "variables",
+        "cleaning",
+        "missingBlock",
+        "resizing"
 })
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
