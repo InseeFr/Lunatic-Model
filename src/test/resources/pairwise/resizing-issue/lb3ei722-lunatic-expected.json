@@ -517,7 +517,7 @@
      "COLLECTED" : null,
      "FORCED" : null,
      "EDITED" : null,
-     "INPUTED" : null } },
+     "INPUTTED" : null } },
    
    { "variableType" : "COLLECTED",
     "name" : "NB",
@@ -526,7 +526,7 @@
      "COLLECTED" : null,
      "FORCED" : null,
      "EDITED" : null,
-     "INPUTED" : null } },
+     "INPUTTED" : null } },
    
    { "variableType" : "COLLECTED",
     "name" : "PRENOM",
@@ -539,7 +539,7 @@
      [ null ],
      "EDITED" : 
      [ null ],
-     "INPUTED" : 
+     "INPUTTED" : 
      [ null ] } },
    
    { "variableType" : "COLLECTED",
@@ -553,7 +553,7 @@
      [ null ],
      "EDITED" : 
      [ null ],
-     "INPUTED" : 
+     "INPUTTED" : 
      [ null ] } },
    
    { "variableType" : "COLLECTED",
@@ -563,7 +563,7 @@
      "COLLECTED" : null,
      "FORCED" : null,
      "EDITED" : null,
-     "INPUTED" : null } },
+     "INPUTTED" : null } },
    
    { "variableType" : "CALCULATED",
     "name" : "FILTER_RESULT_NB",

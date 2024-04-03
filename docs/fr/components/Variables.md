@@ -1,7 +1,6 @@
 ### Les variables
 
-Les variables sont toutes externalisées dans un tableau `variables`.
-Elles sont de trois types :
+Les variables sont toutes externalisées dans un tableau `variables`. Elles sont de trois types :
 
 - `EXTERNAL` : variable externe à valoriser
 - `COLLECTED` : référence à une variable collectée (issue des `response` dans les composants)
@@ -21,11 +20,11 @@ Strucure du tableau `variables` :
     "name": "FAVOURITE_CHARACTERS",
     "componentRef": "FAVOURITE_CHARACTERS_COMPONENT",
     "values": {
-            "PREVIOUS": null,
-            "COLLECTED": null,
-            "FORCED": null,
-            "EDITED": null,
-            "INPUTED": null
+      "PREVIOUS": null,
+      "COLLECTED": null,
+      "FORCED": null,
+      "EDITED": null,
+      "INPUTTED": null
     }
   },
   {

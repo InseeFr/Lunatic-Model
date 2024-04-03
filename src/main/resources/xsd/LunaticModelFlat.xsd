@@ -293,9 +293,9 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="INPUTEDArray">
+    <xs:complexType name="INPUTTEDArray">
         <xs:sequence>
-            <xs:element name="INPUTED" type="xs:anyType" nillable="true" maxOccurs="unbounded"/>
+            <xs:element name="INPUTTED" type="xs:anyType" nillable="true" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -305,7 +305,7 @@
             <xs:element name="COLLECTED" type="COLLECTEDArray" minOccurs="0" maxOccurs="1"/>
             <xs:element name="FORCED" type="FORCEDArray" minOccurs="0" maxOccurs="1"/>
             <xs:element name="EDITED" type="EDITEDArray" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="INPUTED" type="INPUTEDArray" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="INPUTTED" type="INPUTTEDArray" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -315,7 +315,7 @@
             <xs:element name="COLLECTED" type="xs:string" nillable="true"/>
             <xs:element name="FORCED" type="xs:string" nillable="true"/>
             <xs:element name="EDITED" type="xs:string" nillable="true"/>
-            <xs:element name="INPUTED" type="xs:string" nillable="true"/>
+            <xs:element name="INPUTTED" type="xs:string" nillable="true"/>
         </xs:sequence>
     </xs:complexType>
 
