@@ -25,14 +25,14 @@
     <!-- delete type attribute except when key is linked to the suggesters block or to a label...-->
     <xsl:template match="*[@key='type'][not(ancestor::*[@key=('suggesters')] or parent::*[@key=('label','min','max','iterations','conditionFilter','errorMessage','control','expression','xAxisIterations','yAxisIterations')])]" mode="clean"/>
     <!-- delete map useless inside array -->
-    <xsl:template match="*[local-name(.)='map'][parent::*[@key=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTED') and local-name(.)='array'] | parent::*[@key=('values')]]" mode="clean">
+    <xsl:template match="*[local-name(.)='map'][parent::*[@key=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTTED') and local-name(.)='array'] | parent::*[@key=('values')]]" mode="clean">
         <xsl:apply-templates mode="clean"/>
     </xsl:template>
     <xsl:template match="*[local-name(.)='map'][parent::*[@key='value' and local-name(.)='array'] or (self::*[@key='value'] and preceding-sibling::*[@key='variableType'])]" mode="clean">
         <xsl:apply-templates mode="clean"/>
     </xsl:template>
     <!-- delete key attribute for array inside array -->
-    <xsl:template match="*[local-name(.)='array' and @key=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTED','value')][ancestor::*[local-name(.)='array' and @key=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTED','value')]]" mode="clean">
+    <xsl:template match="*[local-name(.)='array' and @key=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTTED','value')][ancestor::*[local-name(.)='array' and @key=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTTED','value')]]" mode="clean">
         <xsl:copy>
             <xsl:apply-templates mode="clean"/>
         </xsl:copy>
