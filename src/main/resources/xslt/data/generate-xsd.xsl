@@ -7,7 +7,7 @@
     
     <xsl:output indent="yes"/>
     
-    <xsl:variable name="ResponseTypeEnum" select="'PREVIOUS,COLLECTED,FORCED,EDITED,INPUTED'" as="xs:string"/>
+    <xsl:variable name="ResponseTypeEnum" select="'PREVIOUS,COLLECTED,FORCED,EDITED,INPUTTED'" as="xs:string"/>
     
     <xsl:template match="/">
         <xs:schema 
@@ -94,7 +94,7 @@
         </xs:element>
     </xsl:template>
     
-    <xsl:template match="h:*[local-name(.)=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTED')]">
+    <xsl:template match="h:*[local-name(.)=('PREVIOUS','COLLECTED','FORCED','EDITED','INPUTTED')]">
         <xsl:variable name="type" select="@xsi:type"/>
         <xsl:variable name="name" select="local-name(.)"/>
         

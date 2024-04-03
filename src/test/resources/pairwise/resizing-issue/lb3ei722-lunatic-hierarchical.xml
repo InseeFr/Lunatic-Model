@@ -560,7 +560,7 @@
          <COLLECTED xsi:nil="true"/>
          <FORCED xsi:nil="true"/>
          <EDITED xsi:nil="true"/>
-         <INPUTED xsi:nil="true"/>
+         <INPUTTED xsi:nil="true"/>
       </values>
    </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
@@ -570,7 +570,7 @@
          <COLLECTED xsi:nil="true"/>
          <FORCED xsi:nil="true"/>
          <EDITED xsi:nil="true"/>
-         <INPUTED xsi:nil="true"/>
+         <INPUTTED xsi:nil="true"/>
       </values>
    </variables>
    <variables variableType="COLLECTED" xsi:type="VariableTypeArray">
@@ -588,9 +588,9 @@
          <EDITED xsi:type="EDITEDArray">
             <EDITED xsi:nil="true"/>
          </EDITED>
-         <INPUTED xsi:type="INPUTEDArray">
-            <INPUTED xsi:nil="true"/>
-         </INPUTED>
+         <INPUTTED xsi:type="INPUTTEDArray">
+            <INPUTTED xsi:nil="true"/>
+         </INPUTTED>
       </values>
    </variables>
    <variables variableType="COLLECTED" xsi:type="VariableTypeArray">
@@ -608,9 +608,9 @@
          <EDITED xsi:type="EDITEDArray">
             <EDITED xsi:nil="true"/>
          </EDITED>
-         <INPUTED xsi:type="INPUTEDArray">
-            <INPUTED xsi:nil="true"/>
-         </INPUTED>
+         <INPUTTED xsi:type="INPUTTEDArray">
+            <INPUTTED xsi:nil="true"/>
+         </INPUTTED>
       </values>
    </variables>
    <variables variableType="COLLECTED" xsi:type="VariableType">
@@ -620,7 +620,7 @@
          <COLLECTED xsi:nil="true"/>
          <FORCED xsi:nil="true"/>
          <EDITED xsi:nil="true"/>
-         <INPUTED xsi:nil="true"/>
+         <INPUTTED xsi:nil="true"/>
       </values>
    </variables>
    <variables variableType="CALCULATED" xsi:type="VariableType">

@@ -10,7 +10,7 @@
       "COLLECTED": "Collected",
       "FORCED": null,
       "EDITED": 34,
-      "INPUTED": "Inputed"
+      "INPUTTED": "Inputted"
     },
     "variable2": {
       "PREVIOUS": ["previous individu1", "previous individu2"],
@@ -57,7 +57,7 @@
          <COLLECTED type="string">Collected</COLLECTED>
          <FORCED type="null"/>
          <EDITED type="number">34</EDITED>
-         <INPUTED type="string">Inputed</INPUTED>
+         <INPUTTED type="string">Inputted</INPUTTED>
       </variable1>
       <variable2>
          <PREVIOUS>
