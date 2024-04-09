@@ -18,7 +18,6 @@ public class CheckboxOne
 
     @JsonProperty(required = true)
     protected ResponseType response;
-    protected DetailResponse detail;
 
     public CheckboxOne() {
         super();

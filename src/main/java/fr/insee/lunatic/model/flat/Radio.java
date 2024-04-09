@@ -17,7 +17,6 @@ public class Radio
     protected List<Options> options;
     @JsonProperty(required = true)
     protected ResponseType response;
-    protected DetailResponse detail;
 
     public Radio() {
         super();

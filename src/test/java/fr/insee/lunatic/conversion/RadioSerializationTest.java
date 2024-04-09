@@ -21,28 +21,33 @@ class RadioSerializationTest {
         //
         Options option1 = new Options();
         option1.setLabel(new LabelType());
+        option1.setValue("1");
         option1.getLabel().setValue("\"Option A\"");
         option1.getLabel().setType(LabelTypeEnum.VTL);
         radio.getOptions().add(option1);
+        //
         Options option2 = new Options();
+        option2.setValue("2");
         option2.setLabel(new LabelType());
         option2.getLabel().setValue("\"Option B\"");
         option2.getLabel().setType(LabelTypeEnum.VTL);
         radio.getOptions().add(option2);
+        //
         Options optionOther = new Options();
+        optionOther.setValue("3");
         optionOther.setLabel(new LabelType());
         optionOther.getLabel().setValue("\"Other\"");
         optionOther.getLabel().setType(LabelTypeEnum.VTL);
+        optionOther.setDetail(new DetailResponse());
+        optionOther.getDetail().setLabel(new LabelType());
+        optionOther.getDetail().getLabel().setValue("\"Please specify:\"");
+        optionOther.getDetail().getLabel().setType(LabelTypeEnum.VTL);
+        optionOther.getDetail().setResponse(new ResponseType());
+        optionOther.getDetail().getResponse().setName("FOO_DETAIL");
         radio.getOptions().add(optionOther);
         //
         radio.setResponse(new ResponseType());
         radio.getResponse().setName("FOO");
-        //
-        radio.setDetail(new DetailResponse());
-        radio.getDetail().setLabel(new LabelType());
-        radio.getDetail().getLabel().setValue("\"Please specify:\"");
-        radio.getDetail().setResponse(new ResponseType());
-        radio.getDetail().getResponse().setName("FOO_DETAIL");
         //
         questionnaire.getComponents().add(radio);
 
@@ -61,34 +66,38 @@ class RadioSerializationTest {
                       "componentType": "Radio",
                       "options": [
                         {
+                          "value": "1",
                           "label": {
                             "value": "\\"Option A\\"",
                             "type": "VTL"
                           }
                         },
                         {
+                          "value": "2",
                           "label": {
                             "value": "\\"Option B\\"",
                             "type": "VTL"
                           }
                         },
                         {
+                          "value": "3",
                           "label": {
                             "value": "\\"Other\\"",
                             "type": "VTL"
+                          },
+                          "detail": {
+                            "label": {
+                              "value": "\\"Please specify:\\"",
+                              "type": "VTL"
+                            },
+                            "response": {
+                              "name": "FOO_DETAIL"
+                            }
                           }
                         }
                       ],
                       "response": {
                         "name": "FOO"
-                      },
-                      "detail": {
-                        "label": {
-                          "value": "\\"Please specify:\\""
-                        },
-                        "response": {
-                          "name": "FOO_DETAIL"
-                        }
                       }
                     }
                   ]
