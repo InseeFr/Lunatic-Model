@@ -3,6 +3,8 @@ name: Run tests
 on:
   pull_request:
     types: [opened, synchronize, reopened]
+    paths-ignore:
+      - 'renovate.json'
 
 jobs:
   test:
