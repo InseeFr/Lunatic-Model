@@ -8,7 +8,8 @@ import lombok.Setter;
 @JsonPropertyOrder({
         "id",
         "label",
-        "response"
+        "response",
+        "detail"
 })
 @Getter
 @Setter
@@ -16,8 +17,12 @@ public class ResponsesCheckboxGroup {
 
     @JsonProperty(required = true)
     protected LabelType label;
+
     @JsonProperty(required = true)
     protected ResponseType response;
+
+    protected DetailResponse detail;
+
     @JsonProperty(required = true)
     protected String id;
 }

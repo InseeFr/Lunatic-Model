@@ -6,7 +6,7 @@
 	<artifactId>lunatic-model</artifactId>
 	<packaging>jar</packaging>
 
-	<version>3.5.1</version>
+	<version>3.6.0</version>
 	<name>Lunatic Model</name>
 	<description>Classes and converters for the Lunatic model</description>
 	<url>https://inseefr.github.io/Lunatic-Model/</url>
@@ -153,7 +153,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-source-plugin</artifactId>
-						<version>3.3.0</version>
+						<version>3.3.1</version>
 						<executions>
 							<execution>
 								<id>attach-sources</id>
