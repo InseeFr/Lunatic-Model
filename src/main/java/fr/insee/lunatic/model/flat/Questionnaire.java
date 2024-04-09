@@ -3,33 +3,16 @@ package fr.insee.lunatic.model.flat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import fr.insee.lunatic.model.flat.variable.VariableType;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@JsonPropertyOrder({
-        "id",
-        "modele",
-        "enoCoreVersion",
-        "lunaticModelVersion",
-        "generatingDate",
-        "missing",
-        "pagination",
-        "maxPage",
-        "label",
-        "components",
-        "suggesters",
-        "variables",
-        "cleaning",
-        "missingBlock",
-        "resizing"
-})
 @Getter
 @Setter
-public class Questionnaire extends ComponentType
-{
+public class Questionnaire extends ComponentType {
 
     @JsonProperty("final")
     protected Boolean _final;
@@ -46,15 +29,17 @@ public class Questionnaire extends ComponentType
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     protected List<SuggesterType> suggesters;
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    protected List<IVariableType> variables;
+    protected List<VariableType> variables;
     protected CleaningType cleaning;
     protected MissingType missingBlock;
     protected ResizingType resizing;
 
     public Questionnaire () {
         super();
+        this.componentType = ComponentTypeEnum.QUESTIONNAIRE;
         this.components = new ArrayList<>();
         this.suggesters = new ArrayList<>();
         this.variables = new ArrayList<>();
     }
+
 }

@@ -10,6 +10,10 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Object that contains configuration options for suggester components used in the questionnaire.
+ * This object belongs in the "suggesters" list at questionnaire level.
+ */
 @JsonPropertyOrder({
         "name",
         "fields",
@@ -38,7 +42,7 @@ public class SuggesterType {
     protected SuggesterQueryParser queryParser;
     protected String url;
     @JsonProperty(required = true)
-    protected String version;
+    protected BigInteger version;
 
     public SuggesterType() {
         this.stopWords = new ArrayList<>();

@@ -1,9 +1,11 @@
 package fr.insee.lunatic.model.flat;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum ComponentTypeEnum {
 
+    QUESTIONNAIRE("Questionnaire"),
     SEQUENCE("Sequence"),
     SUBSEQUENCE("Subsequence"),
     ROSTER_FOR_LOOP("RosterForLoop"),
@@ -32,6 +34,7 @@ public enum ComponentTypeEnum {
         return value;
     }
 
+    @JsonCreator
     public static ComponentTypeEnum fromValue(String v) {
         for (ComponentTypeEnum c: ComponentTypeEnum.values()) {
             if (c.value.equals(v)) {

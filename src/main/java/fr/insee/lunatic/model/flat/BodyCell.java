@@ -9,6 +9,9 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 
+/** Tables contain cells that can be a simple label or a component.
+ * This class holds all the possible properties for such a cell.
+ * TODO: remove this and do proper polymorphisme in tables instead. */
 @JsonPropertyOrder({
         "componentType",
         "maxLength",
@@ -36,9 +39,17 @@ public class BodyCell {
     protected String unit;
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     protected List<Options> options;
+    /** For suggester cells: Name of the code list used for auto-completion. */
+    private String storeName;
+    /** For component cells: collected response of the cell. */
     protected ResponseType response;
+
+    /** Collected or external variable names required to evaluate expressions used in the component properties.
+     * @deprecated Binding dependencies at component level are not used anymore in Lunatic. */
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    protected List<String> bindingDependencies;
+    @Deprecated(since = "3.4.0")
+    protected List<String> bindingDependencies = new ArrayList<>();
+
     protected ComponentTypeEnum componentType;
     protected BigInteger maxLength;
     protected Double min;
@@ -51,6 +62,5 @@ public class BodyCell {
 
     public BodyCell() {
         this.options = new ArrayList<>();
-        this.bindingDependencies = new ArrayList<>();
     }
 }

@@ -17,4 +17,6 @@ public class Options {
     protected String value;
     @JsonProperty(required = true)
     protected LabelType label;
+
+    protected DetailResponse detail;
 }

@@ -62,7 +62,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           writeToFile: false
 
-      - uses: softprops/action-gh-release@v1
+      - uses: softprops/action-gh-release@v2
         with:
           tag_name: ${{ needs.check-version.outputs.release-version }}
           target_commitish: ${{ github.head_ref || github.ref }}
@@ -72,7 +72,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   deploy-maven-repo:
-    needs: create-release
+    needs: check-version
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
