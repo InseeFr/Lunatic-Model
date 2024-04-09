@@ -3,6 +3,8 @@ name: Create snapshot
 on:
   pull_request:
     types: [labeled]
+    paths-ignore:
+      - 'renovate.json'
 
 jobs:
   # begin the snapshot verification before deployment

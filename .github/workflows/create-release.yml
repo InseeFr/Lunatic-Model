@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - v3-main
+    paths-ignore:
+      - 'renovate.json'
 
 jobs:
   check-version:
