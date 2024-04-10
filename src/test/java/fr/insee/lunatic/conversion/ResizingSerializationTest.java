@@ -30,10 +30,10 @@ class ResizingSerializationTest {
               "componentType": "Questionnaire",
               "resizing": {
                 "FIRST_NAME": {
-                  "sizeForLinksVariables": [
-                    "count(FIRST_NAME)",
-                    "count(FIRST_NAME)"
-                  ],
+                  "sizeForLinksVariables": {
+                    "xAxisSize": "count(FIRST_NAME)",
+                    "yAxisSize": "count(FIRST_NAME)"
+                  },
                   "linksVariables": ["LINKS"]
                 }
               }
@@ -46,10 +46,10 @@ class ResizingSerializationTest {
                 "FIRST_NAME": {
                   "size": "count(FIRST_NAME)",
                   "variables": ["LOOP_VAR1", "LOOP_VAR2"],
-                  "sizeForLinksVariables": [
-                    "count(FIRST_NAME)",
-                    "count(FIRST_NAME)"
-                  ],
+                  "sizeForLinksVariables": {
+                    "xAxisSize": "count(FIRST_NAME)",
+                    "yAxisSize": "count(FIRST_NAME)"
+                  },
                   "linksVariables": ["LINKS"]
                 }
               }
@@ -80,8 +80,9 @@ class ResizingSerializationTest {
         Questionnaire questionnaire = new Questionnaire();
         ResizingType resizingType = new ResizingType();
         ResizingPairwiseEntry resizingPairwiseEntry = new ResizingPairwiseEntry();
-        resizingPairwiseEntry.getSizeForLinksVariables().add("count(FIRST_NAME)");
-        resizingPairwiseEntry.getSizeForLinksVariables().add("count(FIRST_NAME)");
+        resizingPairwiseEntry.setSizeForLinksVariables(new ResizingPairwiseEntry.Size());
+        resizingPairwiseEntry.getSizeForLinksVariables().setXAxisSize("count(FIRST_NAME)");
+        resizingPairwiseEntry.getSizeForLinksVariables().setYAxisSize("count(FIRST_NAME)");
         resizingPairwiseEntry.getLinksVariables().add("LINKS");
         resizingType.putResizingEntry("FIRST_NAME", resizingPairwiseEntry);
         questionnaire.setResizing(resizingType);
@@ -99,8 +100,9 @@ class ResizingSerializationTest {
         ResizingPairwiseEntry resizingPairwiseEntry = new ResizingPairwiseEntry();
         resizingPairwiseEntry.setSize("count(FIRST_NAME)");
         resizingPairwiseEntry.getVariables().addAll(List.of("LOOP_VAR1", "LOOP_VAR2"));
-        resizingPairwiseEntry.getSizeForLinksVariables().add("count(FIRST_NAME)");
-        resizingPairwiseEntry.getSizeForLinksVariables().add("count(FIRST_NAME)");
+        resizingPairwiseEntry.setSizeForLinksVariables(new ResizingPairwiseEntry.Size());
+        resizingPairwiseEntry.getSizeForLinksVariables().setXAxisSize("count(FIRST_NAME)");
+        resizingPairwiseEntry.getSizeForLinksVariables().setYAxisSize("count(FIRST_NAME)");
         resizingPairwiseEntry.getLinksVariables().add("LINKS");
         resizingType.putResizingEntry("FIRST_NAME", resizingPairwiseEntry);
         questionnaire.setResizing(resizingType);
@@ -134,7 +136,8 @@ class ResizingSerializationTest {
         assertEquals(1, questionnaire.getResizing().countResizingEntries());;
         ResizingPairwiseEntry resizingPairwiseEntry = assertInstanceOf(ResizingPairwiseEntry.class,
                 questionnaire.getResizing().getResizingEntry("FIRST_NAME"));
-        assertEquals(List.of("count(FIRST_NAME)", "count(FIRST_NAME)"), resizingPairwiseEntry.getSizeForLinksVariables());
+        assertEquals("count(FIRST_NAME)", resizingPairwiseEntry.getSizeForLinksVariables().getXAxisSize());
+        assertEquals("count(FIRST_NAME)", resizingPairwiseEntry.getSizeForLinksVariables().getYAxisSize());
         assertEquals(List.of("LINKS"), resizingPairwiseEntry.getLinksVariables());
     }
 
@@ -150,7 +153,8 @@ class ResizingSerializationTest {
                 questionnaire.getResizing().getResizingEntry("FIRST_NAME"));
         assertEquals("count(FIRST_NAME)", resizingPairwiseEntry.getSize());
         assertEquals(List.of("LOOP_VAR1", "LOOP_VAR2"), resizingPairwiseEntry.getVariables());
-        assertEquals(List.of("count(FIRST_NAME)", "count(FIRST_NAME)"), resizingPairwiseEntry.getSizeForLinksVariables());
+        assertEquals("count(FIRST_NAME)", resizingPairwiseEntry.getSizeForLinksVariables().getXAxisSize());
+        assertEquals("count(FIRST_NAME)", resizingPairwiseEntry.getSizeForLinksVariables().getYAxisSize());
         assertEquals(List.of("LINKS"), resizingPairwiseEntry.getLinksVariables());
     }
 
