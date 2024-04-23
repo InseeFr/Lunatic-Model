@@ -29,8 +29,8 @@ public class ControlType {
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     protected List<String> bindingDependencies;
     protected String id;
-    protected ControlTypeOfControlEnum typeOfControl;
-    protected ControlCriticityEnum criticality;
+    protected ControlTypeEnum typeOfControl;
+    protected ControlCriticalityEnum criticality;
 
     public ControlType() {
         this.bindingDependencies = new ArrayList<>();
