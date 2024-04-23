@@ -30,7 +30,7 @@ public class ControlType {
     protected List<String> bindingDependencies;
     protected String id;
     protected ControlTypeOfControlEnum typeOfControl;
-    protected ControlCriticityEnum criticality;
+    protected ControlCriticalityEnum criticality;
 
     public ControlType() {
         this.bindingDependencies = new ArrayList<>();
