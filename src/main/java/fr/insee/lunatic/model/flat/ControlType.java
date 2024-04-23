@@ -29,7 +29,7 @@ public class ControlType {
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     protected List<String> bindingDependencies;
     protected String id;
-    protected ControlTypeOfControlEnum typeOfControl;
+    protected ControlTypeEnum typeOfControl;
     protected ControlCriticalityEnum criticality;
 
     public ControlType() {
