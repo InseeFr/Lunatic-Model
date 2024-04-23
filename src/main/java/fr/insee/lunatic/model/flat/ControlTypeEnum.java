@@ -2,7 +2,7 @@ package fr.insee.lunatic.model.flat;
 
 public enum ControlTypeEnum {
 
-    /** Control that is automatically generated from questionnaire's metadata.
+    /** Control automatically generated from questionnaire's metadata.
      * Example: control that the user input is a number between the min and the max for a number component. */
     FORMAT,
 
