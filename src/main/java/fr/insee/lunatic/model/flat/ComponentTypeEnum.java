@@ -21,7 +21,6 @@ public enum ComponentTypeEnum {
     RADIO("Radio"),
     DROPDOWN("Dropdown"),
     TEXTAREA("Textarea"),
-    FILTER_DESCRIPTION("FilterDescription"),
     SUGGESTER("Suggester");
     private final String value;
 
