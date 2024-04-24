@@ -38,33 +38,6 @@ class LabelSerializationTest {
     }
 
     @Test
-    void serializeFromQuestionnaire_usingStringType() throws SerializationException, JSONException {
-        //
-        Questionnaire questionnaire = new Questionnaire();
-        LabelType label = new LabelType();
-        label.setValue("Foo label");
-        label.setType("VTL|MD");
-        questionnaire.setLabel(label);
-        //
-        JsonSerializer jsonSerializer = new JsonSerializer();
-        String result = jsonSerializer.serialize(questionnaire);
-        //
-        String expected = """
-                {
-                  "componentType": "Questionnaire",
-                  "label": {"value": "Foo label", "type": "VTL|MD"}
-                }
-                """;
-        JSONAssert.assertEquals(expected, result, JSONCompareMode.STRICT);
-    }
-
-    @Test
-    void labelObject_usingStringType_illegalValue() {
-        LabelType label = new LabelType();
-        assertThrows(IllegalArgumentException.class, () -> label.setType("Foo type"));
-    }
-
-    @Test
     void deserializeFromQuestionnaire() throws SerializationException {
         //
         String jsonInput = """
@@ -78,8 +51,7 @@ class LabelSerializationTest {
         Questionnaire questionnaire = jsonDeserializer.deserialize(new ByteArrayInputStream(jsonInput.getBytes()));
         //
         LabelType label = questionnaire.getLabel();
-        assertEquals(LabelTypeEnum.VTL_MD, label.getTypeEnum());
-        assertEquals("VTL|MD", label.getType());
+        assertEquals(LabelTypeEnum.VTL_MD, label.getType());
     }
 
     @Test

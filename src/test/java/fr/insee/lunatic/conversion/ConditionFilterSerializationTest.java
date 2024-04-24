@@ -33,23 +33,6 @@ class ConditionFilterSerializationTest {
         JSONAssert.assertEquals(expected, result, JSONCompareMode.STRICT);
     }
 
-    @Test // to be removed when string type is removed
-    void serializeConditionFilter_stringType() throws JsonProcessingException, JSONException {
-        //
-        ConditionFilterType conditionFilterType = new ConditionFilterType();
-        conditionFilterType.setValue("if FOO then BAR else BAZ");
-        conditionFilterType.setType("VTL");
-        conditionFilterType.setBindingDependencies(List.of("FOO", "BAR", "BAZ"));
-        //
-        ObjectMapper objectMapper = new ObjectMapper();
-        String result = objectMapper.writerFor(ConditionFilterType.class).writeValueAsString(conditionFilterType);
-        //
-        String expected = """
-                {"value": "if FOO then BAR else BAZ", "type": "VTL"}
-                """; // (binding dependencies are ignored)
-        JSONAssert.assertEquals(expected, result, JSONCompareMode.STRICT);
-    }
-
     @Test
     void deserializeConditionFilter() throws JsonProcessingException {
         //
@@ -60,8 +43,7 @@ class ConditionFilterSerializationTest {
         ConditionFilterType conditionFilterType = new ObjectMapper().readValue(jsonInput, ConditionFilterType.class);
         //
         assertEquals("if FOO then BAR else BAZ", conditionFilterType.getValue());
-        assertEquals(LabelTypeEnum.VTL, conditionFilterType.getTypeEnum());
-        assertEquals("VTL", conditionFilterType.getType()); // to be removed when string type is removed
+        assertEquals(LabelTypeEnum.VTL, conditionFilterType.getType());
         assertTrue(conditionFilterType.getBindingDependencies().isEmpty());
     }
 

@@ -105,7 +105,7 @@ class CalculatedVariableSerializationTest {
         assertEquals(VariableTypeEnum.CALCULATED, calculatedVariableType.getVariableType());
         assertEquals("FOO_CALCULATED_VAR", calculatedVariableType.getName());
         assertEquals("VAR1 + VAR2", calculatedVariableType.getExpression().getValue());
-        assertEquals(LabelTypeEnum.VTL, calculatedVariableType.getExpression().getTypeEnum());
+        assertEquals(LabelTypeEnum.VTL, calculatedVariableType.getExpression().getType());
         assertEquals(List.of("VAR1", "VAR2"), calculatedVariableType.getBindingDependencies());
     }
 
