@@ -59,6 +59,7 @@ import java.util.List;
         @JsonSubTypes.Type(value = Questionnaire.class, name = "Questionnaire"),
         @JsonSubTypes.Type(value = Sequence.class, name = "Sequence"),
         @JsonSubTypes.Type(value = Subsequence.class, name = "Subsequence"),
+        @JsonSubTypes.Type(value = Question.class, name = "Question"),
         @JsonSubTypes.Type(value = RosterForLoop.class, name = "RosterForLoop"),
         @JsonSubTypes.Type(value = Loop.class, name = "Loop"),
         @JsonSubTypes.Type(value = Table.class, name = "Table"),
@@ -77,6 +78,10 @@ import java.util.List;
 public abstract class ComponentType {
 
     protected LabelType label;
+
+    /** Component description (concept introduced in Lunatic v3). */
+    private LabelType description;
+
     @JsonInclude(Include.NON_EMPTY)
     protected List<DeclarationType> declarations;
     protected ConditionFilterType conditionFilter;

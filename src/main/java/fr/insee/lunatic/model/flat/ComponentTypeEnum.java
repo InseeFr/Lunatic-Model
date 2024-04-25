@@ -8,6 +8,7 @@ public enum ComponentTypeEnum {
     QUESTIONNAIRE("Questionnaire"),
     SEQUENCE("Sequence"),
     SUBSEQUENCE("Subsequence"),
+    QUESTION("Question"),
     ROSTER_FOR_LOOP("RosterForLoop"),
     LOOP("Loop"),
     TABLE("Table"),
@@ -22,6 +23,7 @@ public enum ComponentTypeEnum {
     DROPDOWN("Dropdown"),
     TEXTAREA("Textarea"),
     SUGGESTER("Suggester");
+
     private final String value;
 
     ComponentTypeEnum(String v) {
