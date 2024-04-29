@@ -1,0 +1,58 @@
+{
+  "id": "questionnaire-id",
+  "componentType": "Questionnaire",
+  "components": [
+    {
+      "id": "question-id",
+      "componentType": "Question",
+      "page": "1",
+      "label": {
+        "type": "VTL|MD",
+        "value": "\"Question label\""
+      },
+      "description": {
+        "type": "VTL|MD",
+        "value": "\"Question description.\""
+      },
+      "declarations": [
+        {
+          "declarationType": "HELP",
+          "id": "declaration-1-id",
+          "label": {
+            "value": "\"Before question declaration.\"",
+            "type": "VTL|MD"
+          },
+          "position": "BEFORE_QUESTION_TEXT"
+        },
+        {
+          "declarationType": "HELP",
+          "id": "declaration-2-id",
+          "label": {
+            "value": "\"After question declaration.\"",
+            "type": "VTL|MD"
+          },
+          "position": "AFTER_QUESTION_TEXT"
+        }
+      ],
+      "components": [
+        {
+          "id": "input-id",
+          "componentType": "Input",
+          "page": "1",
+          "label": {
+            "value": "\"Input component label\"",
+            "type": "VTL|MD"
+          },
+          "description": {
+            "value": "\"Input component description.\"",
+            "type": "VTL|MD"
+          },
+          "maxLength": 249,
+          "response": {
+            "name": "FOO"
+          }
+        }
+      ]
+    }
+  ]
+}
