@@ -1,6 +1,6 @@
 package fr.insee.lunatic.model.flat;
 
-enum DeclarationTypeEnum {
+public enum DeclarationTypeEnum {
 
     INSTRUCTION,
     COMMENT,
