@@ -1,0 +1,22 @@
+{
+  "id": "questionnaire-id",
+  "componentType": "Questionnaire",
+  "components": [
+    {
+      "id": "duration-id",
+      "componentType": "Duration",
+      "format": "PTnHnM",
+      "label": {
+        "value": "\"Duration (hours/minutes)\"",
+        "type": "VTL|MD"
+      },
+      "description": {
+        "value": "\"1 hour and 10 minutes\"",
+        "type": "VTL|MD"
+      },
+      "response": {
+        "name": "DURATION_VAR"
+      }
+    }
+  ]
+}

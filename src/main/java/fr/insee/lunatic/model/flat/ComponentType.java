@@ -66,6 +66,7 @@ import java.util.List;
         @JsonSubTypes.Type(value = Input.class, name = "Input"),
         @JsonSubTypes.Type(value = PairwiseLinks.class, name = "PairwiseLinks"),
         @JsonSubTypes.Type(value = Datepicker.class, name = "Datepicker"),
+        @JsonSubTypes.Type(value = Duration.class, name = "Duration"),
         @JsonSubTypes.Type(value = CheckboxGroup.class, name = "CheckboxGroup"),
         @JsonSubTypes.Type(value = CheckboxOne.class, name = "CheckboxOne"),
         @JsonSubTypes.Type(value = CheckboxBoolean.class, name = "CheckboxBoolean"),

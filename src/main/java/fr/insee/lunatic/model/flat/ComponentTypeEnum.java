@@ -16,6 +16,7 @@ public enum ComponentTypeEnum {
     PAIRWISE_LINKS("PairwiseLinks"),
     INPUT_NUMBER("InputNumber"),
     DATEPICKER("Datepicker"),
+    DURATION("Duration"),
     CHECKBOX_GROUP("CheckboxGroup"),
     CHECKBOX_ONE("CheckboxOne"),
     CHECKBOX_BOOLEAN("CheckboxBoolean"),

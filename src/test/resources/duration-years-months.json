@@ -1,0 +1,22 @@
+{
+  "id": "questionnaire-id",
+  "componentType": "Questionnaire",
+  "components": [
+    {
+      "id": "duration-id",
+      "componentType": "Duration",
+      "format": "PnYnM",
+      "label": {
+        "value": "\"Duration (years/months)\"",
+        "type": "VTL|MD"
+      },
+      "description": {
+        "value": "\"2 years and 5 months\"",
+        "type": "VTL|MD"
+      },
+      "response": {
+        "name": "DURATION_VAR"
+      }
+    }
+  ]
+}
