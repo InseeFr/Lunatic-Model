@@ -11,8 +11,7 @@ import org.skyscreamer.jsonassert.JSONCompareMode;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+import static org.junit.jupiter.api.Assertions.*;
 
 class DurationSerializationTest {
 
@@ -24,7 +23,7 @@ class DurationSerializationTest {
         //
         Duration duration = new Duration();
         duration.setId("duration-id");
-        duration.setFormat(Duration.YEARS_MONTHS_FORMAT);
+        duration.setFormat(DurationFormat.YEARS_MONTHS);
         duration.setLabel(new LabelType());
         duration.getLabel().setValue("\"Duration (years/months)\"");
         duration.getLabel().setType(LabelTypeEnum.VTL_MD);
@@ -39,6 +38,7 @@ class DurationSerializationTest {
         //
         String result = new JsonSerializer().serialize(questionnaire);
 
+        //
         String expectedJson = TestUtils.readResourceFile("duration-years-months.json");
         JSONAssert.assertEquals(expectedJson, result, JSONCompareMode.STRICT);
     }
@@ -51,7 +51,7 @@ class DurationSerializationTest {
         //
         Duration duration = new Duration();
         duration.setId("duration-id");
-        duration.setFormat(Duration.HOURS_MINUTES_FORMAT);
+        duration.setFormat(DurationFormat.HOURS_MINUTES);
         duration.setLabel(new LabelType());
         duration.getLabel().setValue("\"Duration (hours/minutes)\"");
         duration.getLabel().setType(LabelTypeEnum.VTL_MD);
@@ -78,7 +78,7 @@ class DurationSerializationTest {
         Questionnaire questionnaire = new JsonDeserializer().deserialize(new ByteArrayInputStream(jsonInput.getBytes()));
         //
         Duration duration = assertInstanceOf(Duration.class, questionnaire.getComponents().getFirst());
-        assertEquals("PnYnM", duration.getFormat());
+        assertEquals("PnYnM", duration.getFormat().value());
     }
 
     @Test
@@ -89,7 +89,40 @@ class DurationSerializationTest {
         Questionnaire questionnaire = new JsonDeserializer().deserialize(new ByteArrayInputStream(jsonInput.getBytes()));
         //
         Duration duration = assertInstanceOf(Duration.class, questionnaire.getComponents().getFirst());
-        assertEquals("PTnHnM", duration.getFormat());
+        assertEquals("PTnHnM", duration.getFormat().value());
+    }
+
+    @Test
+    void deserializeDuration_unsupportedFormat_shouldThrow() {
+        // Given a json with invalid format
+        // (and a valid one to control that it's actually the format that generates an exception)
+        String validDurationJson = jsonDurationSample("PnYnM");
+        String invalidDurationJson = jsonDurationSample("PnYnMnDTnHnMnS");
+        //
+        assertDoesNotThrow(() ->
+                new JsonDeserializer().deserialize(new ByteArrayInputStream(validDurationJson.getBytes())));
+        assertThrows(SerializationException.class, () ->
+                new JsonDeserializer().deserialize(new ByteArrayInputStream(invalidDurationJson.getBytes())));
+    }
+
+    /** Utility method used in this test to generate a Json-Lunatic questionnaire with a duration component
+     * with the given format. */
+    private static String jsonDurationSample(String stringFormat) {
+        return String.format("""
+                {
+                  "id": "questionnaire-id",
+                  "componentType": "Questionnaire",
+                  "components": [
+                    {
+                      "id": "duration-id",
+                      "componentType": "Duration",
+                      "format": "%s",
+                      "response": {
+                        "name": "DURATION_VAR"
+                      }
+                    }
+                  ]
+                }""", stringFormat);
     }
 
 }
