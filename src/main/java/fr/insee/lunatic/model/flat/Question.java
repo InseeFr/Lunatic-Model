@@ -56,7 +56,7 @@ public class Question extends ComponentType {
         if (component.getComponentType() == null)
             return false;
         return switch (component.getComponentType()) {
-            case CHECKBOX_BOOLEAN, INPUT, TEXTAREA, INPUT_NUMBER, DATEPICKER,
+            case CHECKBOX_BOOLEAN, INPUT, TEXTAREA, INPUT_NUMBER, DATEPICKER, DURATION,
                     CHECKBOX_ONE, RADIO, DROPDOWN, SUGGESTER,
                     CHECKBOX_GROUP, TABLE, ROSTER_FOR_LOOP, PAIRWISE_LINKS -> true;
             case QUESTIONNAIRE, SEQUENCE, SUBSEQUENCE, QUESTION, LOOP -> false;
