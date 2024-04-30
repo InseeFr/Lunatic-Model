@@ -7,6 +7,7 @@ import fr.insee.lunatic.model.flat.LabelType;
 import fr.insee.lunatic.model.flat.LabelTypeEnum;
 import fr.insee.lunatic.model.flat.Questionnaire;
 import fr.insee.lunatic.model.flat.variable.CalculatedVariableType;
+import fr.insee.lunatic.model.flat.variable.VariableDimension;
 import fr.insee.lunatic.model.flat.variable.VariableTypeEnum;
 import org.json.JSONException;
 import org.junit.jupiter.api.Test;
@@ -28,6 +29,7 @@ class CalculatedVariableSerializationTest {
                 {
                   "variableType": "CALCULATED",
                   "name": "FOO_CALCULATED_VAR",
+                  "dimension": 0,
                   "expression": {
                     "value": "VAR1 + VAR2",
                     "type": "VTL"
@@ -47,6 +49,7 @@ class CalculatedVariableSerializationTest {
                 {
                   "variableType": "CALCULATED",
                   "name": "FOO_CALCULATED_VAR",
+                  "dimension": 1,
                   "expression": {
                     "value": "<VTL expression>",
                     "type": "VTL"
@@ -65,6 +68,7 @@ class CalculatedVariableSerializationTest {
         Questionnaire questionnaire = new Questionnaire();
         CalculatedVariableType calculatedVariableType = new CalculatedVariableType();
         calculatedVariableType.setName("FOO_CALCULATED_VAR");
+        calculatedVariableType.setDimension(VariableDimension.SCALAR);
         calculatedVariableType.setExpression(new LabelType());
         calculatedVariableType.getExpression().setValue("VAR1 + VAR2");
         calculatedVariableType.getExpression().setType(LabelTypeEnum.VTL);
@@ -82,6 +86,7 @@ class CalculatedVariableSerializationTest {
         Questionnaire questionnaire = new Questionnaire();
         CalculatedVariableType calculatedVariableType = new CalculatedVariableType();
         calculatedVariableType.setName("FOO_CALCULATED_VAR");
+        calculatedVariableType.setDimension(VariableDimension.ARRAY);
         calculatedVariableType.setExpression(new LabelType());
         calculatedVariableType.getExpression().setValue("<VTL expression>");
         calculatedVariableType.getExpression().setType(LabelTypeEnum.VTL);
@@ -104,6 +109,7 @@ class CalculatedVariableSerializationTest {
                 questionnaire.getVariables().getFirst());
         assertEquals(VariableTypeEnum.CALCULATED, calculatedVariableType.getVariableType());
         assertEquals("FOO_CALCULATED_VAR", calculatedVariableType.getName());
+        assertEquals(0, calculatedVariableType.getDimension().value());
         assertEquals("VAR1 + VAR2", calculatedVariableType.getExpression().getValue());
         assertEquals(LabelTypeEnum.VTL, calculatedVariableType.getExpression().getType());
         assertEquals(List.of("VAR1", "VAR2"), calculatedVariableType.getBindingDependencies());
@@ -119,6 +125,7 @@ class CalculatedVariableSerializationTest {
         CalculatedVariableType calculatedVariableType = assertInstanceOf(CalculatedVariableType.class,
                 questionnaire.getVariables().getFirst());
         assertEquals("SOME_COLLECTED_VARIABLE", calculatedVariableType.getShapeFrom());
+        assertEquals(1, calculatedVariableType.getDimension().value());
     }
 
 }
