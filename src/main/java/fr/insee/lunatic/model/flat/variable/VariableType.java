@@ -42,4 +42,11 @@ public abstract class VariableType {
     @JsonProperty(required = true)
     protected VariableTypeEnum variableType;
 
+    /** Identifier of the iteration (e.g. loop, dynamic table, pairwise links) that is associated with the variable.
+     * null for questionnaire-level variables. */
+    protected String iterationReference;
+
+    /** {@link VariableDimension} */
+    protected VariableDimension dimension;
+
 }

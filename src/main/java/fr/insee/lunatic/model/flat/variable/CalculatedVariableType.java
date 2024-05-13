@@ -26,7 +26,8 @@ public class CalculatedVariableType extends VariableType {
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     protected List<String> bindingDependencies = new ArrayList<>();
 
-    /** Name of the collected variable that define the 'shape' of the variable. */
+    /** Name of the collected variable that define the 'shape' of the variable.
+     * To be replaced with iteration reference and dimension. */
     protected String shapeFrom;
 
 }
