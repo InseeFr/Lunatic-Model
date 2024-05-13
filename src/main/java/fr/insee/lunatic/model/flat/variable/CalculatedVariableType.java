@@ -30,11 +30,4 @@ public class CalculatedVariableType extends VariableType {
      * To be replaced with iteration reference and dimension. */
     protected String shapeFrom;
 
-    /** Identifier of the iteration (e.g. loop, dynamic table, pairwise links) that is associated with the variable.
-     * null for questionnaire-level variables. */
-    protected String iterationReference;
-
-    /** {@link VariableDimension} */
-    protected VariableDimension dimension;
-
 }
