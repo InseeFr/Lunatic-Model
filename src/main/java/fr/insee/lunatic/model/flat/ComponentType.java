@@ -72,7 +72,8 @@ import java.util.List;
         @JsonSubTypes.Type(value = CheckboxBoolean.class, name = "CheckboxBoolean"),
         @JsonSubTypes.Type(value = Dropdown.class, name = "Dropdown"),
         @JsonSubTypes.Type(value = Textarea.class, name = "Textarea"),
-        @JsonSubTypes.Type(value = Suggester.class, name = "Suggester")
+        @JsonSubTypes.Type(value = Suggester.class, name = "Suggester"),
+        @JsonSubTypes.Type(value = Text.class, name = "Text"),
 })
 @Getter
 @Setter

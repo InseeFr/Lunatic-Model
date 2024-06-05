@@ -23,7 +23,8 @@ public enum ComponentTypeEnum {
     RADIO("Radio"),
     DROPDOWN("Dropdown"),
     TEXTAREA("Textarea"),
-    SUGGESTER("Suggester");
+    SUGGESTER("Suggester"),
+    TEXT("Text");
 
     private final String value;
 
