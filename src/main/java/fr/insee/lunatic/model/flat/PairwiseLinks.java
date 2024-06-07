@@ -63,7 +63,7 @@ public class PairwiseLinks
         links.add(new SymLinksType.LINK("12", "12"));
         links.add(new SymLinksType.LINK("13", "11"));
         links.add(new SymLinksType.LINK("14", null));
-        links.add(new SymLinksType.LINK("15", null));
+        links.add(new SymLinksType.LINK("15", "15"));
         links.add(new SymLinksType.LINK("16", "16"));
         links.add(new SymLinksType.LINK("17", "17"));
         links.add(new SymLinksType.LINK("18", "18"));
