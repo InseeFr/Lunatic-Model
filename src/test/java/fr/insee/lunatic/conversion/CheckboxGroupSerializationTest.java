@@ -17,7 +17,6 @@ class CheckboxGroupSerializationTest {
         //
         CheckboxGroup checkboxGroup = new CheckboxGroup();
         checkboxGroup.setId("foo-id");
-        checkboxGroup.setComponentType(ComponentTypeEnum.CHECKBOX_GROUP);
         //
         ResponsesCheckboxGroup response1 = new ResponsesCheckboxGroup();
         response1.setId("response1-id");
@@ -82,6 +81,7 @@ class CheckboxGroupSerializationTest {
                     {
                       "id": "foo-id",
                       "componentType": "CheckboxGroup",
+                      "orientation": "VERTICAL",
                       "responses": [
                         {
                           "id": "response1-id",

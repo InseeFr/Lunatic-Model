@@ -17,7 +17,6 @@ class CheckboxOneSerializationTest {
         //
         CheckboxOne checkboxOne = new CheckboxOne();
         checkboxOne.setId("foo-id");
-        checkboxOne.setComponentType(ComponentTypeEnum.CHECKBOX_ONE);
         //
         Options option1 = new Options();
         option1.setLabel(new LabelType());
@@ -64,6 +63,7 @@ class CheckboxOneSerializationTest {
                     {
                       "id": "foo-id",
                       "componentType": "CheckboxOne",
+                      "orientation": "VERTICAL",
                       "options": [
                         {
                           "value": "1",

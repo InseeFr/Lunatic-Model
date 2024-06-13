@@ -14,6 +14,7 @@ import java.util.List;
  * TODO: remove this and do proper polymorphisme in tables instead. */
 @JsonPropertyOrder({
         "componentType",
+        "orientation",
         "maxLength",
         "min",
         "max",
@@ -31,6 +32,9 @@ import java.util.List;
 @Getter
 @Setter
 public class BodyCell {
+
+    /** Orientation for radio / checkbox cells. */
+    protected Orientation orientation;
 
     protected String value;
     protected LabelType label;
@@ -63,4 +67,5 @@ public class BodyCell {
     public BodyCell() {
         this.options = new ArrayList<>();
     }
+
 }

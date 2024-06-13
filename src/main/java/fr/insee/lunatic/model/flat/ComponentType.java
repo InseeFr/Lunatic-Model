@@ -22,6 +22,7 @@ import java.util.List;
         "page",
         "goToPage",
         "maxLength",
+        "orientation",
         "positioning",
         "min",
         "max",
