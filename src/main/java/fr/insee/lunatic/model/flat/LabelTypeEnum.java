@@ -4,8 +4,12 @@ import com.fasterxml.jackson.annotation.JsonValue;
 
 public enum LabelTypeEnum {
 
+    /** Static label. */
+    TXT("TXT"),
+
     /** Label that is a VTL expression and contains Markdown formatting. */
     VTL_MD("VTL|MD"),
+
     /** Label that is a VTL expression. */
     VTL("VTL");
 

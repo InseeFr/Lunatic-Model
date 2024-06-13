@@ -17,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class LabelSerializationTest {
 
     @Test
-    void serializeFromQuestionnaire_usingEnumType() throws SerializationException, JSONException {
+    void serializeFromQuestionnaire() throws SerializationException, JSONException {
         //
         Questionnaire questionnaire = new Questionnaire();
         LabelType label = new LabelType();
@@ -52,6 +52,44 @@ class LabelSerializationTest {
         //
         LabelType label = questionnaire.getLabel();
         assertEquals(LabelTypeEnum.VTL_MD, label.getType());
+    }
+
+    @Test
+    void serializeFromQuestionnaire_txtType() throws SerializationException, JSONException {
+        //
+        Questionnaire questionnaire = new Questionnaire();
+        LabelType label = new LabelType();
+        label.setValue("Foo label");
+        label.setType(LabelTypeEnum.TXT);
+        questionnaire.setLabel(label);
+        //
+        JsonSerializer jsonSerializer = new JsonSerializer();
+        String result = jsonSerializer.serialize(questionnaire);
+        //
+        String expected = """
+                {
+                  "componentType": "Questionnaire",
+                  "label": {"value": "Foo label", "type": "TXT"}
+                }
+                """;
+        JSONAssert.assertEquals(expected, result, JSONCompareMode.STRICT);
+    }
+
+    @Test
+    void deserializeFromQuestionnaire_txtType() throws SerializationException {
+        //
+        String jsonInput = """
+                {
+                  "componentType": "Questionnaire",
+                  "label": {"value": "Foo label", "type": "TXT"}
+                }
+                """;
+        //
+        JsonDeserializer jsonDeserializer = new JsonDeserializer();
+        Questionnaire questionnaire = jsonDeserializer.deserialize(new ByteArrayInputStream(jsonInput.getBytes()));
+        //
+        LabelType label = questionnaire.getLabel();
+        assertEquals(LabelTypeEnum.TXT, label.getType());
     }
 
     @Test
