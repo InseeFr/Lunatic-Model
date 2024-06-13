@@ -17,7 +17,6 @@ class RadioSerializationTest {
         //
         Radio radio = new Radio();
         radio.setId("foo-id");
-        radio.setComponentType(ComponentTypeEnum.RADIO);
         //
         Options option1 = new Options();
         option1.setLabel(new LabelType());
@@ -64,6 +63,7 @@ class RadioSerializationTest {
                     {
                       "id": "foo-id",
                       "componentType": "Radio",
+                      "orientation": "VERTICAL",
                       "options": [
                         {
                           "value": "1",
