@@ -75,6 +75,7 @@ import java.util.List;
         @JsonSubTypes.Type(value = Textarea.class, name = "Textarea"),
         @JsonSubTypes.Type(value = Suggester.class, name = "Suggester"),
         @JsonSubTypes.Type(value = Text.class, name = "Text"),
+        @JsonSubTypes.Type(value = Accordion.class, name = "Accordion"),
 })
 @Getter
 @Setter

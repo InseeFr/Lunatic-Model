@@ -24,7 +24,8 @@ public enum ComponentTypeEnum {
     DROPDOWN("Dropdown"),
     TEXTAREA("Textarea"),
     SUGGESTER("Suggester"),
-    TEXT("Text");
+    TEXT("Text"),
+    ACCORDION("Accordion");
 
     private final String value;
 
