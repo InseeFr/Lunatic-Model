@@ -3,7 +3,7 @@
   "extends": [
     "config:recommended"
   ],
-  "baseBranches": ["v3-main", "v3-next", "v2-main", "v2-next"],
+  "baseBranches": ["v3-main", "v2-main"],
   "schedule": [
     "after 10pm every weekday",
     "before 5am every weekday",
