@@ -9,6 +9,9 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Control that can be added to response components.
+ */
 @JsonPropertyOrder({
         "id",
         "typeOfControl",
@@ -21,18 +24,32 @@ import java.util.List;
 @Setter
 public class ControlType {
 
+    /** Expression that determines when the control is triggered. */
     @JsonProperty(required = true)
     protected LabelType control;
+
+    /** Message that is displayed to the respondent when the control is triggered. */
     @JsonProperty(required = true)
     protected LabelType errorMessage;
 
+    /** Name of the collected and/or external variables that are required to evaluate the control's expression. */
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     protected List<String> bindingDependencies;
+
+    /** Identifier of the control object. */
     protected String id;
+
+    /** {@link ControlContextType} */
+    protected ControlContextType type;
+
+    /** {@link ControlTypeEnum} */
     protected ControlTypeEnum typeOfControl;
+
+    /** {@link ControlCriticalityEnum} */
     protected ControlCriticalityEnum criticality;
 
     public ControlType() {
+        this.type = ControlContextType.SIMPLE;
         this.bindingDependencies = new ArrayList<>();
     }
 }
