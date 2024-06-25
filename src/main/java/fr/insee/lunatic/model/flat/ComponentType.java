@@ -63,6 +63,7 @@ import java.util.List;
         @JsonSubTypes.Type(value = Question.class, name = "Question"),
         @JsonSubTypes.Type(value = RosterForLoop.class, name = "RosterForLoop"),
         @JsonSubTypes.Type(value = Loop.class, name = "Loop"),
+        @JsonSubTypes.Type(value = Roundabout.class, name = "Roundabout"),
         @JsonSubTypes.Type(value = Table.class, name = "Table"),
         @JsonSubTypes.Type(value = Input.class, name = "Input"),
         @JsonSubTypes.Type(value = PairwiseLinks.class, name = "PairwiseLinks"),

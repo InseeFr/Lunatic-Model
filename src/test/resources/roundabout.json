@@ -1,0 +1,45 @@
+{
+  "id": "questionnaire-id",
+  "componentType": "Questionnaire",
+  "components": [
+    {
+      "id": "roundabout-id",
+      "componentType": "Roundabout",
+      "page": "1",
+      "conditionFilter": {
+        "value": "true",
+        "type": "VTL"
+      },
+      "label": {
+        "value": "\"Roundabout label.\"",
+        "type": "VTL"
+      },
+      "iterations": {
+        "value": "NUMBER_VAR",
+        "type": "VTL"
+      },
+      "locked": true,
+      "progressVariable": "PROGRESS",
+      "item": {
+        "label": {
+          "value": "FIRST_NAME",
+          "type": "VTL"
+        },
+        "description": {
+          "value": "if AGE > 18 then \"Questions for \" || FIRST_NAME else FIRST_NAME || \" is not concerned\"",
+          "type": "VTL"
+        },
+        "disabled": {
+          "value": "AGE < 18",
+          "type": "VTL"
+        }
+      },
+      "components": [
+        {
+          "id": "input-id",
+          "componentType": "Input"
+        }
+      ]
+    }
+  ]
+}

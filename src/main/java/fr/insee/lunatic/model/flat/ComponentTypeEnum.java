@@ -11,6 +11,7 @@ public enum ComponentTypeEnum {
     QUESTION("Question"),
     ROSTER_FOR_LOOP("RosterForLoop"),
     LOOP("Loop"),
+    ROUNDABOUT("Roundabout"),
     TABLE("Table"),
     INPUT("Input"),
     PAIRWISE_LINKS("PairwiseLinks"),
