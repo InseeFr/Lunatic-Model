@@ -1,5 +1,8 @@
 package fr.insee.lunatic.utils;
 
+import fr.insee.lunatic.model.flat.LabelType;
+import fr.insee.lunatic.model.flat.LabelTypeEnum;
+
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -24,6 +27,17 @@ public class TestUtils {
         } catch (URISyntaxException e) {
             throw new IOException("Error when converting path " + relativePath + "to URI.");
         }
+    }
+
+    /**
+     * Utility method to create a label object in one line in tests.
+     * (Might be moved in main code if it is found useful to have it there.)
+     */
+    public static LabelType createLabel(String value, LabelTypeEnum type) {
+        LabelType label = new LabelType();
+        label.setValue(value);
+        label.setType(type);
+        return label;
     }
 
 }
