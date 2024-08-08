@@ -63,7 +63,7 @@ class CheckboxOneSerializationTest {
                     {
                       "id": "foo-id",
                       "componentType": "CheckboxOne",
-                      "orientation": "VERTICAL",
+                      "orientation": "vertical",
                       "options": [
                         {
                           "value": "1",

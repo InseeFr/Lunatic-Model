@@ -7,6 +7,11 @@ import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
+import java.io.ByteArrayInputStream;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
+
 class RadioSerializationTest {
 
     @Test
@@ -17,6 +22,7 @@ class RadioSerializationTest {
         //
         Radio radio = new Radio();
         radio.setId("foo-id");
+        radio.setOrientation(Orientation.HORIZONTAL);
         //
         Options option1 = new Options();
         option1.setLabel(new LabelType());
@@ -63,7 +69,7 @@ class RadioSerializationTest {
                     {
                       "id": "foo-id",
                       "componentType": "Radio",
-                      "orientation": "VERTICAL",
+                      "orientation": "horizontal",
                       "options": [
                         {
                           "value": "1",
@@ -99,6 +105,55 @@ class RadioSerializationTest {
                       "response": {
                         "name": "FOO"
                       }
+                    }
+                  ]
+                }""";
+        JSONAssert.assertEquals(expectedJson, result, JSONCompareMode.STRICT);
+    }
+
+    @Test
+    void serializeRadio_defaultOrientation() throws SerializationException {
+        //
+        String jsonInput = """
+                {
+                  "id": "questionnaire-id",
+                  "componentType": "Questionnaire",
+                  "components": [
+                    {
+                      "id": "foo-id",
+                      "componentType": "Radio"
+                    }
+                  ]
+                }""";
+        //
+        JsonDeserializer jsonDeserializer = new JsonDeserializer();
+        Questionnaire questionnaire = jsonDeserializer.deserialize(new ByteArrayInputStream(jsonInput.getBytes()));
+        //
+        Radio radio = assertInstanceOf(Radio.class, questionnaire.getComponents().getFirst());
+        assertEquals(Orientation.VERTICAL, radio.getOrientation());
+    }
+
+    @Test
+    void deserializeRadio_defaultOrientation() throws SerializationException, JSONException {
+        //
+        Questionnaire questionnaire = new Questionnaire();
+        questionnaire.setId("questionnaire-id");
+        Radio radio = new Radio();
+        radio.setId("radio-id");
+        questionnaire.getComponents().add(radio);
+        //
+        String result = new JsonSerializer().serialize(questionnaire);
+        //
+        String expectedJson = """
+                {
+                  "id": "questionnaire-id",
+                  "componentType": "Questionnaire",
+                  "components": [
+                    {
+                      "id": "radio-id",
+                      "componentType": "Radio",
+                      "orientation": "vertical",
+                      "options": []
                     }
                   ]
                 }""";

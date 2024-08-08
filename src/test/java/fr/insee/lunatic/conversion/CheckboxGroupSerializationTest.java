@@ -81,7 +81,7 @@ class CheckboxGroupSerializationTest {
                     {
                       "id": "foo-id",
                       "componentType": "CheckboxGroup",
-                      "orientation": "VERTICAL",
+                      "orientation": "vertical",
                       "responses": [
                         {
                           "id": "response1-id",
