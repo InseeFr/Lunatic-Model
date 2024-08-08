@@ -1,11 +1,10 @@
 package fr.insee.lunatic.model.flat;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
 import lombok.Setter;
-
-// TODO: this object class should be renamed to "Option" (singular), the current plural name is misleading.
 
 /**
  * Option / modality of a unique choice component (dropdown, radio, checkbox one).
@@ -16,7 +15,7 @@ import lombok.Setter;
 })
 @Getter
 @Setter
-public class Options {
+public class Option {
 
     /** Response value associated to the modality. */
     @JsonProperty(required = true)
@@ -26,7 +25,13 @@ public class Options {
     @JsonProperty(required = true)
     protected LabelType label;
 
+    /** Filter that determines if the option is displayed or not.
+     * If null, the option is displayed. */
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    protected ConditionFilterType conditionFilter;
+
     /** {@link DetailResponse} */
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     protected DetailResponse detail;
 
 }

@@ -24,21 +24,24 @@ class RadioSerializationTest {
         radio.setId("foo-id");
         radio.setOrientation(Orientation.HORIZONTAL);
         //
-        Options option1 = new Options();
+        Option option1 = new Option();
         option1.setLabel(new LabelType());
         option1.setValue("1");
         option1.getLabel().setValue("\"Option A\"");
         option1.getLabel().setType(LabelTypeEnum.VTL);
         radio.getOptions().add(option1);
         //
-        Options option2 = new Options();
+        Option option2 = new Option();
         option2.setValue("2");
         option2.setLabel(new LabelType());
         option2.getLabel().setValue("\"Option B\"");
         option2.getLabel().setType(LabelTypeEnum.VTL);
+        option2.setConditionFilter(new ConditionFilterType());
+        option2.getConditionFilter().setValue("<some filter expression>");
+        option2.getConditionFilter().setType(LabelTypeEnum.VTL);
         radio.getOptions().add(option2);
         //
-        Options optionOther = new Options();
+        Option optionOther = new Option();
         optionOther.setValue("3");
         optionOther.setLabel(new LabelType());
         optionOther.getLabel().setValue("\"Other\"");
@@ -82,6 +85,10 @@ class RadioSerializationTest {
                           "value": "2",
                           "label": {
                             "value": "\\"Option B\\"",
+                            "type": "VTL"
+                          },
+                          "conditionFilter": {
+                            "value": "<some filter expression>",
                             "type": "VTL"
                           }
                         },

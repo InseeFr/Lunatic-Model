@@ -18,7 +18,7 @@ public class Radio extends ComponentType implements ComponentSimpleResponseType 
     protected Orientation orientation;
 
     /** List of the modalities of the radio component. */
-    protected List<Options> options;
+    protected List<Option> options;
 
     /** {@link ResponseType} */
     @JsonProperty(required = true)
