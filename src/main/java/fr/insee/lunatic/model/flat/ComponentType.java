@@ -113,6 +113,9 @@ public abstract class ComponentType {
     protected Boolean mandatory;
     protected String page;
 
+    /** {@link ComponentPosition} */
+    protected ComponentPosition position;
+
     /** This property should be moved in the Suggester component.
      * Yet having this property defined here makes Eno suggester specific treatment easier.
      * To be moved in the Suggester class when the suggester specific treatment is removed in Eno. */
