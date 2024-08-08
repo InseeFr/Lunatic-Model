@@ -8,26 +8,26 @@ import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
-class ResponsesCheckboxGroupTest {
+class ResponseCheckboxGroupTest {
 
     @Test
     void serializeResponseWithDetail() throws JsonProcessingException, JSONException {
         //
-        ResponsesCheckboxGroup responsesCheckboxGroup = new ResponsesCheckboxGroup();
-        responsesCheckboxGroup.setId("kmort6x9-QOP-kmorue9d");
-        responsesCheckboxGroup.setLabel(new LabelType());
-        responsesCheckboxGroup.getLabel().setValue("\"Autre\"");
-        responsesCheckboxGroup.getLabel().setType(LabelTypeEnum.VTL);
-        responsesCheckboxGroup.setResponse(new ResponseType());
-        responsesCheckboxGroup.getResponse().setName("NATIO1N5");
-        responsesCheckboxGroup.setDetail(new DetailResponse());
-        responsesCheckboxGroup.getDetail().setLabel(new LabelType());
-        responsesCheckboxGroup.getDetail().getLabel().setValue("\"Préciser : \"");
-        responsesCheckboxGroup.getDetail().getLabel().setType(LabelTypeEnum.VTL);
-        responsesCheckboxGroup.getDetail().setResponse(new ResponseType());
-        responsesCheckboxGroup.getDetail().getResponse().setName("NATIO1N5DETAIL");
+        ResponseCheckboxGroup responseCheckboxGroup = new ResponseCheckboxGroup();
+        responseCheckboxGroup.setId("kmort6x9-QOP-kmorue9d");
+        responseCheckboxGroup.setLabel(new LabelType());
+        responseCheckboxGroup.getLabel().setValue("\"Autre\"");
+        responseCheckboxGroup.getLabel().setType(LabelTypeEnum.VTL);
+        responseCheckboxGroup.setResponse(new ResponseType());
+        responseCheckboxGroup.getResponse().setName("NATIO1N5");
+        responseCheckboxGroup.setDetail(new DetailResponse());
+        responseCheckboxGroup.getDetail().setLabel(new LabelType());
+        responseCheckboxGroup.getDetail().getLabel().setValue("\"Préciser : \"");
+        responseCheckboxGroup.getDetail().getLabel().setType(LabelTypeEnum.VTL);
+        responseCheckboxGroup.getDetail().setResponse(new ResponseType());
+        responseCheckboxGroup.getDetail().getResponse().setName("NATIO1N5DETAIL");
         //
-        String result = new ObjectMapper().writeValueAsString(responsesCheckboxGroup);
+        String result = new ObjectMapper().writeValueAsString(responseCheckboxGroup);
         //
         String expectedJson = """
                 {

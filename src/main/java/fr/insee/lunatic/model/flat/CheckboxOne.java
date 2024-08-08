@@ -18,7 +18,7 @@ public class CheckboxOne extends ComponentType implements ComponentSimpleRespons
     protected Orientation orientation;
 
     /** List of the modalities of the checkbox component. */
-    protected List<Options> options;
+    protected List<Option> options;
 
     /** {@link ResponseType} */
     @JsonProperty(required = true)

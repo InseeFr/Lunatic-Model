@@ -21,7 +21,7 @@ public class HeaderType {
     protected String value;
     protected LabelType label;
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    protected List<Options> options;
+    protected List<Option> options;
     protected BigInteger colspan;
     protected BigInteger rowspan;
 

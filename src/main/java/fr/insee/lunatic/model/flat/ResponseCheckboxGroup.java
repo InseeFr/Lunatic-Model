@@ -13,16 +13,25 @@ import lombok.Setter;
 })
 @Getter
 @Setter
-public class ResponsesCheckboxGroup {
+public class ResponseCheckboxGroup {
 
+    /** Identifier of the response object. */
+    @JsonProperty(required = true)
+    protected String id;
+
+    /** Displayed label of the modality. */
     @JsonProperty(required = true)
     protected LabelType label;
 
+    /** Filter that determines if the option is displayed or not.
+     * If null, the option is displayed. */
+    protected ConditionFilterType conditionFilter;
+
+    /** Response name of the collected variable that corresponds to the modality. */
     @JsonProperty(required = true)
     protected ResponseType response;
 
+    /** {@link DetailResponse} */
     protected DetailResponse detail;
 
-    @JsonProperty(required = true)
-    protected String id;
 }

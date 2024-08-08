@@ -18,21 +18,21 @@ class CheckboxOneSerializationTest {
         CheckboxOne checkboxOne = new CheckboxOne();
         checkboxOne.setId("foo-id");
         //
-        Options option1 = new Options();
+        Option option1 = new Option();
         option1.setLabel(new LabelType());
         option1.setValue("1");
         option1.getLabel().setValue("\"Option A\"");
         option1.getLabel().setType(LabelTypeEnum.VTL);
         checkboxOne.getOptions().add(option1);
         //
-        Options option2 = new Options();
+        Option option2 = new Option();
         option2.setValue("2");
         option2.setLabel(new LabelType());
         option2.getLabel().setValue("\"Option B\"");
         option2.getLabel().setType(LabelTypeEnum.VTL);
         checkboxOne.getOptions().add(option2);
         //
-        Options optionOther = new Options();
+        Option optionOther = new Option();
         optionOther.setValue("3");
         optionOther.setLabel(new LabelType());
         optionOther.getLabel().setValue("\"Other\"");
