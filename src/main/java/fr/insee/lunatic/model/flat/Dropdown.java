@@ -14,7 +14,7 @@ public class Dropdown
     implements ComponentSimpleResponseType
 {
 
-    protected List<Options> options;
+    protected List<Option> options;
 
     @JsonProperty(required = true)
     protected ResponseType response;

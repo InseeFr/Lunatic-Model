@@ -42,7 +42,7 @@ public class BodyCell {
     protected String dateFormat;
     protected String unit;
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    protected List<Options> options;
+    protected List<Option> options;
     /** For suggester cells: Name of the code list used for auto-completion. */
     private String storeName;
     /** For component cells: collected response of the cell. */

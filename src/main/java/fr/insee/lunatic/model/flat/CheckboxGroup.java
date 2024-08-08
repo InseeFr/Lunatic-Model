@@ -17,7 +17,7 @@ public class CheckboxGroup extends ComponentType implements ComponentMultipleRes
     protected Orientation orientation;
 
     /** List of the modalities of the checkbox component. */
-    protected List<ResponsesCheckboxGroup> responses;
+    protected List<ResponseCheckboxGroup> responses;
 
     public CheckboxGroup() {
         super();

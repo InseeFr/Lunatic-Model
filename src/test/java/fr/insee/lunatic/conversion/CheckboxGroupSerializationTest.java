@@ -18,7 +18,7 @@ class CheckboxGroupSerializationTest {
         CheckboxGroup checkboxGroup = new CheckboxGroup();
         checkboxGroup.setId("foo-id");
         //
-        ResponsesCheckboxGroup response1 = new ResponsesCheckboxGroup();
+        ResponseCheckboxGroup response1 = new ResponseCheckboxGroup();
         response1.setId("response1-id");
         response1.setLabel(new LabelType());
         response1.getLabel().setValue("\"Option A\"");
@@ -27,16 +27,19 @@ class CheckboxGroupSerializationTest {
         response1.getResponse().setName("FOO_A");
         checkboxGroup.getResponses().add(response1);
         //
-        ResponsesCheckboxGroup response2 = new ResponsesCheckboxGroup();
+        ResponseCheckboxGroup response2 = new ResponseCheckboxGroup();
         response2.setId("response2-id");
         response2.setLabel(new LabelType());
         response2.getLabel().setValue("\"Option B\"");
         response2.getLabel().setType(LabelTypeEnum.VTL);
+        response2.setConditionFilter(new ConditionFilterType());
+        response2.getConditionFilter().setValue("<some filter expression>");
+        response2.getConditionFilter().setType(LabelTypeEnum.VTL);
         response2.setResponse(new ResponseType());
         response2.getResponse().setName("FOO_B");
         checkboxGroup.getResponses().add(response2);
         //
-        ResponsesCheckboxGroup responseOther = new ResponsesCheckboxGroup();
+        ResponseCheckboxGroup responseOther = new ResponseCheckboxGroup();
         responseOther.setId("response-other1-id");
         responseOther.setLabel(new LabelType());
         responseOther.getLabel().setValue("\"Other\"");
@@ -51,13 +54,16 @@ class CheckboxGroupSerializationTest {
         responseOther.getDetail().getResponse().setName("FOO_C_DETAIL");
         checkboxGroup.getResponses().add(responseOther);
         //
-        ResponsesCheckboxGroup responseOther2 = new ResponsesCheckboxGroup();
+        ResponseCheckboxGroup responseOther2 = new ResponseCheckboxGroup();
         responseOther2.setId("response-other2-id");
         responseOther2.setLabel(new LabelType());
         responseOther2.getLabel().setValue("\"Another\"");
         responseOther2.getLabel().setType(LabelTypeEnum.VTL);
-        responseOther.setResponse(new ResponseType());
-        responseOther.getResponse().setName("FOO_D");
+        responseOther2.setConditionFilter(new ConditionFilterType());
+        responseOther2.getConditionFilter().setValue("<some filter expression>");
+        responseOther2.getConditionFilter().setType(LabelTypeEnum.VTL);
+        responseOther2.setResponse(new ResponseType());
+        responseOther2.getResponse().setName("FOO_D");
         responseOther2.setDetail(new DetailResponse());
         responseOther2.getDetail().setLabel(new LabelType());
         responseOther2.getDetail().getLabel().setValue("\"Please specify:\"");
@@ -99,6 +105,10 @@ class CheckboxGroupSerializationTest {
                             "value": "\\"Option B\\"",
                             "type": "VTL"
                           },
+                          "conditionFilter": {
+                            "value": "<some filter expression>",
+                            "type": "VTL"
+                          },
                           "response": {
                             "name": "FOO_B"
                           }
@@ -110,7 +120,7 @@ class CheckboxGroupSerializationTest {
                             "type": "VTL"
                           },
                           "response": {
-                            "name": "FOO_D"
+                            "name": "FOO_C"
                           },
                           "detail": {
                             "label": {
@@ -127,6 +137,13 @@ class CheckboxGroupSerializationTest {
                           "label": {
                             "value": "\\"Another\\"",
                             "type": "VTL"
+                          },
+                          "conditionFilter": {
+                            "value": "<some filter expression>",
+                            "type": "VTL"
+                          },
+                          "response": {
+                            "name": "FOO_D"
                           },
                           "detail": {
                             "label": {
