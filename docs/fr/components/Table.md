@@ -1,7 +1,6 @@
 ## Le composant `Table`
 
 Il s'agit du composants le plus complexe de Lunatic.
-Comme tous les composants, il a les attributs communs des composants. Il dispose en plus d'un attribut `positioning` pouvant être égale à "HORIZONTAL" ou "VERTICAL".
 
 Il y a deux types de composants `Table` Lunatic :
 
@@ -36,7 +35,6 @@ Dans le dernier cas :
   "id" : "j4nwc63q",
   "componentType" : "Table",
   "mandatory" : false,
-  "positioning" : "HORIZONTAL",
   "label" : "\"label de la question\"",
   "declarations": [...],
   "conditionFilter" : "if ((not(cast(READY,integer) <>  1) )) then \"normal\" else \"hidden\"",

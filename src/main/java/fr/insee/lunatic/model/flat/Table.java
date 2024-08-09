@@ -20,6 +20,13 @@ public class Table
     protected List<HeaderType> header;
     @JsonProperty("body")
     protected List<BodyLine> bodyLines;
+
+    /**
+     * Metadata on how the table should be displayed.
+     * Value should be one of "HORIZONTAL", "VERTICAL" or "DEFAULT".
+     * @deprecated Unused in Lunatic, to be removed.
+     */
+    @Deprecated(forRemoval = true, since = "3.14.0")
     protected String positioning;
 
     public Table() {
