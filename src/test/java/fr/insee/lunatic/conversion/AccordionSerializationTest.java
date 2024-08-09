@@ -20,6 +20,7 @@ class AccordionSerializationTest {
               "components": [
                 {
                   "componentType": "Accordion",
+                  "position": "bottom",
                   "items": [
                     {
                       "label": {
@@ -51,6 +52,7 @@ class AccordionSerializationTest {
         //
         Questionnaire questionnaire = new Questionnaire();
         Accordion accordion = new Accordion();
+        accordion.setPosition(ComponentPosition.BOTTOM);
         Accordion.Item item1 = new Accordion.Item();
         item1.setLabel(new LabelType());
         item1.getLabel().setValue("\"Why this question?\"");
@@ -82,6 +84,7 @@ class AccordionSerializationTest {
         //
         Accordion accordion = assertInstanceOf(Accordion.class, questionnaire.getComponents().getFirst());
         assertEquals(ComponentTypeEnum.ACCORDION, accordion.getComponentType());
+        assertEquals(ComponentPosition.BOTTOM, accordion.getPosition());
         //...
     }
 
