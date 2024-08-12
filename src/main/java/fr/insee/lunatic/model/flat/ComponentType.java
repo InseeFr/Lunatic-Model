@@ -70,6 +70,7 @@ import java.util.List;
         @JsonSubTypes.Type(value = Roundabout.class, name = "Roundabout"),
         @JsonSubTypes.Type(value = Table.class, name = "Table"),
         @JsonSubTypes.Type(value = Input.class, name = "Input"),
+        @JsonSubTypes.Type(value = InputNumber.class, name = "InputNumber"),
         @JsonSubTypes.Type(value = PairwiseLinks.class, name = "PairwiseLinks"),
         @JsonSubTypes.Type(value = Datepicker.class, name = "Datepicker"),
         @JsonSubTypes.Type(value = Duration.class, name = "Duration"),
