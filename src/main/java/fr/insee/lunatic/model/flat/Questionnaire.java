@@ -1,8 +1,8 @@
 package fr.insee.lunatic.model.flat;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import fr.insee.lunatic.model.flat.variable.VariableType;
 import lombok.Getter;
 import lombok.Setter;
@@ -21,7 +21,7 @@ public class Questionnaire extends ComponentType {
     protected String lunaticModelVersion;
     protected String generatingDate;
     protected Boolean missing;
-    protected String pagination;
+    protected Pagination pagination;
     protected String maxPage;
 
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -40,6 +40,38 @@ public class Questionnaire extends ComponentType {
         this.components = new ArrayList<>();
         this.suggesters = new ArrayList<>();
         this.variables = new ArrayList<>();
+    }
+
+    @JsonProperty("pagination")
+    public Pagination getPaginationEnum() {
+        return pagination;
+    }
+
+    @JsonProperty("pagination")
+    public void setPagination(Pagination pagination) {
+        this.pagination = pagination;
+    }
+
+
+    /**
+     * Method for the legacy string pagination attribute.
+     * @return String value of the questionnaire pagination mode.
+     * @deprecated Use the Pagination enum.
+     */
+    @JsonIgnore
+    @Deprecated(since = "3.14.0")
+    public String getPagination() {
+        return pagination.value();
+    }
+
+    /**
+     * Method for the legacy string pagination attribute.
+     * @deprecated Use the Pagination enum.
+     */
+    @JsonIgnore
+    @Deprecated(since = "3.14.0")
+    public void setPagination(String pagination) {
+        this.pagination = Pagination.fromValue(pagination);
     }
 
 }
