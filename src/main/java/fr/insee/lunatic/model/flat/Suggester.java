@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Suggester component.
  */
@@ -11,11 +14,16 @@ import lombok.Setter;
 @Setter
 public class Suggester extends ComponentType implements ComponentSimpleResponseType {
 
-    /* Name of the code list used for auto-completion. */
-    //private String storeName;
+    public Suggester() {
+        this.componentType = ComponentTypeEnum.SUGGESTER;
+    }
+
+    public record OptionResponse(String name, String attribute) {}
 
     /** Collected response of the suggester component. */
     @JsonProperty(required = true)
     protected ResponseType response;
+
+    protected List<OptionResponse> optionResponses = new ArrayList<>();
 
 }
