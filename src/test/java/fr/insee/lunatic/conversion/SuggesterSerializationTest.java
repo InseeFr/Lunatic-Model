@@ -28,7 +28,17 @@ class SuggesterSerializationTest {
                   "storeName": "FOO_CODE_LIST",
                   "response": {
                     "name": "FOO"
-                  }
+                  },
+                  "optionResponses": [
+                    {
+                      "name": "FOO_LABEL",
+                      "attribute": "label"
+                    },
+                    {
+                      "name": "FOO_PRICE",
+                      "attribute": "price"
+                    }
+                  ]
                 }
               ]
             }""";
@@ -42,6 +52,8 @@ class SuggesterSerializationTest {
         suggester.setStoreName("FOO_CODE_LIST");
         suggester.setResponse(new ResponseType());
         suggester.getResponse().setName("FOO");
+        suggester.getOptionResponses().add(new Suggester.OptionResponse("FOO_LABEL", "label"));
+        suggester.getOptionResponses().add(new Suggester.OptionResponse("FOO_PRICE", "price"));
         //
         Questionnaire questionnaire = new Questionnaire();
         questionnaire.setId("questionnaire-id");
@@ -67,6 +79,11 @@ class SuggesterSerializationTest {
         assertEquals(ComponentTypeEnum.SUGGESTER, suggester.getComponentType());
         assertEquals("FOO_CODE_LIST", suggester.getStoreName());
         assertEquals("FOO", suggester.getResponse().getName());
+        assertEquals(2, suggester.getOptionResponses().size());
+        assertEquals("FOO_LABEL", suggester.getOptionResponses().get(0).name());
+        assertEquals("FOO_PRICE", suggester.getOptionResponses().get(1).name());
+        assertEquals("label", suggester.getOptionResponses().get(0).attribute());
+        assertEquals("price", suggester.getOptionResponses().get(1).attribute());
     }
 
 }
