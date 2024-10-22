@@ -49,6 +49,7 @@ import java.util.List;
         "components",
         "response",
         "responses",
+        "optionResponses",
         "suggesters",
         "variables",
         "cleaning",

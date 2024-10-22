@@ -27,6 +27,7 @@ import java.util.List;
         "unit",
         "options",
         "response",
+        "optionResponses",
         "bindingDependencies"
 })
 @Getter
@@ -62,10 +63,15 @@ public class BodyCell {
     protected BigInteger colspan;
     protected BigInteger rowspan;
 
+    /** For suggester cells: option responses. */
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    protected List<Suggester.OptionResponse> optionResponses;
+
     protected String id;
 
     public BodyCell() {
         this.options = new ArrayList<>();
+        this.optionResponses = new ArrayList<>();
     }
 
 }

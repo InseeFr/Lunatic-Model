@@ -6,7 +6,7 @@
 	<artifactId>lunatic-model</artifactId>
 	<packaging>jar</packaging>
 
-	<version>3.15.0</version>
+	<version>3.15.1</version>
 	<name>Lunatic Model</name>
 	<description>Classes and converters for the Lunatic model</description>
 	<url>https://inseefr.github.io/Lunatic-Model/</url>
