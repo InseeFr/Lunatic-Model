@@ -8,6 +8,9 @@ on:
       - 'src/**'
       - 'pom.xml'
 
+env:
+  JAVA_VERSION: '17'
+
 jobs:
   check-version:
     runs-on: ubuntu-latest
@@ -93,7 +96,7 @@ jobs:
       - name: Set up Maven Central Repository
         uses: actions/setup-java@v4
         with:
-          java-version: 11
+          java-version: ${{ env.JAVA_VERSION }}
           distribution: adopt
           server-id: ossrh
           server-username: MAVEN_USERNAME
