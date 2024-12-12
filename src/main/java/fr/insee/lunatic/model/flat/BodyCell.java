@@ -1,6 +1,8 @@
 package fr.insee.lunatic.model.flat;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
 import lombok.Setter;
@@ -41,7 +43,10 @@ public class BodyCell {
     protected LabelType label;
     protected String format;
     protected String dateFormat;
-    protected String unit;
+
+    /** For input number cells. */
+    protected InputNumber.Unit unit;
+
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     protected List<Option> options;
     /** For suggester cells: Name of the code list used for auto-completion. */
@@ -72,6 +77,48 @@ public class BodyCell {
     public BodyCell() {
         this.options = new ArrayList<>();
         this.optionResponses = new ArrayList<>();
+    }
+
+    @JsonProperty("unit")
+    public InputNumber.Unit getUnitWrapper() {
+        return unit;
+    }
+
+    @JsonProperty("unit")
+    public void setUnit(InputNumber.Unit unit) {
+        this.unit = unit;
+    }
+
+    /** Legacy unit string property.
+     * @deprecated Use label unit. */
+    @JsonIgnore
+    @Deprecated(since = "3.15.2")
+    public String getUnit() {
+        if (unit == null)
+            return null;
+        return unit.getValue();
+    }
+
+    @JsonIgnore
+    public LabelType getUnitLabel() {
+        if (unit == null)
+            return null;
+        return unit.getLabel();
+    }
+
+    /** Legacy unit string property.
+     * @deprecated Use label unit. */
+    @JsonIgnore
+    @Deprecated(since = "3.15.2")
+    public void setUnit(String value) {
+        unit = new InputNumber.Unit();
+        unit.setValue(value);
+    }
+
+    @JsonIgnore
+    public void setUnit(LabelType labelType) {
+        unit = new InputNumber.Unit();
+        unit.setLabel(labelType);
     }
 
 }
