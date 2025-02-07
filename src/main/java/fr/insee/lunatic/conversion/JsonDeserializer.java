@@ -12,13 +12,19 @@ import java.io.InputStream;
 
 public class JsonDeserializer {
 
-	public JsonDeserializer() {	}
-
 	private static final Logger logger = LoggerFactory.getLogger(JsonDeserializer.class);
 
+	/**
+	 * Deserializes the file at given relative path to a Lunatic questionnaire object.
+	 * @param fileName Relative file path.
+	 * @return Deserialized Lunatic questionnaire object. null if the input given is null or empty.
+	 * @throws SerializationException if file cannot be found or deserialization fails.
+	 * @deprecated The string file path argument is misleading, this method should be removed.
+	 */
+	@Deprecated(since = "3.16.0")
 	public Questionnaire deserialize(String fileName) throws SerializationException {
 
-		if ((fileName == null) || (fileName.length() == 0)) return null;
+		if ((fileName == null) || (fileName.isEmpty())) return null;
 
 		logger.info("Deserializing questionnaire from file {}", fileName);
 
@@ -39,7 +45,7 @@ public class JsonDeserializer {
 		logger.debug("Deserializing questionnaire from input stream");
 
 		ObjectMapper mapper = new ObjectMapper();
-		Questionnaire questionnaire = null;
+		Questionnaire questionnaire;
 		try {
 			questionnaire = mapper.readValue(jsonQuestionnaire, Questionnaire.class);
 		} catch (IOException e) {
