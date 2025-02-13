@@ -17,10 +17,6 @@ import static fr.insee.lunatic.conversion.variable.ValueTypeDeserializer.deseria
 public class CollectedVariableValuesDeserializer extends StdDeserializer<CollectedVariableValues> {
 
     private static final String COLLECTED_KEY = "COLLECTED";
-    private static final String FORCED_KEY = "FORCED";
-    private static final String EDITED_KEY = "EDITED";
-    private static final String PREVIOUS_KEY = "PREVIOUS";
-    private static final String INPUTTED_KEY = "INPUTTED";
 
     public CollectedVariableValuesDeserializer() {
         this(null);
@@ -69,10 +65,6 @@ public class CollectedVariableValuesDeserializer extends StdDeserializer<Collect
     private CollectedVariableValues.Scalar deserializeScalarValues(JsonNode valuesNode) throws JsonParseException {
         CollectedVariableValues.Scalar collectedVariableValues = new CollectedVariableValues.Scalar();
         collectedVariableValues.setCollected(deserializeJsonValue(valuesNode.get(COLLECTED_KEY)));
-        collectedVariableValues.setCollected(deserializeJsonValue(valuesNode.get(FORCED_KEY)));
-        collectedVariableValues.setCollected(deserializeJsonValue(valuesNode.get(EDITED_KEY)));
-        collectedVariableValues.setCollected(deserializeJsonValue(valuesNode.get(PREVIOUS_KEY)));
-        collectedVariableValues.setCollected(deserializeJsonValue(valuesNode.get(INPUTTED_KEY)));
         return collectedVariableValues;
     }
 
@@ -80,18 +72,6 @@ public class CollectedVariableValuesDeserializer extends StdDeserializer<Collect
         CollectedVariableValues.Array collectedVariableValues = new CollectedVariableValues.Array();
         for (JsonNode jsonNode : valuesNode.get(COLLECTED_KEY)) {
             collectedVariableValues.getCollected().add(deserializeJsonValue(jsonNode));
-        }
-        for (JsonNode jsonNode : valuesNode.get(FORCED_KEY)) {
-            collectedVariableValues.getForced().add(deserializeJsonValue(jsonNode));
-        }
-        for (JsonNode jsonNode : valuesNode.get(EDITED_KEY)) {
-            collectedVariableValues.getEdited().add(deserializeJsonValue(jsonNode));
-        }
-        for (JsonNode jsonNode : valuesNode.get(PREVIOUS_KEY)) {
-            collectedVariableValues.getPrevious().add(deserializeJsonValue(jsonNode));
-        }
-        for (JsonNode jsonNode : valuesNode.get(INPUTTED_KEY)) {
-            collectedVariableValues.getInputted().add(deserializeJsonValue(jsonNode));
         }
         return collectedVariableValues;
     }
@@ -106,42 +86,6 @@ public class CollectedVariableValuesDeserializer extends StdDeserializer<Collect
                 valuesList.add(deserializeJsonValue(jsonNode));
             }
             collectedVariableValues.getCollected().add(valuesList);
-        }
-
-        collectedVariableValues.getForced().clear();
-        for (JsonNode jsonArray : valuesNode.get(FORCED_KEY)) {
-            List<ValueType> valuesList = new ArrayList<>();
-            for (JsonNode jsonNode : jsonArray) {
-                valuesList.add(deserializeJsonValue(jsonNode));
-            }
-            collectedVariableValues.getForced().add(valuesList);
-        }
-
-        collectedVariableValues.getEdited().clear();
-        for (JsonNode jsonArray : valuesNode.get(EDITED_KEY)) {
-            List<ValueType> valuesList = new ArrayList<>();
-            for (JsonNode jsonNode : jsonArray) {
-                valuesList.add(deserializeJsonValue(jsonNode));
-            }
-            collectedVariableValues.getEdited().add(valuesList);
-        }
-
-        collectedVariableValues.getPrevious().clear();
-        for (JsonNode jsonArray : valuesNode.get(PREVIOUS_KEY)) {
-            List<ValueType> valuesList = new ArrayList<>();
-            for (JsonNode jsonNode : jsonArray) {
-                valuesList.add(deserializeJsonValue(jsonNode));
-            }
-            collectedVariableValues.getPrevious().add(valuesList);
-        }
-
-        collectedVariableValues.getInputted().clear();
-        for (JsonNode jsonArray : valuesNode.get(INPUTTED_KEY)) {
-            List<ValueType> valuesList = new ArrayList<>();
-            for (JsonNode jsonNode : jsonArray) {
-                valuesList.add(deserializeJsonValue(jsonNode));
-            }
-            collectedVariableValues.getInputted().add(valuesList);
         }
 
         return collectedVariableValues;

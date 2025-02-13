@@ -25,13 +25,7 @@ class CollectedVariableSerializationTest {
                 {
                   "variableType": "COLLECTED",
                   "name": "SIMPLE_VAR",
-                  "values": {
-                    "PREVIOUS": null,
-                    "COLLECTED": null,
-                    "FORCED": null,
-                    "EDITED": null,
-                    "INPUTTED": null
-                  }
+                  "values": {"COLLECTED": null}
                 }
               ]
             }""";
@@ -43,13 +37,7 @@ class CollectedVariableSerializationTest {
                 {
                   "variableType": "COLLECTED",
                   "name": "LOOP_VAR",
-                  "values": {
-                    "PREVIOUS": [],
-                    "COLLECTED": [],
-                    "FORCED": [],
-                    "EDITED": [],
-                    "INPUTTED": []
-                  }
+                  "values": {"COLLECTED": []}
                 }
               ]
             }""";
@@ -61,13 +49,7 @@ class CollectedVariableSerializationTest {
                 {
                   "variableType": "COLLECTED",
                   "name": "PAIRWISE_VAR",
-                  "values": {
-                    "PREVIOUS": [[]],
-                    "COLLECTED": [[]],
-                    "FORCED": [[]],
-                    "EDITED": [[]],
-                    "INPUTTED": [[]]
-                  }
+                  "values": {"COLLECTED": [[]]}
                 }
               ]
             }""";
