@@ -18,6 +18,6 @@ public class Duration extends ComponentType implements ComponentSimpleResponseTy
     @JsonProperty(required = true)
     protected ResponseType response;
 
-    protected String min;
-    protected String max;
+    protected DurationFormat min;
+    protected DurationFormat max;
 }
