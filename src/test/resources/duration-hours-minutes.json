@@ -16,7 +16,9 @@
       },
       "response": {
         "name": "DURATION_VAR"
-      }
+      },
+      "min": "PTnHnM",
+      "max": "PTnHnM"
     }
   ]
 }

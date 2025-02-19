@@ -32,6 +32,9 @@ class DurationSerializationTest {
         duration.getDescription().setType(LabelTypeEnum.VTL_MD);
         duration.setResponse(new ResponseType());
         duration.getResponse().setName("DURATION_VAR");
+        duration.setMin(DurationFormat.YEARS_MONTHS);
+        duration.setMax(DurationFormat.YEARS_MONTHS);
+
         //
         questionnaire.getComponents().add(duration);
 
@@ -60,6 +63,8 @@ class DurationSerializationTest {
         duration.getDescription().setType(LabelTypeEnum.VTL_MD);
         duration.setResponse(new ResponseType());
         duration.getResponse().setName("DURATION_VAR");
+        duration.setMin(DurationFormat.HOURS_MINUTES);
+        duration.setMax(DurationFormat.HOURS_MINUTES);
         //
         questionnaire.getComponents().add(duration);
 
