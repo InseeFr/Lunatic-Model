@@ -16,7 +16,9 @@
       },
       "response": {
         "name": "DURATION_VAR"
-      }
+      },
+      "min": "P1Y6M",
+      "max": "P3Y0M"
     }
   ]
 }
