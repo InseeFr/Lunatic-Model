@@ -32,6 +32,21 @@ class CleaningSerializationTest {
               }
             }""";
 
+    /** Json content used in following tests. */
+    private final String jsonCleaningExample2 = """
+            {
+              "componentType": "Questionnaire",
+              "cleaning": {
+                "Q1": {
+                  "Q21": ["(Q1)"],
+                  "Q22": ["(Q1)", "(Q2)"]
+                },
+                "Q2": {
+                  "Q22": ["(Q1)", "(Q2)"]
+                }
+              }
+            }""";
+
     @Test
     void serializeCleaning() throws SerializationException, JSONException {
         //
