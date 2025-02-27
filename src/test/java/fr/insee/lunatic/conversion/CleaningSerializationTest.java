@@ -1,9 +1,9 @@
 package fr.insee.lunatic.conversion;
 
 import fr.insee.lunatic.exception.SerializationException;
-import fr.insee.lunatic.model.flat.CleanedVariableEntry;
-import fr.insee.lunatic.model.flat.CleaningType;
-import fr.insee.lunatic.model.flat.CleaningVariableEntry;
+import fr.insee.lunatic.model.flat.cleaning.CleanedVariableEntry;
+import fr.insee.lunatic.model.flat.cleaning.CleaningType;
+import fr.insee.lunatic.model.flat.cleaning.CleaningVariableEntry;
 import fr.insee.lunatic.model.flat.Questionnaire;
 import org.json.JSONException;
 import org.junit.jupiter.api.Test;
