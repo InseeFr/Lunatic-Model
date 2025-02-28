@@ -1,4 +1,4 @@
-package fr.insee.lunatic.model.flat;
+package fr.insee.lunatic.model.flat.cleaning;
 
 import lombok.NonNull;
 

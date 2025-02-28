@@ -1,4 +1,4 @@
-package fr.insee.lunatic.model.flat;
+package fr.insee.lunatic.model.flat.cleaning;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -9,12 +9,12 @@ import java.util.Map;
 import java.util.Set;
 
 @Slf4j
-public class CleaningType {
+public class CleaningType2 {
 
     @JsonValue
-    private final Map<String, CleaningVariableEntry> cleaningVariables;
+    private final Map<String, CleaningVariableEntry2> cleaningVariables;
 
-    public CleaningType() {
+    public CleaningType2() {
         cleaningVariables = new LinkedHashMap<>();
     }
 
@@ -23,18 +23,18 @@ public class CleaningType {
      * @param cleaningVariables Key value map mapped by jackson.
      */
     @JsonCreator @SuppressWarnings("unused")
-    private CleaningType(final Map<String, CleaningVariableEntry> cleaningVariables) {
+    private CleaningType2(final Map<String, CleaningVariableEntry2> cleaningVariables) {
         this.cleaningVariables = cleaningVariables;
     }
 
-    public void addCleaningEntry(CleaningVariableEntry cleaningVariableEntry) {
+    public void addCleaningEntry(CleaningVariableEntry2 cleaningVariableEntry) {
         String cleaningVariableName = cleaningVariableEntry.getCleaningVariableName();
         if (cleaningVariables.containsKey(cleaningVariableName))
             log.warn("Overwriting cleaning variable entry '{}'", cleaningVariableName);
         cleaningVariables.put(cleaningVariableName, cleaningVariableEntry);
     }
 
-    public CleaningVariableEntry getCleaningEntry(String cleaningVariableName) {
+    public CleaningVariableEntry2 getCleaningEntry(String cleaningVariableName) {
         return cleaningVariables.get(cleaningVariableName);
     }
 
@@ -46,7 +46,7 @@ public class CleaningType {
         return cleaningVariables.size();
     }
 
-    public CleaningVariableEntry removeCleaningEntry(String cleaningVariableName) {
+    public CleaningVariableEntry2 removeCleaningEntry(String cleaningVariableName) {
         return cleaningVariables.remove(cleaningVariableName);
     }
 
