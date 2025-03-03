@@ -30,7 +30,7 @@ public class CleaningType2 {
     public void addCleaningEntry(CleaningVariableEntry2 cleaningVariableEntry) {
         String cleaningVariableName = cleaningVariableEntry.getCleaningVariableName();
         if (cleaningVariables.containsKey(cleaningVariableName))
-            log.warn("Overwriting cleaning variable entry '{}'", cleaningVariableName);
+            log.debug("Overwriting cleaning variable entry '{}'", cleaningVariableName);
         cleaningVariables.put(cleaningVariableName, cleaningVariableEntry);
     }
 

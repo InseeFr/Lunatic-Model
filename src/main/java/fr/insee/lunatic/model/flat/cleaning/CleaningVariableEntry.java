@@ -35,7 +35,7 @@ public class CleaningVariableEntry {
 
     public void addCleanedVariable(CleanedVariableEntry cleanedVariableEntry) {
         if (cleanedVariables.containsKey(cleanedVariableEntry.variableName()))
-            log.warn("Overwriting cleaned variable entry '{}' in cleaning variable entry '{}'",
+            log.debug("Overwriting cleaned variable entry '{}' in cleaning variable entry '{}'",
                     cleanedVariableEntry.variableName(), cleaningVariableName);
         cleanedVariables.put(cleanedVariableEntry.variableName(), cleanedVariableEntry.filterExpression());
     }
