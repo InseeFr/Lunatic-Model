@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import fr.insee.lunatic.model.flat.cleaning.CleaningType;
-import fr.insee.lunatic.model.flat.cleaning.CleaningType2;
 import fr.insee.lunatic.model.flat.variable.VariableType;
 import lombok.Getter;
 import lombok.Setter;
@@ -33,7 +32,6 @@ public class Questionnaire extends ComponentType {
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     protected List<VariableType> variables;
     protected CleaningType cleaning;
-    protected CleaningType2 cleaning2;
     protected MissingType missingBlock;
     protected ResizingType resizing;
 

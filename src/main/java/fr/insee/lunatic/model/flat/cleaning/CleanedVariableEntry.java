@@ -1,7 +1,24 @@
 package fr.insee.lunatic.model.flat.cleaning;
 
-import lombok.NonNull;
+import lombok.Getter;
 
-public record CleanedVariableEntry(
-        @NonNull String variableName,
-        @NonNull String filterExpression) {}
+import java.util.ArrayList;
+import java.util.List;
+
+@Getter
+public class CleanedVariableEntry {
+
+    private final String variableName;
+    private final List<String> filterExpressions;
+
+    public CleanedVariableEntry(String variableName) {
+        this.variableName = variableName;
+        this.filterExpressions = new ArrayList<>();
+    }
+
+    public CleanedVariableEntry(String variableName, List<String> filterExpressions) {
+        this.variableName = variableName;
+        this.filterExpressions = filterExpressions;
+    }
+
+}
