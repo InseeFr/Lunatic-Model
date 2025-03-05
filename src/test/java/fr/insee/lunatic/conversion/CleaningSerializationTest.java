@@ -54,14 +54,14 @@ class CleaningSerializationTest {
         Questionnaire questionnaire = new Questionnaire();
         CleaningType cleaning = new CleaningType();
         CleaningVariableEntry cleaningEntry1 = new CleaningVariableEntry("Q1");
-        List<CleaningExpression> Q21Expressions =  List.of(new CleaningExpression("(Q1)",null,false));
-        List<CleaningExpression> Q22Expressions =  List.of(
+        cleaningEntry1.addCleanedVariable(new CleanedVariableEntry("Q21", List.of(new CleaningExpression("(Q1)",null,false))));
+        cleaningEntry1.addCleanedVariable(new CleanedVariableEntry("Q22", List.of(
                 new CleaningExpression("(Q1)",null,false),
-                new CleaningExpression("count(Q3_ARRAY)","Q3_ARRAY",true));
-        cleaningEntry1.addCleanedVariable(new CleanedVariableEntry("Q21", Q21Expressions));
-        cleaningEntry1.addCleanedVariable(new CleanedVariableEntry("Q22", Q22Expressions));
+                new CleaningExpression("count(Q3_ARRAY)","Q3_ARRAY",true))));
         CleaningVariableEntry cleaningEntry2 = new CleaningVariableEntry("Q2");
-        cleaningEntry2.addCleanedVariable(new CleanedVariableEntry("Q22", Q22Expressions));
+        cleaningEntry2.addCleanedVariable(new CleanedVariableEntry("Q22", List.of(
+                new CleaningExpression("(Q1)",null,false),
+                new CleaningExpression("count(Q3_ARRAY)","Q3_ARRAY",true))));
         cleaning.addCleaningEntry(cleaningEntry1);
         cleaning.addCleaningEntry(cleaningEntry2);
         questionnaire.setCleaning(cleaning);
