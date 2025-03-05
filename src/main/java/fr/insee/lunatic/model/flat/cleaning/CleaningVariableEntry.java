@@ -17,7 +17,7 @@ public class CleaningVariableEntry {
     private String cleaningVariableName;
 
     @JsonValue
-    private final Map<String, List<String>> cleanedVariables;
+    private final Map<String, List<CleaningExpression>> cleanedVariables;
 
 
     public CleaningVariableEntry(final String cleaningVariableName) {
@@ -30,7 +30,7 @@ public class CleaningVariableEntry {
      * @param cleanedVariables Key value map mapped by jackson.
      */
     @JsonCreator @SuppressWarnings("unused")
-    private CleaningVariableEntry(final Map<String, List<String>> cleanedVariables) {
+    private CleaningVariableEntry(final Map<String, List<CleaningExpression>> cleanedVariables) {
         this.cleanedVariables = cleanedVariables;
     }
 
@@ -38,13 +38,16 @@ public class CleaningVariableEntry {
         if (cleanedVariables.containsKey(cleanedVariableEntry.getVariableName()))
             log.debug("Overwriting cleaned variable entry '{}' in cleaning variable entry '{}'",
                     cleanedVariableEntry.getVariableName(), cleaningVariableName);
-        cleanedVariables.put(cleanedVariableEntry.getVariableName(), cleanedVariableEntry.getFilterExpressions());
+        cleanedVariables.put(cleanedVariableEntry.getVariableName(), cleanedVariableEntry.getCleaningExpressions());
     }
 
     public CleanedVariableEntry getCleanedVariable(String cleanedVariableName) {
-        CleanedVariableEntry cleanedVariableEntry = new CleanedVariableEntry(cleanedVariableName);
-        cleanedVariableEntry.getFilterExpressions().addAll(cleanedVariables.get(cleanedVariableName));
-        return cleanedVariableEntry;
+        if(cleanedVariables.containsKey(cleanedVariableName)){
+            CleanedVariableEntry cleanedVariableEntry = new CleanedVariableEntry(cleanedVariableName);
+            cleanedVariableEntry.getCleaningExpressions().addAll(cleanedVariables.get(cleanedVariableName));
+            return cleanedVariableEntry;
+        }
+        return null;
     }
 
     public Set<String> getCleanedVariableNames() {
@@ -55,11 +58,5 @@ public class CleaningVariableEntry {
         return cleanedVariables.size();
     }
 
-    public CleanedVariableEntry removeCleanedVariable(String cleanedVariableName) {
-        List<String> removed = cleanedVariables.remove(cleanedVariableName);
-        CleanedVariableEntry cleanedVariableEntry = new CleanedVariableEntry(cleanedVariableName);
-        cleanedVariableEntry.getFilterExpressions().addAll(removed);
-        return cleanedVariableEntry;
-    }
 
 }

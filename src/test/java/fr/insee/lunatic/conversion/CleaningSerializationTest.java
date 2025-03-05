@@ -19,17 +19,34 @@ class CleaningSerializationTest {
     /** Json content used in following tests. */
     private final String jsonCleaningExample = """
             {
-              "componentType": "Questionnaire",
-              "cleaning": {
-                "Q1": {
-                  "Q21": ["(Q1)"],
-                  "Q22": ["(Q1)", "(Q2)"]
-                },
-                "Q2": {
-                  "Q22": ["(Q1)", "(Q2)"]
-                }
-              }
-            }""";
+               "componentType": "Questionnaire",
+               "cleaning": {
+                 "Q1": {
+                   "Q21": [
+                     { "expression": "(Q1)", "isAggregatorUsed": false }
+                   ],
+                   "Q22": [
+                     { "expression": "(Q1)", "isAggregatorUsed": false },
+                     {
+                       "expression": "count(Q3_ARRAY)",
+                       "shapeFrom": "Q3_ARRAY",
+                       "isAggregatorUsed": true
+                     }
+                   ]
+                 },
+                 "Q2": {
+                   "Q22": [
+                     { "expression": "(Q1)", "isAggregatorUsed": false },
+                     {
+                       "expression": "count(Q3_ARRAY)",
+                       "shapeFrom": "Q3_ARRAY",
+                       "isAggregatorUsed": true
+                     }
+                   ]
+                 }
+               }
+             }
+             """;
 
     @Test
     void serializeCleaning() throws SerializationException, JSONException {
@@ -37,10 +54,14 @@ class CleaningSerializationTest {
         Questionnaire questionnaire = new Questionnaire();
         CleaningType cleaning = new CleaningType();
         CleaningVariableEntry cleaningEntry1 = new CleaningVariableEntry("Q1");
-        cleaningEntry1.addCleanedVariable(new CleanedVariableEntry("Q21", List.of("(Q1)")));
-        cleaningEntry1.addCleanedVariable(new CleanedVariableEntry("Q22", List.of("(Q1)", "(Q2)")));
+        List<CleaningExpression> Q21Expressions =  List.of(new CleaningExpression("(Q1)",null,false));
+        List<CleaningExpression> Q22Expressions =  List.of(
+                new CleaningExpression("(Q1)",null,false),
+                new CleaningExpression("count(Q3_ARRAY)","Q3_ARRAY",true));
+        cleaningEntry1.addCleanedVariable(new CleanedVariableEntry("Q21", Q21Expressions));
+        cleaningEntry1.addCleanedVariable(new CleanedVariableEntry("Q22", Q22Expressions));
         CleaningVariableEntry cleaningEntry2 = new CleaningVariableEntry("Q2");
-        cleaningEntry2.addCleanedVariable(new CleanedVariableEntry("Q22", List.of("(Q1)", "(Q2)")));
+        cleaningEntry2.addCleanedVariable(new CleanedVariableEntry("Q22", Q22Expressions));
         cleaning.addCleaningEntry(cleaningEntry1);
         cleaning.addCleaningEntry(cleaningEntry2);
         questionnaire.setCleaning(cleaning);
@@ -49,8 +70,9 @@ class CleaningSerializationTest {
         //
         JSONAssert.assertEquals(jsonCleaningExample, result, JSONCompareMode.STRICT);
     }
+
     @Test
-    void deserializeCleaning2() throws SerializationException {
+    void deserializeCleaning() throws SerializationException {
         //
         JsonDeserializer jsonDeserializer = new JsonDeserializer();
         Questionnaire result = jsonDeserializer.deserialize(new ByteArrayInputStream(jsonCleaningExample.getBytes()));
@@ -62,13 +84,23 @@ class CleaningSerializationTest {
         assertNotNull(q1Entry);
         assertNotNull(q1Entry.getCleanedVariable("Q21"));
         assertNotNull(q1Entry.getCleanedVariable("Q22"));
-        assertEquals(List.of("(Q1)"), q1Entry.getCleanedVariable("Q21").getFilterExpressions());
-        assertEquals(List.of("(Q1)", "(Q2)"), q1Entry.getCleanedVariable("Q22").getFilterExpressions());
+        assertEquals(
+                List.of(new CleaningExpression("(Q1)", null, false)),
+                q1Entry.getCleanedVariable("Q21").getCleaningExpressions());
+        assertEquals(
+                List.of(
+                        new CleaningExpression("(Q1)", null, false),
+                        new CleaningExpression("count(Q3_ARRAY)", "Q3_ARRAY", true)),
+                q1Entry.getCleanedVariable("Q22").getCleaningExpressions());
         //
         CleaningVariableEntry q2Entry = result.getCleaning().getCleaningEntry("Q2");
         assertNotNull(q2Entry);
         assertNotNull(q2Entry.getCleanedVariable("Q22"));
-        assertEquals(List.of("(Q1)", "(Q2)"), q2Entry.getCleanedVariable("Q22").getFilterExpressions());
+        assertEquals(
+                List.of(
+                        new CleaningExpression("(Q1)", null, false),
+                        new CleaningExpression("count(Q3_ARRAY)", "Q3_ARRAY", true)),
+                q2Entry.getCleanedVariable("Q22").getCleaningExpressions());
     }
 
 }

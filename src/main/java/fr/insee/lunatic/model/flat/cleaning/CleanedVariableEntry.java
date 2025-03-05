@@ -9,16 +9,15 @@ import java.util.List;
 public class CleanedVariableEntry {
 
     private final String variableName;
-    private final List<String> filterExpressions;
+    private final List<CleaningExpression> cleaningExpressions;
 
     public CleanedVariableEntry(String variableName) {
         this.variableName = variableName;
-        this.filterExpressions = new ArrayList<>();
+        this.cleaningExpressions = new ArrayList<>();
     }
 
-    public CleanedVariableEntry(String variableName, List<String> filterExpressions) {
+    public CleanedVariableEntry(String variableName, List<CleaningExpression> cleaningExpressions) {
         this.variableName = variableName;
-        this.filterExpressions = filterExpressions;
+        this.cleaningExpressions = cleaningExpressions;
     }
-
 }
