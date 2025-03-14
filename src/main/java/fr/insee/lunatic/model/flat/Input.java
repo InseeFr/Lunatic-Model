@@ -7,7 +7,7 @@ import lombok.Setter;
 import java.math.BigInteger;
 
 /**
- * Input response component to collect a single line of text.
+ * Response component to collect a single line of text.
  */
 @Getter
 @Setter
@@ -17,6 +17,10 @@ public class Input extends ComponentType implements ComponentSimpleResponseType 
         super();
         this.componentType = ComponentTypeEnum.INPUT;
     }
+
+    /** Indicates whether the response is mandatory for this component. */
+    @JsonProperty("isMandatory")
+    private Boolean mandatory;
 
     /** Regular expression that the input's content must match. (Unused yet in Lunatic.) */
     protected String format;

@@ -5,6 +5,7 @@
     {
       "id": "duration-id",
       "componentType": "Duration",
+      "isMandatory": true,
       "format": "PnYnM",
       "label": {
         "value": "\"Duration (years/months)\"",

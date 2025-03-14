@@ -5,6 +5,7 @@
     {
       "id": "duration-id",
       "componentType": "Duration",
+      "isMandatory": false,
       "format": "PTnHnM",
       "label": {
         "value": "\"Duration (hours/minutes)\"",

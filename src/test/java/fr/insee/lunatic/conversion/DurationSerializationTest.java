@@ -23,6 +23,7 @@ class DurationSerializationTest {
         //
         Duration duration = new Duration();
         duration.setId("duration-id");
+        duration.setMandatory(true);
         duration.setFormat(DurationFormat.YEARS_MONTHS);
         duration.setLabel(new LabelType());
         duration.getLabel().setValue("\"Duration (years/months)\"");
@@ -54,6 +55,7 @@ class DurationSerializationTest {
         //
         Duration duration = new Duration();
         duration.setId("duration-id");
+        duration.setMandatory(false);
         duration.setFormat(DurationFormat.HOURS_MINUTES);
         duration.setLabel(new LabelType());
         duration.getLabel().setValue("\"Duration (hours/minutes)\"");
@@ -84,6 +86,7 @@ class DurationSerializationTest {
         //
         Duration duration = assertInstanceOf(Duration.class, questionnaire.getComponents().getFirst());
         assertEquals("PnYnM", duration.getFormat().value());
+        assertTrue(duration.getMandatory());
     }
 
     @Test
@@ -94,6 +97,7 @@ class DurationSerializationTest {
         Questionnaire questionnaire = new JsonDeserializer().deserialize(new ByteArrayInputStream(jsonInput.getBytes()));
         //
         Duration duration = assertInstanceOf(Duration.class, questionnaire.getComponents().getFirst());
+        assertFalse(duration.getMandatory());
         assertEquals("PTnHnM", duration.getFormat().value());
     }
 

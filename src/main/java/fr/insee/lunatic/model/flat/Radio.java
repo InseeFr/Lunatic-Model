@@ -14,6 +14,10 @@ import java.util.List;
 @Setter
 public class Radio extends ComponentType implements ComponentSimpleResponseType {
 
+    /** Indicates whether the response is mandatory for this component. */
+    @JsonProperty("isMandatory")
+    private Boolean mandatory;
+
     /** Orientation of the radio modalities. */
     protected Orientation orientation;
 
