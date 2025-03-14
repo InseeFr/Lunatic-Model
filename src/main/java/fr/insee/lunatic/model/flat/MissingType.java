@@ -25,7 +25,7 @@ public class MissingType {
 
     public void addMissingEntry(MissingEntry missingEntry) {
         if (missingEntries.containsKey(missingEntry.getVariableName()))
-            log.warn("Overwriting missing entry for variable '{}'", missingEntry.getVariableName());
+            log.debug("Overwriting missing entry for variable '{}'", missingEntry.getVariableName());
         missingEntries.put(missingEntry.getVariableName(), missingEntry);
     }
 

@@ -1,4 +1,4 @@
-package fr.insee.lunatic.model.flat;
+package fr.insee.lunatic.model.flat.cleaning;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -16,7 +17,7 @@ public class CleaningVariableEntry {
     private String cleaningVariableName;
 
     @JsonValue
-    private final Map<String, String> cleanedVariables;
+    private final Map<String, List<CleaningExpression>> cleanedVariables;
 
 
     public CleaningVariableEntry(final String cleaningVariableName) {
@@ -29,19 +30,24 @@ public class CleaningVariableEntry {
      * @param cleanedVariables Key value map mapped by jackson.
      */
     @JsonCreator @SuppressWarnings("unused")
-    private CleaningVariableEntry(final Map<String, String> cleanedVariables) {
+    private CleaningVariableEntry(final Map<String, List<CleaningExpression>> cleanedVariables) {
         this.cleanedVariables = cleanedVariables;
     }
 
     public void addCleanedVariable(CleanedVariableEntry cleanedVariableEntry) {
-        if (cleanedVariables.containsKey(cleanedVariableEntry.variableName()))
-            log.warn("Overwriting cleaned variable entry '{}' in cleaning variable entry '{}'",
-                    cleanedVariableEntry.variableName(), cleaningVariableName);
-        cleanedVariables.put(cleanedVariableEntry.variableName(), cleanedVariableEntry.filterExpression());
+        if (cleanedVariables.containsKey(cleanedVariableEntry.getVariableName()))
+            log.debug("Overwriting cleaned variable entry '{}' in cleaning variable entry '{}'",
+                    cleanedVariableEntry.getVariableName(), cleaningVariableName);
+        cleanedVariables.put(cleanedVariableEntry.getVariableName(), cleanedVariableEntry.getCleaningExpressions());
     }
 
     public CleanedVariableEntry getCleanedVariable(String cleanedVariableName) {
-        return new CleanedVariableEntry(cleanedVariableName, cleanedVariables.get(cleanedVariableName));
+        if(cleanedVariables.containsKey(cleanedVariableName)){
+            CleanedVariableEntry cleanedVariableEntry = new CleanedVariableEntry(cleanedVariableName);
+            cleanedVariableEntry.getCleaningExpressions().addAll(cleanedVariables.get(cleanedVariableName));
+            return cleanedVariableEntry;
+        }
+        return null;
     }
 
     public Set<String> getCleanedVariableNames() {
@@ -52,8 +58,5 @@ public class CleaningVariableEntry {
         return cleanedVariables.size();
     }
 
-    public CleanedVariableEntry removeCleanedVariable(String cleanedVariableName) {
-        return new CleanedVariableEntry(cleanedVariableName, cleanedVariables.remove(cleanedVariableName));
-    }
 
 }

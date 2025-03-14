@@ -1,4 +1,4 @@
-package fr.insee.lunatic.model.flat;
+package fr.insee.lunatic.model.flat.cleaning;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
@@ -30,7 +30,7 @@ public class CleaningType {
     public void addCleaningEntry(CleaningVariableEntry cleaningVariableEntry) {
         String cleaningVariableName = cleaningVariableEntry.getCleaningVariableName();
         if (cleaningVariables.containsKey(cleaningVariableName))
-            log.warn("Overwriting cleaning variable entry '{}'", cleaningVariableName);
+            log.debug("Overwriting cleaning variable entry '{}'", cleaningVariableName);
         cleaningVariables.put(cleaningVariableName, cleaningVariableEntry);
     }
 
