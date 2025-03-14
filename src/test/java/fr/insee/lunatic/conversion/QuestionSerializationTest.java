@@ -5,6 +5,8 @@ import fr.insee.lunatic.model.flat.*;
 import fr.insee.lunatic.utils.TestUtils;
 import org.json.JSONException;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
@@ -12,13 +14,16 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.math.BigInteger;
 
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Class to test if the serialization/deserialization of the question component works.
  * See response component (Input, InputNumber, Table etc.) test classes for specific tests.
  */
 class QuestionSerializationTest {
+
+    private final JsonSerializer serializer = new JsonSerializer();
+    private final JsonDeserializer deserializer = new JsonDeserializer();
 
     @Test
     void serializeQuestion() throws SerializationException, IOException, JSONException {
@@ -74,8 +79,7 @@ class QuestionSerializationTest {
         questionnaire.getComponents().add(question);
 
         //
-        JsonSerializer jsonSerializer = new JsonSerializer();
-        String result = jsonSerializer.serialize(questionnaire);
+        String result = serializer.serialize(questionnaire);
 
         //
         String expectedJson = TestUtils.readResourceFile("input-question.json");
@@ -87,11 +91,115 @@ class QuestionSerializationTest {
         //
         String jsonQuestionnaire = TestUtils.readResourceFile("input-question.json");
         //
-        JsonDeserializer jsonDeserializer = new JsonDeserializer();
-        Questionnaire questionnaire = jsonDeserializer.deserialize(
+        Questionnaire questionnaire = deserializer.deserialize(
                 new ByteArrayInputStream(jsonQuestionnaire.getBytes()));
         //
         assertNotNull(questionnaire);
+    }
+
+    @ParameterizedTest
+    @ValueSource(booleans = {true, false})
+    void serializeQuestion_mandatory(Boolean mandatory) throws SerializationException, JSONException {
+        //
+        Questionnaire questionnaire = new Questionnaire();
+        questionnaire.setId("questionnaire-id");
+        Question question = new Question();
+        question.setId("question-id");
+        question.setMandatory(mandatory);
+        questionnaire.getComponents().add(question);
+        //
+        String result = serializer.serialize(questionnaire);
+        //
+        String expected = String.format("""
+                {
+                  "id": "questionnaire-id",
+                  "componentType": "Questionnaire",
+                  "components": [
+                    {
+                      "id": "question-id",
+                      "componentType": "Question",
+                      "isMandatory": %s,
+                      "components": []
+                    }
+                  ]
+                }
+                """, mandatory);
+        JSONAssert.assertEquals(expected, result, JSONCompareMode.STRICT);
+    }
+
+    @Test
+    void serializeQuestion_withoutMandatory() throws SerializationException, JSONException {
+        //
+        Questionnaire questionnaire = new Questionnaire();
+        questionnaire.setId("questionnaire-id");
+        Question question = new Question();
+        question.setId("question-id");
+        questionnaire.getComponents().add(question);
+        //
+        String result = serializer.serialize(questionnaire);
+        //
+        String expected = """
+                {
+                  "id": "questionnaire-id",
+                  "componentType": "Questionnaire",
+                  "components": [
+                    {
+                      "id": "question-id",
+                      "componentType": "Question",
+                      "components": []
+                    }
+                  ]
+                }
+                """;
+        JSONAssert.assertEquals(expected, result, JSONCompareMode.STRICT);
+    }
+
+    @ParameterizedTest
+    @ValueSource(booleans = {true, false})
+    void deserializeQuestion_mandatory(Boolean mandatory) throws SerializationException {
+        //
+        String json = String.format("""
+                {
+                  "id": "questionnaire-id",
+                  "componentType": "Questionnaire",
+                  "components": [
+                    {
+                      "id": "question-id",
+                      "componentType": "Question",
+                      "isMandatory": %s,
+                      "components": []
+                    }
+                  ]
+                }
+                """, mandatory);
+        //
+        Questionnaire questionnaire = deserializer.deserialize(new ByteArrayInputStream(json.getBytes()));
+        //
+        Question question = assertInstanceOf(Question.class, questionnaire.getComponents().getFirst());
+        assertEquals(mandatory, question.getMandatory());
+    }
+
+    @Test
+    void deserializeQuestion_withoutMandatory() throws SerializationException {
+        //
+        String json = """
+                {
+                  "id": "questionnaire-id",
+                  "componentType": "Questionnaire",
+                  "components": [
+                    {
+                      "id": "question-id",
+                      "componentType": "Question",
+                      "components": []
+                    }
+                  ]
+                }
+                """;
+        //
+        Questionnaire questionnaire = deserializer.deserialize(new ByteArrayInputStream(json.getBytes()));
+        //
+        Question question = assertInstanceOf(Question.class, questionnaire.getComponents().getFirst());
+        assertNull(question.getMandatory());
     }
 
 }

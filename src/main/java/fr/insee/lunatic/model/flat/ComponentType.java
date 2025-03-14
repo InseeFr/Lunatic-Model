@@ -111,7 +111,7 @@ public abstract class ComponentType {
     @JsonProperty(required = true)
     protected String id;
     protected ComponentTypeEnum componentType;
-    protected Boolean mandatory;
+
     protected String page;
 
     /** {@link ComponentPosition} */
