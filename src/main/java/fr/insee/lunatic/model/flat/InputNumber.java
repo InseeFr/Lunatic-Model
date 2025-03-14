@@ -21,6 +21,10 @@ public class InputNumber extends ComponentType implements ComponentSimpleRespons
         this.componentType = ComponentTypeEnum.INPUT_NUMBER;
     }
 
+    /** Indicates whether the response is mandatory for this component. */
+    @JsonProperty("isMandatory")
+    private Boolean mandatory;
+
     /**
      * Wrapper class for the unit property to ensure backward compatibility in serialization/deserialization.
      */
