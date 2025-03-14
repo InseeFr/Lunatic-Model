@@ -10,17 +10,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Suggester component.
+ * Suggester response component.
  */
 @Getter
 @Setter
 public class Suggester extends ComponentType implements ComponentSimpleResponseType {
 
     public Suggester() {
+        super();
         this.componentType = ComponentTypeEnum.SUGGESTER;
     }
 
     public record OptionResponse(String name, String attribute) {}
+
+    /** Indicates whether the response is mandatory for this component. */
+    @JsonProperty("isMandatory")
+    private Boolean mandatory;
 
     /** Collected response of the suggester component. */
     @JsonProperty(required = true)

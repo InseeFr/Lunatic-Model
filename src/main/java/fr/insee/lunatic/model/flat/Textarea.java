@@ -6,13 +6,26 @@ import lombok.Setter;
 
 import java.math.BigInteger;
 
+/**
+ * Response component to collect a block of text.
+ */
 @Getter
 @Setter
-public class Textarea
-    extends ComponentType
-    implements ComponentSimpleResponseType
-{
+public class Textarea extends ComponentType implements ComponentSimpleResponseType {
+
+    public Textarea() {
+        super();
+        this.componentType = ComponentTypeEnum.TEXTAREA;
+    }
+
+    /** Indicates whether the response is mandatory for this component. */
+    @JsonProperty("isMandatory")
+    private Boolean mandatory;
+
     @JsonProperty(required = true)
     protected ResponseType response;
+
+    /** Maximum length of the text response. */
     protected BigInteger maxLength;
+
 }
