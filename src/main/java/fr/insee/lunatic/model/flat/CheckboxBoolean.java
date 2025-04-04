@@ -12,4 +12,8 @@ public class CheckboxBoolean
 {
     @JsonProperty(required = true)
     protected ResponseType response;
+
+    /** Indicates whether the response is mandatory for this component. */
+    @JsonProperty("isMandatory")
+    private Boolean mandatory;
 }
