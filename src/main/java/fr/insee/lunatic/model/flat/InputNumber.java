@@ -14,6 +14,8 @@ import java.math.BigInteger;
 /**
  * Response component to collect numeric data.
  */
+@Getter
+@Setter
 public class InputNumber extends ComponentType implements ComponentSimpleResponseType {
 
     public InputNumber() {
