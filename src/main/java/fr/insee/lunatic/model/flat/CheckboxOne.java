@@ -24,6 +24,10 @@ public class CheckboxOne extends ComponentType implements ComponentSimpleRespons
     @JsonProperty(required = true)
     protected ResponseType response;
 
+    /** Indicates whether the response is mandatory for this component. */
+    @JsonProperty("isMandatory")
+    private Boolean mandatory;
+
     public CheckboxOne() {
         super();
         this.componentType = ComponentTypeEnum.CHECKBOX_ONE;

@@ -71,6 +71,7 @@ public class BodyCell {
     /** For suggester cells: option responses. */
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     protected List<Suggester.OptionResponse> optionResponses;
+    protected ConditionFilterType conditionFilter;
 
     protected String id;
 
