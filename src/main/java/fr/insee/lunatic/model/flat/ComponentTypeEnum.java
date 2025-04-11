@@ -26,6 +26,7 @@ public enum ComponentTypeEnum {
     TEXTAREA("Textarea"),
     SUGGESTER("Suggester"),
     TEXT("Text"),
+    FILTER_DESCRIPTION("FilterDescription"),
     ACCORDION("Accordion");
 
     private final String value;
