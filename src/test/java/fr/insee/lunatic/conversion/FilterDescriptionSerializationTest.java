@@ -30,7 +30,7 @@ class FilterDescriptionSerializationTest {
                   "id": "filter-description-id",
                   "page": "1",
                   "componentType": "FilterDescription",
-                  "description": {
+                  "label": {
                     "value": "Filter on some component.",
                     "type": "TXT"
                   },
@@ -49,9 +49,9 @@ class FilterDescriptionSerializationTest {
         FilterDescription filterDescription = new FilterDescription();
         filterDescription.setId("filter-description-id");
         filterDescription.setPage("1");
-        filterDescription.setDescription(new LabelType());
-        filterDescription.getDescription().setValue("Filter on some component.");
-        filterDescription.getDescription().setType(LabelTypeEnum.TXT);
+        filterDescription.setLabel(new LabelType());
+        filterDescription.getLabel().setValue("Filter on some component.");
+        filterDescription.getLabel().setType(LabelTypeEnum.TXT);
         filterDescription.setStartId("some-id");
         filterDescription.setEndId("some-id");
         questionnaire.getComponents().add(filterDescription);
@@ -71,8 +71,8 @@ class FilterDescriptionSerializationTest {
                 questionnaire.getComponents().getFirst());
         assertEquals("filter-description-id", filterDescription.getId());
         assertEquals("1", filterDescription.getPage());
-        assertEquals("Filter on some component.", filterDescription.getDescription().getValue());
-        assertEquals(LabelTypeEnum.TXT, filterDescription.getDescription().getType());
+        assertEquals("Filter on some component.", filterDescription.getLabel().getValue());
+        assertEquals(LabelTypeEnum.TXT, filterDescription.getLabel().getType());
         assertEquals("some-id", filterDescription.getStartId());
         assertEquals("some-id", filterDescription.getEndId());
     }
