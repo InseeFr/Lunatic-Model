@@ -17,9 +17,7 @@ import lombok.Setter;
         "id",
         "page",
         "componentType",
-        "label",
-        "startId",
-        "endId"
+        "label"
 })
 @Getter
 @Setter

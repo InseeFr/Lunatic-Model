@@ -33,9 +33,7 @@ class FilterDescriptionSerializationTest {
                   "label": {
                     "value": "Filter on some component.",
                     "type": "TXT"
-                  },
-                  "startId": "some-id",
-                  "endId": "some-id"
+                  }
                 }
               ]
             }""";
@@ -52,8 +50,6 @@ class FilterDescriptionSerializationTest {
         filterDescription.setLabel(new LabelType());
         filterDescription.getLabel().setValue("Filter on some component.");
         filterDescription.getLabel().setType(LabelTypeEnum.TXT);
-        filterDescription.setStartId("some-id");
-        filterDescription.setEndId("some-id");
         questionnaire.getComponents().add(filterDescription);
         //
         String result = serializer.serialize(questionnaire);
@@ -73,8 +69,6 @@ class FilterDescriptionSerializationTest {
         assertEquals("1", filterDescription.getPage());
         assertEquals("Filter on some component.", filterDescription.getLabel().getValue());
         assertEquals(LabelTypeEnum.TXT, filterDescription.getLabel().getType());
-        assertEquals("some-id", filterDescription.getStartId());
-        assertEquals("some-id", filterDescription.getEndId());
     }
 
 }
