@@ -17,7 +17,7 @@ import lombok.Setter;
         "id",
         "page",
         "componentType",
-        "description",
+        "label",
         "startId",
         "endId"
 })
