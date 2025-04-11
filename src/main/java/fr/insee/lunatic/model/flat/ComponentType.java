@@ -8,6 +8,10 @@ import lombok.Setter;
 import java.util.ArrayList;
 import java.util.List;
 
+// Note: the ComponentType class has way too many properties
+// Should probably be refactored with an intermediate level of subclasses,
+// or (surely better): implement proper interfaces.
+
 @JsonPropertyOrder({
         "id",
         "componentType",
@@ -83,35 +87,54 @@ import java.util.List;
         @JsonSubTypes.Type(value = Textarea.class, name = "Textarea"),
         @JsonSubTypes.Type(value = Suggester.class, name = "Suggester"),
         @JsonSubTypes.Type(value = Text.class, name = "Text"),
+        @JsonSubTypes.Type(value = FilterDescription.class, name = "FilterDescription"),
         @JsonSubTypes.Type(value = Accordion.class, name = "Accordion"),
 })
 @Getter
 @Setter
 public abstract class ComponentType {
 
+    /** Component identifier. */
+    @JsonProperty(required = true)
+    protected String id;
+
+    /** Property that defines the type of component in the serialized object. */
+    protected ComponentTypeEnum componentType;
+
+    /** Displayed label of the component. */
     protected LabelType label;
 
     /** Component description (concept introduced in Lunatic v3). */
     private LabelType description;
 
+    /** Declarations to display with the component. */
     @JsonInclude(Include.NON_EMPTY)
     protected List<DeclarationType> declarations;
+
+    /** Filter applied on the component. */
     protected ConditionFilterType conditionFilter;
+
+    /** Controls applied on the component. */
     @JsonInclude(Include.NON_EMPTY)
     protected List<ControlType> controls;
+
+    /** Object that indicates in which sequence/subsequence belongs the component.
+     * @deprecated Unused by Lunatic anymore, to be removed. */
+    @Deprecated(since = "5.1.0", forRemoval = true)
     protected Hierarchy hierarchy;
+
     protected ResponseType missingResponse;
 
     /** Collected or external variable names required to evaluate expressions used in the component properties.
      * @deprecated Binding dependencies at component level are not used anymore in Lunatic. */
     @JsonInclude(Include.NON_EMPTY)
-    @Deprecated(since = "3.4.0")
+    @Deprecated(since = "3.4.0", forRemoval = true)
     protected List<String> bindingDependencies = new ArrayList<>();
 
-    @JsonProperty(required = true)
-    protected String id;
-    protected ComponentTypeEnum componentType;
-
+    /** Page number of the component: "1", "2", "3", etc.
+     * For components that are in a loop, the page number becomes: "n.1", "n.2", "n.3", etc.
+     * (where 'n' is the loop page number).
+     * Components that share the same page number are displayed on the same page. */
     protected String page;
 
     /** {@link ComponentPosition} */
