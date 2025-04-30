@@ -27,8 +27,10 @@ class BodyCellSerializationTest {
             {
               "id": "foo-id",
               "componentType": "InputNumber",
-              "min": 0,
-              "max": 100,
+              "boundaries": {
+                  "min": 0,
+                  "max": 100
+              },
               "unit": {
                 "value": "%",
                 "type": "VTL|MD"
@@ -72,8 +74,10 @@ class BodyCellSerializationTest {
         BodyCell bodyCell = new BodyCell();
         bodyCell.setId("foo-id");
         bodyCell.setComponentType(ComponentTypeEnum.INPUT_NUMBER);
-        bodyCell.setMin(0d);
-        bodyCell.setMax(100d);
+        NumberBoundaries boundaries = new NumberBoundaries();
+        boundaries.setMin(0d);
+        boundaries.setMax(100d);
+        bodyCell.setBoundaries(boundaries);
         bodyCell.setUnit(new LabelType());
         bodyCell.getUnitLabel().setValue("%");
         bodyCell.getUnitLabel().setType(LabelTypeEnum.VTL_MD);

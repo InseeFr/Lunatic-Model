@@ -1,9 +1,7 @@
 package fr.insee.lunatic.model.flat;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.*;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,8 +16,7 @@ import java.util.List;
         "componentType",
         "orientation",
         "maxLength",
-        "min",
-        "max",
+        "boundaries",
         "decimals",
         "id",
         "value",
@@ -62,8 +59,7 @@ public class BodyCell {
 
     protected ComponentTypeEnum componentType;
     protected BigInteger maxLength;
-    protected Double min;
-    protected Double max;
+    protected Boundaries boundaries;
     protected BigInteger decimals;
     protected BigInteger colspan;
     protected BigInteger rowspan;
@@ -120,6 +116,16 @@ public class BodyCell {
     public void setUnit(LabelType labelType) {
         unit = new InputNumber.Unit();
         unit.setLabel(labelType);
+    }
+
+    @JsonIgnore
+    public Object getMin() {
+        return boundaries != null ? boundaries.getMin() : null;
+    }
+
+    @JsonIgnore
+    public Object getMax() {
+        return boundaries != null ? boundaries.getMax() : null;
     }
 
 }
