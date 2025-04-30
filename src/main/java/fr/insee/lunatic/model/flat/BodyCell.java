@@ -2,6 +2,7 @@ package fr.insee.lunatic.model.flat;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import fr.insee.lunatic.conversion.variable.BoundariesDeserializer;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -59,7 +60,10 @@ public class BodyCell {
 
     protected ComponentTypeEnum componentType;
     protected BigInteger maxLength;
+
+    @JsonDeserialize(using = BoundariesDeserializer.class)
     protected Boundaries boundaries;
+
     protected BigInteger decimals;
     protected BigInteger colspan;
     protected BigInteger rowspan;
