@@ -40,6 +40,23 @@ class BodyCellSerializationTest {
               }
             }""";
 
+    private final String jsonDatepickerCell = """
+            {
+              "id": "foo-id",
+              "componentType": "Datepicker",
+              "boundaries": {
+                  "min": "24/05/1950",
+                  "max": "02/04/2030"
+              },
+              "unit": {
+                "value": "%",
+                "type": "VTL|MD"
+              },
+              "response": {
+                "name": "FOO"
+              }
+            }""";
+
     @Test
     void serializeSuggesterCell() throws JsonProcessingException, JSONException {
         //
@@ -100,6 +117,43 @@ class BodyCellSerializationTest {
         assertEquals(ComponentTypeEnum.INPUT_NUMBER, bodyCell.getComponentType());
         assertEquals(0d, bodyCell.getMin());
         assertEquals(100d, bodyCell.getMax());
+        assertEquals("%", bodyCell.getUnitLabel().getValue());
+        assertEquals(LabelTypeEnum.VTL_MD, bodyCell.getUnitLabel().getType());
+        assertEquals("FOO", bodyCell.getResponse().getName());
+    }
+
+    @Test
+    void serializeDatepickerCell() throws JsonProcessingException, JSONException {
+        //
+        BodyCell bodyCell = new BodyCell();
+        bodyCell.setId("foo-id");
+        bodyCell.setComponentType(ComponentTypeEnum.DATEPICKER);
+        DateBoundaries boundaries = new DateBoundaries();
+        boundaries.setMin("24/05/1950");
+        boundaries.setMax("02/04/2030");
+        bodyCell.setBoundaries(boundaries);
+        bodyCell.setUnit(new LabelType());
+        bodyCell.getUnitLabel().setValue("%");
+        bodyCell.getUnitLabel().setType(LabelTypeEnum.VTL_MD);
+        bodyCell.setResponse(new ResponseType());
+        bodyCell.getResponse().setName("FOO");
+        //
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        String result = objectMapper.writeValueAsString(bodyCell);
+        //
+        JSONAssert.assertEquals(jsonDatepickerCell, result, JSONCompareMode.STRICT);
+    }
+
+    @Test
+    void deserializeDatepickerCell() throws JsonProcessingException {
+        //
+        BodyCell bodyCell = new ObjectMapper().readValue(jsonDatepickerCell, BodyCell.class);
+        //
+        assertEquals("foo-id", bodyCell.getId());
+        assertEquals(ComponentTypeEnum.DATEPICKER, bodyCell.getComponentType());
+        assertEquals("24/05/1950", bodyCell.getMin());
+        assertEquals("02/04/2030", bodyCell.getMax());
         assertEquals("%", bodyCell.getUnitLabel().getValue());
         assertEquals(LabelTypeEnum.VTL_MD, bodyCell.getUnitLabel().getType());
         assertEquals("FOO", bodyCell.getResponse().getName());
