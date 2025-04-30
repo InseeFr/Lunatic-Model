@@ -1,8 +1,9 @@
 package fr.insee.lunatic.model.flat;
 
-import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import fr.insee.lunatic.conversion.variable.BoundariesDeserializer;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,7 +18,8 @@ import java.util.List;
         "componentType",
         "orientation",
         "maxLength",
-        "boundaries",
+        "min",
+        "max",
         "decimals",
         "id",
         "value",
@@ -61,7 +63,7 @@ public class BodyCell {
     protected ComponentTypeEnum componentType;
     protected BigInteger maxLength;
 
-    @JsonDeserialize(using = BoundariesDeserializer.class)
+    @JsonIgnore
     protected Boundaries boundaries;
 
     protected BigInteger decimals;
@@ -122,14 +124,46 @@ public class BodyCell {
         unit.setLabel(labelType);
     }
 
-    @JsonIgnore
+    @JsonProperty("min")
     public Object getMin() {
         return boundaries != null ? boundaries.getMin() : null;
     }
 
-    @JsonIgnore
+    @JsonProperty("min")
+    public void setMin(Object min) {
+        if (boundaries == null) {
+            boundaries = switch (componentType) {
+                case INPUT_NUMBER -> new NumberBoundaries();
+                case DATEPICKER -> new DateBoundaries();
+                default -> throw new IllegalStateException("Unsupported componentType: " + componentType);
+            };
+        }
+        if (boundaries instanceof NumberBoundaries numberBoundaries && min instanceof Number number) {
+            numberBoundaries.setMin(number.doubleValue());
+        } else if (boundaries instanceof DateBoundaries dateBoundaries && min instanceof String string) {
+            dateBoundaries.setMin(string);
+        }
+    }
+
+    @JsonProperty("max")
     public Object getMax() {
         return boundaries != null ? boundaries.getMax() : null;
+    }
+
+    @JsonProperty("max")
+    public void setMax(Object max) {
+        if (boundaries == null) {
+            boundaries = switch (componentType) {
+                case INPUT_NUMBER -> new NumberBoundaries();
+                case DATEPICKER -> new DateBoundaries();
+                default -> throw new IllegalStateException("Unsupported componentType: " + componentType);
+            };
+        }
+        if (boundaries instanceof NumberBoundaries numberBoundaries && max instanceof Number number) {
+            numberBoundaries.setMax(number.doubleValue());
+        } else if (boundaries instanceof DateBoundaries dateBoundaries && max instanceof String string) {
+            dateBoundaries.setMax(string);
+        }
     }
 
 }

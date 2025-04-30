@@ -27,10 +27,8 @@ class BodyCellSerializationTest {
             {
               "id": "foo-id",
               "componentType": "InputNumber",
-              "boundaries": {
-                  "min": 0,
-                  "max": 100
-              },
+              "min": 0,
+              "max": 100,
               "unit": {
                 "value": "%",
                 "type": "VTL|MD"
@@ -44,10 +42,8 @@ class BodyCellSerializationTest {
             {
               "id": "foo-id",
               "componentType": "Datepicker",
-              "boundaries": {
-                  "min": "24/05/1950",
-                  "max": "02/04/2030"
-              },
+              "min": "24/05/1950",
+              "max": "02/04/2030",
               "unit": {
                 "value": "%",
                 "type": "VTL|MD"
