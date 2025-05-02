@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class NumberBoundaries implements Boundaries {
+class NumberBoundaries implements Boundaries {
     private Double min;
     private Double max;
 }

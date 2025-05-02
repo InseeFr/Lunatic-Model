@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class DateBoundaries implements Boundaries {
+class DateBoundaries implements Boundaries {
     private String min;
     private String max;
 }
