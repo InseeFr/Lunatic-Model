@@ -39,6 +39,17 @@ class BodyCellSerializationTest {
               }
             }""";
 
+    private final String jsonInputNumberCellWithDecimals = """
+            {
+              "id": "foo-id",
+              "componentType": "InputNumber",
+              "min": 0.5,
+              "max": 1,
+              "response": {
+                "name": "FOO"
+              }
+            }""";
+
     private final String jsonDatepickerCell = """
             {
               "id": "foo-id",
@@ -116,6 +127,34 @@ class BodyCellSerializationTest {
         assertEquals(100d, bodyCell.getMax());
         assertEquals("%", bodyCell.getUnitLabel().getValue());
         assertEquals(LabelTypeEnum.VTL_MD, bodyCell.getUnitLabel().getType());
+        assertEquals("FOO", bodyCell.getResponse().getName());
+    }
+
+    @Test
+    void serializeInputNumberCell2() throws JsonProcessingException, JSONException {
+        //
+        BodyCell bodyCell = new BodyCell();
+        bodyCell.setId("foo-id");
+        bodyCell.setComponentType(ComponentTypeEnum.INPUT_NUMBER);
+        bodyCell.setMin(0.5d);
+        bodyCell.setMax(1d);
+        bodyCell.setResponse(new ResponseType());
+        bodyCell.getResponse().setName("FOO");
+        //
+        String result = objectMapper.writeValueAsString(bodyCell);
+        //
+        JSONAssert.assertEquals(jsonInputNumberCellWithDecimals, result, JSONCompareMode.STRICT);
+    }
+
+    @Test
+    void deserializeInputNumberCell2() throws JsonProcessingException {
+        //
+        BodyCell bodyCell = objectMapper.readValue(jsonInputNumberCellWithDecimals, BodyCell.class);
+        //
+        assertEquals("foo-id", bodyCell.getId());
+        assertEquals(ComponentTypeEnum.INPUT_NUMBER, bodyCell.getComponentType());
+        assertEquals(0.5d, bodyCell.getMin());
+        assertEquals(1d, bodyCell.getMax());
         assertEquals("FOO", bodyCell.getResponse().getName());
     }
 
