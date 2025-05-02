@@ -78,7 +78,7 @@ class BodyCellSerializationTest {
     @Test
     void deserializeSuggesterCell() throws JsonProcessingException {
         //
-        BodyCell bodyCell = new ObjectMapper().readValue(jsonSuggesterCell, BodyCell.class);
+        BodyCell bodyCell = objectMapper.readValue(jsonSuggesterCell, BodyCell.class);
         //
         assertEquals("foo-id", bodyCell.getId());
         assertEquals(ComponentTypeEnum.SUGGESTER, bodyCell.getComponentType());
@@ -108,7 +108,7 @@ class BodyCellSerializationTest {
     @Test
     void deserializeInputNumberCell() throws JsonProcessingException {
         //
-        BodyCell bodyCell = new ObjectMapper().readValue(jsonInputNumberCell, BodyCell.class);
+        BodyCell bodyCell = objectMapper.readValue(jsonInputNumberCell, BodyCell.class);
         //
         assertEquals("foo-id", bodyCell.getId());
         assertEquals(ComponentTypeEnum.INPUT_NUMBER, bodyCell.getComponentType());
@@ -138,7 +138,7 @@ class BodyCellSerializationTest {
     @Test
     void deserializeDatepickerCell() throws JsonProcessingException {
         //
-        BodyCell bodyCell = new ObjectMapper().readValue(jsonDatepickerCell, BodyCell.class);
+        BodyCell bodyCell = objectMapper.readValue(jsonDatepickerCell, BodyCell.class);
         //
         assertEquals("foo-id", bodyCell.getId());
         assertEquals(ComponentTypeEnum.DATEPICKER, bodyCell.getComponentType());
