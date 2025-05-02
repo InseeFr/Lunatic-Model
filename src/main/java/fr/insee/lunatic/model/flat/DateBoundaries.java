@@ -8,9 +8,4 @@ import lombok.Setter;
 public class DateBoundaries implements Boundaries {
     private String min;
     private String max;
-
-    @Override
-    public ComponentTypeEnum getComponentType() {
-        return ComponentTypeEnum.DATEPICKER;
-    }
 }
