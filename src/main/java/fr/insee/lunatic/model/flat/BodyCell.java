@@ -153,14 +153,14 @@ public class BodyCell {
         if (boundaries == null) {
             boundaries = switch (componentType) {
                 case INPUT_NUMBER -> new NumberBoundaries();
-                case DATEPICKER -> new DateBoundaries();
+                case DATEPICKER -> new StringBoundaries();
                 default -> throw new IllegalStateException("Unsupported componentType: " + componentType);
             };
         }
         if (boundaries instanceof NumberBoundaries numberBoundaries && min instanceof Number number) {
             numberBoundaries.setMin(number.doubleValue());
-        } else if (boundaries instanceof DateBoundaries dateBoundaries && min instanceof String string) {
-            dateBoundaries.setMin(string);
+        } else if (boundaries instanceof StringBoundaries stringBoundaries && min instanceof String string) {
+            stringBoundaries.setMin(string);
         }
     }
 
@@ -174,14 +174,14 @@ public class BodyCell {
         if (boundaries == null) {
             boundaries = switch (componentType) {
                 case INPUT_NUMBER -> new NumberBoundaries();
-                case DATEPICKER -> new DateBoundaries();
+                case DATEPICKER -> new StringBoundaries();
                 default -> throw new IllegalStateException("Unsupported componentType: " + componentType);
             };
         }
         if (boundaries instanceof NumberBoundaries numberBoundaries && max instanceof Number number) {
             numberBoundaries.setMax(number.doubleValue());
-        } else if (boundaries instanceof DateBoundaries dateBoundaries && max instanceof String string) {
-            dateBoundaries.setMax(string);
+        } else if (boundaries instanceof StringBoundaries stringBoundaries && max instanceof String string) {
+            stringBoundaries.setMax(string);
         }
     }
 
