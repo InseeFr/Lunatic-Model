@@ -148,41 +148,52 @@ public class BodyCell {
         return boundaries != null ? boundaries.getMin() : null;
     }
 
-    @JsonProperty("min")
-    public void setMin(Object min) {
-        if (boundaries == null) {
-            boundaries = switch (componentType) {
-                case INPUT_NUMBER -> new NumberBoundaries();
-                case DATEPICKER -> new StringBoundaries();
-                default -> throw new IllegalStateException("Unsupported componentType: " + componentType);
-            };
-        }
-        if (boundaries instanceof NumberBoundaries numberBoundaries && min instanceof Number number) {
-            numberBoundaries.setMin(number.doubleValue());
-        } else if (boundaries instanceof StringBoundaries stringBoundaries && min instanceof String string) {
-            stringBoundaries.setMin(string);
-        }
-    }
-
     @JsonProperty("max")
     public Object getMax() {
         return boundaries != null ? boundaries.getMax() : null;
     }
 
+    @JsonProperty("min")
+    public void setMin(Object min) {
+        if (boundaries == null) {
+            instantiateBoundaries();
+        }
+        if (boundaries instanceof NumberBoundaries numberBoundaries && min instanceof Number number) {
+            // Note: using Number to work with integers deserialization
+            numberBoundaries.setMin(number.doubleValue());
+            return;
+        }
+        if (boundaries instanceof StringBoundaries stringBoundaries && min instanceof String string) {
+            stringBoundaries.setMin(string);
+            return;
+        }
+        throw new IllegalArgumentException("Invalid or inconsistent type for min value in body cell.");
+    }
+
     @JsonProperty("max")
     public void setMax(Object max) {
         if (boundaries == null) {
-            boundaries = switch (componentType) {
-                case INPUT_NUMBER -> new NumberBoundaries();
-                case DATEPICKER -> new StringBoundaries();
-                default -> throw new IllegalStateException("Unsupported componentType: " + componentType);
-            };
+            instantiateBoundaries();
         }
         if (boundaries instanceof NumberBoundaries numberBoundaries && max instanceof Number number) {
+            // Note: using Number to work with integers deserialization
             numberBoundaries.setMax(number.doubleValue());
-        } else if (boundaries instanceof StringBoundaries stringBoundaries && max instanceof String string) {
-            stringBoundaries.setMax(string);
+            return;
         }
+        if (boundaries instanceof StringBoundaries stringBoundaries && max instanceof String string) {
+            stringBoundaries.setMax(string);
+            return;
+        }
+        throw new IllegalArgumentException("Invalid or inconsistent type for max value in body cell.");
+    }
+
+    private void instantiateBoundaries() {
+        boundaries = switch (componentType) {
+            case INPUT_NUMBER -> new NumberBoundaries();
+            case DATEPICKER -> new StringBoundaries();
+            default -> throw new IllegalStateException(
+                    "Component of type '" + componentType + "' doesn't have a min or max property.");
+        };
     }
 
 }
