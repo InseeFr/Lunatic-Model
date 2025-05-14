@@ -6,7 +6,7 @@
 	<groupId>fr.insee.lunatic</groupId>
 	<artifactId>lunatic-model</artifactId>
 	<packaging>jar</packaging>
-	<version>5.2.2</version>
+	<version>5.2.2-SNAPSHOT</version>
 	<name>Lunatic Model</name>
 	<description>Classes and converters for the Lunatic model</description>
 	<url>https://inseefr.github.io/Lunatic-Model/</url>
