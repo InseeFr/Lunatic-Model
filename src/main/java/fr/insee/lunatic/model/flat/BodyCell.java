@@ -94,6 +94,9 @@ public class BodyCell {
     protected ConditionFilterType conditionFilter;
 
     @Getter @Setter
+    protected ConditionFilterType conditionReadOnly;
+
+    @Getter @Setter
     protected String id;
 
     public BodyCell() {

@@ -28,6 +28,10 @@ class RosterForLoopSerializationTest {
                         "conditionFilter": {
                             "type": "VTL",
                             "value": "AGE >= 18"
+                        },
+                        "conditionReadOnly": {
+                            "type": "VTL",
+                            "value": "AGE > 50"
                         }
                       }
                   ]
@@ -47,7 +51,11 @@ class RosterForLoopSerializationTest {
         ConditionFilterType conditionFilter = new ConditionFilterType();
         conditionFilter.setType(LabelTypeEnum.VTL);
         conditionFilter.setValue("AGE >= 18");
+        ConditionFilterType conditionReadOnly = new ConditionFilterType();
+        conditionReadOnly.setType(LabelTypeEnum.VTL);
+        conditionReadOnly.setValue("AGE > 50");
         inputNumberCell.setConditionFilter(conditionFilter);
+        inputNumberCell.setConditionReadOnly(conditionReadOnly);
         rosterForLoop.getComponents().add(inputNumberCell);
         questionnaire.getComponents().add(rosterForLoop);
         //
@@ -69,6 +77,8 @@ class RosterForLoopSerializationTest {
         assertEquals(ComponentTypeEnum.INPUT_NUMBER, inputNumberCell.getComponentType());
         assertEquals("AGE >= 18", inputNumberCell.getConditionFilter().getValue());
         assertEquals(LabelTypeEnum.VTL, inputNumberCell.getConditionFilter().getType());
+        assertEquals("AGE > 50", inputNumberCell.getConditionReadOnly().getValue());
+        assertEquals(LabelTypeEnum.VTL, inputNumberCell.getConditionReadOnly().getType());
     }
 
 }
