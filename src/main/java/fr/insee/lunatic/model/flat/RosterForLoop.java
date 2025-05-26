@@ -16,6 +16,7 @@ public class RosterForLoop
     protected LinesRoster lines;
     protected List<HeaderType> header;
     protected List<BodyCell> components;
+    protected LabelType iterations;
 
     /**
      * Metadata on how the table should be displayed.
