@@ -27,8 +27,4 @@ public class CollectedVariableType extends VariableType {
     /** Value field of the collected variable. */
     protected CollectedVariableValues values;
 
-    /** Maximum length allowed for the text value, if applicable. */
-    @JsonProperty("maxLength")
-    protected BigInteger maxLength;
-
 }
