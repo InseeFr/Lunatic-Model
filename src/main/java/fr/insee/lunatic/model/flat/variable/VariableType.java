@@ -18,8 +18,7 @@ import lombok.Setter;
         "values",
         "expression",
         "bindingDependencies",
-        "shapeFrom",
-        "isIgnoredByLunatic"
+        "shapeFrom"
 })
 @JsonTypeInfo(
         use = JsonTypeInfo.Id.NAME,
@@ -49,10 +48,5 @@ public abstract class VariableType {
 
     /** {@link VariableDimension} */
     protected VariableDimension dimension;
-
-    /** Whether or not the Lunatic engine should ignore this variable
-     * (e.g. it is an exploitation variable that will be calculated later). */
-    @JsonProperty(defaultValue = false)
-    protected Boolean isIgnoredByLunatic;
 
 }
