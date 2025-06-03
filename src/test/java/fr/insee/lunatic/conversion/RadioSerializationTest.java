@@ -8,6 +8,7 @@ import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
 import java.io.ByteArrayInputStream;
+import java.math.BigInteger;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertInstanceOf;
@@ -52,6 +53,7 @@ class RadioSerializationTest {
         optionOther.getDetail().getLabel().setType(LabelTypeEnum.VTL);
         optionOther.getDetail().setResponse(new ResponseType());
         optionOther.getDetail().getResponse().setName("FOO_DETAIL");
+        optionOther.getDetail().setMaxLength(BigInteger.valueOf(5));
         radio.getOptions().add(optionOther);
         //
         radio.setResponse(new ResponseType());
@@ -105,7 +107,8 @@ class RadioSerializationTest {
                             },
                             "response": {
                               "name": "FOO_DETAIL"
-                            }
+                            },
+                            "maxLength": 5
                           }
                         }
                       ],

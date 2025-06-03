@@ -8,6 +8,8 @@ import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
+import java.math.BigInteger;
+
 class ResponseCheckboxGroupTest {
 
     @Test
@@ -26,6 +28,7 @@ class ResponseCheckboxGroupTest {
         responseCheckboxGroup.getDetail().getLabel().setType(LabelTypeEnum.VTL);
         responseCheckboxGroup.getDetail().setResponse(new ResponseType());
         responseCheckboxGroup.getDetail().getResponse().setName("NATIO1N5DETAIL");
+        responseCheckboxGroup.getDetail().setMaxLength(BigInteger.valueOf(15));
         //
         String result = new ObjectMapper().writeValueAsString(responseCheckboxGroup);
         //
@@ -44,7 +47,8 @@ class ResponseCheckboxGroupTest {
                         },
                         "response": {
                             "name": "NATIO1N5DETAIL"
-                        }
+                        },
+                        "maxLength": 15
                     }
                 }""";
         JSONAssert.assertEquals(expectedJson, result, JSONCompareMode.STRICT);

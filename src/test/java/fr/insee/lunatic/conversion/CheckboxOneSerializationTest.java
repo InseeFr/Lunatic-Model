@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
+import java.math.BigInteger;
+
 class CheckboxOneSerializationTest {
 
     @Test
@@ -43,6 +45,7 @@ class CheckboxOneSerializationTest {
         optionOther.getDetail().getLabel().setType(LabelTypeEnum.VTL);
         optionOther.getDetail().setResponse(new ResponseType());
         optionOther.getDetail().getResponse().setName("FOO_DETAIL");
+        optionOther.getDetail().setMaxLength(BigInteger.valueOf(5));
         checkboxOne.getOptions().add(optionOther);
         //
         checkboxOne.setResponse(new ResponseType());
@@ -92,7 +95,8 @@ class CheckboxOneSerializationTest {
                             },
                             "response": {
                               "name": "FOO_DETAIL"
-                            }
+                            },
+                            "maxLength": 5
                           }
                         }
                       ],
