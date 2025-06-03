@@ -13,6 +13,7 @@ import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
 import java.io.ByteArrayInputStream;
+import java.math.BigInteger;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -184,6 +185,61 @@ class CollectedVariableSerializationTest {
         assertEquals("PAIRWISE_VAR", collectedVariableType.getName());
         assertEquals(VariableTypeEnum.COLLECTED, collectedVariableType.getVariableType());
         assertInstanceOf(CollectedVariableValues.DoubleArray.class, collectedVariableType.getValues());
+    }
+
+    @Test
+    void serializeVariableWithMaxLength() throws SerializationException, JSONException {
+        //
+        Questionnaire questionnaire = new Questionnaire();
+        //
+        CollectedVariableType variable = new CollectedVariableType();
+        variable.setName("MAXLEN_VAR");
+        variable.setValues(new CollectedVariableValues.Scalar());
+        variable.setMaxLength(BigInteger.valueOf(4));
+        questionnaire.getVariables().add(variable);
+        //
+        String result = jsonSerializer.serialize(questionnaire);
+        //
+        String expectedJson = """
+        {
+          "componentType": "Questionnaire",
+          "variables": [
+            {
+              "variableType": "COLLECTED",
+              "name": "MAXLEN_VAR",
+              "values": {"COLLECTED": null},
+              "maxLength": 4
+            }
+          ]
+        }""";
+        //
+        JSONAssert.assertEquals(expectedJson, result, JSONCompareMode.STRICT);
+    }
+
+    @Test
+    void deserializeVariableWithMaxLength() throws SerializationException {
+        String jsonInput = """
+        {
+          "componentType": "Questionnaire",
+          "variables": [
+            {
+              "variableType": "COLLECTED",
+              "name": "MAXLEN_VAR",
+              "values": {"COLLECTED": null},
+              "maxLength": 4
+            }
+          ]
+        }""";
+
+        Questionnaire questionnaire = jsonDeserializer.deserialize(new ByteArrayInputStream(jsonInput.getBytes()));
+        assertEquals(1, questionnaire.getVariables().size());
+
+        CollectedVariableType variableType = assertInstanceOf(
+                CollectedVariableType.class, questionnaire.getVariables().getFirst());
+        assertEquals("MAXLEN_VAR", variableType.getName());
+        assertEquals(VariableTypeEnum.COLLECTED, variableType.getVariableType());
+        assertInstanceOf(CollectedVariableValues.Scalar.class, variableType.getValues());
+        assertEquals(BigInteger.valueOf(4), variableType.getMaxLength());
     }
 
 }
