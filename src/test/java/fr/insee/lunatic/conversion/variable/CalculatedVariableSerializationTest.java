@@ -59,6 +59,27 @@ class CalculatedVariableSerializationTest {
               ]
             }""";
 
+    private final String calculatedVarIgnoredByLunatic = """
+            {
+              "componentType": "Questionnaire",
+              "variables": [
+                {
+                  "variableType": "CALCULATED",
+                  "name": "FOO_CALCULATED_VAR",
+                  "dimension": 0,
+                  "expression": {
+                    "value": "VAR1 + VAR2",
+                    "type": "VTL"
+                  },
+                  "bindingDependencies": [
+                    "VAR1",
+                    "VAR2"
+                  ],
+                  "isIgnoredByLunatic": true
+                }
+              ]
+            }""";
+
     private final JsonSerializer jsonSerializer = new JsonSerializer();
     private final JsonDeserializer jsonDeserializer = new JsonDeserializer();
 
@@ -96,6 +117,25 @@ class CalculatedVariableSerializationTest {
         String result = jsonSerializer.serialize(questionnaire);
         //
         JSONAssert.assertEquals(calculatedVarWithShapeJson, result, JSONCompareMode.STRICT);
+    }
+
+    @Test
+    void serializeCalculatedVariable_ignoredByLunatic() throws SerializationException, JSONException {
+        //
+        Questionnaire questionnaire = new Questionnaire();
+        CalculatedVariableType calculatedVariableType = new CalculatedVariableType();
+        calculatedVariableType.setName("FOO_CALCULATED_VAR");
+        calculatedVariableType.setDimension(VariableDimension.SCALAR);
+        calculatedVariableType.setExpression(new LabelType());
+        calculatedVariableType.getExpression().setValue("VAR1 + VAR2");
+        calculatedVariableType.getExpression().setType(LabelTypeEnum.VTL);
+        calculatedVariableType.getBindingDependencies().addAll(List.of("VAR1", "VAR2"));
+        calculatedVariableType.setIsIgnoredByLunatic(true);
+        questionnaire.getVariables().add(calculatedVariableType);
+        //
+        String result = jsonSerializer.serialize(questionnaire);
+        //
+        JSONAssert.assertEquals(calculatedVarIgnoredByLunatic, result, JSONCompareMode.STRICT);
     }
 
     @Test
