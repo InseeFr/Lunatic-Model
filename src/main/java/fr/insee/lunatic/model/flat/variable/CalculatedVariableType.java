@@ -32,6 +32,12 @@ public class CalculatedVariableType extends VariableType {
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     protected List<String> shapeFrom = new ArrayList<>();
 
+    /** Whether or not the Lunatic engine should ignore this variable
+     * (e.g. it is an exploitation variable that will be calculated later). */
+    @Getter @Setter
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    protected Boolean isIgnoredByLunatic;
+
     /**
      * Returns the list of the 'shape from' variable names.
      * @return A list of variable names.
