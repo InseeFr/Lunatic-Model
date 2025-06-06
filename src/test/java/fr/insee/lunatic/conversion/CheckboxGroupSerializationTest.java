@@ -7,6 +7,8 @@ import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
+import java.math.BigInteger;
+
 class CheckboxGroupSerializationTest {
 
     @Test
@@ -52,6 +54,7 @@ class CheckboxGroupSerializationTest {
         responseOther.getDetail().getLabel().setType(LabelTypeEnum.VTL);
         responseOther.getDetail().setResponse(new ResponseType());
         responseOther.getDetail().getResponse().setName("FOO_C_DETAIL");
+        responseOther.getDetail().setMaxLength(BigInteger.valueOf(4));
         checkboxGroup.getResponses().add(responseOther);
         //
         ResponseCheckboxGroup responseOther2 = new ResponseCheckboxGroup();
@@ -70,6 +73,7 @@ class CheckboxGroupSerializationTest {
         responseOther2.getDetail().getLabel().setType(LabelTypeEnum.VTL);
         responseOther2.getDetail().setResponse(new ResponseType());
         responseOther2.getDetail().getResponse().setName("FOO_D_DETAIL");
+        responseOther2.getDetail().setMaxLength(BigInteger.valueOf(6));
         checkboxGroup.getResponses().add(responseOther2);
         //
         questionnaire.getComponents().add(checkboxGroup);
@@ -129,7 +133,8 @@ class CheckboxGroupSerializationTest {
                             },
                             "response": {
                               "name": "FOO_C_DETAIL"
-                            }
+                            },
+                            "maxLength": 4
                           }
                         },
                         {
@@ -152,7 +157,8 @@ class CheckboxGroupSerializationTest {
                             },
                             "response": {
                               "name": "FOO_D_DETAIL"
-                            }
+                            },
+                            "maxLength": 6
                           }
                         }
                       ]

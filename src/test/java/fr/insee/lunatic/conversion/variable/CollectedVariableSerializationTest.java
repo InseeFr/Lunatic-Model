@@ -13,6 +13,7 @@ import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
 import java.io.ByteArrayInputStream;
+import java.math.BigInteger;
 
 import static org.junit.jupiter.api.Assertions.*;
 
