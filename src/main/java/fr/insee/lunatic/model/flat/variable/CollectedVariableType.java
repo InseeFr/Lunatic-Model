@@ -1,10 +1,7 @@
 package fr.insee.lunatic.model.flat.variable;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
-
-import java.math.BigInteger;
 
 /**
  * A collected variable is a variable whose value is collected in a response component.
