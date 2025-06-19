@@ -49,4 +49,6 @@ class ConditionFilterSerializationTest {
         assertTrue(conditionFilterType.getBindingDependencies().isEmpty());
     }
 
+
+
 }

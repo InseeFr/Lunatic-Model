@@ -14,6 +14,8 @@ public class LabelType {
 
     protected String value;
 
+    protected String shapeFrom;
+
     protected LabelTypeEnum type;
 
 }

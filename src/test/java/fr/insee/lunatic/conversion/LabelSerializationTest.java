@@ -107,4 +107,44 @@ class LabelSerializationTest {
                 jsonDeserializer.deserialize(new ByteArrayInputStream(jsonInput.getBytes())));
     }
 
+    @Test
+    void serializeFromQuestionnaireShapeFrom() throws SerializationException, JSONException {
+        //
+        Questionnaire questionnaire = new Questionnaire();
+        LabelType label = new LabelType();
+        label.setValue("Foo label");
+        label.setType(LabelTypeEnum.VTL);
+        label.setShapeFrom("BAR");
+        questionnaire.setLabel(label);
+        //
+        JsonSerializer jsonSerializer = new JsonSerializer();
+        String result = jsonSerializer.serialize(questionnaire);
+        //
+        String expected = """
+                {
+                  "componentType": "Questionnaire",
+                  "label": {"value": "Foo label", "type": "VTL", "shapeFrom": "BAR" }
+                }
+                """;
+        JSONAssert.assertEquals(expected, result, JSONCompareMode.STRICT);
+    }
+
+    @Test
+    void deserializeFromQuestionnaireShapeFrom() throws SerializationException {
+        //
+        String jsonInput = """
+                {
+                  "componentType": "Questionnaire",
+                  "label": {"value": "Foo label", "type": "VTL", "shapeFrom": "BAR"}
+                }
+                """;
+        //
+        JsonDeserializer jsonDeserializer = new JsonDeserializer();
+        Questionnaire questionnaire = jsonDeserializer.deserialize(new ByteArrayInputStream(jsonInput.getBytes()));
+        //
+        LabelType label = questionnaire.getLabel();
+        assertEquals(LabelTypeEnum.VTL, label.getType());
+        assertEquals("BAR", label.getShapeFrom());
+    }
+
 }
