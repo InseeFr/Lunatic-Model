@@ -20,8 +20,6 @@ public class ConditionFilterType extends LabelType {
     @JsonIgnore
     protected List<String> bindingDependencies;
 
-    protected String shapeFrom;
-
     public ConditionFilterType() {
         this.bindingDependencies = new ArrayList<>();
     }
