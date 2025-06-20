@@ -49,6 +49,7 @@ public class Loop
 
     public Loop() {
         super();
+        this.componentType = ComponentTypeEnum.LOOP;
         this.loopDependencies = new ArrayList<>();
         this.components = new ArrayList<>();
     }
