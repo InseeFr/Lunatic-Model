@@ -38,7 +38,14 @@ public class Loop
     protected LabelType iterations;
     protected String maxPage;
     protected BigInteger depth;
+
+    /** If a loop is paginated, each question is on a different page.
+     * Note: this property is pure metadata. In practice, it is the page numbers that determine the pagination. */
     protected Boolean paginatedLoop;
+
+    /** If iterations are paginated, all questions of each loop iteration are on a same page.
+     * Note: this property is pure metadata. In practice, it is the page numbers that determine the pagination. */
+    protected Boolean isPaginatedByIterations;
 
     public Loop() {
         super();
