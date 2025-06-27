@@ -1,9 +1,6 @@
 package fr.insee.lunatic.conversion.data;
 
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 
@@ -29,7 +26,7 @@ public class JSONLunaticDataToXML {
 	public File transform(File input) throws Exception {
 
 		File outputFile = Files.createTempFile("json2xml", ".xml").toFile();
-		
+
 
 		logger.debug("Output folder : " + outputFile.getAbsolutePath());
 
@@ -52,6 +49,27 @@ public class JSONLunaticDataToXML {
 		XSL.close();
 
 		return outputFile;
+	}
+
+	/**
+	 * Transformation of a lunatic json data to a lunatic xml data
+	 *
+	 * @param jsonInputStream data in a json format input stream
+	 * @return data in a xml format
+	 * @throws Exception when exceptions occurred
+	 */
+	public OutputStream transform(InputStream jsonInputStream) throws Exception {
+		try (InputStream xslStream = XMLLunaticDataToJSON.class.getClassLoader()
+				.getResourceAsStream(Constants.DATA_TRANSFORMATION_JSON_2_XML)) {
+
+			ByteArrayOutputStream xmlOutputStream = new ByteArrayOutputStream();
+			saxonService.transformWithSimpleXSLSheet(jsonInputStream, xmlOutputStream, xslStream);
+			return xmlOutputStream;
+		} catch (Exception e) {
+			String errorMessage = "An error occurred during the XML to JSON transformation: " + e.getMessage();
+			logger.error(errorMessage, e);
+			throw new Exception(errorMessage, e);
+		}
 	}
 
 	public String transform(String jsonString) throws Exception {

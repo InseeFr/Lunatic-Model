@@ -1,5 +1,6 @@
 package fr.insee.lunatic.conversion.data;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -44,5 +45,25 @@ public class XMLLunaticDataToJSON {
 		XSL.close();
 
 		return outputFile;
+	}
+
+	/**
+	 * Transform a xml lunatic data (InputStream) to JSON lunatic data (OutputStream) with xslt
+	 *
+	 * @param xmlInputStream   xml lunatic data
+	 * @throws Exception when exception occurs
+	 *
+	 * @return the outputstream data in json format
+	 */
+	public OutputStream transform(InputStream xmlInputStream) throws Exception {
+		try (InputStream xslStream = getClass().getClassLoader().getResourceAsStream(Constants.DATA_TRANSFORMATION_XML_2_JSON)) {
+			ByteArrayOutputStream jsonOutputStream = new ByteArrayOutputStream();
+			saxonService.transformXMLLunaticDataToJSON(xmlInputStream, jsonOutputStream, xslStream);
+			return jsonOutputStream;
+		} catch (Exception e) {
+			String errorMessage = "An error occurred during the XML to JSON transformation: " + e.getMessage();
+			logger.error(errorMessage, e);
+			throw new Exception(errorMessage, e);
+		}
 	}
 }
