@@ -3,7 +3,9 @@ package fr.insee.lunatic.model.flat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import fr.insee.lunatic.model.flat.articulation.Articulation;
 import fr.insee.lunatic.model.flat.cleaning.CleaningType;
+import fr.insee.lunatic.model.flat.multimode.Multimode;
 import fr.insee.lunatic.model.flat.variable.VariableType;
 import lombok.Getter;
 import lombok.Setter;
@@ -34,6 +36,9 @@ public class Questionnaire extends ComponentType {
     protected CleaningType cleaning;
     protected MissingType missingBlock;
     protected ResizingType resizing;
+
+    protected Multimode multimode;
+    protected Articulation articulation;
 
     public Questionnaire () {
         super();
