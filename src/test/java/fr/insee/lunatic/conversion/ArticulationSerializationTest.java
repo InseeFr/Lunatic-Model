@@ -37,7 +37,7 @@ class ArticulationSerializationTest {
         sexeItem.setLabel("Sexe");
         sexeItem.setType(LabelTypeEnum.VTL);
         sexeItem.setValue("if SEXE = \"H\" then \"Homme\" else \"Femme\"");
-        articulation.setItems(List.of(prenomItem, sexeItem));
+        articulation.getItems().addAll(List.of(prenomItem, sexeItem));
         questionnaire.setArticulation(articulation);
         //
         String result = new JsonSerializer().serialize(questionnaire);
