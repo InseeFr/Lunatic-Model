@@ -1,5 +1,6 @@
 package fr.insee.lunatic.model.flat;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
@@ -37,6 +38,7 @@ public class Roundabout extends ComponentType implements ComponentNestingType {
         super();
         this.componentType = ComponentTypeEnum.ROUNDABOUT;
         this.components = new ArrayList<>();
+        this.loopDependencies = new ArrayList<>();
     }
 
     /** Expression that defines the number of items in the roundabout. */
@@ -47,6 +49,10 @@ public class Roundabout extends ComponentType implements ComponentNestingType {
 
     /** Name of the variable that stores the current progress in each roundabout's item. */
     private String progressVariable;
+
+    /** List of variable names that are used in the size expression ('iterations') of the roundabout. */
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    private List<String> loopDependencies;
 
     /** {@link Item} */
     private Item item;
