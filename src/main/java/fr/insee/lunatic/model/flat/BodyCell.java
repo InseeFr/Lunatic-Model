@@ -67,7 +67,7 @@ public class BodyCell {
      * @deprecated Binding dependencies at component level are not used anymore in Lunatic. */
     @Getter @Setter
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    @Deprecated(since = "3.4.0")
+    @Deprecated(since = "3.4.0", forRemoval = true)
     protected List<String> bindingDependencies = new ArrayList<>();
 
     @Getter @Setter
@@ -94,7 +94,7 @@ public class BodyCell {
     protected ConditionFilterType conditionFilter;
 
     @Getter @Setter
-    protected ConditionFilterType conditionReadOnly;
+    protected LabelType conditionReadOnly;
 
     @Getter @Setter
     protected String id;
