@@ -1,5 +1,6 @@
 package fr.insee.lunatic.model.flat;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,6 +19,10 @@ public class CheckboxGroup extends ComponentType implements ComponentMultipleRes
 
     /** List of the modalities of the checkbox component. */
     protected List<ResponseCheckboxGroup> responses;
+
+    /** Indicates whether the response is mandatory for this component. */
+    @JsonProperty("isMandatory")
+    private Boolean mandatory;
 
     public CheckboxGroup() {
         super();
