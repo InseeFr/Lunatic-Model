@@ -14,7 +14,7 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class Suggester extends ComponentType implements ComponentSimpleResponseType {
+public class Suggester extends ComponentType implements ComponentSimpleResponseType, ComponentMandatory {
 
     public Suggester() {
         super();

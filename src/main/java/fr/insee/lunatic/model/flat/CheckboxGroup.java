@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class CheckboxGroup extends ComponentType implements ComponentMultipleResponseType {
+public class CheckboxGroup extends ComponentType implements ComponentMultipleResponseType, ComponentMandatory {
 
     /** Orientation of the checkbox modalities. */
     protected Orientation orientation;

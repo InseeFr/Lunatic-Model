@@ -9,7 +9,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class Datepicker extends ComponentType implements ComponentSimpleResponseType {
+public class Datepicker extends ComponentType implements ComponentSimpleResponseType, ComponentMandatory {
 
     public Datepicker() {
         super();

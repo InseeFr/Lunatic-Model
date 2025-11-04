@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class Dropdown extends ComponentType implements ComponentSimpleResponseType {
+public class Dropdown extends ComponentType implements ComponentSimpleResponseType, ComponentMandatory {
 
     /** Indicates whether the response is mandatory for this component. */
     @JsonProperty("isMandatory")

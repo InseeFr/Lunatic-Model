@@ -14,7 +14,7 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class Question extends ComponentType {
+public class Question extends ComponentType implements ComponentMandatory {
 
     /** Indicates if the response to the question is mandatory. */
     @JsonProperty("isMandatory")

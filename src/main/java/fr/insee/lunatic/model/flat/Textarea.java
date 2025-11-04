@@ -11,7 +11,7 @@ import java.math.BigInteger;
  */
 @Getter
 @Setter
-public class Textarea extends ComponentType implements ComponentSimpleResponseType {
+public class Textarea extends ComponentType implements ComponentSimpleResponseType, ComponentMandatory {
 
     public Textarea() {
         super();
