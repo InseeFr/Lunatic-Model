@@ -27,7 +27,7 @@ public class RosterForLoop
     protected String positioning;
 
     public RosterForLoop() {
-        super();
+        super(ComponentTypeEnum.ROSTER_FOR_LOOP);
         this.header = new ArrayList<>();
         this.components = new ArrayList<>();
     }

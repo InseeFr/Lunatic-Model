@@ -7,4 +7,5 @@ package fr.insee.lunatic.model.flat;
  */
 public interface ComponentMandatory {
     Boolean getMandatory();
+    void setMandatory(Boolean value);
 }

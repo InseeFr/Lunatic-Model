@@ -25,8 +25,7 @@ public class CheckboxGroup extends ComponentType implements ComponentMultipleRes
     private Boolean mandatory;
 
     public CheckboxGroup() {
-        super();
-        this.componentType = ComponentTypeEnum.CHECKBOX_GROUP;
+        super(ComponentTypeEnum.CHECKBOX_GROUP);
         this.orientation = Orientation.VERTICAL;
         this.responses = new ArrayList<>();
     }

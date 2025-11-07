@@ -21,7 +21,7 @@ public class Question extends ComponentType implements ComponentMandatory {
     private Boolean mandatory;
 
     public Question() {
-        this.componentType = ComponentTypeEnum.QUESTION;
+        super(ComponentTypeEnum.QUESTION);
         this.components = new ArrayList<>();
     }
 

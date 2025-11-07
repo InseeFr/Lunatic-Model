@@ -12,8 +12,7 @@ import lombok.Setter;
 public class Datepicker extends ComponentType implements ComponentSimpleResponseType, ComponentMandatory {
 
     public Datepicker() {
-        super();
-        this.componentType = ComponentTypeEnum.DATEPICKER;
+        super(ComponentTypeEnum.DATEPICKER);
     }
 
     /** Indicates whether the response is mandatory for this component. */

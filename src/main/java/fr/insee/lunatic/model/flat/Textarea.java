@@ -14,8 +14,7 @@ import java.math.BigInteger;
 public class Textarea extends ComponentType implements ComponentSimpleResponseType, ComponentMandatory {
 
     public Textarea() {
-        super();
-        this.componentType = ComponentTypeEnum.TEXTAREA;
+        super(ComponentTypeEnum.TEXTAREA);
     }
 
     /** Indicates whether the response is mandatory for this component. */

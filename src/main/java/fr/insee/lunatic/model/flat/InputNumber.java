@@ -19,8 +19,7 @@ import java.math.BigInteger;
 public class InputNumber extends ComponentType implements ComponentSimpleResponseType, ComponentMandatory {
 
     public InputNumber() {
-        super();
-        this.componentType = ComponentTypeEnum.INPUT_NUMBER;
+        super(ComponentTypeEnum.INPUT_NUMBER);
     }
 
     /** Indicates whether the response is mandatory for this component. */

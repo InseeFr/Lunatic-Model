@@ -145,7 +145,8 @@ public abstract class ComponentType {
      * To be moved in the Suggester class when the suggester specific treatment is removed in Eno. */
     protected String storeName;
 
-    protected ComponentType() {
+    protected ComponentType(ComponentTypeEnum componentType) {
+        this.componentType = componentType;
         controls = new ArrayList<>();
         declarations = new ArrayList<>();
     }

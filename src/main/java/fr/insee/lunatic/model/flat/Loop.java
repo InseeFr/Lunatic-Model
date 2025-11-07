@@ -48,8 +48,7 @@ public class Loop
     protected Boolean isPaginatedByIterations;
 
     public Loop() {
-        super();
-        this.componentType = ComponentTypeEnum.LOOP;
+        super(ComponentTypeEnum.LOOP);
         this.loopDependencies = new ArrayList<>();
         this.components = new ArrayList<>();
     }
