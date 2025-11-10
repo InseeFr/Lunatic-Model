@@ -40,7 +40,7 @@ public class PairwiseLinks
     protected SymLinksType symLinks;
 
     public PairwiseLinks() {
-        super();
+        super(ComponentTypeEnum.PAIRWISE_LINKS);
         this.components = new ArrayList<>();
     }
 

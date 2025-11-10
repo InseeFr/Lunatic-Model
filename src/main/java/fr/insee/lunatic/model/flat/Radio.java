@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class Radio extends ComponentType implements ComponentSimpleResponseType {
+public class Radio extends ComponentType implements ComponentSimpleResponseType, ComponentMandatory {
 
     /** Indicates whether the response is mandatory for this component. */
     @JsonProperty("isMandatory")
@@ -29,8 +29,7 @@ public class Radio extends ComponentType implements ComponentSimpleResponseType 
     protected ResponseType response;
 
     public Radio() {
-        super();
-        this.componentType = ComponentTypeEnum.RADIO;
+        super(ComponentTypeEnum.RADIO);
         this.orientation = Orientation.VERTICAL;
         this.options = new ArrayList<>();
     }

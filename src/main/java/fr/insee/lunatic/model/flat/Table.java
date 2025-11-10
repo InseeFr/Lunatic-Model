@@ -30,7 +30,7 @@ public class Table
     protected String positioning;
 
     public Table() {
-        super();
+        super(ComponentTypeEnum.TABLE);
         this.header = new ArrayList<>();
         this.bodyLines = new ArrayList<>();
     }

@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class CheckboxOne extends ComponentType implements ComponentSimpleResponseType {
+public class CheckboxOne extends ComponentType implements ComponentSimpleResponseType, ComponentMandatory {
 
     /** Orientation of the checkbox modalities. */
     protected Orientation orientation;
@@ -29,8 +29,7 @@ public class CheckboxOne extends ComponentType implements ComponentSimpleRespons
     private Boolean mandatory;
 
     public CheckboxOne() {
-        super();
-        this.componentType = ComponentTypeEnum.CHECKBOX_ONE;
+        super(ComponentTypeEnum.CHECKBOX_ONE);
         this.orientation = Orientation.VERTICAL;
         this.options = new ArrayList<>();
     }

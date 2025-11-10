@@ -5,10 +5,10 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Sequence
-    extends ComponentType
-    implements ComponentSequenceType
-{
+public class Sequence extends ComponentType implements ComponentSequenceType {
 
+    public Sequence() {
+        super(ComponentTypeEnum.SEQUENCE);
+    }
 
 }

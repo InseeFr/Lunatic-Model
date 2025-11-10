@@ -6,10 +6,12 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CheckboxBoolean
-    extends ComponentType
-    implements ComponentSimpleResponseType
-{
+public class CheckboxBoolean extends ComponentType implements ComponentSimpleResponseType, ComponentMandatory {
+
+    public CheckboxBoolean() {
+        super(ComponentTypeEnum.CHECKBOX_BOOLEAN);
+    }
+
     @JsonProperty(required = true)
     protected ResponseType response;
 

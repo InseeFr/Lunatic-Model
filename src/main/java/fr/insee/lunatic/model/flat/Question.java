@@ -14,14 +14,14 @@ import java.util.List;
  */
 @Getter
 @Setter
-public class Question extends ComponentType {
+public class Question extends ComponentType implements ComponentMandatory {
 
     /** Indicates if the response to the question is mandatory. */
     @JsonProperty("isMandatory")
     private Boolean mandatory;
 
     public Question() {
-        this.componentType = ComponentTypeEnum.QUESTION;
+        super(ComponentTypeEnum.QUESTION);
         this.components = new ArrayList<>();
     }
 

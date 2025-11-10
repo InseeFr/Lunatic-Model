@@ -11,11 +11,10 @@ import java.math.BigInteger;
  */
 @Getter
 @Setter
-public class Input extends ComponentType implements ComponentSimpleResponseType {
+public class Input extends ComponentType implements ComponentSimpleResponseType, ComponentMandatory {
 
     public Input() {
-        super();
-        this.componentType = ComponentTypeEnum.INPUT;
+        super(ComponentTypeEnum.INPUT);
     }
 
     /** Indicates whether the response is mandatory for this component. */
