@@ -1,7 +1,10 @@
 package fr.insee.lunatic.conversion;
 
 import fr.insee.lunatic.exception.SerializationException;
-import fr.insee.lunatic.model.flat.*;
+import fr.insee.lunatic.model.flat.Questionnaire;
+import fr.insee.lunatic.model.flat.ResizingIterationEntry;
+import fr.insee.lunatic.model.flat.ResizingPairwiseEntry;
+import fr.insee.lunatic.model.flat.ResizingType;
 import org.json.JSONException;
 import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;

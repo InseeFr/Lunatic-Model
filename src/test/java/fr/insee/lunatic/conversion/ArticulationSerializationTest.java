@@ -5,19 +5,13 @@ import fr.insee.lunatic.model.flat.LabelTypeEnum;
 import fr.insee.lunatic.model.flat.Questionnaire;
 import fr.insee.lunatic.model.flat.articulation.Articulation;
 import fr.insee.lunatic.model.flat.articulation.ArticulationItem;
-import fr.insee.lunatic.model.flat.multimode.Multimode;
-import fr.insee.lunatic.model.flat.multimode.MultimodeLeaf;
-import fr.insee.lunatic.model.flat.multimode.MultimodeQuestionnaire;
-import fr.insee.lunatic.model.flat.multimode.MultimodeRule;
 import org.json.JSONException;
 import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
 import java.io.ByteArrayInputStream;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
