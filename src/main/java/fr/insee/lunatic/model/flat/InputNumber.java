@@ -66,7 +66,7 @@ public class InputNumber extends ComponentType implements ComponentSimpleRespons
     /** Legacy unit string property.
      * @deprecated Use label unit. */
     @JsonIgnore
-    @Deprecated(since = "3.14.0", forRemoval = true)
+    @Deprecated(since = "3.14.0", forRemoval = true) //NOSONAR
     public String getUnit() {
         if (unit == null)
             return null;
@@ -83,7 +83,7 @@ public class InputNumber extends ComponentType implements ComponentSimpleRespons
     /** Legacy unit string property.
      * @deprecated Use label unit. */
     @JsonIgnore
-    @Deprecated(since = "3.14.0", forRemoval = true)
+    @Deprecated(since = "3.14.0", forRemoval = true) //NOSONAR
     public void setUnit(String value) {
         unit = new Unit();
         unit.setValue(value);
