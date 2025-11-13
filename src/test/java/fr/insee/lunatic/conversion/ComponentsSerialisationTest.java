@@ -21,10 +21,8 @@ class ComponentsSerialisationTest {
         //
         Questionnaire questionnaire = new Questionnaire();
         questionnaire.setId("questionnaire-id");
-        questionnaire.setComponentType(ComponentTypeEnum.QUESTIONNAIRE);
         Input input = new Input();
         input.setId("input-id");
-        input.setComponentType(ComponentTypeEnum.INPUT);
         questionnaire.getComponents().add(input);
         //
         JsonSerializer jsonSerializer = new JsonSerializer();

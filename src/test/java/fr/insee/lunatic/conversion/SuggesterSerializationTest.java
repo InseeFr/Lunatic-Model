@@ -46,7 +46,6 @@ class SuggesterSerializationTest {
         //
         Suggester suggester = new Suggester();
         suggester.setId("foo-id");
-        suggester.setComponentType(ComponentTypeEnum.SUGGESTER);
         suggester.setStoreName("FOO_CODE_LIST");
         suggester.setResponse(new ResponseType());
         suggester.getResponse().setName("FOO");
@@ -55,7 +54,6 @@ class SuggesterSerializationTest {
         //
         Questionnaire questionnaire = new Questionnaire();
         questionnaire.setId("questionnaire-id");
-        questionnaire.setComponentType(ComponentTypeEnum.QUESTIONNAIRE);
         questionnaire.getComponents().add(suggester);
 
         //

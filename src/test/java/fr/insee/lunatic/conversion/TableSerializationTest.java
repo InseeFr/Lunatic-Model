@@ -41,7 +41,6 @@ class TableSerializationTest {
         //
         Questionnaire questionnaire = new Questionnaire();
         Table table = new Table();
-        table.setComponentType(ComponentTypeEnum.TABLE);
         table.getBodyLines().add(new BodyLine());
         BodyCell textCell = new BodyCell();
         textCell.setId("text-cell-id");

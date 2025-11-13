@@ -63,7 +63,6 @@ class QuestionSerializationTest {
         //
         Input input = new Input();
         input.setId("input-id");
-        input.setComponentType(ComponentTypeEnum.INPUT);
         input.setPage("1");
         input.setLabel(new LabelType());
         input.getLabel().setValue("\"Input component label\"");
