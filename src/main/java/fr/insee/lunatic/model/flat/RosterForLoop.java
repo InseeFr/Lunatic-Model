@@ -23,7 +23,7 @@ public class RosterForLoop
      * Value should be one of "HORIZONTAL", "VERTICAL" or "DEFAULT".
      * @deprecated Unused in Lunatic, to be removed.
      */
-    @Deprecated(forRemoval = true, since = "3.14.0")
+    @Deprecated(since = "3.14.0", forRemoval = true)
     protected String positioning;
 
     public RosterForLoop() {

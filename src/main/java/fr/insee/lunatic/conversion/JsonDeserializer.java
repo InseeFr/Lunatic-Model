@@ -21,7 +21,7 @@ public class JsonDeserializer {
 	 * @throws SerializationException if file cannot be found or deserialization fails.
 	 * @deprecated The string file path argument is misleading, this method should be removed.
 	 */
-	@Deprecated(since = "3.16.0")
+	@Deprecated(since = "3.16.0", forRemoval = true)
 	public Questionnaire deserialize(String fileName) throws SerializationException {
 
 		if ((fileName == null) || (fileName.isEmpty())) return null;

@@ -44,10 +44,9 @@ class RosterForLoopSerializationTest {
         //
         Questionnaire questionnaire = new Questionnaire();
         RosterForLoop rosterForLoop = new RosterForLoop();
-        rosterForLoop.setComponentType(ComponentTypeEnum.ROSTER_FOR_LOOP);
         BodyCell inputNumberCell = new BodyCell();
-        inputNumberCell.setId("input-number-cell-id");
         inputNumberCell.setComponentType(ComponentTypeEnum.INPUT_NUMBER);
+        inputNumberCell.setId("input-number-cell-id");
         ConditionFilterType conditionFilter = new ConditionFilterType();
         conditionFilter.setType(LabelTypeEnum.VTL);
         conditionFilter.setValue("AGE >= 18");
@@ -60,7 +59,6 @@ class RosterForLoopSerializationTest {
         questionnaire.getComponents().add(rosterForLoop);
         //
         String result = new JsonSerializer().serialize(questionnaire);
-        System.out.println(result);
         //
         JSONAssert.assertEquals(rosterForLoopWithConditionFilter, result, JSONCompareMode.STRICT);
     }

@@ -64,7 +64,7 @@ public class Questionnaire extends ComponentType {
      * @deprecated Use the Pagination enum.
      */
     @JsonIgnore
-    @Deprecated(since = "3.14.0")
+    @Deprecated(since = "3.14.0", forRemoval = true)
     public String getPagination() {
         return pagination.value();
     }
@@ -74,7 +74,7 @@ public class Questionnaire extends ComponentType {
      * @deprecated Use the Pagination enum.
      */
     @JsonIgnore
-    @Deprecated(since = "3.14.0")
+    @Deprecated(since = "3.14.0", forRemoval = true)
     public void setPagination(String pagination) {
         this.pagination = Pagination.fromValue(pagination);
     }

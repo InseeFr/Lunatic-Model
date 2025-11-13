@@ -101,6 +101,14 @@ public abstract class ComponentType {
     /** Property that defines the type of component in the serialized object. */
     protected ComponentTypeEnum componentType;
 
+    /**
+     * @deprecated The "component type" is set in constructor.
+     */
+    @Deprecated(since = "5.10.1", forRemoval = true)
+    public void setComponentType(ComponentTypeEnum componentTypeEnum) {
+        this.componentType = componentTypeEnum;
+    }
+
     /** Displayed label of the component. */
     protected LabelType label;
 

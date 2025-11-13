@@ -22,7 +22,7 @@ public class Articulation {
 
     /** @deprecated The list is instantiated when the articulation object is created.
      * Use the getter method. */
-    @Deprecated(since = "5.8.1")
+    @Deprecated(since = "5.8.1", forRemoval = true)
     public void setItems(List<ArticulationItem> items) {
         this.items = items;
     }
