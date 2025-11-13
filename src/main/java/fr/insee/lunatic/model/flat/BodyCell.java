@@ -117,7 +117,7 @@ public class BodyCell {
     /** Legacy unit string property.
      * @deprecated Use label unit. */
     @JsonIgnore
-    @Deprecated(since = "3.15.2", forRemoval = true) //NOSONAR
+    @Deprecated(since = "3.15.2", forRemoval = true)
     public String getUnit() {
         if (unit == null)
             return null;
@@ -134,7 +134,7 @@ public class BodyCell {
     /** Legacy unit string property.
      * @deprecated Use label unit. */
     @JsonIgnore
-    @Deprecated(since = "3.15.2", forRemoval = true) //NOSONAR
+    @Deprecated(since = "3.15.2", forRemoval = true)
     public void setUnit(String value) {
         unit = new InputNumber.Unit();
         unit.setValue(value);

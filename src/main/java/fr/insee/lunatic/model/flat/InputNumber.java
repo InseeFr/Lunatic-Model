@@ -67,7 +67,7 @@ public class InputNumber extends ComponentType implements ComponentSimpleRespons
      * @deprecated Use label unit. */
     @SuppressWarnings("java:S1192") // Sonar identifies deprecated tag as duplicate code
     @JsonIgnore
-    @Deprecated(since = "3.14.0", forRemoval = true) //NOSONAR
+    @Deprecated(since = "3.14.0", forRemoval = true)
     public String getUnit() {
         if (unit == null)
             return null;
@@ -85,7 +85,7 @@ public class InputNumber extends ComponentType implements ComponentSimpleRespons
      * @deprecated Use label unit. */
     @SuppressWarnings("java:S1192") // Sonar identifies deprecated tag as duplicate code
     @JsonIgnore
-    @Deprecated(since = "3.14.0", forRemoval = true) //NOSONAR
+    @Deprecated(since = "3.14.0", forRemoval = true)
     public void setUnit(String value) {
         unit = new Unit();
         unit.setValue(value);
