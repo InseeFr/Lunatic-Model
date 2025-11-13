@@ -45,6 +45,7 @@ class RosterForLoopSerializationTest {
         Questionnaire questionnaire = new Questionnaire();
         RosterForLoop rosterForLoop = new RosterForLoop();
         BodyCell inputNumberCell = new BodyCell();
+        inputNumberCell.setComponentType(ComponentTypeEnum.INPUT_NUMBER);
         inputNumberCell.setId("input-number-cell-id");
         ConditionFilterType conditionFilter = new ConditionFilterType();
         conditionFilter.setType(LabelTypeEnum.VTL);
