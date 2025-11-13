@@ -35,7 +35,7 @@ public class Roundabout extends ComponentType implements ComponentNestingType {
     }
 
     public Roundabout() {
-        super(ComponentTypeEnum.ROUNDABOUT);
+        super(ComponentTypeName.ROUNDABOUT);
         this.components = new ArrayList<>();
         this.loopDependencies = new ArrayList<>();
     }

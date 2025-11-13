@@ -1,7 +1,7 @@
 package fr.insee.lunatic.conversion;
 
 import fr.insee.lunatic.exception.SerializationException;
-import fr.insee.lunatic.model.flat.ComponentTypeEnum;
+import fr.insee.lunatic.model.flat.ComponentTypeName;
 import fr.insee.lunatic.model.flat.Input;
 import fr.insee.lunatic.model.flat.Questionnaire;
 import org.json.JSONException;
@@ -64,11 +64,11 @@ class ComponentsSerialisationTest {
         //
         assertNotNull(questionnaire);
         assertEquals("questionnaire-id", questionnaire.getId());
-        assertEquals(ComponentTypeEnum.QUESTIONNAIRE, questionnaire.getComponentType());
+        assertEquals(ComponentTypeName.QUESTIONNAIRE, questionnaire.getComponentTypeName());
         //
         assertEquals(1, questionnaire.getComponents().size());
         assertEquals("input-id", questionnaire.getComponents().getFirst().getId());
-        assertEquals(ComponentTypeEnum.INPUT, questionnaire.getComponents().getFirst().getComponentType());
+        assertEquals(ComponentTypeName.INPUT, questionnaire.getComponents().getFirst().getComponentTypeName());
     }
 
 }

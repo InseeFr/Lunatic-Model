@@ -76,7 +76,7 @@ class BodyCellSerializationTest {
         //
         BodyCell bodyCell = new BodyCell();
         bodyCell.setId("foo-id");
-        bodyCell.setComponentType(ComponentTypeEnum.SUGGESTER);
+        bodyCell.setComponentType(ComponentTypeName.SUGGESTER);
         bodyCell.setStoreName("FOO_CODE_LIST");
         bodyCell.setResponse(new ResponseType());
         bodyCell.getResponse().setName("FOO");
@@ -92,7 +92,7 @@ class BodyCellSerializationTest {
         BodyCell bodyCell = objectMapper.readValue(jsonSuggesterCell, BodyCell.class);
         //
         assertEquals("foo-id", bodyCell.getId());
-        assertEquals(ComponentTypeEnum.SUGGESTER, bodyCell.getComponentType());
+        assertEquals(ComponentTypeName.SUGGESTER, bodyCell.getComponentType());
         assertEquals("FOO_CODE_LIST", bodyCell.getStoreName());
         assertEquals("FOO", bodyCell.getResponse().getName());
     }
@@ -102,12 +102,12 @@ class BodyCellSerializationTest {
         //
         BodyCell bodyCell = new BodyCell();
         bodyCell.setId("foo-id");
-        bodyCell.setComponentType(ComponentTypeEnum.INPUT_NUMBER);
+        bodyCell.setComponentType(ComponentTypeName.INPUT_NUMBER);
         bodyCell.setMin(0d);
         bodyCell.setMax(100d);
         bodyCell.setUnit(new LabelType());
-        bodyCell.getUnitLabel().setValue("%");
-        bodyCell.getUnitLabel().setType(LabelTypeEnum.VTL_MD);
+        bodyCell.getUnit().setValue("%");
+        bodyCell.getUnit().setType(LabelTypeEnum.VTL_MD);
         bodyCell.setResponse(new ResponseType());
         bodyCell.getResponse().setName("FOO");
         //
@@ -122,11 +122,11 @@ class BodyCellSerializationTest {
         BodyCell bodyCell = objectMapper.readValue(jsonInputNumberCell, BodyCell.class);
         //
         assertEquals("foo-id", bodyCell.getId());
-        assertEquals(ComponentTypeEnum.INPUT_NUMBER, bodyCell.getComponentType());
+        assertEquals(ComponentTypeName.INPUT_NUMBER, bodyCell.getComponentType());
         assertEquals(0d, bodyCell.getMin());
         assertEquals(100d, bodyCell.getMax());
-        assertEquals("%", bodyCell.getUnitLabel().getValue());
-        assertEquals(LabelTypeEnum.VTL_MD, bodyCell.getUnitLabel().getType());
+        assertEquals("%", bodyCell.getUnit().getValue());
+        assertEquals(LabelTypeEnum.VTL_MD, bodyCell.getUnit().getType());
         assertEquals("FOO", bodyCell.getResponse().getName());
     }
 
@@ -135,7 +135,7 @@ class BodyCellSerializationTest {
         //
         BodyCell bodyCell = new BodyCell();
         bodyCell.setId("foo-id");
-        bodyCell.setComponentType(ComponentTypeEnum.INPUT_NUMBER);
+        bodyCell.setComponentType(ComponentTypeName.INPUT_NUMBER);
         bodyCell.setMin(0.5d);
         bodyCell.setMax(1d);
         bodyCell.setResponse(new ResponseType());
@@ -152,7 +152,7 @@ class BodyCellSerializationTest {
         BodyCell bodyCell = objectMapper.readValue(jsonInputNumberCellWithDecimals, BodyCell.class);
         //
         assertEquals("foo-id", bodyCell.getId());
-        assertEquals(ComponentTypeEnum.INPUT_NUMBER, bodyCell.getComponentType());
+        assertEquals(ComponentTypeName.INPUT_NUMBER, bodyCell.getComponentType());
         assertEquals(0.5d, bodyCell.getMin());
         assertEquals(1d, bodyCell.getMax());
         assertEquals("FOO", bodyCell.getResponse().getName());
@@ -163,7 +163,7 @@ class BodyCellSerializationTest {
         //
         BodyCell bodyCell = new BodyCell();
         bodyCell.setId("foo-id");
-        bodyCell.setComponentType(ComponentTypeEnum.DATEPICKER);
+        bodyCell.setComponentType(ComponentTypeName.DATEPICKER);
         bodyCell.setMin("24/05/1950");
         bodyCell.setMax("02/04/2030");
         bodyCell.setResponse(new ResponseType());
@@ -180,7 +180,7 @@ class BodyCellSerializationTest {
         BodyCell bodyCell = objectMapper.readValue(jsonDatepickerCell, BodyCell.class);
         //
         assertEquals("foo-id", bodyCell.getId());
-        assertEquals(ComponentTypeEnum.DATEPICKER, bodyCell.getComponentType());
+        assertEquals(ComponentTypeName.DATEPICKER, bodyCell.getComponentType());
         String minValue = (String) bodyCell.getMin();
         String maxValue = (String) bodyCell.getMax();
         assertEquals("24/05/1950", minValue);

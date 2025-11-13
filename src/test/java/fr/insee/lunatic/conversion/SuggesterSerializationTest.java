@@ -72,7 +72,7 @@ class SuggesterSerializationTest {
         //
         Suggester suggester = assertInstanceOf(Suggester.class, questionnaire.getComponents().getFirst());
         assertEquals("foo-id", suggester.getId());
-        assertEquals(ComponentTypeEnum.SUGGESTER, suggester.getComponentType());
+        assertEquals(ComponentTypeName.SUGGESTER, suggester.getComponentTypeName());
         assertEquals("FOO_CODE_LIST", suggester.getStoreName());
         assertEquals("FOO", suggester.getResponse().getName());
         assertEquals(2, suggester.getOptionResponses().size());
