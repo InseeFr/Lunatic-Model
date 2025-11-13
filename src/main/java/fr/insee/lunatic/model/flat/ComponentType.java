@@ -104,7 +104,7 @@ public abstract class ComponentType {
     /**
      * @deprecated The "component type" is set in constructor.
      */
-    @Deprecated(since = "5.10.1")
+    @Deprecated(since = "5.10.1", forRemoval = true)
     public void setComponentType(ComponentTypeEnum componentTypeEnum) {
         this.componentType = componentTypeEnum;
     }

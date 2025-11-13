@@ -18,7 +18,7 @@ public class CollectedVariableType extends VariableType {
      * Identifier of the component in which the variable is collected.
      * @deprecated Not used by Lunatic anymore.
      */
-    @Deprecated(since = "3.3.5")
+    @Deprecated(since = "3.3.5", forRemoval = true)
     protected String componentRef;
 
     /** Value field of the collected variable. */

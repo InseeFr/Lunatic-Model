@@ -57,7 +57,7 @@ public class CalculatedVariableType extends VariableType {
      * @return A variable name.
      * @deprecated The shape from property is a list now so this method will be removed at some point.
      */
-    @Deprecated(since = "3.13.0")
+    @Deprecated(since = "3.13.0", forRemoval = true)
     public String getShapeFrom() {
         if (shapeFrom.isEmpty())
             return null;
@@ -69,7 +69,7 @@ public class CalculatedVariableType extends VariableType {
      * @param variableName Variable name.
      * @deprecated The shape from property is now a list of variable names.
      */
-    @Deprecated(since = "3.13.0")
+    @Deprecated(since = "3.13.0", forRemoval = true)
     public void setShapeFrom(String variableName) {
         shapeFrom.clear();
         shapeFrom.add(variableName);
