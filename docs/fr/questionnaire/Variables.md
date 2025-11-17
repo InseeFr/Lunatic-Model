@@ -32,6 +32,9 @@ Strucure du tableau `variables` :
     "variableType": "CALCULATED",
     "name": "SUM_EXPENSES",
     "expression": "cast(PERCENTAGE_EXPENSES11,number) + cast(PERCENTAGE_EXPENSES21,number)" // expression VTL
+    "bindingDependencies": ["PERCENTAGE_EXPENSES11", "PERCENTAGE_EXPENSES21"]
   }
 ]
 ```
+
+- `bindingDependencies` : liste des variables impliquées dans le calcul d'une variable calculée.

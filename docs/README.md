@@ -1,1 +1,2 @@
-# Documentation for Lunatic-Model
+- [fr](./fr)
+- [en](./en)

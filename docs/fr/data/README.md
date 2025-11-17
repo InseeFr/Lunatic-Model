@@ -1,4 +1,7 @@
-# Les données
+# Les données Lunatic
+
+⚠️ Valable sur les version `2.y.z` uniquement. Les format de données Lunatic n'est plus supporté dans Lunatic-Model 
+depuis la version 3.
 
 ## Données au format JSON
 
@@ -46,7 +49,7 @@
 }
 ```
 
-## Donnéee équivalente au format XML
+## Données équivalentes au format XML
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -124,7 +127,6 @@
       <variableExt2 type="string">External var2</variableExt2>
    </EXTERNAL>
 </Data>
-
 ```
 
 ## Transformations JSON <-> XML
