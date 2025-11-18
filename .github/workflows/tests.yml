@@ -5,6 +5,8 @@ on:
     types: [opened, synchronize, reopened]
     paths-ignore:
       - 'renovate.json'
+      - 'README.md'
+      - 'docs/**'
 
 jobs:
   test:
