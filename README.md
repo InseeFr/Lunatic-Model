@@ -33,4 +33,4 @@ In Lunatic, classes are defined in the
 
 ## Documentation
 
-Documentation can be found in the [docs](https://github.com/InseeFr/Lunatic-Model/tree/master/docs) folder and browsed [online](https://inseefr.github.io/Lunatic-Model).
+Documentation can be found in the [`docs`](https://github.com/InseeFr/Lunatic-Model/tree/master/docs) folder.
