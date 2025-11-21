@@ -8,7 +8,7 @@ import lombok.Setter;
 public class Subsequence extends ComponentType implements ComponentSequenceType {
 
     public Subsequence() {
-        super(ComponentTypeEnum.SUBSEQUENCE);
+        super(ComponentTypeName.SUBSEQUENCE);
     }
 
     protected String goToPage;

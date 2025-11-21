@@ -44,7 +44,7 @@ class TableSerializationTest {
         table.getBodyLines().add(new BodyLine());
         BodyCell textCell = new BodyCell();
         textCell.setId("text-cell-id");
-        textCell.setComponentType(ComponentTypeEnum.TEXT);
+        textCell.setComponentType(ComponentTypeName.TEXT);
         textCell.setLabel(new LabelType());
         textCell.getLabel().setType(LabelTypeEnum.VTL_MD);
         textCell.getLabel().setValue("\"Label value.\"");
@@ -66,7 +66,7 @@ class TableSerializationTest {
         assertEquals(1, table.getBodyLines().size());
         assertEquals(1, table.getBodyLines().getFirst().getBodyCells().size());
         BodyCell textCell = table.getBodyLines().getFirst().getBodyCells().getFirst();
-        assertEquals(ComponentTypeEnum.TEXT, textCell.getComponentType());
+        assertEquals(ComponentTypeName.TEXT, textCell.getComponentType());
         assertEquals("\"Label value.\"", textCell.getLabel().getValue());
         assertEquals(LabelTypeEnum.VTL_MD, textCell.getLabel().getType());
     }

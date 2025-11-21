@@ -18,13 +18,6 @@ public class Articulation {
      * list of items to compute table of articulation
      */
     @Getter
-    private List<ArticulationItem> items = new ArrayList<>();
-
-    /** @deprecated The list is instantiated when the articulation object is created.
-     * Use the getter method. */
-    @Deprecated(since = "5.8.1", forRemoval = true)
-    public void setItems(List<ArticulationItem> items) {
-        this.items = items;
-    }
+    private final List<ArticulationItem> items = new ArrayList<>();
 
 }

@@ -35,22 +35,7 @@ class PaginationSerializationTest {
         //
         Questionnaire questionnaire = new JsonDeserializer().deserialize(new ByteArrayInputStream(jsonInput.getBytes()));
         //
-        assertEquals(Pagination.QUESTION, questionnaire.getPaginationEnum());
-        assertEquals("question", questionnaire.getPagination()); // backward compatibility test
-    }
-
-    // backward compatibility test
-    @Test
-    void serializeStringPagination() throws SerializationException, JSONException {
-        //
-        Questionnaire questionnaire = new Questionnaire();
-        questionnaire.setPagination("question");
-        //
-        String result = new JsonSerializer().serialize(questionnaire);
-        //
-        String expected = """
-                {"componentType": "Questionnaire", "pagination": "question"}""";
-        JSONAssert.assertEquals(expected, result, JSONCompareMode.STRICT);
+        assertEquals(Pagination.QUESTION, questionnaire.getPagination());
     }
 
 }

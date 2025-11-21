@@ -24,7 +24,7 @@ public class Dropdown extends ComponentType implements ComponentSimpleResponseTy
     protected ResponseType response;
 
     public Dropdown() {
-        super(ComponentTypeEnum.DROPDOWN);
+        super(ComponentTypeName.DROPDOWN);
         this.options = new ArrayList<>();
     }
 

@@ -24,7 +24,7 @@ import lombok.Setter;
 public class FilterDescription extends ComponentType {
 
     public FilterDescription() {
-        super(ComponentTypeEnum.FILTER_DESCRIPTION);
+        super(ComponentTypeName.FILTER_DESCRIPTION);
     }
 
     /** Identifier of the component on which the filter starts. */

@@ -21,7 +21,7 @@ public class Question extends ComponentType implements ComponentMandatory {
     private Boolean mandatory;
 
     public Question() {
-        super(ComponentTypeEnum.QUESTION);
+        super(ComponentTypeName.QUESTION);
         this.components = new ArrayList<>();
     }
 
@@ -39,7 +39,7 @@ public class Question extends ComponentType implements ComponentMandatory {
     public void addComponent(ComponentType component) {
         if (! isQuestionComponent(component))
             throw new IllegalArgumentException(
-                    "Component of type " + component.getComponentType() + " cannot be inserted in a Question component.");
+                    "Component of type " + component.getComponentTypeName() + " cannot be inserted in a Question component.");
         this.components.add(component);
     }
 
@@ -58,9 +58,9 @@ public class Question extends ComponentType implements ComponentMandatory {
      * @return True if the type of the given component is valid for a Question.
      */
     public static boolean isQuestionComponent(ComponentType component) {
-        if (component.getComponentType() == null)
+        if (component.getComponentTypeName() == null)
             return false;
-        return switch (component.getComponentType()) {
+        return switch (component.getComponentTypeName()) {
             case CHECKBOX_BOOLEAN, INPUT, TEXTAREA, INPUT_NUMBER, DATEPICKER, DURATION,
                     CHECKBOX_ONE, RADIO, DROPDOWN, SUGGESTER, TEXT,
                     CHECKBOX_GROUP, TABLE, ROSTER_FOR_LOOP, PAIRWISE_LINKS -> true;

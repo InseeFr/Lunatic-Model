@@ -45,7 +45,7 @@ class RosterForLoopSerializationTest {
         Questionnaire questionnaire = new Questionnaire();
         RosterForLoop rosterForLoop = new RosterForLoop();
         BodyCell inputNumberCell = new BodyCell();
-        inputNumberCell.setComponentType(ComponentTypeEnum.INPUT_NUMBER);
+        inputNumberCell.setComponentType(ComponentTypeName.INPUT_NUMBER);
         inputNumberCell.setId("input-number-cell-id");
         ConditionFilterType conditionFilter = new ConditionFilterType();
         conditionFilter.setType(LabelTypeEnum.VTL);
@@ -72,7 +72,7 @@ class RosterForLoopSerializationTest {
         RosterForLoop rosterForLoop = assertInstanceOf(RosterForLoop.class, questionnaire.getComponents().getFirst());
         assertEquals(1, rosterForLoop.getComponents().size());
         BodyCell inputNumberCell = rosterForLoop.getComponents().getFirst();
-        assertEquals(ComponentTypeEnum.INPUT_NUMBER, inputNumberCell.getComponentType());
+        assertEquals(ComponentTypeName.INPUT_NUMBER, inputNumberCell.getComponentType());
         assertEquals("AGE >= 18", inputNumberCell.getConditionFilter().getValue());
         assertEquals(LabelTypeEnum.VTL, inputNumberCell.getConditionFilter().getType());
         assertEquals("AGE > 50", inputNumberCell.getConditionReadOnly().getValue());

@@ -83,7 +83,7 @@ class AccordionSerializationTest {
                 new ByteArrayInputStream(accordionJson.getBytes()));
         //
         Accordion accordion = assertInstanceOf(Accordion.class, questionnaire.getComponents().getFirst());
-        assertEquals(ComponentTypeEnum.ACCORDION, accordion.getComponentType());
+        assertEquals(ComponentTypeName.ACCORDION, accordion.getComponentTypeName());
         assertEquals(ComponentPosition.BOTTOM, accordion.getPosition());
         //...
     }

@@ -32,71 +32,48 @@ import java.util.List;
         "optionResponses",
         "bindingDependencies"
 })
+@Getter @Setter
 public class BodyCell {
 
     /** Orientation for radio / checkbox cells. */
-    @Getter @Setter
     protected Orientation orientation;
 
-    @Getter @Setter
     protected String value;
-    @Getter @Setter
     protected LabelType label;
-    @Getter @Setter
     protected String format;
 
-    @Getter @Setter
     protected String dateFormat;
 
     /** For input number cells. */
-    protected InputNumber.Unit unit;
+    protected LabelType unit;
 
-    @Getter @Setter
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     protected List<Option> options;
     /** For suggester cells: Name of the code list used for auto-completion. */
 
-    @Getter @Setter
     private String storeName;
 
     /** For component cells: collected response of the cell. */
-    @Getter @Setter
     protected ResponseType response;
 
-    /** Collected or external variable names required to evaluate expressions used in the component properties.
-     * @deprecated Binding dependencies at component level are not used anymore in Lunatic. */
-    @Getter @Setter
-    @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    @Deprecated(since = "3.4.0", forRemoval = true)
-    protected List<String> bindingDependencies = new ArrayList<>();
-
-    @Getter @Setter
-    protected ComponentTypeEnum componentType;
-    @Getter @Setter
+    protected ComponentTypeName componentType;
     protected BigInteger maxLength;
 
     @JsonIgnore
     private Boundaries boundaries;
 
-    @Getter @Setter
     protected BigInteger decimals;
-    @Getter @Setter
     protected BigInteger colspan;
-    @Getter @Setter
     protected BigInteger rowspan;
 
     /** For suggester cells: option responses. */
-    @Getter @Setter
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     protected List<Suggester.OptionResponse> optionResponses;
 
-    @Getter @Setter
     protected ConditionFilterType conditionFilter;
 
-    @Getter @Setter
     protected LabelType conditionReadOnly;
 
-    @Getter @Setter
     protected String id;
 
     public BodyCell() {
@@ -104,46 +81,13 @@ public class BodyCell {
         this.optionResponses = new ArrayList<>();
     }
 
-    @JsonProperty("unit")
-    public InputNumber.Unit getUnitWrapper() {
-        return unit;
-    }
-
-    @JsonProperty("unit")
-    public void setUnit(InputNumber.Unit unit) {
-        this.unit = unit;
-    }
-
-    /** Legacy unit string property.
-     * @deprecated Use label unit. */
+    /**
+     * @deprecated Use <code>getUnit()</code> method.
+     */
     @JsonIgnore
-    @Deprecated(since = "3.15.2", forRemoval = true)
-    public String getUnit() {
-        if (unit == null)
-            return null;
-        return unit.getValue();
-    }
-
-    @JsonIgnore
+    @Deprecated(since = "6.0.0")
     public LabelType getUnitLabel() {
-        if (unit == null)
-            return null;
-        return unit.getLabel();
-    }
-
-    /** Legacy unit string property.
-     * @deprecated Use label unit. */
-    @JsonIgnore
-    @Deprecated(since = "3.15.2", forRemoval = true)
-    public void setUnit(String value) {
-        unit = new InputNumber.Unit();
-        unit.setValue(value);
-    }
-
-    @JsonIgnore
-    public void setUnit(LabelType labelType) {
-        unit = new InputNumber.Unit();
-        unit.setLabel(labelType);
+        return unit;
     }
 
     @JsonProperty("min")

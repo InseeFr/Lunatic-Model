@@ -31,19 +31,6 @@ class InputNumberSerializationTest {
               ]
             }""";
 
-    private final String jsonStringUnit = """
-            {
-              "componentType": "Questionnaire",
-              "components": [
-                {
-                  "componentType": "InputNumber",
-                  "min": 0,
-                  "max": 100,
-                  "unit": "kg"
-                }
-              ]
-            }""";
-
     private final String jsonLabelUnit = """
             {
               "componentType": "Questionnaire",
@@ -75,21 +62,6 @@ class InputNumberSerializationTest {
     }
 
     @Test
-    void serializeInputNumber_stringUnit() throws SerializationException, JSONException {
-        //
-        Questionnaire questionnaire = new Questionnaire();
-        InputNumber inputNumber = new InputNumber();
-        inputNumber.setMin(0d);
-        inputNumber.setMax(100d);
-        inputNumber.setUnit("kg");
-        questionnaire.getComponents().add(inputNumber);
-        //
-        String result = jsonSerializer.serialize(questionnaire);
-        //
-        JSONAssert.assertEquals(jsonStringUnit, result, JSONCompareMode.STRICT);
-    }
-
-    @Test
     void serializeInputNumber_labelUnit() throws SerializationException, JSONException {
         //
         Questionnaire questionnaire = new Questionnaire();
@@ -97,8 +69,8 @@ class InputNumberSerializationTest {
         inputNumber.setMin(0d);
         inputNumber.setMax(100d);
         inputNumber.setUnit(new LabelType());
-        inputNumber.getUnitLabel().setValue("\"kg\"");
-        inputNumber.getUnitLabel().setType(LabelTypeEnum.VTL_MD);
+        inputNumber.getUnit().setValue("\"kg\"");
+        inputNumber.getUnit().setType(LabelTypeEnum.VTL_MD);
         questionnaire.getComponents().add(inputNumber);
         //
         String result = jsonSerializer.serialize(questionnaire);
@@ -113,16 +85,6 @@ class InputNumberSerializationTest {
         //
         InputNumber inputNumber = assertInstanceOf(InputNumber.class, questionnaire.getComponents().getFirst());
         assertNull(inputNumber.getUnit());
-        assertNull(inputNumber.getUnitLabel());
-    }
-
-    @Test
-    void deserializeInputNumber_stringUnit() throws SerializationException {
-        //
-        Questionnaire questionnaire = jsonDeserializer.deserialize(new ByteArrayInputStream(jsonStringUnit.getBytes()));
-        //
-        InputNumber inputNumber = assertInstanceOf(InputNumber.class, questionnaire.getComponents().getFirst());
-        assertEquals("kg", inputNumber.getUnit());
     }
 
     @Test
@@ -131,8 +93,8 @@ class InputNumberSerializationTest {
         Questionnaire questionnaire = jsonDeserializer.deserialize(new ByteArrayInputStream(jsonLabelUnit.getBytes()));
         //
         InputNumber inputNumber = assertInstanceOf(InputNumber.class, questionnaire.getComponents().getFirst());
-        assertEquals("\"kg\"", inputNumber.getUnitLabel().getValue());
-        assertEquals(LabelTypeEnum.VTL_MD, inputNumber.getUnitLabel().getType());
+        assertEquals("\"kg\"", inputNumber.getUnit().getValue());
+        assertEquals(LabelTypeEnum.VTL_MD, inputNumber.getUnit().getType());
     }
 
 }

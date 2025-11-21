@@ -1,7 +1,7 @@
 package fr.insee.lunatic.conversion;
 
 import fr.insee.lunatic.exception.SerializationException;
-import fr.insee.lunatic.model.flat.ComponentTypeEnum;
+import fr.insee.lunatic.model.flat.ComponentTypeName;
 import fr.insee.lunatic.model.flat.Questionnaire;
 import org.junit.jupiter.api.Test;
 
@@ -22,7 +22,7 @@ class JsonDeserializerTest {
         //
         assertNotNull(questionnaire);
         assertEquals("foo-id", questionnaire.getId());
-        assertEquals(ComponentTypeEnum.QUESTIONNAIRE, questionnaire.getComponentType());
+        assertEquals(ComponentTypeName.QUESTIONNAIRE, questionnaire.getComponentTypeName());
     }
 
 }

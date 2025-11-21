@@ -12,7 +12,7 @@ import lombok.Setter;
 public class Duration extends ComponentType implements ComponentSimpleResponseType, ComponentMandatory {
 
     public Duration() {
-        super(ComponentTypeEnum.DURATION);
+        super(ComponentTypeName.DURATION);
     }
 
     /** Indicates whether the response is mandatory for this component. */

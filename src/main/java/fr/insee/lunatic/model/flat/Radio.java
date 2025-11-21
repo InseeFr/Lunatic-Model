@@ -29,7 +29,7 @@ public class Radio extends ComponentType implements ComponentSimpleResponseType,
     protected ResponseType response;
 
     public Radio() {
-        super(ComponentTypeEnum.RADIO);
+        super(ComponentTypeName.RADIO);
         this.orientation = Orientation.VERTICAL;
         this.options = new ArrayList<>();
     }

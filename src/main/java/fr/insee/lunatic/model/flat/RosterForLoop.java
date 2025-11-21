@@ -18,16 +18,8 @@ public class RosterForLoop
     protected List<BodyCell> components;
     protected LabelType iterations;
 
-    /**
-     * Metadata on how the table should be displayed.
-     * Value should be one of "HORIZONTAL", "VERTICAL" or "DEFAULT".
-     * @deprecated Unused in Lunatic, to be removed.
-     */
-    @Deprecated(since = "3.14.0", forRemoval = true)
-    protected String positioning;
-
     public RosterForLoop() {
-        super(ComponentTypeEnum.ROSTER_FOR_LOOP);
+        super(ComponentTypeName.ROSTER_FOR_LOOP);
         this.header = new ArrayList<>();
         this.components = new ArrayList<>();
     }
