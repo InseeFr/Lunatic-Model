@@ -2,7 +2,6 @@ package fr.insee.lunatic.conversion;
 
 import fr.insee.lunatic.exception.SerializationException;
 import fr.insee.lunatic.model.flat.LabelTypeEnum;
-import fr.insee.lunatic.model.flat.Pagination;
 import fr.insee.lunatic.model.flat.Questionnaire;
 import fr.insee.lunatic.model.flat.multimode.Multimode;
 import fr.insee.lunatic.model.flat.multimode.MultimodeLeaf;
@@ -14,7 +13,6 @@ import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
 import java.io.ByteArrayInputStream;
-import java.security.KeyStore;
 import java.util.HashMap;
 import java.util.Map;
 

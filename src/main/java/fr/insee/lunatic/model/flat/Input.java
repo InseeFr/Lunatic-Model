@@ -14,7 +14,7 @@ import java.math.BigInteger;
 public class Input extends ComponentType implements ComponentSimpleResponseType, ComponentMandatory {
 
     public Input() {
-        super(ComponentTypeEnum.INPUT);
+        super(ComponentTypeName.INPUT);
     }
 
     /** Indicates whether the response is mandatory for this component. */

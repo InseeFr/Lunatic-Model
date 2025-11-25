@@ -6,7 +6,7 @@ package fr.insee.lunatic.model.flat;
 public class Text extends ComponentType {
 
     public Text() {
-        super(ComponentTypeEnum.TEXT);
+        super(ComponentTypeName.TEXT);
     }
 
 }

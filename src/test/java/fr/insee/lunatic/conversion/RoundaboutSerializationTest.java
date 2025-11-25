@@ -66,7 +66,7 @@ class RoundaboutSerializationTest {
         //
         Roundabout roundabout = assertInstanceOf(Roundabout.class, questionnaire.getComponents().getFirst());
         assertEquals(1, roundabout.getComponents().size());
-        assertEquals(ComponentTypeEnum.INPUT, roundabout.getComponents().getFirst().getComponentType());
+        assertEquals(ComponentTypeName.INPUT, roundabout.getComponents().getFirst().getComponentTypeName());
     }
 
 }

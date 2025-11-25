@@ -6,15 +6,11 @@ package fr.insee.lunatic.model.flat;
  */
 public enum ControlContextType {
 
-    /** Default type. */
+    /** Default type.
+     * Note: a roundabout control is a 'SIMPLE' control in a roundabout component. */
     SIMPLE,
 
     /** Control at row level of a roster for loop (i.e. dynamic table). */
-    ROW,
-
-    /** Special type of control for roundabouts.
-     * @deprecated Should not be used, a roundabout control is a 'SIMPLE' control in a roundabout component. */
-    @Deprecated(since = "3.15.3", forRemoval = true)
-    ROUNDABOUT
+    ROW
 
 }

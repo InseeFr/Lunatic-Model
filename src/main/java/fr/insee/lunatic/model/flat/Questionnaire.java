@@ -17,8 +17,13 @@ import java.util.List;
 @Setter
 public class Questionnaire extends ComponentType {
 
+    /**
+     * @deprecated Unused in Lunatic.
+     */
     @JsonProperty("final")
+    @Deprecated(since = "6.0.0")
     protected Boolean _final;
+
     protected String modele;
     protected String enoCoreVersion;
     protected String lunaticModelVersion;
@@ -41,42 +46,19 @@ public class Questionnaire extends ComponentType {
     protected Articulation articulation;
 
     public Questionnaire () {
-        super(ComponentTypeEnum.QUESTIONNAIRE);
+        super(ComponentTypeName.QUESTIONNAIRE);
         this.components = new ArrayList<>();
         this.suggesters = new ArrayList<>();
         this.variables = new ArrayList<>();
     }
 
-    @JsonProperty("pagination")
+    /**
+     * @deprecated Use <code>getPagination()</code> method.
+     */
+    @JsonIgnore
+    @Deprecated(since = "6.0.0")
     public Pagination getPaginationEnum() {
         return pagination;
-    }
-
-    @JsonProperty("pagination")
-    public void setPagination(Pagination pagination) {
-        this.pagination = pagination;
-    }
-
-
-    /**
-     * Method for the legacy string pagination attribute.
-     * @return String value of the questionnaire pagination mode.
-     * @deprecated Use the Pagination enum.
-     */
-    @JsonIgnore
-    @Deprecated(since = "3.14.0", forRemoval = true)
-    public String getPagination() {
-        return pagination.value();
-    }
-
-    /**
-     * Method for the legacy string pagination attribute.
-     * @deprecated Use the Pagination enum.
-     */
-    @JsonIgnore
-    @Deprecated(since = "3.14.0", forRemoval = true)
-    public void setPagination(String pagination) {
-        this.pagination = Pagination.fromValue(pagination);
     }
 
 }
