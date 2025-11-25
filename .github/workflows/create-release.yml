@@ -6,6 +6,8 @@ on:
       - main
     paths-ignore:
       - 'renovate.json'
+      - 'README.md'
+      - 'docs/**'
 
 jobs:
   check-version:

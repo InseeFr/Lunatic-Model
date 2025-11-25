@@ -1,4 +1,6 @@
-# Fonctionnement de Lunatic-Model
+# Conversions de Lunatic-Model
+
+⚠️ Cette page concerne uniquement les versions `2.y.z`.
 
 Le principe de cette librairie java est de transformer un questionnaire au format XML (en sortie d'ENO ddi2js) en un questionnaire au format JSON.
 
@@ -8,6 +10,12 @@ Il existe deux modèles de questionnaire :
 
 - Lunatic (LunaticModel.xsd)
 - LunaticFlat (LunaticModelFlat.xsd)
+
+Dans le modèle hiérarchique, les composants Sequence et Subsequence contiennent également des composants.
+
+Dans le modèle à plat, les composants sont les uns à la suite des autres.
+
+⚠️ Le modèle hiérarchique n'est plus utilisé par Lunatic et n'existe plus depuis la version 3 de Lunatic-Model.
 
 Les modèles sont définis par des schémas XML dans les fichiers XSD.
 Ces schémas sont situés dans le dossier : `src/main/resources/xsd`.
