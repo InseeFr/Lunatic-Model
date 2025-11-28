@@ -17,4 +17,7 @@ public class ExternalVariableType extends VariableType {
     /** Value field of the external variable. */
     ExternalVariableValue value;
 
+    /** Indicates if the variable value should be emptied when the questionnaire is reset. */
+    private Boolean isDeletedOnReset;
+
 }

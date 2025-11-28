@@ -1,5 +1,6 @@
 package fr.insee.lunatic.conversion.variable;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import fr.insee.lunatic.conversion.JsonDeserializer;
 import fr.insee.lunatic.conversion.JsonSerializer;
 import fr.insee.lunatic.exception.SerializationException;
@@ -139,6 +140,59 @@ class ExternalVariableSerializationTest {
         assertEquals(VariableTypeEnum.EXTERNAL, externalVariableType.getVariableType());
         assertEquals("PAIRWISE_EXTERNAL_VAR", externalVariableType.getName());
         assertInstanceOf(ExternalVariableValue.DoubleArray.class, externalVariableType.getValue());
+    }
+
+    @Test
+    void serializeIsDeletedOnReset() throws JsonProcessingException, JSONException {
+        ExternalVariableType externalVariableType = new ExternalVariableType();
+        // Default case: null
+        JSONAssert.assertEquals("""
+                {
+                  "variableType": "EXTERNAL"
+                }""",
+                jsonSerializer.getMapper().writeValueAsString(externalVariableType),
+                JSONCompareMode.STRICT);
+        // True value
+        externalVariableType.setIsDeletedOnReset(true);
+        JSONAssert.assertEquals("""
+                {
+                  "variableType": "EXTERNAL",
+                  "isDeletedOnReset": true
+                }""",
+                jsonSerializer.getMapper().writeValueAsString(externalVariableType),
+                JSONCompareMode.STRICT);
+        // False value
+        externalVariableType.setIsDeletedOnReset(false);
+        JSONAssert.assertEquals("""
+                {
+                  "variableType": "EXTERNAL",
+                  "isDeletedOnReset": false
+                }""",
+                jsonSerializer.getMapper().writeValueAsString(externalVariableType),
+                JSONCompareMode.STRICT);
+    }
+
+    @Test
+    void deserializeIsDeletedOnReset() throws JsonProcessingException, JSONException {
+        ExternalVariableType external1 = jsonDeserializer.getMapper().readValue("""
+                {
+                  "variableType": "EXTERNAL"
+                }""", ExternalVariableType.class);
+        assertNull(external1.getIsDeletedOnReset());
+
+        ExternalVariableType external2 = jsonDeserializer.getMapper().readValue("""
+                {
+                  "variableType": "EXTERNAL",
+                  "isDeletedOnReset": true
+                }""", ExternalVariableType.class);
+        assertTrue(external2.getIsDeletedOnReset());
+
+        ExternalVariableType external3 = jsonDeserializer.getMapper().readValue("""
+                {
+                  "variableType": "EXTERNAL",
+                  "isDeletedOnReset": false
+                }""", ExternalVariableType.class);
+        assertFalse(external3.getIsDeletedOnReset());
     }
 
 }
