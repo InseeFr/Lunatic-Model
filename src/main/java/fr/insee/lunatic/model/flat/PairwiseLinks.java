@@ -2,6 +2,7 @@ package fr.insee.lunatic.model.flat;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -31,12 +32,18 @@ public class PairwiseLinks extends ComponentType implements ComponentNestingType
 
     /**
      * Variables associated with the pairwise links component.
-     * @param name Name variable name.
-     * @param gender Gender variable name.
      */
-    public record SourceVariables(
-            String name,
-            String gender) {}
+    @Getter
+    @Setter
+    @AllArgsConstructor
+    public static class SourceVariables {
+        /** Name variable name. */
+        private String name;
+        /** Gender variable name. */
+        private String gender;
+        /** Age variable name. */
+        private String age;
+    }
 
     @JsonProperty("xAxisIterations")
     protected LabelType xAxisIterations;

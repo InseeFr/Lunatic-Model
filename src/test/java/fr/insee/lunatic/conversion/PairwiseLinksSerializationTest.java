@@ -16,7 +16,7 @@ class PairwiseLinksSerializationTest {
         Questionnaire questionnaire = new Questionnaire();
         PairwiseLinks pairwiseLinks = new PairwiseLinks();
         pairwiseLinks.setId("foo-id");
-        pairwiseLinks.setSourceVariables(new PairwiseLinks.SourceVariables("FIRST_NAME_VAR", "GENDER_VAR"));
+        pairwiseLinks.setSourceVariables(new PairwiseLinks.SourceVariables("FIRST_NAME_VAR", "GENDER_VAR", null));
         questionnaire.getComponents().add(pairwiseLinks);
         //
         String result = new JsonSerializer().serialize(questionnaire);
