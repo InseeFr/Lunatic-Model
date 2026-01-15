@@ -2,7 +2,6 @@ package fr.insee.lunatic.model.flat;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -35,7 +34,6 @@ public class PairwiseLinks extends ComponentType implements ComponentNestingType
      */
     @Getter
     @Setter
-    @AllArgsConstructor
     public static class SourceVariables {
         /** Name variable name. */
         private String name;

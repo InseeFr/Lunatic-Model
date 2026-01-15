@@ -45,8 +45,7 @@ class CleaningSerializationTest {
                    ]
                  }
                }
-             }
-             """;
+             }""";
 
     @Test
     void serializeCleaning() throws SerializationException, JSONException {
