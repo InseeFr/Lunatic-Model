@@ -21,21 +21,32 @@ import java.util.List;
         "bindingDependencies",
         "xAxisIterations",
         "yAxisIterations",
+        "sourceVariables",
         "components",
         "symLinks"
 })
 @Getter
 @Setter
-public class PairwiseLinks
-    extends ComponentType
-    implements ComponentNestingType
-{
+public class PairwiseLinks extends ComponentType implements ComponentNestingType {
+
+    /**
+     * Variables associated with the pairwise links component.
+     * @param name Name variable name.
+     * @param gender Gender variable name.
+     */
+    public record SourceVariables(
+            String name,
+            String gender) {}
 
     @JsonProperty("xAxisIterations")
     protected LabelType xAxisIterations;
 
     @JsonProperty("yAxisIterations")
     protected LabelType yAxisIterations;
+
+    /** {@link SourceVariables} */
+    private SourceVariables sourceVariables;
+
     protected List<ComponentType> components;
     protected SymLinksType symLinks;
 
