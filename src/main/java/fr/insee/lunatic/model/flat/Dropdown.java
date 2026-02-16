@@ -18,7 +18,14 @@ public class Dropdown extends ComponentType implements ComponentSimpleResponseTy
     @JsonProperty("isMandatory")
     private Boolean mandatory;
 
+    /** List of the modalities of the dropdown component (static mode). */
     protected List<Option> options;
+
+    /** Dynamic source for options (dynamic mode). */
+    protected String optionSource;
+
+    /** Optional filter for dynamic options. */
+    protected OptionFilter optionFilter;
 
     @JsonProperty(required = true)
     protected ResponseType response;
