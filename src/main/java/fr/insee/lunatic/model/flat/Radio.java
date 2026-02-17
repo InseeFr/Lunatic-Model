@@ -28,7 +28,7 @@ public class Radio extends ComponentType implements ComponentSimpleResponseType,
     protected String optionSource;
 
     /** Optional filter for dynamic options. */
-    protected OptionFilter optionFilter;
+    protected LabelType optionFilter;
 
     /** {@link ResponseType} */
     @JsonProperty(required = true)

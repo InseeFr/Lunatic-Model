@@ -24,7 +24,7 @@ public class CheckboxOne extends ComponentType implements ComponentSimpleRespons
     protected String optionSource;
 
     /** Optional filter for dynamic options. */
-    protected OptionFilter optionFilter;
+    protected LabelType optionFilter;
 
     /** {@link ResponseType} */
     @JsonProperty(required = true)

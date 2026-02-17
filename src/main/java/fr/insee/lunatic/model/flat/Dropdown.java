@@ -25,7 +25,7 @@ public class Dropdown extends ComponentType implements ComponentSimpleResponseTy
     protected String optionSource;
 
     /** Optional filter for dynamic options. */
-    protected OptionFilter optionFilter;
+    protected LabelType optionFilter;
 
     @JsonProperty(required = true)
     protected ResponseType response;
