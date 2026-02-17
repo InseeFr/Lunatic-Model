@@ -17,8 +17,14 @@ public class CheckboxOne extends ComponentType implements ComponentSimpleRespons
     /** Orientation of the checkbox modalities. */
     protected Orientation orientation;
 
-    /** List of the modalities of the checkbox component. */
+    /** List of the modalities of the checkboxOne component (static mode). */
     protected List<Option> options;
+
+    /** Dynamic source for options (dynamic mode). */
+    protected String optionSource;
+
+    /** Optional filter for dynamic options. */
+    protected LabelType optionFilter;
 
     /** {@link ResponseType} */
     @JsonProperty(required = true)
