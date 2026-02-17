@@ -121,7 +121,10 @@ class CheckboxOneSerializationTest {
         CheckboxOne checkboxOne = new CheckboxOne();
         checkboxOne.setId("checkboxone-dyn-id");
         checkboxOne.setOptionSource("FIRST_NAME");
-        checkboxOne.setOptionFilter(new OptionFilter("VTL", "AGE >= 18", "FIRST_NAME"));
+        checkboxOne.setOptionFilter(new LabelType());
+        checkboxOne.getOptionFilter().setType(LabelTypeEnum.VTL);
+        checkboxOne.getOptionFilter().setValue("AGE >= 18");
+        checkboxOne.getOptionFilter().setShapeFrom("FIRST_NAME");
         checkboxOne.setResponse(new ResponseType());
         checkboxOne.getResponse().setName("FOO");
         questionnaire.getComponents().add(checkboxOne);
@@ -186,8 +189,8 @@ class CheckboxOneSerializationTest {
         CheckboxOne checkboxOne =
                 assertInstanceOf(CheckboxOne.class, questionnaire.getComponents().getFirst());
         assertEquals("FIRST_NAME", checkboxOne.getOptionSource());
-        assertInstanceOf(OptionFilter.class, checkboxOne.getOptionFilter());
-        assertEquals("VTL", checkboxOne.getOptionFilter().getType());
+        assertInstanceOf(LabelType.class, checkboxOne.getOptionFilter());
+        assertEquals(LabelTypeEnum.VTL, checkboxOne.getOptionFilter().getType());
         assertEquals("AGE >= 18", checkboxOne.getOptionFilter().getValue());
         assertEquals("FIRST_NAME", checkboxOne.getOptionFilter().getShapeFrom());
     }

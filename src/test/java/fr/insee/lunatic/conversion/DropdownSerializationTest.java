@@ -22,7 +22,10 @@ class DropdownSerializationTest {
         Dropdown dropdown = new Dropdown();
         dropdown.setId("dropdown-dyn-id");
         dropdown.setOptionSource("FIRST_NAME");
-        dropdown.setOptionFilter(new OptionFilter("VTL", "AGE >= 18", "FIRST_NAME"));
+        dropdown.setOptionFilter(new LabelType());
+        dropdown.getOptionFilter().setType(LabelTypeEnum.VTL);
+        dropdown.getOptionFilter().setValue("AGE >= 18");
+        dropdown.getOptionFilter().setShapeFrom("FIRST_NAME");
         dropdown.setResponse(new ResponseType());
         dropdown.getResponse().setName("FOO");
         questionnaire.getComponents().add(dropdown);
@@ -86,8 +89,8 @@ class DropdownSerializationTest {
         Dropdown dropdown =
                 assertInstanceOf(Dropdown.class, questionnaire.getComponents().getFirst());
         assertEquals("FIRST_NAME", dropdown.getOptionSource());
-        assertInstanceOf(OptionFilter.class, dropdown.getOptionFilter());
-        assertEquals("VTL", dropdown.getOptionFilter().getType());
+        assertInstanceOf(LabelType.class, dropdown.getOptionFilter());
+        assertEquals(LabelTypeEnum.VTL, dropdown.getOptionFilter().getType());
         assertEquals("AGE >= 18", dropdown.getOptionFilter().getValue());
         assertEquals("FIRST_NAME", dropdown.getOptionFilter().getShapeFrom());
     }

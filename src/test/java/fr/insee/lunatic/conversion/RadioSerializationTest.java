@@ -178,7 +178,10 @@ class RadioSerializationTest {
         Radio radio = new Radio();
         radio.setId("radio-dyn-id");
         radio.setOptionSource("FIRST_NAME");
-        radio.setOptionFilter(new OptionFilter("VTL", "AGE >= 18", "FIRST_NAME"));
+        radio.setOptionFilter(new LabelType());
+        radio.getOptionFilter().setType(LabelTypeEnum.VTL);
+        radio.getOptionFilter().setValue("AGE >= 18");
+        radio.getOptionFilter().setShapeFrom("FIRST_NAME");
         radio.setResponse(new ResponseType());
         radio.getResponse().setName("FOO");
         questionnaire.getComponents().add(radio);
@@ -242,8 +245,8 @@ class RadioSerializationTest {
         //
         Radio radio = assertInstanceOf(Radio.class, questionnaire.getComponents().getFirst());
         assertEquals("FIRST_NAME", radio.getOptionSource());
-        assertInstanceOf(OptionFilter.class, radio.getOptionFilter());
-        assertEquals("VTL", radio.getOptionFilter().getType());
+        assertInstanceOf(LabelType.class, radio.getOptionFilter());
+        assertEquals(LabelTypeEnum.VTL, radio.getOptionFilter().getType());
         assertEquals("AGE >= 18", radio.getOptionFilter().getValue());
         assertEquals("FIRST_NAME", radio.getOptionFilter().getShapeFrom());
     }
