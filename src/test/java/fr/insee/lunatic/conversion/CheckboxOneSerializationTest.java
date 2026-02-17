@@ -7,7 +7,11 @@ import org.junit.jupiter.api.Test;
 import org.skyscreamer.jsonassert.JSONAssert;
 import org.skyscreamer.jsonassert.JSONCompareMode;
 
+import java.io.ByteArrayInputStream;
 import java.math.BigInteger;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertInstanceOf;
 
 class CheckboxOneSerializationTest {
 
@@ -107,6 +111,85 @@ class CheckboxOneSerializationTest {
                   ]
                 }""";
         JSONAssert.assertEquals(expectedJson, result, JSONCompareMode.STRICT);
+    }
+
+    @Test
+    void serializeCheckboxOne_dynamicOptions() throws SerializationException, JSONException {
+        //
+        Questionnaire questionnaire = new Questionnaire();
+        questionnaire.setId("questionnaire-id");
+        CheckboxOne checkboxOne = new CheckboxOne();
+        checkboxOne.setId("checkboxone-dyn-id");
+        checkboxOne.setOptionSource("FIRST_NAME");
+        checkboxOne.setOptionFilter(new OptionFilter("VTL", "AGE >= 18", "FIRST_NAME"));
+        checkboxOne.setResponse(new ResponseType());
+        checkboxOne.getResponse().setName("FOO");
+        questionnaire.getComponents().add(checkboxOne);
+        //
+        String result = new JsonSerializer().serialize(questionnaire);
+        // "options" is always serialized in the Lunatic model.
+        // The static vs dynamic choice is handled by business logic upstream.
+        String expectedJson = """
+        {
+          "id": "questionnaire-id",
+          "componentType": "Questionnaire",
+          "components": [
+            {
+              "id": "checkboxone-dyn-id",
+              "componentType": "CheckboxOne",
+              "orientation": "vertical",
+              "options": [],
+              "optionSource": "FIRST_NAME",
+              "optionFilter": {
+                "type": "VTL",
+                "value": "AGE >= 18",
+                "shapeFrom": "FIRST_NAME"
+              },
+              "response": {
+                "name": "FOO"
+              }
+            }
+          ]
+        }""";
+        JSONAssert.assertEquals(expectedJson, result, JSONCompareMode.STRICT);
+    }
+
+    @Test
+    void deserializeCheckboxOne_dynamicOptions() throws SerializationException {
+        //
+        String jsonInput = """
+        {
+          "id": "questionnaire-id",
+          "componentType": "Questionnaire",
+          "components": [
+            {
+              "id": "checkboxone-dyn-id",
+              "componentType": "CheckboxOne",
+              "optionSource": "FIRST_NAME",
+              "optionFilter": {
+                "type": "VTL",
+                "value": "AGE >= 18",
+                "shapeFrom": "FIRST_NAME"
+              },
+              "response": {
+                "name": "FOO"
+              }
+            }
+          ]
+        }""";
+        //
+        JsonDeserializer deserializer = new JsonDeserializer();
+        Questionnaire questionnaire = deserializer.deserialize(
+                new ByteArrayInputStream(jsonInput.getBytes())
+        );
+        //
+        CheckboxOne checkboxOne =
+                assertInstanceOf(CheckboxOne.class, questionnaire.getComponents().getFirst());
+        assertEquals("FIRST_NAME", checkboxOne.getOptionSource());
+        assertInstanceOf(OptionFilter.class, checkboxOne.getOptionFilter());
+        assertEquals("VTL", checkboxOne.getOptionFilter().getType());
+        assertEquals("AGE >= 18", checkboxOne.getOptionFilter().getValue());
+        assertEquals("FIRST_NAME", checkboxOne.getOptionFilter().getShapeFrom());
     }
 
 }

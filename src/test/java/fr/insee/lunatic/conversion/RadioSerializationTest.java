@@ -170,4 +170,82 @@ class RadioSerializationTest {
         JSONAssert.assertEquals(expectedJson, result, JSONCompareMode.STRICT);
     }
 
+    @Test
+    void serializeRadio_dynamicOptions() throws SerializationException, JSONException {
+        //
+        Questionnaire questionnaire = new Questionnaire();
+        questionnaire.setId("questionnaire-id");
+        Radio radio = new Radio();
+        radio.setId("radio-dyn-id");
+        radio.setOptionSource("FIRST_NAME");
+        radio.setOptionFilter(new OptionFilter("VTL", "AGE >= 18", "FIRST_NAME"));
+        radio.setResponse(new ResponseType());
+        radio.getResponse().setName("FOO");
+        questionnaire.getComponents().add(radio);
+        //
+        String result = new JsonSerializer().serialize(questionnaire);
+        // "options" is always serialized in the Lunatic model.
+        // The static vs dynamic choice is handled by business logic upstream.
+        String expectedJson = """
+            {
+              "id": "questionnaire-id",
+              "componentType": "Questionnaire",
+              "components": [
+                {
+                  "id": "radio-dyn-id",
+                  "componentType": "Radio",
+                  "orientation": "vertical",
+                  "options": [],
+                  "optionSource": "FIRST_NAME",
+                  "optionFilter": {
+                    "type": "VTL",
+                    "value": "AGE >= 18",
+                    "shapeFrom": "FIRST_NAME"
+                  },
+                  "response": {
+                    "name": "FOO"
+                  }
+                }
+              ]
+            }""";
+        JSONAssert.assertEquals(expectedJson, result, JSONCompareMode.STRICT);
+    }
+
+    @Test
+    void deserializeRadio_dynamicOptions() throws SerializationException {
+        //
+        String jsonInput = """
+            {
+              "id": "questionnaire-id",
+              "componentType": "Questionnaire",
+              "components": [
+                {
+                  "id": "radio-dyn-id",
+                  "componentType": "Radio",
+                  "optionSource": "FIRST_NAME",
+                  "optionFilter": {
+                    "type": "VTL",
+                    "value": "AGE >= 18",
+                    "shapeFrom": "FIRST_NAME"
+                  },
+                  "response": {
+                    "name": "FOO"
+                  }
+                }
+              ]
+            }""";
+        //
+        JsonDeserializer deserializer = new JsonDeserializer();
+        Questionnaire questionnaire = deserializer.deserialize(
+                new ByteArrayInputStream(jsonInput.getBytes())
+        );
+        //
+        Radio radio = assertInstanceOf(Radio.class, questionnaire.getComponents().getFirst());
+        assertEquals("FIRST_NAME", radio.getOptionSource());
+        assertInstanceOf(OptionFilter.class, radio.getOptionFilter());
+        assertEquals("VTL", radio.getOptionFilter().getType());
+        assertEquals("AGE >= 18", radio.getOptionFilter().getValue());
+        assertEquals("FIRST_NAME", radio.getOptionFilter().getShapeFrom());
+    }
+
 }
