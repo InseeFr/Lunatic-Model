@@ -28,6 +28,8 @@ import java.util.List;
         "dateFormat",
         "unit",
         "options",
+        "optionSource",
+        "optionFilter",
         "response",
         "optionResponses",
         "bindingDependencies"
