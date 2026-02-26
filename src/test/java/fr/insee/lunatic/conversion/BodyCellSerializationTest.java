@@ -61,6 +61,21 @@ class BodyCellSerializationTest {
               }
             }""";
 
+    private final String jsonBodyCellWithDynamicOptions = """
+        {
+              "id": "foo-id",
+              "componentType": "CheckboxOne",
+              "optionSource": "FIRST_NAME",
+              "optionFilter": {
+                "type": "VTL",
+                "value": "AGE >= 18",
+                "shapeFrom": "FIRST_NAME"
+              },
+              "response": {
+                "name": "FOO"
+              }
+            }""";
+
     private ObjectMapper objectMapper;
 
     /** Direct usage of jackson's object mapper since serialization/deserialization classes can only
@@ -188,4 +203,36 @@ class BodyCellSerializationTest {
         assertEquals("FOO", bodyCell.getResponse().getName());
     }
 
+    @Test
+    void serializeBodyCell_dynamicOptions() throws JsonProcessingException, JSONException {
+        //
+        BodyCell bodyCell = new BodyCell();
+        bodyCell.setId("foo-id");
+        bodyCell.setComponentType(ComponentTypeEnum.CHECKBOX_ONE);
+        bodyCell.setOptionSource("FIRST_NAME");
+        bodyCell.setOptionFilter(new LabelType());
+        bodyCell.getOptionFilter().setType(LabelTypeEnum.VTL);
+        bodyCell.getOptionFilter().setValue("AGE >= 18");
+        bodyCell.getOptionFilter().setShapeFrom("FIRST_NAME");
+        bodyCell.setResponse(new ResponseType());
+        bodyCell.getResponse().setName("FOO");
+        //
+        String result = objectMapper.writeValueAsString(bodyCell);
+        //
+        JSONAssert.assertEquals(jsonBodyCellWithDynamicOptions, result, JSONCompareMode.STRICT);
+    }
+
+    @Test
+    void deserializeBodyCell_dynamicOptions() throws JsonProcessingException {
+        //
+        BodyCell bodyCell = objectMapper.readValue(jsonBodyCellWithDynamicOptions, BodyCell.class);
+        //
+        assertEquals("foo-id", bodyCell.getId());
+        assertEquals(ComponentTypeEnum.CHECKBOX_ONE, bodyCell.getComponentType());
+        assertEquals("FIRST_NAME", bodyCell.getOptionSource());
+        assertEquals(LabelTypeEnum.VTL, bodyCell.getOptionFilter().getType());
+        assertEquals("AGE >= 18", bodyCell.getOptionFilter().getValue());
+        assertEquals("FIRST_NAME", bodyCell.getOptionFilter().getShapeFrom());
+        assertEquals("FOO", bodyCell.getResponse().getName());
+    }
 }

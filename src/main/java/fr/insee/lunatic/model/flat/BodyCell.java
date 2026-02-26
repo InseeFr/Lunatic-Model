@@ -28,6 +28,8 @@ import java.util.List;
         "dateFormat",
         "unit",
         "options",
+        "optionSource",
+        "optionFilter",
         "response",
         "optionResponses",
         "bindingDependencies"
@@ -54,8 +56,25 @@ public class BodyCell {
     @Getter @Setter
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     protected List<Option> options;
-    /** For suggester cells: Name of the code list used for auto-completion. */
 
+    /**
+     * Name of the variable providing dynamic options for QCU cells inside tables.
+     * Same semantics as optionSource in Radio / CheckboxOne / Dropdown components.
+     * If set, the runtime ignores static "options" and loads options
+     * from the referenced variable.
+     */
+    @Getter @Setter
+    protected String optionSource;
+
+    /**
+     * Optional VTL filter applied to dynamic options.
+     * Same semantics as optionFilter in standard QCU components.
+     * Allows filtering the dynamic options depending on context.
+     */
+    @Getter @Setter
+    protected LabelType optionFilter;
+
+    /** For suggester cells: Name of the code list used for auto-completion. */
     @Getter @Setter
     private String storeName;
 
