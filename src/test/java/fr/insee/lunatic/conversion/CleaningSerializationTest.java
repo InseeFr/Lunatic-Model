@@ -41,6 +41,18 @@ class CleaningSerializationTest {
                        "expression": "count(Q3_ARRAY)",
                        "shapeFrom": "Q3_ARRAY",
                        "isAggregatorUsed": true
+                     },
+                     {
+                       "expression": "count(Q3_ARRAY)",
+                       "shapeFrom": "Q3_ARRAY",
+                       "isAggregatorUsed": true,
+                       "shouldCheckAllIterations": true
+                     },
+                     {
+                       "expression": "count(Q3_ARRAY)",
+                       "shapeFrom": "Q3_ARRAY",
+                       "isAggregatorUsed": true,
+                       "shouldCheckAllIterations": false
                      }
                    ]
                  }
@@ -60,7 +72,9 @@ class CleaningSerializationTest {
         CleaningVariableEntry cleaningEntry2 = new CleaningVariableEntry("Q2");
         cleaningEntry2.addCleanedVariable(new CleanedVariableEntry("Q22", List.of(
                 new CleaningExpression("(Q1)",null,false),
-                new CleaningExpression("count(Q3_ARRAY)","Q3_ARRAY",true))));
+                new CleaningExpression("count(Q3_ARRAY)","Q3_ARRAY",true),
+                new CleaningExpression("count(Q3_ARRAY)","Q3_ARRAY",true, true),
+                new CleaningExpression("count(Q3_ARRAY)","Q3_ARRAY",true, false))));
         cleaning.addCleaningEntry(cleaningEntry1);
         cleaning.addCleaningEntry(cleaningEntry2);
         questionnaire.setCleaning(cleaning);
@@ -98,7 +112,9 @@ class CleaningSerializationTest {
         assertEquals(
                 List.of(
                         new CleaningExpression("(Q1)", null, false),
-                        new CleaningExpression("count(Q3_ARRAY)", "Q3_ARRAY", true)),
+                        new CleaningExpression("count(Q3_ARRAY)", "Q3_ARRAY", true),
+                        new CleaningExpression("count(Q3_ARRAY)", "Q3_ARRAY", true, true),
+                        new CleaningExpression("count(Q3_ARRAY)", "Q3_ARRAY", true,false)),
                 q2Entry.getCleanedVariable("Q22").getCleaningExpressions());
     }
 
