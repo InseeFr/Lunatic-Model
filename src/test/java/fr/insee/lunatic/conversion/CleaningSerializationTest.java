@@ -23,35 +23,35 @@ class CleaningSerializationTest {
                "cleaning": {
                  "Q1": {
                    "Q21": [
-                     { "expression": "(Q1)", "isAggregatorUsed": false }
+                     { "expression": "(Q1)", "shouldCheckDuringResizing": false }
                    ],
                    "Q22": [
-                     { "expression": "(Q1)", "isAggregatorUsed": false },
+                     { "expression": "(Q1)", "shouldCheckDuringResizing": false },
                      {
                        "expression": "count(Q3_ARRAY)",
                        "shapeFrom": "Q3_ARRAY",
-                       "isAggregatorUsed": true
+                       "shouldCheckDuringResizing": true
                      }
                    ]
                  },
                  "Q2": {
                    "Q22": [
-                     { "expression": "(Q1)", "isAggregatorUsed": false },
+                     { "expression": "(Q1)", "shouldCheckDuringResizing": false },
                      {
                        "expression": "count(Q3_ARRAY)",
                        "shapeFrom": "Q3_ARRAY",
-                       "isAggregatorUsed": true
+                       "shouldCheckDuringResizing": true
                      },
                      {
                        "expression": "count(Q3_ARRAY)",
                        "shapeFrom": "Q3_ARRAY",
-                       "isAggregatorUsed": true,
+                       "shouldCheckDuringResizing": true,
                        "shouldCheckAllIterations": true
                      },
                      {
                        "expression": "count(Q3_ARRAY)",
                        "shapeFrom": "Q3_ARRAY",
-                       "isAggregatorUsed": true,
+                       "shouldCheckDuringResizing": true,
                        "shouldCheckAllIterations": false
                      }
                    ]
