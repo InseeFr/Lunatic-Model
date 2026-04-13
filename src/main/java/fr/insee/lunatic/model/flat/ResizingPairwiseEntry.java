@@ -17,17 +17,28 @@ public class ResizingPairwiseEntry extends ResizingEntry {
     /**
      * Size expressions for pairwise links variables.
      */
-    @Getter
     @Setter
     public static class Size {
 
-        /** VTL expression to resize the pairwise variable. */
-        @JsonProperty("xAxisSize")
+        /**
+         * VTL expression to resize the pairwise variable.
+         */
         private String xAxisSize;
 
-        /** VTL expression to resize the arrays in the pairwise variable. */
-        @JsonProperty("yAxisSize")
+        /**
+         * VTL expression to resize the arrays in the pairwise variable.
+         */
         private String yAxisSize;
+
+        @JsonProperty("xAxisSize")
+        public String getXAxisSize() {
+            return this.xAxisSize;
+        }
+
+        @JsonProperty("yAxisSize")
+        public String getYAxisSize() {
+            return this.yAxisSize;
+        }
     }
 
     /** {@link Size} */
