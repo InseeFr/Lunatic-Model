@@ -3,6 +3,7 @@ package fr.insee.lunatic.conversion;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import fr.insee.lunatic.exception.SerializationException;
 import fr.insee.lunatic.model.flat.Questionnaire;
+import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -10,6 +11,17 @@ import java.io.InputStream;
 
 @Slf4j
 public class JsonDeserializer {
+
+	@Getter
+	private final ObjectMapper mapper;
+
+	public JsonDeserializer() {
+		mapper = configuredMapper();
+	}
+
+	private static ObjectMapper configuredMapper() {
+		return new ObjectMapper(); // nothing special
+	}
 
 	public Questionnaire deserialize(InputStream jsonQuestionnaire) throws SerializationException {
 		if (jsonQuestionnaire == null) return null;
