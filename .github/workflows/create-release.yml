@@ -9,6 +9,9 @@ on:
       - 'README.md'
       - 'docs/**'
 
+env:
+  JAVA_VERSION: '25'
+
 jobs:
   check-version:
     runs-on: ubuntu-latest
@@ -25,7 +28,7 @@ jobs:
       - name: Print version
         run: echo ${{ steps.version.outputs.version }}
 
-      - uses: mukunku/tag-exists-action@v1.6.0
+      - uses: mukunku/tag-exists-action@v1.7.0
         name: Check tag existence
         id: check-tag-exists
         with:
@@ -92,14 +95,14 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          java-version: '21'
+          java-version: ${{ env.JAVA_VERSION }}
           distribution: 'temurin'
       - name: Import GPG Key
         uses: crazy-max/ghaction-import-gpg@v1
         env:
           GPG_PRIVATE_KEY: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
           PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
-      - uses: s4u/maven-settings-action@v3.0.0
+      - uses: s4u/maven-settings-action@v3.1.0
         with:
           githubServer: false
           servers: |
