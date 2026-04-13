@@ -6,6 +6,9 @@ on:
     paths-ignore:
       - 'renovate.json'
 
+env:
+  JAVA_VERSION: '25'
+
 jobs:
 
   remove-deploy-label:
@@ -62,7 +65,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          java-version: '21'
+          java-version: ${{ env.JAVA_VERSION }}
           distribution: 'temurin'
       - name: Import GPG Key
         uses: crazy-max/ghaction-import-gpg@v1

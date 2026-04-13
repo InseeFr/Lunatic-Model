@@ -9,6 +9,9 @@ on:
       - 'README.md'
       - 'docs/**'
 
+env:
+  JAVA_VERSION: '25'
+
 jobs:
   check-version:
     runs-on: ubuntu-latest
@@ -92,7 +95,7 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          java-version: '21'
+          java-version: ${{ env.JAVA_VERSION }}
           distribution: 'temurin'
       - name: Import GPG Key
         uses: crazy-max/ghaction-import-gpg@v1
