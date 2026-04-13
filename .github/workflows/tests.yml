@@ -8,6 +8,9 @@ on:
       - 'README.md'
       - 'docs/**'
 
+env:
+  JAVA_VERSION: '25'
+
 jobs:
   test:
     if: ${{ ! contains(github.event.pull_request.labels.*.name, 'deploy-snapshot') }}
@@ -19,7 +22,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '21'
+          java-version: ${{ env.JAVA_VERSION }}
 
       - name: Tests
         run: mvn test --no-transfer-progress

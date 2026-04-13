@@ -26,30 +26,41 @@ class CleaningSerializationTest {
                "cleaning": {
                  "Q1": {
                    "Q21": [
-                     { "expression": "(Q1)", "isAggregatorUsed": false }
+                     { "expression": "(Q1)", "shouldCheckDuringResizing": false }
                    ],
                    "Q22": [
-                     { "expression": "(Q1)", "isAggregatorUsed": false },
+                     { "expression": "(Q1)", "shouldCheckDuringResizing": false },
                      {
                        "expression": "count(Q3_ARRAY)",
                        "shapeFrom": "Q3_ARRAY",
-                       "isAggregatorUsed": true
+                       "shouldCheckDuringResizing": true
                      }
                    ]
                  },
                  "Q2": {
                    "Q22": [
-                     { "expression": "(Q1)", "isAggregatorUsed": false },
+                     { "expression": "(Q1)", "shouldCheckDuringResizing": false },
                      {
                        "expression": "count(Q3_ARRAY)",
                        "shapeFrom": "Q3_ARRAY",
-                       "isAggregatorUsed": true
+                       "shouldCheckDuringResizing": true
+                     },
+                     {
+                       "expression": "count(Q3_ARRAY)",
+                       "shapeFrom": "Q3_ARRAY",
+                       "shouldCheckDuringResizing": true,
+                       "shouldCheckAllIterations": true
+                     },
+                     {
+                       "expression": "count(Q3_ARRAY)",
+                       "shapeFrom": "Q3_ARRAY",
+                       "shouldCheckDuringResizing": true,
+                       "shouldCheckAllIterations": false
                      }
                    ]
                  }
                }
-             }
-             """;
+             }""";
 
     @Test
     void serializeCleaning() throws SerializationException, JSONException {
@@ -64,7 +75,9 @@ class CleaningSerializationTest {
         CleaningVariableEntry cleaningEntry2 = new CleaningVariableEntry("Q2");
         cleaningEntry2.addCleanedVariable(new CleanedVariableEntry("Q22", List.of(
                 new CleaningExpression("(Q1)",null,false),
-                new CleaningExpression("count(Q3_ARRAY)","Q3_ARRAY",true))));
+                new CleaningExpression("count(Q3_ARRAY)","Q3_ARRAY",true),
+                new CleaningExpression("count(Q3_ARRAY)","Q3_ARRAY",true, true),
+                new CleaningExpression("count(Q3_ARRAY)","Q3_ARRAY",true, false))));
         cleaning.addCleaningEntry(cleaningEntry1);
         cleaning.addCleaningEntry(cleaningEntry2);
         questionnaire.setCleaning(cleaning);
@@ -102,7 +115,9 @@ class CleaningSerializationTest {
         assertEquals(
                 List.of(
                         new CleaningExpression("(Q1)", null, false),
-                        new CleaningExpression("count(Q3_ARRAY)", "Q3_ARRAY", true)),
+                        new CleaningExpression("count(Q3_ARRAY)", "Q3_ARRAY", true),
+                        new CleaningExpression("count(Q3_ARRAY)", "Q3_ARRAY", true, true),
+                        new CleaningExpression("count(Q3_ARRAY)", "Q3_ARRAY", true,false)),
                 q2Entry.getCleanedVariable("Q22").getCleaningExpressions());
     }
 

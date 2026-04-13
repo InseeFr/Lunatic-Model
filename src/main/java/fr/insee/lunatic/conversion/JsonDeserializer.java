@@ -16,7 +16,6 @@ public class JsonDeserializer {
 
 		log.debug("Deserializing questionnaire from input stream");
 
-		ObjectMapper mapper = new ObjectMapper();
 		Questionnaire questionnaire;
 		try {
 			questionnaire = mapper.readValue(jsonQuestionnaire, Questionnaire.class);
