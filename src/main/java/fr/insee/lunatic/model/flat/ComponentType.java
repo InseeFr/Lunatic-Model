@@ -101,6 +101,13 @@ public abstract class ComponentType {
     @Getter
     protected ComponentTypeEnum componentType;
 
+    /** This is not named as a regular setter for the following reason: you shouldn't modify this property.
+     * Use with caution. Note: this method exists because of some Eno "specific treatment".
+     * To be removed as soon as possible. */
+    public void modifyComponentType(ComponentTypeEnum componentType) {
+        this.componentType = componentType;
+    }
+
     /** Displayed label of the component. */
     @Getter @Setter
     protected LabelType label;
