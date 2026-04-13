@@ -19,7 +19,7 @@ public class RosterForLoop
     protected LabelType iterations;
 
     public RosterForLoop() {
-        super(ComponentTypeName.ROSTER_FOR_LOOP);
+        super(ComponentTypeEnum.ROSTER_FOR_LOOP);
         this.header = new ArrayList<>();
         this.components = new ArrayList<>();
     }

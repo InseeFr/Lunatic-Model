@@ -35,7 +35,7 @@ public class CheckboxOne extends ComponentType implements ComponentSimpleRespons
     private Boolean mandatory;
 
     public CheckboxOne() {
-        super(ComponentTypeName.CHECKBOX_ONE);
+        super(ComponentTypeEnum.CHECKBOX_ONE);
         this.orientation = Orientation.VERTICAL;
         this.options = new ArrayList<>();
     }

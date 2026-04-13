@@ -46,7 +46,7 @@ public class Questionnaire extends ComponentType {
     protected Articulation articulation;
 
     public Questionnaire () {
-        super(ComponentTypeName.QUESTIONNAIRE);
+        super(ComponentTypeEnum.QUESTIONNAIRE);
         this.components = new ArrayList<>();
         this.suggesters = new ArrayList<>();
         this.variables = new ArrayList<>();

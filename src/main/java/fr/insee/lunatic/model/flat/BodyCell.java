@@ -76,7 +76,7 @@ public class BodyCell {
     /** For component cells: collected response of the cell. */
     protected ResponseType response;
 
-    protected ComponentTypeName componentType;
+    protected ComponentTypeEnum componentType;
     protected BigInteger maxLength;
 
     @JsonIgnore

@@ -52,7 +52,7 @@ class TextSerializationTest {
                 new ByteArrayInputStream(textComponentJson.getBytes()));
         //
         Text text = assertInstanceOf(Text.class, questionnaire.getComponents().getFirst());
-        assertEquals(ComponentTypeName.TEXT, text.getComponentTypeName());
+        assertEquals(ComponentTypeEnum.TEXT, text.getComponentType());
         assertEquals("\"Non-editable text.\"", text.getLabel().getValue());
         assertEquals(LabelTypeEnum.VTL_MD, text.getLabel().getType());
     }

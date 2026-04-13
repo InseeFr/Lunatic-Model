@@ -17,7 +17,7 @@ import java.util.List;
 public class Suggester extends ComponentType implements ComponentSimpleResponseType, ComponentMandatory {
 
     public Suggester() {
-        super(ComponentTypeName.SUGGESTER);
+        super(ComponentTypeEnum.SUGGESTER);
     }
 
     public record OptionResponse(String name, String attribute) {}

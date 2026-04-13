@@ -21,7 +21,7 @@ public class Table extends ComponentType implements ComponentMultipleResponseTyp
     protected List<BodyLine> bodyLines;
 
     public Table() {
-        super(ComponentTypeName.TABLE);
+        super(ComponentTypeEnum.TABLE);
         this.header = new ArrayList<>();
         this.bodyLines = new ArrayList<>();
     }

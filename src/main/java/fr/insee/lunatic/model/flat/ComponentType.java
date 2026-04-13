@@ -99,8 +99,7 @@ public abstract class ComponentType {
 
     /** Property that defines the type of component in the serialized object. */
     @Getter
-    @JsonProperty("componentType")
-    protected ComponentTypeName componentTypeName;
+    protected ComponentTypeEnum componentType;
 
     /** Displayed label of the component. */
     @Getter @Setter
@@ -144,8 +143,8 @@ public abstract class ComponentType {
     @Getter @Setter
     protected String storeName;
 
-    protected ComponentType(ComponentTypeName componentTypeName) {
-        this.componentTypeName = componentTypeName;
+    protected ComponentType(ComponentTypeEnum componentTypeEnum) {
+        this.componentType = componentTypeEnum;
         controls = new ArrayList<>();
         declarations = new ArrayList<>();
     }

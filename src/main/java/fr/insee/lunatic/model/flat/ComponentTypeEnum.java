@@ -3,7 +3,7 @@ package fr.insee.lunatic.model.flat;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 
-public enum ComponentTypeName {
+public enum ComponentTypeEnum {
 
     QUESTIONNAIRE("Questionnaire"),
     SEQUENCE("Sequence"),
@@ -31,7 +31,7 @@ public enum ComponentTypeName {
 
     private final String value;
 
-    ComponentTypeName(String v) {
+    ComponentTypeEnum(String v) {
         value = v;
     }
 
@@ -41,8 +41,8 @@ public enum ComponentTypeName {
     }
 
     @JsonCreator
-    public static ComponentTypeName fromValue(String v) {
-        for (ComponentTypeName c: ComponentTypeName.values()) {
+    public static ComponentTypeEnum fromValue(String v) {
+        for (ComponentTypeEnum c: ComponentTypeEnum.values()) {
             if (c.value.equals(v)) {
                 return c;
             }

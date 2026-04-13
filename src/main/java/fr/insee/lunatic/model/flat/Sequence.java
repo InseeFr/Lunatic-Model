@@ -8,7 +8,7 @@ import lombok.Setter;
 public class Sequence extends ComponentType implements ComponentSequenceType {
 
     public Sequence() {
-        super(ComponentTypeName.SEQUENCE);
+        super(ComponentTypeEnum.SEQUENCE);
     }
 
 }

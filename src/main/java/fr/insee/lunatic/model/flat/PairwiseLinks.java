@@ -56,7 +56,7 @@ public class PairwiseLinks extends ComponentType implements ComponentNestingType
     protected SymLinksType symLinks;
 
     public PairwiseLinks() {
-        super(ComponentTypeName.PAIRWISE_LINKS);
+        super(ComponentTypeEnum.PAIRWISE_LINKS);
         this.components = new ArrayList<>();
     }
 

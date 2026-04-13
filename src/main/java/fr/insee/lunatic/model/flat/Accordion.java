@@ -13,7 +13,7 @@ public class Accordion extends ComponentType {
     List<Item> items;
 
     public Accordion() {
-        super(ComponentTypeName.ACCORDION);
+        super(ComponentTypeEnum.ACCORDION);
         this.items = new ArrayList<>();
     }
 
