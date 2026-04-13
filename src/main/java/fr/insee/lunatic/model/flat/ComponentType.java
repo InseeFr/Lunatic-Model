@@ -90,71 +90,68 @@ import java.util.List;
         @JsonSubTypes.Type(value = FilterDescription.class, name = "FilterDescription"),
         @JsonSubTypes.Type(value = Accordion.class, name = "Accordion"),
 })
-@Getter
-@Setter
 public abstract class ComponentType {
 
     /** Component identifier. */
+    @Getter @Setter
     @JsonProperty(required = true)
     protected String id;
 
     /** Property that defines the type of component in the serialized object. */
+    @Getter
     protected ComponentTypeEnum componentType;
 
-    /**
-     * @deprecated The "component type" is set in constructor.
-     */
-    @Deprecated(since = "5.10.1", forRemoval = true)
-    public void setComponentType(ComponentTypeEnum componentTypeEnum) {
-        this.componentType = componentTypeEnum;
+    /** This is not named as a regular setter for the following reason: you shouldn't modify this property.
+     * Use with caution. Note: this method exists because of some Eno "specific treatment".
+     * To be removed as soon as possible. */
+    public void modifyComponentType(ComponentTypeEnum componentType) {
+        this.componentType = componentType;
     }
 
     /** Displayed label of the component. */
+    @Getter @Setter
     protected LabelType label;
 
     /** Component description (concept introduced in Lunatic v3). */
+    @Getter @Setter
     private LabelType description;
 
     /** Declarations to display with the component. */
+    @Getter @Setter
     @JsonInclude(Include.NON_EMPTY)
     protected List<DeclarationType> declarations;
 
     /** Filter applied on the component. */
+    @Getter @Setter
     protected ConditionFilterType conditionFilter;
 
     /** Controls applied on the component. */
+    @Getter @Setter
     @JsonInclude(Include.NON_EMPTY)
     protected List<ControlType> controls;
 
-    /** Object that indicates in which sequence/subsequence belongs the component.
-     * @deprecated Unused by Lunatic anymore, to be removed. */
-    @Deprecated(since = "5.1.0", forRemoval = true)
-    protected Hierarchy hierarchy;
-
+    @Getter @Setter
     protected ResponseType missingResponse;
-
-    /** Collected or external variable names required to evaluate expressions used in the component properties.
-     * @deprecated Binding dependencies at component level are not used anymore in Lunatic. */
-    @JsonInclude(Include.NON_EMPTY)
-    @Deprecated(since = "3.4.0", forRemoval = true)
-    protected List<String> bindingDependencies = new ArrayList<>();
 
     /** Page number of the component: "1", "2", "3", etc.
      * For components that are in a loop, the page number becomes: "n.1", "n.2", "n.3", etc.
      * (where 'n' is the loop page number).
      * Components that share the same page number are displayed on the same page. */
+    @Getter @Setter
     protected String page;
 
     /** {@link ComponentPosition} */
+    @Getter @Setter
     protected ComponentPosition position;
 
     /** This property should be moved in the Suggester component.
      * Yet having this property defined here makes Eno suggester specific treatment easier.
      * To be moved in the Suggester class when the suggester specific treatment is removed in Eno. */
+    @Getter @Setter
     protected String storeName;
 
-    protected ComponentType(ComponentTypeEnum componentType) {
-        this.componentType = componentType;
+    protected ComponentType(ComponentTypeEnum componentTypeEnum) {
+        this.componentType = componentTypeEnum;
         controls = new ArrayList<>();
         declarations = new ArrayList<>();
     }

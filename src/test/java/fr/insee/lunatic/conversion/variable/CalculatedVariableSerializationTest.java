@@ -111,7 +111,7 @@ class CalculatedVariableSerializationTest {
         calculatedVariableType.setExpression(new LabelType());
         calculatedVariableType.getExpression().setValue("<VTL expression>");
         calculatedVariableType.getExpression().setType(LabelTypeEnum.VTL);
-        calculatedVariableType.getShapeFromList().add("SOME_COLLECTED_VARIABLE");
+        calculatedVariableType.getShapeFrom().add("SOME_COLLECTED_VARIABLE");
         questionnaire.getVariables().add(calculatedVariableType);
         //
         String result = jsonSerializer.serialize(questionnaire);
@@ -164,8 +164,8 @@ class CalculatedVariableSerializationTest {
         assertEquals(1, questionnaire.getVariables().size());
         CalculatedVariableType calculatedVariableType = assertInstanceOf(CalculatedVariableType.class,
                 questionnaire.getVariables().getFirst());
-        assertEquals(1, calculatedVariableType.getShapeFromList().size());
-        assertEquals("SOME_COLLECTED_VARIABLE", calculatedVariableType.getShapeFromList().getFirst());
+        assertEquals(1, calculatedVariableType.getShapeFrom().size());
+        assertEquals("SOME_COLLECTED_VARIABLE", calculatedVariableType.getShapeFrom().getFirst());
         assertEquals(1, calculatedVariableType.getDimension().value());
     }
 
@@ -180,7 +180,7 @@ class CalculatedVariableSerializationTest {
         Questionnaire deserialized = jsonDeserializer.deserialize(new ByteArrayInputStream(jsonInput.getBytes()));
         //
         CalculatedVariableType calculatedVariable = (CalculatedVariableType) deserialized.getVariables().getFirst();
-        assertEquals(List.of("VAR1", "VAR2"), calculatedVariable.getShapeFromList());
+        assertEquals(List.of("VAR1", "VAR2"), calculatedVariable.getShapeFrom());
     }
 
     @Test
@@ -198,19 +198,6 @@ class CalculatedVariableSerializationTest {
                     {"variableType":"CALCULATED","shapeFrom":["VAR1", "VAR2"]}
                 ]}""";
         JSONAssert.assertEquals(expected, serialized, JSONCompareMode.STRICT);
-    }
-
-    @Test
-    void stringShapeFrom_backwardCompatibility() throws SerializationException {
-        //
-        String stringShapeFrom = """
-                {"componentType":"Questionnaire","variables":[
-                    {"variableType":"CALCULATED","shapeFrom":"FOO"}
-                ]}""";
-        //
-        Questionnaire deserialized = jsonDeserializer.deserialize(new ByteArrayInputStream(stringShapeFrom.getBytes()));
-        CalculatedVariableType calculatedVariable = (CalculatedVariableType) deserialized.getVariables().getFirst();
-        assertEquals("FOO", calculatedVariable.getShapeFromList().getFirst());
     }
 
 }

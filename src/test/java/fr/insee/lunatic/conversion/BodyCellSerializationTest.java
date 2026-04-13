@@ -121,8 +121,8 @@ class BodyCellSerializationTest {
         bodyCell.setMin(0d);
         bodyCell.setMax(100d);
         bodyCell.setUnit(new LabelType());
-        bodyCell.getUnitLabel().setValue("%");
-        bodyCell.getUnitLabel().setType(LabelTypeEnum.VTL_MD);
+        bodyCell.getUnit().setValue("%");
+        bodyCell.getUnit().setType(LabelTypeEnum.VTL_MD);
         bodyCell.setResponse(new ResponseType());
         bodyCell.getResponse().setName("FOO");
         //
@@ -140,8 +140,8 @@ class BodyCellSerializationTest {
         assertEquals(ComponentTypeEnum.INPUT_NUMBER, bodyCell.getComponentType());
         assertEquals(0d, bodyCell.getMin());
         assertEquals(100d, bodyCell.getMax());
-        assertEquals("%", bodyCell.getUnitLabel().getValue());
-        assertEquals(LabelTypeEnum.VTL_MD, bodyCell.getUnitLabel().getType());
+        assertEquals("%", bodyCell.getUnit().getValue());
+        assertEquals(LabelTypeEnum.VTL_MD, bodyCell.getUnit().getType());
         assertEquals("FOO", bodyCell.getResponse().getName());
     }
 
