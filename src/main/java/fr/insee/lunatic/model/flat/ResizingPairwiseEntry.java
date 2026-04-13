@@ -20,6 +20,8 @@ public class ResizingPairwiseEntry extends ResizingEntry {
     @Setter
     public static class Size {
 
+        // Note: the @JsonProperty was put on the getter methods due to a bug in jackson-databind 2.21.2
+
         /**
          * VTL expression to resize the pairwise variable.
          */
