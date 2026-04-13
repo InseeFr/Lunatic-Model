@@ -8,6 +8,7 @@ on:
       - 'renovate.json'
       - 'README.md'
       - 'docs/**'
+      - '.github/**'
 
 env:
   JAVA_VERSION: '25'
