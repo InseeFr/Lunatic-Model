@@ -6,7 +6,7 @@
 	<groupId>fr.insee.lunatic</groupId>
 	<artifactId>lunatic-model</artifactId>
 	<packaging>jar</packaging>
-	<version>6.0.0</version>
+	<version>6.0.1</version>
 	<name>Lunatic Model</name>
 	<description>Classes and converters for the Lunatic model</description>
 	<url>https://inseefr.github.io/Lunatic-Model/</url>
@@ -21,8 +21,8 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.release>${java.version}</maven.compiler.release>
 
-		<jackson.version>2.21.2</jackson.version>
-		<lombok.version>1.18.44</lombok.version>
+		<jackson.version>2.21.3</jackson.version>
+		<lombok.version>1.18.46</lombok.version>
 		<maven-compiler-plugin.version>3.15.0</maven-compiler-plugin.version>
 	</properties>
 
@@ -70,7 +70,7 @@
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter</artifactId>
-			<version>5.14.3</version>
+			<version>5.14.4</version>
 			<scope>test</scope>
 		</dependency>
 
