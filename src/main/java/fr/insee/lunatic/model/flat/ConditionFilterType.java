@@ -11,14 +11,19 @@ import java.util.List;
 @JsonPropertyOrder({
         "value",
         "type",
-        "bindingDependencies"
+        "bindingDependencies",
+        "variablesDependencies"
 })
 @Getter
 @Setter
 public class ConditionFilterType extends LabelType {
 
+    // Internal, not serialized. Still used by Eno processing steps; to be removed after their refactoring.
     @JsonIgnore
     protected List<String> bindingDependencies;
+
+    /** Direct variable dependencies of the filter expression, by variable type. */
+    protected VariablesDependencies variablesDependencies;
 
     public ConditionFilterType() {
         this.bindingDependencies = new ArrayList<>();
