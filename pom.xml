@@ -46,13 +46,6 @@
 		<url>https://github.com/InseeFr/Lunatic-Model.git</url>
 	</scm>
 
-	<distributionManagement>
-		<repository>
-			<id>central</id>
-			<url>https://central.sonatype.com/api/publish/maven</url>
-		</repository>
-	</distributionManagement>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>
