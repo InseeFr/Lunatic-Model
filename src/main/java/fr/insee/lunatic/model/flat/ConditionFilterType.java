@@ -1,6 +1,7 @@
 package fr.insee.lunatic.model.flat;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,6 +24,7 @@ public class ConditionFilterType extends LabelType {
     protected List<String> bindingDependencies;
 
     /** Direct variable dependencies of the filter expression, by variable type. */
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     protected VariablesDependencies variablesDependencies;
 
     public ConditionFilterType() {
