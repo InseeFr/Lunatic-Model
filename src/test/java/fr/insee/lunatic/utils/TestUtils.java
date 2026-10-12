@@ -24,7 +24,7 @@ public class TestUtils {
             throw new IOException("No file found at relative path " + relativePath);
         try {
             return Files.readString(Path.of(testFileUrl.toURI()));
-        } catch (URISyntaxException e) {
+        } catch (URISyntaxException uriSyntaxException) {
             throw new IOException("Error when converting path " + relativePath + "to URI.");
         }
     }

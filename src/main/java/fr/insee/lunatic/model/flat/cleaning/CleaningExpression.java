@@ -3,8 +3,6 @@ package fr.insee.lunatic.model.flat.cleaning;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
-import java.util.Objects;
-
 @Getter
 @Setter
 @AllArgsConstructor
