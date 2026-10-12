@@ -5,13 +5,13 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'renovate.json'
-      - 'README.md'
-      - 'docs/**'
-      - '.github/**'
+      - "renovate.json"
+      - "README.md"
+      - "docs/**"
+      - ".github/**"
 
 env:
-  JAVA_VERSION: '25'
+  JAVA_VERSION: "25"
 
 jobs:
   check-version:
@@ -97,12 +97,12 @@ jobs:
         uses: actions/setup-java@v5
         with:
           java-version: ${{ env.JAVA_VERSION }}
-          distribution: 'temurin'
+          distribution: "temurin"
       - name: Import GPG Key
         uses: crazy-max/ghaction-import-gpg@v7
         env:
-          GPG_PRIVATE_KEY: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
-          PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+          gpg_private_key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
       - uses: s4u/maven-settings-action@v4.0.0
         with:
           githubServer: false
